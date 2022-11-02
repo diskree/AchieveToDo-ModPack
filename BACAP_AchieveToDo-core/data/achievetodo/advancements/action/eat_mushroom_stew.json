@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:mushroom_stew"
+    },
+    "title": "Тушёные грибы",
+    "description": {
+      "translate": "Возможность есть тушёные грибы"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_rabbit_stew",
+  "criteria": {
+    "action_eat_mushroom_stew": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

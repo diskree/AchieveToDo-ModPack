@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:sweet_berries"
+    },
+    "title": "Сладкие ягоды",
+    "description": {
+      "translate": "Возможность есть сладкие ягоды"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/root",
+  "criteria": {
+    "action_eat_sweet_berries": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

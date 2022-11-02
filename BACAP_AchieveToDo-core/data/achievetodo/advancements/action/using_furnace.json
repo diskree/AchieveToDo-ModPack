@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:furnace"
+    },
+    "title": "Печь",
+    "description": {
+      "translate": "Возможность использовать печь"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_crafting_table",
+  "criteria": {
+    "action_using_furnace": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:mutton"
+    },
+    "title": "Сырая баранина",
+    "description": {
+      "translate": "Возможность есть сырую баранину"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_suspicious_stew",
+  "criteria": {
+    "action_eat_mutton": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

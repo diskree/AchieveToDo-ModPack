@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cooked_cod"
+    },
+    "title": "Жареный лосось",
+    "description": {
+      "translate": "Возможность есть жареный лосось"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_cooked_salmon",
+  "criteria": {
+    "action_eat_cooked_cod": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

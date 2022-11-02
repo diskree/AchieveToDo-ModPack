@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:shulker_box"
+    },
+    "title": "Шалкеровый ящик",
+    "description": {
+      "translate": "Возможность использовать шалкеровый ящик"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_ender_chest",
+  "criteria": {
+    "action_using_shulker_box": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

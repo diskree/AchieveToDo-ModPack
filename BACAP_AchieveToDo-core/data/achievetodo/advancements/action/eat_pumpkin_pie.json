@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:pumpkin_pie"
+    },
+    "title": "Тыквенный пирог",
+    "description": {
+      "translate": "Возможность есть тыквенный пирог"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_mushroom_stew",
+  "criteria": {
+    "action_eat_pumpkin_pie": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

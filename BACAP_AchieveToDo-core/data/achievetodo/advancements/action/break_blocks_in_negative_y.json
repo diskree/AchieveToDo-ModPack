@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "title": "Ломать блоки ниже 0",
+    "description": {
+      "translate": "Возможность ломать блоки ниже 0"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_water_bucket",
+  "criteria": {
+    "action_break_blocks_in_negative_y": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

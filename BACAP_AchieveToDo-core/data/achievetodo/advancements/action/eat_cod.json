@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cod"
+    },
+    "title": "Треска",
+    "description": {
+      "translate": "Возможность есть треску"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_salmon",
+  "criteria": {
+    "action_eat_cod": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:pufferfish"
+    },
+    "title": "Иглобрюх",
+    "description": {
+      "translate": "Возможность есть иглобрюха"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_cooked_rabbit",
+  "criteria": {
+    "action_eat_pufferfish": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

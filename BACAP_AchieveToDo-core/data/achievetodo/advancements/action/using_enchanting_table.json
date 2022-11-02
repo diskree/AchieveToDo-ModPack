@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanting_table"
+    },
+    "title": "Чародейский стол",
+    "description": {
+      "translate": "Возможность использовать чародейский стол"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_shulker_box",
+  "criteria": {
+    "action_using_enchanting_table": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

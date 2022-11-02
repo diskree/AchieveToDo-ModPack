@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:chorus_fruit"
+    },
+    "title": "Хорус",
+    "description": {
+      "translate": "Возможность есть хорус"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_cooked_beef",
+  "criteria": {
+    "action_eat_chorus_fruit": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

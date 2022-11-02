@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:ender_chest"
+    },
+    "title": "Эндер-сундук",
+    "description": {
+      "translate": "Возможность использовать эндер-сундук"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_beacon",
+  "criteria": {
+    "action_using_ender_chest": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

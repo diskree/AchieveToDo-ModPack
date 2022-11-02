@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_apple"
+    },
+    "title": "Золотое яблоко",
+    "description": {
+      "translate": "Возможность есть золотое яблоко"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_glow_berries",
+  "criteria": {
+    "action_eat_golden_apple": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

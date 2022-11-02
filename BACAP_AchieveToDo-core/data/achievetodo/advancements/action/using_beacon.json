@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:beacon"
+    },
+    "title": "Маяк",
+    "description": {
+      "translate": "Возможность использовать эффекты маяка"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_brewing_stand",
+  "criteria": {
+    "action_using_beacon": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

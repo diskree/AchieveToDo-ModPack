@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:baked_potato"
+    },
+    "title": "Печёный картофель",
+    "description": {
+      "translate": "Возможность есть печёный картофель"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/root",
+  "criteria": {
+    "action_eat_baked_potato": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

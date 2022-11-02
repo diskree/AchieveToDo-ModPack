@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:dried_kelp"
+    },
+    "title": "Сушёная ламинария",
+    "description": {
+      "translate": "Возможность есть сушёную ламинарию"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_potato",
+  "criteria": {
+    "action_eat_enchanted_golden_apple": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

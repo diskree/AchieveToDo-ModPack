@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:rabbit_stew"
+    },
+    "title": "Тушёный кролик",
+    "description": {
+      "translate": "Возможность есть тушёного кролика"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_bread",
+  "criteria": {
+    "action_eat_rabbit_stew": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:elytra"
+    },
+    "title": "Элитры",
+    "description": {
+      "translate": "Возможность надевать элитры"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/end",
+  "criteria": {
+    "action_equip_elytra": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

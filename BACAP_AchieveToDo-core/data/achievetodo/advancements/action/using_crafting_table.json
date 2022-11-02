@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:crafting_table"
+    },
+    "title": "Верстак",
+    "description": {
+      "translate": "Возможность использовать верстак"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_boat",
+  "criteria": {
+    "action_using_crafting_table": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

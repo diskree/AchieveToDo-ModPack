@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:tropical_fish"
+    },
+    "title": "Тропическая рыба",
+    "description": {
+      "translate": "Возможность есть тропическую рыбу"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_cod",
+  "criteria": {
+    "action_eat_tropical_fish": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:chicken"
+    },
+    "title": "Курятина",
+    "description": {
+      "translate": "Возможность есть курятину"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_spider_eye",
+  "criteria": {
+    "action_eat_chicken": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

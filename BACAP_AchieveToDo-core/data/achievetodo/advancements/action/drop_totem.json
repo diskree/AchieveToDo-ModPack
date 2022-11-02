@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "title": "Тотем бессмертия",
+    "description": {
+      "translate": "При убийстве заклинателя будет выпадать тотем бессмертия"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/trade_with_villager",
+  "criteria": {
+    "action_drop_totem": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

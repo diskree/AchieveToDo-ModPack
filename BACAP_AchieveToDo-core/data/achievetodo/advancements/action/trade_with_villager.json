@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:emerald"
+    },
+    "title": "Торговля",
+    "description": {
+      "translate": "Возможность торговли с деревенскими жителями"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/end_gate",
+  "criteria": {
+    "action_trade_with_villager": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

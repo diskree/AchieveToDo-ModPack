@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cooked_rabbit"
+    },
+    "title": "Жареная крольчатина",
+    "description": {
+      "translate": "Возможность есть жареную крольчатину"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_baked_potato",
+  "criteria": {
+    "action_eat_cooked_rabbit": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

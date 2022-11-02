@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_carrot"
+    },
+    "title": "Золотая морковь",
+    "description": {
+      "translate": "Возможность есть золотую морковь"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_enchanted_golden_apple",
+  "criteria": {
+    "action_eat_golden_carrot": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

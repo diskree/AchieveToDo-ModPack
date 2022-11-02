@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cooked_beef"
+    },
+    "title": "Стейк",
+    "description": {
+      "translate": "Возможность есть стейк"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_cooked_porkchop",
+  "criteria": {
+    "action_eat_cooked_beef": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:netherite_chestplate"
+    },
+    "title": "Незеритовая броня",
+    "description": {
+      "translate": "Возможность надевать незеритовую броню"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_netherite_tools",
+  "criteria": {
+    "action_equip_netherite_armor": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

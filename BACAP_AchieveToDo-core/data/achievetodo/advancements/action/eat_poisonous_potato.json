@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:poisonous_potato"
+    },
+    "title": "Ядовитый картофель",
+    "description": {
+      "translate": "Возможность есть ядовитый картофель"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_chicken",
+  "criteria": {
+    "action_eat_poisonous_potato": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

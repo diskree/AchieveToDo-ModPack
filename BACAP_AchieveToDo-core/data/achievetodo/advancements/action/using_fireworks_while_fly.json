@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:firework_rocket"
+    },
+    "title": "Фейерверки при полёте",
+    "description": {
+      "translate": "Возможность использовать фейерверки во время полёта на элитрах"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/equip_elytra",
+  "criteria": {
+    "action_using_fireworks_while_fly": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

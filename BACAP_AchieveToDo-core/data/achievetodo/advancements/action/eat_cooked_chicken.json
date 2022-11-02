@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cooked_chicken"
+    },
+    "title": "Жареная курица",
+    "description": {
+      "translate": "Возможность есть жареную курицу"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_pufferfish",
+  "criteria": {
+    "action_eat_cooked_chicken": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

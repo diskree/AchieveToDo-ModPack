@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "title": "Зачарованное золотое яблоко",
+    "description": {
+      "translate": "Возможность есть зачарованное золотое яблоко"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_chorus_fruit",
+  "criteria": {
+    "action_eat_enchanted_golden_apple": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

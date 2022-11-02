@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:oak_boat"
+    },
+    "title": "Садиться в лодку",
+    "description": {
+      "translate": "Возможность садиться в лодку"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/root",
+  "criteria": {
+    "action_using_boat": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

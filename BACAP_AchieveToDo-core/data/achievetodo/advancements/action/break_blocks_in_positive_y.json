@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:wooden_pickaxe"
+    },
+    "title": "Ломать блоки",
+    "description": {
+      "translate": "Возможность ломать блоки"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/sprint",
+  "criteria": {
+    "action_break_blocks_in_positive_y": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

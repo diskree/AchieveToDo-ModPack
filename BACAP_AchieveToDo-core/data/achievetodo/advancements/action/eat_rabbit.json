@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:rabbit"
+    },
+    "title": "Сырая крольчатина",
+    "description": {
+      "translate": "Возможность есть сырую крольчатину"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_mutton",
+  "criteria": {
+    "action_eat_rabbit": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

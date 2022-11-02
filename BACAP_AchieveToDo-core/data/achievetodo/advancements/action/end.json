@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:end_portal_frame"
+    },
+    "title": "Энд",
+    "description": {
+      "translate": "Возможность перехода в измерение Энд"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/equip_netherite_armor",
+  "criteria": {
+    "action_end": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

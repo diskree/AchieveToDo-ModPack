@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:beef"
+    },
+    "title": "Сырая говядина",
+    "description": {
+      "translate": "Возможность есть сырую говядину"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_honey_bottle",
+  "criteria": {
+    "action_eat_beef": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

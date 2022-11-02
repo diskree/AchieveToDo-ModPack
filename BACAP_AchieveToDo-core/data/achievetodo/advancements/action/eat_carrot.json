@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:carrot"
+    },
+    "title": "Морковь",
+    "description": {
+      "translate": "Возможность есть морковь"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_beetroot_soup",
+  "criteria": {
+    "action_eat_carrot": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

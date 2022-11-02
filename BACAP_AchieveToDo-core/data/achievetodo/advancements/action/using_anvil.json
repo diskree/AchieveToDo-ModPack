@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:anvil"
+    },
+    "title": "Наковальня",
+    "description": {
+      "translate": "Возможность использовать наковальню"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_blast_furnace",
+  "criteria": {
+    "action_using_anvil": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

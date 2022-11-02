@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_chestplate"
+    },
+    "title": "Алмазная броня",
+    "description": {
+      "translate": "Возможность надевать алмазную броню"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_diamond_tools",
+  "criteria": {
+    "action_equip_diamond_armor": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

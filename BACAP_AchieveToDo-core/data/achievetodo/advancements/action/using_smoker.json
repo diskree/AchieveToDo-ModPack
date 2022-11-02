@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:smoker"
+    },
+    "title": "Коптильня",
+    "description": {
+      "translate": "Возможность использовать коптильню"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_shield",
+  "criteria": {
+    "action_using_smoker": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

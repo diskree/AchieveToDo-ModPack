@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:slime_block"
+    },
+    "title": "Прыжок",
+    "description": {
+      "translate": "Возможность прыгать"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/root",
+  "criteria": {
+    "action_jump": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

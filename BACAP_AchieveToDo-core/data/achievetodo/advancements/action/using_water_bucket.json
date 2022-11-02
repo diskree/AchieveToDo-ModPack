@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:water_bucket"
+    },
+    "title": "Разливать воду из ведра",
+    "description": {
+      "translate": "Возможность разливать воду из ведра"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/break_blocks_in_positive_y",
+  "criteria": {
+    "action_using_water_bucket": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

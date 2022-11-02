@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:melon_slice"
+    },
+    "title": "Ломтик арбуза",
+    "description": {
+      "translate": "Возможность есть ломтик арбуза"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_dried_kelp",
+  "criteria": {
+    "action_eat_melon_slice": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:obsidian"
+    },
+    "title": "Нижний Мир",
+    "description": {
+      "translate": "Возможность перехода в измерение Нижний Мир"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/equip_iron_armor",
+  "criteria": {
+    "action_nether": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

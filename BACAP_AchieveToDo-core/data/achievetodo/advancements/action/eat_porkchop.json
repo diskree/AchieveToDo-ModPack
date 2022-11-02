@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:porkchop"
+    },
+    "title": "Сырая свинина",
+    "description": {
+      "translate": "Возможность есть сырую свинину"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_sweet_berries",
+  "criteria": {
+    "action_eat_porkchop": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

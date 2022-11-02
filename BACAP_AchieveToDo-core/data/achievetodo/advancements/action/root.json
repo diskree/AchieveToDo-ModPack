@@ -1,0 +1,21 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:book"
+    },
+    "title": {
+      "translate": "Заблокированные действия"
+    },
+    "description": {
+      "translate": ""
+    },
+    "background": "minecraft:textures/block/bedrock.png",
+    "show_toast": false,
+    "announce_to_chat": "false"
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "title": "Дальний Энд",
+    "description": {
+      "translate": "Возможность перехода в Дальний Энд"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/break_blocks_in_negative_y",
+  "criteria": {
+    "action_end_gate": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

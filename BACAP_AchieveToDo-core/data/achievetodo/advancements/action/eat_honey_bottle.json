@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:honey_bottle"
+    },
+    "title": "Бутылочка мёда",
+    "description": {
+      "translate": "Возможность есть бутылочку мёда"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/root",
+  "criteria": {
+    "action_eat_honey_bottle": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

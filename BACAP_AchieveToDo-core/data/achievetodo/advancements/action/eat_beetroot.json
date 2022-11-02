@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:beetroot"
+    },
+    "title": "Свекла",
+    "description": {
+      "translate": "Возможность есть свеклу"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_porkchop",
+  "criteria": {
+    "action_eat_beetroot": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

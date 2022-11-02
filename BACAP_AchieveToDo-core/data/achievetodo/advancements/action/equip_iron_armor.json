@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_chestplate"
+    },
+    "title": "Железная броня",
+    "description": {
+      "translate": "Возможность надевать железную броню"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/using_iron_tools",
+  "criteria": {
+    "action_equip_iron_armor": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:potato"
+    },
+    "title": "Картофель",
+    "description": {
+      "translate": "Возможность есть картофель"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_apple",
+  "criteria": {
+    "action_eat_potato": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

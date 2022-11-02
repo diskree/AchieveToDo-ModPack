@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:beetroot_soup"
+    },
+    "title": "Свекольный суп",
+    "description": {
+      "translate": "Возможность есть свекольный суп"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_beetroot",
+  "criteria": {
+    "action_eat_beetroot_soup": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

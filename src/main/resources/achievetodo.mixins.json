@@ -1,0 +1,40 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.diskree.achievetodo.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AbstractFurnaceBlockMixin",
+    "AnvilBlockMixin",
+    "ArmorItemMixin",
+    "BeaconBlockMixin",
+    "BoatEntityMixin",
+    "BrewingStandBlockMixin",
+    "CraftingTableBlockMixin",
+    "ElytraItemMixin",
+    "EnchantingTableBlockMixin",
+    "EnderChestBlockMixin",
+    "EndGatewayBlockEntityMixin",
+    "EntityMixin",
+    "FireworkRocketItemMixin",
+    "ItemMixin",
+    "LivingEntityMixin",
+    "PlayerAdvancementTrackerMixin",
+    "PlayerEntityMixin",
+    "ScoreboardPlayerScoreMixin",
+    "ServerPlayerEntityMixin",
+    "ShieldItemMixin",
+    "ShulkerBoxBlockMixin",
+    "VillagerEntityMixin"
+  ],
+  "client": [
+    "AdvancementTabTypeMixin",
+    "ClientPlayerEntityMixin",
+    "CreateWorldScreenMixin",
+    "MinecraftClientMixin",
+    "ToastManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

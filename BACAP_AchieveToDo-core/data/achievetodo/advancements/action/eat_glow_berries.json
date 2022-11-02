@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:glow_berries"
+    },
+    "title": "Светящиеся ягоды",
+    "description": {
+      "translate": "Возможность есть светящиеся ягоды"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/eat_cooked_cod",
+  "criteria": {
+    "action_eat_glow_berries": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

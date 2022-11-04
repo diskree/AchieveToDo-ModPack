@@ -1,5 +1,6 @@
 package com.diskree.achievetodo.advancements;
 
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.api.EnvType;
@@ -24,7 +25,7 @@ import java.util.Objects;
 
 @Environment(EnvType.CLIENT)
 public class AchieveToDoToast implements Toast {
-    Identifier TEXTURE = new Identifier("achievetodo", "textures/gui/toasts.png");
+    Identifier TEXTURE = new Identifier(AchieveToDoMod.ID, "textures/gui/toasts.png");
 
     private final Advancement advancement;
     public final BlockedAction blockedAction;

@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -17,16 +17,16 @@ public class ItemMixin {
 
     @Inject(method = "getMaxUseTime", at = @At("HEAD"), cancellable = true)
     private void getMaxUseTimeInject(ItemStack stack, CallbackInfoReturnable<Integer> cir) {
-        if (stack != null && stack.getItem() != null && stack.getItem().isFood() && AchievementHardcoreMod.isFoodBlocked(stack.getItem().getFoodComponent())) {
+        if (stack != null && stack.getItem() != null && stack.getItem().isFood() && AchieveToDoMod.isFoodBlocked(stack.getItem().getFoodComponent())) {
             cir.setReturnValue(9);
         }
     }
 
     @Inject(method = "finishUsing", at = @At("HEAD"), cancellable = true)
     private void finishUsingInject(ItemStack stack, World world, LivingEntity user, CallbackInfoReturnable<ItemStack> cir) {
-        if (stack != null && stack.getItem() != null && stack.getItem().isFood() && user instanceof PlayerEntity && AchievementHardcoreMod.isFoodBlocked(stack.getItem().getFoodComponent())) {
+        if (stack != null && stack.getItem() != null && stack.getItem().isFood() && user instanceof PlayerEntity && AchieveToDoMod.isFoodBlocked(stack.getItem().getFoodComponent())) {
             MinecraftClient.getInstance().options.useKey.setPressed(false);
-            AchievementHardcoreMod.showFoodBlockedDescription(stack.getItem().getFoodComponent());
+            AchieveToDoMod.showFoodBlockedDescription(stack.getItem().getFoodComponent());
             cir.setReturnValue(stack);
         }
     }

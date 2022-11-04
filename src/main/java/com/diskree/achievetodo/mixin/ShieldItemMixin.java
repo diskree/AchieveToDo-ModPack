@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -18,7 +18,7 @@ public class ShieldItemMixin {
 
     @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     public void useInject(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-        if (AchievementHardcoreMod.isActionBlocked(BlockedAction.USING_SHIELD)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.USING_SHIELD)) {
             cir.setReturnValue(TypedActionResult.fail(user.getStackInHand(hand)));
         }
     }

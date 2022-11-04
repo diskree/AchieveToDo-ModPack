@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -15,7 +15,7 @@ public class BoatEntityMixin {
 
     @Inject(method = "canAddPassenger", at = @At("HEAD"), cancellable = true)
     public void canAddPassengerInject(Entity passenger, CallbackInfoReturnable<Boolean> cir) {
-        if (passenger instanceof PlayerEntity && AchievementHardcoreMod.isActionBlocked(BlockedAction.USING_BOAT)) {
+        if (passenger instanceof PlayerEntity && AchieveToDoMod.isActionBlocked(BlockedAction.USING_BOAT)) {
             cir.setReturnValue(false);
         }
     }

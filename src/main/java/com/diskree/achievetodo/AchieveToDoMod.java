@@ -21,8 +21,11 @@ import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
 
-public class AchievementHardcoreMod implements ModInitializer {
+public class AchieveToDoMod implements ModInitializer {
 
+    public static final String ID = "achievetodo";
+    public static final String ADVANCEMENT_PATH_PREFIX = "action/";
+    public static final String ADVANCEMENT_CRITERIA_PREFIX = "action_";
     public static final Item MYSTERY_MASK_ITEM = new Item(new FabricItemSettings().group(ItemGroup.MISC));
 
     private static final EnumMap<BlockedAction, Boolean> blockedActions = new EnumMap<>(BlockedAction.class);
@@ -68,7 +71,7 @@ public class AchievementHardcoreMod implements ModInitializer {
             return;
         }
         for (BlockedAction action : actionsToUnlock) {
-            Advancement advancement = server.getAdvancementLoader().get(Identifier.of("achievetodo", "action/" + action.name().toLowerCase()));
+            Advancement advancement = server.getAdvancementLoader().get(action.buildAdvancementId());
             MinecraftClient.getInstance().getToastManager().add(new AchieveToDoToast(advancement, action));
         }
     }
@@ -80,12 +83,8 @@ public class AchievementHardcoreMod implements ModInitializer {
         }
         if (MinecraftClient.getInstance().player != null) {
             int leftAchievementsCount = action.getAchievementsCountToUnlock() - lastAchievementsCount;
-            MinecraftClient.getInstance().player.sendMessage(Text
-                    .of(action.getDescription() + ". Для разблокировки осталось выполнить достижений: " + leftAchievementsCount)
-                    .copy()
-                    .formatted(Formatting.YELLOW), true
-            );
-            grantAHCAdvancement(action);
+            MinecraftClient.getInstance().player.sendMessage(Text.of(action.getDescription() + ". Для разблокировки осталось выполнить достижений: " + leftAchievementsCount).copy().formatted(Formatting.YELLOW), true);
+            grantActionAdvancement(action);
         }
         return true;
     }
@@ -93,21 +92,29 @@ public class AchievementHardcoreMod implements ModInitializer {
     public static boolean isFoodBlocked(FoodComponent food) {
         for (BlockedAction action : BlockedAction.values()) {
             if (action.getFoodComponent() == food) {
-                grantAHCAdvancement(action);
+                grantActionAdvancement(action);
                 return action.getAchievementsCountToUnlock() > lastAchievementsCount;
             }
         }
         return false;
     }
 
-    private static void grantAHCAdvancement(BlockedAction action) {
+    public static BlockedAction getBlockedActionFromAdvancement(Advancement advancement) {
+        if (advancement.getId().getNamespace().equals(AchieveToDoMod.ID) && advancement.getId().getPath().startsWith(AchieveToDoMod.ADVANCEMENT_PATH_PREFIX)) {
+            String key = advancement.getId().getPath().split(AchieveToDoMod.ADVANCEMENT_PATH_PREFIX)[1];
+            return BlockedAction.map(key.toUpperCase());
+        }
+        return null;
+    }
+
+    private static void grantActionAdvancement(BlockedAction action) {
         IntegratedServer server = MinecraftClient.getInstance().getServer();
         if (server == null) {
             return;
         }
-        Advancement tab = server.getAdvancementLoader().get(Identifier.of("achievetodo", "action/" + action.name().toLowerCase()));
+        Advancement tab = server.getAdvancementLoader().get(action.buildAdvancementId());
         if (server.getPlayerManager() != null && !server.getPlayerManager().getPlayerList().isEmpty()) {
-            server.getPlayerManager().getPlayerList().get(0).getAdvancementTracker().grantCriterion(tab, "action_" + action.name().toLowerCase());
+            server.getPlayerManager().getPlayerList().get(0).getAdvancementTracker().grantCriterion(tab, ADVANCEMENT_CRITERIA_PREFIX + action.name().toLowerCase());
         }
     }
 
@@ -118,16 +125,16 @@ public class AchievementHardcoreMod implements ModInitializer {
         Item item = itemStack.getItem();
         if (item instanceof ToolItem) {
             ToolMaterial toolMaterial = ((ToolItem) item).getMaterial();
-            return toolMaterial == ToolMaterials.IRON && AchievementHardcoreMod.isActionBlocked(BlockedAction.USING_IRON_TOOLS) ||
-                    toolMaterial == ToolMaterials.DIAMOND && AchievementHardcoreMod.isActionBlocked(BlockedAction.USING_DIAMOND_TOOLS) ||
-                    toolMaterial == ToolMaterials.NETHERITE && AchievementHardcoreMod.isActionBlocked(BlockedAction.USING_NETHERITE_TOOLS);
+            return toolMaterial == ToolMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.USING_IRON_TOOLS) ||
+                    toolMaterial == ToolMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.USING_DIAMOND_TOOLS) ||
+                    toolMaterial == ToolMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.USING_NETHERITE_TOOLS);
         }
         return false;
     }
 
     @Override
     public void onInitialize() {
-        Registry.register(Registry.ITEM, new Identifier("achievetodo", "unknown_action"), MYSTERY_MASK_ITEM);
+        Registry.register(Registry.ITEM, new Identifier(AchieveToDoMod.ID, "locked_action"), MYSTERY_MASK_ITEM);
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {
                 if (pos.getY() >= 0 && isActionBlocked(BlockedAction.BREAK_BLOCKS_IN_POSITIVE_Y) || pos.getY() < 0 && isActionBlocked(BlockedAction.BREAK_BLOCKS_IN_NEGATIVE_Y)) {

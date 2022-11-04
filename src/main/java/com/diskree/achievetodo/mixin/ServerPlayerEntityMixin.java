@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.entity.Entity;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -16,8 +16,8 @@ public abstract class ServerPlayerEntityMixin {
 
     @Inject(method = "moveToWorld", at = @At("HEAD"), cancellable = true)
     public void moveToWorldInject(ServerWorld destination, CallbackInfoReturnable<Entity> cir) {
-        if (destination != null && destination.getRegistryKey() == World.NETHER && AchievementHardcoreMod.isActionBlocked(BlockedAction.NETHER) ||
-                destination != null && destination.getRegistryKey() == World.END && AchievementHardcoreMod.isActionBlocked(BlockedAction.END)) {
+        if (destination != null && destination.getRegistryKey() == World.NETHER && AchieveToDoMod.isActionBlocked(BlockedAction.NETHER) ||
+                destination != null && destination.getRegistryKey() == World.END && AchieveToDoMod.isActionBlocked(BlockedAction.END)) {
             cir.setReturnValue((Entity) (Object) this);
         }
     }

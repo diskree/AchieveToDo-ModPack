@@ -2,6 +2,7 @@ package com.diskree.achievetodo;
 
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.FoodComponents;
+import net.minecraft.util.Identifier;
 
 public enum BlockedAction {
     EAT_SALMON(null, BlockedActionType.FOOD, FoodComponents.SALMON, 2),
@@ -80,6 +81,7 @@ public enum BlockedAction {
     private final FoodComponent foodComponent;
     private final int achievementsCountToUnlock;
 
+
     BlockedAction(String description, BlockedActionType actionType, FoodComponent foodComponent, int achievementsCountToUnlock) {
         this.description = description;
         this.actionType = actionType;
@@ -101,5 +103,18 @@ public enum BlockedAction {
 
     public int getAchievementsCountToUnlock() {
         return achievementsCountToUnlock;
+    }
+
+    public Identifier buildAdvancementId() {
+        return new Identifier(AchieveToDoMod.ID, AchieveToDoMod.ADVANCEMENT_PATH_PREFIX + name().toLowerCase());
+    }
+
+    public static BlockedAction map(String name) {
+        for (BlockedAction action : values()) {
+            if (action.name().equals(name)) {
+                return action;
+            }
+        }
+        return null;
     }
 }

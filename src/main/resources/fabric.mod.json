@@ -15,7 +15,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.diskree.achievetodo.AchievementHardcoreMod"
+      "com.diskree.achievetodo.AchieveToDoMod"
     ]
   },
   "mixins": [

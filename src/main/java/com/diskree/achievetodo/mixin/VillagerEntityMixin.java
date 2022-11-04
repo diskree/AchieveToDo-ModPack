@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,7 +19,7 @@ public abstract class VillagerEntityMixin {
 
     @Inject(method = "interactMob", at = @At("HEAD"), cancellable = true)
     private void interactMobInject(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
-        if (AchievementHardcoreMod.isActionBlocked(BlockedAction.TRADE_WITH_VILLAGER)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.TRADE_WITH_VILLAGER)) {
             sayNo();
             cir.setReturnValue(ActionResult.FAIL);
         }

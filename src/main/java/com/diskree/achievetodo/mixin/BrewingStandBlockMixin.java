@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BrewingStandBlock;
@@ -20,7 +20,7 @@ public class BrewingStandBlockMixin {
 
     @Inject(method = "onUse", at = @At("HEAD"), cancellable = true)
     public void onUseInject(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
-        if (AchievementHardcoreMod.isActionBlocked(BlockedAction.USING_BREWING_STAND)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.USING_BREWING_STAND)) {
             cir.setReturnValue(ActionResult.FAIL);
         }
     }

@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.block.entity.EndGatewayBlockEntity;
 import net.minecraft.entity.Entity;
@@ -14,7 +14,7 @@ public class EndGatewayBlockEntityMixin {
 
     @Inject(method = "canTeleport", at = @At("HEAD"), cancellable = true)
     private static void canTeleportInject(Entity entity, CallbackInfoReturnable<Boolean> cir) {
-        if (AchievementHardcoreMod.isActionBlocked(BlockedAction.END_GATE)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.END_GATE)) {
             cir.setReturnValue(false);
         }
     }

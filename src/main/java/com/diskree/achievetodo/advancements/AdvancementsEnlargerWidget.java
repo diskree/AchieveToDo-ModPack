@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.advancements;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import com.google.common.collect.Lists;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -57,12 +57,12 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
         this.xPos = MathHelper.floor(display.getX() * 28.0F);
         this.yPos = MathHelper.floor(display.getY() * 27.0F);
         int i = advancement.getRequirementCount();
-        if (advancement.getId().getNamespace().equals("achievetodo") && advancement.getId().getPath().startsWith("action/")) {
-            String key = advancement.getId().getPath().split("action/")[1];
-            if (!key.equals("root")) {
-                i = BlockedAction.valueOf(key.toUpperCase()).getAchievementsCountToUnlock();
-            }
+        // atd start
+        BlockedAction action = AchieveToDoMod.getBlockedActionFromAdvancement(advancement);
+        if (action != null) {
+            i = action.getAchievementsCountToUnlock();
         }
+        // atd end
         int j = String.valueOf(i).length();
         int k = i > 1 ? client.textRenderer.getWidth("  ") + client.textRenderer.getWidth("0") * j * 2 + client.textRenderer.getWidth("/") : 0;
         int l = 29 + client.textRenderer.getWidth(this.title) + k;
@@ -149,32 +149,37 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
     public void renderWidgets(MatrixStack matrices, int x, int y) {
         if (!this.display.isHidden() || this.progress != null && this.progress.isDone()) {
             float f = this.progress == null ? 0.0F : this.progress.getProgressBarPercentage();
-            float realF = f;
-            if (advancement.getId().getNamespace().equals("achievetodo") && advancement.getId().getPath().startsWith("action/")) {
-                String key = advancement.getId().getPath().split("action/")[1];
-                if (!key.equals("root")) {
-                    float total = (float) BlockedAction.valueOf(key.toUpperCase()).getAchievementsCountToUnlock();
-                    float obtained = (float) AchievementHardcoreMod.lastAchievementsCount;
-                    f = obtained / total;
-                }
-            }
             AdvancementObtainedStatus advancementObtainedStatus2;
             if (f >= 1.0F) {
                 advancementObtainedStatus2 = AdvancementObtainedStatus.OBTAINED;
             } else {
                 advancementObtainedStatus2 = AdvancementObtainedStatus.UNOBTAINED;
             }
+            // atd start
+            BlockedAction action = AchieveToDoMod.getBlockedActionFromAdvancement(advancement);
+            boolean isUnlocked = false;
+            if (action != null) {
+                float total = (float) action.getAchievementsCountToUnlock();
+                float obtained = (float) AchieveToDoMod.lastAchievementsCount;
+                if (obtained >= total) {
+                    isUnlocked = true;
+                    advancementObtainedStatus2 = AdvancementObtainedStatus.OBTAINED;
+                } else {
+                    advancementObtainedStatus2 = AdvancementObtainedStatus.UNOBTAINED;
+                }
+            }
+            // atd end
 
             RenderSystem.setShaderTexture(0, WIDGETS_TEX);
             this.drawTexture(matrices, x + this.xPos + 3, y + this.yPos, this.display.getFrame().getTextureV(), 128 + advancementObtainedStatus2.getSpriteIndex() * 26, 26, 26);
             Vector4f vector4f = new Vector4f(x + this.xPos + 8, y + this.yPos + 5, 0, 1.0F);
             vector4f.transform(matrices.peek().getPositionMatrix());
             this.client.getItemRenderer().zOffset += vector4f.getZ();
-            if (advancement.getId().getNamespace().equals("achievetodo") && advancement.getId().getPath().startsWith("action/") && realF < 1.0F && advancementObtainedStatus2 == AdvancementObtainedStatus.UNOBTAINED) {
-                this.client.getItemRenderer().renderInGui(new ItemStack(AchievementHardcoreMod.MYSTERY_MASK_ITEM), (int) vector4f.getX(), (int) vector4f.getY());
-            } else {
-                this.client.getItemRenderer().renderInGui(this.display.getIcon(), (int) vector4f.getX(), (int) vector4f.getY());
-            }
+            // atd if
+            if (action != null && f < 1.0F && !isUnlocked) {
+                this.client.getItemRenderer().renderInGui(new ItemStack(AchieveToDoMod.MYSTERY_MASK_ITEM), (int) vector4f.getX(), (int) vector4f.getY());
+            } else
+            this.client.getItemRenderer().renderInGui(this.display.getIcon(), (int) vector4f.getX(), (int) vector4f.getY());
             this.client.getItemRenderer().zOffset -= vector4f.getZ();
         }
 
@@ -194,30 +199,29 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
     public void drawTooltip(MatrixStack matrices, int originX, int originY, float alpha, int x, int y) {
         boolean bl = x + originX + this.xPos + this.width + 26 >= this.tab.getScreen().width;
         String string = this.progress == null ? null : this.progress.getProgressBarFraction();
-        if (advancement.getId().getNamespace().equals("achievetodo") && advancement.getId().getPath().startsWith("action/")) {
-            String key = advancement.getId().getPath().split("action/")[1];
-            if (!key.equals("root")) {
-                int total = BlockedAction.valueOf(key.toUpperCase()).getAchievementsCountToUnlock();
-                int obtained = AchievementHardcoreMod.lastAchievementsCount;
-                if (obtained > total) {
-                    obtained = total;
-                }
-                string = obtained + "/" + total;
+        // atd start
+        BlockedAction action = AchieveToDoMod.getBlockedActionFromAdvancement(advancement);
+        if (action != null) {
+            int total = action.getAchievementsCountToUnlock();
+            int obtained = Math.min(total, AchieveToDoMod.lastAchievementsCount);
+            if (obtained > total) {
+                obtained = total;
             }
+            string = obtained + "/" + total;
         }
+        // atd end
         int i = string == null ? 0 : this.client.textRenderer.getWidth(string);
         int var10000 = 113 - originY - this.yPos - 26;
         int var10002 = this.description.size();
         boolean bl2 = var10000 <= 6 + var10002 * 9;
         float f = this.progress == null ? 0.0F : this.progress.getProgressBarPercentage();
-        if (advancement.getId().getNamespace().equals("achievetodo") && advancement.getId().getPath().startsWith("action/")) {
-            String key = advancement.getId().getPath().split("action/")[1];
-            if (!key.equals("root")) {
-                float total = (float) BlockedAction.valueOf(key.toUpperCase()).getAchievementsCountToUnlock();
-                float obtained = (float) AchievementHardcoreMod.lastAchievementsCount;
-                f = obtained / total;
-            }
+        // atd start
+        if (action != null) {
+            float total = (float) action.getAchievementsCountToUnlock();
+            float obtained = (float) AchieveToDoMod.lastAchievementsCount;
+            f = obtained / total;
         }
+        // atd end
         int j = MathHelper.floor(f * (float) this.width);
         AdvancementObtainedStatus advancementObtainedStatus10;
         AdvancementObtainedStatus advancementObtainedStatus11;
@@ -343,12 +347,10 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
             int k = originY + this.yPos;
             int l = k + 26;
             if (mouseX >= i && mouseX <= j && mouseY >= k && mouseY <= l) {
-                if (advancement.getId().getNamespace().equals("achievetodo") && advancement.getId().getPath().startsWith("action/")) {
+                BlockedAction action = AchieveToDoMod.getBlockedActionFromAdvancement(advancement);
+                if (action != null) {
                     float f = this.progress == null ? 0.0F : this.progress.getProgressBarPercentage();
-                    String key = advancement.getId().getPath().split("action/")[1];
-                    if (f < 1.0F && !key.equals("root") && AchievementHardcoreMod.lastAchievementsCount < BlockedAction.valueOf(key.toUpperCase()).getAchievementsCountToUnlock()) {
-                        return false;
-                    }
+                    return !(f < 1.0F) || action.getAchievementsCountToUnlock() < AchieveToDoMod.lastAchievementsCount;
                 }
                 return true;
             }

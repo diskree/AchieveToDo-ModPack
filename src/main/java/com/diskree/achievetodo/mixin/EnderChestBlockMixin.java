@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,7 +19,7 @@ public class EnderChestBlockMixin {
 
     @Inject(method = "onUse", at = @At("HEAD"), cancellable = true)
     public void onUseInject(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
-        if (AchievementHardcoreMod.isActionBlocked(BlockedAction.USING_ENDER_CHEST)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.USING_ENDER_CHEST)) {
             cir.setReturnValue(ActionResult.FAIL);
         }
     }

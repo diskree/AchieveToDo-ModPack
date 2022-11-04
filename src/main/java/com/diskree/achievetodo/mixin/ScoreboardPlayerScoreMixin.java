@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import net.minecraft.scoreboard.ScoreboardObjective;
 import net.minecraft.scoreboard.ScoreboardPlayerScore;
 import org.jetbrains.annotations.Nullable;
@@ -22,7 +22,7 @@ public class ScoreboardPlayerScoreMixin {
     @Inject(method = "setScore", at = @At("HEAD"))
     public void setScoreInject(int score, CallbackInfo ci) {
         if (this.objective != null && this.objective.getName().equalsIgnoreCase("bac_advancements")) {
-            AchievementHardcoreMod.setAchievementsCount(score);
+            AchieveToDoMod.setAchievementsCount(score);
         }
     }
 }

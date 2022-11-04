@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FireworkRocketItem;
@@ -18,7 +18,7 @@ public class FireworkRocketItemMixin {
 
     @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     public void useInject(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-        if (user.isFallFlying() && AchievementHardcoreMod.isActionBlocked(BlockedAction.USING_FIREWORKS_WHILE_FLY)) {
+        if (user.isFallFlying() && AchieveToDoMod.isActionBlocked(BlockedAction.USING_FIREWORKS_WHILE_FLY)) {
             cir.setReturnValue(TypedActionResult.fail(user.getStackInHand(hand)));
         }
     }

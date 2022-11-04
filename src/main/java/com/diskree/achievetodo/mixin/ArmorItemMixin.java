@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
@@ -26,9 +26,9 @@ public class ArmorItemMixin {
 
     @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     public void useInject(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-        if (type == ArmorMaterials.IRON && AchievementHardcoreMod.isActionBlocked(BlockedAction.EQUIP_IRON_ARMOR) ||
-                type == ArmorMaterials.DIAMOND && AchievementHardcoreMod.isActionBlocked(BlockedAction.EQUIP_DIAMOND_ARMOR) ||
-                type == ArmorMaterials.NETHERITE && AchievementHardcoreMod.isActionBlocked(BlockedAction.EQUIP_NETHERITE_ARMOR)) {
+        if (type == ArmorMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_IRON_ARMOR) ||
+                type == ArmorMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_DIAMOND_ARMOR) ||
+                type == ArmorMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_NETHERITE_ARMOR)) {
             cir.setReturnValue(TypedActionResult.fail(user.getStackInHand(hand)));
         }
     }

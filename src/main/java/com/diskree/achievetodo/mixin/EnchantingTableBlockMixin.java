@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import com.diskree.achievetodo.AchievementHardcoreMod;
+import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.EnchantingTableBlock;
@@ -20,7 +20,7 @@ public class EnchantingTableBlockMixin {
 
     @Inject(method = "onUse", at = @At("HEAD"), cancellable = true)
     public void onUseInject(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
-        if (AchievementHardcoreMod.isActionBlocked(BlockedAction.USING_ENCHANTING_TABLE)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.USING_ENCHANTING_TABLE)) {
             cir.setReturnValue(ActionResult.FAIL);
         }
     }

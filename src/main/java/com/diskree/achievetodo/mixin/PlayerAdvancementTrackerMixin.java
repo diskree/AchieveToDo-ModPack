@@ -1,5 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
+import com.diskree.achievetodo.AchieveToDoMod;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.PlayerAdvancementTracker;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,7 +13,7 @@ public class PlayerAdvancementTrackerMixin {
 
     @Inject(method = "canSee", at = @At("HEAD"), cancellable = true)
     public void canSeeInject(Advancement advancement, CallbackInfoReturnable<Boolean> cir) {
-        if (advancement.getId().getNamespace().equals("achievetodo") && advancement.getId().getPath().startsWith("action/") && !advancement.getId().getPath().equals("action/root")) {
+        if (AchieveToDoMod.getBlockedActionFromAdvancement(advancement) != null) {
             cir.setReturnValue(true);
         }
     }

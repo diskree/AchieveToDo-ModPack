@@ -14,7 +14,7 @@ You can also create a hardcore world, the corresponding datapack will be include
 
 This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/sugar). Thanks for the work on the optimization and quality of the Minecraft game!
 
-How to install or update:
+# How to install or update:
 1. Import [last release](https://github.com/diskree/AchieveToDo/releases/latest) ZIP in MultiMC as new instance
 2. Move your saves in new instance (if update)
 3. Play!

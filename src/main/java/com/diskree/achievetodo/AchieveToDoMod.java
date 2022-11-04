@@ -10,9 +10,7 @@ import net.minecraft.advancement.Advancement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.item.*;
 import net.minecraft.server.integrated.IntegratedServer;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
@@ -37,8 +35,7 @@ public class AchieveToDoMod implements ModInitializer {
         }
         for (BlockedAction action : BlockedAction.values()) {
             if (action.getFoodComponent() == food) {
-                int leftAchievementsCount = action.getAchievementsCountToUnlock() - lastAchievementsCount;
-                MinecraftClient.getInstance().player.sendMessage(Text.of("Эта еда сейчас недоступна. Для разблокировки осталось выполнить достижений: " + leftAchievementsCount).copy().formatted(Formatting.YELLOW), true);
+                MinecraftClient.getInstance().player.sendMessage(action.getLockDescription(), true);
                 break;
             }
         }
@@ -77,19 +74,22 @@ public class AchieveToDoMod implements ModInitializer {
     }
 
     public static boolean isActionBlocked(BlockedAction action) {
+        if (MinecraftClient.getInstance().player == null || MinecraftClient.getInstance().player.isCreative()) {
+            return false;
+        }
         Boolean value = blockedActions.get(action);
         if (value != null && value) {
             return false;
         }
-        if (MinecraftClient.getInstance().player != null) {
-            int leftAchievementsCount = action.getAchievementsCountToUnlock() - lastAchievementsCount;
-            MinecraftClient.getInstance().player.sendMessage(Text.of(action.getDescription() + ". Для разблокировки осталось выполнить достижений: " + leftAchievementsCount).copy().formatted(Formatting.YELLOW), true);
-            grantActionAdvancement(action);
-        }
+        MinecraftClient.getInstance().player.sendMessage(action.getLockDescription(), true);
+        grantActionAdvancement(action);
         return true;
     }
 
     public static boolean isFoodBlocked(FoodComponent food) {
+        if (MinecraftClient.getInstance().player == null || MinecraftClient.getInstance().player.isCreative()) {
+            return false;
+        }
         for (BlockedAction action : BlockedAction.values()) {
             if (action.getFoodComponent() == food) {
                 grantActionAdvancement(action);
@@ -119,6 +119,9 @@ public class AchieveToDoMod implements ModInitializer {
     }
 
     private boolean isToolBlocked(ItemStack itemStack) {
+        if (MinecraftClient.getInstance().player == null || MinecraftClient.getInstance().player.isCreative()) {
+            return false;
+        }
         if (!itemStack.isDamageable()) {
             return false;
         }

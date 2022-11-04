@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/using_furnace",
+  "parent": "achievetodo:action/using_boat",
   "criteria": {
     "action_using_shield": {
       "trigger": "minecraft:impossible"

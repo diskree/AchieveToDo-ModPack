@@ -35,7 +35,7 @@ public class CreateWorldScreenMixin {
 
     @Inject(method = "init", at = @At("RETURN"))
     public void initInject(CallbackInfo ci) {
-//        dataPacksButton.active = false;
+        dataPacksButton.active = false;
     }
 
 }

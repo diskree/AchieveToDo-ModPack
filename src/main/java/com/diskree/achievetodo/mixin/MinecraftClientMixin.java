@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import me.shedaniel.advancementsenlarger.gui.BiggerAdvancementsScreen;
+import com.diskree.achievetodo.advancements.AdvancementsEnlargerScreen;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.advancement.AdvancementsScreen;
@@ -24,7 +24,7 @@ public class MinecraftClientMixin {
     @ModifyVariable(method = "setScreen", at = @At("HEAD"), argsOnly = true)
     private Screen setScreenInject(Screen screen) {
         if (screen != null && AdvancementsScreen.class == screen.getClass())
-            return new BiggerAdvancementsScreen(player.networkHandler.getAdvancementHandler());
+            return new AdvancementsEnlargerScreen(player.networkHandler.getAdvancementHandler());
         return screen;
     }
 }

@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
-import me.shedaniel.advancementsenlarger.hooks.AdvancementTabTypeHooks;
+import com.diskree.achievetodo.advancements.AdvancementsEnlargerTabTypeHooks;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.Shadow;
 
 @SuppressWarnings("unused")
 @Mixin(targets = "net.minecraft.client.gui.screen.advancement.AdvancementTabType")
-public abstract class AdvancementTabTypeMixin implements AdvancementTabTypeHooks {
+public abstract class AdvancementsEnlargerTabTypeMixin implements AdvancementsEnlargerTabTypeHooks {
 
     @Shadow
     @Final
@@ -35,7 +35,7 @@ public abstract class AdvancementTabTypeMixin implements AdvancementTabTypeHooks
     private int height;
 
     @Override
-    public void ae_drawBackground(MatrixStack matrices, DrawableHelper drawable, int x, int y, boolean selected, int index) {
+    public void drawBackground(MatrixStack matrices, DrawableHelper drawable, int x, int y, boolean selected, int index) {
         int i = this.u;
         if (index > 0) {
             i += this.width;
@@ -50,7 +50,7 @@ public abstract class AdvancementTabTypeMixin implements AdvancementTabTypeHooks
     }
 
     @Override
-    public void ae_drawIcon(MatrixStack matrices, int x, int y, int index, ItemRenderer itemRenderer, ItemStack icon) {
+    public void drawIcon(MatrixStack matrices, int x, int y, int index, ItemRenderer itemRenderer, ItemStack icon) {
         int i = x + (this.width + 2) * index + 6;
         int j = y - this.height + 4 + 9;
         Vector4f vector4f = new Vector4f(i, j, 0, 1.0F);
@@ -61,7 +61,7 @@ public abstract class AdvancementTabTypeMixin implements AdvancementTabTypeHooks
     }
 
     @Override
-    public boolean ae_isClickOnTab(int screenX, int screenY, int index, double mouseX, double mouseY) {
+    public boolean isClickOnTab(int screenX, int screenY, int index, double mouseX, double mouseY) {
         int i = screenX + (this.width + 2) * index;
         int j = screenY + -this.height + 4;
         return mouseX > (double) i && mouseX < (double) (i + this.width) && mouseY > (double) j && mouseY < (double) (j + this.height);

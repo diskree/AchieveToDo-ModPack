@@ -1,8 +1,7 @@
-package me.shedaniel.advancementsenlarger.gui;
+package com.diskree.achievetodo.advancements;
 
 import com.google.common.collect.Maps;
 import com.mojang.blaze3d.systems.RenderSystem;
-import me.shedaniel.advancementsenlarger.hooks.AdvancementTabTypeHooks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.loader.api.FabricLoader;
@@ -22,17 +21,17 @@ import net.minecraft.util.math.MathHelper;
 import java.util.Map;
 
 @Environment(EnvType.CLIENT)
-public class BiggerAdvancementTab extends DrawableHelper {
+public class AdvancementsEnlargerTab extends DrawableHelper {
     private final MinecraftClient client;
-    private final BiggerAdvancementsScreen screen;
-    private final AdvancementTabTypeHooks type;
+    private final AdvancementsEnlargerScreen screen;
+    private final AdvancementsEnlargerTabTypeHooks type;
     private final int index;
     private final Advancement root;
     private final AdvancementDisplay display;
     private final ItemStack icon;
     private final Text title;
-    private final BiggerAdvancementWidget rootWidget;
-    private final Map<Advancement, BiggerAdvancementWidget> widgets = Maps.newLinkedHashMap();
+    private final AdvancementsEnlargerWidget rootWidget;
+    private final Map<Advancement, AdvancementsEnlargerWidget> widgets = Maps.newLinkedHashMap();
     private double originX;
     private double originY;
     private int minPanX = 2147483647;
@@ -42,7 +41,7 @@ public class BiggerAdvancementTab extends DrawableHelper {
     private float alpha;
     private boolean initialized;
 
-    public BiggerAdvancementTab(MinecraftClient client, BiggerAdvancementsScreen screen, AdvancementTabTypeHooks type, int index, Advancement root, AdvancementDisplay display) {
+    public AdvancementsEnlargerTab(MinecraftClient client, AdvancementsEnlargerScreen screen, AdvancementsEnlargerTabTypeHooks type, int index, Advancement root, AdvancementDisplay display) {
         this.client = client;
         this.screen = screen;
         this.type = type;
@@ -51,19 +50,19 @@ public class BiggerAdvancementTab extends DrawableHelper {
         this.display = display;
         this.icon = display.getIcon();
         this.title = display.getTitle();
-        this.rootWidget = new BiggerAdvancementWidget(this, client, root, display);
+        this.rootWidget = new AdvancementsEnlargerWidget(this, client, root, display);
         this.addWidget(this.rootWidget, root);
     }
 
-    public static BiggerAdvancementTab create(MinecraftClient minecraft, BiggerAdvancementsScreen screen, int index, Advancement root)
+    public static AdvancementsEnlargerTab create(MinecraftClient minecraft, AdvancementsEnlargerScreen screen, int index, Advancement root)
             throws ClassNotFoundException {
         if (root.getDisplay() != null) {
             Object[] var4 = Class.forName(FabricLoader.getInstance().getMappingResolver().mapClassName("intermediary", "net.minecraft.class_453")).getEnumConstants();
             int var5 = var4.length;
 
             for (Object o : var4) {
-                AdvancementTabTypeHooks advancementTabType = (AdvancementTabTypeHooks) o;
-                return new BiggerAdvancementTab(minecraft, screen, advancementTabType, index, root, root.getDisplay());
+                AdvancementsEnlargerTabTypeHooks advancementTabType = (AdvancementsEnlargerTabTypeHooks) o;
+                return new AdvancementsEnlargerTab(minecraft, screen, advancementTabType, index, root, root.getDisplay());
             }
         }
         return null;
@@ -78,11 +77,11 @@ public class BiggerAdvancementTab extends DrawableHelper {
     }
 
     public void drawBackground(MatrixStack matrices, int x, int y, boolean selected) {
-        this.type.ae_drawBackground(matrices, this, x, y, selected, this.index);
+        this.type.drawBackground(matrices, this, x, y, selected, this.index);
     }
 
     public void drawIcon(MatrixStack matrices, int x, int y, ItemRenderer itemRenderer) {
-        this.type.ae_drawIcon(matrices, x, y, this.index, itemRenderer, this.icon);
+        this.type.drawIcon(matrices, x, y, this.index, itemRenderer, this.icon);
     }
 
     @SuppressWarnings("IntegerDivisionInFloatingPointContext")
@@ -147,7 +146,7 @@ public class BiggerAdvancementTab extends DrawableHelper {
         int i = MathHelper.floor(this.originX);
         int j = MathHelper.floor(this.originY);
         if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
-            for (BiggerAdvancementWidget advancementWidget : this.widgets.values()) {
+            for (AdvancementsEnlargerWidget advancementWidget : this.widgets.values()) {
                 if (advancementWidget.shouldRender(i, j, mouseX, mouseY)) {
                     bl = true;
                     advancementWidget.drawTooltip(matrices, i, j, this.alpha, x, y);
@@ -166,7 +165,7 @@ public class BiggerAdvancementTab extends DrawableHelper {
     }
 
     public boolean isClickOnTab(int screenX, int screenY, double mouseX, double mouseY) {
-        return this.type.ae_isClickOnTab(screenX, screenY, this.index, mouseX, mouseY);
+        return this.type.isClickOnTab(screenX, screenY, this.index, mouseX, mouseY);
     }
 
     public void scroll(double amount) {
@@ -196,12 +195,12 @@ public class BiggerAdvancementTab extends DrawableHelper {
 
     public void addAdvancement(Advancement advancement) {
         if (advancement.getDisplay() != null) {
-            BiggerAdvancementWidget advancementWidget = new BiggerAdvancementWidget(this, this.client, advancement, advancement.getDisplay());
+            AdvancementsEnlargerWidget advancementWidget = new AdvancementsEnlargerWidget(this, this.client, advancement, advancement.getDisplay());
             this.addWidget(advancementWidget, advancement);
         }
     }
 
-    private void addWidget(BiggerAdvancementWidget widget, Advancement advancement) {
+    private void addWidget(AdvancementsEnlargerWidget widget, Advancement advancement) {
         this.widgets.put(advancement, widget);
         int i = widget.getX();
         int j = i + 28;
@@ -212,16 +211,16 @@ public class BiggerAdvancementTab extends DrawableHelper {
         this.minPanY = Math.min(this.minPanY, k);
         this.maxPanY = Math.max(this.maxPanY, l);
 
-        for (BiggerAdvancementWidget advancementWidget : this.widgets.values()) {
+        for (AdvancementsEnlargerWidget advancementWidget : this.widgets.values()) {
             advancementWidget.addToTree();
         }
     }
 
-    public BiggerAdvancementWidget getWidget(Advancement advancement) {
+    public AdvancementsEnlargerWidget getWidget(Advancement advancement) {
         return this.widgets.get(advancement);
     }
 
-    public BiggerAdvancementsScreen getScreen() {
+    public AdvancementsEnlargerScreen getScreen() {
         return this.screen;
     }
 }

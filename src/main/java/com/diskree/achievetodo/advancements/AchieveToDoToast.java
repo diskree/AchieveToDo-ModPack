@@ -1,4 +1,4 @@
-package me.shedaniel.advancementsenlarger.gui;
+package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.BlockedAction;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -23,14 +23,14 @@ import java.util.List;
 import java.util.Objects;
 
 @Environment(EnvType.CLIENT)
-public class AchieveToDoAdvancementToast implements Toast {
+public class AchieveToDoToast implements Toast {
     Identifier TEXTURE = new Identifier("achievetodo", "textures/gui/toasts.png");
 
     private final Advancement advancement;
     public final BlockedAction blockedAction;
     private boolean soundPlayed;
 
-    public AchieveToDoAdvancementToast(Advancement advancement, BlockedAction blockedAction) {
+    public AchieveToDoToast(Advancement advancement, BlockedAction blockedAction) {
         this.advancement = advancement;
         this.blockedAction = blockedAction;
     }
@@ -45,13 +45,13 @@ public class AchieveToDoAdvancementToast implements Toast {
             List<OrderedText> list = manager.getClient().textRenderer.wrapLines(advancementDisplay.getTitle(), 125);
             int i = advancementDisplay.getFrame() == AdvancementFrame.CHALLENGE ? 16746751 : 16776960;
             if (list.size() == 1) {
-                manager.getClient().textRenderer.draw(matrices, Text.of(blockedAction.getPopupTitle()), 30.0F, 7.0F, i | -16777216);
+                manager.getClient().textRenderer.draw(matrices, Text.of(blockedAction.getActionType().getUnlockPopupTitle() + "!"), 30.0F, 7.0F, i | -16777216);
                 manager.getClient().textRenderer.draw(matrices, list.get(0), 30.0F, 18.0F, -1);
             } else {
                 int k;
                 if (startTime < 1500L) {
                     k = MathHelper.floor(MathHelper.clamp((float) (1500L - startTime) / 300.0F, 0.0F, 1.0F) * 255.0F) << 24 | 67108864;
-                    manager.getClient().textRenderer.draw(matrices, Text.of(blockedAction.getPopupTitle()), 30.0F, 11.0F, i | k);
+                    manager.getClient().textRenderer.draw(matrices, Text.of(blockedAction.getActionType().getUnlockPopupTitle() + "!"), 30.0F, 11.0F, i | k);
                 } else {
                     k = MathHelper.floor(MathHelper.clamp((float) (startTime - 1500L) / 300.0F, 0.0F, 1.0F) * 252.0F) << 24 | 67108864;
                     int var10000 = this.getHeight() / 2;

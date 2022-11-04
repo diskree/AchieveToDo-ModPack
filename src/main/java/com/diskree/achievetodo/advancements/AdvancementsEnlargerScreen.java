@@ -3,7 +3,7 @@
  * Licensed under the CC-BY-NC-4.0.
  */
 
-package me.shedaniel.advancementsenlarger.gui;
+package com.diskree.achievetodo.advancements;
 
 import com.google.common.base.Suppliers;
 import com.google.common.collect.Maps;
@@ -28,14 +28,14 @@ import java.util.Map;
 import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 
-public class BiggerAdvancementsScreen extends Screen implements ClientAdvancementManager.Listener {
-    private static final Identifier WINDOW_TEXTURE = new Identifier("advancements-enlarger:textures/gui/advancements/recipecontainer.png");
-    private static final Identifier WINDOW_DARK_TEXTURE = new Identifier("advancements-enlarger:textures/gui/advancements/recipecontainer_dark.png");
+public class AdvancementsEnlargerScreen extends Screen implements ClientAdvancementManager.Listener {
+    private static final Identifier WINDOW_TEXTURE = new Identifier("achievetodo:textures/gui/advancements/recipecontainer.png");
+    private static final Identifier WINDOW_DARK_TEXTURE = new Identifier("achievetodo:textures/gui/advancements/recipecontainer_dark.png");
     private static final Identifier TABS_TEXTURE = new Identifier("textures/gui/advancements/tabs.png");
-    private static final Identifier TABS_DARK_TEXTURE = new Identifier("advancements-enlarger:textures/gui/advancements/tabs_dark.png");
+    private static final Identifier TABS_DARK_TEXTURE = new Identifier("achievetodo:textures/gui/advancements/tabs_dark.png");
     private final ClientAdvancementManager advancementHandler;
-    private final Map<Advancement, BiggerAdvancementTab> tabs = Maps.newLinkedHashMap();
-    private BiggerAdvancementTab selectedTab;
+    private final Map<Advancement, AdvancementsEnlargerTab> tabs = Maps.newLinkedHashMap();
+    private AdvancementsEnlargerTab selectedTab;
     private boolean movingTab;
     private Supplier<Boolean> reiExists = Suppliers.memoize(() -> FabricLoader.getInstance().isModLoaded("roughlyenoughitems"));
     private BooleanSupplier darkMode = () -> {
@@ -49,7 +49,7 @@ public class BiggerAdvancementsScreen extends Screen implements ClientAdvancemen
         return false;
     };
 
-    public BiggerAdvancementsScreen(ClientAdvancementManager clientAdvancementManager) {
+    public AdvancementsEnlargerScreen(ClientAdvancementManager clientAdvancementManager) {
         super(NarratorManager.EMPTY);
         this.advancementHandler = clientAdvancementManager;
     }
@@ -97,7 +97,7 @@ public class BiggerAdvancementsScreen extends Screen implements ClientAdvancemen
             int i = 8;
             int j = 33;
 
-            for (BiggerAdvancementTab advancementTab : this.tabs.values()) {
+            for (AdvancementsEnlargerTab advancementTab : this.tabs.values()) {
                 if (advancementTab.isClickOnTab(i, j, mouseX, mouseY)) {
                     this.advancementHandler.selectTab(advancementTab.getRoot(), true);
                     break;
@@ -147,7 +147,7 @@ public class BiggerAdvancementsScreen extends Screen implements ClientAdvancemen
 
     @SuppressWarnings("IntegerDivisionInFloatingPointContext")
     private void drawAdvancementTree(MatrixStack matrices, int mouseX, int mouseY, int x, int i) {
-        BiggerAdvancementTab advancementTab = this.selectedTab;
+        AdvancementsEnlargerTab advancementTab = this.selectedTab;
         if (advancementTab == null) {
             fill(matrices, x + 9, i + 18, width - 9, height - 17, -16777216);
             String string = I18n.translate("advancements.empty");
@@ -170,9 +170,9 @@ public class BiggerAdvancementsScreen extends Screen implements ClientAdvancemen
         drawWindow(matrices, x, i);
         if (this.tabs.size() > 1) {
             RenderSystem.setShaderTexture(0, isDarkMode() ? TABS_DARK_TEXTURE : TABS_TEXTURE);
-            Iterator<BiggerAdvancementTab> var3 = this.tabs.values().iterator();
+            Iterator<AdvancementsEnlargerTab> var3 = this.tabs.values().iterator();
 
-            BiggerAdvancementTab advancementTab2;
+            AdvancementsEnlargerTab advancementTab2;
             while (var3.hasNext()) {
                 advancementTab2 = var3.next();
                 advancementTab2.drawBackground(matrices, x, i, advancementTab2 == this.selectedTab);
@@ -261,7 +261,7 @@ public class BiggerAdvancementsScreen extends Screen implements ClientAdvancemen
         }
 
         if (this.tabs.size() > 1) {
-            for (BiggerAdvancementTab advancementTab : this.tabs.values()) {
+            for (AdvancementsEnlargerTab advancementTab : this.tabs.values()) {
                 if (advancementTab.isClickOnTab(x, y, mouseX, mouseY)) {
                     this.renderTooltip(matrices, advancementTab.getTitle(), mouseX, mouseY);
                 }
@@ -272,7 +272,7 @@ public class BiggerAdvancementsScreen extends Screen implements ClientAdvancemen
 
     public void onRootAdded(Advancement root) {
         try {
-            BiggerAdvancementTab advancementTab = BiggerAdvancementTab.create(this.client, this, this.tabs.size(), root);
+            AdvancementsEnlargerTab advancementTab = AdvancementsEnlargerTab.create(this.client, this, this.tabs.size(), root);
             if (advancementTab != null) {
                 this.tabs.put(root, advancementTab);
             }
@@ -285,7 +285,7 @@ public class BiggerAdvancementsScreen extends Screen implements ClientAdvancemen
     }
 
     public void onDependentAdded(Advancement dependent) {
-        BiggerAdvancementTab advancementTab = this.getTab(dependent);
+        AdvancementsEnlargerTab advancementTab = this.getTab(dependent);
         if (advancementTab != null) {
             advancementTab.addAdvancement(dependent);
         }
@@ -297,7 +297,7 @@ public class BiggerAdvancementsScreen extends Screen implements ClientAdvancemen
 
     @Override
     public void setProgress(Advancement advancement, AdvancementProgress advancementProgress) {
-        BiggerAdvancementWidget advancementWidget = this.getAdvancementWidget(advancement);
+        AdvancementsEnlargerWidget advancementWidget = this.getAdvancementWidget(advancement);
         if (advancementWidget != null) {
             advancementWidget.setProgress(advancementProgress);
         }
@@ -314,12 +314,12 @@ public class BiggerAdvancementsScreen extends Screen implements ClientAdvancemen
         this.selectedTab = null;
     }
 
-    public BiggerAdvancementWidget getAdvancementWidget(Advancement advancement) {
-        BiggerAdvancementTab advancementTab = this.getTab(advancement);
+    public AdvancementsEnlargerWidget getAdvancementWidget(Advancement advancement) {
+        AdvancementsEnlargerTab advancementTab = this.getTab(advancement);
         return advancementTab == null ? null : advancementTab.getWidget(advancement);
     }
 
-    private BiggerAdvancementTab getTab(Advancement advancement) {
+    private AdvancementsEnlargerTab getTab(Advancement advancement) {
         while (advancement.getParent() != null) {
             advancement = advancement.getParent();
         }

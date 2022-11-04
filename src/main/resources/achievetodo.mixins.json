@@ -28,7 +28,7 @@
     "VillagerEntityMixin"
   ],
   "client": [
-    "AdvancementTabTypeMixin",
+    "AdvancementsEnlargerTabTypeMixin",
     "ClientPlayerEntityMixin",
     "CreateWorldScreenMixin",
     "MinecraftClientMixin",

@@ -1,4 +1,4 @@
-package me.shedaniel.advancementsenlarger.gui;
+package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.AchievementHardcoreMod;
 import com.diskree.achievetodo.BlockedAction;
@@ -31,24 +31,24 @@ import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 @Environment(EnvType.CLIENT)
-public class BiggerAdvancementWidget extends DrawableHelper {
+public class AdvancementsEnlargerWidget extends DrawableHelper {
     private static final int[] field_24262 = new int[]{0, 10, -10, 25, -25};
     private static final Identifier WIDGETS_TEX = new Identifier("textures/gui/advancements/widgets.png");
     private static final Pattern BACKSLASH_S_PATTERN = Pattern.compile("(.+) \\S+");
-    private final BiggerAdvancementTab tab;
+    private final AdvancementsEnlargerTab tab;
     private final Advancement advancement;
     private final AdvancementDisplay display;
     private final OrderedText title;
     private final int width;
     private final List<OrderedText> description;
     private final MinecraftClient client;
-    private final List<BiggerAdvancementWidget> children = Lists.newArrayList();
+    private final List<AdvancementsEnlargerWidget> children = Lists.newArrayList();
     private final int xPos;
     private final int yPos;
-    private BiggerAdvancementWidget parent;
+    private AdvancementsEnlargerWidget parent;
     private AdvancementProgress progress;
 
-    public BiggerAdvancementWidget(BiggerAdvancementTab tab, MinecraftClient client, Advancement advancement, AdvancementDisplay display) {
+    public AdvancementsEnlargerWidget(AdvancementsEnlargerTab tab, MinecraftClient client, Advancement advancement, AdvancementDisplay display) {
         this.tab = tab;
         this.advancement = advancement;
         this.display = display;
@@ -105,7 +105,7 @@ public class BiggerAdvancementWidget extends DrawableHelper {
         return (float) var10000.mapToDouble(textHandler::getWidth).max().orElse(0.0D);
     }
 
-    private BiggerAdvancementWidget getParent(Advancement advancement) {
+    private AdvancementsEnlargerWidget getParent(Advancement advancement) {
         do {
             advancement = advancement.getParent();
         } while (advancement != null && advancement.getDisplay() == null);
@@ -141,7 +141,7 @@ public class BiggerAdvancementWidget extends DrawableHelper {
             }
         }
 
-        for (BiggerAdvancementWidget advancementWidget : this.children) {
+        for (AdvancementsEnlargerWidget advancementWidget : this.children) {
             advancementWidget.renderLines(matrices, x, y, firstPass);
         }
     }
@@ -178,7 +178,7 @@ public class BiggerAdvancementWidget extends DrawableHelper {
             this.client.getItemRenderer().zOffset -= vector4f.getZ();
         }
 
-        for (BiggerAdvancementWidget advancementWidget : this.children) {
+        for (AdvancementsEnlargerWidget advancementWidget : this.children) {
             advancementWidget.renderWidgets(matrices, x, y);
         }
     }
@@ -187,7 +187,7 @@ public class BiggerAdvancementWidget extends DrawableHelper {
         this.progress = progress;
     }
 
-    public void addChild(BiggerAdvancementWidget widget) {
+    public void addChild(AdvancementsEnlargerWidget widget) {
         this.children.add(widget);
     }
 

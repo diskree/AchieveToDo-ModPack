@@ -1,6 +1,6 @@
 package com.diskree.achievetodo;
 
-import me.shedaniel.advancementsenlarger.gui.AchieveToDoAdvancementToast;
+import com.diskree.achievetodo.advancements.AchieveToDoToast;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
@@ -69,7 +69,7 @@ public class AchievementHardcoreMod implements ModInitializer {
         }
         for (BlockedAction action : actionsToUnlock) {
             Advancement advancement = server.getAdvancementLoader().get(Identifier.of("achievetodo", "action/" + action.name().toLowerCase()));
-            MinecraftClient.getInstance().getToastManager().add(new AchieveToDoAdvancementToast(advancement, action));
+            MinecraftClient.getInstance().getToastManager().add(new AchieveToDoToast(advancement, action));
         }
     }
 

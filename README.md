@@ -15,6 +15,8 @@ You can also create a hardcore world, the corresponding datapack will be include
 This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/sugar). Thanks for the work on the optimization and quality of the Minecraft game!
 
 # How to install or update:
-1. Import [last release](https://github.com/diskree/AchieveToDo/releases/latest) ZIP in MultiMC as new instance
-2. Move your saves in new instance (if update)
-3. Play!
+1. Download AchieveToDo.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
+2. Create new instance from downloaded zip
+![image](https://user-images.githubusercontent.com/96978370/200134244-2ac599e9-40d3-456e-880c-81d43edd21c5.png)
+3. Move your saves in new instance (if update)
+4. Play!

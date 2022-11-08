@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/using_shield",
+  "parent": "achievetodo:action/using_anvil",
   "criteria": {
     "action_using_smoker": {
       "trigger": "minecraft:impossible"

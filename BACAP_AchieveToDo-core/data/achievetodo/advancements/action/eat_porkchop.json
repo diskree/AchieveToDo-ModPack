@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/eat_sweet_berries",
+  "parent": "achievetodo:action/eat_glow_berries",
   "criteria": {
     "action_eat_porkchop": {
       "trigger": "minecraft:impossible"

@@ -14,7 +14,7 @@ public abstract class ClientPlayerEntityMixin {
 
     @Inject(method = "setSprinting", at = @At("HEAD"), cancellable = true)
     public void setSprintingInject(boolean sprinting, CallbackInfo ci) {
-        if (!((PlayerEntity) ((Object) this)).isTouchingWater() && AchieveToDoMod.isActionBlocked(BlockedAction.SPRINT)) {
+        if (!((PlayerEntity) ((Object) this)).isTouchingWater() && AchieveToDoMod.isActionBlocked(BlockedAction.sprint)) {
             ci.cancel();
         }
     }

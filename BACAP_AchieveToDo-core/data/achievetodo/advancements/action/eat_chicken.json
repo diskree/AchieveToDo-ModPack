@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/eat_spider_eye",
+  "parent": "achievetodo:action/eat_pufferfish",
   "criteria": {
     "action_eat_chicken": {
       "trigger": "minecraft:impossible"

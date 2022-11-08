@@ -19,7 +19,7 @@ public abstract class VillagerEntityMixin {
 
     @Inject(method = "interactMob", at = @At("HEAD"), cancellable = true)
     private void interactMobInject(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
-        if (AchieveToDoMod.isActionBlocked(BlockedAction.TRADE_WITH_VILLAGER)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.trade_with_villager)) {
             sayNo();
             cir.setReturnValue(ActionResult.FAIL);
         }

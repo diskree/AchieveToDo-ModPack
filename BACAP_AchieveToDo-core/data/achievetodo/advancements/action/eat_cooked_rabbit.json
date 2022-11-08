@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/eat_baked_potato",
+  "parent": "achievetodo:action/eat_cooked_cod",
   "criteria": {
     "action_eat_cooked_rabbit": {
       "trigger": "minecraft:impossible"

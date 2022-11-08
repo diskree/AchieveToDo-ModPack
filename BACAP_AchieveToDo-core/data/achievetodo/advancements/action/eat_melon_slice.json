@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/eat_dried_kelp",
+  "parent": "achievetodo:action/root",
   "criteria": {
     "action_eat_melon_slice": {
       "trigger": "minecraft:impossible"

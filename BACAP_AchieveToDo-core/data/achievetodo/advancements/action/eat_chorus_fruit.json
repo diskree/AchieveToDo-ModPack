@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/eat_cooked_beef",
+  "parent": "achievetodo:action/eat_enchanted_golden_apple",
   "criteria": {
     "action_eat_chorus_fruit": {
       "trigger": "minecraft:impossible"

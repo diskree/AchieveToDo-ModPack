@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/root",
+  "parent": "achievetodo:action/eat_cookie",
   "criteria": {
     "action_eat_honey_bottle": {
       "trigger": "minecraft:impossible"

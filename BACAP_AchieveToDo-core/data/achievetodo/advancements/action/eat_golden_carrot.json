@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/eat_enchanted_golden_apple",
+  "parent": "achievetodo:action/eat_chorus_fruit",
   "criteria": {
     "action_eat_golden_carrot": {
       "trigger": "minecraft:impossible"

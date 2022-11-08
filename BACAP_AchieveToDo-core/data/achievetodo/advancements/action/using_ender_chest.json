@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/using_beacon",
+  "parent": "achievetodo:action/using_blast_furnace",
   "criteria": {
     "action_using_ender_chest": {
       "trigger": "minecraft:impossible"

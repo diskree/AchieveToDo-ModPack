@@ -20,7 +20,7 @@ public class BeaconBlockMixin {
 
     @Inject(method = "onUse", at = @At("HEAD"), cancellable = true)
     public void onUseInject(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
-        if (AchieveToDoMod.isActionBlocked(BlockedAction.USING_BEACON)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.using_beacon)) {
             cir.setReturnValue(ActionResult.FAIL);
         }
     }

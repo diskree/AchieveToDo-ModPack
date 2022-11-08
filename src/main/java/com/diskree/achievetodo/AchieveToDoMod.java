@@ -102,7 +102,7 @@ public class AchieveToDoMod implements ModInitializer {
     public static BlockedAction getBlockedActionFromAdvancement(Advancement advancement) {
         if (advancement.getId().getNamespace().equals(AchieveToDoMod.ID) && advancement.getId().getPath().startsWith(AchieveToDoMod.ADVANCEMENT_PATH_PREFIX)) {
             String key = advancement.getId().getPath().split(AchieveToDoMod.ADVANCEMENT_PATH_PREFIX)[1];
-            return BlockedAction.map(key.toUpperCase());
+            return BlockedAction.map(key);
         }
         return null;
     }
@@ -114,7 +114,7 @@ public class AchieveToDoMod implements ModInitializer {
         }
         Advancement tab = server.getAdvancementLoader().get(action.buildAdvancementId());
         if (server.getPlayerManager() != null && !server.getPlayerManager().getPlayerList().isEmpty()) {
-            server.getPlayerManager().getPlayerList().get(0).getAdvancementTracker().grantCriterion(tab, ADVANCEMENT_CRITERIA_PREFIX + action.name().toLowerCase());
+            server.getPlayerManager().getPlayerList().get(0).getAdvancementTracker().grantCriterion(tab, ADVANCEMENT_CRITERIA_PREFIX + action.name());
         }
     }
 
@@ -128,9 +128,9 @@ public class AchieveToDoMod implements ModInitializer {
         Item item = itemStack.getItem();
         if (item instanceof ToolItem) {
             ToolMaterial toolMaterial = ((ToolItem) item).getMaterial();
-            return toolMaterial == ToolMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.USING_IRON_TOOLS) ||
-                    toolMaterial == ToolMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.USING_DIAMOND_TOOLS) ||
-                    toolMaterial == ToolMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.USING_NETHERITE_TOOLS);
+            return toolMaterial == ToolMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.using_iron_tools) ||
+                    toolMaterial == ToolMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.using_diamond_tools) ||
+                    toolMaterial == ToolMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.using_netherite_tools);
         }
         return false;
     }
@@ -140,7 +140,7 @@ public class AchieveToDoMod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier(AchieveToDoMod.ID, "locked_action"), MYSTERY_MASK_ITEM);
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {
-                if (pos.getY() >= 0 && isActionBlocked(BlockedAction.BREAK_BLOCKS_IN_POSITIVE_Y) || pos.getY() < 0 && isActionBlocked(BlockedAction.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
+                if (pos.getY() >= 0 && isActionBlocked(BlockedAction.break_blocks_in_positive_y) || pos.getY() < 0 && isActionBlocked(BlockedAction.break_blocks_in_negative_y)) {
                     return ActionResult.FAIL;
                 }
             }

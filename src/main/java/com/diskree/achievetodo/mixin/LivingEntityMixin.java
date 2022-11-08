@@ -16,15 +16,15 @@ public class LivingEntityMixin {
     @Inject(method = "getPreferredEquipmentSlot", at = @At("HEAD"), cancellable = true)
     private static void getPreferredEquipmentSlotInject(ItemStack stack, CallbackInfoReturnable<EquipmentSlot> cir) {
         if (stack.getHolder() == null) {
-            if (stack.isOf(Items.ELYTRA) && AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_ELYTRA)) {
+            if (stack.isOf(Items.ELYTRA) && AchieveToDoMod.isActionBlocked(BlockedAction.equip_elytra)) {
                 cir.setReturnValue(EquipmentSlot.MAINHAND);
             } else {
                 Item item = stack.getItem();
                 if (item instanceof ArmorItem) {
                     ArmorMaterial armorMaterial = ((ArmorItem) item).getMaterial();
-                    if (armorMaterial == ArmorMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_IRON_ARMOR) ||
-                            armorMaterial == ArmorMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_DIAMOND_ARMOR) ||
-                            armorMaterial == ArmorMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_NETHERITE_ARMOR)) {
+                    if (armorMaterial == ArmorMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.equip_iron_armor) ||
+                            armorMaterial == ArmorMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.equip_diamond_armor) ||
+                            armorMaterial == ArmorMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.equip_netherite_armor)) {
                         cir.setReturnValue(EquipmentSlot.MAINHAND);
                     }
                 }

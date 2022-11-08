@@ -20,7 +20,7 @@ public class EnchantingTableBlockMixin {
 
     @Inject(method = "onUse", at = @At("HEAD"), cancellable = true)
     public void onUseInject(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
-        if (AchieveToDoMod.isActionBlocked(BlockedAction.USING_ENCHANTING_TABLE)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.using_enchanting_table)) {
             cir.setReturnValue(ActionResult.FAIL);
         }
     }

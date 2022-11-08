@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/root",
+  "parent": "achievetodo:action/eat_rabbit",
   "criteria": {
     "action_eat_sweet_berries": {
       "trigger": "minecraft:impossible"

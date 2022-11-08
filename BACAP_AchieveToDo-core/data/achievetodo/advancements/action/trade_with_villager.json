@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/end_gate",
+  "parent": "achievetodo:action/using_fireworks_while_fly",
   "criteria": {
     "action_trade_with_villager": {
       "trigger": "minecraft:impossible"

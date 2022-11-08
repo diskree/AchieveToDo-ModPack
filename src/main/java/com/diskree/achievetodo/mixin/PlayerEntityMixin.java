@@ -18,14 +18,14 @@ public abstract class PlayerEntityMixin {
 
     @Inject(method = "jump", at = @At("HEAD"), cancellable = true)
     public void jumpInject(CallbackInfo ci) {
-        if (!((PlayerEntity) (Object) this).isTouchingWater() && AchieveToDoMod.isActionBlocked(BlockedAction.JUMP)) {
+        if (!((PlayerEntity) (Object) this).isTouchingWater() && AchieveToDoMod.isActionBlocked(BlockedAction.jump)) {
             ci.cancel();
         }
     }
 
     @Inject(method = "canPlaceOn", at = @At("HEAD"), cancellable = true)
     public void canPlaceOnInject(BlockPos pos, Direction facing, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        if (stack != null && stack.isOf(Items.WATER_BUCKET) && AchieveToDoMod.isActionBlocked(BlockedAction.USING_WATER_BUCKET)) {
+        if (stack != null && stack.isOf(Items.WATER_BUCKET) && AchieveToDoMod.isActionBlocked(BlockedAction.using_water_bucket)) {
             cir.setReturnValue(false);
         }
     }

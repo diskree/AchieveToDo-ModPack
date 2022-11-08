@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/break_blocks_in_negative_y",
+  "parent": "achievetodo:action/equip_elytra",
   "criteria": {
     "action_end_gate": {
       "trigger": "minecraft:impossible"

@@ -26,9 +26,9 @@ public class ArmorItemMixin {
 
     @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     public void useInject(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-        if (type == ArmorMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_IRON_ARMOR) ||
-                type == ArmorMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_DIAMOND_ARMOR) ||
-                type == ArmorMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_NETHERITE_ARMOR)) {
+        if (type == ArmorMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.equip_iron_armor) ||
+                type == ArmorMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.equip_diamond_armor) ||
+                type == ArmorMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.equip_netherite_armor)) {
             cir.setReturnValue(TypedActionResult.fail(user.getStackInHand(hand)));
         }
     }

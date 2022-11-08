@@ -15,7 +15,7 @@ public class BoatEntityMixin {
 
     @Inject(method = "canAddPassenger", at = @At("HEAD"), cancellable = true)
     public void canAddPassengerInject(Entity passenger, CallbackInfoReturnable<Boolean> cir) {
-        if (passenger instanceof PlayerEntity && AchieveToDoMod.isActionBlocked(BlockedAction.USING_BOAT)) {
+        if (passenger instanceof PlayerEntity && AchieveToDoMod.isActionBlocked(BlockedAction.using_boat)) {
             cir.setReturnValue(false);
         }
     }

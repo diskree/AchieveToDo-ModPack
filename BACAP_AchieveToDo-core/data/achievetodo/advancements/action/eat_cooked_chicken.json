@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/eat_pufferfish",
+  "parent": "achievetodo:action/eat_golden_apple",
   "criteria": {
     "action_eat_cooked_chicken": {
       "trigger": "minecraft:impossible"

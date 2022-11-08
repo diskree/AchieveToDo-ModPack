@@ -20,7 +20,7 @@ public class BrewingStandBlockMixin {
 
     @Inject(method = "onUse", at = @At("HEAD"), cancellable = true)
     public void onUseInject(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
-        if (AchieveToDoMod.isActionBlocked(BlockedAction.USING_BREWING_STAND)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.using_brewing_stand)) {
             cir.setReturnValue(ActionResult.FAIL);
         }
     }

@@ -1,11 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:diamond_pickaxe"
+      "item": "minecraft:stone_pickaxe"
     },
-    "title": "Ломать блоки ниже 0",
+    "title": "Ломать блоки ниже нуля",
     "description": {
-      "translate": "Возможность ломать блоки ниже 0"
+      "translate": "Возможность ломать блоки ниже нуля"
     },
     "show_toast": false,
     "announce_to_chat": false

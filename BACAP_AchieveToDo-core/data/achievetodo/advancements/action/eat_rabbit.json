@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/eat_mutton",
+  "parent": "achievetodo:action/root",
   "criteria": {
     "action_eat_rabbit": {
       "trigger": "minecraft:impossible"

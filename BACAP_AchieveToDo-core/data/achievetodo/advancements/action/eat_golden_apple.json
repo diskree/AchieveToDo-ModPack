@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/eat_glow_berries",
+  "parent": "achievetodo:action/eat_cooked_rabbit",
   "criteria": {
     "action_eat_golden_apple": {
       "trigger": "minecraft:impossible"

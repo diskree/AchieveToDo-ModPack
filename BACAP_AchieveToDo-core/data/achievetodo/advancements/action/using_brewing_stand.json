@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/using_anvil",
+  "parent": "achievetodo:action/using_ender_chest",
   "criteria": {
     "action_using_brewing_stand": {
       "trigger": "minecraft:impossible"

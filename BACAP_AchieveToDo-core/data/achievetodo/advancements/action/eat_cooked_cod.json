@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/eat_cooked_salmon",
+  "parent": "achievetodo:action/root",
   "criteria": {
     "action_eat_cooked_cod": {
       "trigger": "minecraft:impossible"

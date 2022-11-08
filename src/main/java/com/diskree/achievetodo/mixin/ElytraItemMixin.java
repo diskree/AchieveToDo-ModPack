@@ -18,7 +18,7 @@ public class ElytraItemMixin {
 
     @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     public void useInject(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-        if (AchieveToDoMod.isActionBlocked(BlockedAction.EQUIP_ELYTRA)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.equip_elytra)) {
             cir.setReturnValue(TypedActionResult.fail(user.getStackInHand(hand)));
         }
     }

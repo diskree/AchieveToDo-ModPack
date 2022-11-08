@@ -20,7 +20,7 @@ public class ShulkerBoxBlockMixin {
 
     @Inject(method = "onUse", at = @At("HEAD"), cancellable = true)
     public void onUseInject(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
-        if (AchieveToDoMod.isActionBlocked(BlockedAction.USING_SHULKER_BOX)) {
+        if (AchieveToDoMod.isActionBlocked(BlockedAction.using_shulker_box)) {
             cir.setReturnValue(ActionResult.FAIL);
         }
     }

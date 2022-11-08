@@ -18,7 +18,7 @@ public class FireworkRocketItemMixin {
 
     @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     public void useInject(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-        if (user.isFallFlying() && AchieveToDoMod.isActionBlocked(BlockedAction.USING_FIREWORKS_WHILE_FLY)) {
+        if (user.isFallFlying() && AchieveToDoMod.isActionBlocked(BlockedAction.using_fireworks_while_fly)) {
             cir.setReturnValue(TypedActionResult.fail(user.getStackInHand(hand)));
         }
     }

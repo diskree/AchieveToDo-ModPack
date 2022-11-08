@@ -18,7 +18,9 @@ This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/s
 # How to install or update:
 1. Download AchieveToDo+Sugar.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
 2. Create new instance from downloaded zip
+
 ![image](https://user-images.githubusercontent.com/96978370/200134244-2ac599e9-40d3-456e-880c-81d43edd21c5.png)
+
 3. Move your saves in new instance (if update)
 4. Play!
 
@@ -32,5 +34,7 @@ This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/s
 2. Compress contents of BACAP_AchieveToDo-core folder into BACAP_AchieveToDo-core.zip
 3. Download BlazeandCave's main data pack, hardcore data pack and language pack from [official page](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/) 
 4. Create global_packs folder in .minecraft with this file structure:
+
 ![image](https://user-images.githubusercontent.com/96978370/200697614-d610b695-c750-4c38-a23b-b8562ff2ba60.png)
+
 5. Add [GlobalPacks](https://www.curseforge.com/minecraft/mc-mods/drp-global-datapack) and [fabric-api](https://www.curseforge.com/minecraft/mc-mods/fabric-api) into mods folder

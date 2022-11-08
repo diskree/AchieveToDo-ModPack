@@ -21,7 +21,7 @@ This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/s
 3. Move your saves in new instance (if update)
 4. Play!
 
-# Manual install or update:
-1. Download Manual_ExtractMe.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
+# Manually install or update:
+1. Download AchieveToDo_ExtractMe.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
 2. Extract downloaded zip into .minecraft folder (replace files if update)
 3. Play!

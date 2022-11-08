@@ -4,7 +4,7 @@ Forget about the usual Minecraft. Welcome to a world where game mechanics, food,
 
 Each world you create includes a [BlazeandCave's datapack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/) with 1000+ achievements. Your opportunities open depending on the achievements counter. In the beginning you can't even jump and eat nothing. 
 
-The modpack adds a "Blocked Actions" tab to the achievements window. You will not know what is blocked until you try it. From the beginning this tab will look like this:
+The modpack adds a "AchieveToDo" tab to the achievements window. You will not know what is blocked until you try it. From the beginning this tab will look like this:
 
 ![image](https://user-images.githubusercontent.com/96978370/199967140-315aabf5-42ad-4c68-9f43-05e92781c39f.png)
 
@@ -20,3 +20,8 @@ This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/s
 ![image](https://user-images.githubusercontent.com/96978370/200134244-2ac599e9-40d3-456e-880c-81d43edd21c5.png)
 3. Move your saves in new instance (if update)
 4. Play!
+
+# Manual install or update:
+1. Download Manual_ExtractMe.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
+2. Extract downloaded zip into .minecraft folder (replace files if update)
+3. Play!

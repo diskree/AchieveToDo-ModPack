@@ -99,6 +99,19 @@ public class AchieveToDoMod implements ModInitializer {
         return false;
     }
 
+    public static boolean isEquipmentBlocked(Item stack) {
+        if (stack == Items.ELYTRA && AchieveToDoMod.isActionBlocked(BlockedAction.equip_elytra)) {
+            return true;
+        }
+        if (stack instanceof ArmorItem) {
+            ArmorMaterial armorMaterial = ((ArmorItem) stack).getMaterial();
+            return armorMaterial == ArmorMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.equip_iron_armor) ||
+                    armorMaterial == ArmorMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.equip_diamond_armor) ||
+                    armorMaterial == ArmorMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.equip_netherite_armor);
+        }
+        return false;
+    }
+
     public static BlockedAction getBlockedActionFromAdvancement(Advancement advancement) {
         if (advancement.getId().getNamespace().equals(AchieveToDoMod.ID) && advancement.getId().getPath().startsWith(AchieveToDoMod.ADVANCEMENT_PATH_PREFIX)) {
             String key = advancement.getId().getPath().split(AchieveToDoMod.ADVANCEMENT_PATH_PREFIX)[1];

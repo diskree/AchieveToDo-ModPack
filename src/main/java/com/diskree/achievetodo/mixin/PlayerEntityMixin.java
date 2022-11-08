@@ -29,4 +29,11 @@ public abstract class PlayerEntityMixin {
             cir.setReturnValue(false);
         }
     }
+
+    @Inject(method = "canEquip", at = @At("HEAD"), cancellable = true)
+    public void canEquipInject(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+        if (stack != null && AchieveToDoMod.isEquipmentBlocked(stack.getItem())) {
+            cir.setReturnValue(false);
+        }
+    }
 }

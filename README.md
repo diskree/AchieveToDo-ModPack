@@ -12,6 +12,7 @@ BlazeandCave's is already configured to work with this modpack, so you DO NOT ne
 
 You can also create a hardcore world, the corresponding datapack will be included automatically.
 
+This modpack require Minecraft 1.19 and last fabric version
 This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/sugar). Thanks for the work on the optimization and quality of the Minecraft game!
 
 # How to install or update:
@@ -25,3 +26,11 @@ This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/s
 1. Download AchieveToDo.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
 2. Extract downloaded zip into .minecraft folder (replace files if update)
 3. Play!
+
+# Build manually
+1. Build this project and add mod into your mods folder
+2. Compress contents of BACAP_AchieveToDo-core folder into BACAP_AchieveToDo-core.zip
+3. Download BlazeandCave's main data pack, hardcore data pack and language pack from [official page](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/) 
+4. Create global_packs folder in .minecraft with this file structure:
+![image](https://user-images.githubusercontent.com/96978370/200697614-d610b695-c750-4c38-a23b-b8562ff2ba60.png)
+5. Add [GlobalPacks](https://www.curseforge.com/minecraft/mc-mods/drp-global-datapack) and [fabric-api](https://www.curseforge.com/minecraft/mc-mods/fabric-api) into mods folder

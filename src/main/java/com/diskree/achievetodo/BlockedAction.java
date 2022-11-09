@@ -102,6 +102,10 @@ public enum BlockedAction {
         return achievementsCountToUnlock;
     }
 
+    public boolean isUnlocked() {
+        return AchieveToDoMod.lastAchievementsCount >= getAchievementsCountToUnlock();
+    }
+
     public Text getLockDescription() {
         int leftAchievementsCount = getAchievementsCountToUnlock() - AchieveToDoMod.lastAchievementsCount;
         return Text.of(description + ". Для разблокировки осталось выполнить достижений: " + leftAchievementsCount).copy().formatted(Formatting.YELLOW);

@@ -56,7 +56,7 @@ public class AchieveToDoMod implements ModInitializer {
         lastAchievementsCount = count;
         List<BlockedAction> actionsToUnlock = new ArrayList<>();
         for (BlockedAction action : BlockedAction.values()) {
-            if (count >= action.getAchievementsCountToUnlock()) {
+            if (action.isUnlocked()) {
                 if (oldCount < action.getAchievementsCountToUnlock() && oldCount != 0) {
                     actionsToUnlock.add(action);
                 }
@@ -93,7 +93,7 @@ public class AchieveToDoMod implements ModInitializer {
         for (BlockedAction action : BlockedAction.values()) {
             if (action.getFoodComponent() == food) {
                 grantActionAdvancement(action);
-                return action.getAchievementsCountToUnlock() > lastAchievementsCount;
+                return !action.isUnlocked();
             }
         }
         return false;

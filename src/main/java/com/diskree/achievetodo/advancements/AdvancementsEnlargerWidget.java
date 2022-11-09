@@ -157,12 +157,8 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
             }
             // atd start
             BlockedAction action = AchieveToDoMod.getBlockedActionFromAdvancement(advancement);
-            boolean isUnlocked = false;
             if (action != null) {
-                float total = (float) action.getAchievementsCountToUnlock();
-                float obtained = (float) AchieveToDoMod.lastAchievementsCount;
-                if (obtained >= total) {
-                    isUnlocked = true;
+                if (action.isUnlocked()) {
                     advancementObtainedStatus2 = AdvancementObtainedStatus.OBTAINED;
                 } else {
                     advancementObtainedStatus2 = AdvancementObtainedStatus.UNOBTAINED;
@@ -176,7 +172,7 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
             vector4f.transform(matrices.peek().getPositionMatrix());
             this.client.getItemRenderer().zOffset += vector4f.getZ();
             // atd if
-            if (action != null && f < 1.0F && !isUnlocked) {
+            if (action != null && f < 1.0F && !action.isUnlocked()) {
                 this.client.getItemRenderer().renderInGui(new ItemStack(AchieveToDoMod.MYSTERY_MASK_ITEM), (int) vector4f.getX(), (int) vector4f.getY());
             } else
             this.client.getItemRenderer().renderInGui(this.display.getIcon(), (int) vector4f.getX(), (int) vector4f.getY());
@@ -203,11 +199,7 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
         BlockedAction action = AchieveToDoMod.getBlockedActionFromAdvancement(advancement);
         if (action != null) {
             int total = action.getAchievementsCountToUnlock();
-            int obtained = Math.min(total, AchieveToDoMod.lastAchievementsCount);
-            if (obtained > total) {
-                obtained = total;
-            }
-            string = obtained + "/" + total;
+            string = Math.min(total, AchieveToDoMod.lastAchievementsCount) + "/" + total;
         }
         // atd end
         int i = string == null ? 0 : this.client.textRenderer.getWidth(string);
@@ -218,8 +210,7 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
         // atd start
         if (action != null) {
             float total = (float) action.getAchievementsCountToUnlock();
-            float obtained = (float) AchieveToDoMod.lastAchievementsCount;
-            f = obtained / total;
+            f = Math.min(total, AchieveToDoMod.lastAchievementsCount) / total;
         }
         // atd end
         int j = MathHelper.floor(f * (float) this.width);
@@ -348,11 +339,7 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
             int l = k + 26;
             if (mouseX >= i && mouseX <= j && mouseY >= k && mouseY <= l) {
                 BlockedAction action = AchieveToDoMod.getBlockedActionFromAdvancement(advancement);
-                if (action != null) {
-                    float f = this.progress == null ? 0.0F : this.progress.getProgressBarPercentage();
-                    return !(f < 1.0F) || action.getAchievementsCountToUnlock() < AchieveToDoMod.lastAchievementsCount;
-                }
-                return true;
+                return action == null || action.isUnlocked() || this.progress != null && this.progress.isDone();
             }
         }
         return false;

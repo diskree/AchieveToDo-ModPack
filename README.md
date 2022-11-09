@@ -15,7 +15,7 @@ You can also create a hardcore world, the corresponding datapack will be include
 This modpack require Minecraft 1.19 and last fabric version
 This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/sugar). Thanks for the work on the optimization and quality of the Minecraft game!
 
-# How to install or update:
+# Install or update modpack:
 1. Download AchieveToDo.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
 2. Create new instance from downloaded zip
 

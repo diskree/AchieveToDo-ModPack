@@ -16,7 +16,7 @@ This modpack require Minecraft 1.19 and last fabric version
 This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/sugar). Thanks for the work on the optimization and quality of the Minecraft game!
 
 # How to install or update:
-1. Download AchieveToDo+Sugar.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
+1. Download AchieveToDo.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
 2. Create new instance from downloaded zip
 
 ![image](https://user-images.githubusercontent.com/96978370/200134244-2ac599e9-40d3-456e-880c-81d43edd21c5.png)
@@ -25,7 +25,7 @@ This modpack is based on the 💜 [Sugar modpack](https://modrinth.com/modpack/s
 4. Play
 
 # Install or update mods & datapacks only:
-1. Download AchieveToDo.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
+1. Download AchieveToDo_minimal.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
 2. Extract downloaded zip into .minecraft folder (replace files if update)
 3. Play
 

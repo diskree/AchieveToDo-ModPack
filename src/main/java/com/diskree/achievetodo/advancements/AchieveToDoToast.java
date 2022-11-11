@@ -25,7 +25,7 @@ import java.util.Objects;
 
 @Environment(EnvType.CLIENT)
 public class AchieveToDoToast implements Toast {
-    Identifier TEXTURE = new Identifier(AchieveToDoMod.ID, "textures/gui/toasts.png");
+    Identifier TEXTURE;
 
     private final Advancement advancement;
     public final BlockedAction blockedAction;
@@ -34,6 +34,7 @@ public class AchieveToDoToast implements Toast {
     public AchieveToDoToast(Advancement advancement, BlockedAction blockedAction) {
         this.advancement = advancement;
         this.blockedAction = blockedAction;
+        TEXTURE = new Identifier(AchieveToDoMod.ID, "textures/gui/toasts_" + blockedAction.getActionType().name().toLowerCase() + ".png");
     }
 
     public Toast.Visibility draw(MatrixStack matrices, ToastManager manager, long startTime) {

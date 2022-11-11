@@ -17,7 +17,6 @@ import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
-import java.util.EnumMap;
 import java.util.List;
 
 public class AchieveToDoMod implements ModInitializer {
@@ -27,7 +26,6 @@ public class AchieveToDoMod implements ModInitializer {
     public static final String ADVANCEMENT_CRITERIA_PREFIX = "action_";
     public static final Item MYSTERY_MASK_ITEM = new Item(new FabricItemSettings().group(ItemGroup.MISC));
 
-    private static final EnumMap<BlockedAction, Boolean> blockedActions = new EnumMap<>(BlockedAction.class);
     public static int lastAchievementsCount;
 
     public static void showFoodBlockedDescription(FoodComponent food) {
@@ -45,10 +43,6 @@ public class AchieveToDoMod implements ModInitializer {
     public static void setAchievementsCount(int count) {
         if (count == 0 || count < lastAchievementsCount) {
             lastAchievementsCount = 0;
-            blockedActions.clear();
-            for (BlockedAction action : BlockedAction.values()) {
-                blockedActions.put(action, false);
-            }
         }
         if (lastAchievementsCount == count) {
             return;
@@ -57,11 +51,8 @@ public class AchieveToDoMod implements ModInitializer {
         lastAchievementsCount = count;
         List<BlockedAction> actionsToUnlock = new ArrayList<>();
         for (BlockedAction action : BlockedAction.values()) {
-            if (action.isUnlocked()) {
-                if (oldCount < action.getAchievementsCountToUnlock() && oldCount != 0) {
-                    actionsToUnlock.add(action);
-                }
-                blockedActions.put(action, true);
+            if (action.isUnlocked() && oldCount < action.getAchievementsCountToUnlock() && oldCount != 0) {
+                actionsToUnlock.add(action);
             }
         }
         IntegratedServer server = MinecraftClient.getInstance().getServer();
@@ -75,11 +66,7 @@ public class AchieveToDoMod implements ModInitializer {
     }
 
     public static boolean isActionBlocked(BlockedAction action) {
-        if (MinecraftClient.getInstance().player == null || MinecraftClient.getInstance().player.isCreative()) {
-            return false;
-        }
-        Boolean value = blockedActions.get(action);
-        if (value != null && value) {
+        if (MinecraftClient.getInstance().player == null || MinecraftClient.getInstance().player.isCreative() || action.isUnlocked()) {
             return false;
         }
         MinecraftClient.getInstance().player.sendMessage(action.getLockDescription(), true);

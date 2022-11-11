@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:blast_furnace"
+    },
+    "title": "Бронник",
+    "description": {
+      "translate": "Возможность торговли с бронником"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/villager_fletcher",
+  "criteria": {
+    "action_villager_armorer": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

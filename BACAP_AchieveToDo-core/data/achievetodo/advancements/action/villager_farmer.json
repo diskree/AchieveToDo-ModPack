@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:composter"
+    },
+    "title": "Фермер",
+    "description": {
+      "translate": "Возможность торговли с фермером"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/villager_butcher",
+  "criteria": {
+    "action_villager_farmer": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

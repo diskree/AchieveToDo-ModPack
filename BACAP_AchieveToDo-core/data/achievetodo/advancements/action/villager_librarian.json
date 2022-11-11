@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:lectern"
+    },
+    "title": "Библиотекарь",
+    "description": {
+      "translate": "Возможность торговли с библиотекарем"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/villager_toolsmith",
+  "criteria": {
+    "action_villager_librarian": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

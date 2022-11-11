@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:stonecutter"
+    },
+    "title": "Каменщик",
+    "description": {
+      "translate": "Возможность торговли с каменщиком"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/root",
+  "criteria": {
+    "action_villager_mason": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

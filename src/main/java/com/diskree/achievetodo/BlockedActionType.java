@@ -4,9 +4,10 @@ public enum BlockedActionType {
     FOOD("Доступна еда"),
     ACTION("Доступно действие"),
     BLOCK("Доступен блок"),
-    TOOLS("Доступны железные инструменты"),
+    TOOLS("Доступны инструменты"),
     ARMOR("Доступна броня"),
-    PORTAL("Доступен портал");
+    PORTAL("Доступен портал"),
+    VILLAGER("Доступен житель");
 
     private final String unlockPopupTitle;
 

@@ -9,6 +9,7 @@
     "ArmorItemMixin",
     "BeaconBlockMixin",
     "BoatEntityMixin",
+    "BowItemMixin",
     "BrewingStandBlockMixin",
     "ChorusFruitItemMixin",
     "CraftingTableBlockMixin",
@@ -34,7 +35,6 @@
   ],
   "client": [
     "AdvancementsEnlargerTabTypeMixin",
-    "ClientPlayerEntityMixin",
     "CreateWorldScreenMixin",
     "MinecraftClientMixin",
     "ToastManagerMixin"

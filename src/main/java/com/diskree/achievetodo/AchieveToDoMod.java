@@ -13,6 +13,7 @@ import net.minecraft.server.integrated.IntegratedServer;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
@@ -108,6 +109,15 @@ public class AchieveToDoMod implements ModInitializer {
             return armorMaterial == ArmorMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.equip_iron_armor) ||
                     armorMaterial == ArmorMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.equip_diamond_armor) ||
                     armorMaterial == ArmorMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.equip_netherite_armor);
+        }
+        return false;
+    }
+
+    public static boolean isVillagerBlocked(VillagerProfession profession) {
+        for (BlockedAction action : BlockedAction.values()) {
+            if (action.getVillagerProfession() == profession) {
+                return isActionBlocked(action);
+            }
         }
         return false;
     }

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:grindstone"
+    },
+    "title": "Оружейник",
+    "description": {
+      "translate": "Возможность торговли с оружейником"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/villager_armorer",
+  "criteria": {
+    "action_villager_weaponsmith": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

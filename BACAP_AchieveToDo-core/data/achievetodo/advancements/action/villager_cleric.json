@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:brewing_stand"
+    },
+    "title": "Священник",
+    "description": {
+      "translate": "Возможность торговли со священником"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/villager_farmer",
+  "criteria": {
+    "action_villager_cleric": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:fletching_table"
+    },
+    "title": "Лучник",
+    "description": {
+      "translate": "Возможность торговли с лучником"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/villager_fisherman",
+  "criteria": {
+    "action_villager_fletcher": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -10,7 +10,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "achievetodo:action/sprint",
+  "parent": "achievetodo:action/jump",
   "criteria": {
     "action_break_blocks_in_positive_y": {
       "trigger": "minecraft:impossible"

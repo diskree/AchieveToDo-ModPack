@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:smoker"
+    },
+    "title": "Мясник",
+    "description": {
+      "translate": "Возможность торговли с мясником"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/villager_shepherd",
+  "criteria": {
+    "action_villager_butcher": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

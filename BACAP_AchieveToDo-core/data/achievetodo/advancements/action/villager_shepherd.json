@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:loom"
+    },
+    "title": "Пастух",
+    "description": {
+      "translate": "Возможность торговли с пастухом"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/villager_leatherworker",
+  "criteria": {
+    "action_villager_shepherd": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:barrel"
+    },
+    "title": "Рыбак",
+    "description": {
+      "translate": "Возможность торговли с рыбаком"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/villager_cleric",
+  "criteria": {
+    "action_villager_fisherman": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

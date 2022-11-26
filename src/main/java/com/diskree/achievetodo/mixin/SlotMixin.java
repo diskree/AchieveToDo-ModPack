@@ -1,6 +1,8 @@
 package com.diskree.achievetodo.mixin;
 
 import com.diskree.achievetodo.AchieveToDoMod;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
@@ -26,6 +28,18 @@ public class SlotMixin {
     public void insertStackInject(ItemStack stack, int count, CallbackInfoReturnable<ItemStack> cir) {
         if (inventory instanceof PlayerInventory && id >= 5 && id <= 8 && stack != null && AchieveToDoMod.isEquipmentBlocked(stack.getItem())) {
             cir.setReturnValue(stack);
+        }
+    }
+
+    @Inject(method = "canTakeItems", at = @At("HEAD"), cancellable = true)
+    public void canTakeItemsInject(PlayerEntity playerEntity, CallbackInfoReturnable<Boolean> cir) {
+        if (inventory instanceof PlayerInventory && id >= 5 && id <= 8) {
+            if (MinecraftClient.getInstance().player != null) {
+                ItemStack stack = MinecraftClient.getInstance().player.playerScreenHandler.getCursorStack();
+                if (stack != null && AchieveToDoMod.isEquipmentBlocked(stack.getItem())) {
+                    cir.setReturnValue(false);
+                }
+            }
         }
     }
 }

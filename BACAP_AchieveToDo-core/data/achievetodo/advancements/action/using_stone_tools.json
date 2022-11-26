@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:stone_pickaxe"
+    },
+    "title": "Каменные инструменты",
+    "description": {
+      "translate": "Возможность использовать каменные инструменты"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "achievetodo:action/root",
+  "criteria": {
+    "action_using_iron_tools": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

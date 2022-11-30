@@ -138,7 +138,8 @@ public class AchieveToDoMod implements ModInitializer {
         Item item = itemStack.getItem();
         if (item instanceof ToolItem) {
             ToolMaterial toolMaterial = ((ToolItem) item).getMaterial();
-            return toolMaterial == ToolMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.using_iron_tools) ||
+            return toolMaterial == ToolMaterials.STONE && AchieveToDoMod.isActionBlocked(BlockedAction.using_stone_tools) ||
+                    toolMaterial == ToolMaterials.IRON && AchieveToDoMod.isActionBlocked(BlockedAction.using_iron_tools) ||
                     toolMaterial == ToolMaterials.DIAMOND && AchieveToDoMod.isActionBlocked(BlockedAction.using_diamond_tools) ||
                     toolMaterial == ToolMaterials.NETHERITE && AchieveToDoMod.isActionBlocked(BlockedAction.using_netherite_tools);
         }

@@ -2,7 +2,7 @@
 
 Forget about the usual Minecraft. Welcome to a world where game mechanics, food, items and blocks familiar to all players will demand something more from you!
 
-Each world you create includes a [BlazeandCave's datapack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/) with 1000+ achievements. Your opportunities open depending on the achievements counter. In the beginning you can't even jump and eat nothing. 
+Each world you create includes a [BlazeandCave's datapack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/) with 1000+ achievements. Your opportunities open depending on the achievements counter. In the beginning you can't even jump and eat. 
 
 The modpack adds a "AchieveToDo" tab to the achievements window. You will not know what is blocked until you try it. From the beginning this tab will look like this:
 

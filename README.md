@@ -4,7 +4,7 @@ Forget about the usual Minecraft. Welcome to a world where game mechanics, food,
 
 Only for singleplayer game! Each world you create includes a [BlazeandCave's datapack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/) with 1000+ achievements. Your opportunities open depending on the achievements counter. In the beginning you can't even jump and eat. 
 
-The modpack adds a "AchieveToDo" tab to the achievements window. You will not know what is blocked until you not try it. From the beginning this tab will look like this:
+The modpack adds a "AchieveToDo" tab to the achievements window. You won't know what's blocked until you try something that's forbidden. From the beginning this tab will look like this:
 
 ![image](https://user-images.githubusercontent.com/96978370/200839325-67781720-c128-49e4-b855-dfdf1d92e93c.png)
 

@@ -1,6 +1,6 @@
 # AchieveToDo
 
-Forget about the usual Minecraft. Welcome to a world where game mechanics, food, items and blocks familiar to all players will demand something more from you!
+Forget about the usual Minecraft. Welcome to a world where game mechanics, food, items and blocks familiar to all players will demand something more from you! Created for ardent explorers of the cubic world, who are tired of the monotony.
 
 Only for singleplayer game! Each world you create includes a [BlazeandCave's datapack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/) with 1000+ achievements. Your opportunities open depending on the achievements counter. In the beginning you can't even jump and eat. 
 

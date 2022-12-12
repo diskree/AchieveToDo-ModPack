@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:sweet_berries"
     },
-    "title": "Сладкие ягоды",
+    "title": {"translate": "Sweet berries"},
     "description": {
-      "translate": "Возможность есть сладкие ягоды"
+      "translate":"Ability to eat sweet berries"
     },
     "show_toast": false,
     "announce_to_chat": false

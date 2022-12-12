@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:stonecutter"
     },
-    "title": "Каменщик",
+    "title": {"translate":  "Mason"},
     "description": {
-      "translate": "Возможность торговли с каменщиком"
+      "translate":"Ability to trade with a mason"
     },
     "show_toast": false,
     "announce_to_chat": false

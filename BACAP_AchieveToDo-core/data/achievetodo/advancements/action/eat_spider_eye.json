@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:spider_eye"
     },
-    "title": "Паучий глаз",
+    "title": {"translate": "Spider eye"},
     "description": {
-      "translate": "Возможность есть паучий глаз"
+      "translate":"Ability to eat spider eyes"
     },
     "show_toast": false,
     "announce_to_chat": false

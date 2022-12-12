@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:netherite_chestplate"
     },
-    "title": "Незеритовая броня",
+    "title": {"translate": "Netherite armor"},
     "description": {
-      "translate": "Возможность надевать незеритовую броню"
+      "translate":"Ability to equip netherite armor"
     },
     "show_toast": false,
     "announce_to_chat": false

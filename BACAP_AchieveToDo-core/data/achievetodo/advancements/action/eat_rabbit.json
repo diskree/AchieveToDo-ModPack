@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:rabbit"
     },
-    "title": "Сырая крольчатина",
+    "title": {"translate": "Raw rabbit"},
     "description": {
-      "translate": "Возможность есть сырую крольчатину"
+      "translate":"Ability to eat raw rabbit"
     },
     "show_toast": false,
     "announce_to_chat": false

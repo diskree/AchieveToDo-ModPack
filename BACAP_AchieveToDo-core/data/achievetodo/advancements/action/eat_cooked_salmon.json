@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cooked_salmon"
     },
-    "title": "Жареный лосось",
+    "title": {"translate": "Cooked salmon"},
     "description": {
-      "translate": "Возможность есть жареный лосось"
+      "translate": "Ability to eat cooked salmon"
     },
     "show_toast": false,
     "announce_to_chat": false

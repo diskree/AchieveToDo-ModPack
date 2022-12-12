@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:furnace"
     },
-    "title": "Печь",
+    "title": {"translate": "Furnace"},
     "description": {
-      "translate": "Возможность использовать печь"
+      "translate":"Ability to use a furnace"
     },
     "show_toast": false,
     "announce_to_chat": false

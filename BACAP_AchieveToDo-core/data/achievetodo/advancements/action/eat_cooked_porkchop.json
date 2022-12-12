@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cooked_porkchop"
     },
-    "title": "Жареная свинина",
+    "title": {"translate": "Cooked porkchop"},
     "description": {
-      "translate": "Возможность есть жареную свинину"
+      "translate": "Ability to eat cooked porkchop"
     },
     "show_toast": false,
     "announce_to_chat": false

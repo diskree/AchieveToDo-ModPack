@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:beef"
     },
-    "title": "Сырая говядина",
+    "title": {"translate": "Raw beef"},
     "description": {
-      "translate": "Возможность есть сырую говядину"
+      "translate": "Ability to eat raw beef"
     },
     "show_toast": false,
     "announce_to_chat": false

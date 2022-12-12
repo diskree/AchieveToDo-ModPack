@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:wooden_pickaxe"
     },
-    "title": "Ломать блоки",
+    "title": {"translate": "Breaking blocks"},
     "description": {
-      "translate": "Возможность ломать блоки"
+      "translate": "Ability to break blocks"
     },
     "show_toast": false,
     "announce_to_chat": false

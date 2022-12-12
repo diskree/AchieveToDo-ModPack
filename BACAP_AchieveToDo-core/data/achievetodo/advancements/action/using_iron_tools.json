@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:iron_pickaxe"
     },
-    "title": "Железные инструменты",
+    "title": {"translate": "Iron tools"},
     "description": {
-      "translate": "Возможность использовать железные инструменты"
+      "translate":"Ability to use iron tools"
     },
     "show_toast": false,
     "announce_to_chat": false

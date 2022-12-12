@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:poisonous_potato"
     },
-    "title": "Ядовитый картофель",
+    "title": {"translate": "Poisonous potato"},
     "description": {
-      "translate": "Возможность есть ядовитый картофель"
+      "translate":"Ability to eat poisonous potato"
     },
     "show_toast": false,
     "announce_to_chat": false

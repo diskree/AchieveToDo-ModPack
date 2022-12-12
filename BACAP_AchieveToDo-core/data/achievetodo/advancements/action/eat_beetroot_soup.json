@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:beetroot_soup"
     },
-    "title": "Свекольный суп",
+    "title": {"translate": "Beetroot soup"},
     "description": {
-      "translate": "Возможность есть свекольный суп"
+      "translate": "Ability to eat beetroot soup"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:shield"
     },
-    "title": "Использовать щит",
+    "title": {"translate": "Shield"},
     "description": {
-      "translate": "Возможность использовать щит"
+      "translate":"Ability to use a shield"
     },
     "show_toast": false,
     "announce_to_chat": false

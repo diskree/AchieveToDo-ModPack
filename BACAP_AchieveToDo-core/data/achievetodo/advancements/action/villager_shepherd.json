@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:loom"
     },
-    "title": "Пастух",
+    "title": {"translate": "Shepherd"},
     "description": {
-      "translate": "Возможность торговли с пастухом"
+      "translate":"Ability to trade with a shepherd"
     },
     "show_toast": false,
     "announce_to_chat": false

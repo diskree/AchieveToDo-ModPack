@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:pufferfish"
     },
-    "title": "Иглобрюх",
+    "title": {"translate": "Pufferfish"},
     "description": {
-      "translate": "Возможность есть иглобрюха"
+      "translate":"Ability to eat pufferfish"
     },
     "show_toast": false,
     "announce_to_chat": false

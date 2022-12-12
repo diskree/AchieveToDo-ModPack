@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:stone_pickaxe"
     },
-    "title": "Каменные инструменты",
+    "title": {"translate": "Stone tools"},
     "description": {
-      "translate": "Возможность использовать каменные инструменты"
+      "translate":"Ability to use stone tools"
     },
     "show_toast": false,
     "announce_to_chat": false

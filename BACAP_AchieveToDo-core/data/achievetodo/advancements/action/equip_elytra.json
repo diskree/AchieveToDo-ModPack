@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:elytra"
     },
-    "title": "Элитры",
+    "title": {"translate": "Elytra"},
     "description": {
-      "translate": "Возможность надевать элитры"
+      "translate":"Ability to use elytra"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:iron_chestplate"
     },
-    "title": "Железная броня",
+    "title": {"translate": "Iron armor"},
     "description": {
-      "translate": "Возможность надевать железную броню"
+      "translate":"Ability to equip iron armor"
     },
     "show_toast": false,
     "announce_to_chat": false

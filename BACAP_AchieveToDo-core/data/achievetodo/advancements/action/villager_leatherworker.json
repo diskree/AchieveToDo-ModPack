@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cauldron"
     },
-    "title": "Кожевник",
+    "title": {"translate": "Leatherworker"},
     "description": {
-      "translate": "Возможность торговли с кожевником"
+      "translate":"Ability to trade with a leatherworker"
     },
     "show_toast": false,
     "announce_to_chat": false

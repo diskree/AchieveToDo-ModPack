@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:beacon"
     },
-    "title": "Маяк",
+    "title": {"translate": "Beacon"},
     "description": {
-      "translate": "Возможность использовать эффекты маяка"
+      "translate":"Ability to use a beacon"
     },
     "show_toast": false,
     "announce_to_chat": false

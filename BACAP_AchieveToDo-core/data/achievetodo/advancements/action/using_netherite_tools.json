@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:netherite_pickaxe"
     },
-    "title": "Незеритовые инструменты",
+    "title": {"translate": "Netherite tools"},
     "description": {
-      "translate": "Возможность использовать незеритовые инструменты"
+      "translate":"Ability to use netherite tools"
     },
     "show_toast": false,
     "announce_to_chat": false

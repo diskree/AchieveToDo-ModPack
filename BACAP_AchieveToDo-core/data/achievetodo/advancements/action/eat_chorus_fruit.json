@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:chorus_fruit"
     },
-    "title": "Хорус",
+    "title": {"translate": "Chorus fruit"},
     "description": {
-      "translate": "Возможность есть хорус"
+      "translate":"Ability to eat chorus fruit"
     },
     "show_toast": false,
     "announce_to_chat": false

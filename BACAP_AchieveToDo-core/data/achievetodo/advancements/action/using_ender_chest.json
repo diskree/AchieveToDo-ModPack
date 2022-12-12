@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:ender_chest"
     },
-    "title": "Эндер-сундук",
+    "title": {"translate": "Ender chest"},
     "description": {
-      "translate": "Возможность использовать эндер-сундук"
+      "translate":"Ability to use an ender chest"
     },
     "show_toast": false,
     "announce_to_chat": false

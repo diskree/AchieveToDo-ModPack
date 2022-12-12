@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:baked_potato"
     },
-    "title": "Печёный картофель",
+    "title": {"translate": "Baked Potato"},
     "description": {
-      "translate": "Возможность есть печёный картофель"
+      "translate": "Ability to eat baked potato"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:bread"
     },
-    "title": "Хлеб",
+    "title": {"translate": "Bread"},
     "description": {
-      "translate": "Возможность есть хлеб"
+      "translate": "Ability to eat bread"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:crafting_table"
     },
-    "title": "Верстак",
+    "title": {"translate": "Crafting table"},
     "description": {
-      "translate": "Возможность использовать верстак"
+      "translate":"Ability to use a crafting table"
     },
     "show_toast": false,
     "announce_to_chat": false

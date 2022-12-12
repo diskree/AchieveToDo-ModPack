@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:pumpkin_pie"
     },
-    "title": "Тыквенный пирог",
+    "title": {"translate": "Pumpkin pie"},
     "description": {
-      "translate": "Возможность есть тыквенный пирог"
+      "translate":"Ability to eat pumpkin pie"
     },
     "show_toast": false,
     "announce_to_chat": false

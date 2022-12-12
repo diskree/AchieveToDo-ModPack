@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:brewing_stand"
     },
-    "title": "Зельеварка",
+    "title": {"translate": "Brewing stand"},
     "description": {
-      "translate": "Возможность использовать варочную стойку"
+      "translate":"Ability to use a brewing stand\""
     },
     "show_toast": false,
     "announce_to_chat": false

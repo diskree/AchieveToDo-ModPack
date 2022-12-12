@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:slime_block"
     },
-    "title": "Прыжок",
+    "title": {"translate": "Jumping"},
     "description": {
-      "translate": "Возможность прыгать"
+      "translate":"Ability to jump"
     },
     "show_toast": false,
     "announce_to_chat": false

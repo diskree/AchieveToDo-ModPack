@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:suspicious_stew"
     },
-    "title": "Загадочное рагу",
+    "title": {"translate": "Suspicious stew"},
     "description": {
-      "translate": "Возможность есть загадочное рагу"
+      "translate":"Ability to eat suspicious stew"
     },
     "show_toast": false,
     "announce_to_chat": false

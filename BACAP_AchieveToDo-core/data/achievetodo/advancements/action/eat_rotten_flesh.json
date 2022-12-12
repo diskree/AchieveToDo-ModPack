@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:rotten_flesh"
     },
-    "title": "Гнилая плоть",
+    "title": {"translate": "Rotten flesh"},
     "description": {
-      "translate": "Возможность есть гнилую плоть"
+      "translate":"Ability to eat rotten flesh"
     },
     "show_toast": false,
     "announce_to_chat": false

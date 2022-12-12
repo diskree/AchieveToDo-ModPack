@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:golden_apple"
     },
-    "title": "Золотое яблоко",
+    "title": {"translate": "Golden apple"},
     "description": {
-      "translate": "Возможность есть золотое яблоко"
+      "translate":"Ability to eat golden apple"
     },
     "show_toast": false,
     "announce_to_chat": false

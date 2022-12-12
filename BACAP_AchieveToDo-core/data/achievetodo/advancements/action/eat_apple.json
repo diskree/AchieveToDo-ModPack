@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:apple"
     },
-    "title": "Яблоко",
+    "title": {"translate": "Apple"},
     "description": {
-      "translate": "Возможность есть яблоко"
+      "translate": "Ability to eat an apple"
     },
     "show_toast": false,
     "announce_to_chat": false

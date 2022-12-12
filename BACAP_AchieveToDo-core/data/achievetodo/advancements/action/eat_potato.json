@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:potato"
     },
-    "title": "Картофель",
+    "title": {"translate": "Potato"},
     "description": {
-      "translate": "Возможность есть картофель"
+      "translate":"Ability to eat potato"
     },
     "show_toast": false,
     "announce_to_chat": false

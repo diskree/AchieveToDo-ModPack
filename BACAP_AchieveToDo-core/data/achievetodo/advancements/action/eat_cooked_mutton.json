@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cooked_mutton"
     },
-    "title": "Жареная баранина",
+    "title": {"translate": "Cooked mutton"},
     "description": {
-      "translate": "Возможность есть жареную баранину"
+      "translate": "Ability to eat cooked mutton"
     },
     "show_toast": false,
     "announce_to_chat": false

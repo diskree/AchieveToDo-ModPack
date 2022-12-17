@@ -23,8 +23,9 @@ public class MinecraftClientMixin {
 
     @ModifyVariable(method = "setScreen", at = @At("HEAD"), argsOnly = true)
     private Screen setScreenInject(Screen screen) {
-        if (screen != null && AdvancementsScreen.class == screen.getClass())
+        if (screen instanceof AdvancementsScreen) {
             return new AdvancementsEnlargerScreen(player.networkHandler.getAdvancementHandler());
+        }
         return screen;
     }
 }

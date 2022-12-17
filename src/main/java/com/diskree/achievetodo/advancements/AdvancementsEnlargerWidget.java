@@ -23,7 +23,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Language;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vector4f;
+import org.joml.Vector4f;
 
 import java.util.Iterator;
 import java.util.List;
@@ -168,15 +168,14 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
 
             RenderSystem.setShaderTexture(0, WIDGETS_TEX);
             this.drawTexture(matrices, x + this.xPos + 3, y + this.yPos, this.display.getFrame().getTextureV(), 128 + advancementObtainedStatus2.getSpriteIndex() * 26, 26, 26);
-            Vector4f vector4f = new Vector4f(x + this.xPos + 8, y + this.yPos + 5, 0, 1.0F);
-            vector4f.transform(matrices.peek().getPositionMatrix());
-            this.client.getItemRenderer().zOffset += vector4f.getZ();
+            Vector4f vector4f = matrices.peek().getPositionMatrix().transform(new Vector4f(x + this.xPos + 8, y + this.yPos + 5, 0, 1.0F));
+            this.client.getItemRenderer().zOffset += vector4f.z();
             // atd if
             if (action != null && f < 1.0F && !action.isUnlocked()) {
-                this.client.getItemRenderer().renderInGui(new ItemStack(AchieveToDoMod.MYSTERY_MASK_ITEM), (int) vector4f.getX(), (int) vector4f.getY());
+                this.client.getItemRenderer().renderInGui(new ItemStack(AchieveToDoMod.MYSTERY_MASK_ITEM), (int) vector4f.x(), (int) vector4f.y());
             } else
-            this.client.getItemRenderer().renderInGui(this.display.getIcon(), (int) vector4f.getX(), (int) vector4f.getY());
-            this.client.getItemRenderer().zOffset -= vector4f.getZ();
+                this.client.getItemRenderer().renderInGui(this.display.getIcon(), (int) vector4f.x(), (int) vector4f.y());
+            this.client.getItemRenderer().zOffset -= vector4f.z();
         }
 
         for (AdvancementsEnlargerWidget advancementWidget : this.children) {
@@ -298,11 +297,10 @@ public class AdvancementsEnlargerWidget extends DrawableHelper {
             }
         }
 
-        Vector4f vector4f = new Vector4f(originX + this.xPos + 8, originY + this.yPos + 5, 0, 1.0F);
-        vector4f.transform(matrices.peek().getPositionMatrix());
-        this.client.getItemRenderer().zOffset += vector4f.getZ();
-        this.client.getItemRenderer().renderInGui(this.display.getIcon(), (int) vector4f.getX(), (int) vector4f.getY());
-        this.client.getItemRenderer().zOffset -= vector4f.getZ();
+        Vector4f vector4f = matrices.peek().getPositionMatrix().transform(new Vector4f(originX + this.xPos + 8, originY + this.yPos + 5, 0, 1.0F));
+        this.client.getItemRenderer().zOffset += vector4f.z();
+        this.client.getItemRenderer().renderInGui(this.display.getIcon(), (int) vector4f.x(), (int) vector4f.y());
+        this.client.getItemRenderer().zOffset -= vector4f.z();
     }
 
     protected void method_2324(MatrixStack matrices, int i, int j, int k, int l, int m, int n, int o, int p, int q) {

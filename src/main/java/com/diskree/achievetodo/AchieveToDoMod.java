@@ -9,10 +9,11 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.item.*;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.server.integrated.IntegratedServer;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
 
@@ -24,7 +25,7 @@ public class AchieveToDoMod implements ModInitializer {
     public static final String ID = "achievetodo";
     public static final String ADVANCEMENT_PATH_PREFIX = "action/";
     public static final String ADVANCEMENT_CRITERIA_PREFIX = "action_";
-    public static final Item MYSTERY_MASK_ITEM = new Item(new FabricItemSettings().group(ItemGroup.MISC));
+    public static final Item MYSTERY_MASK_ITEM = new Item(new FabricItemSettings());
 
     public static int lastAchievementsCount;
 
@@ -148,7 +149,7 @@ public class AchieveToDoMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        Registry.register(Registry.ITEM, new Identifier(AchieveToDoMod.ID, "locked_action"), MYSTERY_MASK_ITEM);
+        Registry.register(Registries.ITEM, new Identifier(AchieveToDoMod.ID, "locked_action"), MYSTERY_MASK_ITEM);
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {
                 if (pos.getY() >= 0 && isActionBlocked(BlockedAction.break_blocks_in_positive_y) || pos.getY() < 0 && isActionBlocked(BlockedAction.break_blocks_in_negative_y)) {

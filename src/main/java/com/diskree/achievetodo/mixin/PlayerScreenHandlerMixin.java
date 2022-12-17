@@ -14,11 +14,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(PlayerScreenHandler.class)
 public abstract class PlayerScreenHandlerMixin {
 
-    @Inject(method = "transferSlot", at = @At("HEAD"), cancellable = true)
-    public void transferSlotInject(PlayerEntity player, int index, CallbackInfoReturnable<ItemStack> cir) {
-        Slot slot = ((ScreenHandler) (Object) this).slots.get(index);
-        if (slot.hasStack()) {
-            ItemStack stack = slot.getStack();
+    @Inject(method = "quickMove", at = @At("HEAD"), cancellable = true)
+    public void quickMoveInject(PlayerEntity player, int slot, CallbackInfoReturnable<ItemStack> cir) {
+        Slot slot2 = ((ScreenHandler) (Object) this).slots.get(slot);
+        if (slot2.hasStack()) {
+            ItemStack stack = slot2.getStack();
             if (stack != null && AchieveToDoMod.isEquipmentBlocked(stack.getItem())) {
                 cir.setReturnValue(ItemStack.EMPTY);
             }

@@ -2,6 +2,7 @@ package com.diskree.achievetodo.mixin;
 
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
+import net.minecraft.resource.DataConfiguration;
 import net.minecraft.resource.DataPackSettings;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -19,17 +20,17 @@ public class CreateWorldScreenMixin {
     public boolean hardcore;
 
     @Shadow
-    protected DataPackSettings dataPackSettings;
+    private ButtonWidget dataPacksButton;
 
     @Shadow
-    private ButtonWidget dataPacksButton;
+    protected DataConfiguration dataConfiguration;
 
     @Inject(method = "createLevel", at = @At("HEAD"))
     public void applyDataPacksInject(CallbackInfo ci) {
         if (hardcore) {
-            List<String> enabled = new ArrayList<>(dataPackSettings.getEnabled());
+            List<String> enabled = new ArrayList<>(dataConfiguration.dataPacks().getEnabled());
             enabled.add("globalOpt:BACAP_HC.zip");
-            dataPackSettings = new DataPackSettings(enabled, new ArrayList<>());
+            dataConfiguration = new DataConfiguration(new DataPackSettings(enabled, new ArrayList<>()), dataConfiguration.enabledFeatures());
         }
     }
 

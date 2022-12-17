@@ -1,0 +1,4459 @@
+{
+# BlazeandCave's Advancements Pack Language File
+ 
+# How to use: Name and descriptions of advancement to left of : and put translation to right of :, inside the speech marks "" like this: "Advancement Description"
+# Some advancement titles make use of puns that would work in English but probably not in other languages. Be creative if you wish if you can find any puns in foreign languages.
+
+# This file will be updated with new advancements with each new update.
+# Currently the text that appears with reward functions are not translatable - support for translating the reward functions messages will come in a later update.
+
+# Language: Portuguese
+# Author: Ralph10
+# Pack version supported: 1.13
+
+# All language entries are organised in alphabetical order of file name as of 1.3
+# All new advancements added in updates later than 1.3 (1.4, 1.5 and so on) will be put at the bottom of the file for easy locating and adding by translators
+
+# Adventuring tab as of 1.3
+
+"Adventuring Time": "Hora de Aventura",
+"Discover every biome": "Descubra todos os idiomas",
+
+"Boaty McBoatface": "Barquinho McBoatface",
+"Craft a boat for sailing on the high seas": "Crie um barco para navegar em alto mar",
+
+"Hired Help": "Ajuda contratada",
+"Summon an Iron Golem to help defend a village": "Invoque um Golem de Ferro para ajudar a defender uma vila",
+
+"Cold Feet": "Pés frios",
+"Discover every cold biome": "Descubra todos os biomas frios",
+
+"Disc Jockey": "Disco Jóquei",
+"Collect all 12 music discs": "Colete todos os 12 discos de música",
+
+"Do You Want to Trade?": "Você quer negociar?",
+"Find an NPC village": "Encontre uma vila NPC",
+
+"Dry Spell": "Período de seca",
+"Dry a sponge in a furnace": "Seque uma esponja em uma fornalha",
+
+"Filthy Rich": "Rico imundo",
+"Make 64 emeralds": "Crie 64 esmeraldas",
+
+"Filthy Stinkin' Rich": "Rico nojento e fedorento",
+"Make 64 emerald blocks": "Crie 64 blocos de esmeralda",
+
+"Flower Power": "Poder da flor",
+"Collect all types of flowers": "Colete todos os tipos de flor",
+
+"Ghostbuster!": "Caça-fantasmas!",
+"Bust a Vex summoned by an Evoker": "Destrua um Vex convocado por um Evocador",
+
+"Grave Robber": "Ladrão de túmulos",
+"Enter a pyramid in a desert": "Entre em uma pirâmide em um deserto",
+
+"Heeere's Johnny!": "Aquiii Johnny!",
+"Kill a Vindicator": "Mate um Vindicador",
+
+"House of Psychos": "Casa dos psicopatas",
+"Find a Woodland Mansion": "Encontre uma mansão na floresta",
+
+"I hereby dub thee...": "Eu aqui te chamo...",
+"Obtain a name tag": "Obtenha uma etiqueta",
+
+"Just Keep Swimming": "Apenas continue nadando",
+"Go for a swim": "Vá nadar",
+
+"Kilometre Walk": "Caminha quilométrica",
+"It's not that far in real life": "Não é tão longe na vida real",
+
+"Laser Sharks!": "Tubarões Laser!",
+"Defeat a Guardian": "Derrote um Guardião",
+
+"Magic Book": "Livro mágico",
+"Trade for an Enchanted Book": "Troque por um livro encontrado",
+
+"Mapmaker": "Cartógrafo",
+"Craft or trade an empty map": "Crie ou troque um mapa vazio",
+
+"Monumental": "Monumental",
+"Find an Ocean Monument": "Encontre um Monumento no Oceano",
+
+"Music To My Ears": "Música para os meus ouvidos",
+"Find a music disc": "Encontre um disco de música",
+
+"One with the forest": "Um com a floresta",
+"Discover every forest biome": "Descubra todos os biomas de floresta",
+
+"Overgrown!": "Crescido demais!",
+"Discover every overgrown biome": "Descubra todos os biomas crescidos demais",
+
+"Overpowered": "Apelão",
+"Obtain a Notch Apple": "Obtenha uma maçã do Notch",
+
+"Postmortal": "Pós-mortal",
+"Use a Totem of Undying to cheat death": "Use um Totem dos Imortais para enganar a morte",
+
+"Adventure": "Aventura",
+"Adventure and exploration": "Aventura e exploração",
+
+"Snow Feet": "Pés de neve",
+"Discover every snowy biome": "Descubra todos os biomas nevados",
+
+"Spear Fishing": "Pesca submarina",
+"Kill a Guardian with arrows": "Mate um Guardião com flechas",
+
+"Tarzan": "Tarzan",
+"Swing (or climb) on some vines": "Balance (ou suba) em algumas vinhas",
+
+"Ten Thousand Blocks": "Dez mil blocos",
+"A journey that long begins with a single step": "Uma jornada longa começa com uma única etapa",
+
+"The Deep End": "O fundo do fim",
+"Defeat an Elder Guardian": "Derrote um Guardião Ancião",
+
+"The Shielding": "A blindagem",
+"A shield does no better than a locked door": "Um escudo não faz melhor do que uma porta trancada",
+
+"This is Mine Now!": "Isso é meu agora!",
+"Find an abandoned mineshaft that was not dug out by you": "Encontre um poço de mina abandonado que não foi escavado por você",
+
+"Tomb Raider": "Tomb Raider",
+"Enter a jungle temple": "Entre em um templo na selva",
+
+"Treasure Map": "Mapa do tesouro",
+"Trade for an Explorer Map": "Troque por um Mapa do Explorador",
+
+"Voyage": "Viagem",
+"A hundred kilometres!": "Cem quilômetros!",
+
+"Warm Feet": "Pés quentes",
+"Discover every dry biome": "Descubra todos os biomas secos",
+
+"Wet Feet": "Pés molhados",
+"Discover every water biome": "Descubra todos os biomas aquáticos",
+
+"What a Deal!": "Que acordo!",
+"Successfully trade with a Villager": "Negocie com sucesso com um Aldeão",
+
+"Witchcraft": "Feitiçaria",
+"Find a witch hut in a swamp": "Encontre uma cabana de bruxa em um pântano",
+
+"Wololo!": "Wololo!",
+"Defeat an Evoker": "Derrote um Evocador",
+
+
+
+
+
+# Building tab as of 1.3
+"A Masterpiece!": "Uma Obra-prima!",
+"Put up a painting": "Coloque uma pintura",
+
+"Ah, My Old Enemy...": "Ah, Meu Velho Inimigo",
+"Craft every type of stairs": "Crie todos os tipos de escadas",
+
+"Benchmarking": "Benchmarking",
+"Construct a crafting bench with four wooden planks": "Construa uma bancada de trabalho com quatro tábuas de madeira",
+
+"Bricks!": "Tijolos!",
+"Fire up that clay!": "Queime essa argila!",
+
+"Change of Sheets": "Mudança de folhas",
+"Dye your bed a different color than white": "Pinte sua cama de uma cor diferente da branca",
+
+"Classy Glassy": "Vidro clássico",
+"Smelt sand in a furnace to get glass": "Fundir areia em uma fornalha para obter vidro",
+
+"Clay-Dough!": "Argila, bacana!",
+"Dig up some clay from a lake": "Desenterre um pouco de argila de um lago",
+
+"Concrete Evidence": "Provas concretas",
+"Create concrete from concrete powder by dropping it into water": "Crie concreto a partir de pó de concreto jogando-o na água",
+
+"Creepers and Withers": "Creepers e Withers",
+"Engrave sandstone with creeper and wither patterns": "Cave arenito com padrões de Creeper e Wither",
+
+"Display your items for all to see...": "Exiba seus itens para que todos possam ver...",
+"Craft an item frame for displaying your items": "Crie uma moldura para exibir seus itens",
+
+"Electric!": "Elétrica!",
+"Light up the area with some redstone lamps": "Ilumine a área com algumas lâmpadas de redstone",
+
+"En Garde": "En Garde",
+"Erect some fencing": "Erguer uma cerca",
+
+"Expensive!": "Caro!",
+"Light up the area with some sea lanterns": "Ilumine a área com algumas lanternas do mar",
+
+"Fake fortress": "Fortaleza falsa",
+"Craft or collect all forms of nether brick, red nether brick, and nether wart blocks": "Crie ou colete todas as formas de tijolo inferior, tijolo inferior vermelho e blocos de verrugas inferiores",
+
+"Fake monument": "Monumento falso",
+"Craft or collect all forms of prismarine blocks": "Crie ou colete todas as formas de blocos prismarinos",
+
+"Fake stronghold": "Fortaleza falsa",
+"Craft or collect normal, cracked, mossy and chiseled stone bricks": "Construa ou colete tijolos de pedra normais, rachados, musgosos e cinzelados",
+
+"Fluorescent!": "Florescente!",
+"Light up the area with some end rods": "Ilumine a área com algumas hastes de extremidade",
+
+"Getting Wood": "Obtendo madeira",
+"Attack a tree until a block of wood pops out": "Ataque uma árvore até que um bloco de madeira caia",
+
+"Glowing!": "Brilhando!",
+"Light up the area with glowstone": "Ilumine a área com Glowstone",
+
+"Greek Art Decor": "Decoração de arte grega",
+"Craft quartz blocks, stairs, slabs, pillars and chiseled": "Crie blocos de quartzo, escadas, lajes, pilares e cinzelados",
+
+"Halloween!": "Halloween!",
+"Light up the area with jack o'lanterns!": "Ilumine a área com jack o'lanterns!",
+
+"It's a Sign!": "Isso é uma placa!",
+"Craft and place a sign": "Crie e coloque uma placa",
+
+"It's a Trap!": "Isso é uma armadilha!",
+"Craft and place down a trapdoor": "Crie e coloque um alçapão",
+
+"Jailhouse Block": "Bloco da prisão",
+"Craft or find iron bars": "Crie ou encontre barras de ferro",
+
+"Ladder Climbers Inc.": "Escaladores de escada",
+"Climb the ladder!": "Suba a escada!",
+
+"Mannequin": "Manequim",
+"Craft an armor stand for displaying your armor": "Crie um suporte de armadura para exibir sua armadura",
+
+"Master Logger": "Madereiro Master",
+"Cut down a full stack of logs of all types": "Corte um pack completo de toras de todos os tipos",
+
+"Pathways": "Caminhos",
+"Use a shovel to create grass paths": "Use uma pá para criar caminhos de grama",
+
+"Pot Planter": "Plantador de potes",
+"Craft and place a flower pot": "Crie e coloque um pote de flor",
+
+"Rainbow Sand": "Areia colorida",
+"Craft concrete powder using sand, gravel and dye": "Crie pó de concreto usando areia, cascalho e tinta",
+
+"Raise the flag!": "Levante a bandeira!",
+"Craft and place a banner": "Crie e coloque uma bandeira",
+
+"Rock Collection": "Coleção de pedras",
+"Collect all the types of rocks": "Colete todos os tipos de pedra",
+
+"Building": "Construção",
+"Your only limit is your imagination... and resources": "Seu único limite é sua imaginação ... e recursos",
+
+"Slabs For Days": "Lajes por dias",
+"Craft every type of slab": "Crie todos os tipos de lajes",
+
+"Stationary Storage": "Armazenamento Estacionário",
+"Craft and place down a chest for storing your items": "Crie e coloque em um baú para armazenar seus itens",
+
+"Sweet dreams": "Bons sonhos",
+"Change your respawn point": "Mude o seu ponto de renascimento",
+
+"The Glazed Terracotta Army": "O Exército de Terracota Esmaltada",
+"Craft all 16 colors of glazed terracotta": "Crie todas as 16 cores de terracota esmaltada",
+
+"The Rainbow You Always Wanted": "O arco-íris que você sempre quis",
+"Craft all 16 colors of concrete": "Crie todas as 16 cores de concreto",
+
+"The Terracotta Army": "O Exército de Terracota",
+"Craft all 16 colors of terracotta (stained clay)": "Crie todas as 16 cores de terracota (argila manchada)",
+
+"The Walls": "As paredes",
+"Build some cobblestone walls": "Construa algumas paredes de pedregulho",
+
+"Torched!": "Queimado!",
+"Light up the area with some torches": "Ilumine a área com algumas tochas",
+
+"Translucence": "Translucidez",
+"Craft all 16 colors of stained glass": "Crie todas as 16 cores de vidros",
+
+"What a pane": "Que painel",
+"Craft some glass panes": "Crie alguns painéis de vidro",
+
+"Yay! I got my wood!": "Yay! Peguei minha madeira!",
+"Collect all six types of wood": "Colete todos os seis tipos de madeira",
+
+"Your Door Was Locked": "Sua porta estava trancada",
+"Craft a door to stop monsters from entering your house": "Crie uma porta para impedir que os monstros entrem em sua casa",
+
+
+
+# Combat tab as of 1.3
+"Blast Shield": "Escudo de explosão",
+"Survive a creeper's blast with your shield": "Sobreviva a explosão de um creeper com o seu escudo",
+
+"Bombs Away!": "Bombas largadas!",
+"Use gunpowder and sand to craft TNT": "Use pólvora e areia para criar TNT",
+
+"Bow Spammer": "Spammer de arco",
+"Attack a mob by bow-spamming": "Ataque uma mob com spam de arco",
+
+"Creepy Heads": "Cabeças assustadoras",
+"Blow up a creeper with a charged creeper to get a creeper head": "Explodir uma Creeper com uma Creeper carregado para obter uma cabeça de Creeper",
+
+"Dead Don't Die": "Morto não morre",
+"Kill a zombie": "Mate um zumbi",
+
+"Desert Nomad": "Nômade do deserto",
+"Kill a husk": "Mate um husk",
+
+"Dungeon Crawler": "Rastreador de Dungeon",
+"Defeat all kinds of mobs from special structures": "Derrote todos os tipos de mobs de estruturas especiais",
+
+"Egging, Dude!": "Ovando, cara!",
+"Vandalise something with eggs": "Vandalize algo com ovos",
+
+"Ender Worm": "Verme Ender",
+"Prevent an endermite from maturing": "Evita que uma endermite amadureça",
+
+"Eskimo": "Esquimó",
+"It may be illegal to hunt polar bears in real life, but not in Minecraft": "Pode ser ilegal caçar ursos polares na vida real, mas não no Minecraft",
+
+"Ew Ew Ew!": "Ew Ew Ew!",
+"Kill a spider": "Mate uma aranha",
+
+"Fireworks Display": "Show de fogos de artifício",
+"Use gunpowder and paper to craft fireworks": "Use pólvora e papel para criar fogos de artifício",
+
+"Frosty": "Gelado",
+"Kill a stray": "Mate um Stray",
+
+"Gelatinous Cube": "Cubo gelatinoso",
+"Kill a slime": "Mate um slime",
+
+"Hell Hunter": "Caçador do inferno",
+"Defeat all kinds of Nether mobs": "Derrote todos os tipos de mobs do Nether",
+
+"Iron Belly": "Barriga de ferro",
+"Stop starvation using rotten flesh": "Pare de morrer de fome usando carne podre",
+
+"Leader of the Pack": "Líder do Pacote",
+"Befriend a wolf": "Vire amigo de um lobo",
+
+"Keep Your Distance": "Mantenha distância",
+"Kill a Creeper with arrows": "Mate um Creeper com flechas",
+
+"Monster Hunter": "Caçador de monstros",
+"Kill any hostile monster": "Mate qualquer monstro hostil",
+
+"Monsters Hunted": "Monstros Caçados",
+"Kill one of every hostile monster": "Mate um de cada monstro hostil",
+
+"Night Runner": "Corredor noturno",
+"Defeat all kinds of Overworld night mobs": "Derrote todos os tipos de mobs noturnos de Overworld",
+
+"Not Today, Thank You": "Hoje não, obrigado",
+"Deflect an arrow with a shield": "Desvie uma flecha com um escudo",
+
+"Plane Walker": "Avião zumbi",
+"Kill endermen in all three dimensions": "Mate um endermen em todas as três dimensões",
+
+"Point Blank": "À queima-roupa",
+"Shoot a mob from point-blank range": "Atire em um mob à queima-roupa",
+
+"Poisonous Ew": "Ew venenoso",
+"Kill a cave spider": "Mate uma aranha da caverna",
+
+"Combat": "Combate",
+"Battle against the monsters of this world": "Batalhe contra os monstros deste mundo",
+
+"Sniper Duel": "Duelo sniper",
+"Kill a skeleton with an arrow from more than 50 meters": "Mate um esqueleto com uma flecha a mais de 50 metros",
+
+"Snowball Fight": "Guerra de bola de neve",
+"The spirit of Christmas... quickly drowned out by a battle": "O espírito do Natal ... rapidamente abafado por uma batalha",
+
+"Spooky Skeleton": "Esqueleto assustador",
+"Kill a skeleton": "Mate um esqueleto",
+
+"Spooky Skulls": "Crânios Assustadores",
+"Blow up a skeleton with a charged creeper to get a skeleton skull": "Exploda um esqueleto com um Creeper carregado para obter um crânio de esqueleto",
+
+"Still Talking!": "Ainda falando!",
+"Blow up a zombie with a charged creeper to get a zombie head": "Exploda um zumbi com um Creeper carregado para obter uma cabeça de zumbi",
+
+"Take Aim": "Mire",
+"Shoot something with a bow and arrow": "Atire em algo com um arco e flecha",
+
+"Taste of your own medicine": "Prove do seu próprio remédio",
+"Kill a witch with a splash potion": "Mate uma bruxa com uma poção de respingo",
+
+"Tele-Morph": "Tele-mob",
+"Damage a mob by teleporting into it": "Danifique um mob teletransportando-se para ele",
+
+"Termite Control": "Controle de cupins",
+"Kill a silverfish": "Mate um silverfish",
+
+"The ender of ender": "O ender do ender",
+"Kill an enderman": "Mate um Enderman",
+
+"The Ghastly Eyes": "Os olhos horríveis",
+"Kill an invisible spider": "Mate uma aranha invisível",
+
+"The Mighty Hunter": "O poderoso caçador",
+"Hunt all types of animals with your bow": "Cace todos os tipos de animais com seu arco",
+
+"The Undead Cavalry": "A cavalaria morto-vivo",
+"Encounter and defeat a skeleton horse in a thunderstorm": "Encontre e derrote um cavalo esqueleto em uma tempestade",
+
+"There has to be another way...": "Tem que haver outra maneira...",
+"Kill a zombie villager": "Mate um aldeão zumbi",
+
+"Trampoline": "Trampolim",
+"Craft a slime block using slimeballs": "Crie um bloco de slime usando bolas de slime",
+
+"Void Ender": "Ender vazio",
+"Defeat all kinds of End mobs": "Derrote todos os tipos de mobs do End",
+
+"What a creep!": "Que idiota!",
+"Kill a creeper": "Mate um Creeper",
+
+"Witch!": "Bruxa!",
+"Kill a witch": "Mate uma Bruxa",
+
+
+
+# Enchanting tab as of 1.3
+"Armor for the masses": "Armadura para as massas",
+"Obtain every protection related enchantment": "Obtenha todos os encantamentos relacionados à proteção",
+
+"Bane of one-shotting spiders": "Maldito de aranhas disparadas",
+"Obtain Bane of Arthropods V": "Obtenha Maldição dos Artrópodes V",
+
+"Bow down to me!": "Curve-se a mim!",
+"Obtain Power V": "Obtenha Força V",
+
+"Complete Enchanter": "Encantador Completo",
+"Obtain every enchantment throughout your enchanting career": "Obtenha todos os encantamentos ao longo de sua carreira de encantamento",
+
+"Curses!": "Maldições!",
+"Obtain both types of curses": "Obtenha os dois tipos de maldições",
+
+"Fiery": "Fogoso",
+"Obtain every fire related enchantment": "Obtenha todos os encantamentos relacionados ao fogo",
+
+"Fortunate Son": "Filho afortunado",
+"Obtain Fortune III": "Obtenha Fortuna III",
+
+"Knocking Your Socks Off": "Tire suas meias",
+"Obtain Knockback and Punch enchantments": "Obtenha os encantamentos Repulsão e Soco",
+
+"Let It Go!": "Deixe ir!",
+"Obtain boots enchanted with Frost Walker": "Obtenha botas encantadas com vagante de gelo",
+
+"Librarian": "Bibliotecário",
+"Build some bookshelves for your enchanting table": "Construa algumas estantes de livros para sua mesa de encantamentos",
+
+"Like a Cat": "Como um gato",
+"Obtain boots enchanted with Feather Falling": "Obtenha botas encantadas com Peso-pena",
+
+"Master Armorer": "Armeiro Mestre",
+"Create a full suit of armor with all possible enchantments at max level": "Crie uma armadura completa com todos os encantamentos possíveis no nível máximo",
+
+"Master Enchanter": "Encantador Mestre",
+"Obtain every enchantment at their max level throughout your enchanting career": "Obtenha cada encantamento em seu nível máximo ao longo de sua carreira de encantamento",
+
+"Master Fisher": "Pescador Mestre",
+"Create a fishing rod with all possible enchantments at max level": "Crie uma vara de pescar com todos os encantamentos possíveis no nível máximo",
+
+"Master Knight": "Cavaleiro Mestre",
+"Create a sword with all possible enchantments at max level": "Crie uma espada com todos os encantamentos possíveis no nível máximo",
+
+"Master Miner": "Minerador Mestre",
+"Create a pickaxe with all possible enchantments at max level": "Crie uma picareta com todos os encantamentos possíveis no nível máximo",
+
+"Master Sniper": "Sniper Mestre",
+"Create a bow with all possible enchantments at max level": "Crie um arco com todos os encantamentos possíveis no nível máximo",
+
+"Needle Sharp": "Agulha Afiada",
+"Obtain Sharpness V": "Obtenha Afiação V",
+
+"Heavy Metal": "Metal pesado",
+"Craft an anvil": "Crie uma bigorna",
+
+"Overkill": "Exagero",
+"Deal eight hearts of damage in a single blow": "Cause oito corações de dano com um único golpe",
+
+"Pick Like Silk": "Escolha suave",
+"Use a Silk Touch enchanted pickaxe to obtain diamond ore as a block": "Use uma picareta encantada com Toque Suva para obter minério de diamante como um bloco",
+
+"Enchanting": "Encantador",
+"Enchant items to give them magical abilities": "Encante itens para dar a eles habilidades mágicas",
+
+"Scuba Gear": "Equipamento de Mergulho",
+"Obtain every water related enchantment": "Obtenha todos os encantamentos relacionados à água",
+
+"Super Efficient": "Super Eficiência",
+"Obtain Efficiency V": "Obtenha Eficiência V",
+
+"Unbreakable": "Inquebrável",
+"Obtain Mending on an item": "Obtenha Remendo em um item",
+
+"Undead Slayer": "Matador dos mortos-vivos",
+"Obtain Smite V": "Obtenha Julgamento V",
+
+
+
+# End tab as of 1.3
+"Anti-Gravity Generator": "Gerador Anti-Gravidade",
+"Bring a shulker into the overworld and let it give you anti-gravity": "Traga um shulker para o mundo superior e deixe-o fornecer anti-gravidade",
+
+"Cow Jumped Over The Moon": "A vaca saltou sobre a lua",
+"Bring a cow from the Overworld to the End and then kill it": "Traga uma vaca do mundo superior para o End e depois mate-a",
+
+"Dragon Shield": "Escudo do dragão",
+"Attempt to block the dragon's attacks": "Tente bloquear os ataques do dragão",
+
+"End Bricks!": "Tijolos do Fim!",
+"Craft end bricks from end stone": "Crie tijolos do Fim de pedra do Fim",
+
+"For Mother, Clarence": "Para a mãe, Clarence",
+"Kill a shulker": "Mate um Shulker",
+
+"Free the End": "Liberte o Fim",
+"Good luck": "Boa Sorte",
+
+"Getting Chorus": "Obtendo Coro",
+"Attack a chorus tree until it collapses": "Ataque uma árvore de coro até que ela desmorone",
+
+"Great View From Up Here": "Excelente vista daqui de cima",
+"Levitate up a distance of 50 metres": "Levite a uma distância de 50 metros",
+
+"I'm Coming Back, Murph!": "Estou voltando, Murph!",
+"Travel far into the End dimension": "Viaje para a dimensão final",
+
+"No! Don't let me leave, Murph!": "Não! Não me deixe sair, Murph!",
+"Travel so far into the End dimension you might as well be on another planet": "Viajou tão longe na dimensão final que você pode muito bem estar em outro planeta",
+
+"Noxious Fumes": "Vapores nocivos",
+"Use dragon's breath to brew a lingering potion": "Use o bafo do dragão para preparar uma poção persistente",
+
+"Off With His Head!": "Fora com sua cabeça!",
+"Collect a dragon's head from the bow of an end ship": "Colete a cabeça de um dragão de um navio do End",
+
+"Poison Dart": "Poção venenosa",
+"Craft tipped arrows of poison": "Crie flechas de veneno com ponta",
+
+"Portable Storage": "Armazenamento portátil",
+"Use shulker shells to craft a shulker box": "Use cascos de shulker para criar uma caixa shulker",
+
+"Purpurfect!": "Perperfeito!",
+"Craft or collect purpur blocks, slabs, pillars and stairs": "Crie ou colete blocos, lajes, pilares e escadas de púrpura",
+
+"Remote Getaway": "Fuga remota",
+"Escape the island": "Escape da ilha",
+
+"The End": "O Fim",
+"Or the beginning?": "Ou o começo?",
+
+"Shouldn't my shield levitate too?": "Meu escudo não deveria levitar também?",
+"Block a Shulker's bullet with your shield": "Bloqueie a bala de um Shulker com seu escudo",
+
+"Sky High": "Céu alto",
+"Fly up beyond the world height limit": "Voe além do limite de altura",
+
+"Sky's the Limit": "O céu é o limite",
+"Find an Elytra": "Encontre uma Elytra",
+
+"Some Breakthrough": "Alguma Revolução",
+"Exhaust your elytra": "Desgaste a sua Elytra",
+
+"The City at the End of the Game": "A cidade no fim do jogo",
+"Go on in, what could happen?": "Vá em frente, o que poderia acontecer?",
+
+"The End... Again": "O Fim...Novamente",
+"Respawn the Ender Dragon": "Renasça o Dragão Ender",
+
+"The Next Generation": "A Próxima Geração",
+"Hold the Dragon Egg": "Segure o ovo de dragão",
+
+"The Start of Something": "O começo de alguma coisa",
+"Craft your first ender crystal": "Crie o seu primeiro cristal ender",
+
+"Uh, Houston? We have a problem": "Uh, Houston? Nós temos um problema",
+"Fly up to a ridiculous height": "Voe até uma altura ridícula",
+
+"You Need a Mint": "Você precisa de uma hortelã",
+"Collect dragon's breath in a glass bottle": "Colete bafo de dragão em uma garrafa de vidro",
+
+
+
+# Farming tab as of 1.3
+"24 Carrot Gold": "24 quilates de cenoura",
+"Eat a golden carrot": "Coma uma cenoura dourada",
+
+"A Balanced Diet": "Uma Dieta Balanceada",
+"Eat everything that is edible, even if it's not good for you": "Coma tudo o que é comestível, mesmo que não seja bom para você",
+
+"A Horse in Shining Armor": "Um cavalo de armadura brilhante",
+"Find diamond horse armor": "Encontre armadura de cavalo de diamante",
+
+"A Seedy Place": "Um lugar decadente",
+"Plant a seed and watch it grow": "Plante uma semente e observe-a crescer",
+
+"Artificial Selection": "Seleção artificial",
+"Breed a horse and a donkey to get a mule": "Crie um cavalo e um burro para obter uma mula",
+
+"Bake Bread": "Pão Assado",
+"Grow wheat and use it to bake bread": "Plante trigo e use-o para assar pão",
+
+"Bapple!": "Bapple!",
+"Crunch into an apple": "Triture em uma maçã",
+
+"Blistering Barnacles!": "Cracas com bolhas",
+"Get spat at by a llama": "Receba um cuspe de lhama",
+
+"Breaking the Law of Conservation of Matter": "Quebrando a Lei de Conservação da Matéria",
+"Craft 9 melon slices back into a block that, when broken, will probably not give you all 9 slices back": "Crie 9 fatias de melão de volta em um bloco que, quando quebrado, provavelmente não vai lhe dar todas as 9 fatias de volta",
+
+"Care For the Environment": "Cuidado com o meio ambiente",
+"Plant down a sapling": "Plante uma muda",
+
+"Catching Nemo": "Pegando Nemo",
+"Catch a clownfish": "Pegue um peixe-palhaço",
+
+"Chatterbox": "Tagarela",
+"Tame a Parrot using seeds. WARNING: Do not use a cookie!": "Domestique um papagaio usando sementes. AVISO: Não use um cookie!",
+
+"Cow Tipper": "Domador de Vacas",
+"Harvest some leather": "Colha um pouco de couro",
+
+"Cowboy": "Vaqueiro",
+"Tame a horse by jumping on it over and over again": "Dome um cavalo saltando sobre ele repetidamente",
+
+"Fishy Business": "Negócio duvidoso",
+"Catch a fish": "Pegue um peixe",
+
+"Die, Potato!": "Morra, Batata!",
+"Squash and eat a potato": "Squash e coma uma batata",
+
+"Do you want to build a snowman?": "Você quer construir um boneco de neve?",
+"Use a pumpkin and snow blocks to build a snow golem": "Use uma abóbora e blocos de neve para construir um golem de neve",
+
+"Ecologist": "Ecologista",
+"Plant down all six types of sapling": "Plante todos os seis tipos de mudas",
+
+"Feeling Sheepish": "Sentindo-se envergonhado",
+"You'll get over it": "Você vai superar isso",
+
+"Getting Into a Stew": "Entrando em um cozido",
+"Make and eat some rabbit stew": "Faça e coma um ensopado de coelho",
+
+"Have a Shearful Day": "Tenha um dia doloroso",
+"Use two iron ingots to craft shears": "Use dois lingotes de ferro para fazer tesouras",
+
+"High Steaks": "Bifes altos",
+"The steaks are high for this advancement!": "Os bifes estão altos para este avanço!",
+
+"Hot Topic": "Tópico Quente",
+"Construct a furnace out of eight stone blocks": "Construa uma fornalha com oito blocos de pedra",
+
+"Lion Tamer": "Domador de Leões",
+"Tame an Ocelot using fish": "Dome uma jaguatirica usando peixes",
+
+"Me Love Cookie": "Eu amo biscoito",
+"Bake some cookies... and then scoff them all yourself": "Asse alguns biscoitos ... e então zombe de todos eles você mesmo",
+
+"Meat Lovers": "Amantes de carne",
+"Eat every type of meat, even if uncooked or rotten": "Coma todo tipo de carne, mesmo crua ou estragada",
+
+"Milk does your body good": "Leite faz bem ao seu corpo",
+"Take a swig swig swig swig": "Tome um gole, gole, gole, gole",
+
+"Mushroom, Mushroom, Mushroom, Mushroom!": "Cogumelo, Cogumelo, Cogumelo, Cogumelo!",
+"Slurp some mushroom stew": "Beba um guisado de cogumelos",
+
+"Naturally Carved": "Naturalmente Esculpido",
+"Harvest some spooky pumpkins": "Colha algumas abóboras assustadoras",
+
+"Not Today!": "Hoje não!",
+"Eat a poisonous potato": "Coma uma batata venenosa",
+
+"Overpopulation": "Superpopulação",
+"Breed every type of animal": "Procrie todo tipo de animal",
+
+"Pork Chop": "Costelinha de porco",
+"You know kung fu, how about pork chop?": "Você conhece kung fu, que tal costeleta de porco?",
+
+"Rabbit Season": "Temporada de Coelho",
+"Killing bunnies is cruel. Period.": "Matar coelhos é cruel. Período.",
+
+"Rainbow Collection": "Coleção Rainbow",
+"Gather all 16 colors of wool": "Consiga todas as 16 cores de lã",
+
+"Renewable Energy": "Energia renovável",
+"Smelt wood trunks using charcoal to make more charcoal": "Fundir troncos de madeira usando carvão para fazer mais carvão",
+
+"Repopulation": "Repopulação",
+"Breed two cows with wheat": "Procrie duas vacas com trigo",
+
+"Farming": "Agricultura",
+"The world is full of friends and food": "O mundo está cheio de amigos e comida",
+
+"Salmonella Poisoning": "Intoxicação por Salmonella",
+"Eat some raw salmon... and not get poisoned after all": "Coma um pouco de salmão cru ... e não seja envenenado, afinal",
+
+"Serious Dedication": "Dedicação Séria",
+"Completely use up a diamond hoe, and then reevaluate your life choices": "Use totalmente uma enxada de diamante e reavalie suas escolhas de vida",
+
+"So Good": "Tão bom",
+"Can't beat it, can't beat it": "Não consigo vencer, não consigo vencer",
+
+"Souperman": "Homem Sopa",
+"Beetroot soup gives you souperpowers!": "Sopa de beterraba lhe dá superpoderes!",
+
+"Sugar, Sugar": "Açúcar, açúcar",
+"Harvest some sugar cane from a river or ocean": "Colha um pouco de cana-de-açúcar de um rio ou oceano",
+
+"Sushi": "Sushi",
+"Eat some raw fish": "Coma peixe cru",
+
+"The Lie": "A mentira",
+"Wheat, sugar, milk and eggs!": "Trigo, açúcar, leite e ovos!",
+
+"The Melon! The Melon! The Melon!": "O melão! O melão! O melão!",
+"Eat a melon. Be careful not to drop it over a cliff": "Coma um melão. Tenha cuidado para não cair em um penhasco",
+
+"The Pie": "A Torta",
+"Bake a pumpkin pie": "Asse uma torta de abóbora",
+
+"Trimming the Treetops": "Cortando as copas das árvores",
+"Use shears to obtain leaf blocks": "Use tesouras para obter blocos de folhas",
+
+"Ultra Hardcore": "Ultra Hardcore",
+"Craft and eat a normal golden apple": "Crie e coma uma maçã dourada normal",
+
+"Vegetarian": "Vegetariano",
+"Eat every type of fruit, vegetables, and any sort of plant matter": "Coma todos os tipos de frutas, vegetais e qualquer tipo de matéria vegetal",
+
+"When Pigs Used to Fly": "Quando os porcos voavam",
+"Craft a carrot on a stick so you can ride a pig off a cliff": "Crie uma cenoura em uma vara para que você possa derrubar um porco de um penhasco",
+
+"You Lead, I'll Follow": "Você lidera, eu seguirei",
+"Craft a lead for forming a llama caravan": "Crie uma pista para formar uma caravana de lhama",
+
+
+
+# Mining tab as of 1.3
+"Acquire Hardware": "Adquirir Hardware",
+"Smelt an iron ingot": "Asse um lingote de ferro",
+
+"Bling Bling Gone": "Bling Bling se foi",
+"Completely use up a golden pickaxe, and then seriously reevaluate your life choices": "Use totalmente uma picareta de ouro e reavalie seriamente suas escolhas de vida",
+
+"Coal Miner": "Mineiro de carvão",
+"Mine a stack of coal": "Minere um pack de carvão",
+
+"Fuel Engine": "Motor de Combustível",
+"Craft a powered minecart": "Crie um minecart motorizado",
+
+"Cover Me With Diamonds": "Cubra-me com diamantes",
+"Diamond armor saves lives": "Armadura de diamante salva vidas",
+
+"Diamond Clad": "Diamante Folheado",
+"A full suit of diamond armor saves even more lives": "Uma armadura de diamante completa salva ainda mais vidas",
+
+"Diamond Miner": "Minerador de Diamante",
+"Mine a stack of diamonds. Good luck!": "Minere um pack de diamantes. Boa sorte!",
+
+"Diamonds!": "Diamantes!",
+"Acquire diamonds": "Adquiria diamantes",
+
+"Electric Rails": "Trilhos Elétricos",
+"Making furnace minecarts completely useless": "Tornando minecarts de forno completamente inúteis",
+
+"Enchanter": "Encantador",
+"Craft an enchanting table": "Crie uma mesa de encantamentos",
+
+"Even MOAR Tools": "Até ferramentas MOAR",
+"Craft a full diamond tools set": "Crie um conjunto completo de ferramentas de diamante",
+
+"Fossil Fuel": "Combustível fóssil",
+"Coal! As in dead dinosaurs!": "Carvão! Como em dinossauros mortos!",
+
+"Getting an Upgrade": "Obtendo um Upgrade",
+"Construct a better pickaxe": "Construa uma picareta melhor",
+
+"Gold Miner": "Minerador de ouro",
+"Mine a stack of gold ore": "Extraia um pack de minério de ouro",
+
+"Gold Rush": "Corrida do ouro",
+"Strike gold and smelt it into a gold ingot": "Acertar um ouro e fundi-lo em um lingote de ouro",
+
+"Hot Stuff": "Coisa quente",
+"Fill a bucket with lava": "Encha um balde com lava",
+
+"Ice Bucket Challenge": "Desafio do balde de gelo",
+"Form and mine a block of Obsidian": "Forme e extraia um bloco de Obsidiana",
+
+"Iron Man": "Homem de Ferro",
+"Craft a full suit of iron armor": "Crie uma armadura de ferro completa",
+
+"Iron Miner": "Minerador de Ferro",
+"Mine a stack of iron ore": "Extraia um pack de minério de ferro",
+
+"Isn't It Iron Pick": "Não é picareta de ferro",
+"Upgrade your pickaxe": "Upgrade a sua picareta",
+
+"Lapis Lazuli Miner": "Minerador de Lapis Lazúli",
+"Mine enough lapis lazuli to craft a stack of lapis lazuli blocks": "Extraia lápis-lazúli o suficiente para fabricar um pack de blocos de lápis-lazúli",
+
+"Mineral Collection": "Coleção Mineral",
+"Craft every type of mineral block": "Crie cada tipo de bloco mineral",
+
+"MOAR Tools": "Ferramentas MOAR",
+"Craft a stone pickaxe, axe, shovel and hoe": "Crie uma picareta de pedra, machado, pá e enxada",
+
+"Aww it broke!": "Aww quebrou!",
+"Break your first tool": "Quebre sua primeira ferramenta",
+
+"On A Rail": "No trilho",
+"Craft a minecart using five iron ingots": "Crie um minecart usando cinco lingotes de ferro",
+
+"Redstone Miner": "Minerador de Redstone",
+"Mine enough redstone to craft a stack of redstone blocks": "Minere redstone suficiente para criar um pack de blocos de redstone",
+
+"Mining": "Mineração",
+"Dig underground, gather resources": "Cave no subsolo, reúna recursos",
+
+"Seeing Red": "Vendo vermelho",
+"Mine some redstone from the deepest caves": "Extraia algumas redstone das cavernas mais profundas",
+
+"Suit Up": "Vestir",
+"Protect yourself with a piece of iron armor": "Proteja-se com um pedaço de armadura de ferro",
+
+"The way to spawn": "A caminho para o spawn",
+"Craft a compass in case you forgot where spawn is": "Crie uma bússola no caso de você se esquecer de onde está o seu spawn",
+
+"DIAM- oh, wait, no.": "DIAM- oh, espere, não.",
+"It's still useful for enchanting": "Ainda é útil para encantar",
+
+"We Need to Go Deeper": "Precisamos ir mais fundo",
+"Build, light and enter a Nether Portal": "Construir, iluminar e entrar em um Portal Nether",
+
+"We've broken our last shovel": "Quebramos nossa última pá",
+"Break all five types of shovels": "Quebre todos os cinco tipos de pás",
+
+"What's the time, Mr Wolf?": "Que horas são, senhor lobo?",
+"Time to clean your clocks! (Or, craft them!)": "É hora de limpar seus relógios! (Ou crie-os!)",
+
+
+
+# Nether tab as of 1.3
+"A Terrible Fortress": "Uma Fortaleza Terrível",
+"Break your way into a Nether Fortress": "Abra caminho para uma Fortaleza Nether",
+
+"Basis of Brewing": "Base de fabricação de cerveja",
+"Harvest some nether wart from a nether fortress": "Colete algumas verrugas inferiores de uma fortaleza inferior",
+
+"Beaconator": "Beaconator",
+"Bring a beacon to full power": "Traga um Beacon para potência total",
+
+"Bring Home the Beacon": "Traga o Beacon para casa",
+"Construct and place a Beacon": "Construa e posicione um Beacon",
+
+"Don't Step on it!": "Não pise nisso!",
+"Mine some magma blocks": "Minere alguns blocos de magma",
+
+"Ender's Chest": "Baú do Ender",
+"Craft an ender chest for some extra inventory space": "Crie um baú de ender para algum espaço de inventário extra",
+
+"Eye Spy": "Olho espião",
+"Follow an Ender Eye": "Siga um Olho Ender",
+
+"Fire Blast Shield": "Escudo de explosão de fogo",
+"Block the explosion of a ghast's fireball": "Bloqueie a explosão da bola de fogo de um Ghast",
+
+"Giant Floating Jellyfish": "Água-viva gigante flutuante",
+"Shoot down a ghast": "Mate um Ghast",
+
+"Glows in the Dark": "Brilha no escuro",
+"Craft spectral arrows using glowstone dust": "Crie flechas espectrais usando pó de pedra brilhante",
+
+"High Temperature Fluid Monster": "Monstro de fluido de alta temperatura",
+"Kill a magma cube": "Mate um Cubo de Magma",
+
+"Into Fire": "No Fogo",
+"Relieve a Blaze of its rod": "Alivie um Blaze de sua haste",
+
+"Limbo Walker": "Limbo zumbi",
+"Get above the roof in the nether": "Fique acima do telhado no nether",
+
+"Local Brewery": "Cervejaria local",
+"Craft a Brewing Stand for brewing potions": "Crie um suporte de poções para preparar poções",
+
+"Quicksand": "Areia movediça",
+"You sink like quicksand and move slow like mud": "Você afunda como areia movediça e se move devagar como lama",
+
+"Return to Sender": "Retornar ao remetente",
+"Destroy a Ghast with its fireball": "Destrua um Ghast com sua bola de fogo",
+
+"Nether": "Nether",
+"Bring summer clothes": "Traga roupas de verão",
+
+"Spooky Scary Skeleton": "Esqueleto assustador assustador",
+"Obtain a wither skeleton's skull": "Obtenha o crânio de um esqueleto Wither",
+
+"Subspace Bubble": "Bolha subespacial",
+"Use the Nether to travel 7km in the Overworld": "Use o Nether para viajar 7 km no Overworld",
+
+"The End?": "O Fim?",
+"Enter the End Portal": "Entre em um Portal do Fim",
+
+"The Hunt Begins": "A caça começa",
+"Kill a wither skeleton": "Mate um Esqueleto Wither",
+
+"The Nether's Shield": "O Escudo do Nether",
+"Block some blaze fireballs": "Bloqueie algumas bolas de fogo de um Blaze",
+
+"The Tribal Snouts": "Os focinhos tribais",
+"Kill a zombie pigman": "Mate um homem porco zumbi",
+
+"Uneasy Alliance": "Aliança inquieta",
+"Rescue a Ghast from the Nether, bring it safely home to the Overworld... and then kill it": "Resgate um Ghast do Nether, traga-o em segurança para o mundo superior ... e depois mate-o",
+
+"Withering Heights": "Morro dos Ventos Uivantes",
+"Summon the Wither": "Sumone um Wither",
+
+
+
+# Potions tab as of 1.3
+"A Furious Cocktail": "Um Coquetel Furioso",
+"Have every potion effect applied at the same time": "Ter todos os efeitos da poção aplicados ao mesmo tempo",
+
+"A Much More Doable Challenge": "Um desafio muito mais factível",
+"Get all the effects possible during your life (not all at the same time)": "Obtenha todos os efeitos possíveis durante a sua vida (não todos ao mesmo tempo)",
+
+"A Weak Brew": "Uma bebida fraca",
+"Brew up a potion of Weakness": "Prepare uma poção de fraqueza",
+
+"Death by Magic": "Morte por magia",
+"Kill a mob with a splash potion": "Mate um mob com uma poção de respingo",
+
+"Hopping Mad": "Pulando Louco",
+"Get jump boost from a beacon or a potion": "Obtenha impulso de salto com um beacon ou uma poção",
+
+"How did We Get Here?": "Como chegamos aqui?",
+"Have every effect applied at the same time": "Ter todos os efeitos aplicados ao mesmo tempo",
+
+"Hyper-Healing": "Hiper-cura",
+"Brew and drink a regeneration potion": "Prepare e beba uma poção de regeneração",
+
+"Medic!": "Médico!",
+"Brew a healing potion": "Prepare uma poção de cura",
+
+"Marine Marauder": "Marine Marauder",
+"Catch a pufferfish and use it to brew a water breathing potion": "Pegue um baiacu e use-o para preparar uma poção para respirar na água",
+
+"Nocturnal": "Noturno",
+"Brew and drink a night vision potion": "Prepare e beba uma poção de visão noturna",
+
+"Performance-Enhancing Drugs": "Drogas que aumentam o desempenho",
+"Brew a Speed Potion for cheating on athletics": "Prepare uma poção acelerada para trapacear no atletismo",
+
+"Potions": "Poções",
+"Brewing potions with helpful and hindering effects": "Preparando poções com efeitos úteis e prejudiciais",
+
+"Stayin' Frosty": "Fique gelado",
+"Drink a fire resistance potion so you can go swimming in lava": "Beba uma poção de resistência ao fogo para que você possa nadar na lava",
+
+"Super Strength": "Super força",
+"Brew a Strength Potion for cheating on weightlifting": "Prepare uma Poção de Força para trapacear no levantamento de peso",
+
+"The Invisible Player": "O jogador invisível",
+"Brew and drink an invisibility potion": "Prepare e beba uma poção de invisibilidade",
+
+"Zombie Doctor": "Doutor Zumbi",
+"Cure a zombie villager": "Cure um aldeão zumbi",
+
+
+
+# Redstone tab as of 1.3
+"Bling Plate": "Placa Bling",
+"Dine in style! (No, not really)": "Jante com estilo! (Não, na verdade não)",
+
+"Comparing Comparator": "Comparador de comparação",
+"Craft a redstone comparator": "Crie um comparador de redstone",
+
+"Dispense With This": "Dispensar Isso",
+"Construct a dispenser": "Construir um dispensador",
+
+"Metal Plate": "Prato de metal",
+"Dinner time!": "Hora do jantar!",
+
+"Moving Parts": "Partes móveis",
+"Craft a piston so you can push things": "Crie um pistão para que possa empurrar as coisas",
+
+"Mozart": "Mozart",
+"Craft a note block": "Crie um bloco de notas",
+
+"Observer Buddy": "Companheiro observador",
+"Craft an observer": "Crie um observador",
+
+"Pressure Detector": "Detector de pressão",
+"Use a pressure plate to craft a detector rail": "Use uma placa de pressão para construir um trilho detector",
+
+"Quartz Miner": "Minerador de quartzo",
+"Mine enough nether quartz to craft a stack of quartz blocks": "Extraia quartzo do Nether o suficiente para criar um pack de blocos de quartzo",
+
+"Quirky Quartz": "Quartzo peculiar",
+"Mine Nether Quartz from the Nether": "Minere quartzo do nether no Nether",
+
+"Repeating Repeater": "Repetidor de Repetição",
+"Craft a redstone repeater for delaying signals": "Crie um repetidor redstone para atrasar sinais",
+
+"Redstone": "Redstone",
+"Cracking contraptions": "Cracking engenhocas",
+
+"Solar Power": "Poder solar",
+"Craft a daylight sensor": "Crie um sensor de luz do dia",
+
+"Space Dropper": "Dropper do espaço",
+"Craft a dropper for item transportation": "Crie um Dropper para o transporte de itens",
+
+"Space Hopper": "Funil do espaço",
+"Craft a hopper for item transportation": "Crie uma funil para transporte de itens",
+
+"Sticky Parts": "Partes grudentas",
+"Craft a sticky piston so you can pull things": "Crie um pistão grudento para que você possa puxar coisas",
+
+"Tripping Over": "Tropeçar",
+"Craft a tripwire hook for your traps": "Crie um gancho de arame para suas armadilhas",
+
+"Troll Chest": "Baú Troll",
+"Craft a trapped chest to troll your friends": "Crie um baú com armadilha para trollar seus amigos",
+
+"Under Pressure": "Sob pressão",
+"Craft a pressure plate": "Crie uma placa de pressão",
+
+
+
+# All advancements added in version 1.4 are here
+
+"Beginning": "Começo",
+"A brave new world": "Um admirável mundo novo",
+
+"Time to Chop!": "É hora de cortar!",
+"Use planks and sticks to make a axe": "Use tábuas e varas para fazer um machado",
+
+"Time to Farm!": "Hora de cultivar!",
+"Use planks and sticks to make a hoe": "Use pranchas e gravetos para fazer uma enxada",
+
+"Time to Mine!": "Hora de minerar!",
+"Use planks and sticks to make a pickaxe": "Use tábuas e gravetos para fazer uma picareta",
+
+"Time to Strike!": "É hora de atacar!",
+"Use planks and sticks to make a sword": "Use tábuas e gravetos para fazer uma espada",
+
+
+
+"Stripper":  "Cascador",
+"Strip the bark off of all six types of logs then pick them up": "Retire a casca de todos os seis tipos de toras e, em seguida, pegue-as",
+
+
+
+"Flint Miner": "Minerador de sílex",
+"Mine a stack of flint": "Minere um pack de sílex",
+
+"My work here is done": "Meu trabalho aqui está feito",
+"Get caught in a cave-in of gravel": "Seja pego em um desabamento de cascalho",
+
+"Nananananananana...": "Nananananananana...",
+"Accidentally hit a bat underground": "Acertou acidentalmente um morcego no subsolo",
+
+"Obsidian Miner": "Minerador de obsidiana",
+"Mine a stack of obsidian. (This might take a while...)": "Mine um pack de obsidiana. (Isso pode demorar um pouco ...)",
+
+"Rock Bottom": "Rocha Inferior",
+"Dig down to the bottom of the world": "Cave até o fundo do mundo",
+
+"Spelunker": "Spelunker",
+"Enter a cave": "Entre em uma caverna",
+
+"Stone Age": "Idade da Pedra",
+"Mine stone with your new pickaxe": "Minere pedra com sua nova picareta",
+
+
+
+
+"An amazing story!": "Uma história incrível!",
+"Finish writing in your book or get a book from another player": "Termine de escrever em seu livro ou compre um livro de outro jogador",
+
+"Aquatic Biofuel": "Biocombustível aquático",
+"Craft a dried kelp block for use as a great fuel source": "Crie um bloco de algas secas para usar como uma ótima fonte de combustível",
+
+"Hay there!": "Hay aí!",
+"Craft a stack of hay blocks": "Crie um pack de blocos de feno",
+
+"It's full of ink": "Esta cheio de tinta",
+"Obtain some ink from hunting a squid": "Obtenha um pouco de tinta caçando uma lula",
+
+"It's where nutella comes from": "É de onde vem nutella",
+"Obtain some cocoa beans from a jungle": "Obtenha alguns grãos de cacau de uma selva",
+
+"Kelp me!": "Me ajude!",
+"Collect some kelp from an ocean": "Colete algumas algas de um oceano",
+
+"Pumpa kungen!": "Abóbora kungen!",
+"Carve a stack of pumpkins": "Corte um pack de abóboras",
+
+"The Meloncholy Dane": "O Melancólico Dane",
+"Craft a stack of melon blocks": "Crie um pack de blocos de melão",
+
+"Undersea Gardener": "Jardineiro Submarino",
+"Craft a stack of dried kelp blocks": "Faça um pack de blocos de algas secas",
+
+"Write your thoughts": "Escreva seus pensamentos",
+"Use a book, ink and a feather to craft a book and quill": "Use um livro, tinta e uma pena para fazer um livro e uma pena",
+
+
+
+"Animals": "Animais",
+
+"Hoe hoe hoe!": "Enxada, enxada, enxada!",
+
+"Aquarium": "Aquário",
+"Catch all four types of fish and set them free in an aquarium": "Pegue os quatro tipos de peixes e coloque-os em liberdade em um aquário",
+
+"Are we there yet?": "Já estamos lá?",
+"Tame a donkey": "Domestique um burro",
+
+"Bacon!": "Bacon!",
+"Gotta kill this pig pig pig pig": "Tenho que matar esse porco porco porco porco",
+
+"Chicken Cooper": "Frango Cooper",
+"Collect a stack of raw chicken and feathers": "Pegue um pack de frango cru e penas",
+
+"Farrier": "Ferrador",
+"Breed a horse in an effort to get a better one": "Crie um cavalo em um esforço para conseguir um melhor",
+
+"Feeding the §mDucks§r Chickens": "Alimentando as galinhas §mPatos§r",
+"Breed chickens by feeding them seeds": "Crie galinhas alimentando-as com sementes",
+
+"Hey, look, Mom!": "Ei, olha, mãe!",
+"Use sea grass to make a turtle lay some eggs": "Use ervas marinhas para fazer uma tartaruga botar alguns ovos",
+
+"If only cats grew into kittens": "Se ao menos os gatos se tornassem gatinhos",
+"Breed two cats together to get a kitty!": "Procrie dois gatos juntos para obter um gatinho!",
+
+"In a hole there lived a Rabbit": "Em um buraco vivia um coelho",
+"Collect a stack of raw rabbit and rabbit hide": "Colete um pack de coelho cru e pele de coelho",
+
+"Mary Had a Little Lamb...": "Mary tinha um cordeirinho...",
+"Breed two sheep to get a lamb": "Crie duas ovelhas para obter um cordeiro",
+
+"Mooshroom Kingdom": "Reino Cogumelo",
+"Find mooshrooms on a mushroom island": "Encontre cogumelos em uma ilha de cogumelos",
+
+"Pig Slaughterer": "Matador de Porcos",
+"Collect a stack of raw porkchops": "Pegue um pack de costeletas de porco crus",
+
+"Poacher": "Poacher",
+"Kill a turtle for their shells only to find they don't actually drop any when killed": "Mate uma tartaruga para obter seus cascos apenas para descobrir que eles não deixam cair nenhuma quando são mortos",
+
+"Puppies! Yipe!": "Filhotes! Yipe!",
+"Breed two wolves together to get a puppy!": "Crie dois lobos juntos para ter um cachorro!",
+
+"Scuttler": "Scuttler",
+"Get a scute from a baby turtle when it grows up": "Pegue um scute de uma tartaruga bebê quando ela crescer",
+
+"Sheariously?": "Sério?",
+"Collect a stack of white wool": "Colete um pack de lã branca",
+
+"So I got that going for me": "Então eu tenho isso para mim",
+"Breed two llamas with hay": "Crie duas lhamas com feno",
+
+"Someone's been here before...": "Alguém já esteve aqui antes ...",
+"Fish out a ratty old pair of boots": "Pesque um velho par de botas surradas",
+
+"Stay Calmer": "Fique mais calmo",
+"Tame a llama": "Dome uma lhama",
+
+"Super Mooshroom": "Super Cogumelo",
+"Breed two stubborn mooshrooms together": "Crie dois cogumelos teimosos juntos",
+
+"Tactical Fishing": "Pesca Tática",
+"Catch a fish... without a fishing rod!": "Pegue um peixe ... sem uma vara de pescar!",
+
+"They're breeding like rabbits!": "Eles estão se reproduzindo como coelhos!",
+"Breed two bunnies together": "Procrie dois coelhos juntos",
+
+"Tickle Time!": "Hora das cócegas!",
+"Pluck some feathers from a chicken": "Arranque algumas penas de uma galinha",
+
+"Totally not an AFK fisher!": "Totalmente não é um pescador AFK!",
+"Fish out all types of items": "Pesque todos os tipos de itens",
+
+"Treasure Hunter": "Caçador de tesouros",
+"Fish out a piece of treasure": "Pesque um pedaço de tesouro",
+
+"True Cow Tipper": "Verdadeiro matador de Vaca",
+"Collect a stack of raw beef and leather": "Pegue um pack de carne crua e couro",
+
+"Turtle Army": "Exército de Tartarugas",
+"Collect a stack of scutes": "Colete um pack de scutes",
+
+"Turtle Soldier": "Soldado Tartaruga",
+"Craft a full turtle shell": "Crie um casco de tartaruga completo",
+
+"What a piece of junk!": "Que porcaria!",
+"Fish out a junk item": "Pesque um item lixo",
+
+"Wooly!": "Lãnoso",
+"Obtain wool from a sheep by killing it": "Obtenha lã de uma ovelha matando-a",
+
+"Yay! Deadbush!": "Yay! Arbusto Morto!",
+"Get a deadbush cause you're a noob": "Pegue um arbusto morto porque você é um novato",
+
+
+
+
+"A Throwaway Joke": "Uma piada descartável",
+"Throw a trident at something. Note: Throwing away your only weapon is not a good idea": "Jogue um tridente em alguma coisa. Nota: Jogar fora sua única arma não é uma boa ideia",
+
+"A Watery Grave": "Um Túmulo Aquático",
+"Defeat a drowned in the briny depths. ": "Derrote um afogado nas profundezas salgadas.",
+"Gurgle": "Gorgolejo",
+
+"Anti-Air": "Anti-Ar",
+"Shoot down a phantom with a bow from 30 blocks away": "Abater um fantasma com um arco a 30 blocos de distância",
+
+"Because I'm Aquaman!": "Porque eu sou o Aquaman!",
+"Obtain a trident from a Drowned": "Obtenha um tridente de um afogado",
+
+"Boned": "Desossado",
+"Grind up some bones into bonemeal": "Moa alguns ossos em farinha de osso",
+
+"Creeper Killer": "Matador de Creeper",
+"Collect a stack of gunpowder": "Recolha um pack de pólvora",
+
+"Enderman Destroyer": "Destruídor de Enderman",
+"Collect a stack of ender pearls": "Colete um pack de pérolas ender",
+
+"Freezing": "Congelando",
+"Bring a husk to a tundra biome and then kill it": "Traga um Husk para um bioma de tundra e depois mate-a",
+
+"Melting": "Derretendo",
+"Bring a stray to a desert biome and then kill it": "Traga um Stray para um bioma deserto e, em seguida, mate-o",
+
+"Phantom Slayer": "Matador de Phantom",
+"Collect a stack of phantom membranes": "Colete um pack de membranas fantasmas",
+
+"Poseidon vs. Hades": "Poseidon vs. Hades",
+"Hunt all types of nether creatures with your trident": "Cace todos os tipos de criaturas inferiores com seu tridente",
+
+"Ricochet Swoop": "Ricochet Swoop",
+"Deflect a Phantom's swoop with your shield": "Desvie da investida de um Phantom com seu escudo",
+
+"Skeleton Smiter": "Julgamento de esqueleto",
+"Collect a stack of bones": "Colete um pack de ossos",
+
+"Slime Squisher": "Matador de Slimes",
+"Collect a stack of slimeballs": "Colete um pack de bolas de slime",
+
+"Spider Smasher": "Esmagador de Aranhas",
+"Collect a stack of string from spiders or cobwebs": "Colete um pack de linhas de aranhas ou teias de aranha",
+
+"The Aquatic Hunter": "O caçador aquático",
+"Hunt all types of aquatic creatures with your trident": "Cace todos os tipos de criaturas aquáticas com seu tridente",
+
+"The Phantom Menace": "A ameaça fantasma",
+"Get attacked by phantoms": "Seja atacado por fantasmas",
+
+"Tridented Shield": "Escudo Tridentado",
+"Block a trident thrown by a Drowned": "Bloqueie um tridente lançado por um afogado",
+
+"Underwater Duel": "Duelo Subaquático",
+"Kill a drowned using a trident from at least 30 metres": "Mate um afogado usando um tridente de pelo menos 30 metros",
+
+"We'll handle this": "Vamos cuidar disso",
+"Lure a Phantom into the Nether and then kill it": "Atrair um Fantasma para o Nether e depois matá-lo",
+
+"Zombie Slayer": "Matador de Zumbi",
+"Collect a stack of rotten flesh": "Recolha um pack de carne podre",
+
+
+
+
+
+"Atlantis": "Atlantis",
+"Explore some Underwater Ruins": "Explore algumas ruínas subaquáticas",
+
+"Dolphin Dasher": "Amigo golfinho",
+"Get a speed boost from your friendly underwater companions": "Obtenha um aumento de velocidade de seus amigos subaquáticos",
+
+"Eeuuwww!": "Eeuuwww!",
+"Get stuck in a cobweb": "Fique preso em uma teia de aranha",
+
+"Enchanted Forest": "Floresta encantada",
+"Find a flower forest": "Encontre uma floresta de flores",
+
+"Explorer of Worlds": "Explorador de mundos",
+"Discover every biome including special biomes": "Descubra todos os biomas, incluindo biomas especiais",
+
+"Get Ship-rekt!": "Consiga o barco!",
+"Come across a sunken ship": "Encontre um navio naufragado",
+
+"Gold Mine!": "Mina de ouro!",
+"Find a mineshaft on the surface of a mesa biome": "Encontre um poço de mina na superfície de um bioma mesa",
+
+"Guardian Destroyer": "Destruídor de Gurdiãos",
+"Collect a stack of prismarine shards and crystals": "Colete um pack de fragmentos e cristais prismarinos",
+
+"In a Pickle": "Em apuros",
+"Collect some sea pickles from a coral reef": "Colete alguns picles do mar em um recife de coral",
+
+"Just a sample": "Apenas uma amostra",
+"Collect some coral from a coral reef": "Colete alguns corais de um recife de coral",
+
+"No Reefing!": "Sem recifes!",
+"Collect all colors of coral blocks, plants and fans (including dead ones)": "Colete todas as cores de blocos de coral, plantas e leques (incluindo os mortos)",
+
+"Power of the Ocean": "Poder do oceano",
+"Construct a Conduit in the ocean": "Construa um conduíte no oceano",
+
+"Secret of the Igloo": "Segredo do iglu",
+"Find an igloo in a snowy tundra": "Encontre um iglu em uma tundra cheia de neve",
+
+"Spike Ice!": "Espinho de gelo!",
+"Break down an ice spike using a silk touch pickaxe": "Quebre uma ponta de gelo usando uma picareta de Toque Suave",
+
+"Spikey!": "Espinho!",
+"Run into a cactus": "Topar com um cacto",
+
+"Sponge Miner": "Minerador de Esponja",
+"Collect a stack of sponges from ocean monuments": "Colete um pack de esponjas em monumentos oceânicos",
+
+"The Great Blocky Reef": "O Grande Bloco Recife",
+"Come across a coral reef in the ocean": "Encontre um recife de coral no oceano",
+
+"There's a zombie on the lawn": "Há um zumbi no gramado",
+"Find a sunflower plains": "Encontre um girassol nas planícies",
+
+"Thick Ice!": "Gelo Espesso!",
+"Craft or mine a blue ice block from an iceberg": "Construa ou extraia um bloco de gelo azul de um iceberg",
+
+"Thin Ice!": "Gelo fino!",
+"Use a silk touch pickaxe to pick up some ice blocks": "Use uma picareta de Toque Suave para pegar alguns blocos de gelo",
+
+"Titanic": "Titanic",
+"Find a shipwreck in an iceberg biome": "Encontre um naufrágio em um bioma de iceberg",
+
+"X Marks the Spot": "O X marca o lugar",
+"Use a treasure map to find a Heart of the Sea in Buried Treasure": "Use um mapa do tesouro para encontrar um Coração do Mar em Tesouro Enterrado",
+
+
+
+
+"Engineer": "Engenheiro",
+"Craft all types of redstone component": "Crie todos os tipos de componente redstone",
+
+"Master Engineer": "Engenheiro Mestre",
+"Craft a stack of all types of redstone component": "Crie um pack de todos os tipos de componentes redstone",
+
+
+
+
+"Boomerang": "Bumerange",
+"Turn your trident into a boomerang by getting Loyalty on it": "Transforme seu tridente em um bumerangue recebendo Lealdade nele",
+
+"Very Very Frightening": "Muito, muito assustador",
+"Strike a Villager with lightning": "Ataque um aldeão com um raio",
+
+"Master Tridenteer": "Mestre Tridenter",
+"Create a trident with all possible enchantments at max level": "Crie um tridente com todos os encantamentos possíveis no nível máximo",
+
+"Zeus": "Zeus",
+"Obtain Channeling on a trident": "Obtenha Canalização em um tridente",
+
+
+
+
+"Blaze Extinguisher": "Extintor de incêndio",
+"Collect a stack of blaze rods": "Colete um pack de varas de Blaze",
+
+"Ghast Slayer": "Matador de Ghast",
+"Collect a stack of ghast tears": "Colete um pack de lágrimas de Ghast",
+
+"Glowstone Miner": "Minerador de Glowstone",
+"Mine or craft a stack of glowstone blocks": "Extraia ou construa um pack de blocos de pedra brilhante",
+
+"Magma Cube Squisher": "Matador de Cubo de Magma",
+"Collect a stack of magma cream": "Colete um pack de creme de magma",
+
+"Seeing Stars": "Vendo Estrelas",
+"Mine some glowstone dust from the nether": "Extraia um pouco de poeira de pedra luminosa do fundo",
+
+
+
+
+"Tank": "Tanque",
+"Become nearly invincible to all damage using a Turtle Master Potion": "Torne-se quase invencível a todos os danos usando uma Poção Mestre de Tartaruga",
+
+"True Feather Falling": "Verdade pena caída",
+"Brew and drink a slow falling potion": "Prepare e beba uma poção que cai lentamente",
+
+
+
+
+"Extrabiologist": "Extrabiologista",
+"Plant a chorus plant in the overworld for study": "Plante uma planta de coro no mundo superior para estudar",
+
+"Shulker Breaker": "Quebrador de Shulker",
+"Collect a stack of shulker shells": "Colete um pack de cascos shulker",
+
+"Void Walker": "Void Zumbi",
+"Explore every end biome": "Explore todos os biomas do Fim",
+
+
+
+# All advancements added in version 1.5 are here
+
+"Iconic Merchandising Prop": "Objeto icônico de merchandising",
+"Create a pickaxe of the highest calibre": "Crie uma picareta do mais alto calibre",
+
+"Living Like Kings": "Vivendo como reis",
+"Make yourself shiny with golden armor": "Torne-se brilhante com armadura dourada",
+
+"Master Coal Miner": "Minerador de Carvão Mestre",
+"Mine enough coal to make a stack of coal blocks": "Extraia carvão suficiente para fazer um pack de blocos de carvão",
+
+"Master Diamond Miner": "Minerador de Diamante Mestre",
+"Mine enough diamond to make a stack of diamond blocks": "Minere diamantes suficientes para fazer um pack de blocos de diamantes",
+
+"Master Gold Miner": "Minerador de Ouro Mestre",
+"Mine enough gold to make a stack of gold blocks": "Extraia ouro suficiente para fazer um pack de blocos de ouro",
+
+"Master Iron Miner": "Minerador de Ferro Mestre",
+"Mine enough iron to make a stack of iron blocks": "Minere ferro suficiente para fazer um pack de blocos de ferro",
+
+"Meet The Flintstones": "Conheça os Flintstones",
+"Dig up some flint from a patch of gravel": "Desenterrar pederneira de um pedaço de cascalho",
+
+"Stabcraft": "Stabcraft",
+"Do you like my sword sword": "Você gosta da minha espada espada",
+
+"The Mistake!": "O erro!",
+"Put Mending on a piece of golden armor and realise what you are doing in life": "Coloque Remendo em uma peça de armadura dourada e perceba o que você está fazendo na vida",
+
+
+
+
+"Barking Mad": "Barking Louco",
+"Craft a bark block": "Crie um bloco de casca de árvore",
+
+"Lost Its Bark": "Perdeu o seu Bark",
+"Strip a bark block of its bark": "Retire um bloco de casca de sua casca",
+
+"No Banner, Only Color!": "Sem banner, apenas cor!",
+"Craft all 16 banner colors": "Crie todas as 16 cores de banner",
+
+"Professor Birch": "Professor Bétula",
+"Craft every item made out of birch wood": "Crie cada item feito de madeira de bétula",
+
+"Professor Dark Oak": "Professor carvalho escuro",
+"Craft every item made out of dark oak wood": "Crie cada item feito de madeira de carvalho escuro",
+
+"Professor Oak": "Professor Carvalho",
+"Craft every item made out of oak wood": "Crie cada item feito de madeira de carvalho",
+
+"Rainbow Dreams": "Sonhos coloridos",
+"Craft every color of bed": "Crie cada cor de cama",
+
+"Spruce Lee": "Pinheiro Lee",
+"Craft every item made out of spruce wood": "Fabrique cada item feito de madeira de pinheiro",
+
+"The Acacia King": "O Reino de Acácia",
+"Craft every item made out of acacia wood": "Crie cada item feito de madeira de acácia",
+
+"The Jungler": "O Selveiro",
+"Craft every item made out of jungle wood": "Fabrique cada item feito de madeira da selva",
+
+
+
+
+"It's a cactus!": "É um cacto!",
+"Break down a cactus in a desert": "Destrua um cacto no deserto",
+
+"Mega Mushroom": "Mega cogumelo",
+"Grow a giant mushroom and then harvest it with silk touch": "Cultive um cogumelo gigante e colha-o com Toque Suave",
+
+"Shrooms": "Melo",
+"Gather both types of mushroom": "Reúna os dois tipos de cogumelo",
+
+
+
+
+"Direct Fishing": "Pesca Direta",
+"Catch a fish by directly skewering it with a sword": "Pegue um peixe espetando-o diretamente com uma espada",
+
+"Fuzzy Feet": "Pés felpudos",
+"Craft all 16 colors of carpet": "Fabrique todas as 16 cores de carpete",
+
+"Grinding Nemo": "Moendo Nemo",
+"Skewer a tropical fish": "Espeto de peixe tropical",
+
+"Lucky Charm": "Amuleto da sorte",
+"Get a rabbit's foot": "Pegue um pé de coelho",
+
+"Master Angler": "Ângulo Mestre",
+"Collect a stack of all four types of fish": "Colete um pack de todos os quatro tipos de peixes",
+
+"Tropical Collection": "Coleção Tropical",
+"Collect all 22 of the common types of tropical fish": "Colete todos os 22 tipos comuns de peixes tropicais",
+
+
+
+
+"Camouflage": "Camuflagem",
+"Kill a mob while wearing the same type of mob head": "Mate um mob usando o mesmo tipo de cabeça de mob",
+
+
+
+
+"Businessman": "Homem dos négocios",
+"Trade with every type of villager career": "Negocie com todo tipo de profissão de aldeão",
+
+"MURDERER!": "ASSASSINO!",
+"Kill a villager": "Mate um aldeão",
+
+"Pushed Around": "Empurrado",
+"Enter a bubble column": "Insira uma coluna de bolha",
+
+"Raidin' Master": "Mestre Raidin",
+"Discover every structure type": "Descubra cada tipo de estrutura",
+
+"Rekt!": "Rekt!",
+"Get killed by a natural iron golem defending its village": "Seja morto por um golem de ferro natural que defende sua aldeia",
+
+"The sea calls you...": "O mar te chama ...",
+"Find an ocean": "Encontre um oceano",
+
+"Travelling Merchant": "Comerciante Viajante",
+"Travel to every type of village": "Viaje para todo tipo de vila",
+
+
+
+
+"Mobile Explosion": "Explosão Móvel",
+"Put TNT in a minecart": "Coloque TNT em um minecart",
+
+"Moving Moving Storage": "Movendo Armazenamento",
+"Put a hopper in a minecart": "Coloque um funil em um minecart",
+
+"Moving Storage": "Armazenamento móvel",
+"Put a chest in a minecart": "Coloque um baú em um minecart",
+
+"Powerful Light": "Luz poderosa",
+"Craft and place a redstone torch": "Crie e coloque uma tocha de redstone",
+
+"Railwayman": "Ferroviário",
+"Craft a stack of all the different types of rails": "Crie um pack de todos os diferentes tipos de trilhos",
+
+
+
+
+"Do A Barrel Roll!": "Faça um ioiô!",
+"Get Riptide on a trident so you can shoot yourself through the water": "Pegue Contracorrente em um tridente para que você possa atirar na água",
+
+"Newton's Flaming Laser Sword": "Espada Laser Flamejante de Newton",
+"Have a diamond sword with Fire Aspect II": "Tenha uma espada de diamante com Aspecto Flamejante II",
+
+"To Infinity And Beyond!": "Ao infinito e além!",
+"Obtain Infinity on a bow": "Obtenha Infinidade em um arco",
+
+"Ultimate Enchanter": "Encantador Ultimate",
+"Obtain every enchantment at every level throughout your enchanting career": "Obtenha todos os encantos em todos os níveis ao longo de sua carreira de encantador",
+
+
+
+"Shoot a mob with a spectral arrow": "Atire em um mob com uma flecha espectral",
+
+"Bring Down The Beast": "Derrubar a Besta",
+"Bring down a ghast with a sword": "Mate um Ghast com uma espada",
+
+
+
+
+"The Point of No Return": "O ponto de não retorno",
+"Fall into the void": "Caia no vazio",
+
+"Furious Ammunition": "Munição furiosa",
+"Craft every type of tipped arrow": "Crie cada tipo de flecha com ponta",
+
+"Somewhere Over The Rainbow...": "Além do arco-íris...",
+"Craft all 16 shulker box types": "Crie todos os 16 tipos de caixa shulker",
+
+
+
+
+
+# All advancements added in version 1.6 are here
+"Beethoven": "Beethoven",
+"Craft a jukebox with planks and a diamond": "Crie uma jukebox com tábuas e um diamante",
+
+"Blast it!": "Exploda-o!",
+"Upgrade your furnace to a blast furnace using iron and smooth stone for smelting ores quicker": "Atualize sua fornalha para um alto-forno usando ferro e pedra lisa para fundir minérios mais rapidamente",
+
+"Camping Out": "Acampar",
+"Craft and place a campfire using some logs, sticks and coal": "Crie e coloque uma fogueira usando algumas toras, gravetos e carvão",
+
+"Classic Pocket Edition Block": "Bloco Classico do Pocket Edition",
+"Craft a stonecutter using stone and an iron ingot": "Faça um cortador de pedra usando pedra e um lingote de ferro",
+
+"Its original form": "Essa é a forma original",
+"Use your furnace to smelt cobblestone back into stone": "Use sua fornalha para fundir pedras de volta em pedra",
+
+"MOAR Broken Tools": "MOAR Ferramentas Quebradas",
+"Break every single tool and weapon in the game": "Quebre todas as ferramentas e armas do jogo",
+
+"Not Chicken McNuggets?": "Não é Chicken McNuggets?",
+"Craft or find iron nuggets": "Crie ou encontre pepitas de ferro",
+
+"Not for creating copies of yourself": "Não para criar cópias de você mesmo",
+"Craft a smithing table": "Crie uma mesa de ferreiro",
+
+"Rest in Pickaxes": "Descanse em picaretas",
+"Break your first diamond pickaxe": "Quebre sua primeira picareta de diamante",
+
+"Sharpening Station": "Estação de nitidez",
+"Craft a grindstone using a stone slab, planks and sticks for repairing tools": "Crie uma pedra de amolar usando uma laje de pedra, tábuas e varas para consertar ferramentas",
+
+"Spawn Camping": "Acampamento de Spawn",
+"Travel close to 0,0 coordinates and place down a campfire": "Viaje perto de coordenadas 0,0 e coloque uma fogueira",
+
+"Smokin' Hot": "Quente Smoker",
+"Upgrade your furnace to a smoker using some logs": "Atualize seu forno para smoker usando algumas toras",
+
+"Smooth, dude!": "Suave, cara!",
+"Smelt normal stone further into smooth stone": "Fundiu pedra normal ainda mais em pedra lisa",
+
+"Where are all your clothes?": "Onde estão todas as suas roupas?",
+"Break every type of armor piece in the game": "Quebre todos os tipos de peças de armadura do jogo",
+
+
+
+
+"Barrel Rider": "Barril cavaleiro",
+"Craft and place a barrel. Totally not for riding in": "Crie e coloque um barril. Totalmente não para andar em",
+
+"Crazy Walls": "Paredes doidas",
+"Craft every type of wall": "Construa todo tipo de parede",
+
+"Festival of Lights": "Festival de luzes",
+"Light up the area using a lantern": "Ilumine a área usando uma lanterna",
+
+"Logos": "Logos",
+"Craft all the special banner patterns": "Crie todos os padrões especiais de banner",
+
+"Fruit of the Looms": "Fruto dos Teares",
+
+"Prepare to meet your Loom!": "Prepare-se para conhecer o seu Tear!",
+"Craft a loom with string and planks for creating your own banners": "Crie um tear com barbante e pranchas para criar seus próprios banners",
+
+"Speech! Speech! Speech!": "Discurso! Discurso! Discurso!",
+"Craft a lectern using wooden slabs and a bookshelf then place it": "Crie um atril usando placas de madeira e uma estante de livros e coloque-o",
+
+
+
+
+"Berry Nice!": "Berry Nice!",
+"Pick and eat some sweet berries": "Escolha e coma algumas frutas doces",
+
+"Disen Berry Berry Bad!": "Disen Berry Berry Bad!",
+"Get stuck in a sweet berry bush. Oh, icky yucky goo!": "Fique preso em um arbusto de baga doce. Oh, gosma nojento!",
+
+"I'm gonna be sick!": "Eu ficarei doente!",
+"Slurp every kind of suspicious stew": "Tome todo tipo de ensopado suspeito",
+
+"Suspicious Looking Stew": "Guisado de aparência suspeita",
+"Slurp some suspicious stew and pray you don't suddenly see giant flying eyeballs in the sky": "Beba um pouco de ensopado suspeito e reze para que você não veja de repente globos oculares gigantes voando no céu",
+
+"The garbage will do!": "O lixo vai servir!",
+"Craft a composter using planks and wooden fences then place it": "Crie uma composteira usando tábuas e cercas de madeira e coloque-o",
+
+
+
+
+"Birdkeeper": "Domador de Passarinhos",
+"Tame all parrot variants": "Domine todas as variantes do papagaio",
+
+"Bunny Lover": "Amante de coelhinhos",
+"Breed a baby bunny of every variant": "Crie um coelhinho bebê de cada variante",
+
+"Colorful Cavalry": "Cavalaria colorida",
+"Dye 16 sets of leather horse armor each with one of the individual colors": "Pinte 16 conjuntos de armadura de couro de cavalo, cada um com uma das cores individuais",
+
+"Cool Kids": "Crianças legais",
+"Craft a leather jacket": "Crie um peitoral de couro",
+
+"Fashion Statement": "Declaração de moda",
+"Dye some leather pants with one color": "Pinte algumas calças de couro com uma cor",
+
+"Horse Armorer": "Armeiro de cavalos",
+"Make horse armor out of dead horses (No, joking, any leather will do)": "Faça uma armadura de cavalo com cavalos mortos (não, brincadeira, qualquer couro servirá)",
+
+"Llama Llama Duck King": "Lhama Lhama Pato Rei",
+"Tame all llama variants": "Dome todas as variantes de lhama",
+
+"Master Farrier": "Mestre Ferrador",
+"Tame all horse variants": "Domestique todas as variantes de cavalos",
+
+"Mushroom Scientist": "Cientista de Cogumelo",
+"Strike a mooshroom with lightning and see what happens": "Ataque um Cogumelo com um raio e veja o que acontece",
+
+"Shoe Shed": "Galpão de sapatos",
+"Dye 16 pairs of leather boots each with one of the individual colors": "Pinte 16 pares de botas de couro, cada uma com uma das cores individuais",
+
+"Snow Fox 64": "Raposa de neve 64",
+"Breed two snow foxes with sweet berries": "Procrie duas raposas da neve com frutas doces",
+
+"What Does The Fox Say?": "O que a Raposa diz?",
+"Breed two red foxes with sweet berries": "Procrie duas raposas vermelhas com amoras doces",
+
+"Which came first?": "O que veio primeiro?",
+"The chicken... or the egg??": "A galinha ou o ovo??",
+
+
+
+
+"Monsters": "Monstros",
+
+"Baby, baby, baby noo!!": "Bebê, bebê, bebê nãoo!!",
+"Kill one of each of a baby zombie, zombie villager, husk, drowned and zombie pigman": "Mate um zumbi bebê, aldeão zumbi, casca, afogado e homem porco zumbi",
+
+"Captain Etho": "Capitão Etho",
+"Defeat a Drowned holding both a nautilus shell and a trident": "Derrote um Afogado segurando uma concha de nautilus e um tridente",
+
+"Custom Boss Fight!": "Luta de Chefe Personalizada",
+"Give a zombie full diamond armor and a diamond sword... then kill it": "Dê a um zumbi uma armadura de diamante completa e uma espada de diamante ... então mate-o",
+
+"Handsome Jack": "Jack bonito",
+"Defeat a mob wearing a Jack o' Lantern on Halloween": "Derrote um mob usando um Jack o'Lantern no Halloween",
+
+"Legend of the Hell Chicken Rider": "Galinha Lenda do Inferno",
+"Kill a chicken jockey in the nether": "Mate uma galinha jóquei no nether",
+
+"Mollusc Man": "Homem molusco",
+"Defeat a Drowned holding a nautilus shell": "Derrote um Afogado segurando uma concha de nautilus",
+
+"Ooh, Baby!": "Ooh, Bebê!",
+"Kill a baby zombie": "Mate um bebê zumbi",
+
+"Trick or Treat!": "Doces ou travessuras!",
+"Defeat a mob wearing a pumpkin": "Derrote um mob usando uma abóbora",
+
+"Two Birds, One Arrow": "Dois pássaros, um arco",
+"Kill two Phantoms with a piercing arrow": "Mate dois Phantoms com uma flecha penetrante",
+
+
+
+
+"A snowball's chance in hell": "A chance de uma bola de neve no inferno",
+"Defeat a Blaze using snowballs": "Derrote um Blaze usando bolas de neve",
+
+"Axeman": "Homem Machado",
+"Attack a mob using all five types of axes": "Ataque um mob usando todos os cinco tipos de machados",
+
+"Demolitions Expert": "Especialista em demolições",
+"Blow up every hostile mob with TNT": "Explodir todo mob hostil com TNT",
+
+"Diamonds to you!": "Diamantes para você!",
+"Hit a mob with diamonds": "Dê dano em um mob com diamantes",
+
+"Expelliarmus!": "Expeliarmos!",
+"Hit a mob with a stick": "Dê dano em um mob com um graveto",
+
+"Explosive Fire": "Fogo explosivo",
+"Load your crossbow with a firework": "Carregue sua besta com fogos de artifício",
+
+"Flying Colors": "Cores voadoras",
+"Apply a banner (with no patterns) to your shield": "Aplique um banner (sem padrões) ao seu escudo",
+
+"Indiana Jones": "Indiana Jones",
+"Pull a monster using a fishing rod": "Puxe um monstro usando uma vara de pescar",
+
+"Master Shieldsman": "Mestre Escudo",
+"Deflect an attack from every hostile monster": "Desvie de um ataque de cada monstro hostil",
+
+"Ol' Betsy": "Ol 'Betsy",
+"Shoot a crossbow": "Atire uma besta",
+
+"Pig Fishing Tournament": "Torneio de pesca de porco",
+"Pull a pig using a fishing rod": "Puxe um porco usando uma vara de pescar",
+
+"Revenge!": "Vingança!",
+"Blow up a creeper with TNT": "Exploda um Creeper com TNT",
+
+"Shield Luck": "Sorte de escudo",
+"Protect yourself from an enemy's attack with your shield": "Proteja-se do ataque de um inimigo com seu escudo",
+
+"Shovel Knight": "Pá do cavaleiro",
+"Hit a mob using all five types of shovels": "Acerte um mob usando todos os cinco tipos de pás",
+
+"Sir Knight": "Senhor cavaleiro",
+"Use planks and iron to craft a shield": "Use tábuas e ferro para criar um escudo",
+
+"Slapfish": "",
+"Slap a mob across the face with a fish": "Dê um tapa na cara de um mob com um peixe",
+
+"That is so fletch!": "Isso é tão fraco!",
+"Craft a fletching table": "Crie uma bancada de arco e flechas",
+
+"There's yolk on my head": "Tem gema na minha cabeça",
+"Catapult an egg onto a zombie's head": "Catapulte um ovo na cabeça de um zumbi",
+
+"Viking": "Viking",
+"Attack a mob using an axe": "Ataque um mob usando um machado",
+
+"Weaponry": "Armeiro",
+"Weapons of choice for combat": "Armas de escolha para combate",
+
+"When Pigs Finally Fly": "Quando os porcos finalmente voarem",
+"Pull a pig from 25 blocks below you and watch it go": "Puxe um porco 25 bloco abaixo de você e observe-o ir",
+
+"Who's the Pillager Now?": "Quem é o Pillager agora?",
+"Give a Pillager a taste of their own medicine": "Dê a um Pillager uma amostra de seu próprio remédio",
+
+"X-Bow": "Arco-X",
+"Craft a crossbow using stick, spider string, iron and a hook": "Crie uma besta usando um pedaço de graveto, fio de aranha, ferro e um gancho",
+
+"King of the Sea": "Rei do Mar",
+
+
+
+
+"Bamboom!": "Bambum!",
+"Break down some bamboo": "Quebre um pouco de bambu",
+
+"Biomes": "Biomas",
+"All around the world!": "Tudo em volta do mundo!",
+
+"Construction Worker": "Trabalhador da construção",
+"Craft and use some scaffolding": "Crie e use alguns andaimes",
+
+"For you, my sweet": "Para você, meu doce",
+"Pick a flower for someone special": "Escolha uma flor para alguém especial",
+
+"Kung Fu Panda!": "Kung Fu Panda!",
+"Get beaten up by an angry panda": "Apanhado por um panda zangado",
+
+"Simba": "Simba",
+"Breed a baby ocelot": "Procrie um bebê jaguatirica",
+
+"The Mighty Jungle": "A Poderosa Selva",
+"Go for a safari in the jungle": "Faça um safari na selva",
+
+"Top of the World": "Topo do Mundo",
+"Place scaffolding to the world limit": "Coloque andaimes até o limite do mundo",
+
+"Zoologist": "Zoologista",
+"Breed two pandas to get a baby panda": "Procrie dois pandas para obter um bebê panda",
+
+
+
+"Village, Pillage and Dungeons!": "Aldeia, pilhagem e masmorras!",
+
+"Kill a Vindicator in a Woodland Mansion": "Mate um Vindicador em uma Mansão na Floresta",
+
+"Defeat an Evoker in a Woodland Mansion": "Derrote um Evoker em uma Mansão na Floresta",
+
+"All chained up": "Tudo acorrentado",
+"Trade for a piece of chain armor from an armorer villager": "Troque por um pedaço de armadura de corrente de um aldeão armeiro",
+
+"A Complete Catalogue": "Um Catálogo Completo",
+"Tame all cat variants!": "Dome todas as variantes de gatos!",
+
+"Crazy Cat Lady": "Senhora Gato Louca",
+"Tame a stray cat in a village": "Domestique um gato de rua em uma vila",
+
+"Deal's Off!": "Fechado o negócio!",
+"Get spat at by one of the Trader Llamas": "Seja cuspido por um dos Lhamas Trocadores",
+
+"Feeling Ill": "Sentindo-me Ill",
+"Defeat every type of Illager as part of a raid": "Derrote todos os tipos de Illager como parte de uma invasão",
+
+"Florist": "Florista",
+"Trade for a flower from the Wandering Trader": "Negocie por uma flor do Trocador Vagante",
+
+"Hero of the Village": "Herói da Vila",
+"Triumph over a full raid for the first time": "Triunfar sobre um ataque completo pela primeira vez",
+
+"How to stop a rhino from charging": "Como impedir um rinoceronte de atacar",
+"Have a Ravager slam into your shield": "Faça um Ravager bater em seu escudo",
+
+"Illagers on Patrol": "Illagers em Patrulha",
+"Defeat the leader of an Illager Patrol": "Derrote o líder de uma patrulha Illager",
+
+"Voluntary Exile": "Exílio Voluntário",
+"Kill a raid captain. Maybe consider staying away from villages for the time being...": "Mate um capitão de ataque. Talvez considere ficar longe das aldeias por enquanto ...",
+
+"It's So Beast-Like!": "É Tão Besta!",
+"Slay a Ravager in a raid": "Mate um Ravager em um ataque",
+
+"Lilypad Hatter": "Vitória Régia Odiador",
+"Breed and trade with a swamp villager": "Procrie e negocie com um aldeão do pântano",
+
+"Mapmaker's Table": "Mesa do Cartógrafo",
+"Craft a cartography table with paper and planks": "Crie uma mesa de cartografia com papel e tábuas",
+
+"Master Trader": "Trocador Mestre",
+"Trade with every type of villager career at master level": "Negocie com todo tipo de carreira de aldeão em nível mestre",
+
+"Oh, look, it dings!": "Oh, olhe, isso dings!",
+"Pick up a bell from a village": "Pegue um sino de uma aldeia",
+
+"Out of Posts": "Sem postagens",
+"Enter a Pillager Outpost": "Entrar em um Posto Avançado Pillager",
+
+"Picador": "Picador",
+"Hit a Ravager with a thrown trident": "Acerte um Ravage com um tridente lançado",
+
+"Rebuilding the Oceans": "Reconstruindo os oceanos",
+"Trade for a coral block from the Wandering Trader": "Negocie por um bloco de coral com o Trocador Vagante",
+
+"Retro Future Knight": "Cavaleiro Retro do Futuro",
+"Trade for full suit of chain armor from an armorer villager": "Troque por um traje completo de armadura de corrente de um aldeão armeiro",
+
+"Riot Shield": "Escudo de choque",
+"Deflect a Pillager's crossbow bolt": "Desvie da flecha de uma besta de um Pillager",
+
+"Shady Deals": "Ofertas sombrias",
+"Trade with a Wandering Trader while he is invisible": "Negocie com um Trocador Vagante enquanto ele está invisível",
+
+"Stockbroker": "Corretor da bolsa",
+"Trade with every profession from every biome type": "Negocie com todas as profissões de todos os tipos de bioma",
+
+"The Tribal Villagers": "Os Aldeões Tribais",
+"Breed and trade with a jungle villager": "Procrie e negocie com um aldeão da selva",
+
+"The Haggler": "O Trocador",
+"Trade with a villager at master level": "Negocie com um aldeão em nível de mestre",
+
+"Town Planner": "Planejador de cidade",
+"Craft and place every type of villager workstation": "Crie e coloque todo tipo de estação de trabalho do aldeão",
+
+"Traveller": "Viajante",
+"Travel to every type of village and trade with a villager in each": "Viaje para cada tipo de vila e negocie com um morador em cada",
+
+"Trade with a Wandering Trader": "Troque com um Trocador Vagante",
+
+"Veteran of the Village": "Veterano da Aldeia",
+"Attain the highest level of Hero of the Village": "Alcance o nível mais alto de Herói da Vila",
+
+"Village Settler": "Colonizador de Aldeia",
+"Trade for a new bell to establish a new village": "Troque por um novo sino para estabelecer uma nova aldeia",
+
+"War is Coming": "Guerra está chegando",
+"Defeat enough Illager Patrol leaders to attain the highest level of Bad Omen": "Derrote líderes de Patrulha Illager suficiente para atingir o nível mais alto de Bad Omen",
+
+"You are the Pillager": "Você é o Pillager",
+"Murder one of every villager profession with a crossbow": "Assassine um de cada profissão de aldeão com uma besta",
+
+
+
+
+"Arbalistic": "Arbalístico",
+"Kill five unique mobs with one crossbow shot": "Mate cinco mobs únicos com um tiro de besta",
+
+"Emerald Miner": "Minerador de Esmeralda",
+"Mine a stack of raw emerald ore": "Extraia um pack de minério de esmeralda bruto",
+
+"Machine Bow": "Arco de Máquina",
+"Fire a crossbow as rapidly as possible": "Dispare com uma besta o mais rápido possível",
+
+"Master Arbalist": "Mestre Arbalista",
+"Create a crossbow with all possible enchantments at max level": "Crie uma besta com todos os encantamentos possíveis no nível máximo",
+
+"Shotbow": "Tiro de arco",
+"Shoot three arrows at once with a crossbow": "Atire três flechas de uma vez com uma besta",
+
+
+
+
+"Hell's Bells": "Sinos do inferno",
+"Place a bell in the nether": "Coloque um sino no Nether",
+
+"Decaying Beauty": "Beleza decadente",
+"Pick up some Wither Roses from the damage the Wither wrought on your world": "Pegue algumas Rosas do Wither do dano que o Wither causou em seu mundo",
+
+
+
+
+"Gas!": "Gás!",
+"Kill a mob using a lingering potion": "Mate um mob usando uma poção persistente",
+
+
+
+
+"The Actual End": "O Fim Real",
+"Get killed by an Enderman in The End": "Seja morto por um Enderman no Fim",
+
+"The Beginning": "O Começo",
+"Say goodbye to the Wither...": "Diga adeus para o Wither...",
+
+
+
+# All advancements added in version 1.7 are here
+"I don't like sand": "Eu não gosto de areia",
+"It's coarse, and rough, and irritating, and it gets everywhere": "É grosseiro, áspero e irritante e chega a todos os lugares",
+
+"Insomniac": "Insone",
+"Go 30 days without sleep": "Fique 30 dias sem dormir",
+
+"Art Gallery": "Galeria de Arte",
+"Place every type of painting": "Coloque todo tipo de pintura",
+
+"Writer's Block": "Bloqueio de escritor",
+
+
+
+
+"Chestful of Cobblestone": "Báu de Pedregulho",
+"Mine 1728 cobblestone, place it in a chest, then stand on it in victory": "Minere 1728 pedregulhos, coloque-o em um baú e suba nele na vitória",
+
+"Bubble, Bubble, Toil and Trouble!": "Bolha, Bolha, Trabalho e Problemas!",
+"Fill a cauldron using a bucket": "Encha um caldeirão usando um balde",
+
+"Washing Machine": "Máquina de lavar",
+"Use a cauldron to clean leather armor, a banner and a shulker box": "Use um caldeirão para limpar armadura de couro, um banner e uma caixa shulker",
+
+
+
+
+"Must be your birthday": "Deve ser seu aniversario",
+"Eat 100 slices of cake": "Coma 100 fatias de bolo",
+
+"Castaway": "Náufrago",
+"Eat nothing but dried kelp for three in-game days": "Não coma nada além de algas secas por três dias no jogo",
+
+
+
+
+"Free Diver": "Mergulhador Livre",
+"Stay underwater for 2 minutes": "Fique debaixo d'água por 2 minutos",
+
+"Sleep with the Fishes": "Dormir com os peixes",
+"Spend a day underwater": "Passe um dia debaixo d'água",
+
+"Qinling": "Qinling",
+"Breed a rare brown panda": "Procrie um panda marrom raro",
+
+
+
+
+"We're being attacked!": "Estamos sendo atacados!",
+"Trigger a Pillager Raid": "Acione uma Raid de Pillager",
+
+"Superhero of the Village": "Super-herói da vila",
+"Defeat enough raid captains to obtain a stack of Ominous Banners": "Derrote capitães de Raid suficientes para obter um pack de Banners Agourentos",
+
+"I've got a bad feeling about this": "Eu tenho um mau pressentimento sobre isso",
+
+
+
+
+"Aww man!": "Aww cara!",
+"That was a nice life you had. Shame it had to end at this time time time": "Essa foi uma boa vida que você teve. Pena que tinha que acabar neste momento",
+
+"Iskallium Collector": "Colecionador Iskallium",
+"Collect enough slimeballs to craft a stack of slime blocks": "Colete bolas de slime o suficiente para criar um pack de blocos de slime",
+
+"Spider-skeleton": "Aranha-esqueleto",
+"Does whatever a spider can": "Faz tudo o que uma aranha pode",
+
+
+
+
+
+"Artillery": "Artilharia",
+"Have nine loaded crossbows in your hotbar. All set!": "Tenha nove bestas carregadas em sua hotbar. Tudo pronto!",
+
+
+
+
+
+"Magical Stockpile": "Estoque Mágico",
+"Obtain a full stack of bottles of enchanting": "Obtenha um pack completo de garrafas de XP",
+
+
+
+
+"Ancient Kung Fu Master": "Mestre de Kung Fu Antigo",
+"Sneak 10km": "Se esgueire 10KM",
+
+"Black Belt Ninja": "Ninja Faixa Preta",
+"Sneak 1km": "Se esgueire 1KM",
+
+"Boing, Boing": "Boing, Boing",
+"Jump 10,000 times": "Pule 10,000 vezes",
+
+"Cupid": "Cupido",
+"Breed 500 animals": "Procrie 500 animais",
+
+"Did you just run across earth?": "Você acabou de correr pela terra?",
+"Sprint 1000km": "Corra 1000KM",
+
+"Elderly Enchanter": "Feiticeiro idoso",
+"Enchant 250 items": "Encante 250 itens",
+
+"Frequent Flyer": "Passageiro frequente",
+"Fly 100km with elytra": "Voe 100KM com Elytra",
+
+"Global Railway Network": "Rede Ferroviária Global",
+"Ride 100km in a minecart": "Percorra 100KM em um minecart",
+
+"Happy Birthday!": "Feliz Aniversário!",
+"Play for a whole year!": "Jogue por um ano inteiro!",
+
+"Horse Training": "Treinamento de Cavalos",
+"Ride 1km on a horse": "Ande 1KM a cavalo",
+
+"I enjoy long walks & playing MC": "Eu gosto de longas caminhadas e jogar MC",
+"Walk 1000km": "Ande 1000KM",
+
+"I Like Trains": "Eu gosto de Trems",
+"Ride 10km in a minecart": "Percorra 10KM em um minecart",
+
+"Journeyman Enchanter": "Homem Encantador",
+"Enchant 50 items": "Encante 50 itens",
+
+"Jumping Jacks": "Polichinelos",
+"Jump 100,000 times": "Pule 100,000 vezes",
+
+"Laps in the pool": "Voltas na piscina",
+"Swim 1km": "Nade 1KM",
+
+"Level Up": "Nivel Upado",
+"Reach 30 experience levels": "Alcance 30 níveis de experiência",
+
+"Lightning McPig": "Relâmpago McPig",
+"Ride 10km on a pig": "Cavalgue 10KM em um porco",
+
+"Luxury Cruise": "Cruzeiro de luxo",
+"Sail 1km in a boat": "Navegue 1KM em um barco",
+
+"Marathon": "Maratona",
+"Sprint 42km": "Corra 42KM",
+
+"Minecart Rider": "Cavaleiro Minecart",
+"Ride 1km in a minecart": "Passeio de 1KM em um minecart",
+
+"Novice Enchanter": "Encantador Novato",
+"Enchant 10 items": "Encante 10 itens",
+
+"Olympic Athlete": "Atleta olímpica",
+"Swim 10km": "Nade 10KM",
+
+"Olympic Gold Medallist": "Medalha de ouro olímpica",
+"Swim 100km": "Nade 100KM",
+
+"Out for a stroll": "Dar um passeio",
+"Walk 10km": "Ande 10KM",
+
+"Overlevelling": "Outro nível",
+"Reach 100 experience levels": "Alcance 100 níveis de experiência",
+
+"Passing the Time": "Passando o Tempo",
+"Play for 100 days": "Jogue por 100 dias",
+
+"Pig Training": "Treino de porco",
+"Ride 100m on a pig": "Passeio de 100M em um porco",
+
+"Pirate Captain": "Capitão Pirata",
+"Sail 10km in a boat": "Navegue 10KM em um barco",
+
+"Statistics": "Estatísticas",
+"If your numbers go up, you're having more fun": "Se seus números aumentarem, você está se divertindo mais",
+
+"Sailor of the Seven Seas": "Marinheiro dos sete mares",
+"Sail 50km in a boat": "Navegue 50KM em um barco",
+
+"Scourge of the West": "Flagelo do oeste",
+"Ride 50km on a horse": "Cavalgue 50KM a cavalo",
+
+"Sheriff Firearm": "Xerife arma de fogo",
+"Ride 10km on a horse": "Ande 10KM a cavalo",
+
+"Sneaky Snitch": "Sorrateiro",
+"Sneak 100m": "Se esgueire 100M",
+
+"Snout 500": "Focinho 500",
+"Ride 1km on a pig": "Ande 1KM em um porco",
+
+"Spring in your step": "Primavera em seu passo",
+"Jump 1000 times": "Pule 1000 vezes",
+
+"Supersonic": "Supersonic",
+"Fly 10km with elytra": "Voe 10KM com Elytra",
+
+"Take to the Skies": "Leve para os Céus",
+"Fly 1km with elytra": "Voe 1KM com elytra",
+
+"The First Night": "A Primeira Noite",
+"Survive the first night in your brand new world": "Sobreviva à primeira noite em seu novo mundo",
+
+"The Parrots and the Bats": "Os papagaios e os morcegos",
+"Breed 100 animals": "Procrie 100 animais",
+
+"Two By Two": "Dois por dois",
+"Breed 2500 animals": "Procrie 2500 animais",
+
+"Who needs cars?": "Quem precisa de carros?",
+"Walk 100km": "Ande 100KM",
+
+"XP Grinder": "Moedor de XP",
+"Reach 1000 experience levels": "Alcance 1000 níveis de experiência",
+
+"Your legs must be tired": "Suas pernas devem estar cansadas",
+"Sprint 250km": "Corra 250KM",
+
+
+
+
+"Mad Scientist": "Cientista Maluco",
+"Cure a zombie villager of every profession": "Cure um aldeão zumbi de todas as profissões",
+
+"A Furious Test Subject": "Sujeito a um teste furioso",
+"Get attacked by a mob with every potion effect": "Seja atacado por um mob com todos os efeitos de poção",
+
+
+
+
+"Event Horizon": "Horizonte de eventos",
+"Survive void damage": "Sobreviva ao dano do void",
+
+"Dragon vs Dragon": "Dragão vs Dragão",
+"Kill the Ender Dragon while wearing a Dragon Head": "Mate o Dragão Ender enquanto usa uma Cabeça de Dragão",
+
+"Rocketman": "Homem foguete",
+"Fill your inventory with full stacks of firework rockets": "Preencha seu inventário com packs completos de foguetes de fogos de artifício",
+
+
+
+
+"A Million Blocks Away": "Um milhão de blocos de distância",
+"Travel a million blocks away from spawn": "Viaje a um milhão de blocos de distância do spawn",
+
+"Abyss Lord": "Senhor do Abismo",
+"Obtain a stack of Conduits": "Obtenha um pack de conduítes",
+
+"All the Blocks!": "Todos os blocos!",
+"Obtain all the blocks!": "Obtenha todos os blocos!",
+
+"All the Items!": "Todos os itens!",
+"Obtain all the items!": "Obtenha todos os itens!!",
+
+"Biological Warfare": "Guerra biológica",
+"Kill every mob in the game with lingering potions": "Mate todos os mob no jogo com poções persistentes",
+
+"Creepergeddon": "Creepergeddon",
+"Obtain a stack of Creeper Heads": "Obtenha um pack de cabeça de Creeper",
+
+"Death From All": "Morte de todos",
+"Get killed by every mob that can kill you. (Ignore in hardcore mode)": "Seja morto por cada mob que pode matá-lo. (Ignorar no modo hardcore)",
+
+"Dragon Army": "Exército Dragão",
+"Obtain a stack of Ender Dragon Heads": "Obtenha um pack de Cabeças de Dragão Ender",
+
+"Dragon vs Dragon II: Electric Boogaloo": "Dragão vs Dragão II: Boogaloo elétrico",
+"Defeat the Ender Dragon while wearing a dragon head... without touching the ground": "Derrote o Dragão Ender usando uma cabeça de dragão ... sem tocar o chão",
+
+"Endergeddon": "Endergeddon",
+"Send every mob to the End... and kill them all there": "Envie cada mob para o Fim ... e mate todos lá",
+
+"Global Vaccination": "Vacinação Global",
+"Cure a zombie villager of every profession... from every biome": "Cure um aldeão zumbi de todas as profissões ... de todos os biomas",
+
+"Highway to Hell": "Estrada para o inferno",
+"Send every mob to the Nether... and kill them all there": "Envie todos os mobs para o Nether ... e mate todos lá",
+
+"I'm in Space!": "Eu estou no espaço!",
+"Levitate up a distance of 256 blocks": "Levite para cima em uma distância de 256 blocos",
+
+"Immortal": "Imortal",
+"Fill your entire inventory with Totems of Undying": "Preencha todo o seu inventário com Totens dos Imortais",
+
+"Nuclear Fusion": "Fusão Nuclear",
+"Strike every mob that can transform with lightning at once": "Ataque todo mob que pode se transformar com um raio de uma vez",
+
+"Potion Master": "Mestre de Poções",
+"Kill every mob in the game with splash potions": "Mate todos os mob no jogo com poções de respingo",
+
+"Rise of the Skeletons": "Ascensão dos Esqueletos",
+"Obtain a stack of Skeleton Skulls": "Obtenha um pack de Cabeças de Esqueleto",
+
+"Super Challenges": "Super Desafios",
+"Good luck completing... any of these ;)": "Boa sorte completando ... qualquer um destes ;)",
+
+"Stack All the Blocks!": "Empilhe todos os blocos!",
+"Obtain a stack of all the blocks!": "Obtenha um pack de todos os blocos!",
+
+"Stack All the Items!": "Empilhe todos os itens!",
+"Obtain a stack of all the items!": "Obtenha um pack de todos os itens!",
+
+"The World Is Ending": "O mundo está acabando",
+"Summon ten withers at once": "Convocoque dez Withers de uma vez",
+
+"Warlock": "Bruxo",
+"Obtain a stack of Beacons": "Obtenha um pack de Beacon",
+
+"We're in the endgame now": "Estamos no fim do jogo agora",
+"Construct a village in the End and defend it from a raid": "Construa uma aldeia no Fim e defenda-a de um ataque",
+
+"Zombie Apocalypse": "Apocalipse Zumbi",
+"Obtain a stack of Zombie Heads": "Obtenha um pack de cabeças de zumbis",
+
+
+
+
+# All advancements added in version 1.8 are here
+"Ya like jazz?": "Você gosta de jazz?",
+"Breed two bees using flowers": "Procrie duas abelhas usando flores",
+
+"Winnie the Pooh": "O Ursinho Pooh",
+"Drink some honey": "Beba um pouco de mel",
+
+"Sticky Situation": "Situação complicada",
+"Jump into a honey block to slide down it": "Pule em um bloco de mel para deslizar para baixo",
+
+"WHERE'S THE HONEY LEBOWSKI": "ONDE ESTÁ O MEL LEBOWSKI",
+"Drink 100 bottles of honey": "Beba 100 garrafas de mel",
+
+"Hive Mind": "Mente de colméia",
+"Craft a bee hive using planks and honeycombs then place it": "Crie uma colmeia de abelhas usando tábuas e favos de mel e coloque-a",
+
+"NOT THE BEES!": "NÃO AS ABELHAS!",
+"Get stung to death by bees": "Ser picado até a morte por abelhas",
+
+"Honey, I'm Home!": "Lar Doce Lar!",
+"Craft a stack of honeycomb blocks for building a home out of": "Crie um pack de blocos de favo de mel para construir uma casa a partir disso",
+
+
+
+
+"Aaaaaand... OPEN!": "Eeeeeeeeeee...ABRA!",
+"Craft and place an iron door": "Crie e coloque uma porta de ferro",
+
+"Cut In Half": "Cortado pela metade",
+"Craft some slabs": "Faça algumas lajes",
+
+"Stairs? NOOOOO!": "Escadas? NÃOOOO!",
+"Craft some stairs": "Crie algumas escadas",
+
+
+
+
+"Everybody Loves Ice!": "Todo mundo ama gelo",
+"Obtain a stack of every type of ice in your inventory": "Obtenha um pack de todos os tipos de gelo em seu inventário",
+
+
+
+
+"Full Stomach": "Estômago cheio",
+"Fill both your hunger bar and saturation level": "Preencha sua barra de fome e nível de saturação",
+
+
+
+
+"Help! I've been framed!": "Socorro! Eu fui incriminado!",
+
+"Craft a composter using wooden slabs then place it": "Crie uma composteira usando placas de madeira e coloque-o",
+
+"Enter an underground cave": "Entre em uma caverna subterrânea",
+
+"Heart of Darkness": "Coração da escuridão",
+"Submerge yourself in complete darkness": "Mergulhe na escuridão completa",
+
+"I'm in Lava With You": "Estou na lava com você",
+"Hit something while you and it are in lava": "Bata em algo enquanto você e ele estão na lava",
+
+"Total Beelocation": "Localidade Total de Abelha",
+"Move a Bee Nest with 3 bees inside using Silk Touch": "Mova um ninho de abelha com 3 abelhas dentro usando Toque Suave",
+
+"Bee Our Guest": "Seja nosso convidado",
+"Use a bottle to collect Honey from a Beehive with a campfire beneath it so you don't aggravate the bees": "Use uma garrafa para coletar mel de uma colmeia com uma fogueira embaixo dela para que você não irrite as abelhas",
+
+
+
+# All advancements added in version 1.9 are here
+"BlazeandCave's Advancements" : "Avanços do BlazeandCave",
+"Loads of brand new advancements for your Minecraft world!" : "Muitos novos avanços para o seu mundo Minecraft!",
+
+"Mining Milestone" : "Um marco na mineração",
+"Complete every advancement in the Mining tab" : "Conclua todos os avanços na guia Mineração",
+
+"Building Milestone" : "Um marco na construção",
+"Complete every advancement in the Building tab" : "Conclua todos os avanços na guia Construção",
+
+"Farming Milestone" : "Um marco na agricultura",
+"Complete every advancement in the Farming tab" : "Conclua todos os avanços na guia Agricultura",
+
+"Animal Milestone" : "Um marco Animal",
+"Complete every advancement in the Animal tab" : "Conclua todos os avanços na guia Animal",
+
+"Monsters Milestone" : "Um marco Monstro",
+"Complete every advancement in the Monsters tab" : "Conclua todos os avanços na guia Monstros",
+
+"Weaponry Milestone" : "Um marco no Armamento",
+"Complete every advancement in the Weaponry tab" : "Conclua todos os avanços na guia Armamento",
+
+"Biomes Milestone" : "Um marco nos Biomas",
+"Complete every advancement in the Biomes tab" : "Conclua todos os avanços na guia Biomas",
+
+"Adventure Milestone" : "Um marco na Aventura",
+"Complete every advancement in the Adventure tab" : "Conclua todos os avanços na guia Aventura",
+
+"Redstone Milestone" : "Um marco na Redstone",
+"Complete every advancement in the Redstone tab" : "Conclua todos os avanços na guia Redstone",
+
+"Enchanting Milestone" : "Um marco no Encantamento",
+"Complete every advancement in the Enchanting tab" : "Conclua todos os avanços na guia Encantamento",
+
+"Statistics Milestone" : "Um marco nas Estatísticas",
+"Complete every advancement in the Statistics tab" : "Conclua todos os avanços na guia Estatísticas",
+
+"Nether Milestone" : "Um marco no Nether",
+"Complete every advancement in the Nether tab" : "Conclua todos os avanços na guia Nether",
+
+"Potions Milestone" : "Um marco nas Poções",
+"Complete every advancement in the Potions tab" : "Conclua todos os avanços na guia Poções",
+
+"End Milestone" : "Um marco no Fim",
+"Complete every advancement in the End tab" : "Conclua todos os avanços na guia O Fim",
+
+"Super Challenges Milestone" : "Um marco nos Super Desafios",
+"Complete every advancement in the Super Challenges tab. Good luck with this one ;)" : "Conclua todos os avanços na guia Super Desafios. Boa sorte com este;)",
+
+"Advancement Legend" : "Lenda de Avanços",
+"Complete every single advancement in BlazeandCave's Advancements Pack" : "Complete todos os avanços no Pacote de Avanços do BlazeandCave",
+
+
+
+
+# Name and description changes in version 1.9
+"I am Ravager, hear me ROAR!" : "Eu sou Ravager, ouça-me RUGIDO!",
+
+"Dragon vs Dragon II" : "Dragão vs Dragão II",
+
+"Legend of Hell Chicken Riders" : "Galinha lenda do inferno",
+
+"Scientific Inaccuracy" : "Imprecisão científica",
+
+"Olaf" : "Olaf",
+"Do you want to build a snow golem?" : "Você quer construir um golem de neve?",
+
+"Mushroom, Mushroom!" : "Cogumelo, Cogumelo!",
+
+"Agent Smithing Table" : "Agente bancada de ferraria",
+
+"Foal Play" : "Brincadeira de Potro",
+
+"Moskstraumen" : "Moskstraumen",
+
+"Ring a bell in a village" : "Toque um sino em uma aldeia",
+
+"Ring a bell in the Nether" : "Toque um sino no Nether",
+
+
+
+# All advancements added in version 1.10 are here
+"Dungeons and Spawners" : "Masmorras e Spawners",
+"Open a chest in a dungeon deep underground" : "Abra um baú em uma masmorra no subsolo",
+
+"Steals on Wheels" : "Roubo sobre rodas",
+"Loot a minecart chest from an Abandoned Mineshaft" : "Saqueie um baú de minecart de um poço de mineração abandonado",
+
+"Delicious, Hot Schmoes!" : "Deliciosos e quentes Schmoes!",
+"Place every type of cookable food on a campfire" : "Coloque todos os tipos de alimentos cozidos em uma fogueira",
+
+"Oresome!" : "Minério incrível!",
+"Mine a stack of every ore block" : "Extraia um pack de cada bloco de minério",
+
+
+
+
+"Grass Type" : "Tipo de grama",
+"Obtain every type of grass block in your inventory" : "Obtenha todos os tipos de blocos de grama em seu inventário",
+
+"Shroom Lightyear" : "Cogumelo Ano Luz",
+"Light up the area with Shroomlight!" : "Ilumine a área com Luz Cogumelo!",
+
+"Cerulean!" : "Cerúleo!",
+"Light up the area with soul fire torches and soul fire lanterns!" : "Ilumine a área com tochas e lanternas de fogo",
+
+"Let There Be Light!" : "Que haja luz!",
+"Hold a stack of every light-emitting block and item" : "Segure um pack de cada bloco e item emissor de luz",
+
+"No Chain, No Gain" : "Sem corrente, sem ganho",
+"Craft a chain using an iron ingot and iron nuggets" : "Crie uma corrente usando um lingote de ferro e pepitas de ferro",
+
+"Blackstonehenge" : "Eradepedranegra",
+"Craft or collect all forms of Blackstone, Polished Blackstone and Polished Blackstone Bricks" : "Crie ou colete todas as formas de Pedra Negra, Pedra Negra Polido e Tijolos Polidos de Pedra Negra",
+
+"Colors of the Wind" : "Cores do Vento",
+"Dye a sign with each color of dye" : "Pinte uma placa com cada cor de tinta",
+
+
+
+
+"Natural Fertiliser" : "Fertilizante Natural",
+"Fill up a composter" : "Encha um compostor",
+
+"Combine Harvester" : "Ceifeira-debulhadora",
+"Use bone meal on everything that can be grown" : "Use farinha de osso em tudo que pode ser cultivado",
+
+"What's new with composting?" : "O que há de novo na compostagem?",
+"Compost every type of compostable item in a Composter" : "Composte todo tipo de item compostável em um Compostor",
+
+"A Gluttonous Diet" : "Uma dieta glutona",
+"Obtain a full stack of all the foods" : "Obtenha um pack completo de todos os alimentos",
+
+
+
+
+"Foilage" : "Folhagem",
+"Use shears to pick up tall grass or ferns" : "Use tesouras para pegar grama alta ou samambaias",
+
+"Going Down the Rabbit Hole" : "Descendo a Toca do Coelho",
+"Bring a rabbit to the bottom of the world, then kill it" : "Traga um coelho para o fundo do mundo e depois mate-o",
+
+"Just Keeps Going" : "Apenas continua indo",
+"Eat Rabbit Stew, then avoid eating for the next 3 in-game days" : "Coma Rabbit Stew e evite comer pelos próximos 3 dias no jogo",
+
+"Nest, Quick!" : "Nest, rápido!",
+"Collect a stack of empty bee nests" : "Colete um pack de ninhos de abelha vazios",
+
+"Heavy Duty Caravan" : "Caravana Pesada",
+"Tame a llama with a strength of 5" : "Dome uma lhama com força 5",
+
+"Save the Turtles!" : "Salve as Tartarugas!",
+"Collect a stack of turtle eggs" : "Colete um pack de ovos de tartaruga",
+
+
+
+
+"So Long & Thanks For The Fish" : "Até logo e obrigado pelo peixe",
+"Get murdered by dolphins" : "Seja assassinado por golfinhos",
+
+
+
+
+"Now You’re Thinking With Portals" : "Agora você está pensando com portais",
+"Find a broken Nether Portal in the Overworld" : "Encontre um Portal Nether quebrado no Overworld",
+
+"I just want to make toast!" : "Eu só quero fazer torradas!",
+"Name a bunny 'Toast'" : "Nomeie um coelho 'Toast'",
+
+"What's Up, Doc?" : "E aí, doutor?",
+"Turn a mob upside-down" : "Vire um mob de cabeça para baixo",
+
+"Nyan Sheep" : "Ovelha nyan",
+"Nyan Nyan Nyan Nyan..." : "Nyan Nyan Nyan Nyan...",
+
+"Slenderman" : "Slenderman",
+"Defeat this terrifying monster" : "Derrote este monstro terrível",
+
+"The one and true Johnny" : "O único e verdadeiro Johnny",
+"Defeat Johnny" : "Derrote Johnny",
+
+"Prime Specimen" : "Espécime principal",
+"Find Tall Grass or a Large Fern inside a village chest" : "Encontre grama alta ou uma grande samambaia dentro de um baú de aldeia",
+
+"Redemption Arc" : "Arco de Redenção",
+"Befriend a Pillager that doesn’t have a crossbow" : "Seja amigo de um Pillager que não tenha uma besta",
+
+"Council of Crafters" : "Conselho de Artesãos",
+"Trade with a villager at height limit" : "Negocie com um aldeão no limite de altura",
+
+"Workaholic" : "Viciado em trabalho",
+"Craft a stack of all the villager job site blocks" : "Crie um pack de todos os blocos do local de trabalho do aldeão",
+
+"I am Loot!" : "Eu sou o Saque!",
+"Open up every type of loot chest" : "Abra todo tipo de baú de saque",
+
+
+
+
+"Paleontologist" : "Paleontólogo",
+"Craft or mine a stack of bone blocks" : "Crie ou extraia um pack de blocos de osso",
+
+"Impossible..." : "Impossível...",
+"Kill an Enderman with an arrow" : "Mate um Enderman com uma flecha",
+
+"Family Reunion" : "Reunião Familiar",
+"Reunite all zombie variants (and their baby forms) in one place" : "Reúna todas as variantes de zumbis (e suas formas bebês) em um só lugar",
+
+"Bone-to-party" : "Esqueleto para festa",
+"Reunite all skeleton variants and their three-headed overlord in one place" : "Reúna todas as variantes do esqueleto e seu overlord de três cabeças em um só lugar",
+
+
+
+
+"Loser!" : "Perdedor!",
+"Die twice within ten seconds" : "Morra duas vezes em dez segundos",
+
+"Multiclassed" : "Multiclasse",
+"Hit a mob with every type of weapon" : "Acerte um mob com todos os tipos de armas",
+
+"Pyrotechnic" : "Pirotécnico",
+"Craft a firework of every shape and additional effect" : "Crie fogos de artifício de todas as formas e efeitos adicionais",
+
+"My eyes!" : "Meus olhos!",
+"Kill a mob using a firework's explosion" : "Mate um mob usando uma explosão de fogos de artifício",
+
+"Who ya gonna call?" : "Para quem você vai ligar?",
+"Kill a ghast using a firework's explosion" : "Mate um Ghast usando uma explosão de fogos de artifício",
+
+
+
+
+"Target Acquired" : "Alvo adquirido",
+"Put up a Target for archery practise" : "Prepare um alvo para a prática de tiro com arco",
+
+"Target Practise" : "Prática alvo",
+"Hit a Target with all types of projectiles" : "Acerte um alvo com todos os tipos de projéteis",
+
+"Bullseye" : "Alvo",
+"Hit the bullseye of a Target Block with an arrow from 30 blocks away" : "Acerte o alvo de um bloco alvo com uma flecha a 30 blocos de distância",
+
+
+
+
+"This name sounds cooler" : "Este nome parece mais legal",
+"Name your Diamond Sword 'Diamond Edge'" : "Nomeie sua Espada de Diamante como 'Diamond Edge'",
+
+"I'll be back" : "Eu voltarei",
+"Name your bow 'Terminator'" : "Nomeie seu arco 'Terminator'",
+
+"God of Thunder" : "Deus do Trovão",
+"Name your Trident with Loyalty III and Channeling 'Mjolnir'" : "Nomeie seu tridente com Lealdade III e nomeie de 'Mjolnir'",
+
+"A rather pointy fence post" : "Um poste de cerca pontiagudo",
+"Enchant a wooden sword with Sharpness V. Not really the best weapon, but it could be a minor annoyance to someone" : "Encante uma espada de madeira com Afiação V. Não é realmente a melhor arma, mas pode ser um pequeno aborrecimento para alguém",
+
+"Gotta Go Fast!" : "Tenho que ir rápido!",
+"Obtain the Soul Speed enchantment from a Bastion or bartering with Piglins" : "Obtenha o encantamento Velocidade das almas de um Bastião ou negocie com Piglins",
+
+"Handmade Blinding" : "Cegueira artesanal",
+"Wear a carved pumpkin enchanted with Curse of Binding" : "Use uma abóbora esculpida encantada com Maldição do ligamento",
+
+"Master Digger" : "Escavador Mestree",
+"Create a shovel with all possible enchantments at max level" : "Crie uma pá com todos os encantamentos possíveis no nível máximo",
+
+"Master Axeman" : "Homem machado Mestre",
+"Create an axe with all possible enchantments at max level" : "Crie um machado com todos os encantamentos possíveis no nível máximo",
+
+"Master Farmer" : "Agricultor Mestre",
+"Create a hoe with all possible enchantments at max level" : "Crie uma enxada com todos os encantamentos possíveis no nível máximo",
+
+
+
+
+"Mob Hunter" : "Caçador de Mob",
+"Defeat 250 mobs" : "Derrote 250 mobs",
+
+"Bloodthirsty" : "Sanguinário",
+"Defeat 2500 mobs" : "Derrote 2500 mobs",
+
+"Kill or be Killed" : "Matar ou ser morto",
+"Defeat 25,000 mobs" : "Derrote 25,000 mobs",
+
+"Taking It In Stride" : "Levando na boa",
+"Ride 100m on a Strider" : "Ande 100M em um Strider",
+
+"Who Needs Boats?" : "Quem precisa de barcos?",
+"Ride 1km on a Strider" : "Ande 1KM em um Strider",
+
+"This Ride Is Lit, Yo!" : "Este passeio está aceso, Yo!",
+"Ride 10km on a Strider" : "Ande 10KM em um Strider",
+
+
+
+
+"Stem Research" : "Pesquisa Stem",
+"Attack a huge Nether Fungi until a stem pops out" : "Ataque um Nether Fungi até que ele saia",
+
+"What a Fungi!" : "O que é um Fungi!",
+"Pick up Crimson or Warped Fungus" : "Pegue Crimson ou Warped Fungus",
+
+"I am Root" : "Eu sou raiz",
+"Pick up some crimson or warped roots" : "Pegue algumas raízes vermelhas ou tortas",
+
+"Don't Blink" : "Não pisque",
+"Climb on some Weeping Vines in a Crimson Forest" : "Escale algumas Trepadeiras choronas em uma Floresta Carmesim",
+
+"Twisted" : "Torcido",
+"Climb on some Twisting Vines in a Warped Forest" : "Escale algumas Trepadeiras retorcidas em uma Floresta Deformada",
+
+"What about Corruption Planks?" : "E quanto às tábuas corrompidas?",
+"Craft every item made out of crimson wood" : "",
+
+"Welcome to Warp Zone!" : "Bem-vindo ao Warp Zone!",
+"Craft every item made out of warped wood" : "Crie cada item feito de madeira empenada",
+
+"Hot Tourist Destination" : "Destino Turístico Quente",
+"Explore every Nether biome" : "Explore todos os biomas do Nether",
+
+"Hell Botanist" : "Inferno botânico",
+"Gather a stack of every Nether plant" : "Reúna um pack de todas as plantas do Nether",
+
+"Spreading Corruption" : "Espalhando Corrupção",
+"Place one of every nether block in the overworld" : "Coloque um de cada bloco inferior no Overworld",
+
+"The Struggle Nether Ends" : "A luta Nether Fim",
+"Place one of every nether block in The End" : "Coloque um de cada bloco do Nether no Fim",
+
+"Roadhog" : "Caminhohog",
+"Hunt a Hoglin for food" : "Caçe um Hoglin por comida",
+
+"When Hoglins Breed" : "Quando Hoglins procriam",
+"Breed a baby Hoglin using Crimson Fungi" : "Procrie um Hoglin bebê usando fungi carmesim",
+
+"Whole Hog" : "Porco Inteiro",
+"Get mauled by a Hoglin" : "Seja atacado por um Hoglin",
+
+"Giddy Up!" : "Tonto",
+"Punch a baby Hoglin that is being ridden by a baby Piglin" : "Dê um soco em um bebê Hoglin que está sendo montado por um bebê Piglin",
+
+"Zork Chop" : "",
+"Bring a Hoglin into the Overworld to zombify it, then kill it for zorkchops" : "Traga um Hoglin para o mundo superior para zumbificá-lo e, em seguida, mate-o para fazer zorkchops",
+
+"This Boat Has Legs" : "Este barco tem pernas",
+"Ride a Strider with a Warped Fungus on a Stick" : "Monte em um Strider com um Fungo Deformado em uma vara",
+
+"Bobbleheads" : "",
+"Breed two Striders using Warped Fungus" : "Procrie dois Striders usando fungos empenados",
+
+"This One’s Mine!" : "Este é meu!",
+"Kill a Zombified Piglin that is riding a Strider and take its steed" : "Mate um Piglin Zumbificado que está montando um Strider e pegue seu corcel",
+
+"Oh, Shiny!" : "Oh, Brilhante!",
+"Distract Piglins with gold" : "Distraia Piglins com ouro",
+
+"Cultural Misunderstandings" : "Mal-entendidos culturais",
+"Slay a Piglin in battle... or an accidental incursion" : "Mate um Piglin em batalha ... ou uma incursão acidental",
+
+"Who is Cutting Onions?" : "Quem está cortando cebolas?",
+"Obtain Crying Obsidian from a ruined portal or bartering with Piglins" : "Obtenha obsidiana chorona de um portal em ruínas ou trocando com Piglins",
+
+"Anchorman" : "Homem âncora",
+"Craft a Respawn Anchor using Crying Obsidian and Glowstone then place it down" : "Crie uma âncora de respawn usando obisidiana chorona e pedra luminosa e coloque-a no chão",
+
+"Not Quite 'Nine' Lives" : "Não exatamente 'nove' vidas",
+"Charge a Respawn Anchor to the maximum" : "Carregue uma âncora de respawn ao máximo",
+
+"We Got a Live One!" : "Nós temos um vivo!",
+"Bring a Piglin into the Overworld then spare it from an eternity of zombification" : "Traga um Piglin para o mundo superior e poupe-o de uma eternidade de zumbificação",
+
+"When Piglins Fly" : "Quando Piglins Voam",
+"Give a piglin elytra then kill it" : "Dê a um Piglin uma Elytra e depois mate-o",
+
+"Electrifying Alliance" : "Aliança Eletrizante",
+"Smite a ghast with lightning from the Overworld’s heavens" : "Golpear um Ghast com relâmpagos dos céus do Overworld",
+
+"Time to Fire Back" : "Hora de contra-atacar",
+"Craft a stack of fire charges" : "Crie um pack de cargas de fogo",
+
+"From Whence It Came!" : "De onde veio!",
+"Find a broken Nether Portal in the Nether" : "Encontre um Portal do Nether quebrado no Nether",
+
+"Those Were the Days" : "Aqueles eram os dias",
+"Fight your way into a Bastion Remnant" : "Lute para chegar a um Remanescente de Bastião",
+
+"War Pigs" : "Porcos de Guerra",
+"Loot a chest in a Bastion Remnant" : "Pegue um baú em um bastião remanescente",
+
+"Gilty!" : "",
+"Mine some Gilded Blackstone from a Bastion Remnant" : "Minere um pouco de pedra negra dourada de um bastião remanescente",
+
+"Wub wub wub!" : "Wub wub wub!",
+"Obtain the Pigstep music disc from a Bastion Remnant" : "Obtenha o disco de música do Pigstep de um Bastião Remanescente",
+
+"Nugget in a Biscuit" : "Pepita em um biscoito",
+"Mine Nether Gold Ore for a pile of gold nuggets" : "Minere ouro do Nether e transforme para um pack de pepitas de ouro",
+
+"Dark Ages" : "Idade das Trevas",
+"Mine Blackstone from a Basalt Deltas biome" : "Minere pedra negra de um bioma de Basalto",
+
+"Burnt Right Into Your Soul" : "Queimado direto em sua alma",
+"Get caught on Soul Fire" : "Seja pego no fogo da alma",
+
+"A Soul For A Soul" : "Uma alma por uma alma",
+"Place down a Soul Campfire" : "Coloque uma fogueira da alma",
+
+"Let Me Out!" : "Me deixe sair!",
+"Stay in the Nether for twenty ingame days" : "Fique no Nether por vinte dias no jogo",
+
+"Inception" : "Começo",
+"Build a machine that can break a hole in the roof of the Nether" : "Construa uma máquina que possa abrir um buraco no telhado do Nether",
+
+"The Descent" : "O descendente",
+"Dig down into the deepest depths of the Nether" : "Cave nas profundezas do Nether",
+
+"Nether Say Die" : "Nether diga morte",
+"Excavate out some Ancient Debris from deep beneath the lava oceans" : "Escave alguns detritos ancestrais das profundezas dos oceanos de lava",
+
+"Holy Scrap!" : "Santo Deus!",
+"Smelt Ancient Debris into Netherite Scrap" : "Fundiu detritos ancestrais em fragmento de Netherita",
+
+"Diamonds Are Not Forever" : "Diamantes não são para sempre",
+"Use Gold Ingots and Netherite Scrap to make a Netherite Ingot" : "Use Lingotes de Ouro e fragmento de Netherita para fazer barra de Netherita",
+
+"MOAR Upgraded Tools" : "Ferramentas atualizadas",
+"Craft a Netherite Pickaxe, Axe, Shovel and Hoe" : "Crie uma Picareta, Machado, Pá e Enxada de Netherita",
+
+"A Knight to Nether Forget" : "Um cavaleiro para esquecer",
+"Use a Smithing Table to upgrade your diamond armor to netherite armor" : "Use uma bancada de ferraria para atualizar sua armadura de diamante para armadura de netherite",
+
+"Soul Runnings!" : "Almas corredoras!",
+"Step on Soul Sand with Netherite Boots enchanted with Soul Speed III" : "Pise na areia das almas com as Botas de Netherite encantadas com Velocidade das almas III",
+
+"Fool Me Twice" : "Engane-me duas vezes",
+"Completely use up a netherite hoe. Clearly you have chosen... poorly" : "Use completamente uma enxada netherita. Claramente você escolheu ... mal",
+
+"Get a Lode Of This!" : "Consiga uma Magne disso!",
+"Craft a Lodestone using Chiseled Stone Bricks and a Netherite Ingot" : "Crie uma Magnetita usando tijolos de pedra cinzelada e um lingote de Netherite",
+
+"Country Lode, Take Me Home" : "Magne, leve-me para casa",
+"Use a Compass on a Lodestone" : "Use uma bússola em uma Magnetita",
+
+"Lodes of Applications" : "Magne de aplicativos",
+"Create a Lodestone Compass in all three dimensions" : "Crie uma bússola de Magnetita em todas as três dimensões",
+
+"Archaeologist" : "Arqueólogo",
+"Mine a stack of Ancient Debris" : "Minere um pack de detritos ancestrais",
+
+
+
+
+"Failed Concoctions" : "Misturas reprovadas",
+"Brew a mundane and thick potion" : "Prepare uma poção mundana e espessa",
+
+
+
+
+"What For?" : "Pelo que?",
+"Craft 64 ender crystals" : "Crie 64 cristais do ender",
+
+"Ring of the End" : "Anel do Fim",
+"Defeat the Ender Dragon 20 times" : "Derrote o Dragão Ender 20 vezes",
+
+"In Your Face, Neil Armstrong" : "Na sua cara, Neil Armstrong",
+"Colonise the End with potato crops" : "Colonize o Fim com a cultura da batata",
+
+"Organizational Wizard" : "Assistente Organizacional",
+"Name a Shulker Box 'Blocks' for storing your blocks" : "Nomeie uma caixa Shulker 'Blocks' para armazenar seus blocos",
+
+"A Wizard’s Breakfast" : "Café da Manhã do Mago",
+"Eat a stack of Chorus Fruit in one go" : "Coma um pack de fruta do coro de uma vez",
+
+
+
+
+"Constellation" : "Constelação",
+"Collect 64 nether stars" : "Colete 64 estrelas do nether",
+
+"Hearts of the Stack" : "Corações da Pilha",
+"Collect 64 Hearts of the Sea" : "Colete 64 Corações do Mar",
+
+"The Devil's Distance" : "A distância do mal",
+"Use the Nether to travel 666km in the Overworld" : "Use o Nether para viajar 666KM no Overworld",
+
+"Ad Astra" : "Ad Astra",
+"Reach an altitude of 10,000 blocks above the world" : "Alcance uma altitude de 10.000 blocos acima do mundo",
+
+"Dragon vs Wither: Pre-Sequel" : "Dragão vs Wither: Pré-Sequela",
+"Defeat the Wither while wearing a Dragon head... without touching the ground" : "Derrote o Wither enquanto usa uma cabeça de dragão ... sem tocar o chão",
+
+
+
+# Name and description changes in version 1.10
+"Knowledge is Power" : "Conhecimento é poder",
+
+"Obtain all the special banner patterns" : "Obtenha todos os padrões especiais de estandarte",
+
+"Play a music disc in a jukebox" : "Toque um disco de música em uma jukebox",
+
+"Listen to all the music discs" : "Ouça todos os discos de música",
+
+"Wear a full suit of iron armor" : "Use uma armadura de ferro completa",
+
+"Craft or collect all forms of nether brick and red nether brick" : "Crie ou colete todas as formas de tijolo do nether e tijolo do nether vermelho",
+
+"Craft all forms of quartz blocks" : "Crie todas as formas de blocos de quartzo",
+
+"Sleep in a bed to change your respawn point" : "Durma em uma cama para mudar seu ponto de renascimento",
+
+"Break all six types of shovels" : "Quebre todos os seis tipos de pás",
+
+"Attack a mob using all six types of axes" : "Ataque um mob usando todos os seis tipos de machados",
+
+"Hit a mob using all six types of shovels" : "Acerte um mob usando todos os seis tipos de pás",
+
+"Defeat a Drowned that is holding a nautilus shell" : "Derrote um Afogado que está segurando uma concha de nautilus",
+
+"Defeat a Drowned that is holding both a nautilus shell and a trident" : "Derrote um Afogado que está segurando uma concha de nautilus e um tridente",
+
+"Strip the bark off of all six types of logs" : "Retire a casca de todos os seis tipos de toras",
+
+"Sprint 42.195km" : "Corra 42.195KM",
+
+"Reach 300 experience levels" :"Alcance 300 níveis de experiência",
+
+"Fly 1000km with elytra" : "Voe 1000KM com Elytra",
+
+"Use a treasure map to find Buried Treasure" : "Use um mapa do tesouro para encontrar o tesouro enterrado",
+
+
+
+# Hardcore-Friendly Version description changes
+"Get attacked by a natural iron golem defending its village" : "Seja atacado por um golem de ferro natural que defende sua aldeia",
+
+"Get attacked by dolphins" : "Seja atacado por golfinhos",
+
+"Get hurt by every mob that can kill you" : "Seja ferido por cada mob que pode te matar",
+
+"Get attacked by an Enderman in The End" : "Seja atacado por um Enderman no Fim",
+
+"Take damage twice within ten seconds" : "Sofra dois danos em dez segundos",
+
+"Get attacked by Piglin Brutes" : "Seja atacado por Piglin Brutes",
+
+
+# All advancements added in version 1.11 are here
+"Time to Dig!" : "Hora de cavar!",
+"Use planks and sticks to make a shovel" : "Use tábuas e gravetos para fazer uma pá",
+
+
+"Throw diamonds at another player or mob" : "Jogue diamantes em outro jogador ou mob",
+
+
+"One Pickle, Two Pickle, Sea Pickle, Four" : "Um picles, dois picles, picles marinhos, quatro",
+"Place four sea pickles in a group underwater" : "Coloque quatro pickles do mar em um grupo debaixo d'água",
+
+"Harry Potter" : "Harry Potter",
+"Place every type of plant in a flower pot" : "Coloque cada tipo de planta em um vaso de flores",
+
+"Armor Display" : "Display de armadura",
+"Place all six sets of armor on six different armor stands" : "Coloque todos os seis conjuntos de armadura em seis suportes de armadura diferentes",
+
+
+"Unmasked" : "Desmascarado",
+"Shear the Pumpkin off of a Snow Golem to unveil their true face" : "Rasgue a abóbora de um Golem de neve para revelar sua verdadeira face",
+
+
+"Delicious Fish" : "Peixe Delicioso",
+"Cook and eat a fish!" : "Cozinhe e coma um peixe!",
+
+"Milkshroom" : "Milkshroom",
+"Milk a mooshroom with a bowl to get mushroom stew" : "Ordenhe um mooshroom com uma tigela para obter ensopado de cogumelos",
+
+"Live and Let Dye" : "Viva e deixe morrer",
+"Dye Sheep with all 16 colors of wool" : "Pinte ovelhas com todas as 16 cores de lã",
+
+"Foxy Thievery" : "Raposa imortal",
+"Give a fox a Totem of Undying" : "Dê a uma raposa um Totem da Morte",
+
+"Lead the Way!" : "Lidere o caminho!",
+"Craft a lead using string and a slimeball, then attach it to a mob" : "Crie um laço usando linha e slimeball e, em seguida, prenda-a a um mob",
+
+"Beeloons!" : "Beeloons!",
+"Attach a lead to a bee" : "Anexe um laço a uma abelha",
+
+"Leader of the Animals" : "Líder dos animais",
+"Attach a lead to every mob that can be leashed" : "Anexe um laço a cada mob que pode ser controlado",
+
+
+"Echolocation" : "Ecolocalização",
+"Feed a dolphin fish to have it lead you to treasure" : "Alimente um peixe golfinho para que ele o leve ao tesouro",
+
+"Lion Hunter" : "Caçador de leões",
+"Feed an Ocelot fish to try and gain its trust" : "Alimente uma jaguatirica para tentar ganhar sua confiança",
+
+
+"Your Daily Fix" : "Sua correção diária",
+"Use an Iron Ingot to repair a damaged Iron Golem" : "Use uma barra de Ferro para reparar um Golem de Ferro danificado",
+
+"I'm not lost anymore!" : "Eu não estou mais perdido!",
+"Right-click a banner with a map" : "Clique com o botão direito em um banner com um mapa",
+
+
+"Controlled Detonation" : "Detonação Controlada",
+"Persuade a Creeper to blow up using Flint and Steel" : "Exploda um creeper usando uma pederneira",
+
+"Miracle Drink" : "Bebida milagrosa",
+"Drink milk or honey to cure poison when on half a heart" : "Beba leite ou mel para curar o veneno quando estiver em meio coração",
+
+"Dead Really Don’t Die" : "Morto Realmente Não Morra",
+"Give a zombie a Totem... so that you have to kill it twice" : "Dê a um zumbi um Totem ... para que você tenha que matá-lo duas vezes",
+
+
+"Half Heart Life" : "Vida pela metade",
+"Be on half a heart of health for a minute" : "Fique com a saúde pela metade por um minuto",
+
+
+"Brute Force" : "Força bruta",
+"Defeat a Piglin Brute in a Bastion Remnant" : "Derrote um Piglin Brute em um Bastião Remanescente",
+
+"Et tu, Brute?" : "És tu, Brute?",
+"Get murdered by Piglin Brutes" : "Ser assassinado por Piglin Brutes",
+
+"Lava Fishing" : "Pesca de lava",
+"Reel in a Strider using a Fishing Rod" : "Enrole um Strider usando uma vara de pescar",
+
+"Nether Rock Collection" : "Coleção de rochas do Nether",
+"Mine a stack of Netherrack, Basalt, Blackstone and Glowstone in the Nether" : "Extraia um pack de Netherrack, Basalto, Pedra-negra e Pedra luminosa no Nether",
+
+
+# Name and description changes in version 1.11
+"Attach a lead to a llama to form a llama caravan" : "Anexe um laço a uma lhama para formar uma caravana de lhama",
+
+"Use Shears to obtain wool from a sheep" : "Use tesouras para obter lã de uma ovelha",
+
+"Swim in lava while having the Fire Resistance effect" : "Nade na lava enquanto exerce o efeito de resistência ao fogo",
+
+"Diemonds!" : "Diamantes!",
+
+
+# Trophies added in version 1.11
+"Awarded for achieving" : "Concedido por alcançar",
+
+
+
+
+"Miner's Trophy" : "Troféu do Mineiro",
+"Don't mine at night!" : "Não minere à noite!",
+
+"Builder's Trophy" : "Troféu do Construtor",
+"A build of a thousand blocks begins with a single brick" : "Uma construção de mil blocos começa com um único tijolo",
+
+"Farmer's Trophy" : "Troféu do fazendeiro",
+"It ain't much but it's honest work" : "Não é muito, mas é um trabalho honesto",
+
+"Butcher's Trophy" : "Troféu de açougueiro",
+"No animals were harmed in the obtaining of this trophy" : "Nenhum animal foi prejudicado na obtenção deste troféu",
+"(just simulated ones)" : "(apenas simulados)",
+
+"Slayer's Trophy" : "Troféu do assassino",
+"This is all that's left of your foes once you're done with them" : "Isso é tudo o que resta de seus inimigos quando você terminar com eles",
+
+"Sword Trophy" : "Troféu de Espada",
+"Slice and dice" : "Fatiar e cortar",
+
+"Explorer's Trophy" : "Troféu do Explorador",
+"It's a magical world, ol' buddy... let's go exploring!" : "É um mundo mágico, amigo ... vamos explorar!",
+
+"Adventurer's Trophy" : "Troféu de Aventureiro",
+"So much to do, so much to see..." : "Tanto para fazer, tanto para ver ...",
+
+"Mechanic's Trophy" : "Troféu de Mecânico",
+"Give me somewhere to stand and I can move the Earth" : "Dê-me um lugar para ficar e eu posso mover a Terra",
+
+"Enchanter's Trophy" : "Troféu de Encantador",
+"What's next? Enchanting mobs?" : "Qual é o próximo? Mobs encantadores?",
+
+"Statistician's Trophy" : "Troféu de Estatístico",
+"Lies, damned lies, and statistics" : "Mentiras, malditas mentiras e estatísticas",
+
+"Nether Adventurer's Trophy" : "Troféu do Aventureiro do Nether",
+"You'll nether find a better trophy anywhere else!" : "Você nunca encontrará um troféu melhor em qualquer outro lugar!",
+
+"Potion Brewer's Trophy" : "Troféu de poção de cerveja",
+"How did you get here?" : "Como você chegou aqui?",
+
+"End Adventurer's Trophy" : "Troféu do Aventureiro do Fim",
+"What could possibly come after the end?" : "O que poderia vir depois do fim?",
+
+"Challenger's Trophy" : "Troféu Desafiador",
+"Imagine what the reward must be for the entire datapack" : "Imagine qual deve ser a recompensa por todo o datapack",
+
+"Yellow T-Shirt" : "Camiseta amarela",
+"I completed BlazeandCave's Advancements Pack" : "Concluí o Pacote de Avanços do BlazeandCave",
+"and all I got was this lousy T-shirt" : "e tudo que consegui foi uma camiseta nojenta",
+
+
+
+
+"Spoon" : "Colher",
+"There is no spoon" : "Não tem colher",
+
+"Santa's Present" : "Presente do papai noel",
+"Someone's been naughty this year..." : "Alguém foi travesso este ano ...",
+
+"Golem Kit" : "Kit Golem",
+"The pumpkin is sold separately" : "A abóbora é vendida separadamente",
+
+"Golden Crown" : "Coroa de ouro",
+"Piglin-approved" : "Aprovado por Piglin",
+
+"Mayor's Throne" : "Trono do Prefeito",
+"MUMBO FOR MAYOR!" : "MUMBO PARA O PREFEITO!",
+
+
+
+
+"Logolas" : "Legolas",
+"The axe of choice by the masters of chopping" : "O machado escolhido pelos mestres do corte",
+
+"Torch God's Favor" : "Tocha o favor de Deus",
+"The Torch God shall no longer haunt Minecraft" : "O Deus da Tocha não deve mais assombrar Minecraft",
+
+"The Journal" : "O jornal",
+"After all these years, I finally have them all..." : "Depois de todos esses anos, finalmente tenho todos eles ...",
+
+"What are you doing reading this for? Go get Advancement Legend already!" : "Por que você está lendo isso? Vá buscar o Advancement Legend já!",
+
+"Magic Wand" : "Varinha mágica",
+"Made of holly, eleven inches long," : "Feito de azevinho, onze polegadas de comprimento",
+"and contains a single feather from the tail of a phoenix" : "e contém uma única pena da cauda de uma fênix",
+"Has no function in the hands of a mere muggle" : "Não tem função nas mãos de um mero trouxa",
+
+"Sleepless Anchor" : "Âncora insone",
+"Beds are for losers" : "Camas são para perdedores",
+
+
+
+
+"A Glutton's Meal" : "Refeição de um glutão",
+"I see you have quite the appetite. Fatty." : "Vejo que você tem bastante apetite. Gordinho.",
+
+"Wilson" : "Wilson",
+"Don't worry Wilson, I'll do all the paddling. You just hang on" : "Não se preocupe Wilson, eu farei todo o remo. Você apenas aguenta",
+
+"Farmer's Badge" : "Distintivo de Fazendeiro",
+"For the continued work you've put out there, take this reward!" : "Pelo trabalho contínuo que você colocou lá fora, aceite esta recompensa!",
+
+
+
+
+"Cowboy Hat" : "Chapéu de caubói",
+"Don't let it get shot off!" : "Não deixe que ele seja disparado!",
+
+"Earth" : "Terra",
+"Seven billion people on the planet" : "Sete bilhões de pessoas no planeta",
+"Now that sounds overpopulated" : "Agora, isso parece superpovoado",
+
+"Super Rod" : "Super cajado",
+"Catches the best pokemon from the seas" : "Pega o melhor Pokémon do mar",
+
+"Potato Mine" : "Mina de batata",
+"SPUDOW!" : "SPUDOW!",
+
+"Toilet" : "Banheiro",
+"WHERE'S THE EFFING HONEY LEBOWSKI?" : "ONDE ESTÁ O MALDITO MEL LEBOWSKI?",
+
+
+
+
+"Mobestiary" : "Mobestiário",
+"Available at stores now" : "Disponível nas lojas agora",
+
+"Vanilla Ice Cream" : "Sorvete de vanilla",
+"Life would be vanilla ice cream without 31 flavors of individuality" : "A vida seria sorvete de vanilla sem 31 sabores de individualidade",
+
+"Molten Ice Cream" : "Sorvete derretido",
+"Noo! My ice cream! T_T" : "Não! Meu sorvete! T_T",
+
+"Hyperlink" : "Hiperlink",
+"This advancement was sponsored by MCStacker" : "Este avanço foi patrocinado pela MCStacker",
+
+"Handsome Pumpkin" : "Abóbora bonito",
+"This guy rushes me with a spoon... A freakin' spoon!" : "Esse cara me apressa com uma colher ... Uma colher maldita!",
+
+"Pink Camo Pants" : "Calça Camo Rosa",
+"They don't camouflage anywhere!" : "Eles não se camuflam em lugar nenhum!",
+
+"The Walking Head" : "The Walking Head",
+"Yes, this head totally has legs" : "Sim, esta cabeça tem pernas totalmente",
+
+"Sans's Head" : "Cabeça do San",
+"You start to hear distant MEGALOVANIA sounds" : "Você começa a ouvir sons distantes da MEGALOVANIA",
+
+"Ender Arrow" : "Flecha do ender",
+"This arrow ended an enderman. Seems impossible..." : "Esta flecha acabou com um enderman. Parece impossível ...",
+
+
+
+
+"Boomer T-Shirt" : "Camiseta Boomer",
+"There are no mistakes, just happy explosions" : "Não há erros, apenas explosões felizes",
+
+"The Hylian Shield" : "O Escudo Hylian",
+"Should have spoken to the Keaton Mask Soldier" : "Deveria ter falado com o Soldado Máscara Keaton",
+"to get a discount at the Bazaar" : "para conseguir um desconto no Bazar",
+
+"1000-degree knife" : "Faca de 1000 graus",
+"(GONE WRONG) (NOT CLICKBAIT)" : "(ISSO ERRADO) (NÃO CLICKBAIT)",
+
+
+
+
+"Voyager 1" : "Voyager 1",
+"Earth's farthest spacecraft" : "Nave espacial mais distante da Terra",
+
+"Cartographer's Quill" : "Pena de cartógrafo",
+"Freshly not-smashed on the ground" : "Recém-esmagado no chão",
+
+"A blessing in love" : "Uma benção no amor",
+"Face your fears and ask your crush out!" : "Enfrente seus medos e peça sua paixão!",
+
+"Bouquet" : "Buquê",
+"If you catch this at a wedding, you're next to get married" : "Se você pegar isso em um casamento, você será o próximo a se casar",
+
+"Waterbed" : "Colchão d'água",
+"Have a good night" : "Tenha uma boa noite",
+
+
+
+
+"Dinnerbone's Head" : "Cabeça do Dinnerbone",
+"No love for Grumm" : "Sem amor para Grumm",
+
+"Jeb's Head" : "Cabeça do Jeb",
+"Baah, Baah, Baah, Baah, Baah, Baah, Baah!" : "Baah, Baah, Baah, Baah, Baah, Baah, Baah!",
+
+"Groot's Stick" : "Bastão de Groot",
+"I am Groot" : "Eu sou Groot",
+
+"Medal of Honor" : "Medalha de Honra",
+"But didn't you start the raid yourself?" : "Mas você não começou o ataque?",
+
+"Wall Street" : "Wall Street",
+"Yes, it's a wall" : "Sim é uma parede",
+
+"Ominous Shield" : "Escudo Ominous",
+"This shield certifies your rank as a" : "Este escudo certifica sua posição como um",
+"Pillager of the Arch-Illager's forces" : "Pillager das forças do Arquipélago",
+
+"Stonk Man's Head" : "Stonk cabeça de um homem",
+"STONKS" : "STONKS+++",
+
+"Your Cat's Prize" : "Prêmio do seu gato",
+"You have so many cats, that now" : "Você tem tantos gatos, que agora",
+"phantoms have to sleep to avoid meeting you" : "fantasmas têm que dormir para evitar encontrar você",
+
+
+
+
+"Quiver" : "Tremor",
+"You can't actually store arrows in it" : "Você não pode realmente armazenar flechas nele",
+
+
+
+
+"Master Enchanter's Book" : "Livro do Mestre Encantador",
+"Congratulations, you did it" : "Parabéns você conseguiu",
+"This document decrees you as a master enchanter" : "Este documento o decreta como um mestre feiticeiro",
+"Go see a doctor" : "Vá ver um medico",
+
+"Never gonna give you up" : "Nunca vou desistir de você",
+
+"Finger Guns" : "Armas de dedo",
+"So anyway I started blasting..." : "De qualquer forma, comecei a explodir ...",
+
+"Chaos Emerald" : "Esmeralda do Caos",
+"Just gotta find six more" : "Só tenho que encontrar mais seis",
+
+
+
+
+"Strider Treat" : "Guloseima de Strider",
+"Your strider deserved it" : "Seu Strider mereceu",
+
+"Enchanter's Tome" : "Tomo do Encantador",
+"Used by Illager Enchanters to enchant mobs" : "Usado por Illager encantadores para encantar mobs",
+
+"World's Most Reliable Shoes" : "Sapatos mais confiáveis do mundo",
+"The statistics tab shall no longer be the grindy super challenges tab" : "A guia de estatísticas não será mais a guia de super desafios grindy",
+
+"Portable Trampoline" : "Trampolim portátil",
+"Hours of sick fun for the whole family!" : "Horas de diversão doentia para toda a família!",
+
+"Noah's Ark" : "Arca de noé",
+"A deluge is imminent" : "Um dilúvio é iminente",
+
+"Zero Tick Farm" : "Zero Tick Farm",
+"RIP Zero Tick Farms" : "RIP Zero Tick Farms",
+"2013 - 2020" : "2013 - 2020",
+
+"Black Pearl" : "Pérola Negra",
+"Wherever we want to go, we'll go" : "Para onde quisermos ir, nós iremos",
+
+"Superman's Cape" : "Capa do super-homem",
+"Is it a bird?" : "Isso é um passaro?",
+"Is it a plane?" : "É um avião?",
+"Is it an egg salad sandwich?" : "É um sanduíche de salada de ovo?",
+"No way, it's a Charizard!" : "De jeito nenhum, é um Charizard!",
+
+"Flowey the Flower" : "Flowey a flor",
+"All what's left of Asriel, the monsters' prince" : "Tudo o que restou de Asriel, o príncipe dos monstros",
+
+"Firearm's Firearm" : "Arma de fogo",
+"Now how did this get here? Seriously?" : "Agora, como isso chegou aqui? Seriamente?",
+
+"Refreshment" : "Refresco",
+"You'll need it after running that far" : "Você vai precisar depois de correr tão longe",
+
+"Gold Medal" : "Medalha de ouro",
+"Probably not real gold" : "Provavelmente não é ouro verdadeiro",
+
+"Birthday Cake" : "Bolo de aniversário",
+"Happy birthday to you, happy birthday to you," : "Parabéns pra você, Parabéns pra você,",
+"this song is copyrighted, oh wait actually it's public domain!" : "esta música é protegida por direitos autorais, oh espere, na verdade é de domínio público!",
+
+"Piston Cup" : "Copo pistão",
+"It's just an empty cup" : "É apenas um copo vazio",
+
+"Thomas the Tank Engine" : "Thomas o motor tanque",
+"He's number one" : "Ele é o número um",
+
+"Black Belt" : "Faixa preta",
+"Who is the greatest man?" : "Quem é o maior homem?",
+
+
+
+
+"Farmer's Badge V2" : "Distintivo de Fazendeiro V2",
+"Farm some more they said, it'll be fun they said..." : "Farm mais um pouco eles falaram, vai ser divertido eles falaram ...",
+
+"Spinny Top" : "Topo do prédio",
+"If it falls over, it's not a dream" : "Se cair, não é um sonho",
+
+"Stormbreaker" : "Stormbreaker",
+"What kind of weapon are we talking about here?" : "De que tipo de arma estamos falando aqui?",
+"The Thanos-killing kind" : "Do tipo que mata Thanos",
+
+"Baconator" : "Baconator",
+"Oh... wait, I thought you said Bacon!" : "Oh... espere, pensei que você disse Bacon!",
+
+"Zork Chop" : "Zork Chop",
+"Don't ask" : "Não pergunte",
+
+
+
+
+"Unknown Mixture" : "Mistura Desconhecida",
+"Side effects include possible stomach ache, 20/20 vision," : "Os efeitos colaterais incluem possível dor de estômago, visão 20/20,",
+"acne, extensive back pain and more..." : "acne, dores nas costas extensas e mais ...",
+
+"Stale Milk" : "Leite velho",
+"Please drink this" : "Por favor beba isso",
+
+"Fast and Furious" : "Velozes e Furiosos",
+"Getting shot by this will make you fast and furious" : "Levar um tiro vai te deixar rápido e furioso",
+
+"This is Anarchy" : "Isto é anarquia",
+"If you want to survive you need a strong belly" : "Se você quer sobreviver você precisa de uma barriga forte",
+
+
+
+
+"TARS" : "TARS",
+"Everybody good? Plenty of slaves for my robot colony?" : "Todo mundo está bem? Muitos escravos para minha colônia de robôs?",
+
+"Wizard's Fruit" : "Fruta do mago",
+"Utilised by the Mayor from Powerpuff Girls" : "Utilizado pelo prefeito de Meninas Superpoderosas",
+
+"Portal Bow" : "Arco de Portal",
+"Portal II" : "Portal II",
+
+"Moon Rock" : "Pedra da lua",
+"Looks like he brought some of the moon back" : "Parece que ele trouxe um pouco da lua de volta",
+"Smells like cheese" : "Cheira a queijo",
+
+"Ring of Bedrock" : "Anel de Bedrock",
+"The end of the End" : "O fim do fim",
+
+"Singularity" : "Singularidade",
+"Newton’s third law - the only way humans have ever" : "Terceira lei de Newton - a única maneira que os humanos já fizeram",
+"figured out of getting somewhere is to leave something behind" : "descobri que chegar a algum lugar é deixar algo para trás",
+
+
+
+
+"Cosmonaut Helmet" : "Capacete de Cosmonauta",
+"It was a Russian who was the first who could truly say this" : "Foi um russo o primeiro a dizer isso de verdade",
+
+"Astronaut Helmet" : "Capacete de Astronauta",
+"In zero gravity, a feather and a hammer falls at the same speed" : "Em gravidade zero, uma pena e um martelo caem na mesma velocidade",
+
+"Dragon Bro" : "Dragão Bro",
+"Dragon Broooo!!!" : "Dragão Broooo!!!",
+
+"Power Stone" : "Pedra poderosa",
+"Maybe you should start a cool rock collection" : "Talvez você devesse começar uma coleção de pedra legal",
+
+"Heart of a Siren" : "Coração de uma sirene",
+"No, not sirenhead!" : "Não, não sirenhead!",
+
+"Amphitrite" : "Anfitrite",
+"Many people called her the personification of the sea itself..." : "Muitas pessoas a chamavam de a personificação do próprio mar ...",
+
+"Devil's Pitchfork" : "Forquilha do diabo",
+"One Hell Of A Time" : "Inferno de uma vez",
+
+"Space Stone" : "Pedra do Espaço",
+"This universe is finite, its resources, finite" : "Este universo é finito, seus recursos, finitos",
+"If life is left unchecked, life will cease to exist" : "Se a vida não for controlada, a vida deixará de existir",
+"It needs correcting" : "Precisa de correção",
+
+"Reality Stone" : "Pedra da realidade",
+"Reality can be whatever I want..." : "A realidade pode ser o que eu quiser ...",
+
+"Eye of the Apocalypse" : "Olho do Apocalipse",
+"The beginning of the end" : "O começo do fim",
+
+"Wishing Star" : "Estrela dos desejos",
+"Make a wish!" : "Faça um desejo!",
+
+"Corrupted Beacon" : "Beacon corrompido",
+"The Corrupted Beacon holds immense power within" : "O Beacon corrompido detém imenso poder dentro",
+"It waits for the moment to unleash its wrath" : "Espera o momento de liberar sua ira",
+
+"Treasure Chest" : "Baú de tesouro",
+"One of each block is stored in there" : "Um de cada bloco é armazenado lá",
+
+"Frame of Infinite Items" : "Quadro de itens infinitos",
+"One of each item is stored on here" : "Um de cada item é armazenado aqui",
+
+"Pandora's Box" : "Caixa de Pandora",
+"It is said to have contained all the evils in the world..." : "Diz-se que continha todos os males do mundo ...",
+
+"Doraemon's Pocket" : "Bolso de doraemon",
+"I hope I can get thousands of diamonds in here" : "Espero conseguir milhares de diamantes aqui",
+
+"Nuclear Reactor" : "Reator nuclear",
+"You have transcended humanity's progression" : "Você transcendeu o progresso da humanidade",
+
+"Mind Stone" : "Pedra da mente",
+"The ability to give the mindless minds of their own" : "A capacidade de dar às suas próprias mentes irracionais",
+
+"Soul Stone" : "Pedra da alma",
+"Did you do it?" : "Você fez isso?",
+"Yes" : "Sim",
+"What did it cost?" : "Quanto custou?",
+"8 hours" : "8 horas",
+
+"Cursed Creeper Head" : "Maldita cabeça de Creeper",
+"Wave 5 of 5: CREEPER-GEDDON!!!" : "Onda 5 de 5: CREEPER-GEDDON!!!",
+
+"ACDC - Back in Black" : "ACDC - De volta em preto",
+"Back in Black stomped Highway to Hell in terms of success" : "De volta em preto pisou na Highway to Hell em termos de sucesso",
+
+"Endfinity Source" : "Fonte Endfinity",
+"They will END the world..." : "Eles vão TERMINAR o mundo...",
+
+"Potion Master's Diploma" : "Diploma de Mestre de Poções",
+"A certificate granting you the ability to teach" : "Um certificado que concede a você a habilidade de ensinar",
+"the subtle science and exact art of potion-making" : "a ciência sutil e a arte exata de fazer poções",
+
+"Poison Mask" : "Máscara Venenosa",
+"Protects your face from poison but not the rest of your body" : "Protege o seu rosto do veneno, mas não o resto do seu corpo",
+
+"Infinity Gauntlet" : "Manopla do Infinito",
+"Iron Man stole all the stones so the best" : "O Homem de Ferro roubou todas as pedras, então as melhores",
+"you can do is punch people with it" : "você pode fazer é socar as pessoas com isso",
+
+"Totem of Immortality" : "Totem da Imortalidade",
+"You'll be immortal as long as you don't die" : "Você será imortal contanto que não morra",
+
+"Time Stone" : "Tempo de Pedra",
+"Perfectly balanced, as all things should be" : "Perfeitamente equilibrado, como todas as coisas deveriam ser",
+
+"Instant Death" : "Morte instantânea",
+"Since you like dying so much..." : "Já que você gosta tanto de morrer ...",
+
+
+
+# Renamed advancements and description changes in 1.11.2
+"Craft or collect all forms of normal, cracked, mossy and chiseled stone bricks" : "Crie ou colete todas as formas de tijolos de pedra normais, rachados, musgosos e cinzelados",
+
+"Swim in water while having the Water Breathing effect" : "Nade na água enquanto está sobe o efeito de respiração na água",
+
+"Ride a Skeleton Horse" : "Monte em um Cavalo Esqueleto",
+
+"Follow the Leader" : "Siga o Mestre",
+
+"Barbearian" : "Barbearia",
+
+"Happy New Year!" : "Feliz Ano Novo!",
+"Play for a whole Minecraft year" : "Jogue por um ano inteiro o Minecraft",
+
+
+
+## All advancements added in version 1.12 are here
+"Coppers and Robbers": "Policiais e ladrões",
+"Smelt a Copper Ingot": "Queime um lingote de cobre",
+
+"Budget Channeling": "Canalização de orçamento",
+"Craft a Lightning Rod using Copper Ingots": "Crie um pára-raios usando lingotes de cobre",
+
+"Surge Protector": "Protetor de surto",
+"Protect a villager from an undesired shock without starting a fire": "Proteja um aldeão de um choque indesejado sem iniciar um incêndio",
+
+"Called Shot": "Disparo chamado",
+"Get struck by lightning while standing on a Lightning Rod": "Seja atingido por um raio enquanto estiver em cima de um pára-raios",
+
+"Don’t Come a Copper!": "Não venha um cobre!",
+"Craft some Cut Copper": "Crie um pouco de cobre cortado",
+
+"Copper Miner": "Minerador de cobre",
+"Mine a stack of Raw Copper": "Minere um pack de cobre bruto",
+
+"Master Copper Miner": "Mestre minerador de cobre",
+"Mine enough copper to make a stack of Copper Blocks": "Minere cobre suficiente para criar um pack de blocos de cobre",
+
+"Wax On": "Em cera",
+"Use Honeycombs to wax a Copper Block, preventing it from oxidising": "Use favos de mel para encerar um bloco de cobre, evitando que oxidize",
+
+"Wax Off": "Tirando a cera",
+"Use an axe to scrape wax off of a Copper Block": "Use um machado para retirar a cera de um bloco de cobre",
+
+"The Statue of Liberty": "A Estátua da Liberdade",
+"Obtain a fully oxidized Block of Copper": "Obtenha um Bloco de Cobre totalmente oxidado",
+
+"Sly Copper: The Copper Heist": "Cobre astuto: O roubo do Cobre",
+"Collect a stack of every oxidizing stage of Copper Block, Cut Copper, Cut Copper Slabs and Stairs, and the waxed variants of them all": "Colete um pack de cada estágio de oxidação do Bloco de Cobre, Cobre lapidado, Lajes e Escadas de Cobre lapidados e as variantes enceradas de todos eles",
+
+"G.I. Geode": "G.I Geodo",
+"Find an Amethyst Geode and mine an Amethyst Cluster": "Encontre um geodo de ametista e minere um pouco de cristais de ametista",
+
+"Good For Your Bones": "Bom para seus ossos",
+"Mine some Calcite encasing an Amethyst Geode": "Minere um pouco de calcita envolvendo um geodo de ametista",
+
+"Galileo Figaro": "Galileo Figaro",
+"Zoom in on something using a Spyglass": "Dê um zoom em algo usando uma luneta",
+
+"Pixel Perfect": "Pixel perfeito",
+"Use a Spyglass to stare at a bat from at least 50 blocks away": "Use uma luneta para olhar para um Morcego a pelo menos 50 blocos de distância",
+
+"Blackout": "Queda de energia",
+"Craft Tinted Glass using Glass and Amethyst Shards and use it to block out light": "Crie vidro fosco usando vidro e fragmentos de ametista e use-o para bloquear a luz",
+
+"Amethyst Miner": "Minerador de Ametista",
+"Mine a stack of Amethyst Blocks, Amethyst Clusters, and every size of Amethyst Bud": "Minere um pack de blocos de ametista, agregado de ametista e cristais de ametista de todos os tamanhos",
+
+"Mr. Bean": "Mr. Bean",
+"Mine and craft a stack of Raw Iron, Copper and Gold Blocks": "Minere e crie um pack de blocos de ferro, cobre e ouro brutos",
+
+"Filthy Lich": "Líquen imundo",
+"Use shears to obtain Glow Lichen from an underground cave": "Use tesouras para obter Líquen brilhante de uma caverna subterrânea",
+
+"That's the point!": "Essa é a questão!",
+"Obtain some Pointed Dripstone from a Dripstone Cave": "Obtenha um pouco de espeleotema pontiagudo de uma caverna de gotejamento",
+
+"Deep Slate Nine": "Tão profundo...",
+"Mine deep enough that the stone darkens": "Minere fundo o suficiente até que a pedra escureça",
+
+"Tuff Stuff": "Tufo recheado",
+"Mine some Tuff in the deep underground": "Minere um pouco de Tufo no subsolo profundo",
+
+"Moss Maker": "Criador de musgo",
+"Use Bone Meal on Moss to spread its wonderful lushness across hard blocks of stone": "Use farinha de osso no musgo para espalhar sua exuberância maravilhosa em blocos de pedra",
+
+"Iggy": "Iggy",
+"Obtain an Azalea": "Obtenha uma azaléia",
+
+"Particle Fan": "Ventilador de Partículas",
+"Obtain a Spore Blossom": "Obtenha uma Flor de Esporos",
+
+"Lush Hour": "Hora exuberante",
+"Obtain a stack of all lush-related blocks": "Obtenha um pack de todos os blocos relacionados a exuberantes",
+
+"A Shiny Treat": "Um deleite brilhante",
+"Eat some Glow Berries": "Coma algumas bagas brilhantes",
+
+"Bulldozer": "Touro de pedra",
+"Destroy a total of 10,000 blocks of stone": "Destrua um total de 10.000 blocos de pedra",
+
+"Strike a Light": "Acenda uma luz",
+"Craft Flint and Steel and use it to light the ground on fire": "Crie uma pederneira e use para iluminar o chão com fogo",
+
+"Bonfire Night": "Noite da fogueira",
+"Light every flammable block on fire": "Queime todos os blocos inflamáveis",
+
+
+
+
+"Setting up the mood": "Configurando o clima",
+"Place a candle and light it using Flint and Steel": "Coloque uma vela e acenda-a usando uma pederneira",
+
+"The Ritual Begins": "O Ritual Começa",
+"Get one stack of Black Candles": "Pegue um pack de velas pretas",
+
+# Happy Birthday!
+"Place a candle on a cake": "Coloque uma vela em um bolo",
+
+"Pane in the Glass": "Painel no Vidro",
+"Craft a stack of all 16 colors of stained glass panes": "Crie um pack de todas as 16 cores de painéis de vidro",
+
+"Hot Tub": "Jacuzzi",
+"Sit in a cauldron filled with lava": "Deite-se em um caldeirão cheio de lava",
+
+"Rock Polish": "Rock polonês",
+"Craft every type of polished block": "Crie todo tipo de bloco polido",
+
+"Deepslate Conspiracy": "Conspiração de ardósia",
+"Craft all forms of Deepslate, Polished Deepslate, Deepslate Bricks and Deepslate Tiles": "Crie todas as formas de ardósia, ardósia polida, tijolos de ardósia e ladrilhos de ardósia",
+
+"Skyblock": "Skyblock",
+"Place a Grass Block high in the sky": "Coloque um bloco de grama bem alto no céu",
+
+
+
+
+"One-course meal": "Refeição de um prato",
+"Use bone meal to grow a sapling into a tree": "Use farinha de ossos para transformar uma muda em uma árvore",
+
+"Come to the countryside!": "Venha para o campo!",
+"Plant every single type of crop on farmland": "Plante cada tipo de plantação em terras agrícolas",
+
+"An Apple a Day": "Uma maçã por dia",
+"Eat an Apple every day for 30 in-game days": "Coma uma maçã todos os dias por 30 dias no jogo",
+
+
+
+
+"Goat out of here!": "Cabra fora daqui!",
+"Slaughter a Goat": "Abate uma Cabra",
+
+"Billy the Kid": "Billy a criança",
+"Breed two Goats together using Wheat": "Cruze duas cabras usando trigo",
+
+"Goat Simulator": "Simulador de cabra",
+"Get killed by a Goat that rammed into you.": "Ser morto por uma cabra que se chocou contra você.",
+"You have Goat to be kidding me!": "Você só pode estar brincando comigo!",
+
+"Whatever Floats Your Goat!": "O que quer que flutue sua cabra!",
+"Get in a Boat and float with a Goat": "Pegue um barco e flutue com uma cabra",
+
+"Screaming Milk": "Leite gritando",
+"Milk a screaming Goat": "Tire leite de uma cabra gritando",
+
+"Cephalight": "Cephalight",
+"Kill a Glow Squid": "Mate uma lula brilhante",
+
+"Glow and Behold": "Brilhe e veja",
+"Use a Glow Ink Sac to light up a sign": "Use uma bolsa de tinta brilhante para iluminar uma placa",
+
+"Flashy Items": "Items chamativos",
+"Put an item up for display in a Glowing Item Frame": "Colocar um item para exibição em uma moldura brilhante",
+
+"Iceologer Should've Won": "O Iceologer Deveria Ter Vencido",
+"Kill 100 Glow Squids": "Mate 100 lulas brilhantes",
+
+"The Cutest Predator": "O predador mais fofo",
+"Catch an Axolotl in a Bucket": "Pegue um Axolote em um balde",
+
+"The Healing Power of Friendship": "O poder de cura da amizade",
+"Team up with an Axolotl and win a fight": "Junte-se a um Axolotl e ganhe uma luta",
+
+"Thanks a lotl": "Muito obrigado",
+"Team up with an Axolotl in an Ocean Monument to help clear the curse of the Elders": "Junte-se a um Axolote em um Monumento do Oceano para ajudar a eliminar a maldição dos Anciões",
+
+"Axolittle": "Axolittle",
+"Breed two Axolotls together using Tropical Fish": "Cruze dois Axolotes usando peixes tropicais",
+
+"Axolotl of them": "Axolotes deles",
+"Catch all variants of Axolotls inside a Bucket": "Pegue todas as variantes de Axolotls dentro de um balde",
+
+"Axeolotl": "Axeolotl",
+"Kill an Axolotl with an axe": "Mate um Axolote com um machado",
+
+"Humble Bundle": "Pacote Humilde",
+"Craft a Bundle using Rabbit Hide and String": "Crie um pacote usando couro de coelho e linha",
+
+"Fractal": "",
+"Put a Bundle in a Bundle in a Bundle in a Bundle in a Bundle… 16 layers deep": "Coloque uma bolsa em uma bolsa em uma bolsa em uma bolsa em uma bolsa...16 camadas de profundidade",
+
+"Swine Sailing": "Porco navegando",
+"Ride a saddled pig in a boat in a minecart": "Monte um porco selado em um barco em um minecart",
+
+"Llama Festival": "Festival da Lhama",
+"Sit on Llamas with all 16 colors of carpet. Getting off will reset your progress": "Sente-se em Lhamas com todas as 16 cores de carpete. Sair irá redefinir seu progresso",
+
+"Is it a Bird?": "Isso é um passaro?",
+"Look at a Parrot through a Spyglass": "Olhe para um papagaio através de uma luneta",
+
+"So Hungry I Could Eat a Horse!": "Tão faminto que eu poderia comer um cavalo!",
+"Feed a Horse every type of food that it can eat": "Alimente um Cavalo com todo tipo de comida que ele possa comer",
+
+
+
+
+"Smooth Operator": "Operador suave",
+"Slip and slide on some ice": "Escorregar e deslizar em um pouco de gelo",
+
+"This Snow is Snowier": "Esta neve é mais nevada",
+"Fall into some Powder Snow": "Caia em um pouco de neve em pó",
+
+"Light as a Rabbit": "Leve como um coelho",
+"Walk on Powder Snow… without sinking in it": "Ande na neve em pó...sem afundar nela",
+
+"Powder-full": "Cheio de pó",
+"Pick up some Powder Snow in a Bucket": "Pegue um pouco de neve em pó em um balde",
+
+"Boatception": "Boatception",
+"Get in a boat within a shipwreck": "Entrar em um barco dentro de um navio naufragado",
+
+"Pandamonium": "Pandamonium",
+"Feed cake to every type of panda": "Dê bolo para todo tipo de panda",
+
+"Edge of the Jungle": "Borda da selva",
+"Enter a Modified Jungle Edge - the rarest biome in Minecraft": "Entre no Modified Jungle Edge - o bioma mais raro do Minecraft",
+
+
+
+
+"This Dirt is Dirtier": "Esta sujeira é mais suja",
+"Trade for some Rooted Dirt from a Wandering Trader": "Negocie por terra enraizada de um vendedor ambulante",
+
+"Leaflet Drop": "Folheto Drop",
+"Fall through a Big Dripleaf": "Cair através de uma plantaforma grande",
+
+"Hey! You two should kiss!": "Ei! Vocês dois deveriam se beijar!",
+"Use a Spyglass to look at two Villagers sitting in a Boat from at least 50 blocks away": "Use uma luneta para ver dois aldeões sentados em um barco a pelo menos 50 blocos de distância",
+
+"Rare Candy Shop": "Loja de doces raros",
+"Trade for a Bottle o’ Enchanting from a Cleric": "Troque por uma Garrafa de Encantamento de um Clérigo (Aldeão clérigo)",
+
+"Buy Low, Sell High": "Compre na baixa, venda na alta",
+"Trade with a villager while under the Hero of the Village effect": "Negocie com um aldeão enquanto estiver sob o efeito do Herói da Vila",
+
+"Justice": "Justiça",
+"Kill each type of Illager with a single crossbow arrow": "Mate cada tipo de Illager com uma única flecha de besta",
+
+
+
+
+"Poultry Boy": "Menino aviário",
+"Slay the elusive Chicken Jockey": "Mate o esquivo Galinha Jóquei (Zumbi bebê sentado na galinha)",
+
+"Basketblock Championship": "Campeonato de Basketblock",
+"Kill Endermen that are holding every block that they can hold": "Mate Endermans que estão segurando todos os blocos que podem segurar",
+
+"Pupil Poppers": "Eu me tornei o Homem-Aranha!!",
+"Eat 1000 Spider Eyes": "Comer 1000 Olhos de Aranha",
+
+
+
+
+"It's time consuming": "É demorado",
+"Kill something using a clock": "Mate algo usando um relógio",
+
+"Inspector Gadget": "Dispositivo inspetor",
+"Kill a zombie while holding a spyglass": "Mate um zumbi segurando uma luneta",
+
+"Rock, Paper, Shears!": "Pedra, papel, tesouras!",
+"Beat a zombie at rock, paper, shears": "Derrote um zumbi em pedra, papel, tesoura",
+
+"Backfire": "Tiro pela culatra",
+"Kill a Blaze using a Blaze Rod while both you and it are on fire": "Mate um Blaze usando uma Vara de Blaze enquanto você e ele estão em chamas",
+
+
+
+
+"Take Notes": "Faça anotações",
+"Tune a Note Block through every possible note": "Afine um bloco de notas em todas as notas possíveis",
+
+"Noteworthy": "Digno de nota",
+"Play every possible instrument on a Note Block": "Toque todos os instrumentos possíveis em um bloco de notas",
+
+"Travelling Bard": "Bardo Viajante",
+"Play a Note Block in every type of biome": "Toque um bloco de notas em cada tipo de bioma",
+
+"Vibe Check": "Verificação de Vibe",
+"Obtain a Sculk Sensor": "Obtenha um sensor Sculk",
+
+
+
+
+"Over-Overkill": "Exagero",
+"Deal sixteen hearts of damage in a single melee blow": "Faça dezesseis corações de dano com um único golpe corpo a corpo",
+
+
+
+
+# The Haggler
+"Trade with villagers 100 times": "Negocie com aldeões 100 vezes",
+
+"Big Spender": "Grande gastador",
+"Trade with villagers 500 times": "Negocie com aldeões 500 vezes",
+
+"STONKS!": "STONKS!",
+"Trade with villagers 2500 times": "Negocie com aldeões 2500 vezes",
+
+
+
+
+"Ancient Restoration": "Restauração Antiga",
+"Rebuild and reactivate a Ruined Portal": "Reconstruir e reativar um portal arruinado",
+
+"Hot Spring": "Primavera quente",
+"Sit in water in the Nether": "Sente-se na água no Nether",
+
+"Polar Opposites": "Opostos polares",
+"Start freezing in the Nether": "Comece a congelar no Nether",
+
+"Jenga": "Jenga",
+"Ride a Strider riding another Strider riding a boat riding a minecart": "Ande em um Lavagante em outro Lavagante em um barco em um minecart",
+
+"Is it a Balloon?": "É um balão?",
+"Look at a Ghast through a Spyglass": "Olhe para um Ghast através de uma luneta",
+
+"A Piglin's Best Friend": "O melhor amigo de um Piglin",
+"Give a total of 500 gold to Piglins during your nether adventures": "Dê um total de 500 ouros para Piglins durante suas aventuras inferiores",
+
+"Instant Mining": "Mineração Instantânea",
+"Hold a Diamond or Netherite Pickaxe enchanted with Efficiency V while under the Haste II effect": "Segure uma Picareta de Diamante ou Netherita encantada com Eficiência V enquanto estiver sob o efeito Haste II",
+
+"Beacon Overlord": "Beacon soberano",
+"Acquire every beacon-induced effect at once": "Adquira todos os efeitos induzidos por um Beacon de uma vez",
+
+"Master Netherite Miner": "Mestre Minerador de Netherite",
+"Mine enough Ancient Debris to make a stack of Netherite Ingots (don’t worry, mining a stack of Netherite Blocks is optional in this datapack, I’m not that evil…)": "Minere Detritos Ancestrais o suficiente para fazer um pack de Lingotes de Netherite (não se preocupe, minerar uma pilha de Blocos Netherite é opcional nesta pilha de dados, eu não sou tão mau...)",
+
+"Netherite Mad Lad": "",
+"Be an absolute madlad and grind enough Ancient Debris to make a stack of Netherite Blocks (this is hidden and not required for Advancement Legend btw…)": "Seja um louco absoluto e esmague Detritos Ancestrais o suficiente para fazer um pack de Blocos de Netherite (isso está escondido e não é necessário para Advancement Legend aliás...)",
+
+
+
+
+"Gas Bomb": "Bomba de gás",
+"Ignite a Creeper of each possible effect using Flint and Steel": "Acenda um Creeper de cada efeito possível usando uma pederneira",
+
+
+
+
+"Is it a Plane?": "É um avião?",
+"Look at the Ender Dragon through a Spyglass": "Olhe para o Dragão Ender através de uma luneta",
+
+"Good Luck Getting This One": "Boa sorte em conseguir este",
+"Kill a baby Turtle, a Witch, a Phantom, an Elder Guardian and a Piglin Brute with one piercing arrow in The End": "Mate um bebê Tartaruga, uma Bruxa, um Fantasma, um Ancião Guardião e um Piglin Bruto com uma flecha penetrante no The End",
+
+
+
+
+"The Perfect Run": "A corrida perfeita",
+"Summon the Ender Dragon, the Wither, and a Raid within thirty seconds of each other, then defeat all of them without taking damage": "Invoque o Dragão Ender, o Wither e um Raid com trinta segundos de diferença entre si, e derrotar todos eles sem sofrer danos",
+
+"Telescopic": "Telescópico",
+"Look at every mob using a Spyglass, each from at least 25 blocks away": "Observe cada mob usando uma luneta, cada um a pelo menos 25 blocos de distância",
+
+
+
+
+# Renamed advancements and description changes in 1.12
+"Professional": "Profissional",
+
+"Hot Reels!": "Carretéis quentes!",
+
+"Netherite Miner": "Minerador Netherite",
+
+"Stepping on Legos": "Pisando em Legos",
+"Walk on some hot Magma Blocks in the Nether": "Ande em alguns blocos de magma quentes no Nether",
+
+"Mine a stack of Raw Iron": "Minere um pack de ferro bruto",
+
+"Mine a stack of Raw Gold": "Minere um pack de ouro bruto",
+
+"Craft and ride a boat to sail on the high seas": "Construa e ande de barco para navegar em alto mar",
+
+"Mine a stack of Netherrack, Basalt, Blackstone and Magma in the Nether": "Minere um pack de Netherrack, Basalto, Pedra-negra e Magma no Nether",
+
+"Use a shovel to create dirt paths": "Use uma pá para criar caminhos de terra",
+
+"Deal eight hearts of damage in a single melee blow": "Cause oito corações de dano com um único golpe corpo a corpo",
+
+
+
+
+# Hardcore-Friendly Version for 1.12 description changes
+"Get stung by a bee": "Ser picado por uma abelha",
+
+"Get rammed into by a Goat.": "Seja atingido por uma cabra.",
+
+"Obtain a carved pumpkin enchanted with Curse of Binding. Be careful not to put it on!": "Obtenha uma abóbora esculpida encantada com Maldição do ligamento. Tenha cuidado para não colocá-lo!",
+
+
+
+
+# Trophies added in 1.12
+"Octuple Compressed Cobblestone": "Pedregulhos óctuplos compactados",
+"Just imagine how much cobblestone it contains…": "Imagine a quantidade de pedregulhos que contém...",
+
+"Golden Cobblestone": "Pedregulho Dourado",
+"Congratulations!": "Parabéns!",
+"You mined 10,000 blocks of Cobblestone": "Você minerou 10.000 blocos de Pedregulhos",
+"and unlocked the Golden Cobblestone Skin!": "e desbloqueou a skin de pedregulho dourado!",
+
+"Weathered Copper BlocK": "Bloco de cobre resistido",
+"It was spelt like this for six whole snapshots": "Foi escrito assim para seis snapshots inteiros",
+
+"Copper Shortsword": "Espada Curta de Cobre",
+"The Moon Lord fears no weapon, but this one… it scares him": "O Senhor da Lua não teme nenhuma arma, mas esta...isso o assusta",
+
+"Baseball Bat": "Taco de beisebol",
+"What?... Oh, when you said stare at a bat,": "O quê?...Oh, quando você disse olhe para um morcego,",
+"I thought you meant this bat!": "Achei que você quisesse dizer este morcego!",
+
+"Energy Crystal": "Cristal de Energia",
+"Looks like a slimy slug sucked all the power out of it…": "Parece que uma lesma viscosa sugou todo o seu poder...",
+
+"Bean Block": "Bloco de Feijão",
+"Mmm, tasty": "Hum, gostoso",
+
+"Silver Armor Stand": "Suporte de armadura de prata",
+"To display your best armor set!": "Para exibir seu melhor conjunto de armadura!",
+
+"Annoying Orange": "Laranja Irritante",
+"Hey apple, can you spit seeds?": "Ei maçã, você pode cuspir sementes?",
+
+"Mr Finch's Hoe": "Enxada do Sr. Finch",
+"Did you at least harvest the sugar cane?": "Você pelo menos colheu a cana?",
+
+"Compost Mate": "Amigo composto",
+"There is ": "Há",
+"1 Composter": "1 Compostor",
+" among us": "entre nós",
+
+"Black Bird": "Passaro preto",
+"They should add Crows to Minecraft. Caw!": "Eles devem adicionar Corvos ao Minecraft. Caw!",
+
+"Fake Tropical Fish": "Peixe Tropical Falso",
+"Not as beautiful, but much tastier": "Não tão bonito, mas muito mais saboroso",
+
+"Barry B. Benson's Hive": "Colmeia de Barry B. Benson",
+"According to all known laws of aviation…": "De acordo com todas as leis conhecidas da aviação ...",
+
+"Ice Wand": "Varinha de gelo",
+"The Ice Wand was trapped in a tomb of ice for ages,": "A Varinha de Gelo ficou presa em uma tumba de gelo por muito tempo,",
+"sealed away by those who feared its power": "selado por aqueles que temiam seu poder",
+
+"Llama Drama": "Lhama Drama",
+"In memoriam of the Great Spitting Massacre of 2021": "Em memória do Massacre do Grande Cuspe de 2021",
+
+"Matryoshka Doll": "Boneca Matryoshka",
+"And they don't stop coming,": "E eles não param de vir,",
+"and they don't stop coming,": "e eles não param de vir,",
+"and they don't stop coming…": "e eles não param de vir...",
+
+"Basketblock": "Bloco de basquete",
+"That's right Number 7, it's a cube!": "Isso mesmo, número 7, é um cubo!",
+
+"Etho's Anvil": "Bigorna de Etho",
+"Awarded to distinguished individuals who complete Etho’s challenge": "Concedido a indivíduos ilustres que completam o desafio da Etho",
+
+"Multiweapon": "Multiarma",
+"It's a sword, axe and…": "É uma espada, machado e...",
+"Never mind, it broke": "Não importa, quebrou",
+
+"Bamboo Sword": "Espada De Bambu",
+"Not the best material for a weapon…": "Não é o melhor material para uma arma...",
+
+"The Jungle Book": "O livro da Selva",
+"In the jungle, the mighty jungle…": "Na selva, a selva poderosa ...",
+
+"The Moon": "A lua",
+"Yeah, it's just me, you, and the moon": "Sim, sou só eu, você e a lua",
+
+"The Salad Bowl": "A tigela de salada",
+"Perfect for serving justice in": "Perfeito para servir a justiça em",
+
+"Steam Engine": "Motor a vapor",
+"The beginning of the Industrial Revolution": "O início da Revolução Industrial",
+
+"New Year's Firework": "Fogo de artifício de ano novo",
+"It's the final countdown!": "É a contagem final!",
+
+"Big Pointy Arrow": "Flecha de ponta grande",
+"Things are on the up and up!": "As coisas estão aumentando cada vez mais!",
+
+"One-Punch Man's Fist": "One-Punch Man's Punho",
+"ONE PUUUUUNNNCCHHH!!!": "UM SOOOOCCCCOOOOO!!!",
+"(though in honesty killing everything in one punch": "(embora, honestamente, matando tudo com um soco",
+"gets kinda boring after awhile…)": "fica meio chato depois de um tempo...)",
+
+"Gilded Blade": "Lâmina dourada",
+"A powerful weapon wielded by ancient mobs": "Uma arma poderosa empunhada por antigos mobs",
+
+"Brick Astley": "Tijolo Astley",
+"Nether gonna brick you up!": "Nether vai acabar com você!",
+
+"Ultimate Flex": "Ultimate Flex",
+"Dab on dem haters": "Dab naqueles que odeiam",
+
+"Wormhole": "Buraco de minhoca",
+"Is this some kind of portal?": "Isso é algum tipo de portal?",
+"Aaah!..": "Aaah!..",
+
+"Mario's Hat": "Chapéu do Mario",
+"Mario, number one! Yahoo!": "Mario, número um! Yahoo!",
+
+
+
+
+# 'Experience' label in Experience Rewards text
+"Experience" : "Experiência",
+
+
+
+
+# Text that appears when unlocking a new tab
+"You have unlocked the root of the Adventure tab": "Você desbloqueou a raiz da guia Aventura",
+
+"You have unlocked the root of the Animals tab": "Você desbloqueou a raiz da guia Animais",
+
+"You have unlocked the root of the Biomes tab": "Você desbloqueou a raiz da guia Biomas",
+
+"You have unlocked the root of the Building tab": "Você desbloqueou a raiz da guia Construção",
+
+"You have unlocked the root of the Super Challenges tab": "Você desbloqueou a raiz da guia Super Desafios",
+"WARNING: These are very difficult": "AVISO: São muito difíceis",
+
+"You have unlocked the root of the Enchanting tab": "Você desbloqueou a raiz da guia Encantamento",
+
+"You have unlocked the root of the End tab": "Você desbloqueou a raiz da guia O Fim",
+
+"You have unlocked the root of the Farming tab": "Você desbloqueou a raiz da guia Fazenda",
+
+"You have unlocked the root of the Mining tab": "Você desbloqueou a raiz da guia Mineração",
+
+"You have unlocked the root of the Monsters tab": "Você desbloqueou a raiz da guia Monstros",
+
+"You have unlocked the root of the Nether tab": "Você desbloqueou a raiz da guia Nether",
+
+"You have unlocked the root of the Potions tab": "Você desbloqueou a raiz da guia Poções",
+
+"You have unlocked the root of the Redstone tab": "Você desbloqueou a raiz da guia Redstone",
+
+"You have unlocked the root of the Statistics tab": "Você desbloqueou a raiz da guia Estatísticas",
+
+"You have unlocked the root of the Weaponry tab": "Você desbloqueou a raiz da guia Armamento",
+
+
+
+
+# Welcome message
+"This world is using ": "Este mundo está usando",
+"Blaze": "Blaze",
+"and": "and",
+"Cave": "Cave",
+"'s Advancements Pack!": "'s Advancements Pack!",
+
+" Over ": "Sobre",
+## Number is inserted here
+" brand new advancements in your Minecraft world!": "novos avanços em seu mundo Minecraft!",
+
+" - Created by ": "Criado por",
+## Cavinator1
+
+" - For information ": "Para informação",
+"click here": "clique aqui",
+
+" - Join my discord ": "Entre no meu Discord",
+"here": "aqui",
+
+"Special thanks to my patreon donors: ": "Agradecimentos especiais aos meus doadores do patreon:",
+## Patreon Donors' names are listed here
+
+
+
+
+# Configuration Menu
+## BlazeandCave
+"'s Advancements Pack Config": "",
+
+"Welcome Message currently enabled": "Mensagem de boas-vindas atualmente habilitada",
+"Welcome Message currently disabled": "Mensagem de boas-vindas atualmente desativada",
+
+"Item Rewards currently enabled": "Recompensas de item habilitadas atualmente",
+"Item Rewards currently disabled": "Recompensas de itens atualmente desativadas",
+
+"Experience Rewards currently enabled": "Recompensas de experiência habilitadas atualmente",
+"Experience Rewards currently disabled": "Recompensas de experiência atualmente desativadas",
+
+"Trophies currently enabled": "Troféus atualmente habilitados",
+"Trophies currently disabled": "Troféus atualmente desativados",
+
+"Display scoreboard on tab list": "Exibir placar na lista de guias",
+"Clear scoreboard from tab list": "Limpar placar da lista de guias",
+
+"Display scoreboard on sidebar": "Exibir placar na barra lateral",
+"Clear scoreboard from sidebar": "Limpar placar da barra lateral",
+
+"Update scoreboard": "Atualizar placar",
+
+"Grant trophies": "Conceder troféus",
+
+"Click to enable": "Clique para habilitar",
+"Click to disable": "Clique para desativar",
+"Click to run": "Clique para começar",
+
+# Update scoreboard message
+"The advancement count of all players currently online has been updated.": "A contagem de avanços de todos os jogadores atualmente online foi atualizada.",
+
+# Grant trophies are you sure message
+"Are you sure?": "Tem certeza?",
+"This function should only be used in worlds that used the Advancements Pack before updating to the Trophy Update.": "Esta função só deve ser usada em mundos que usaram o Advancements Pack antes de atualizar para a atualização de troféus.",
+"This function may also grossly fill inventories so make sure everyone is prepared to receive them!": "Esta função também pode preencher estoques grosseiramente, então certifique-se de que todos estejam preparados para recebê-los!",
+
+"[ Yes ]": "[ Sim ]",
+"Click to confirm": "Clique para confirmar",
+
+"[ No ]": "[ Não ]",
+"Click to go back": "Clique para voltar",
+
+# Grant trophies confirmation message
+"All players have been granted trophies.": "Todos os jogadores receberam troféus.",
+"Players that have been granted trophies by this function in the past did not receive any now. To manually re-enable trophy granting for them use the command:": "Jogadores que receberam troféus por esta função no passado não receberam nenhum agora. Para reativar manualmente a concessão de troféus para eles, use o comando:",
+"Click to insert command into chat": "Clique para inserir o comando no chat",
+
+
+
+## All advancements added in version 1.13 are here
+"Dripstone Drop": "Gota de gotejamento",
+"Survive a fall of at least 10 blocks onto some Pointed Dripstone": "Sobreviva a uma queda de pelo menos 10 blocos em alguma pedra gotejante pontiaguda",
+
+"Lucky Break": "Golpe de sorte",
+"Survive a long fall with just a sliver of health remaining": "Sobreviva a uma longa queda com apenas um pouco de vida restante",
+
+"Caves & Cliffs": "Cavernas e Montanhas",
+"Free fall from the top of the world (build limit) to the bottom of the world and survive": "Caia do topo do mundo (limite de construção) para o fundo do mundo e sobreviva",
+
+"Bottom to Top": "De baixo para cima",
+"Place every cave block at the very top of the world": "Coloque cada bloco de caverna no topo do mundo",
+
+
+"A Good Start": "Um bom começo",
+"Chop down enough trees to collect a full stack of one log type": "Derrube árvores suficientes para coletar um pack completo de um tipo de tronco",
+
+
+"Squid Game": "Squid Game",
+"Hunt enough Squids to collect a stack of Ink Sacs": "Cace lulas suficientes para coletar um pack de sacos de tinta",
+
+
+"Blackberry Market": "Blackberry Market",
+"Trade some sweet berries to a Fox with an emerald in their mouth": "Troque algumas bagas doces com uma raposa com uma esmeralda na boca",
+
+
+"We’re Going on a Bear Hunt": "Vamos caçar ursos",
+"Get hunted by a Polar Bear": "Seja caçado por um urso polar",
+
+"Dive Bomb": "Bomba de mergulho",
+"Dive into water from a cliff at least 50 blocks tall": "Mergulhe na água de uma montanha com pelo menos 50 blocos de altura",
+
+"Captain America": "Capitão América",
+"Get completely frozen inside two blocks of Powder Snow for a loooong time.": "Fique completamente congelado dentro de dois blocos de pó de neve por muuuuito tempo.",
+"Big question is: Can you do this all day?": "A grande questão é: você pode fazer isso o dia todo?",
+
+
+"Map Room": "Sala do mapa",
+"Place a map in an item frame": "Coloque um mapa em uma moldura",
+
+"Sound the Alarm!": "Toque o alarme!",
+"Ring the bell with a hostile enemy in the village": "Toque a campainha com um inimigo hostil na vila",
+
+"The Sound of Music": "O som da música",
+"Make the Meadows come alive with the sound of music from a jukebox": "Dê vida ao bioma Prado com o som da música de uma jukebox",
+
+
+"Click!": "Clique!",
+"Place and push a button": "Coloque e aperte um botão",
+
+"Leveraging Synergy": "Aproveitando a sinergia",
+"Flick a lever": "Levante uma alavanca",
+
+"On A Rail": "Em um trilho",
+"Travel by Minecart in a straight line to at least 1 km from where you started": "Viaje de Minecart em linha reta até pelo menos 1 km de onde você começou",
+
+
+"Baron of Blacksmiths": "Barão dos ferreiros",
+"Get a stack of regular, chipped and damaged Anvils": "Pegue um pack de bigornas normais, rachadas e danificadas",
+
+
+"65": "65",
+"hours of walking": "horas de caminhada",
+"Walk 1000km. The statistics tab shall no longer be the grindy super challenges tab": "Caminhe 1000km. A aba de estatísticas não será mais a aba de superdesafios",
+
+
+"Feels Like Home": "Se sente em casa",
+"Take a Strider for a loooong ride on a lava lake in the Overworld": "Pegue um Strider e ande por um looongo tempo em um lago de lava no mundo superior",
+
+"Gilded Miner": "Mineiro dourado",
+"Mine a stack of Gilded Blackstone from Bastion Remnants": "Extraia um pack de Pedra Negra Dourada de um Bastião em ruínas",
+
+"Astrobrute": "Astrobruto",
+"Send a Piglin Brute to the End and kill it there before it zombifies": "Envie um Piglin Brute para o Fim e mate-o antes que ele se transforme em zumbi",
+
+"Ludicrous Speed!": "Velocidade ridícula!",
+"Achieve an absolutely insane speed by combining the Speed II effect, Dolphin’s Grace, Depth Strider III, Soul Speed III and sprinting": "Alcance uma velocidade absolutamente insana combinando o efeito Velocidade II, Graça marinha, Passos profundos III, Velocidade das almas III e correndo",
+
+
+"Stealth Takedown": "Furtividade derrubada",
+"Dispatch a Creeper at melee range while you are invisible": "Dispare um Creeper em combate corpo a corpo enquanto você está invisível",
+
+"Dogfight": "Luta de cães",
+"Kill a Skeleton or Stray while both you and it have levitation": "Mate um Esqueleto ou Esqueleto-errante enquanto você e ele estão em levitação",
+
+"Riddle Me This": "Enigma-me isso",
+"The first is to smith a compass that vanishes": "O primeiro é forjar uma bússola que desaparece",
+"The second is to slay a corpse that fishes": "A segunda é matar um cadáver que pesca",
+"The third is to travel on an upside-down mount": "O terceiro é viajar em uma montagem de cabeça para baixo",
+"The fourth is to take a temple tripwire into account": "A quarta é levar em consideração um gancho do templo",
+"The fifth is to be invisible yet be visible everywhere": "O quinto é ser invisível, mas visível em todos os lugares",
+"The sixth is to return the product of a fowl in mid-air": "O sexto é devolver o produto de uma ave no ar",
+"The seventh is to allow a child to commit the act of stealing": "O sétimo é permitir que uma criança cometa o ato de roubar",
+"The eighth is to smite a Wither with splash healing": "O oitavo é golpear um Wither com poção de respingos de cura",
+"The ninth is to be a pirate; parrot, spyglass, map, and boat": "O nono é ser pirata; papagaio, luneta, mapa e barco",
+"The tenth, if you can achieve it, you will be the G.O.A.T.": "O décimo, se você conseguir, será o C.A.B.R.A.",
+
+# Riddle Me This messages and hints
+"First line complete…": "Primeira linha completa...",
+"Second line complete…": "Segunda linha completa...",
+"Third line complete…": "Terceira linha completa...",
+"Fourth line complete…": "Quarta linha completa...",
+"Fifth line complete…": "Quinta linha completa...",
+"Sixth line complete…": "Sexta linha completa...",
+"Seventh line complete…": "Sétima linha completa...",
+"Eighth line complete…": "Oitava linha completa...",
+"Ninth line complete…": "Nona linha completa...",
+
+"Tenth Parchment": "Décimo pergaminho",
+"Place Warped Buttons to number a thousand": "Coloque os botões distorcidos em mil",
+"For this was the thousandth item added to the game": "Pois este foi o milésimo item adicionado ao jogo",
+"Like how this is the thousandth advancement added to the pack": "Tipo, como esta é a milésima conquista adicionada ao datapack",
+
+
+# Renamed advancements and description changes in 1.12
+"All Aboard!": "Todos a bordo!",
+"Craft and board a Minecart for railway journeys": "Crie e embarque em um Minecart para viagens em trilhos",
+
+"Star Trader": "Comerciante estrela",
+"Trade with a villager at the build height limit": "Negocie com um aldeão no limite de altura de construção",
+
+"High Feet": "Pés altos",
+"Discover every mountain biome": "Descubra todos os biomas montanhosos",
+
+"Natural Sprinter": "Corredor natural",
+"Sprint 10km": "Corra 10km",
+
+"Lichen Subscribe": "Líquen Inscrever-se",
+
+"Atlantis?": "Atlantis?",
+
+"Ahoy!": "Ahoy!",
+
+"Foliage": "Folhagem",
+
+"How Did We Get Here?": "Como chegamos aqui?",
+
+
+# Description changes
+
+# # Adventuring Time
+"Discover every surface biome in the Overworld": "Descubra todos os biomas de superfície no mundo superior",
+
+# # Explorer of Worlds
+"Discover every biome in every dimension": "Descubra todos os biomas em todas as dimensões",
+
+# # Trampoline
+"Bounce onto a slime block from at least 30 blocks high": "Salte sobre um bloco de slime de pelo menos 30 blocos de altura",
+
+# # Cool Kids
+"Craft and wear a leather jacket": "Crie e use uma jaqueta de couro",
+
+# # Fashion Statement
+"Dye some leather pants with one color, then put them on": "Pinte algumas calças de couro com uma cor e, em seguida, coloque-as",
+
+# # Fuel Engine
+"Craft a Minecart with Furnace and use coal or charcoal to send it chugging": "Crie um Minecart com Fornalha e use carvão ou carvão vegetal para enviá-la",
+
+# # Troll Chest
+"Trigger a trapped chest. Good for trolling your friends!": "Ative um baú com armadilha. Bom para trollar seus amigos!",
+
+# # Tripping Over
+"Place a line of string between two tripwire hooks, and trigger it": "Coloque uma linha entre dois ganchos de armadilha e acione-a",
+
+# # Under Pressure
+"Step on a pressure plate": "Pise em uma placa de pressão",
+
+# # Let It Go!
+"Using Frost Walker boots, walk on frozen water over a deep ocean": "Usando botas com Passos gelados, ande em águas congeladas sobre um oceano profundo",
+
+# # Do A Barrel Roll!
+"Use Riptide to give yourself a boost": "Use Correnteza para dar um impulso a si mesmo",
+
+# # Kilometre Walk
+"Travel at least 1000 blocks from the centre of the world in any direction.": "Viaje pelo menos 1000 blocos do centro do mundo em qualquer direção.",
+
+# # Ten Thousand Blocks
+"Travel at least 10,000 blocks from the centre of the world in any direction.": "Viaje pelo menos 10.000 blocos do centro do mundo em qualquer direção.",
+
+# # Olympic Gold Medallist
+"Swim 50km": "Nade 50km",
+
+# # Global Railway Network
+"Ride 50km in a minecart": "Percorra 50km em um minecart",
+
+# # Who needs cars?
+"Walk 50km": "Caminhe 50km",
+
+# # I enjoy long walks and playing MC
+"Walk 250km": "Caminhe 250km",
+
+# # Time to Chop!
+"Use planks and sticks to make an axe": "Use tábuas e gravetos para fazer um machado",
+
+
+
+# Custom Advancement Completion messages
+# # Has the syntax "<Player> has made the advancement <Advancement's name>"
+"%1$s has made the advancement %2$s%3$s%4$s": "%1$s completou a conquista %2$s%3$s%4$s",
+"%1$s has reached the goal %2$s%3$s%4$s": "%1$s atingiu a meta %2$s%3$s%4$s",
+"%1$s has completed the challenge %2$s%3$s%4$s": "%1$s completou o desafio %2$s%3$s%4$s",
+"%1$s has completed the super challenge %2$s%3$s%4$s": "%1$s completou o super desafio %2$s%3$s%4$s",
+"%1$s has found the hidden advancement %2$s%3$s%4$s": "%1$s encontrou a conquista oculta %2$s%3$s%4$s",
+
+# # # There are 5 %1$s's here for the advancement "65 Hours of Walking"
+"%1$s has found the hidden advancement %2$s%3$s%4$s%5$s%6$s": "%1$s encontrou a conquista oculta %2$s%3$s%4$s%5$s%6$s",
+
+# # "For milestones, it goes <Player> has completed every advancement in the <Tab name> tab, earning them the advancement <Milestone's name>"
+"%1$s has completed every advancement in the %2$s tab, earning them the advancement %3$s%4$s%5$s": "%1$s completou todos as conquistas na tabela de %2$s, ganhando-lhes a conquista %3$s%4$s%5$s",
+
+# # # Note: Because The End already has a 'the' in it, this line is exclusively used in "End Milestone"
+"%1$s has completed every advancement in %2$s tab, earning them the advancement %3$s%4$s%5$s": "%1$s completou todos as conquistas na tabela de %2$s, ganhando-lhes a conquista %3$s%4$s%5$s",
+
+# # Advancement Legend
+"%1$s has completed every advancement in BlazeandCave's Advancements Pack, earning them the coveted title of %2$s%3$s%4$s": "%1$s completou todas as conquistas do BlazeandCave's Advancements Pack, ganhando-lhes o cobiçado título de %2$s%3$s%4$s",
+
+
+
+# Trophies added in 1.13
+"Azalea Parachute": "Pára-quedas de azaléia",
+"Good thing you didn't need this": "Que bom que você não precisava disso",
+
+"Pyro's Mask": "Máscara de Pyro",
+"One shudders to imagine what inhuman thoughts lie behind that mask": "Um estremece ao imaginar que pensamentos desumanos estão por trás dessa máscara",
+
+"Deepslate Emerald Ore": "Minério de esmeralda ardósia",
+"A rare specimen of emeralds embedded in the deepest of caves": "Um raro espécime de esmeraldas incrustado nas cavernas mais profundas",
+
+"Flex Tape": "Fita flexível",
+"To show the power of Flex Tape, you sawed all the blocks in half!": "Para mostrar o poder da fita flexível, você cortou todos os blocos ao meio!",
+"#NotSponsored": "#NãoPatrocinado",
+
+"Stairway to Heaven": "Escada para o céu",
+"Whatever you do, don't listen to it backwards!": "Faça o que fizer, não dê ouvidos ao contrário!",
+
+"Hot Potato": "Batata quente",
+"Whooo, wiggy wiggy wiggy": "Uau, wiggy wiggy wiggy",
+"Gimme that, gimme that, hoo": "Me dê isso, me dê aquilo, hoo",
+
+"Captain America's Shield": "Escudo do Capitão América",
+"Unfortunately there are no circles in Minecraft,": "Infelizmente, não há círculos no Minecraft,",
+"meaning this shield is not very aerodynamic for throwing": "o que significa que este escudo não é muito aerodinâmico para arremessar",
+
+"Harp String": "Corda de harpa",
+"Playing so much must be wearing out your strings...": "Jogar tanto deve estar desgastando suas cordas...",
+"Here! Have an extra.": "Aqui! Tenha um extra.",
+
+"Roller Coaster Cart": "Carrinho de montanha-russa",
+"Hey Ferb, I know what we're gonna do today!": "Ei Ferb, eu sei o que vamos fazer hoje!",
+
+"Time Machine": "Máquina do tempo",
+"You'll need it to get back all those hours you spent": "Você precisará dele para recuperar todas as horas que você gastou",
+
+"Plaid Block": "Bloco xadrez",
+"They've gone to plaid!": "Eles foram para o xadrez!",
+
+"Stink Bomb": "Bomba de fedor",
+"P.U!": "P.U!",
+
+"Amalgamation": "Amalgamação",
+"The sheer gravitational forces of killing these mobs": "As forças gravitacionais absolutas de matar esses mobs",
+"appears to have morphed them all together": "",
+
+"Hubble Space Telescope": "Telescópio espacial Hubble",
+"A telescope orbiting in outer space,": "Um telescópio orbitando no espaço sideral,",
+"it can see to infinity and beyond": "pode ver até o infinito e além",
+
+"Golden Advancement Plaque": "Placa de conquista de ouro",
+"Awarded to this datapack for reaching 1000 advancements": "Concedido a este datapack por alcançar 1000 conquistas",
+
+# # The Toilet trophy for 'WHERE'S THE HONEY LEBOWSKI' received a description change
+"WHERE'S THE HONEY?!!!": "ONDE ESTÁ O MEL?!!!",
+
+
+# Configuration menu additions in 1.13
+"Cooperative Mode currently enabled": "Modo cooperativo atualmente ativado",
+"Cooperative Mode currently disabled": "Modo cooperativo atualmente desativado",
+
+"Cooperative Mode makes it so that whenever a player gets an advancement, that advancement will be shared across all players.": "O Modo Cooperativo faz com que, sempre que um jogador obtenha uma conquista, essa conqsuita seja compartilhada por todos os jogadores.",
+"Everyone's currently-obtained advancements will be shared between all players immediately when turning this setting on.": "",
+"While the mode can be turned off, shared advancements cannot be easily revoked.": "As conquistas obtidas por todos serão compartilhados entre todos os jogadores imediatamente ao ativar esta configuração.",
+
+
+"Click to enable for all players": "Clique para habilitar para todos os jogadores",
+"Click to enable only for the first player to get an advancement": "Clique para habilitar apenas para o primeiro jogador obter uma conquista",
+"Click to disable for all players": "Clique para desativar para todos os jogadores",
+
+# The syntax for these text strings is e.g. 'Item Rewards: All players'
+"Item Rewards:": "Recompensas de itens",
+"Experience Rewards:": "Recompensas de experiência",
+"Trophies:": "Troféus",
+
+"All players": "Todos os jogadores",
+"First player only": "Primeiro jogador apenas",
+"Disabled": "Desativado",
+#
+
+"Advancement Completion Message Settings": "Configurações de mensagem de conclusão de conquista",
+"Advancement Scoreboard Display Settings": "Configurações de exibição do painel de avaliação de conquista",
+
+"Click to view": "Clique para ver",
+
+"Display Advancements Scoreboard on tab list": "Exibir painel de avaliação de conquistas na lista de guias",
+"Display First Advancements Scoreboard on tab list": "Exibir painel de pontuação das primeiras conquistas na lista de guias",
+
+"Display Advancements Scoreboard on sidebar": "Exibir placar de conquistas na barra lateral",
+"Display First Advancements Scoreboard on sidebar": "Exibir o placar das primeiras conquistas na barra lateral",
+
+"The Advancements Scoreboard keeps track of how many advancements each player has obtained": "O placar de conquistas mantém o controle de quantas conquistas cada jogador obteve",
+"The First Advancements Scoreboard keeps track of how many advancements each player was the first to obtain": "O placar das primeiras conquistas mantém o controle de quantas conquistas cada jogador foi o primeiro a obter",
+"Click to display": "Clique para exibir",
+"Click to clear": "Clique para limpar",
+
+# The syntax for these text strings is e.g. 'Task Advancements: All players'
+"Task": "Tarefa",
+"Goal": "Meta",
+"Challenge": "Desafio",
+"Super Challenges": "Super Desafios",
+"Milestone": "Marco",
+
+"Advancements:": "Conquistas",
+#
+
+"Turn all messages on": "Ligue todas as mensagens",
+"Turn all messages off": "Desligue todas as mensagens",
+"Set all messages to first-player only (recommended and default for Cooperative Mode)": "Defina todas as mensagens apenas para o primeiro jogador (recomendado e padrão para o modo cooperativo)",
+"Turn all on except tasks (recommended for large servers)": "Ligue tudo, exceto tarefas (recomendado para grandes servidores)",
+"Turn all on except tasks and goals": "Ligue tudo, exceto tarefas e metas",
+
+"Click to set": "Clique para definir",
+
+
+"Go back to main config menu": "Voltar para o menu de configuração principal"
+
+
+
+
+# All advancements and trophies that get added in versions 1.14 or later will be added down here for easy locating by translators who wish to update their language file
+}

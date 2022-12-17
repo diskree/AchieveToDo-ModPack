@@ -1,0 +1,20 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:dragon_head"
+		},
+		"title": {"translate":"Dragon vs Dragon II"},
+		"description": {"color":"#FF2A2A","translate":"Defeat the Ender Dragon while wearing a dragon head... without touching the ground"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:challenges/were_in_the_endgame_now",
+	"rewards": {
+		"function": "bc_rewards:challenges/dragon_vs_dragon_ii_electric_boogaloo"
+	},		
+	"criteria": {
+		"ten_withers": {
+			"trigger": "minecraft:impossible"
+		}
+	}
+}

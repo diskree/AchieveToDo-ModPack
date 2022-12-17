@@ -1,0 +1,100 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:mud_bricks"
+		},
+		"title": {"translate":"Elmer Mudd"},
+		"description": {"color":"green","translate":"Craft or obtain all forms of Mud and Mud Brick"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:building/stuck_in_the_mud",
+	"rewards": {
+		"function": "bc_rewards:building/elmer_mudd"
+	},		
+	"criteria": {
+		"mud": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mud"
+						]
+					}
+				]
+			}
+		},
+		"packed_mud": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:packed_mud"
+						]
+					}
+				]
+			}
+		},
+		"mud_bricks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mud_bricks"
+						]
+					}
+				]
+			}
+		},
+		"mud_brick_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mud_brick_slab"
+						]
+					}
+				]
+			}
+		},
+		"mud_brick_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mud_brick_stairs"
+						]
+					}
+				]
+			}
+		},
+		"mud_brick_wall": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mud_brick_wall"
+						]
+					}
+				]
+			}
+		},
+		"muddy_mangrove_roots": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:muddy_mangrove_roots"
+						]
+					}
+				]
+			}
+		}
+	}		
+}

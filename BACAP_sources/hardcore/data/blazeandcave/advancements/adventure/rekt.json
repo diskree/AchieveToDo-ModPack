@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:iron_bars"
+        },
+        "title": {"translate":"Rekt!"},
+        "description": {"translate":"Get attacked by a natural iron golem defending its village"}
+    },
+    "parent": "blazeandcave:adventure/murderer",
+    "rewards": {
+        "function": "bc_rewards:adventure/rekt"
+    },		
+    "criteria": {
+        "iron_golem": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "source_entity": {
+						"type": "iron_golem"
+					}
+                }
+            }
+        }
+    }
+}

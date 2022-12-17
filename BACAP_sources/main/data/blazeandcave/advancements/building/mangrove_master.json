@@ -1,0 +1,209 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:mangrove_propagule"
+		},
+		"title": {"translate":"Mangrove Master"},
+		"description": {"color":"#75E1FF","translate":"Craft every item made out of mangrove wood"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:building/professor_dark_oak",
+	"rewards": {
+		"function": "bc_rewards:building/mangrove_master"
+	},		
+	"criteria": {
+		"mangrove_planks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_planks"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_log": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_log"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_wood": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_wood"
+						]
+					}
+				]
+			}
+		},
+		"stripped_mangrove_log": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:stripped_mangrove_log"
+						]
+					}
+				]
+			}
+		},
+		"stripped_mangrove_wood": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:stripped_mangrove_wood"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_slab"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_pressure_plate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_pressure_plate"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_fence": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_fence"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_trapdoor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_trapdoor"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_fence_gate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_fence_gate"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_stairs"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_button": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_button"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_door": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_door"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_boat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_boat"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_chest_boat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_chest_boat"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_sign"
+						]
+					}
+				]
+			}
+		}
+	}
+}

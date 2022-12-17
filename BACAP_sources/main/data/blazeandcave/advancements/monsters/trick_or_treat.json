@@ -1,0 +1,31 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:carved_pumpkin"
+		},
+		"title": {"translate":"Trick or Treat!"},
+		"description": {"color":"#75E1FF","translate":"Defeat a mob wearing a pumpkin"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:monsters/desert_nomad",
+	"rewards": {
+		"function": "bc_rewards:monsters/trick_or_treat"
+	},		
+	"criteria": {
+		"trick_or_treat": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"equipment": {
+						"head": {
+							"items": [
+								"minecraft:carved_pumpkin"
+							]
+						}
+					}
+				}
+			}
+		}		
+	}
+}

@@ -1,0 +1,101 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:wither_skeleton_skull"
+		},
+		"title": {"translate":"Camouflage"},
+		"description": {"color":"dark_purple","translate":"Kill a mob while wearing the same type of mob head"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:monsters/creepy_heads",
+	"rewards": {
+		"function": "bc_rewards:monsters/camouflage"
+	},		
+	"criteria": {
+		"creeper": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "creeper"
+				},
+				"killing_blow": {
+					"source_entity": {
+						"equipment": {
+							"head": {
+								"items": [
+									"minecraft:creeper_head"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"zombie": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "zombie"
+				},
+				"killing_blow": {
+					"source_entity": {
+						"equipment": {
+							"head": {
+								"items": [
+									"minecraft:zombie_head"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"skeleton": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "skeleton"
+				},
+				"killing_blow": {
+					"source_entity": {
+						"equipment": {
+							"head": {
+								"items": [
+									"minecraft:skeleton_skull"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"wither_skeleton": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "wither_skeleton"
+				},
+				"killing_blow": {
+					"source_entity": {
+						"equipment": {
+							"head": {
+								"items": [
+									"minecraft:wither_skeleton_skull"
+								]
+							}
+						}
+					}
+				}
+			}
+		}	
+	},
+	"requirements": [
+		[
+			"creeper",
+			"zombie",
+			"skeleton",
+			"wither_skeleton"
+		]
+	]
+}

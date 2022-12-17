@@ -1,0 +1,25 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:sculk_sensor"
+		},
+		"title": {"translate":"Stealth is Optional"},
+		"description": {"color":"#75E1FF","translate":"Overcome a Warden in the deepest and darkest of caves"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:monsters/blind_stare",
+	"rewards": {
+		"function": "bc_rewards:monsters/stealth_is_optional"
+	},		
+	"criteria": {
+		"warden": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "warden"
+				}
+			}
+		}
+	}
+}

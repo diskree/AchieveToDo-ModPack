@@ -1,0 +1,27 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:frogspawn"
+		},
+		"title": {"translate":"Frog Family"},
+		"description": {"color":"green","translate":"Breed two Frogs together using slimeballs"},
+		"announce_to_chat": "true"
+	},
+	"parent": "minecraft:husbandry/root",
+	"rewards": {
+		"function": "bc_rewards:animal/frog_family"
+	},		
+	"criteria": {
+		"frog": {
+			"trigger": "minecraft:bred_animals",
+			"conditions": {
+				"parent": {
+					"type": "minecraft:frog"
+				},
+				"partner": {
+					"type": "minecraft:frog"
+				}
+			}
+		}
+	}
+}

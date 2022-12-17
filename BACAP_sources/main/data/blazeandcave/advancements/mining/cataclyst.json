@@ -1,0 +1,25 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:nether_star"
+		},
+		"title": {"translate":"Cataclyst"},
+		"description": {"color":"dark_purple","translate":"Kill a Wither near a Sculk Catalyst to unleash a large explosion of sculk"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:mining/the_block_of_eternal_screaming",
+	"rewards": {
+		"function": "bc_rewards:mining/cataclyst"
+	},
+	"criteria": {
+		"kill_mob_near_sculk_catalyst": {
+			"trigger": "minecraft:kill_mob_near_sculk_catalyst",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:wither"
+				}
+			}
+		}
+	}
+}

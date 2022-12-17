@@ -1,0 +1,29 @@
+{
+	"rewards": {
+		"function": "blazeandcave:riddle/eighth_line"
+	},	
+	"criteria": {
+		"wither": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "wither"
+				},
+				"killing_blow": {
+					"is_magic": "true",
+					"direct_entity": {
+						"type": "minecraft:potion"
+					}
+				},
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:technical/riddle_seventh_line": "true"
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,2 @@
+give @s minecraft:pink_concrete{Enchantments:[{id:"minecraft:unbreaking",lvl:1}],Trophy:1,CustomModelData:131,HideFlags:33,display:{Name:"{\"italic\":\"false\",\"bold\":\"true\",\"color\":\"#C85887\",\"translate\":\"Mobbo\"}",Lore:["{\"color\":\"#C85887\",\"translate\":\"They are your bestest friend!\"}","{\"text\":\" \"}","{\"color\":\"gray\",\"translate\":\"Awarded for achieving\"}","{\"italic\":\"false\",\"color\":\"#75E1FF\",\"translate\":\"The Block of Eternal Screaming\"}"]}} 1
+tellraw @s {"color":"gold","text":" +1 ","extra":[{"translate":"Mobbo"}]}

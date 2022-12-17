@@ -1,0 +1,35 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:iron_sword"
+		},
+		"title": {"translate":"Budget Vex"},
+		"description": {"color":"green","translate":"Give an Allay an Iron Sword"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:adventure/evelyn_evergreen",
+	"rewards": {
+		"function": "bc_rewards:adventure/budget_vex"
+	},		
+	"criteria": {
+		"iron_sword": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"predicate": {
+							"type": "minecraft:allay"
+						},
+						"entity": "this"
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:iron_sword"
+					]
+				}
+			}
+		}
+	}
+}

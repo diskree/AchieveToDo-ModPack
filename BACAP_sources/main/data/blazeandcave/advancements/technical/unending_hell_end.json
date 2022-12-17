@@ -1,0 +1,33 @@
+{	
+	"criteria": {
+		"unending_hell_end": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"dimension": "minecraft:the_end"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

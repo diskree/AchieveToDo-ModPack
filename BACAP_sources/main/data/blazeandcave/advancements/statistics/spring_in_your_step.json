@@ -1,0 +1,35 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:oak_fence"
+		},
+		"title": {"translate":"Spring in your step"},
+		"description": {"color":"green","translate":"Jump 1000 times"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:statistics/root",
+	"rewards": {
+		"function": "bc_rewards:statistics/spring_in_your_step"
+	},		
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"stats": [
+							{
+								"type": "minecraft:custom",
+								"stat": "minecraft:jump",
+								"value": {
+									"min": 1000
+								}
+							}
+						]
+					}
+				}
+			}
+		}
+	}
+}

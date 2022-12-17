@@ -1,0 +1,111 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:obsidian"
+		},
+		"title": {"translate":"From Whence It Came!"},
+		"description": {"color":"green","translate":"Find a broken Nether Portal in the Nether"},
+		"announce_to_chat": "true"
+	},
+	"parent": "minecraft:nether/root",
+	"rewards": {
+		"function": "bc_rewards:nether/from_whence_it_came"
+	},		
+	"criteria": {
+		"ruined_portal": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:alternative",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"structure": "minecraft:ruined_portal",
+										"dimension": "the_nether"
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"structure": "minecraft:ruined_portal_desert",
+										"dimension": "the_nether"
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"structure": "minecraft:ruined_portal_jungle",
+										"dimension": "the_nether"
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"structure": "minecraft:ruined_portal_mountain",
+										"dimension": "the_nether"
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"structure": "minecraft:ruined_portal_nether",
+										"dimension": "the_nether"
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"structure": "minecraft:ruined_portal_ocean",
+										"dimension": "the_nether"
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"structure": "minecraft:ruined_portal_swamp",
+										"dimension": "the_nether"
+									}
+								}
+							}
+						]
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}		
+	}
+}

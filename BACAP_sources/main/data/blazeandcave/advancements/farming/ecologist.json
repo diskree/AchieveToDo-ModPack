@@ -1,0 +1,71 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:jungle_sapling"
+		},
+		"title": {"translate":"Ecologist"},
+		"description": {"color":"#75E1FF","translate":"Plant down all types of saplings"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:farming/bapple",
+	"rewards": {
+		"function": "bc_rewards:farming/ecologist"
+	},
+	"criteria": {
+		"oak_sapling": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:oak_sapling"
+			}
+		},
+		"spruce_sapling": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:spruce_sapling"
+			}
+		},
+		"birch_sapling": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:birch_sapling"
+			}
+		},
+		"jungle_sapling": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:jungle_sapling"
+			}
+		},
+		"acacia_sapling": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:acacia_sapling"
+			}
+		},
+		"dark_oak_sapling": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:dark_oak_sapling"
+			}
+		},
+		"azalea": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:azalea"
+			}
+		},
+		"flowering_azalea": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:flowering_azalea"
+			}
+		},
+		"mangrove_propagule": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:mangrove_propagule"
+			}
+		}
+	}
+}

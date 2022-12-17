@@ -1,0 +1,24 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:sculk_catalyst"
+		},
+		"title": {"translate":"Now that's a lot of damage"},
+		"description": {"color":"green","translate":"Succumb to the Warden"},
+		"announce_to_chat": "true"
+	},
+	"parent": "minecraft:adventure/kill_a_mob",
+	"rewards": {
+		"function": "bc_rewards:monsters/now_thats_a_lot_of_damage"
+	},		
+	"criteria": {
+		"warden": {
+			"trigger": "minecraft:entity_killed_player",
+			"conditions": {
+				"entity": {
+					"type": "warden"
+				}
+			}
+		}
+	}
+}

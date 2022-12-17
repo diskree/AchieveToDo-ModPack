@@ -1,0 +1,24 @@
+{
+	"rewards": {
+		"function": "blazeandcave:riddle/fifth_line"
+	},		
+	"criteria": {
+		"fifth_line": {
+			"trigger": "minecraft:effects_changed",
+			"conditions": {
+				"effects": {
+					"minecraft:invisibility": {},
+					"minecraft:glowing": {}
+				},
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:technical/riddle_fourth_line": "true"
+						}
+					}
+				}
+			}
+		}
+	}
+}

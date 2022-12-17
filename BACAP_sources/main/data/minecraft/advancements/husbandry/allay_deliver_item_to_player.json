@@ -1,0 +1,30 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:cookie"
+		},
+		"title": {"translate":"You’ve Got a Friend in Me"},
+		"description": {"color":"green","translate":"Have an Allay deliver items to you"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:adventure/allayance",
+	"rewards": {
+		"function": "bc_rewards:adventure/youve_got_a_friend_in_me"
+	},		
+	"criteria": {
+		"allay_deliver_item_to_player": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:allay"
+						}
+					}
+				]
+			}
+		}
+	}
+}

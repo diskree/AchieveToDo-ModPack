@@ -1,0 +1,28 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:item_frame"
+		},
+		"title": {"translate":"Help! I've been framed!"},
+		"description": {"color":"green","translate":"Craft an item frame for displaying your items"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:building/a_masterpiece",
+	"rewards": {
+		"function": "bc_rewards:building/display_your_items_for_all_to_see"
+	},		
+	"criteria": {
+		"item_frame": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:item_frame"
+						]
+					}
+				]
+			}
+		}
+	}
+}

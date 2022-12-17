@@ -1,0 +1,35 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:spruce_sapling"
+		},
+		"title": {"translate":"Evelyn Evergreen"},
+		"description": {"color":"green","translate":"Have an Allay deliver Spruce Saplings to you while chopping down trees"},
+		"announce_to_chat": "true"
+	},
+	"parent": "minecraft:husbandry/allay_deliver_item_to_player",
+	"rewards": {
+		"function": "bc_rewards:adventure/evelyn_evergreen"
+	},		
+	"criteria": {
+		"spruce_sapling": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:allay"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:spruce_sapling"
+					]
+				}
+			}
+		}
+	}
+}

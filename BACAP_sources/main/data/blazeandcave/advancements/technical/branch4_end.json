@@ -1,0 +1,18 @@
+{
+	"parent": "blazeandcave:challenges/abyss_lord",	
+	"criteria": {
+		"root": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:challenges/root": "true"
+						}
+					}
+				}
+			}
+		}
+	}
+}

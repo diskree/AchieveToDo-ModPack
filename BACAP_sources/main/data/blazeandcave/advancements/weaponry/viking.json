@@ -1,0 +1,39 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:stone_axe"
+		},
+		"title": {"translate":"Viking"},
+		"description": {"color":"green","translate":"Attack a mob using an axe"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:weaponry/root",
+	"rewards": {
+		"function": "bc_rewards:weaponry/viking"
+	},		
+	"criteria": {
+		"axe": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"distance": {
+						"absolute": {
+							"max": 5
+						}
+					}
+				},
+				"damage": {
+					"type": {
+						"source_entity": {
+							"equipment": {
+								"mainhand": {
+									"tag": "minecraft:axes"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:sculk_catalyst"
+		},
+		"title": {"translate":"It spreads!"},
+		"description": {"color":"green","translate":"Kill a mob near a Sculk Catalyst"},
+		"announce_to_chat": "true"
+	},
+	"parent": "minecraft:adventure/avoid_vibration",
+	"rewards": {
+		"function": "bc_rewards:mining/it_spreads"
+	},
+	"criteria": {
+		"kill_mob_near_sculk_catalyst": {
+			"trigger": "minecraft:kill_mob_near_sculk_catalyst"
+		}
+	}
+}

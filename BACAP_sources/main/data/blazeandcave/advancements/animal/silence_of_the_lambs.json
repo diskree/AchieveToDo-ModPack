@@ -1,0 +1,28 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:gray_wool"
+		},
+		"title": {"translate":"Silence of the Lambs"},
+		"description": {"color":"#75E1FF","translate":"Bring a Sheep into an Ancient City and silence it"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:animal/loud_and_proud",
+	"rewards": {
+		"function": "bc_rewards:animal/silence_of_the_lambs"
+	},		
+	"criteria": {
+		"rabbit": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "sheep",
+					"location": {
+						"structure": "ancient_city"
+					}
+				}
+			}
+		}
+	}
+}

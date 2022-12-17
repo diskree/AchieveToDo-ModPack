@@ -1,0 +1,24 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:oak_fence"
+		},
+		"title": {"translate":"En Garde"},
+		"description": {"color":"green","translate":"Erect some fencing"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:building/your_door_was_locked",
+	"rewards": {
+		"function": "bc_rewards:building/en_garde"
+	},		
+	"criteria": {
+		"fence": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"item": {
+					"tag": "minecraft:fences"
+				}
+			}
+		}
+	}	
+}

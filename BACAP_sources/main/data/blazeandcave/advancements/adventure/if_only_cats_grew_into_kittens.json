@@ -1,0 +1,27 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:cat_spawn_egg"
+		},
+		"title": {"translate":"If only cats grew into kittens"},
+		"description": {"color":"green","translate":"Breed two cats together to get a kitty!"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:adventure/crazy_cat_lady",
+	"rewards": {
+		"function": "bc_rewards:adventure/if_only_cats_grew_into_kittens"
+	},		
+	"criteria": {
+		"cat": {
+			"trigger": "minecraft:bred_animals",
+			"conditions": {
+				"parent": {
+					"type": "minecraft:cat"
+				},
+				"partner": {
+					"type": "minecraft:cat"
+				}
+			}
+		}
+	}
+}

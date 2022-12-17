@@ -1,0 +1,3492 @@
+{
+# BlazeandCave's Advancements Pack Language File
+ 
+# How to use: Name and descriptions of advancement to left of : and put translation to right of :, inside the speech marks "" like this: "Advancement Description"
+# Some advancement titles make use of puns that would work in English but probably not in other languages. Be creative if you wish if you can find any puns in foreign languages.
+
+# This file will be updated with new advancements with each new update.
+# Currently the text that appears with reward functions are not translatable - support for translating the reward functions messages will come in a later update.
+
+# Language: Turkish / Türkçe (Türkiye)
+# Author: 0yiqitozturk / Yiğit Efe Öztürk
+# Pack version supported: 1.11.5
+
+# All language entries are organised in alphabetical order of file name as of 1.3
+# All new advancements added in updates later than 1.3 (1.4, 1.5 and so on) will be put at the bottom of the file for easy locating and adding by translators
+
+# Adventuring tab as of 1.3
+
+"Adventuring Time": "Macera Zamanı!",
+"Discover every biome": "Tüm biyomları keşfet",
+
+"Boaty McBoatface": "Barbaros Hayreddin Paşa",
+"Craft a boat for sailing on the high seas": "Açık denizlere yelken açmak için bir tekne yap",
+
+"Hired Help": "Kiralık Yardımcı",
+"Summon an Iron Golem to help defend a village": "Köyü korumaya yardım etmesi için bir Iron Golem yap",
+
+"Cold Feet": "Soğuk Isırığı",
+"Discover every cold biome": "Tüm soğuk biyomları keşfet",
+
+"Disc Jockey": "Averaj Müzik Zevk Alıcısı",
+"Collect all 12 music discs": "12 müzik diskini topla",
+
+"Do You Want to Trade?": "Takasa Ne Dersin?",
+"Find an NPC village": "Bir köylü bul",
+
+"Dry Spell": "Kuru Şey",
+"Dry a sponge in a furnace": "Fırında bir sünger kurut",
+
+"Filthy Rich": "Pis Zengin",
+"Make 64 emeralds": "Bir stek zümrüte sahip ol",
+
+"Filthy Stinkin' Rich": "Süslü Zengin",
+"Make 64 emerald blocks": "Bir stek zümrüt bloğu yap",
+
+"Flower Power": "Çiçekçi",
+"Collect all types of flowers": "Tüm çiçek türlerini topla",
+
+"Ghostbuster!": "Hayalet Avcısı",
+"Bust a Vex summoned by an Evoker": "Bir Sinirbozan öldür",
+
+"Grave Robber": "Çöl Hırsızı",
+"Enter a pyramid in a desert": "Bir çöl piramitine gir",
+
+"Heeere's Johnny!": "İntikamcı'dan alınan intikam!",
+"Kill a Vindicator": "Bir İntikamcı öldür",
+
+"House of Psychos": "Psikopatların Evi",
+"Find a Woodland Mansion": "Bir Orman Konağı bul",
+
+"I hereby dub thee...": "Hmm.. isim değişikliği",
+"Obtain a name tag": "Bir isim etiketi bul",
+
+"Just Keep Swimming": "Denize gidiyom gelcen mi?",
+"Go for a swim": "Suya gir",
+
+"Kilometre Walk": "Kilometrelik Yürüyüş",
+"It's not that far in real life": "Spawndan 1km uzaklaş",
+
+"Laser Sharks!": "Parlak Parçacıklar!",
+"Defeat a Guardian": "Bir Gardiyan öldür",
+
+"Magic Book": "Büyülü Kitap",
+"Trade for an Enchanted Book": "Takas karşılığı büyülü kitap al",
+
+"Mapmaker": "Kartografyacı",
+"Craft or trade an empty map": "Boş harita yap ya da takas karşılığı al",
+
+"Monumental": "Anıtsal",
+"Find an Ocean Monument": "Bir Deniz Anıtı bul",
+
+"Music To My Ears": "Kulağımızın pası silinsin",
+"Find a music disc": "Müzik diski bul",
+
+"One with the forest": "Ormanlarla iç içe",
+"Discover every forest biome": "Tüm orman biyomlarını keşfet",
+
+"Overgrown!": "Azman!",
+"Discover every overgrown biome": "Tüm azman biyomları keşfet",
+
+"Overpowered": "Aşırı Güç",
+"Obtain a Notch Apple": "Notch Elma'sı bul",
+
+"Postmortal": "İkinci Bir Şans",
+"Use a Totem of Undying to cheat death": "Ölüme karşı gelmek için Ölmeme Totemi kullan",
+
+"Adventure": "Macera",
+"Adventure and exploration": "Macera ve Keşif",
+
+"Snow Feet": "Karlı Botlar",
+"Discover every snowy biome": "Tüm karlı biyomları keşfet",
+
+"Spear Fishing": "Zıpkınlı Balıkçılık",
+"Kill a Guardian with arrows": "Oklarla bir Gardiyan öldür",
+
+"Tarzan": "Daldan Dala",
+"Swing (or climb) on some vines": "Bir sarmaşığa tutun ya da tırman",
+
+"Ten Thousand Blocks": "On Bin Blok",
+"A journey that long begins with a single step": "Her yolculuk bir adımla başlar..",
+
+"The Deep End": "Derin Son",
+"Defeat an Elder Guardian": "Yaşlı Gardiyan'ı öldür",
+
+"The Shielding": "Kalkan",
+"A shield does no better than a locked door": "Kalkan kilitli bir kapıdan daha iyi değil",
+
+"This is Mine Now!": "Terk edilmiş",
+"Find an abandoned mineshaft that was not dug out by you": "Terk edilmiş bir maden kuyusu bul",
+
+"Tomb Raider": "Tomb Raider",
+"Enter a jungle temple": "Bir yağmur ormanı tapınağına gir",
+
+"Treasure Map": "Hazine Haritası",
+"Trade for an Explorer Map": "Takas karşılığı Kaşif Haritası al",
+
+"Voyage": "Sefer",
+"A hundred kilometres!": "100 kilometre!",
+
+"Warm Feet": "Adana",
+"Discover every dry biome": "Tüm kuru biyomları keşfet",
+
+"Wet Feet": "Pîrî Reis",
+"Discover every water biome": "Tüm su biyomlarını keşfet",
+
+"What a Deal!": "Çarşamba Pazarı",
+"Successfully trade with a Villager": "Bir Köylüyle takas yap",
+
+"Witchcraft": "Büyücülük Zamanı",
+"Find a witch hut in a swamp": "Cadı Kulübesi bul",
+
+"Wololo!": "Herkes uyanıyor",
+"Defeat an Evoker": "Bir Uyandırıcı öldür",
+
+
+
+
+
+# Building tab as of 1.3
+"A Masterpiece!": "Sanat Eseri",
+"Put up a painting": "Bir tablo koy",
+
+"Ah, My Old Enemy...": "Merdiven",
+"Craft every type of stairs": "Tüm merdiven türlerini yap",
+
+"Benchmarking": "Alet Edavat Zamanı!",
+"Construct a crafting bench with four wooden planks": "Bir çalışma masası yap",
+
+"Bricks!": "Tuğlalar",
+"Fire up that clay!": "Kil'i fırında kızart!",
+
+"Change of Sheets": "Çarşaf Değişikliği",
+"Dye your bed a different color than white": "Yatağını beyaz dışında bir renge boya",
+
+"Classy Glassy": "Camcı Mehmet Usta",
+"Smelt sand in a furnace to get glass": "Cam elde etmek için kumları pişir",
+
+"Clay-Dough!": "Oyun Hamuru",
+"Dig up some clay from a lake": "Nehirde biraz kil kaz",
+
+"Concrete Evidence": "Beton Devri",
+"Create concrete from concrete powder by dropping it into water": "Çimentoyu suya koyarak beton elde et",
+
+"Creepers and Withers": "Creeperlar ve Witherlar",
+"Engrave sandstone with creeper and wither patterns": "Creeper ve Wither desenli kumtaşlarını elde et.",
+
+"Display your items for all to see...": "Eşyaları farklı bi açıdan gör!",
+"Craft an item frame for displaying your items": "Eşya Çerçevesi yap",
+
+"Electric!": "Elektrik",
+"Light up the area with some redstone lamps": "Etrafı Kızıl Taş Lamba'sıyla aydınlat",
+
+"En Garde": "Le bizim çitler",
+"Erect some fencing": "Biraz çit dik",
+
+"Expensive!": "Lüks",
+"Light up the area with some sea lanterns": "Etrafı Deniz Fener'iyle aydınlat",
+
+"Fake fortress": "Sahte Nether Kalesi",
+"Craft or collect all forms of nether brick, red nether brick, and nether wart blocks": "Tüm nether kalesi bloklarını topla ya da yap",
+
+"Fake monument": "Sahte Anıt",
+"Craft or collect all forms of prismarine blocks": "Tüm prizmarin türü blokları topla ya da yap",
+
+"Fake stronghold": "Sahte Stronghold",
+"Craft or collect normal, cracked, mossy and chiseled stone bricks": "Tüm stronghold bloklarını topla ya da yap",
+
+"Fluorescent!": "Floresan!",
+"Light up the area with some end rods": "Etrafı End Çubuğu'yla aydınlat",
+
+"Getting Wood": "Odun",
+"Attack a tree until a block of wood pops out": "Sana odun verene kadar bir ağacı yumrukla",
+
+"Glowing!": "Işıl ışıl her yer!",
+"Light up the area with glowstone": "Etrafı Işık Taşı'yla aydınlat",
+
+"Greek Art Decor": "Türk Sanat Dekorları",
+"Craft quartz blocks, stairs, slabs, pillars and chiseled": "Tüm kuvars türü blokları yap",
+
+"Halloween!": "Cadılar Bayramı!",
+"Light up the area with jack o'lanterns!": "Etrafı Bal Kabağı Lambası'yla aydınlat",
+
+"It's a Sign!": "Bu bir Tabela!",
+"Craft and place a sign": "Tabela yap",
+
+"It's a Trap!": "Bu bir Tuzak!",
+"Craft and place down a trapdoor": "Tuzak Kapısı yap",
+
+"Jailhouse Block": "Silivri",
+"Craft or find iron bars": "Bir demir parmaklık yap",
+
+"Ladder Climbers Inc.": "Merdiven Tırmanıcıları",
+"Climb the ladder!": "Bir merdivenle yukarı tırman",
+
+"Mannequin": "Manken",
+"Craft an armor stand for displaying your armor": "Zırh Askısı yap",
+
+"Master Logger": "Odun Ustası",
+"Cut down a full stack of logs of all types": "Tüm odun türlerinden birer stack elde et",
+
+"Pathways": "Patika",
+"Use a shovel to create grass paths": "Kürek kullanarak çimen patikaları yap",
+
+"Pot Planter": "Saksı Sevdalısı",
+"Craft and place a flower pot": "Saksı yap ve yere koy",
+
+"Rainbow Sand": "Renkli Kum!",
+"Craft concrete powder using sand, gravel and dye": "Çimento yap",
+
+"Raise the flag!": "Bayraklar Havaya!",
+"Craft and place a banner": "Flama yap",
+
+"Rock Collection": "Taş Koleksiyoncusu",
+"Collect all the types of rocks": "Tüm taş türlerini topla",
+
+"Building": "İnşaat",
+"Your only limit is your imagination... and resources": "Tek sınır hayal gücün.. ve kaynaklar",
+
+"Slabs For Days": "Günlerden Basamak",
+"Craft every type of slab": "Tüm basamak türlerini yap",
+
+"Stationary Storage": "Yerleşik Depolama",
+"Craft and place down a chest for storing your items": "Sandık yap ve eşyalarını depolamak için yere koy",
+
+"Sweet dreams": "Tatlı rüyalar",
+"Change your respawn point": "Tatlı bir uyku için yatağa yat",
+
+"The Glazed Terracotta Army": "Sırlı Terakota Ordusu",
+"Craft all 16 colors of glazed terracotta": "Tüm sırlı terakota renklerini topla",
+
+"The Rainbow You Always Wanted": "Hep hayalini kurduğun gökkuşağı",
+"Craft all 16 colors of concrete": "Tüm beton renklerini topla",
+
+"The Terracotta Army": "Terakota Ordusu",
+"Craft all 16 colors of terracotta (stained clay)": "Tüm terakota renklerini topla",
+
+"The Walls": "Duvarlar",
+"Build some cobblestone walls": "Yere kırık taş duvar koy",
+
+"Torched!": "Meşalelendirildi!",
+"Light up the area with some torches": "Etrafı meşale'yle aydınlat",
+
+"Translucence": "Yarı Saydamlık",
+"Craft all 16 colors of stained glass": "Tüm ince cam renklerini topla",
+
+"What a pane": "Ne bu incelik?",
+"Craft some glass panes": "İnce cam yap",
+
+"Yay! I got my wood!": "Oduncunun Oğlu",
+"Collect all six types of wood": "Tüm odun türlerini topla",
+
+"Your Door Was Locked": "Evinin Girişi",
+"Craft a door to stop monsters from entering your house": "Kapı yap",
+
+
+
+# Combat tab as of 1.3
+"Blast Shield": "Patlama Koruması",
+"Survive a creeper's blast with your shield": "Kalkanınla creeper patlamasından sağ çık",
+
+"Bombs Away!": "Bum! Bum!",
+"Use gunpowder and sand to craft TNT": "TNT yap",
+
+"Bow Spammer": "Yay Spamcısı",
+"Attack a mob by bow-spamming": "Bir yaratığa ok spamla",
+
+"Creepy Heads": "Creeperlı Kafalar",
+"Blow up a creeper with a charged creeper to get a creeper head": "Şarjlanmış creeper patlatarak creeper öldürüp creeper kafası elde et",
+
+"Dead Don't Die": "Ölmüşü Öldür",
+"Kill a zombie": "Zombi öldür",
+
+"Desert Nomad": "Zombi Kurusu Piç Kurusu",
+"Kill a husk": "Zombi Kurusu öldür",
+
+"Dungeon Crawler": "Zindan Avcısı",
+"Defeat all kinds of mobs from special structures": "Özel yapılardaki tüm yaratıkları öldür",
+
+"Egging, Dude!": "Yumurtacı Geldi",
+"Vandalise something with eggs": "Bir şeylere yumurta atarak zarar ver",
+
+"Ender Worm": "End Solucanı",
+"Prevent an endermite from maturing": "Bir endermite'ın olgunlaşmasını önle",
+
+"Eskimo": "Eskimo",
+"It may be illegal to hunt polar bears in real life, but not in Minecraft": "Gerçek hayatta kutup ayılarını avlamak yasadışı olabilir, ancak Minecraft'ta değil",
+
+"Ew Ew Ew!": "Örümcek Avcısı",
+"Kill a spider": "Örümcek öldür",
+
+"Fireworks Display": "Gökyüzünde Renk Şöleni",
+"Use gunpowder and paper to craft fireworks": "Havai fişek yap",
+
+"Frosty": "Buzlu",
+"Kill a stray": "Serseri öldür",
+
+"Gelatinous Cube": "Kaygan Küp",
+"Kill a slime": "Balçık öldür",
+
+"Hell Hunter": "Cehennem Avcısı",
+"Defeat all kinds of Nether mobs": "Netherdaki tüm yaratıkları öldür",
+
+"Iron Belly": "Sağlam Mide",
+"Stop starvation using rotten flesh": "Açlığını çürük etle bastır",
+
+"Leader of the Pack": "Kurtların Dostu",
+"Befriend a wolf": "Kurt evcilleştir",
+
+"Keep Your Distance": "Mesafemizi Koruyalım",
+"Kill a Creeper with arrows": "Yayla bir Creeper öldür",
+
+"Monster Hunter": "Canavar Avcısı",
+"Kill any hostile monster": "Herhangi bir düşman yaratık öldür",
+
+"Monsters Hunted": "Canavar Katili",
+"Kill one of every hostile monster": "Tüm düşman yaratıktan en az bir tane öldür",
+
+"Night Runner": "Gece Koşucusu",
+"Defeat all kinds of Overworld night mobs": "Gece doğan tüm düşman yaratıkları öldür",
+
+"Not Today, Thank You": "Teşekkürler, ama Bugün Değil",
+"Deflect an arrow with a shield": "Bir ok'u kalkanınla engelle",
+
+"Plane Walker": "Boyutlar arası kan davası",
+"Kill endermen in all three dimensions": "Üç boyutta da Enderman'i öldür",
+
+"Point Blank": "Dipten Vuruş",
+"Shoot a mob from point-blank range": "Herhangi bir mobu dibinden vur",
+
+"Poisonous Ew": "Iyy Zehirli",
+"Kill a cave spider": "Mağara örümceği öldür",
+
+"Combat": "Dövüş",
+"Battle against the monsters of this world": "Bu dünyanın canavarlarına karşı savaş",
+
+"Sniper Duel": "Sniper Düellosu",
+"Kill a skeleton with an arrow from more than 50 meters": "50 metreden okla iskeleti öldür",
+
+"Snowball Fight": "Kartopu Savaşı",
+"The spirit of Christmas... quickly drowned out by a battle": "Noel ruhu.. bir savaşın ardından çabucak bitti",
+
+"Spooky Skeleton": "İskelet Avcısı",
+"Kill a skeleton": "İskelet öldür",
+
+"Spooky Skulls": "Kemikli Kafalar",
+"Blow up a skeleton with a charged creeper to get a skeleton skull": "Şarjlanmış creeper patlatarak iskelet öldürüp iskelet kafası elde et",
+
+"Still Talking!": "Ölü Kafalar",
+"Blow up a zombie with a charged creeper to get a zombie head": "Şarjlanmış creeper patlatarak zombi öldürüp zombi kafası elde et",
+
+"Take Aim": "Hedef al!",
+"Shoot something with a bow and arrow": "Yay ve okla bir şeyi vur",
+
+"Taste of your own medicine": "Kendi ilacını tattır",
+"Kill a witch with a splash potion": "Patlayıcı iksirle bir cadıyı öldür",
+
+"Tele-Morph": "İncisel Vuruş",
+"Damage a mob by teleporting into it": "Bir yaratığa ışınlanarak zarar ver",
+
+"Termite Control": "Termit Kontrolü",
+"Kill a silverfish": "Gümüşçün öldür",
+
+"The ender of ender": "Ender'in ender'i",
+"Kill an enderman": "Enderman öldür",
+
+"The Ghastly Eyes": "Hayalet Gözler",
+"Kill an invisible spider": "Görünmez örümcek öldür",
+
+"The Mighty Hunter": "Yaylı Avcı",
+"Hunt all types of animals with your bow": "Tüm hayvanları yayınla avla",
+
+"The Undead Cavalry": "Ölümsüz Süvari",
+"Encounter and defeat a skeleton horse in a thunderstorm": "Fırtınada iskelet at öldür",
+
+"There has to be another way...": "Başka bir yolu olmalı",
+"Kill a zombie villager": "Zombi köylü öldür",
+
+"Trampoline": "Trambolin",
+"Craft a slime block using slimeballs": "Balçık toplarını kullanarak balçık bloğu yap",
+
+"Void Ender": "Son Savaşçı",
+"Defeat all kinds of End mobs": "Enddeki tüm yaratıkları öldür",
+
+"What a creep!": "Patlayanı Patlat!",
+"Kill a creeper": "Creeper öldür",
+
+"Witch!": "Büyücü",
+"Kill a witch": "Cadı öldür",
+
+
+
+# Enchanting tab as of 1.3
+"Armor for the masses": "Korunmak için kuşan",
+"Obtain every protection related enchantment": "Koruma ile ilgili her büyüyü elde et",
+
+"Bane of one-shotting spiders": "Örümcekler Tek Vuruşluk",
+"Obtain Bane of Arthropods V": "Eklem Bacaklıların Kıyameti V elde et",
+
+"Bow down to me!": "Güç benim elimde",
+"Obtain Power V": "Güç V elde et",
+
+"Complete Enchanter": "Büyü Kariyeri",
+"Obtain every enchantment throughout your enchanting career": "Büyüleyici kariyerin boyunca her büyüyü elde et",
+
+"Curses!": "Lanetler!",
+"Obtain both types of curses": "Tüm lanetli büyüleri elde et",
+
+"Fiery": "Ateşli!",
+"Obtain every fire related enchantment": "Tüm ateşli büyüleri elde et",
+
+"Fortunate Son": "Servetli Oğlan",
+"Obtain Fortune III": "Servet 3 elde et",
+
+"Knocking Your Socks Off": "Şiddet Yanlısı",
+"Obtain Knockback and Punch enchantments": "Tüm savurma ve yumruk büyülerini elde et",
+
+"Let It Go!": "Kırağılaştırılmışlık",
+"Obtain boots enchanted with Frost Walker": "Botlarına Kırağılaştırıcı Yürüyücü büyüsü bas",
+
+"Librarian": "Kütüphaneci",
+"Build some bookshelves for your enchanting table": "Büyü masan için biraz kitaplık yap",
+
+"Like a Cat": "Tavuk gibi..",
+"Obtain boots enchanted with Feather Falling": "Botlarına Tüy Düşüşü büyüsü bas",
+
+"Master Armorer": "Zırh Ustası",
+"Create a full suit of armor with all possible enchantments at max level": "Maksimum seviyedeki tüm olası büyülerle tam bir zırh takımı oluştur",
+
+"Master Enchanter": "Büyü Ustası",
+"Obtain every enchantment at their max level throughout your enchanting career": "Büyüleyici kariyerin boyunca her büyüyü maksimum seviyede elde et",
+
+"Master Fisher": "Balık Ustası",
+"Create a fishing rod with all possible enchantments at max level": "Maksimum seviyede tüm olası büyülerle bir olta oluştur",
+
+"Master Knight": "Kılıç Ustası",
+"Create a sword with all possible enchantments at max level": "Maksimum seviyede tüm olası büyülerle bir kılıç oluştur",
+
+"Master Miner": "Usta Madenci",
+"Create a pickaxe with all possible enchantments at max level": "Maksimum seviyede tüm olası büyülerle bir kazma oluştur",
+
+"Master Sniper": "Sniper",
+"Create a bow with all possible enchantments at max level": "Maksimum seviyede tüm olası büyülerle bir yay oluştur",
+
+"Needle Sharp": "Hançer Kadar Keskin..",
+"Obtain Sharpness V": "Keskinlik V elde et",
+
+"Heavy Metal": "Ağır Metal",
+"Craft an anvil": "Örs yap",
+
+"Overkill": "Sekizlik Hasar",
+"Deal eight hearts of damage in a single blow": "Tek bir vuruşta sekiz kalp hasar ver",
+
+"Pick Like Silk": "İpeksi Dokunuş",
+"Use a Silk Touch enchanted pickaxe to obtain diamond ore as a block": "Blok olarak elmas cevheri elde etmek için ipeksi dokunuşlu kazma kullan",
+
+"Enchanting": "Büyü",
+"Enchant items to give them magical abilities": "Sihirli yetenekler'e sahip olmak için eşyalarını büyüle",
+
+"Scuba Gear": "Dalgıç",
+"Obtain every water related enchantment": "Su ile ilgili her büyüyü elde et",
+
+"Super Efficient": "Aşırı Verimli",
+"Obtain Efficiency V": "Verimlilik V elde et",
+
+"Unbreakable": "Kırılamaz",
+"Obtain Mending on an item": "Bir eşyaya Tamir büyüsü bas",
+
+"Undead Slayer": "15 Temmuz",
+"Obtain Smite V": "Darbe V elde et",
+
+
+
+# End tab as of 1.3
+"Anti-Gravity Generator": "Yerçekimini Yok Et",
+"Bring a shulker into the overworld and let it give you anti-gravity": "Dünya'ya bir shulker getir ve seni uçurmasına izin ver",
+
+"Cow Jumped Over The Moon": "Uçan İnek",
+"Bring a cow from the Overworld to the End and then kill it": "İneği Ende götürüp orada öldür",
+
+"Dragon Shield": "Ejder Kalkanı",
+"Attempt to block the dragon's attacks": "Ejderhanın saldırısını kalkan kullanarak engelle",
+
+"End Bricks!": "End Tuğlaları!",
+"Craft end bricks from end stone": "End taşından End tuğlası Yap",
+
+"For Mother, Clarence": "Shulker Avcısı",
+"Kill a shulker": "Shulker Öldür",
+
+"Free the End": "End'i Serbest Bırak!",
+"Good luck": "İyi Şanslar",
+
+"Getting Chorus": "Tatlı Nakarat",
+"Attack a chorus tree until it collapses": "Bir Nakarat Ağacını Devir",
+
+"Great View From Up Here": "Aşağısı fena gözükmüyor",
+"Levitate up a distance of 50 metres": "Yükselme Etkisiyle 50 Blok yüksel",
+
+"I'm Coming Back, Murph!": "Allahına Ulaştın!",
+"Travel far into the End dimension": "End Spawnından 10 bin blok uzaklaş",
+
+"No! Don't let me leave, Murph!": "100,000 mi?",
+"Travel so far into the End dimension you might as well be on another planet": "Endde uzaklara seyahat et, belki başka bir gezegene ulaşabilirsin",
+
+"Noxious Fumes": "Zehirli Dumanlar",
+"Use dragon's breath to brew a lingering potion": "Ejderha nefesiyle kalıcı bir iksir üret",
+
+"Off With His Head!": "Kelle Avcısı",
+"Collect a dragon's head from the bow of an end ship": "Bir end gemisinden ejderha kafasını al",
+
+"Poison Dart": "Zehirli Dart",
+"Craft tipped arrows of poison": "Zehirli Ok Yap",
+
+"Portable Storage": "Taşınabilir Depolama",
+"Use shulker shells to craft a shulker box": "Shulker kutusu yap",
+
+"Purpurfect!": "Purpurükemmel",
+"Craft or collect purpur blocks, slabs, pillars and stairs": "Purpur türü blokların tümünü topla",
+
+"Remote Getaway": "Uzaklara firar",
+"Escape the island": "Adadan Kaçış",
+
+"The End": "End",
+"Or the beginning?": "Ya da Başlangıç?",
+
+"Shouldn't my shield levitate too?": "Kalkanımı Uçuramazsın",
+"Block a Shulker's bullet with your shield": "Kalkanınla bir shulker'ı blokla",
+
+"Sky High": "Sınır Kapısı",
+"Fly up beyond the world height limit": "Elytra ile dünya yükseklik sınırına çık",
+
+"Sky's the Limit": "Tek Sınır Gökyüzü",
+"Find an Elytra": "Elytra bul",
+
+"Some Breakthrough": "İlk Uzun Uçuş ",
+"Exhaust your elytra": "Elytra'nı Bitir",
+
+"The City at the End of the Game": "Oyunun Sonundaki Şehir",
+"Go on in, what could happen?": "İçeri gir, en fazla ne olabilir ki?",
+
+"The End... Again": "Son.. yeniden",
+"Respawn the Ender Dragon": "Ejdarha'yı Canlandır",
+
+"The Next Generation": "Bir Sonraki Nesil",
+"Hold the Dragon Egg": "Ejderha Yumurtası Tut",
+
+"The Start of Something": "Birşeyin Başlangıcı",
+"Craft your first ender crystal": "End Kristal'i yap",
+
+"Uh, Houston? We have a problem": "Peygamberlik Başvurusu",
+"Fly up to a ridiculous height": "1000 mi..",
+
+"You Need a Mint": "Nefese İhtiyacın var",
+"Collect dragon's breath in a glass bottle": "Ejderha Nefesini bir cam şişe içerisinde sakla",
+
+
+
+# Farming tab as of 1.3
+"24 Carrot Gold": "24 Karat Havuç",
+"Eat a golden carrot": "Altın Havuç ye",
+
+"A Balanced Diet": "Dengelenmiş Diyet",
+"Eat everything that is edible, even if it's not good for you": "Senin için iyi olmasa bile yenilebilir olan her şeyi ye",
+
+"A Horse in Shining Armor": "Parlak bir zırh içinde sadık bir at",
+"Find diamond horse armor": "Elmas at zırhı bul",
+
+"A Seedy Place": "Tohumlu Bir Yer",
+"Plant a seed and watch it grow": "Bir tohum ek ve İsrail Konsolosluğun yakınında bir motele yerleş",
+
+"Artificial Selection": "Yapay Seçilim",
+"Breed a horse and a donkey to get a mule": "Bir katır'ın doğuşuna şahit olmak için at ve eşek çiftleştir",
+
+"Bake Bread": "Ekmek Pişir",
+"Grow wheat and use it to bake bread": "4,5 su bardağı un, 2 su bardağı ılık su, 1 paket instant kuru maya, 1 yemek kaşığı silme toz şeker, 1 çay kaşığı tuz.",
+
+"Bapple!": "Elma",
+"Crunch into an apple": "Elma ye.",
+
+"Blistering Barnacles!": "Kabarcıklı Tükürük",
+"Get spat at by a llama": "Bir lamanın suratına tükürmesine izin ver",
+
+"Breaking the Law of Conservation of Matter": "Maddenin Korunumu Yasasını Çiğnemek",
+"Craft 9 melon slices back into a block that, when broken, will probably not give you all 9 slices back": "Temel olarak 9 parça karpuz.. fakat kırıldığında büyük ihtimal size 9 parça vermeyecek",
+
+"Care For the Environment": "TEMA",
+"Plant down a sapling": "Türkiye için bir fidan da sen dik",
+
+"Catching Nemo": "Nemo'yu Yakalamak",
+"Catch a clownfish": "Tropikal balık yakala",
+
+"Chatterbox": "Çenesi Düşük",
+"Tame a Parrot using seeds. WARNING: Do not use a cookie!": "Tohum kullanarak bir Papağanı evcilleştir UYARI: Kurabiye kullanma!",
+
+"Cow Tipper": "İnek öldür",
+"Harvest some leather": "Hmm.. Sanırım Budist Değilsin",
+
+"Cowboy": "Covboy",
+"Tame a horse by jumping on it over and over again": "Atı taciz ederek sonunda seni sevmesini sağla",
+
+"Fishy Business": "Denizsel Avcılık",
+"Catch a fish": "Balık yakala",
+
+"Die, Potato!": "PATATEEEEEEEES",
+"Squash and eat a potato": "Parçala ve o patatesi ye",
+
+"Do you want to build a snowman?": "Yılbaşı Günleri",
+"Use a pumpkin and snow blocks to build a snow golem": "Kardan bir dost edin",
+
+"Ecologist": "Ekolojist",
+"Plant down all six types of sapling": "6 tür ağaç fidanını da dik",
+
+"Feeling Sheepish": "Koyun Pirzolası",
+"You'll get over it": "Pişmiş bir koyun eti ye",
+
+"Getting Into a Stew": "Güveç İşine Girmek",
+"Make and eat some rabbit stew": "Tavşan yahnisi yap ve ye",
+
+"Have a Shearful Day": "Keskin bir gün..",
+"Use two iron ingots to craft shears": "Makas yap",
+
+"High Steaks": "Gerçekten budist değilsin..",
+"The steaks are high for this advancement!": "Biftek ye",
+
+"Hot Topic": "Sıcak Mesele",
+"Construct a furnace out of eight stone blocks": "Fırın yap",
+
+"Lion Tamer": "Aslan Evcilleştirici",
+"Tame an Ocelot using fish": "Balık kullanarak bir oseloyu evcilleştir",
+
+"Me Love Cookie": "Yanına sıcak çikolata da fena gitmezdi..",
+"Bake some cookies... and then scoff them all yourself": "Biraz kurabiye pişir ve tadını çıkar",
+
+"Meat Lovers": "Et Sevdalısı",
+"Eat every type of meat, even if uncooked or rotten": "Pişmiş ya da pişmemiş tüm et türlerini ye",
+
+"Milk does your body good": "Süt vücuduna iyi geliyor.",
+"Take a swig swig swig swig": "Bir bardak ılık süt iç",
+
+"Mushroom, Mushroom, Mushroom, Mushroom!": "Mantar, Mantar, Mantar, Mantar!",
+"Slurp some mushroom stew": "Ağzını şapırdata şapırdata mantar güveç iç",
+
+"Naturally Carved": "Doğal Oyulmuşluk",
+"Harvest some spooky pumpkins": "Oyulmuş balkabağı hasat et",
+
+"Not Today!": "Tadı Biraz Farklı",
+"Eat a poisonous potato": "Zehirli patates ye",
+
+"Overpopulation": "Aşırı Nüfus",
+"Breed every type of animal": "Tüm hayvanları evcilleştir",
+
+"Pork Chop": "Domuz Pirzolası",
+"You know kung fu, how about pork chop?": "Sanırım müslüman değilsin",
+
+"Rabbit Season": "Tavşan Mevsimi",
+"Killing bunnies is cruel. Period.": "Av sezonu başladı",
+
+"Rainbow Collection": "Yumuşacık Bir Koleksiyon",
+"Gather all 16 colors of wool": "16 renk yünün tamamını topla",
+
+"Renewable Energy": "Yenilenebilir Enerji",
+"Smelt wood trunks using charcoal to make more charcoal": "Daha fazla odun kömürü yapmak için odun kömürü kullanarak odunları erit",
+
+"Repopulation": "Çiftleştirilmişlik",
+"Breed two cows with wheat": "İki ineği çiftleştir",
+
+"Farming": "Tarım",
+"The world is full of friends and food": "Dünya arkadaşlarla ve yemeklerle dolu",
+
+"Salmonella Poisoning": "Salmonella Poisoning",
+"Eat some raw salmon... and not get poisoned after all": "Biraz çiğ somon ye",
+
+"Serious Dedication": "Verilmiş Kararlar",
+"Completely use up a diamond hoe, and then reevaluate your life choices": "Elmas çapa'yı kırılana kadar kullan, sonra hayatın boyunca verdiğin kararları bi gözden geçir",
+
+"So Good": "Çok iyi",
+"Can't beat it, can't beat it": "Yenemezsin",
+
+"Souperman": "Pancaradam",
+"Beetroot soup gives you souperpowers!": "Pancar Çorbası sana süper güçler verecek",
+
+"Sugar, Sugar": "Şekerim",
+"Harvest some sugar cane from a river or ocean": "Nehirden veya okyanustan şeker kamışı topla",
+
+"Sushi": "Suşi",
+"Eat some raw fish": "Çiğ balık ye",
+
+"The Lie": "Yalan",
+"Wheat, sugar, milk and eggs!": "Buğday, şeker, süt ve yumurtalar",
+
+"The Melon! The Melon! The Melon!": "Karpuz kesmekle hararet sönmez",
+"Eat a melon. Be careful not to drop it over a cliff": "Karpuz ye",
+
+"The Pie": "Kabaklı Tatlı",
+"Bake a pumpkin pie": "Bal kabağı turtası pişir",
+
+"Trimming the Treetops": "Ağaç tepelerini kırp",
+"Use shears to obtain leaf blocks": "Yaprakları makasla kırparak topla",
+
+"Ultra Hardcore": "45 Karat Elma",
+"Craft and eat a normal golden apple": "Altın Elma yap ve ye",
+
+"Vegetarian": "Lezbiyen-ay pardon vejeteryan",
+"Eat every type of fruit, vegetables, and any sort of plant matter": "Her tür meyve, sebze ve bitkiyi ye",
+
+"When Pigs Used to Fly": "Belki domuzlar da bir zamanlar uçuyordu..",
+"Craft a carrot on a stick so you can ride a pig off a cliff": "Havuçlu Olta kullanarak bir domuzu dağdan aşağı sür",
+
+"You Lead, I'll Follow": "Sen önden git ben takip edeceğim",
+"Craft a lead for forming a llama caravan": "Bir lama sürüsünü kontrol etmek için kayış yap",
+
+
+
+# Mining tab as of 1.3
+"Acquire Hardware": "Donanım Edin",
+"Smelt an iron ingot": "Demir külçesi elde et",
+
+"Bling Bling Gone": "Parlak Şey Yokoldu",
+"Completely use up a golden pickaxe, and then seriously reevaluate your life choices": "Altın kazma'yı kırılana kadar kullan, sonra hayatın boyunca verdiğin kararları bi gözden geçir",
+
+"Coal Miner": "Kömür Madencisi",
+"Mine a stack of coal": "Bir stek kömür kaz",
+
+"Fuel Engine": "Rayda Fırıncılık",
+"Craft a powered minecart": "Fırınlı bir vagon yap",
+
+"Cover Me With Diamonds": "le elmas vücudumda",
+"Diamond armor saves lives": "Elmas zırh hayat kurtarır",
+
+"Diamond Clad": "le elmaslar vücudumda",
+"A full suit of diamond armor saves even more lives": "Tüm vücudunu elmas zırhla kapla",
+
+"Diamond Miner": "Elmas Madencisi",
+"Mine a stack of diamonds. Good luck!": "Bir stek elmas kaz",
+
+"Diamonds!": "elmatat",
+"Acquire diamonds": "aferin evlat sonunda elmas buldun",
+
+"Electric Rails": "Raylı Fırıncılık",
+"Making furnace minecarts completely useless": "Fırınlı vagonlar yapmak.. Sanki biraz gereksiz",
+
+"Enchanter": "Büyücü",
+"Craft an enchanting table": "Büyü masası yap",
+
+"Even MOAR Tools": "DAHA ÇOK ELMAS EŞYA",
+"Craft a full diamond tools set": "Tüm elmas eşyaları yap",
+
+"Fossil Fuel": "Fosilleşmiş Yakıt",
+"Coal! As in dead dinosaurs!": "Kömür! siyah ve kalın..",
+
+"Getting an Upgrade": "Yükseltmek",
+"Construct a better pickaxe": "Daha iyi bir kazma yap",
+
+"Gold Miner": "Altın Madencisi",
+"Mine a stack of gold ore": "Bir stek altın kaz",
+
+"Gold Rush": "54 Karatlık Aşk",
+"Strike gold and smelt it into a gold ingot": "Pişirerek altın külçesi elde et",
+
+"Hot Stuff": "Sıcak Şey",
+"Fill a bucket with lava": "Bir kovayı lav ile doldur",
+
+"Ice Bucket Challenge": "Ekstrüzif Magmatik Kaya",
+"Form and mine a block of Obsidian": "Obsidyen elde et",
+
+"Iron Man": "Demir Adam",
+"Craft a full suit of iron armor": "Tüm vücudunu demir zırhla kapla",
+
+"Iron Miner": "Demir Madencisi",
+"Mine a stack of iron ore": "Bir stek demir kaz",
+
+"Isn't It Iron Pick": "Sıradaki Hedef Elmaslar!",
+"Upgrade your pickaxe": "Daha da iyi bir kazma yap",
+
+"Lapis Lazuli Miner": "lâciverd",
+"Mine enough lapis lazuli to craft a stack of lapis lazuli blocks": "Bir stek lapis lazuli bloğu yap",
+
+"Mineral Collection": "Maden Koleksiyoncusu",
+"Craft every type of mineral block": "Her madenin bloğunu yap",
+
+"MOAR Tools": "Taş Ustası",
+"Craft a stone pickaxe, axe, shovel and hoe": "Taş aletlerin tümünü yap",
+
+"Aww it broke!": "Hasiktir kırıldı",
+"Break your first tool": "Kırılan ilk eşyan.. Dikkatli olsan iyi edersin",
+
+"On A Rail": "Ne Zaman Gitti Tren -Kesmeşeker",
+"Craft a minecart using five iron ingots": "Vagon yap",
+
+"Redstone Miner": "Kızıl Taş Madencisi",
+"Mine enough redstone to craft a stack of redstone blocks": "Bir stek kızıl taş bloğu yap",
+
+"Mining": "Madencilik",
+"Dig underground, gather resources": "Yeraltına in ve kaynakları toplamaya başla",
+
+"Seeing Red": "Kırmızıyı Görmek",
+"Mine some redstone from the deepest caves": "En derin mağaralardan biraz kızıl taş çıkar",
+
+"Suit Up": "Demir Önlem",
+"Protect yourself with a piece of iron armor": "Kendini bir parça demir zırhla koru",
+
+"The way to spawn": "Spawn'a giden yol",
+"Craft a compass in case you forgot where spawn is": "Spawn'ın nerede olduğunu unutursun diye bir pusula yap",
+
+"DIAM- oh, wait, no.": "ELM- ah, dur, hayır",
+"It's still useful for enchanting": "En azından büyü için lazım",
+
+"We Need to Go Deeper": "Daha derine inme orda sen varsın",
+"Build, light and enter a Nether Portal": "Cehennem'i görmeye mi geldin?",
+
+"We've broken our last shovel": "Kırılgan Kürekler",
+"Break all five types of shovels": "6 tür küreği de kullan ve kır",
+
+"What's the time, Mr Wolf?": "“Zamanla nasıl değişiyor insan”",
+"Time to clean your clocks! (Or, craft them!)": "Bir saat yap ve her gün ölüme ne kadar yaklaştığının farkına var",
+
+
+
+# Nether tab as of 1.3
+"A Terrible Fortress": "Berbat Bir Kale",
+"Break your way into a Nether Fortress": "Nether Kalesine doğru yola koyulalım",
+
+"Basis of Brewing": "İksir Üretiminin Esası",
+"Harvest some nether wart from a nether fortress": "Nether kalesinden biraz nether yumrusu hasat et",
+
+"Beaconator": "Fener Ustası",
+"Bring a beacon to full power": "Feneri tam güç çalıştır",
+
+"Bring Home the Beacon": "Gökyüzüne doğru uzanan bir ışık süzmesi",
+"Construct and place a Beacon": "Feneri yere koy",
+
+"Don't Step on it!": "Sakın Basma!",
+"Mine some magma blocks": "Magma bloğu kaz",
+
+"Ender's Chest": "Ender Sandığı",
+"Craft an ender chest for some extra inventory space": "Fazladan envanter alanı için bir ender sandığı yap",
+
+"Eye Spy": "Göz Takipçisi",
+"Follow an Ender Eye": "Ender Gözünü takip et",
+
+"Fire Blast Shield": "Ateş Topu Kalkanı",
+"Block the explosion of a ghast's fireball": "Ghast ateş topunu kalkanınla engelle",
+
+"Giant Floating Jellyfish": "Yüzen Dev Deniz Anası",
+"Shoot down a ghast": "Ghast'ı etkisiz hale getir",
+
+"Glows in the Dark": "Karanlıklar Arasından bir Parıltı",
+"Craft spectral arrows using glowstone dust": "Işık tozu kullanarak spektral ok yap",
+
+"High Temperature Fluid Monster": "Ateşli Sıcak Akışkan Canavar",
+"Kill a magma cube": "Magma Küpünü öldür",
+
+"Into Fire": "Ateşlerin İçinden",
+"Relieve a Blaze of its rod": "Blaze'den çubuğunu al",
+
+"Limbo Walker": "Cehennemin Çatısında..",
+"Get above the roof in the nether": "Nether'ın üstüne çık",
+
+"Local Brewery": "Yerel Uyuşturucu Fabrikası",
+"Craft a Brewing Stand for brewing potions": "İksirler için iksir standı yap",
+
+"Quicksand": "Bataklık",
+"You sink like quicksand and move slow like mud": "Hm.. sanki biraz yavaşladık ahbab",
+
+"Return to Sender": "Gönderene Geri İade",
+"Destroy a Ghast with its fireball": "Ghast'ı kendi alev topuyla yok et",
+
+"Nether": "Nether",
+"Bring summer clothes": "Yazlıklarını hazırla",
+
+"Spooky Scary Skeleton": "Ürkütücü Korkunç İskelet",
+"Obtain a wither skeleton's skull": "Nadir çıkan wither kafasını elde et",
+
+"Subspace Bubble": "Hızlı Yolculuk",
+"Use the Nether to travel 7km in the Overworld": "Dünya'da 7km gidebilmek için Nether'ı kullan",
+
+"The End?": "Son?",
+"Enter the End Portal": "End geçidine gir",
+
+"The Hunt Begins": "Av Başlasın",
+"Kill a wither skeleton": "Wither iskeleti öldür",
+
+"The Nether's Shield": "Nether'ın Kalkanı",
+"Block some blaze fireballs": "Blaze alev toplarını blokla",
+
+"The Tribal Snouts": "Kürt Mahallesi Kavgası",
+"Kill a zombie pigman": "Bir zombileşmiş piglin öldür ve kürt arkadaşlarının gelmesini bekle",
+
+"Uneasy Alliance": "Huzursuz İttifak",
+"Rescue a Ghast from the Nether, bring it safely home to the Overworld... and then kill it": "Nether'dan bir Ghast'ı güvenli bir şekilde Overworld'e getir.. ve sonra öldür",
+
+"Withering Heights": "Uğultulu Tepeler",
+"Summon the Wither": "Bir wither çağır",
+
+
+
+# Potions tab as of 1.3
+"A Furious Cocktail": "Öfkeli Kokteyl",
+"Have every potion effect applied at the same time": "Tüm iksir etkilerini aynı anda elde et",
+
+"A Much More Doable Challenge": "Daha Yapılabilir Bir Zorlukta",
+"Get all the effects possible during your life (not all at the same time)": "Mümkün olan tüm etkileri elde et (aynı anda değil)",
+
+"A Weak Brew": "Zayıf İksir",
+"Brew up a potion of Weakness": "Zayıflık İksiri Üret",
+
+"Death by Magic": "Sihir Tarafından Öldürüldü",
+"Kill a mob with a splash potion": "Bir Canlıyı iksir ile Öldür",
+
+"Hopping Mad": "Hoplayıver Çekirge",
+"Get jump boost from a beacon or a potion": "Fenerden ya da iksirden Zıplama Etkisi Al",
+
+"How did We Get Here?": "Buralara Nasıl Geldik?",
+"Have every effect applied at the same time": "Elde edebileceğin tüm etkileri aynı anda elde et",
+
+"Hyper-Healing": "Süper Şifa!",
+"Brew and drink a regeneration potion": "Yenilenme iksiri üret ve iç",
+
+"Medic!": "Sağlık!",
+"Brew a healing potion": "İyileştirme iksiri Üret",
+
+"Marine Marauder": "Deniz Çapulcusu",
+"Catch a pufferfish and use it to brew a water breathing potion": "Suda nefes alma iksiri üret",
+
+"Nocturnal": "Gece Kuşu",
+"Brew and drink a night vision potion": "Gece görüşü iksiri iç",
+
+"Performance-Enhancing Drugs": "Viagra",
+"Brew a Speed Potion for cheating on athletics": "Pornocularla Yarışmak için hız iksiri üret",
+
+"Potions": "İksirler",
+"Brewing potions with helpful and hindering effects": "Yararlı ya da zararlı..",
+
+"Stayin' Frosty": "Soğukkanlı",
+"Drink a fire resistance potion so you can go swimming in lava": "Ateş Direnci iksiri İç",
+
+"Super Strength": "Süper Güç",
+"Brew a Strength Potion for cheating on weightlifting": "Güç iksiri üret",
+
+"The Invisible Player": "Görünmez Adam",
+"Brew and drink an invisibility potion": "Görünmezlik İksiri üret ve iç",
+
+"Zombie Doctor": "Zombi Doktoru",
+"Cure a zombie villager": "Bir Zombi Köylüyü iyileştir",
+
+
+
+# Redstone tab as of 1.3
+"Bling Plate": "Parlak Plaka",
+"Dine in style! (No, not really)": "Parlak bir seçim..",
+
+"Comparing Comparator": "Karşılaştırıcıyı Karşılaştırma",
+"Craft a redstone comparator": "Kızıl Taş Karşılaştırıcısı yap",
+
+"Dispense With This": "Bununla Fırlat",
+"Construct a dispenser": "Bir fırlatıcı yap",
+
+"Metal Plate": "Metal Plaka",
+"Dinner time!": "Yemek vakti!",
+
+"Moving Parts": "Oynayan Parçalar",
+"Craft a piston so you can push things": "Bir şeyleri ittirebilmek için piston yap",
+
+"Mozart": "Bilal-i Habeşi",
+"Craft a note block": "Nota Bloğu yap",
+
+"Observer Buddy": "Gözlemci Dostum",
+"Craft an observer": "Gözlemci yap",
+
+"Pressure Detector": "Başınç Dedektörü",
+"Use a pressure plate to craft a detector rail": "Algılayıcı ray yap",
+
+"Quartz Miner": "Kuvars Madencisi",
+"Mine enough nether quartz to craft a stack of quartz blocks": "Bir stek kuvars kaz",
+
+"Quirky Quartz": "Modern Bir Seçim!",
+"Mine Nether Quartz from the Nether": "Nether'da kuvars kaz",
+
+"Repeating Repeater": "Tekrarlayan Tekrarlayıcı",
+"Craft a redstone repeater for delaying signals": "Kızıltaş Yineleyicisi yap",
+
+"Redstone": "Kızıltaş",
+"Cracking contraptions": "Çatlayan zımbırtılar",
+
+"Solar Power": "Işık Gücü",
+"Craft a daylight sensor": "Gün ışığı algılayıcısı yap",
+
+"Space Dropper": "Bırakıcılaştırılmışlık",
+"Craft a dropper for item transportation": "Bırakıcı yap",
+
+"Space Hopper": "Fırat Boru",
+"Craft a hopper for item transportation": "Huni yap",
+
+"Sticky Parts": "Yapışkan Parçalar",
+"Craft a sticky piston so you can pull things": "Yapışkan Piston yap",
+
+"Tripping Over": "Tuzak Vakti",
+"Craft a tripwire hook for your traps": "Tuzak kancası yap",
+
+"Troll Chest": "le tuzak sandığı",
+"Craft a trapped chest to troll your friends": "Tuzaklı Sandık yap",
+
+"Under Pressure": "Baskı Altında",
+"Craft a pressure plate": "Basınç plakası yap",
+
+
+
+# All advancements added in version 1.4 are here
+
+"Beginning": "Başlangıç",
+"A brave new world": "Cesur yeni bir dünya",
+
+"Time to Chop!": "Doğrama Zamanı!",
+"Use planks and sticks to make a axe": "Tahtaları ve sopaları kullanarak bir balta yap",
+
+"Time to Farm!": "Tarım Zamanı!",
+"Use planks and sticks to make a hoe": "Tahtaları ve sopaları kullanarak bir çapa yap",
+
+"Time to Mine!": "Maden Zamanı!",
+"Use planks and sticks to make a pickaxe": "Tahtaları ve sopaları kullanarak bir kazma yap",
+
+"Time to Strike!": "Savaş Zamanı!",
+"Use planks and sticks to make a sword": "Tahtaları ve sopaları kullanarak bir kılıç yap",
+
+
+
+"Stripper":  "Odunlar",
+"Strip the bark off of all six types of logs then pick them up": "ALtı tür kütüğü de odun'a çevir",
+
+
+
+"Flint Miner": "Çakmaktaşı Madencisi",
+"Mine a stack of flint": "Bir stek çakmaktaşı kır",
+
+"My work here is done": "Benim işim burada bitti",
+"Get caught in a cave-in of gravel": "Bir çakılın içine gir",
+
+"Nananananananana...": "Bat-man",
+"Accidentally hit a bat underground": "Bir yarasayı yumrukla",
+
+"Obsidian Miner": "Obsidyen Madencisi",
+"Mine a stack of obsidian. (This might take a while...)": "Bir stek obsidyen kır",
+
+"Rock Bottom": "En Düşük Nokta",
+"Dig down to the bottom of the world": "Dünyanın dibine ulaş",
+
+"Spelunker": "Maden Sektörüne Giriş",
+"Enter a cave": "Bir madene gir",
+
+"Stone Age": "Taş Çağı",
+"Mine stone with your new pickaxe": "Kazmanla bir taş kaz",
+
+
+
+
+"An amazing story!": "Ne kadar hoş bir hikaye",
+"Finish writing in your book or get a book from another player": "Kitabınızı yazmayı bitirin veya başka bir oyuncudan bir kitap al",
+
+"Aquatic Biofuel": "Sucul Biyoyakıt",
+"Craft a dried kelp block for use as a great fuel source": "Harika bir yakıt kaynağı olarak kullanmak için kurutulmuş bir yosun bloğu yap",
+
+"Hay there!": "Sakla samanı, gelir zamanı",
+"Craft a stack of hay blocks": "Bir stek saman bloğu yap",
+
+"It's full of ink": "Yazarlığın İlk Adımı",
+"Obtain some ink from hunting a squid": "Mürekkep edin",
+
+"It's where nutella comes from": "İşte sarelle'nin kaynağı",
+"Obtain some cocoa beans from a jungle": "Yağmur ormanında kakao çekirdeği edin",
+
+"Kelp me!": "Deniz Kadayıfı",
+"Collect some kelp from an ocean": "Okyanustan biraz yosun topla",
+
+"Pumpa kungen!": "Fare deliğe sığmamış, bir de kıçına kabak bağlamış",
+"Carve a stack of pumpkins": "Bir stek kabak oy",
+
+"The Meloncholy Dane": "Karpuzcu",
+"Craft a stack of melon blocks": "Bir stek karpuz bloğu yap",
+
+"Undersea Gardener": "Su Altı Bahçıvanı",
+"Craft a stack of dried kelp blocks": "Bir stek kurutulmuş su yosunu bloğu yap",
+
+"Write your thoughts": "Düşüncelerini kağıda dök..",
+"Use a book, ink and a feather to craft a book and quill": "Bir kitap ve tüy yap",
+
+
+
+"Animals": "Hayvanlar",
+
+"Hoe hoe hoe!": "İnsanın insanlardan kaçışıdır, hayvan sevgisi. -Aziz Nesin",
+
+"Aquarium": "Akvaryum",
+"Catch all four types of fish and set them free in an aquarium": "Dört tür balığı da yakala ve bir akvaryuma sal",
+
+"Are we there yet?": "Daha varmadık mı?",
+"Tame a donkey": "Bir eşek evcilleştir",
+
+"Bacon!": "Pastırma!",
+"Gotta kill this pig pig pig pig": "Umarım o eti yemiceksin ahbab",
+
+"Chicken Cooper": "Tavuk Doğrayıcısı",
+"Collect a stack of raw chicken and feathers": "Bir stek pişmemiş tavuk eti ve tüy topla",
+
+"Farrier": "At, sahibine göre kişner. -Cervantes",
+"Breed a horse in an effort to get a better one": "Daha iyi bir at elde etmek için bir at çiftleştir",
+
+"Feeding the §mDucks§r Chickens": "§mÖrdekleri§r Tavukları Beslemek",
+"Breed chickens by feeding them seeds": "Tavukları besleyerek çiftleştir",
+
+"Hey, look, Mom!": "Karetta Karettalar",
+"Use sea grass to make a turtle lay some eggs": "Bir kaplumbağanın yumurta bırakmasını sağlamak için deniz otu kullan",
+
+"If only cats grew into kittens": "Kürklü Tatlı Bela",
+"Breed two cats together to get a kitty!": "İki kediyi çiftleştir",
+
+"In a hole there lived a Rabbit": "Tavşan dağa küsmüş, dağın haberi olmamış.",
+"Collect a stack of raw rabbit and rabbit hide": "Bir stek çiğ tavşan eti ve tavşan postu topla",
+
+"Mary Had a Little Lamb...": "Küçük Tatlı Kuzucuk",
+"Breed two sheep to get a lamb": "İki koyunu çiftleştirerek bir kuzu elde et",
+
+"Mooshroom Kingdom": "Mantar Krallığı",
+"Find mooshrooms on a mushroom island": "Bir mantar biyomu bul",
+
+"Pig Slaughterer": "Domuz Katliamı",
+"Collect a stack of raw porkchops": "Bir stek çiğ domuz pirzolası toplayın",
+
+"Poacher": "Kaçak Avcı",
+"Kill a turtle for their shells only to find they don't actually drop any when killed": "Bir kaplumbağayı kabukları için öldür, ancak öldürüldüklerinde aslında kabuk düşürmediklerini gör",
+
+"Puppies! Yipe!": "sarı komik köpek 2011",
+"Breed two wolves together to get a puppy!": "İki köpeği çiftleştirerek bir yavru köpek elde et",
+
+"Scuttler": "Pul",
+"Get a scute from a baby turtle when it grows up": "Yavru bir kaplumbağadan büyüdüğünde pulunu alın",
+
+"Sheariously?": "Örgü",
+"Collect a stack of white wool": "Bir stek beyaz yün topla",
+
+"So I got that going for me": "Samanla Beslenilmişlik",
+"Breed two llamas with hay": "İki lamayı samanla besle",
+
+"Someone's been here before...": "Daha önce burada birileri mi vardı?",
+"Fish out a ratty old pair of boots": "Eski bir çift botu oltayla bul",
+
+"Stay Calmer": "Tükürüksüz Son",
+"Tame a llama": "Bir lama evcilleştir",
+
+"Super Mooshroom": "Süper Mantar",
+"Breed two stubborn mooshrooms together": "İki mooshroomu çiftleştir",
+
+"Tactical Fishing": "Taktiksel Balıkçılık",
+"Catch a fish... without a fishing rod!": "Bir balık yakala.. oltasız",
+
+"They're breeding like rabbits!": "Bugs Bunny",
+"Breed two bunnies together": "İki tavşanı çiftleştir",
+
+"Tickle Time!": "Gıdıklama Zamanı",
+"Pluck some feathers from a chicken": "Bir tavuktan yünlerini al",
+
+"Totally not an AFK fisher!": "Kesinlikle afk kalmadın",
+"Fish out all types of items": "Oltayla çıkarabilceğin her şeyi çıkar",
+
+"Treasure Hunter": "Define Avcısı",
+"Fish out a piece of treasure": "Oltayla değerli bir şeyler bul",
+
+"True Cow Tipper": "Gerçek İnek Katliamcısı",
+"Collect a stack of raw beef and leather": "Bir stek çiğ inek eti ve deri topla",
+
+"Turtle Army": "Kaplumbağa Ordusu",
+"Collect a stack of scutes": "Bir stek kaplumbağa kabuğu pulu topla",
+
+"Turtle Soldier": "Kaplumbağa Asker",
+"Craft a full turtle shell": "Kaplumbağa kaskı yap",
+
+"What a piece of junk!": "Çöpçü",
+"Fish out a junk item": "Denizden çer çöp bir şeyler çıkar",
+
+"Wooly!": "Yünlü",
+"Obtain wool from a sheep by killing it": "Bir koyunu öldürerek yün elde et",
+
+"Yay! Deadbush!": "Ölü Bitki!",
+"Get a deadbush cause you're a noob": "İpeksi dokunuşla bir ölü bitki elde et",
+
+
+
+
+"A Throwaway Joke": "Mızraklı Şaka",
+"Throw a trident at something. Note: Throwing away your only weapon is not a good idea": "Bir şeye üçlü mızrak fırlat",
+
+"A Watery Grave": "Boğuk Mesele",
+"Defeat a drowned in the briny depths. ": "Denizin derinliklerinde bir boğuğu öldür",
+"Gurgle": "",
+
+"Anti-Air": "Hava Karşıtı",
+"Shoot down a phantom with a bow from 30 blocks away": "30 blok öteden yayla bir hayaleti vur",
+
+"Because I'm Aquaman!": "Denizlerin Lideri Benim!",
+"Obtain a trident from a Drowned": "Bir boğuktan üçlü mızrak elde et",
+
+"Boned": "Kemikli",
+"Grind up some bones into bonemeal": "Kemikleri ezerek kemik tozu elde et",
+
+"Creeper Killer": "Creeper Düşmanı",
+"Collect a stack of gunpowder": "Bir stek barut elde et",
+
+"Enderman Destroyer": "Enderman Yokedici",
+"Collect a stack of ender pearls": "Bir stek ender incisi topla",
+
+"Freezing": "Dondurucu Soğuk",
+"Bring a husk to a tundra biome and then kill it": "Bir zombi kurusunu tundra biyomuna götür ve orada öldür",
+
+"Melting": "Yakıcı Sıcaklık",
+"Bring a stray to a desert biome and then kill it": "Bir serseriyi çöl biyomuna götür ve orada öldür",
+
+"Phantom Slayer": "Hayalet Doğrayıcı",
+"Collect a stack of phantom membranes": "Bir stek hayali zar topla",
+
+"Poseidon vs. Hades": "Poseidon Şeytana Karşı",
+"Hunt all types of nether creatures with your trident": "Tüm nether canlılarını üçlü mızrağınla avla",
+
+"Ricochet Swoop": "Sektirilmiş Saldırı",
+"Deflect a Phantom's swoop with your shield": "Kalkanınla bir Hayaletin saldırısını saptır",
+
+"Skeleton Smiter": "İskelet Kesici",
+"Collect a stack of bones": "Bir stek kemik topla",
+
+"Slime Squisher": "Balçık Ezici",
+"Collect a stack of slimeballs": "Bir stek balçık topu topla",
+
+"Spider Smasher": "Örümcek Parçalayıcı",
+"Collect a stack of string from spiders or cobwebs": "Bir stek ip topla",
+
+"The Aquatic Hunter": "Deniz Avcısı",
+"Hunt all types of aquatic creatures with your trident": "Tüm su canlılarını üçlü mızrağınla avla",
+
+"The Phantom Menace": "Hayalet Tehditi",
+"Get attacked by phantoms": "Hayaletler tarafından saldırıya uğra",
+
+"Tridented Shield": "Mızraklanmış Kalkan",
+"Block a trident thrown by a Drowned": "Bir boğuk tarafından atılan üçlü mızrak darbesini kalkanınla engelle",
+
+"Underwater Duel": "Su altı Düellosu",
+"Kill a drowned using a trident from at least 30 metres": "Üçlü mızrak kullanarak bir boğuğu en az 30 metre uzaktan öldür",
+
+"We'll handle this": "Bunu ele alacağız",
+"Lure a Phantom into the Nether and then kill it": "Bir hayaleti Nether'a götür ve orada öldür",
+
+"Zombie Slayer": "Zombi Doğrayıcı",
+"Collect a stack of rotten flesh": "Bir stek çürük et topla",
+
+
+
+
+
+"Atlantis": "Atlantis",
+"Explore some Underwater Ruins": "Su altı kalıntılarını keşfet",
+
+"Dolphin Dasher": "Sevgili Dostum Yunus",
+"Get a speed boost from your friendly underwater companions": "Sevgili dostların yunuslardan su altında hız etkisi al",
+
+"Eeuuwww!": "İğrenç..",
+"Get stuck in a cobweb": "Örümcek ağı içinde kal",
+
+"Enchanted Forest": "Büyülü Orman",
+"Find a flower forest": "Bir çicek ormanı bul",
+
+"Explorer of Worlds": "Dünyaların Kaşifi",
+"Discover every biome including special biomes": "Özel biyomlar dahil tüm biyomları keşfet",
+
+"Get Ship-rekt!": "Korsanlar?",
+"Come across a sunken ship": "Bir batık gemi bul",
+
+"Gold Mine!": "Altın Zamanı!",
+"Find a mineshaft on the surface of a mesa biome": "Bir mars biyomunun yüzeyinde maden kuyusu bul",
+
+"Guardian Destroyer": "Gardiyanların Yok Edicisi",
+"Collect a stack of prismarine shards and crystals": "Bir stek prismarin parçacığı ve kristali topla",
+
+"In a Pickle": "Pirozom!",
+"Collect some sea pickles from a coral reef": "Bir mercan resifinden pirozom topla",
+
+"Just a sample": "Sadece bir numune",
+"Collect some coral from a coral reef": "Bir mercan resifinden mercan topla",
+
+"No Reefing!": "Ayrım Yok",
+"Collect all colors of coral blocks, plants and fans (including dead ones)": "Tüm mercanları, mercan bloklarını ve mercan yelpazelerini (ölü olanlar dahil) toplayın",
+
+"Power of the Ocean": "Okyanusun Gücü",
+"Construct a Conduit in the ocean": "Okyanusta bir Kanal inşa et",
+
+"Secret of the Igloo": "İglonun Sırrı",
+"Find an igloo in a snowy tundra": "Karlı tundra biyomunda bir iglo bul",
+
+"Spike Ice!": "Sivri Buz",
+"Break down an ice spike using a silk touch pickaxe": "İpek dokunuşlu kazma kullanarak biraz paketlenmiş buz kır",
+
+"Spikey!": "Dikenli!",
+"Run into a cactus": "Bir kaktüsün üstüne koş",
+
+"Sponge Miner": "Sünger Madencisi",
+"Collect a stack of sponges from ocean monuments": "Bir stek sünger topla",
+
+"The Great Blocky Reef": "Renkli Resif",
+"Come across a coral reef in the ocean": "Okyanusta bir mercan resifine rastla",
+
+"There's a zombie on the lawn": "Sarılar İçinde",
+"Find a sunflower plains": "Ay çiçeği biyomu bul",
+
+"Thick Ice!": "Kalın Buz!",
+"Craft or mine a blue ice block from an iceberg": "Bir buzdağından mavi buz bloğu topla ya da yap",
+
+"Thin Ice!": "İnce Buz!",
+"Use a silk touch pickaxe to pick up some ice blocks": "Buz bloklarını almak için ipek dokunuşlu bir kazma kullan",
+
+"Titanic": "Titanik",
+"Find a shipwreck in an iceberg biome": "Buzdağı biyomunda bir batık gemi bul",
+
+"X Marks the Spot": "X'e gitmemiz lazım",
+"Use a treasure map to find a Heart of the Sea in Buried Treasure": "Gömülü Hazine'de Denizin Kalbi'ni bulmak için bir hazine haritası kullan",
+
+
+
+
+"Engineer": "Mühendis",
+"Craft all types of redstone component": "Tüm kızıltaş parçalarını yap",
+
+"Master Engineer": "Usta Mühendis",
+"Craft a stack of all types of redstone component": "Tüm kızıltaş parçalarından birer stek yap",
+
+
+
+
+"Boomerang": "Bumerang",
+"Turn your trident into a boomerang by getting Loyalty on it": "Sadakat büyüsü basarak üçlü mızrağını bir bumeranga dönüştür",
+
+"Very Very Frightening": "Köylü Cinayeti",
+"Strike a Villager with lightning": "Bir köylüyü şimşekle vur",
+
+"Master Tridenteer": "Usta Mızrakçı",
+"Create a trident with all possible enchantments at max level": "Maksimum seviyede tüm olası büyülerle bir üçlü mızrak oluştur",
+
+"Zeus": "Zeus",
+"Obtain Channeling on a trident": "Üçlü Mızrağına Yıldırım Yönlendirmesi büyüsü bas",
+
+
+
+
+"Blaze Extinguisher": "Blaze Söndürücü",
+"Collect a stack of blaze rods": "Bir stek blaze çubuğu topla",
+
+"Ghast Slayer": "Ghast Katili",
+"Collect a stack of ghast tears": "Bir stek ghast gözyaşı topla",
+
+"Glowstone Miner": "Işık Taşı Madencisi",
+"Mine or craft a stack of glowstone blocks": "Bir stek ışık taşı kaz ya da yap",
+
+"Magma Cube Squisher": "Magma Küp Ezici",
+"Collect a stack of magma cream": "Bir stek magma kremi topla",
+
+"Seeing Stars": "Yıldızları Görmek",
+"Mine some glowstone dust from the nether": "Netherda biraz ışık taşı tozu topla",
+
+
+
+
+"Tank": "Tank",
+"Become nearly invincible to all damage using a Turtle Master Potion": "Bir Kaplumbağa Ustası İksiri kullanarak neredeyse tüm hasarlara karşı yenilmez ol",
+
+"True Feather Falling": "Gerçek Tüy Düşüşü",
+"Brew and drink a slow falling potion": "Bir tüy düşüşü iksiri üret ve iç",
+
+
+
+
+"Extrabiologist": "Ekstra Biyolog",
+"Plant a chorus plant in the overworld for study": "Araştırmaların için dünyada nakarat meyvesi yetiştir",
+
+"Shulker Breaker": "Shulker Kırıcı",
+"Collect a stack of shulker shells": "Bir stek shulker kabuğu topla",
+
+"Void Walker": "Boşluk Kaşifi",
+"Explore every end biome": "Tüm end biyomlarını keşfet",
+
+
+
+# All advancements added in version 1.5 are here
+
+"Iconic Merchandising Prop": "İkonik Mağazacılık",
+"Create a pickaxe of the highest calibre": "En üst kalite bir kazma üret",
+
+"Living Like Kings": "Krallar Gibi Yaşa",
+"Make yourself shiny with golden armor": "Altın Zırh Üret",
+
+"Master Coal Miner": "Usta kömür madencisi",
+"Mine enough coal to make a stack of coal blocks": "Bir stek kömür bloğu yapmaya yetecek kadar kömür kaz",
+
+"Master Diamond Miner": "Usta elmas madencisi",
+"Mine enough diamond to make a stack of diamond blocks": "Bir stek elmas blok yapmaya yetecek kadar elmas kaz",
+
+"Master Gold Miner": "Usta altın madencisi",
+"Mine enough gold to make a stack of gold blocks": "Bir stek altın blok yapmaya yetecek kadar altın kaz",
+
+"Master Iron Miner": "Usta demir madencisi",
+"Mine enough iron to make a stack of iron blocks": "Bir stek demir blok yapmaya yetecek kadar demir kaz",
+
+"Meet The Flintstones": "Çakmaktaşı ile tanışın",
+"Dig up some flint from a patch of gravel": "Biraz çakıl kazarak çakmaktaşı elde et",
+
+"Stabcraft": "Stabcraft",
+"Do you like my sword sword": "Kılıcımı beğendin mi?",
+
+"The Mistake!": "Büyük hata",
+"Put Mending on a piece of golden armor and realise what you are doing in life": "Bir parça altın zırhı Tamir ile büyüle ve hayatında verdiğin kararları gözden geçir",
+
+
+
+
+"Barking Mad": "Odunları kızdır",
+"Craft a bark block": "Odun Bloğu yap",
+
+"Lost Its Bark": "Odunluğunu kaybetmiş",
+"Strip a bark block of its bark": "Bir kütüğün kabuğunu soy",
+
+"No Banner, Only Color!": "Flama değil, sadece renk",
+"Craft all 16 banner colors": "16 farklı renkte flama yap",
+
+"Professor Birch": "Profesör Huş",
+"Craft every item made out of birch wood": "Huş kütüğünden yapılabilecek her eşyayı yap",
+
+"Professor Dark Oak": "Profesör Kara Meşe",
+"Craft every item made out of dark oak wood": "Kara Meşe kütüğünden yapılabilecek her eşyayı yap",
+
+"Professor Oak": "Profesör Meşe",
+"Craft every item made out of oak wood": "Meşe Kütüğünden yapılabilecek her eşyayı yap",
+
+"Rainbow Dreams": "Gökkuşağı Hayaller",
+"Craft every color of bed": "Her renkten bir yatak yap",
+
+"Spruce Lee": "Ladin Lee",
+"Craft every item made out of spruce wood": "Ladin kütüğü ile yapılabilecek her eşyayı yap",
+
+"The Acacia King": "Akasya Kralı",
+"Craft every item made out of acacia wood": "Akasya kütüğü ile yapılabilecek her eşyayı yap",
+
+"The Jungler": "Ormancı",
+"Craft every item made out of jungle wood": "Orman ağacı kütüğü ile yapılabilecek her eşyayı yap",
+
+
+
+
+"It's a cactus!": "Bir Kaktüs!",
+"Break down a cactus in a desert": "Çölde bir kaktüs kır",
+
+"Mega Mushroom": "Mega mantar",
+"Grow a giant mushroom and then harvest it with silk touch": "Dev bir mantar yetiştir ve İpeksi Dokunuş ile hasat et",
+
+"Shrooms": "Mantarlar",
+"Gather both types of mushroom": "İki mantar türünü topla",
+
+
+
+
+"Direct Fishing": "Direk Balıkçılık",
+"Catch a fish by directly skewering it with a sword": "Bir balığı kılıçla vurarak öldür",
+
+"Fuzzy Feet": "Bulanık Ayaklar",
+"Craft all 16 colors of carpet": "16 farklı renk halı boya",
+
+"Grinding Nemo": "Nemo'yu şişle",
+"Skewer a tropical fish": "Bir tropik balığı Kılıçla öldür",
+
+"Lucky Charm": "Şanslı cazibe",
+"Get a rabbit's foot": "Bir tavşanın ayağını elde et",
+
+"Master Angler": "Usta balıkçı",
+"Collect a stack of all four types of fish": "Dört balık türünün her birinden bir stek topla",
+
+"Tropical Collection": "Tropik koleksiyon",
+"Collect all 22 of the common types of tropical fish": "Tropik balığın 22 yaygın türlerinin hepsini topla",
+
+
+
+
+"Camouflage": "Kamuflaj",
+"Kill a mob while wearing the same type of mob head": "Bir canlıyı onun kafasını giyiyorken öldür",
+
+
+
+
+"Businessman": "İş adamı",
+"Trade with every type of villager career": "Her türden köylü ile alışveriş yap",
+
+"MURDERER!": "Katil!",
+"Kill a villager": "Bir köylü öldür",
+
+"Pushed Around": "İttirilmişlik",
+"Enter a bubble column": "Bir baloncuk sütununa gir",
+
+"Raidin' Master": "Baskın Ustası",
+"Discover every structure type": "Tüm Yapıları Bul",
+
+"Rekt!": "Sataşma",
+"Get killed by a natural iron golem defending its village": "Köyünü savunan doğal bir Demir Golemi tarafından öldürül",
+
+"The sea calls you...": "Deniz seni çağırıyor",
+"Find an ocean": "Bir okyanus bul",
+
+"Travelling Merchant": "Gezgin Tüccar",
+"Travel to every type of village": "Her biyomdaki köye git",
+
+
+
+
+"Mobile Explosion": "Hareketli Patlama",
+"Put TNT in a minecart": "TNT'li bir vagon yap",
+
+"Moving Moving Storage": "Taşımacılık",
+"Put a hopper in a minecart": "Hunili bir vagon yap",
+
+"Moving Storage": "Haraketli Depo",
+"Put a chest in a minecart": "Sandıklı bir vagon yap",
+
+"Powerful Light": "Güçlü Işık",
+"Craft and place a redstone torch": "Bir kızıltaş meşalesi yap ve yerleştir",
+
+"Railwayman": "Demiryolu Adamı",
+"Craft a stack of all the different types of rails": "Tüm ray türlerinden bir stek yap",
+
+
+
+
+"Do A Barrel Roll!": "Takla At!",
+"Get Riptide on a trident so you can shoot yourself through the water": "Girdap büyülü bir Üçlü Mızrak ele geçir ve kendini denizden dışarı fırlat",
+
+"Newton's Flaming Laser Sword": "Newton'un yanan lazerli kılıcı",
+"Have a diamond sword with Fire Aspect II": "Alevden Çehre II Büyüsüne sahip bir elmas kılıç yap",
+
+"To Infinity And Beyond!": "Sonsuzluk ve ötesi!",
+"Obtain Infinity on a bow": "Bir yayda Sonsuzluk büyüsüne sahip ol",
+
+"Ultimate Enchanter": "Yüce Büyücü",
+"Obtain every enchantment at every level throughout your enchanting career": "Büyü kariyerin boyunca her seviyedeki her büyüye sahip ol",
+
+
+
+"Shoot a mob with a spectral arrow": "Bir spektral ok ile atış yap",
+
+"Bring Down The Beast": "Canavarı İndir",
+"Bring down a ghast with a sword": "Bir ghastı kılıç ile öldür",
+
+
+
+
+"The Point of No Return": "Geri dönüşü olmayan nokta",
+"Fall into the void": "Boşluğa düş",
+
+"Furious Ammunition": "Öfkeli Cephanelik",
+"Craft every type of tipped arrow": "Her türden iksirli ok üret",
+
+"Somewhere Over The Rainbow...": "Gökkuşağının Her Rengi",
+"Craft all 16 shulker box types": "Tüm shulker box türlerini üret",
+
+
+
+
+
+# All advancements added in version 1.6 are here
+"Beethoven": "Tanju Okan",
+"Craft a jukebox with planks and a diamond": "Elmas ve tahta kullanarak müzik kutusu yap",
+
+"Blast it!": "Maden Pişirten",
+"Upgrade your furnace to a blast furnace using iron and smooth stone for smelting ores quicker": "Fırınını, madenleri daha hızlı eritmesi için maden fırınına çevir",
+
+"Camping Out": "Kamp",
+"Craft and place a campfire using some logs, sticks and coal": "Odun ve kömür kullanarak kamp ateşi yap",
+
+"Classic Pocket Edition Block": "Taş Keser",
+"Craft a stonecutter using stone and an iron ingot": "Taş ve demir kullanarak taş kesici yap",
+
+"Its original form": "İlk Hali",
+"Use your furnace to smelt cobblestone back into stone": "Fırın kullanarak kırıktaşı normal taşa çevir",
+
+"MOAR Broken Tools": "Alet Gabaran",
+"Break every single tool and weapon in the game": "Tüm aletleri kırana kadar kullan",
+
+"Not Chicken McNuggets?": "Demircik",
+"Craft or find iron nuggets": "Demir parçası oluştur veya bul",
+
+"Not for creating copies of yourself": "Elmas Karartıcı",
+"Craft a smithing table": "Demirci masası yap",
+
+"Rest in Pickaxes": "Eee Hani Elmas Kazma",
+"Break your first diamond pickaxe": "İlk elmas kazmanı kır",
+
+"Sharpening Station": "Bileyici",
+"Craft a grindstone using a stone slab, planks and sticks for repairing tools": "Eşyalarını tamir etmek için bileme taşı yap",
+
+"Spawn Camping": "Spawn Kampçısı",
+"Travel close to 0,0 coordinates and place down a campfire": "0'a 0 yakınlarında bir yere kamp ateşi koy",
+
+"Smokin' Hot": "Aşçı",
+"Upgrade your furnace to a smoker using some logs": "Fırınını odun kullanarak duman fırınına çevir",
+
+"Smooth, dude!": "Doğru Düzgün",
+"Smelt normal stone further into smooth stone": "Normal taşı eriterek düzgün taşa çevir",
+
+"Where are all your clothes?": "Çırılçıplak",
+"Break every type of armor piece in the game": "Tüm zırh parçalarını kır",
+
+
+
+
+"Barrel Rider": "Varil",
+"Craft and place a barrel. Totally not for riding in": "Varil yap ve yerleştir",
+
+"Crazy Walls": "Ahmedin Duvar",
+"Craft every type of wall": "Tüm duvarlardan oluştur",
+
+"Festival of Lights": "Işık Festivali",
+"Light up the area using a lantern": "Etrafı aydınlatmak için fener kullan",
+
+"Logos": "Flama Ustası",
+"Craft all the special banner patterns": "Tüm özel flama desenlerini oluştur",
+
+"Fruit of the Looms": "Dokumacı",
+
+"Prepare to meet your Loom!": "Bildiğin Dokumacı",
+"Craft a loom with string and planks for creating your own banners": "İp ve tahta kullanarak dokuma tezgahı oluştur",
+
+"Speech! Speech! Speech!": "Konuşmacı",
+"Craft a lectern using wooden slabs and a bookshelf then place it": "Kitaplık ve tahta basamak kullanarak kürsü yap",
+
+
+
+
+"Berry Nice!": "Tatlı Meyve",
+"Pick and eat some sweet berries": "Tatlı orman meyvesi ye",
+
+"Disen Berry Berry Bad!": "Dikenli Çalı",
+"Get stuck in a sweet berry bush. Oh, icky yucky goo!": "Dikenli orman meyvesi çalısında sıkış, Oh evet taşşaklarım",
+
+"I'm gonna be sick!": "Hastalıklı Çorba",
+"Slurp every kind of suspicious stew": "Tüm şüpheli güveç türlerini ye",
+
+"Suspicious Looking Stew": "Mmm Çorba",
+"Slurp some suspicious stew and pray you don't suddenly see giant flying eyeballs in the sky": "Şüpheli güveç ye",
+
+"The garbage will do!": "Çöpler Gitsin",
+"Craft a composter using planks and wooden fences then place it": "Gübre varili yap ve yerleştir",
+
+
+
+
+"Birdkeeper": "Kuşçu",
+"Tame all parrot variants": "Tüm papağan türlerini evcilleştir",
+
+"Bunny Lover": "Tavşancık",
+"Breed a baby bunny of every variant": "Tüm tavşan türlerini evcilleştir",
+
+"Colorful Cavalry": "Rengarenk Zırh",
+"Dye 16 sets of leather horse armor each with one of the individual colors": "16 farklı renk at zırhı boya",
+
+"Cool Kids": "Serseri Çocuk",
+"Craft a leather jacket": "Deri ceket yap",
+
+"Fashion Statement": "Moda Tutkunu",
+"Dye some leather pants with one color": "Birkaç deri pantolonu aynı renge boya",
+
+"Horse Armorer": "Attan At Zırhı",
+"Make horse armor out of dead horses (No, joking, any leather will do)": "At öldürüp derisini kullanarak at zırhı yap (Şaka, herhangi bir hayvandan da olur)",
+
+"Llama Llama Duck King": "Lamaların Kralı",
+"Tame all llama variants": "Tüm lama türlerini evcilleştir",
+
+"Master Farrier": "At Tutkusu",
+"Tame all horse variants": "Tüm at türlerini evcilleştir",
+
+"Mushroom Scientist": "Mantar Bilimi",
+"Strike a mooshroom with lightning and see what happens": "Bir mooshroom'a yıldırım düşmesini sağla ve ne olacağını gör",
+
+"Shoe Shed": "Ayakkabı Boyacısı",
+"Dye 16 pairs of leather boots each with one of the individual colors": "16 farklı renk deri bot boya",
+
+"Snow Fox 64": "Kar Tilkileri :3",
+"Breed two snow foxes with sweet berries": "İki kar tilkisini çiftleştir",
+
+"What Does The Fox Say?": "What Does The Fox Say?",
+"Breed two red foxes with sweet berries": "İki kızıl tilki çiftleştir",
+
+"Which came first?": "Hangisi İlk",
+"The chicken... or the egg??": "Yumurta mı tavuktan, tavuk mu yumurtadan",
+
+
+
+
+"Monsters": "Yaratıklar",
+
+"Baby, baby, baby noo!!": "Abdullah Öcalan",
+"Kill one of each of a baby zombie, zombie villager, husk, drowned and zombie pigman": "Tüm bebek zombi türlerini öldür",
+
+"Captain Etho": "Boğuk Kaptan",
+"Defeat a Drowned holding both a nautilus shell and a trident": "Elinde üçlü mızrak ya da notilus kabuğu taşıyan bir boğuk öldür",
+
+"Custom Boss Fight!": "Kendi Bölüm Sonu Canavarın",
+"Give a zombie full diamond armor and a diamond sword... then kill it": "Bir zombiye 4 parça elmas set ve elmas kılıç ver sonra öldür",
+
+"Handsome Jack": "Lamba Kafa",
+"Defeat a mob wearing a Jack o' Lantern on Halloween": "Cadılar Bayramı'nda Jack o' Lantern giyen bir yaratığı öldür",
+
+"Legend of the Hell Chicken Rider": "Hayalet Sürücü",
+"Kill a chicken jockey in the nether": "Netherda bir chicken jockey öldür",
+
+"Mollusc Man": "Okyanus Hatırası",
+"Defeat a Drowned holding a nautilus shell": "Notilus kabuğu taşıyan bir boğuk öldür",
+
+"Ooh, Baby!": "Çocuk Katili",
+"Kill a baby zombie": "Bir bebek zombi öldür",
+
+"Trick or Treat!": "Şaka mı Şeker mi",
+"Defeat a mob wearing a pumpkin": "Kafasında balkabağı olan bir canlı öldür",
+
+"Two Birds, One Arrow": "Tek Taşla İki Kuş",
+"Kill two Phantoms with a piercing arrow": "İki hayaleti delici bir okla öldür",
+
+
+
+
+"A snowball's chance in hell": "Erimeyen Kartopu",
+"Defeat a Blaze using snowballs": "Bir alazı kartopu kullanarak netherda öldür",
+
+"Axeman": "Baltacı",
+"Attack a mob using all five types of axes": "Bir canlıya tüm balta türleri ile vur",
+
+"Demolitions Expert": "ALLAHUAKBAR",
+"Blow up every hostile mob with TNT": "Tüm yaratık türlerini TNT ile patlat",
+
+"Diamonds to you!": "Al Sana Elmas",
+"Hit a mob with diamonds": "Bir canlıya elmas ile vur",
+
+"Expelliarmus!": "Islak Sopa",
+"Hit a mob with a stick": "Çubuğu suya atıp geri alıp bir canlıya vur",
+
+"Explosive Fire": "Havai Fişek Manyağı",
+"Load your crossbow with a firework": "Arbaleti havai fişek ile doldur",
+
+"Flying Colors": "Uçuşan Renkler",
+"Apply a banner (with no patterns) to your shield": "Desensiz bir flamayı kalkanına uygula",
+
+"Indiana Jones": "Gelsene Bi Baboli",
+"Pull a monster using a fishing rod": "Bir yaratığı olta kullanarak çek",
+
+"Master Shieldsman": "Dikenli",
+"Deflect an attack from every hostile monster": "Tüm düşman yaratıkların saldırısını kalkanınla engelle",
+
+"Ol' Betsy": "Yaşlı Betsy",
+"Shoot a crossbow": "Arbalet ile ateş et",
+
+"Pig Fishing Tournament": "Domuz Çekme Turnuvası",
+"Pull a pig using a fishing rod": "Bir domuzu olta kullanarak çek",
+
+"Revenge!": "İntikam",
+"Blow up a creeper with TNT": "Bir creeper'ı TNT kullanarak patlat",
+
+"Shield Luck": "Kalkan Şansı",
+"Protect yourself from an enemy's attack with your shield": "Kalkan kullanarak bir düşman saldırısından kendini koru",
+
+"Shovel Knight": "Kürekci",
+"Hit a mob using all five types of shovels": "Bir canlıya her tür kürek ile vur",
+
+"Sir Knight": "Şövalye",
+"Use planks and iron to craft a shield": "Kalkan yap",
+
+"Slapfish": "Balık Tokadı",
+"Slap a mob across the face with a fish": "Bir canlıya balık ile vur",
+
+"That is so fletch!": "Gereksiz Masa",
+"Craft a fletching table": "Okçu masası yap",
+
+"There's yolk on my head": "Kafamda yumurta sarısı var",
+"Catapult an egg onto a zombie's head": "Bir zombinin kafasına yumurta fırlat",
+
+"Viking": "Viking",
+"Attack a mob using an axe": "Bir canlıya balta kullanarak saldır",
+
+"Weaponry": "Silahlar",
+"Weapons of choice for combat": "Savaşlar için tercih edilen silahlar",
+
+"When Pigs Finally Fly": "Ne zaman ki domuzlar uçar",
+"Pull a pig from 25 blocks below you and watch it go": "Senden 25 blok aşağıdaki bir domuzu oltayla çek",
+
+"Who's the Pillager Now?": "Şimdi Yağmacı Kim?",
+"Give a Pillager a taste of their own medicine": "Yağmacı'ya kendi ilacını tattır",
+
+"X-Bow": "X-Bow",
+"Craft a crossbow using stick, spider string, iron and a hook": "Bir arbalet yap",
+
+"King of the Sea": "Denizin Kralı",
+
+
+
+
+"Bamboom!": "Bambu!",
+"Break down some bamboo": "Biraz bambu kır",
+
+"Biomes": "Biyomlar",
+"All around the world!": "Dünyanın her tarafında!",
+
+"Construction Worker": "İnşaat İşçisi",
+"Craft and use some scaffolding": "Biraz iskele oluştur ve kullan",
+
+"For you, my sweet": "Senin için tatlım",
+"Pick a flower for someone special": "Sevdiğin birisi için çiçek topla",
+
+"Kung Fu Panda!": "Kung Fu Panda!",
+"Get beaten up by an angry panda": "Kızgın bir panda tarafından dövül",
+
+"Simba": "Simba",
+"Breed a baby ocelot": "Bebek bir oselo besle",
+
+"The Mighty Jungle": "Heybetli Orman",
+"Go for a safari in the jungle": "Yağmur ormanında safariye çık",
+
+"Top of the World": "Dünyanın Tepesi",
+"Place scaffolding to the world limit": "Dünya sınırına kadar iskele koy",
+
+"Zoologist": "Zoolog",
+"Breed two pandas to get a baby panda": "İki pandayı çiftleştir",
+
+
+
+"Village, Pillage and Dungeons!": "Köyler, Zindanlar, Tapınaklar ve Daha Fazlası",
+
+"Kill a Vindicator in a Woodland Mansion": "Konak'ta bir İntikamcı öldür",
+
+"Defeat an Evoker in a Woodland Mansion": "Konak'ta bir Uyandırıcı öldür",
+
+"All chained up": "Zincirle Kuşanıldı",
+"Trade for a piece of chain armor from an armorer villager": "Bir köylüden takas karşılığı bir parça zincir zırh al",
+
+"A Complete Catalogue": "Eksiksiz Katalog",
+"Tame all cat variants!": "Tüm kedi çeşitlerini evcilleştir!",
+
+"Crazy Cat Lady": "Kedi Sever",
+"Tame a stray cat in a village": "Bir köyde başıboş bir kediyi evcilleştir",
+
+"Deal's Off!": "Teklifler Kapandı",
+"Get spat at by one of the Trader Llamas": "Takasçı Lamalardan birinin sana tükürmesini sağla",
+
+"Feeling Ill": "Hasta Hissediyor",
+"Defeat every type of Illager as part of a raid": "Bir baskının parçası olan her tür düşmanı yen",
+
+"Florist": "Çiçekçi",
+"Trade for a flower from the Wandering Trader": "Seyyar Tüccarla bir çiçek takası yap",
+
+"Hero of the Village": "Köyün Kahramanı",
+"Triumph over a full raid for the first time": "İlk kez baskına karşı tam bir zafer kazan",
+
+"How to stop a rhino from charging": "Engellenen Darbe",
+"Have a Ravager slam into your shield": "Kalkanınla bir Tahripçi darbesini engelle",
+
+"Illagers on Patrol": "Devriyedeki Baskıncılar",
+"Defeat the leader of an Illager Patrol": "Bir Baskın Lideri öldür",
+
+"Voluntary Exile": "Gönüllü Sürgün",
+"Kill a raid captain. Maybe consider staying away from villages for the time being...": "Bir baskın kaptanı öldür. Belki şimdilik köylerden uzak durmayı düşünebilir..",
+
+"It's So Beast-Like!": "Asıl Tahripçi Benim",
+"Slay a Ravager in a raid": "Baskında bir Tahripçi öldür",
+
+"Lilypad Hatter": "Lilypad Şapkacısı",
+"Breed and trade with a swamp villager": "Bir bataklık köylüsüyle takas yap",
+
+"Mapmaker's Table": "Haritayapıcı'nın Masası",
+"Craft a cartography table with paper and planks": "Haritacı masası yap",
+
+"Master Trader": "Usta Takasçı",
+"Trade with every type of villager career at master level": "Kariyesi Usta seviyede olan her tür köylüyle takas yap",
+
+"Oh, look, it dings!": "Tıngırtıya bak sen",
+"Pick up a bell from a village": "Köyün çanını çal",
+
+"Out of Posts": "Kolların Karası",
+"Enter a Pillager Outpost": "Bir Yağmacı Karakoluna gir",
+
+"Picador": "Poseidon",
+"Hit a Ravager with a thrown trident": "Üçlü Mızrakla bir Tahripçiyi vur",
+
+"Rebuilding the Oceans": "Okyanusları Yeniden Yapmak",
+"Trade for a coral block from the Wandering Trader": "Seyyar tüccardan takas karşılığı mercan bloğu al",
+
+"Retro Future Knight": "Retro Futuristik Savaşçı",
+"Trade for full suit of chain armor from an armorer villager": "Köylüden takas karşılığı full set zincir zırh al",
+
+"Riot Shield": "İsyan Kalkanı",
+"Deflect a Pillager's crossbow bolt": "Bir Yağmacı'nın arbalet darbesini kalkan kullanarak engelle",
+
+"Shady Deals": "Şüpheli Fırsatlar",
+"Trade with a Wandering Trader while he is invisible": "Bir Seyyar Tüccar ile görünmezken takas yapın",
+
+"Stockbroker": "Borsa Tellâlı",
+"Trade with every profession from every biome type": "Her biyom türünden her meslekle takas yapın",
+
+"The Tribal Villagers": "Kabile Köylüleri",
+"Breed and trade with a jungle villager": "Bir yağmur ormanı köylüsüyle takas yap",
+
+"The Haggler": "Sıkı Pazarlıkçı",
+"Trade with a villager at master level": "Usta bir köylüyle takas yap",
+
+"Town Planner": "Şehir Plancısı",
+"Craft and place every type of villager workstation": "Her tür iş istasyonunu yap ve yerleştir",
+
+"Traveller": "Gezgin",
+"Travel to every type of village and trade with a villager in each": "Her tür köye seyahat edin ve her birinde bir köylü ile takas yapın",
+
+"Trade with a Wandering Trader": "Seyyar Tüccarla takas yap",
+
+"Veteran of the Village": "Köyün Gazisi",
+"Attain the highest level of Hero of the Village": "En yüksek Köyün Kahramanı etkisini elde et",
+
+"Village Settler": "Köy Yerleşimi",
+"Trade for a new bell to establish a new village": "Yeni bir köy kurmak için takas karşılığı yeni bir çan alın",
+
+"War is Coming": "Savaş Yaklaşıyor..",
+"Defeat enough Illager Patrol leaders to attain the highest level of Bad Omen": "En yüksek Kötü Şans seviyesine ulaşmak için yeterince Yağmacı Liderini yenin",
+
+"You are the Pillager": "Artık Yağmacı Sensin",
+"Murder one of every villager profession with a crossbow": "Her meslek grubundan bir köylüyü arbaletle katledin",
+
+
+
+
+"Arbalistic": "Arbalistik",
+"Kill five unique mobs with one crossbow shot": "Bir Arbalet atışıyla beş farklı canlıyı öldürün",
+
+"Emerald Miner": "Zümrüt Madencisi",
+"Mine a stack of raw emerald ore": "Bir stek zümrüt cevheri kaz",
+
+"Machine Bow": "Makineleşmiş Yay",
+"Fire a crossbow as rapidly as possible": "Bir arbaletle mümkün olduğunca hızlı ateş edin",
+
+"Master Arbalist": "Usta Arbalist",
+"Create a crossbow with all possible enchantments at max level": "Maksimum seviyede tüm olası büyülerle bir arbalet oluştur",
+
+"Shotbow": "Çoklu Ateş",
+"Shoot three arrows at once with a crossbow": "Arbaletle tek seferde üç yay ateş edin",
+
+
+
+
+"Hell's Bells": "Cehennem Çanları",
+"Place a bell in the nether": "Nether'da çan çal",
+
+"Decaying Beauty": "Çürüyen Güzellik",
+"Pick up some Wither Roses from the damage the Wither wrought on your world": "Wither Gülü elde et.",
+
+
+
+
+"Gas!": "Gaz!",
+"Kill a mob using a lingering potion": "Kalıcı iksir kullanarak bir canlı öldür",
+
+
+
+
+"The Actual End": "Gerçek Son",
+"Get killed by an Enderman in The End": "Endde bir Enderman tarafından öldürül",
+
+"The Beginning": "Başlangıç",
+"Say goodbye to the Wither...": "Wither'a görüşürüz de..",
+
+
+
+# All advancements added in version 1.7 are here
+"I don't like sand": "Kumu sevmem",
+"It's coarse, and rough, and irritating, and it gets everywhere": "Kaba, sert ve rahatsız edici ve her yere akıyor",
+
+"Insomniac": "Ölümcül Ailesel Uykusuzluk",
+"Go 30 days without sleep": "30 gün boyunca uyuma",
+
+"Art Gallery": "Resim Galerisi",
+"Place every type of painting": "Her tür tabloyu gör",
+
+"Writer's Block": "Yazarın Bloğu",
+
+
+
+
+"Chestful of Cobblestone": "Bir sandık dolusu Kırık Taş",
+"Mine 1728 cobblestone, place it in a chest, then stand on it in victory": "1728 Kırık Taş kaz, bir sandığa yerleştir, sonra zaferle üzerine çık",
+
+"Bubble, Bubble, Toil and Trouble!": "Kabarcık, Zahmet ve Bela!",
+"Fill a cauldron using a bucket": "Bir kazanı kova kullanarak doldur",
+
+"Washing Machine": "Çamaşır Makinesi",
+"Use a cauldron to clean leather armor, a banner and a shulker box": "Deri zırh, flama ve shulker kutusunu temizlemek için kazan kullan",
+
+
+
+
+"Must be your birthday": "Doğum günün olmalı",
+"Eat 100 slices of cake": "100 dilim kek ye",
+
+"Castaway": "Kazazede",
+"Eat nothing but dried kelp for three in-game days": "Üç gün boyunca kurutulmuş yosundan başka bir şey yeme",
+
+
+
+
+"Free Diver": "Dalgıç",
+"Stay underwater for 2 minutes": "İki dakika boyunca su altında kal",
+
+"Sleep with the Fishes": "Balıklarla Uyumak",
+"Spend a day underwater": "Bir gün boyunca su altında kal",
+
+"Qinling": "Siyahi",
+"Breed a rare brown panda": "Nadir zenci pandayı besle",
+
+
+
+
+"We're being attacked!": "Saldırı Altındayız!",
+"Trigger a Pillager Raid": "Bir Yağmacı Baskını Başlat",
+
+"Superhero of the Village": "Köyün Kahramanı!",
+"Defeat enough raid captains to obtain a stack of Ominous Banners": "Bir stek Uğursuz Sancak elde etmek için yeterince Baskın Kaptanını yen",
+
+"I've got a bad feeling about this": "Bununla ilgili içimde kötü bir his var",
+
+
+
+
+"Aww man!": "Aww man!",
+"That was a nice life you had. Shame it had to end at this time time time": "Hayatın güzeldi.. Bu vakit bitmesi üzücü",
+
+"Iskallium Collector": "Iskallium Koleksiyoncusu",
+"Collect enough slimeballs to craft a stack of slime blocks": "Bir stek balçık bloğu yapmak için yetecek kadar balçık topu topla",
+
+"Spider-skeleton": "Örümcek-iskelet",
+"Does whatever a spider can": "Bir örümceğin yapabildiği kadar..",
+
+
+
+
+
+"Artillery": "Topçu Sınıfı",
+"Have nine loaded crossbows in your hotbar. All set!": "Hotbarında dokuz arbalet bulundur. Hepsi cephaneli!",
+
+
+
+
+
+"Magical Stockpile": "Büyülü Stok Sahası",
+"Obtain a full stack of bottles of enchanting": "Bir stek tecrübe iksiri elde et",
+
+
+
+
+"Ancient Kung Fu Master": "Eski Kung Fu Ustası",
+"Sneak 10km": "10km boyunca shiftte ilerle",
+
+"Black Belt Ninja": "Siyah Kuşak Ninja",
+"Sneak 1km": "1km boyunca shiftte ilerle",
+
+"Boing, Boing": "Zıp, Zıp",
+"Jump 10,000 times": "10,000 kere zıpla",
+
+"Cupid": "Tarzan Rıfkı",
+"Breed 500 animals": "500 hayvan çiftleştir",
+
+"Did you just run across earth?": "Dünyayı mı turladın?",
+"Sprint 1000km": "1000km koş",
+
+"Elderly Enchanter": "Emekli Büyücü",
+"Enchant 250 items": "250 eşyaya büyü bas",
+
+"Frequent Flyer": "Gökdoğan",
+"Fly 100km with elytra": "Elitra ile 100km uç",
+
+"Global Railway Network": "Uluslararası Tren Hattı",
+"Ride 100km in a minecart": "Vagonunla 100km yolculuk et",
+
+"Happy Birthday!": "Mutlu Yıllar!",
+"Play for a whole year!": "1 yıl boyunca oyna",
+
+"Horse Training": "At Eğitimi",
+"Ride 1km on a horse": "Atınla 1km yolculuk et",
+
+"I enjoy long walks & playing MC": "Bir hayat edinmeye ne dersin?",
+"Walk 1000km": "1000km yürü",
+
+"I Like Trains": "Trenleri severim",
+"Ride 10km in a minecart": "Vagonunla 10km yolculuk et",
+
+"Journeyman Enchanter": "Maceracı Büyücü",
+"Enchant 50 items": "50 eşyaya büyü bas",
+
+"Jumping Jacks": "Fır Fır",
+"Jump 100,000 times": "100,000 kere zıpla",
+
+"Laps in the pool": "Girinci alışıyorsun",
+"Swim 1km": "1km yüz",
+
+"Level Up": "Tecrübe Artıyor",
+"Reach 30 experience levels": "30 tecrübe seviyesine ulaş",
+
+"Lightning McPig": "Hogg Riderrr!",
+"Ride 10km on a pig": "10km boyunca domuzunla yolculuk et",
+
+"Luxury Cruise": "Lüks Yolculuk",
+"Sail 1km in a boat": "Botla 1km yolculuk et",
+
+"Marathon": "Maraton",
+"Sprint 42km": "42km boyunca koş",
+
+"Minecart Rider": "Demiryolu Ustası",
+"Ride 1km in a minecart": "Vagonunla 1km yolculuk et",
+
+"Novice Enchanter": "Acemi Büyücü",
+"Enchant 10 items": "10 eşyaya büyü bas",
+
+"Olympic Athlete": "Olimpik Atlet",
+"Swim 10km": "10km yüz",
+
+"Olympic Gold Medallist": "Olimpiyat Altın Madalyası",
+"Swim 100km": "100km yüz",
+
+"Out for a stroll": "Ufak bir gezintiye çıkalım",
+"Walk 10km": "10km yürü",
+
+"Overlevelling": "Aşırı Seviyelenme",
+"Reach 100 experience levels": "100 tecrübe seviyesine ulaş",
+
+"Passing the Time": "Zaman sana uymazsa sen zamana uy",
+"Play for 100 days": "100gün boyunca oyna",
+
+"Pig Training": "Domuz Eğitimi",
+"Ride 100m on a pig": "Domuzunla 100m yolculuk et",
+
+"Pirate Captain": "Turgut Reis",
+"Sail 10km in a boat": "Botla 10km yolculuk et",
+
+"Statistics": "İstatistikler",
+"If your numbers go up, you're having more fun": "Büyük Sayılar = Büyük Eğlence",
+
+"Sailor of the Seven Seas": "Mezamorta Hüseyin Paşa",
+"Sail 50km in a boat": "Botla 50km yolculuk et",
+
+"Scourge of the West": "Atına binen yol alır, karanlıkta kalan kör olur.",
+"Ride 50km on a horse": "Atınla 50km yolculuk et",
+
+"Sheriff Firearm": "At Türk'ün kanadıdır",
+"Ride 10km on a horse": "Atınla 10km yolculuk et",
+
+"Sneaky Snitch": "Sinsi Sidikli",
+"Sneak 100m": "100m boyunca shiftte ilerle",
+
+"Snout 500": "Domuzcukla Yollarda",
+"Ride 1km on a pig": "Domuzunla 1km yolculuk et",
+
+"Spring in your step": "Adımında bahar",
+"Jump 1000 times": "1000 kere zıpla",
+
+"Supersonic": "Süpersonik",
+"Fly 10km with elytra": "Elitra ile 10km uç",
+
+"Take to the Skies": "Göklere Çık",
+"Fly 1km with elytra": "Elitra ile 1km uç",
+
+"The First Night": "İlk gece",
+"Survive the first night in your brand new world": "Yepyeni dünyanın ilk gecesinde hayatta kal",
+
+"The Parrots and the Bats": "Tarzan",
+"Breed 100 animals": "100 hayvan çiftleştir",
+
+"Two By Two": "Manisa Tarzanı",
+"Breed 2500 animals": "2500 hayvan çiftleştir",
+
+"Who needs cars?": "Kimin arabaya ihtiyacı var ki",
+"Walk 100km": "100km yürü",
+
+"XP Grinder": "XP Öğütücü",
+"Reach 1000 experience levels": "1000 tecrübe seviyesine ulaş",
+
+"Your legs must be tired": "Bacakların ağrıyor olmalı",
+"Sprint 250km": "250km koş",
+
+
+
+
+"Mad Scientist": "Kızgın Bilim Adamı",
+"Cure a zombie villager of every profession": "Her meslekten bir zombi köylü iyileştir",
+
+"A Furious Test Subject": "Öfkeli Bir Test Deneği",
+"Get attacked by a mob with every potion effect": "Her iksirin etkisi altında bulunan bir yaratık tarafından saldırıya uğra",
+
+
+
+
+"Event Horizon": "Olay Ufku",
+"Survive void damage": "Boşluk hasarından kurtul",
+
+"Dragon vs Dragon": "Ejderha vs Ejderha",
+"Kill the Ender Dragon while wearing a Dragon Head": "Ejderha Kafası giyerken Ender Ejderhasını öldür",
+
+"Rocketman": "Kutlama mı var?",
+"Fill your inventory with full stacks of firework rockets": "Envanterini steklenmiş havai fişek roketleriyle doldur",
+
+
+
+
+"A Million Blocks Away": "Milyon blok uzakta..",
+"Travel a million blocks away from spawn": "Spawndan 1 milyon blok uzaklaş",
+
+"Abyss Lord": "Kanal Lordu",
+"Obtain a stack of Conduits": "Bir stek Kanal elde et",
+
+"All the Blocks!": "Tüm Bloklar!",
+"Obtain all the blocks!": "Tüm blokları elde et",
+
+"All the Items!": "Tüm Eşyalar!",
+"Obtain all the items!": "Tüm eşyaları elde et",
+
+"Biological Warfare": "Biyolojik Savaş",
+"Kill every mob in the game with lingering potions": "Oyundaki her canlıyı kalıcı iksirle öldür",
+
+"Creepergeddon": "Creeperların Ezeli Düşmanı",
+"Obtain a stack of Creeper Heads": "Bir stek creeper kafası elde et",
+
+"Death From All": "Herkes Senden Nefret Ediyor",
+"Get killed by every mob that can kill you. (Ignore in hardcore mode)": "Seni öldürebilecek tüm canlılar tarafından öldürül (Zorlayıcı mod için geçerli değildir)",
+
+"Dragon Army": "Ejderha Ordusu",
+"Obtain a stack of Ender Dragon Heads": "Bir stek ejderha kafası elde et",
+
+"Dragon vs Dragon II: Electric Boogaloo": "Ejderha vs Ejderha II: Temassız Savaş",
+"Defeat the Ender Dragon while wearing a dragon head... without touching the ground": "Ejderha Kafası giyerken Ender Ejderhasını öldür.. yere değmezken",
+
+"Endergeddon": "End Katili",
+"Send every mob to the End... and kill them all there": "Tüm canlıları Ende götür.. ve hepsini orada öldür",
+
+"Global Vaccination": "Küresel Aşılama",
+"Cure a zombie villager of every profession... from every biome": "Her meslekten ve biyomdan bir zombi köylü iyileştir",
+
+"Highway to Hell": "Cehenneme Giden Otoban",
+"Send every mob to the Nether... and kill them all there": "Tüm canlıları Nether'a götür.. ve hepsini orada öldür",
+
+"I'm in Space!": "Uzaydayım!",
+"Levitate up a distance of 256 blocks": "Yükselme etkisiyle 256 bloğun üstüne çık",
+
+"Immortal": "Ölümsüz",
+"Fill your entire inventory with Totems of Undying": "Tüm envanterini Ölmeme Totomleriyle doldur",
+
+"Nuclear Fusion": "Nükleer Füzyon",
+"Strike every mob that can transform with lightning at once": "Yıldırımla başka bir canlıya dönüşebilen tüm canlıları aynı anda Yıldırım Yönlendirmesiyle dönüştür",
+
+"Potion Master": "İksir Ustası",
+"Kill every mob in the game with splash potions": "Oyundaki her canlıyı patlayıcı iksirle öldür",
+
+"Rise of the Skeletons": "İskeletlerin Yükselişi",
+"Obtain a stack of Skeleton Skulls": "Bir stek İskelet Kafası topla",
+
+"Super Challenges": "Meydan Okumalar",
+"Good luck completing... any of these ;)": "Bunları tamamlamakta bol şans",
+
+"Stack All the Blocks!": "Tüm Bloklar! (bir stek)",
+"Obtain a stack of all the blocks!": "Tüm bloklardan birer stek elde et",
+
+"Stack All the Items!": "Tüm Eşyalar! (bir stek)",
+"Obtain a stack of all the items!": "Tüm eşyalardan birer stek elde et",
+
+"The World Is Ending": "Dünyanın Sonu Geliyor",
+"Summon ten withers at once": "10 Wither'ı tek seferde çağır",
+
+"Warlock": "Pavyon Sahibi",
+"Obtain a stack of Beacons": "Bir stek Fener elde et",
+
+"We're in the endgame now": "Aydaki Medeniyetin Sonu",
+"Construct a village in the End and defend it from a raid": "Endde bir köy inşa et ve onu bir baskına karşı koru",
+
+"Zombie Apocalypse": "Zombi Kıyameti",
+"Obtain a stack of Zombie Heads": "Bir stek Zombi Kafası topla",
+
+
+
+
+# All advancements added in version 1.8 are here
+"Ya like jazz?": "Jazz sever misin?",
+"Breed two bees using flowers": "Çiçek kullanarak iki arıyı çiftleştir",
+
+"Winnie the Pooh": "Winnie the Pooh",
+"Drink some honey": "Bal iç",
+
+"Sticky Situation": "Yapışkan Mesele",
+"Jump into a honey block to slide down it": "Bal bloğunun içine gir ve aşağı kay",
+
+"WHERE'S THE HONEY LEBOWSKI": "BALLAR NEREYE GİTTİ?",
+"Drink 100 bottles of honey": "100 şişe bal iç",
+
+"Hive Mind": "Kovancı başı",
+"Craft a bee hive using planks and honeycombs then place it": "Tahta ve bal peteği kullanarak arı kovanı yap ve yere koy",
+
+"NOT THE BEES!": "ARILAR OLMASIN!",
+"Get stung to death by bees": "Arılar tarafından ölümüne sokul",
+
+"Honey, I'm Home!": "Balım, Evdeyim!",
+"Craft a stack of honeycomb blocks for building a home out of": "Ev yapmak için bir stek bal peteği bloğu yap",
+
+
+
+
+"Aaaaaand... OPEN!": "Veeeeeeee... AÇIK!",
+"Craft and place an iron door": "Demir kapı yap ve yerleştir",
+
+"Cut In Half": "İkiye Böl",
+"Craft some slabs": "Birkaç basamak yap",
+
+"Stairs? NOOOOO!": "Bir adım ötesi",
+"Craft some stairs": "Birkaç merdiven yap",
+
+
+
+
+"Everybody Loves Ice!": "Herkes Buz Sever!",
+"Obtain a stack of every type of ice in your inventory": "Her buz türünden bir stek elde et",
+
+
+
+
+"Full Stomach": "Doydum!",
+"Fill both your hunger bar and saturation level": "Hem açlık barını hem de doygunluk seviyeni doldur ",
+
+
+
+
+"Help! I've been framed!": "Yardım edin! Çerçevelendim!",
+
+"Craft a composter using wooden slabs then place it": "Tahta basamaklar ile bir gübre varili yap ve yere koy",
+
+"Enter an underground cave": "Bir yeraltı mağrasına gir",
+
+"Heart of Darkness": "Karanlık bir kalp",
+"Submerge yourself in complete darkness": "Kendini zifiri karanlığa batır",
+
+"I'm in Lava With You": "ay Lav yu",
+"Hit something while you and it are in lava": "Sen ve bir şey lav içindeyken o şeye vur",
+
+"Total Beelocation": "Arı Taşıma Ltd. Şti.",
+"Move a Bee Nest with 3 bees inside using Silk Touch": "İçinde üç arı olan bir arı kovanını ipeksi dokunuş ile başka bir yere taşı",
+
+"Bee Our Guest": "Bzzzzzim misafirimiz ol!",
+"Use a bottle to collect Honey from a Beehive with a campfire beneath it so you don't aggravate the bees": "Arı kovanının altından arıları kızdırmamak için kamp ateşi varken şişe ile bal topla",
+
+
+
+# All advancements added in version 1.9 are here
+"BlazeandCave's Advancements" : "BlazeandCave'in Başarımları",
+"Loads of brand new advancements for your Minecraft world!" : "Minecraft dünyanız için bir sürü yepyeni başarım!",
+
+"Mining Milestone" : "Maden Başarımlarının Sonu",
+"Complete every advancement in the Mining tab" : "Maden kategorisindeki tüm başarımları tamamla",
+
+"Building Milestone" : "Yapı Başarımlarının Sonu",
+"Complete every advancement in the Building tab" : "Yapı kategorisindeki tüm başarımları tamamla",
+
+"Farming Milestone" : "Tarım Başarımlarının Sonu",
+"Complete every advancement in the Farming tab" : "Tarım kategorisindeki tüm başarımları tamamla",
+
+"Animal Milestone" : "Hayvan Başarımlarının Sonu",
+"Complete every advancement in the Animal tab" : "Hayvan kategorisindeki tüm başarımları tamamla",
+
+"Monsters Milestone" : "Yaratık Başarımlarının Sonu",
+"Complete every advancement in the Monsters tab" : "Yaratık kategorisindeki tüm başarımları tamamla",
+
+"Weaponry Milestone" : "Silah Başarımlarının Sonu",
+"Complete every advancement in the Weaponry tab" : "Silah kategorisindeki tüm başarımları tamamla",
+
+"Biomes Milestone" : "Biyom Başarımlarının Sonu",
+"Complete every advancement in the Biomes tab" : "Biyom kategorisindeki tüm başarımları tamamla",
+
+"Adventure Milestone" : "Macera Başarımlarının Sonu",
+"Complete every advancement in the Adventure tab" : "Macera kategorisindeki tüm başarımları tamamla",
+
+"Redstone Milestone" : "Kızıltaş Başarımlarının Sonu",
+"Complete every advancement in the Redstone tab" : "Kızıltaş kategorisindeki tüm başarımları tamamla",
+
+"Enchanting Milestone" : "Büyü Başarımlarının Sonu",
+"Complete every advancement in the Enchanting tab" : "Büyü kategorisindeki tüm başarımları tamamla",
+
+"Statistics Milestone" : "İstatistik Başarımlarının Sonu",
+"Complete every advancement in the Statistics tab" : "İstatistik kategorisindeki tüm başarımları tamamla",
+
+"Nether Milestone" : "Nether Başarımlarının Sonu",
+"Complete every advancement in the Nether tab" : "Nether kategorisindeki tüm başarımları tamamla",
+
+"Potions Milestone" : "İksir Başarımlarının Sonu",
+"Complete every advancement in the Potions tab" : "İksir kategorisindeki tüm başarımları tamamla",
+
+"End Milestone" : "End Başarımlarının Sonu",
+"Complete every advancement in the End tab" : "End kategorisindeki tüm başarımları tamamla",
+
+"Super Challenges Milestone" : "Meydan Okumalarının Sonu",
+"Complete every advancement in the Super Challenges tab. Good luck with this one ;)" : "Meydan Okumaları kategorisindeki tüm başarımları tamamla.. Bunun için bol şans ahbab ;)",
+
+"Advancement Legend" : "Esaslı Başarım Ustası",
+"Complete every single advancement in BlazeandCave's Advancements Pack" : "BlazeandCave'in Başarım Paketi'ndeki tüm başarımları tamamla",
+
+
+
+
+# Name and description changes in version 1.9
+"I am Ravager, hear me ROAR!" : "Engellenen Darbe",
+
+"Dragon vs Dragon II" : "Ejderha vs Ejderha II",
+
+"Legend of Hell Chicken Riders" : "Cehennem Tavuğu Binicileri Efsanesi",
+
+"Scientific Inaccuracy" : "Maddenin Korunumu Yasasını Çiğnemek",
+
+"Olaf" : "Yılbaşı Günleri",
+"Do you want to build a snow golem?" : "Kardan bir dost edin",
+
+"Mushroom, Mushroom!" : "Mantar Güveç!!",
+
+"Agent Smithing Table" : "Demir nemden çürür",
+
+"Foal Play" : "Seyis",
+
+"Moskstraumen" : "Kanal Ustası",
+
+"Ring a bell in a village" : "Köyde çan çal",
+
+"Ring a bell in the Nether" : "Nether'da çan çal",
+
+
+
+# All advancements added in version 1.10 are here
+"Dungeons and Spawners" : "Zindanlar ve Çağırıcılar",
+"Open a chest in a dungeon deep underground" : "Yerin altındaki bir zindanda bir sandık aç",
+
+"Steals on Wheels" : "Tekerlekli Çalıntı",
+"Loot a minecart chest from an Abandoned Mineshaft" : "Terkedilmiş bir Maden Kuyusu'ndan bir vagon sandığı yağmala",
+
+"Delicious, Hot Schmoes!" : "Kamp Ruhuyla Pişirilmiş",
+"Place every type of cookable food on a campfire" : "Her tür pişirilebilir yemeği kamp ateşine koy",
+
+"Oresome!" : "Mineral Bağımlılığı",
+"Mine a stack of every ore block" : "Her mineral bloğundan bir stek topla",
+
+
+
+
+"Grass Type" : "Çimenli Toprak Türleri",
+"Obtain every type of grass block in your inventory" : "Envanterinde her tür çimen bloğunu topla",
+
+"Shroom Lightyear" : "Mantar Işığı Ustası",
+"Light up the area with Shroomlight!" : "Etrafı Mantarışığı Meyvesiyle aydınlat",
+
+"Cerulean!" : "Gök Mavisi!",
+"Light up the area with soul fire torches and soul fire lanterns!" : "Etrafı ruh meşaleleri ve ruh fenerleriyle aydınlat!",
+
+"Let There Be Light!" : "Işık Sevdalası",
+"Hold a stack of every light-emitting block and item" : "Her ışık yayan blok ve öğeden bir stek tutun",
+
+"No Chain, No Gain" : "Zincirleme",
+"Craft a chain using an iron ingot and iron nuggets" : "Zincir yap",
+
+"Blackstonehenge" : "Kara Taş Devri",
+"Craft or collect all forms of Blackstone, Polished Blackstone and Polished Blackstone Bricks" : "Kara Taş bloğunun her türünü yap ya da topla",
+
+"Colors of the Wind" : "Söz uçar, Yazı kalır",
+"Dye a sign with each color of dye" : "Bir tabelayı her renkle boya",
+
+
+
+
+"Natural Fertiliser" : "Doğal Gübre",
+"Fill up a composter" : "Gübre varilini doldur",
+
+"Combine Harvester" : "Biçerdöver",
+"Use bone meal on everything that can be grown" : "Büyütülebilen her şeyi kemik tozuyla büyüt",
+
+"What's new with composting?" : "Kompostlamadaki yenilikler",
+"Compost every type of compostable item in a Composter" : "Kompostlanabilir her şeyi gübre varilinde kompostla",
+
+"A Gluttonous Diet" : "Obur Bir Diyet",
+"Obtain a full stack of all the foods" : "Tüm yemeklerden birer stek elde et",
+
+
+
+
+"Foilage" : "Folyo",
+"Use shears to pick up tall grass or ferns" : "Uzun otları veya eğrelti otlarını toplamak için makas kullan",
+
+"Going Down the Rabbit Hole" : "Tavşan Yuvasına Giriş",
+"Bring a rabbit to the bottom of the world, then kill it" : "Dünyanın tabanına bir tavşan getir, sonra onu öldür",
+
+"Just Keeps Going" : "Tavşan Kafa",
+"Eat Rabbit Stew, then avoid eating for the next 3 in-game days" : "Tavşan yahnisi ye ve ertesi 3 gün boyunca hiçbir şey yeme",
+
+"Nest, Quick!" : "Arıcılık",
+"Collect a stack of empty bee nests" : "Bir stek boş arı yuvası topla",
+
+"Heavy Duty Caravan" : "Ağır Kirli Karavan",
+"Tame a llama with a strength of 5" : "Gücü 5 olan bir lama evcilleştir",
+
+"Save the Turtles!" : "kaplumba",
+"Collect a stack of turtle eggs" : "Bir stek kaplumbağa yumurtası topla",
+
+
+
+
+"So Long & Thanks For The Fish" : "Okyanus Vakası",
+"Get murdered by dolphins" : "Yunuslar tarafından katledil",
+
+
+
+
+"Now You’re Thinking With Portals" : "Yıkık",
+"Find a broken Nether Portal in the Overworld" : "Dünyada yıkılmış bir portal bul",
+
+"I just want to make toast!" : "Çift Kaşarlı Tost",
+"Name a bunny 'Toast'" : "Bir tavşanı 'Toast' olarak isimlendir",
+
+"What's Up, Doc?" : "Taşak hizzamdan manzara nasıl",
+"Turn a mob upside-down" : "Bir canlıyı ters çevir",
+
+"Nyan Sheep" : "Gey Koyun",
+"Nyan Nyan Nyan Nyan..." : "Bir koyunu 'jeb_' olarak isimlendir",
+
+"Slenderman" : "Slenderman",
+"Defeat this terrifying monster" : "Bir endermani 'Slenderman' olarak isimlendir ve öldür",
+
+"The one and true Johnny" : "Tek ve Gerçek Johnny",
+"Defeat Johnny" : "Johnny'i yen",
+
+"Prime Specimen" : "Özel Numune",
+"Find Tall Grass or a Large Fern inside a village chest" : "Bir köy sandığında uzun çimen ya da büyük eğrelti bul",
+
+"Redemption Arc" : "Lozan Antlaşması",
+"Befriend a Pillager that doesn’t have a crossbow" : "Arbalet'i olmayan bir Yağmacıyla arkadaş ol",
+
+"Council of Crafters" : "Cumartesi Pazarı",
+"Trade with a villager at height limit" : "Yükseklik sınırında bir köylüyle takas yap",
+
+"Workaholic" : "Çalışma Bağımlısı",
+"Craft a stack of all the villager job site blocks" : "Tüm köylü iş bloklarından birer stek elde et",
+
+"I am Loot!" : "Yağmacı",
+"Open up every type of loot chest" : "Tüm ganimet sandık türlerini aç",
+
+
+
+
+"Paleontologist" : "Taşılbilimci",
+"Craft or mine a stack of bone blocks" : "Bir stek kemik bloğu yap",
+
+"Impossible..." : "Ney",
+"Kill an Enderman with an arrow" : "Enderman'i okla öldür",
+
+"Family Reunion" : "Aile Toplantısı",
+"Reunite all zombie variants (and their baby forms) in one place" : "Tüm zombi varyosyonlarını bir yerde topla (bebekleri dahil)",
+
+"Bone-to-party" : "Kemik Partisi",
+"Reunite all skeleton variants and their three-headed overlord in one place" : "Tüm iskelet çeşitlerini bir yerde topla (üç başlı olan dahil)",
+
+
+
+
+"Loser!" : "Ezik!",
+"Die twice within ten seconds" : "10 saniye içinde iki kere öl",
+
+"Multiclassed" : "Tecavüzcü",
+"Hit a mob with every type of weapon" : "Bir canlıya tüm silahlarla vur",
+
+"Pyrotechnic" : "Piroteknik",
+"Craft a firework of every shape and additional effect" : "Her şekle ve ek efektte sahip bir havai fişek yarat",
+
+"My eyes!" : "Renkli Ölüm",
+"Kill a mob using a firework's explosion" : "Havai fişek patlamasıyla bir canlıyı öldür",
+
+"Who ya gonna call?" : "Kimi arayacaksın?",
+"Kill a ghast using a firework's explosion" : "Havai fişek patlamasıyla bir ghastı öldür",
+
+
+
+
+"Target Acquired" : "Hedef Göründü!",
+"Put up a Target for archery practise" : "Okçuluk yeteneklerini geliştirmek için bir hedef yap",
+
+"Target Practise" : "Hedef Alıştırması",
+"Hit a Target with all types of projectiles" : "Hedef'i fırlatılabilen her şeyle vur",
+
+"Bullseye" : "Kartal Gözlüm",
+"Hit the bullseye of a Target Block with an arrow from 30 blocks away" : "Hedefi 30 metre uzaktan ve tam merkez noktasından vur",
+
+
+
+
+"This name sounds cooler" : "Böyle daha hoş",
+"Name your Diamond Sword 'Diamond Edge'" : "Kılıcını 'Diamond Edge' olarak isimlendir",
+
+"I'll be back" : "Geri Döneceğim",
+"Name your bow 'Terminator'" : "Yayını 'Terminator' olarak isimlendir",
+
+"God of Thunder" : "Yıldırımların Tanrısı",
+"Name your Trident with Loyalty III and Channeling 'Mjolnir'" : "Yıldırım Yönlendirmesi ve Sadakat III büyülü Üçlü Mızrağını 'Mjolnir' olarak isimlendir",
+
+"A rather pointy fence post" : "Oldukça sivri tahta parçası",
+"Enchant a wooden sword with Sharpness V. Not really the best weapon, but it could be a minor annoyance to someone" : "Tahta Kılıcına Keskinlik V büyüsü bas",
+
+"Gotta Go Fast!" : "Daha Hızlı Gitmeliyiz",
+"Obtain the Soul Speed enchantment from a Bastion or bartering with Piglins" : "Bir Piglin Kalesi sandığından veya Piglinlerle yaptığın takastan Ruh Hızı büyüsü elde et",
+
+"Handmade Blinding" : "El Yapımı Bağlılık",
+"Wear a carved pumpkin enchanted with Curse of Binding" : "Bağlanma Lanetli bir oyma bal kabağı giy",
+
+"Master Digger" : "Usta Kazıcı",
+"Create a shovel with all possible enchantments at max level" : "Maksimum seviyede tüm olası büyülerle bir kürek oluştur",
+
+"Master Axeman" : "Usta Baltacı",
+"Create an axe with all possible enchantments at max level" : "Maksimum seviyede tüm olası büyülerle bir balta oluştur",
+
+"Master Farmer" : "Usta Çiftçi",
+"Create a hoe with all possible enchantments at max level" : "Maksimum seviyede tüm olası büyülerle bir çapa oluştur",
+
+
+
+
+"Mob Hunter" : "Adnan Çolak",
+"Defeat 250 mobs" : "250 canlı öldür",
+
+"Bloodthirsty" : "Süleyman Aktaş",
+"Defeat 2500 mobs" : "2500 canlı öldür",
+
+"Kill or be Killed" : "Ali Kaya",
+"Defeat 25,000 mobs" : "25,000 canlı öldür",
+
+"Taking It In Stride" : "Lavgezer'le yollarda",
+"Ride 100m on a Strider" : "Lavgezer üzerinde 100m yolculuk et",
+
+"Who Needs Boats?" : "Tek dostum Lavgezer",
+"Ride 1km on a Strider" : "Lavgezer üzerinde 1km yolculuk et",
+
+"This Ride Is Lit, Yo!" : "Hayat arkadaşım Lavgezer",
+"Ride 10km on a Strider" : "Lavgezer üzerinde 10km yolculuk et",
+
+
+
+
+"Stem Research" : "Kök Arayışı",
+"Attack a huge Nether Fungi until a stem pops out" : "Sana kök verene kadar bir nether ağacını yumrukla",
+
+"What a Fungi!" : "Zehirli Mantar",
+"Pick up Crimson or Warped Fungus" : "Çarpık ya da Kızıl Mantar elde et",
+
+"I am Root" : "Ben Köküm",
+"Pick up some crimson or warped roots" : "Çarpık ya da Kızıl Kök elde et",
+
+"Don't Blink" : "Gözünü Kırpma",
+"Climb on some Weeping Vines in a Crimson Forest" : "Kızıl Ormanda Ağlayan Sarmaşıklara tırman",
+
+"Twisted" : "Bükülmüş",
+"Climb on some Twisting Vines in a Warped Forest" : "Çarpık Ormanda Bükük Sarmaşıklara tırman",
+
+"What about Corruption Planks?" : "Kızıl tahtalara ne demeli?",
+"Craft every item made out of crimson wood" : "Kızıl odundan yapılabilecek her eşyayı yap",
+
+"Welcome to Warp Zone!" : "Çarpıklık",
+"Craft every item made out of warped wood" : "Çarpık odundan yapılabilecek her eşyayı yap",
+
+"Hot Tourist Destination" : "Sıcak Turist Hedefleri",
+"Explore every Nether biome" : "Bütün Nether biyomlarını keşfet",
+
+"Hell Botanist" : "Cehennem Botanikçisi",
+"Gather a stack of every Nether plant" : "Her Nether bitkisinden bir stek elde et",
+
+"Spreading Corruption" : "Yolsuzluğun Yayılması",
+"Place one of every nether block in the overworld" : "Tüm nether bloklarını dünyada yere yok",
+
+"The Struggle Nether Ends" : "Nether Mücadelesi Endde Biter",
+"Place one of every nether block in The End" : "Tüm nether bloklarını Endde yere yok",
+
+"Roadhog" : "Cehennem Domuzunun Sonu",
+"Hunt a Hoglin for food" : "Yemek için bir Hoglin avla",
+
+"When Hoglins Breed" : "Hoglinler de Beslenir",
+"Breed a baby Hoglin using Crimson Fungi" : "Kızıl Mantar kullanarak bir bebek hoglin besle",
+
+"Whole Hog" : "Domuz Saldırısı",
+"Get mauled by a Hoglin" : "Bir Hoglin tarafından hırpalan",
+
+"Giddy Up!" : "Bebekler",
+"Punch a baby Hoglin that is being ridden by a baby Piglin" : "Bebek Piglin tarafından sürülen bir Bebek Hoglin'i yumrukla",
+
+"Zork Chop" : "Fazla Vaktim Kalmadı",
+"Bring a Hoglin into the Overworld to zombify it, then kill it for zorkchops" : "Bir Hoglin'i dünyaya getir zombileşmesini bekle ve öldür, ardından gerekli talimatlar sana verilecek",
+
+"This Boat Has Legs" : "Bu botun ayakları var",
+"Ride a Strider with a Warped Fungus on a Stick" : "Çarpık Mantarlı Oltayla Lavgezeri sür",
+
+"Bobbleheads" : "Koca Kafalar",
+"Breed two Striders using Warped Fungus" : "Çarpık Mantar kullanarak iki lavgezeri çiftleştir",
+
+"This One’s Mine!" : "Artık Benim",
+"Kill a Zombified Piglin that is riding a Strider and take its steed" : "Lavgezer'e binen bir Zombileşmiş Piglin'i öldür ve Lavgezer'i al",
+
+"Oh, Shiny!" : "Pasparlak",
+"Distract Piglins with gold" : "Bir Piglin'i altınla oyala",
+
+"Cultural Misunderstandings" : "Kültürel Yanlış Anlaşılmalar",
+"Slay a Piglin in battle... or an accidental incursion" : "Savaşta bir Piglin'i öldür",
+
+"Who is Cutting Onions?" : "Kim soğanları doğruyor?",
+"Obtain Crying Obsidian from a ruined portal or bartering with Piglins" : "Yıkılmış bir portal sandığından veya Piglinlerle takas karşılığı Ağlayan Obsidyen elde et",
+
+"Anchorman" : "Sağlayıcısı",
+"Craft a Respawn Anchor using Crying Obsidian and Glowstone then place it down" : "Bir Yeniden Doğma Sağlayıcısı yap ve yere koy",
+
+"Not Quite 'Nine' Lives" : "Kedi Gibi.. Dokuz Canlı",
+"Charge a Respawn Anchor to the maximum" : "Yeniden Doğma Sağlayıcısını maksimum güce getir",
+
+"We Got a Live One!" : "Sınır Dışı Edilen",
+"Bring a Piglin into the Overworld then spare it from an eternity of zombification" : "Dünya'ya bir Piglin getir ve öldür",
+
+"When Piglins Fly" : "Domuzlar Uçtuğunda..",
+"Give a piglin elytra then kill it" : "Bir Piglin'e elitra ver ve sonra öldür",
+
+"Electrifying Alliance" : "Heyecan Verici İttifak",
+"Smite a ghast with lightning from the Overworld’s heavens" : "Ghast'ı dünya'da yıldırımla öldür",
+
+"Time to Fire Back" : "Ateş Senin Elinde",
+"Craft a stack of fire charges" : "Bir stek ateş topu yap",
+
+"From Whence It Came!" : "Geldiği Yere..",
+"Find a broken Nether Portal in the Nether" : "Nether'da yıkılmış bir nether portal'ı bul",
+
+"Those Were the Days" : "Hey Gidi Günler",
+"Fight your way into a Bastion Remnant" : "Bir Burç Kalıntısına gir",
+
+"War Pigs" : "Savaş Domuzları",
+"Loot a chest in a Bastion Remnant" : "Burç Kalıntısında bir sandığı yağmala",
+
+"Gilty!" : "Yaldız!",
+"Mine some Gilded Blackstone from a Bastion Remnant" : "Burç Kalıntısında Yaldızlı Kara Taş kaz",
+
+"Wub wub wub!" : "Domuz Müziği!",
+"Obtain the Pigstep music disc from a Bastion Remnant" : "Burç Kalıntısında Pigstep Müzik Diski bul",
+
+"Nugget in a Biscuit" : "Bir Avuç Zenginlik",
+"Mine Nether Gold Ore for a pile of gold nuggets" : "Bir Avuç Altın Parçası elde etmek için Nether Altını Cevheri kaz",
+
+"Dark Ages" : "Karanlık Çağlar!",
+"Mine Blackstone from a Basalt Deltas biome" : "Bazalt Deltası Biyomunda Kara Taş kaz",
+
+"Burnt Right Into Your Soul" : "Ruhum Yanıyor!",
+"Get caught on Soul Fire" : "Ruh Ateşinden hasar al",
+
+"A Soul For A Soul" : "Ruh için Ruh",
+"Place down a Soul Campfire" : "Bir Ruh Kamp Ateşi",
+
+"Let Me Out!" : "Bırak Çıkayım!",
+"Stay in the Nether for twenty ingame days" : "Oyun içi yirmi gün boyunca Nether'de kalın",
+
+"Inception" : "Patronlar Gibi",
+"Build a machine that can break a hole in the roof of the Nether" : "Nether'ın en üst katmanında bir delik açmak için makine üret",
+
+"The Descent" : "İniş!",
+"Dig down into the deepest depths of the Nether" : "Nether'ın en diplerine in",
+
+"Nether Say Die" : "Nether Ölmeni İstiyor",
+"Excavate out some Ancient Debris from deep beneath the lava oceans" : "Lav Denizi'nin dibinde bir Antik Kalıntı bul",
+
+"Holy Scrap!" : "Yüce Hurda!",
+"Smelt Ancient Debris into Netherite Scrap" : "Bir Antik Kalıntı erit ve Netherite Hurdası elde et",
+
+"Diamonds Are Not Forever" : "Sonsuza kadar Elmas'la olmaz",
+"Use Gold Ingots and Netherite Scrap to make a Netherite Ingot" : "Altın Külçesi ve Netherite Hurdası kullanarak bir Netherite Külçesi elde et",
+
+"MOAR Upgraded Tools" : "Oha! Mükemmel Araçlar",
+"Craft a Netherite Pickaxe, Axe, Shovel and Hoe" : "Netherite Kazma, Balta, Kürek ve Çapa üret",
+
+"A Knight to Nether Forget" : "O bir Nether Şovalyesi",
+"Use a Smithing Table to upgrade your diamond armor to netherite armor" : "Demirci Masası kullanarak Elmas bir zırhı Netherite ile kapla",
+
+"Soul Runnings!" : "Ruh Koşusu!",
+"Step on Soul Sand with Netherite Boots enchanted with Soul Speed III" : "Ruh Hızı III ile büyülenmiş Netherite Botlar ile Ruh Kumu'na adım at",
+
+"Fool Me Twice" : "Beni iki kez kandır",
+"Completely use up a netherite hoe. Clearly you have chosen... poorly" : "Tamamen netherite çapa kullan. Açıkça seçmişsin ... üzücü",
+
+"Get a Lode Of This!" : "Manyetizma!",
+"Craft a Lodestone using Chiseled Stone Bricks and a Netherite Ingot" : "Yontulmuş Taş Tuğla ve bir Netherite Külçesi kullanarak 'Manyetit' üret",
+
+"Country Lode, Take Me Home" : "Beni Eve Götür, Pusula",
+"Use a Compass on a Lodestone" : "Bir Mıknatıs Taşı üzerinde Pusula kullan",
+
+"Lodes of Applications" : "Asla Yolumu Kaybetmem!",
+"Create a Lodestone Compass in all three dimensions" : "Her üç boyutta da bir Mıknatıs Taşı Pusulası oluşturun",
+
+"Archaeologist" : "Arkeolog",
+"Mine a stack of Ancient Debris" : "Bir stek Antik Kalıntı elde et",
+
+
+
+
+"Failed Concoctions" : "Başarısız Karışımlar",
+"Brew a mundane and thick potion" : "Sıradan ve Yoğun bir iksir hazırlayın",
+
+
+
+
+"What For?" : "Crystal PvP Zamanı",
+"Craft 64 ender crystals" : "Bir stek End Kristali yap",
+
+"Ring of the End" : "20'lik Son",
+"Defeat the Ender Dragon 20 times" : "Ender Ejderhasını 20 kez öldür",
+
+"In Your Face, Neil Armstrong" : "Ay'da bir Komünist",
+"Colonise the End with potato crops" : "Endde patates mahsulu yetiştir,",
+
+"Organizational Wizard" : "Tertipli Büyücü",
+"Name a Shulker Box 'Blocks' for storing your blocks" : "Bloklarını saklamak için bir Shulker Kutusu'nun adını 'Blocks' yap",
+
+"A Wizard’s Breakfast" : "Bir Büyücünün Kahvaltısı",
+"Eat a stack of Chorus Fruit in one go" : "Tek seferde bir stack Nakarat Meyvesi ye",
+
+
+
+
+"Constellation" : "Takımyıldız",
+"Collect 64 nether stars" : "Bir stek Denizin Kalbi elde et",
+
+"Hearts of the Stack" : "Bir avuç dolusu kalp",
+"Collect 64 Hearts of the Sea" : "Bir stek Denizin Kalbi elde et",
+
+"The Devil's Distance" : "Şeytan Mesafesi",
+"Use the Nether to travel 666km in the Overworld" : "Overworld'de 666km yol almak için Nether'i kullan",
+
+"Ad Astra" : "Oh Tanrım, al beni kollarına",
+"Reach an altitude of 10,000 blocks above the world" : "Dünyanın 10.000 blok üzerinde bir yüksekliğe ulaş",
+
+"Dragon vs Wither: Pre-Sequel" : "Wither'a gerçek Ejderhayı göster",
+"Defeat the Wither while wearing a Dragon head... without touching the ground" : "Wither'ı Ejderha kafası takarken yen... Yere değmemen gerekiyor",
+
+
+
+# Name and description changes in version 1.10
+"Knowledge is Power" : "Bilgi Güçtür",
+
+"Obtain all the special banner patterns" : "Tüm özel flama modellerini edin",
+
+"Play a music disc in a jukebox" : "Müzik kutusunda bir müzik diski oynat",
+
+"Listen to all the music discs" : "Tüm müzik disklerini dinle",
+
+"Wear a full suit of iron armor" : "Kendini Demir Zırhla donat",
+
+"Craft or collect all forms of nether brick and red nether brick" : "Her türden nether tuğlası ve kırmızı nether tuğlası üret veya topla",
+
+"Craft all forms of quartz blocks" : "Kuvars Bloğunun tüm çeşitlerini elde et",
+
+"Sleep in a bed to change your respawn point" : "Yeniden Doğma Konumunu değiştirmek için bir yatakta uyu",
+
+"Break all six types of shovels" : "Altı tür kürek kır",
+
+"Attack a mob using all six types of axes" : "Altı tür Balta kullanarak bir moba vur",
+
+"Hit a mob using all six types of shovels" : "Altı tür Kürek kullanarak bir moba vur",
+
+"Defeat a Drowned that is holding a nautilus shell" : "Nautilus kabuğu tutan bir Boğuk öldür",
+
+"Defeat a Drowned that is holding both a nautilus shell and a trident" : "Hem nautilus kabuğu hem de Üçlü Mızrak tutan Boğuk öldür",
+
+"Strip the bark off of all six types of logs" : "Altı tür kütüğün kabuklarını soyun",
+
+"Sprint 42.195km" : "42.195km koş",
+
+"Reach 300 experience levels" :"300 tecrübe seviyesine ulaş",
+
+"Fly 1000km with elytra" : "Elitra ile 1000km uç",
+
+"Use a treasure map to find Buried Treasure" : "Gömülü Hazine'yi bulmak için bir hazine haritası kullan",
+
+
+
+# Hardcore-Friendly Version description changes
+"Get attacked by a natural iron golem defending its village" : "Köyünü savunan bir demir golem tarafından saldırıya uğrayın",
+ 
+"Get attacked by dolphins" : "Yunuslar tarafından saldırıya uğra",
+
+"Get hurt by every mob that can kill you" : "Sizi Öldürebilecek her mobdan hasar al",
+
+"Get attacked by an Enderman in The End" : "Bir Endermanden Endde hasar al",
+
+"Take damage twice within ten seconds" : "On saniye içinde iki kere hasar al",
+
+"Get attacked by Piglin Brutes" : "Bir Zalim Piglin tarafından saldırıya uğra",
+
+
+# All advancements added in version 1.11 are here
+"Time to Dig!" : "Küreği tuttun!",
+"Use planks and sticks to make a shovel" : "Tahtaları ve sopaları kullanarak bir kürek yap",
+
+
+"Throw diamonds at another player or mob" : "Başka bir oyuncuya veya bir moba elmas fırlat",
+
+
+"One Pickle, Two Pickle, Sea Pickle, Four" : "Pirozom yani deniz hıyarı",
+"Place four sea pickles in a group underwater" : "Suyun altına 4 adet pirozomu grup halinde yerleştir",
+
+"Harry Potter" : "Harry Potter",
+"Place every type of plant in a flower pot" : "Her tür bitkiyi saksıya koy",
+
+"Armor Display" : "Gösteriş Meraklısı",
+"Place all six sets of armor on six different armor stands" : "Altı zırh setini altı farklı zırh askısına yerleştirin",
+
+
+"Unmasked" : "Maskesiz",
+"Shear the Pumpkin off of a Snow Golem to unveil their true face" : "Gerçek yüzlerini ortaya çıkarmak için bir Kar Goleminin Kabağını bir makasla kesin",
+
+
+"Delicious Fish" : "Lezzetli Balık",
+"Cook and eat a fish!" : "Bir balık pişir ve ye",
+
+"Milkshroom" : "Hayır Anne yine mi mantar!",
+"Milk a mooshroom with a bowl to get mushroom stew" : "Mantar güveci elde etmek için bir kase ile Mooshroom'u sağın",
+
+"Live and Let Dye" : "Yaşa ve Boya",
+"Dye Sheep with all 16 colors of wool" : "16 rengin hepsiyle koyun boya",
+
+"Foxy Thievery" : "Hırsız Tilki",
+"Give a fox a Totem of Undying" : "Bir tilkiye Ölümsüz Totemi verin",
+
+"Lead the Way!" : "Yol Gösterici",
+"Craft a lead using string and a slimeball, then attach it to a mob" : "İp ve balçık topu kullanarak bir kayış yapın, ardından bununla bir mob bağlayın",
+
+"Beeloons!" : "Arı mı Balon mu ?",
+"Attach a lead to a bee" : "Bir arıyı bağla",
+
+"Leader of the Animals" : "Hayvanların Lideri",
+"Attach a lead to every mob that can be leashed" : "Bağlanabilecek tüm hayvanları kayışla adamım",
+
+
+"Echolocation" : "Ekolokasyon",
+"Feed a dolphin fish to have it lead you to treasure" : "Sizi hazineye götürmesi için bir yunus balığı besleyin",
+
+"Lion Hunter" : "Aslan avcısı",
+"Feed an Ocelot fish to try and gain its trust" : "Güvenini kazanmak için bir Oseloyu balıkla besleyin",
+
+
+"Your Daily Fix" : "Günlük Düzeltmeniz",
+"Use an Iron Ingot to repair a damaged Iron Golem" : "Hasar almış bir Demir Golemini onarmak için Demir Külçe kullanın",
+
+"I'm not lost anymore!" : "Artık kayıp değilim!",
+"Right-click a banner with a map" : "Haritayla bir flamaya sağ tıklayın",
+
+
+"Controlled Detonation" : "Kontrollü Patlama",
+"Persuade a Creeper to blow up using Flint and Steel" : "Çakmaktaşı ve Çelik kullanarak bir Creeper'ı havaya uçmaya ikna edin",
+
+"Miracle Drink" : "Mucize İçecek",
+"Drink milk or honey to cure poison when on half a heart" : "Yarım kalp kalmışken zehri iyileştirmek için süt veya bal için",
+
+"Dead Really Don’t Die" : "Ölü Gerçekten Ölmez",
+"Give a zombie a Totem... so that you have to kill it twice" : "Bir zombiye bir Totem verin... böylece onu iki kez öldürmek zorunda kalırsınız.",
+
+
+"Half Heart Life" : "Yarım Kalp Ömür",
+"Be on half a heart of health for a minute" : "Bir dakika boyunca yarım kalple yaşa",
+
+
+"Brute Force" : "Zalim Kuvvet",
+"Defeat a Piglin Brute in a Bastion Remnant" : "Piglin Kalesinde bir Zalim Piglin öldür",
+
+"Et tu, Brute?" : "Ve sen, Zalim",
+"Get murdered by Piglin Brutes" : "Bir Zalim Piglin'e öl",
+
+"Lava Fishing" : "Lav Balıkçılığı",
+"Reel in a Strider using a Fishing Rod" : "Olta kullanarak bir Lavgezeri çek",
+
+"Nether Rock Collection" : "Nether Taşı Koleksiyonu",	
+"Mine a stack of Netherrack, Basalt, Blackstone and Glowstone in the Nether" : "Nether'da bir stek Nether Taşı, Bazalt, Kara Taş ve Işık Taşı kazın",
+
+
+# Name and description changes in version 1.11
+"Attach a lead to a llama to form a llama caravan" : "Bir lama sürüsü oluşturmak için lamalara kayış bağla",
+
+"Use Shears to obtain wool from a sheep" : "Koyundan yün elde etmek için makas kullan",
+
+"Swim in lava while having the Fire Resistance effect" : "Üzerinde Ateş Direnci etkisi varken lavda yüz",
+
+"Diemonds!" : "Elmaslar!",
+
+
+# Trophies added in version 1.11
+"Awarded for achieving" : "Bunu başardığın için ödüllendirildin:",
+
+
+
+
+"Miner's Trophy" : "Madenci'nin Ödülü",
+"Don't mine at night!" : "Akşam madene inme!",
+
+"Builder's Trophy" : "Mimar'ın Ödülü",
+"A build of a thousand blocks begins with a single brick" : "Binlerce blokluk yapılar, bir bloktan başlar",
+
+"Farmer's Trophy" : "Çiftçi'nin Ödülü",
+"It ain't much but it's honest work" : "El emeği, göz nuru",
+
+"Butcher's Trophy" : "Kasap'ın Ödülü",
+"No animals were harmed in the obtaining of this trophy" : "Bu ödül alımında hiçbir hayvan zarar görmemiştir",
+"(just simulated ones)" : "(sahte olanlar dışında)",
+
+"Slayer's Trophy" : "Katil'in Ödülü",
+"This is all that's left of your foes once you're done with them" : "Düşmanlarınla işin bittikten sonra geriye kalan bu",
+
+"Sword Trophy" : "Kılıç Ödülü",
+"Slice and dice" : "Kes ve doğra",
+
+"Explorer's Trophy" : "Kaşif'in Ödülü",
+"It's a magical world, ol' buddy... let's go exploring!" : "Sihirli kocaman bir dünya... Hadi gezelim!",
+
+"Adventurer's Trophy" : "Maceracı'nın Ödülü",
+"So much to do, so much to see..." : "Yapacak çok, görecek çok...",
+
+"Mechanic's Trophy" : "Mühendis'in Ödülü",
+"Give me somewhere to stand and I can move the Earth" : "Bana bir kaldıraç verin Dünya'yı kaldırayım",
+
+"Enchanter's Trophy" : "Büyücü'nün Ödülü",
+"What's next? Enchanting mobs?" : "Ne kaldı? Yaratıklara mı büyü basacaksın?",
+
+"Statistician's Trophy" : "İstatistikçi'nin Ödülü",
+"Lies, damned lies, and statistics" : "İstatistiksel bir başarı!",
+
+"Nether Adventurer's Trophy" : "Nether Kaşifi'nin Ödülü",
+"You'll nether find a better trophy anywhere else!" : "Cehennemin Dibine!",
+
+"Potion Brewer's Trophy" : "İksirci'nin Ödülü",
+"How did you get here?" : "Buraya nasıl geldin?!",
+
+"End Adventurer's Trophy" : "End Kaşifi'nin Ödülü",
+"What could possibly come after the end?" : "Sondan sonra ne gelir?",
+
+"Challenger's Trophy" : "Meydan Okuyucu'nun Ödülü",
+"Imagine what the reward must be for the entire datapack" : "Bu datapack'in tamamı için ödül ne olabilir?",
+
+"Yellow T-Shirt" : "Sarı T-Shirt",
+"I completed BlazeandCave's Advancements Pack" : "BlazeandCave'in Başarım paketini tamamladım",
+"and all I got was this lousy T-shirt" : "ve elime tek geçen şey bu Sarı T-shirt!",
+
+
+
+
+"Spoon" : "Kaşık",
+"There is no spoon" : "Burada kaşık yok",
+
+"Santa's Present" : "Noel Babanın Hediyesi",
+"Someone's been naughty this year..." : "Bu yıl birileri yaramazlık yapmış..",
+
+"Golem Kit" : "Golem Kit",
+"The pumpkin is sold separately" : "Kabak ayrı satılır",
+
+"Golden Crown" : "Altın Taç",
+"Piglin-approved" : "Piglin onaylı",
+
+"Mayor's Throne" : "Yılmaz Büyükerşen'in Tahtı",
+"MUMBO FOR MAYOR!" : "BAŞKAN İÇİN!",
+
+
+
+
+"Logolas" : "Logolas",
+"The axe of choice by the masters of chopping" : "Doğrama ustalarının tercih ettiği balta",
+
+"Torch God's Favor" : "Meşale Tanrısı'nın Lütfu",
+"The Torch God shall no longer haunt Minecraft" : "Meşale Tanrısı artık Minecraft'ı rahatsız etmeyecek",
+
+"The Journal" : "Dergi",
+"After all these years, I finally have them all..." : "Bunca yıldan sonra nihayet hepsine sahibim..",
+
+"What are you doing reading this for? Go get Advancement Legend already!" : "Bunu ne için okuyorsun? İlerleme Efsanesini şimdiden al!",
+
+"Magic Wand" : "Sihirli Değnek",
+"Made of holly, eleven inches long," : "Tanrıların Gücüyle yapılmıştır, 11 inç uzunluğunda,",
+"and contains a single feather from the tail of a phoenix" : "bir anka kuşunun kuyruğundan tek bir tüy içerir",
+"Has no function in the hands of a mere muggle" : "Sadece bir muggle'ın elinde hiçbir işlevi yoktur",
+
+"Sleepless Anchor" : "Uykusuz Güven Kaynağı",
+"Beds are for losers" : "Yataklar ezikler içindir",
+
+
+
+
+"A Glutton's Meal" : "Adana Yemeği",
+"I see you have quite the appetite. Fatty." : "Görüyorum ki oldukça iştahlısın.. ve şişko",
+
+"Wilson" : "Meta",
+"Don't worry Wilson, I'll do all the paddling. You just hang on" : "Merak etme meta, kürek çekmeyi ben hallederim. Sadece bekle",
+
+"Farmer's Badge" : "Çiftçi Rozeti",
+"For the continued work you've put out there, take this reward!" : "Sürdürdüğün ve devam eden istikrarın için bu ödülü al!",
+
+
+
+
+"Cowboy Hat" : "Covboy Şapkası",
+"Don't let it get shot off!" : "Vurulmasına izin verme!",
+
+"Earth" : "Dünya",
+"Seven billion people on the planet" : "Gezegende yedi milyar insan,",
+"Now that sounds overpopulated" : "kulağa aşırı kalabalık geliyor",
+
+"Super Rod" : "Süper Çubuk",
+"Catches the best pokemon from the seas" : "Denizlerden en iyi pokemonu yakalar",
+
+"Potato Mine" : "Patates Mayını",
+"SPUDOW!" : "Zooooort!",
+
+"Toilet" : "Tuvalet",
+"WHERE'S THE EFFING HONEY LEBOWSKI?" : "BAL NEREDE LEBOWSKI?",
+
+
+
+
+"Mobestiary" : "Mobestiary",
+"Available at stores now" : "Şimdi mağazalarda mevcut",
+
+"Vanilla Ice Cream" : "Vanilyalı Dondurma",
+"Life would be vanilla ice cream without 31 flavors of individuality" : "Hayat, 31 çeşit bireysellik olmadan vanilyalı dondurma gibi olurdu",
+
+"Molten Ice Cream" : "Erimiş Dondurma",
+"Noo! My ice cream! T_T" : "HAYIRRRR! dondurmam :(",
+
+"Hyperlink" : "Köprü",
+"This advancement was sponsored by MCStacker" : "Bu başarımın sponsoru Teyip oldu",
+
+"Handsome Pumpkin" : "Yakışıklı Bal Kabağı",
+"This guy rushes me with a spoon... A freakin' spoon!" : "Bu adam beni bir kaşıkla taciz ediyor.. Siktiğimin kaşığı!",
+
+"Pink Camo Pants" : "Pembe Kamuflaj Pantolonu",
+"They don't camouflage anywhere!" : "Hiçbir yerde kamufle olmazlar!",
+
+"The Walking Head" : "Yürüyen Kafa",
+"Yes, this head totally has legs" : "Evet, bu kafanın gerçekten bacakları var",
+
+"Sans's Head" : "Kumun Kafası",
+"You start to hear distant MEGALOVANIA sounds" : "MEGALOVANYA seslerini duymaya başlıyorsun",
+
+"Ender Arrow" : "Ender Ok'u",
+"This arrow ended an enderman. Seems impossible..." : "Bu ok bir enderman'in hayatını bitirdi. İmkansız gibi görünüyor..",
+
+
+
+
+"Boomer T-Shirt" : "Moruk T-Shirt'ü",
+"There are no mistakes, just happy explosions" : "Hata yok, sadece mutlu patlamalar",
+
+"The Hylian Shield" : "Hylian Kalkanı",
+"Should have spoken to the Keaton Mask Soldier" : "Keaton Maskeli Asker ile konuşmalıydım,",
+"to get a discount at the Bazaar" : "çarşıda indirim almak için",
+
+"1000-degree knife" : "1000 DERECE BIÇAK",
+"(GONE WRONG) (NOT CLICKBAIT)" : "(BEKLENDİĞİ GİBİ OLMADI) (CLICKBAIT DEĞİL)",
+
+
+
+
+"Voyager 1" : "Gezgin 1",
+"Earth's farthest spacecraft" : "Dünyanın en uzak uzay aracı",
+
+"Cartographer's Quill" : "Haritacı'nın Tüyü",
+"Freshly not-smashed on the ground" : "Yerde taze parçalanmamış",
+
+"A blessing in love" : "Aşkta bir nimet",
+"Face your fears and ask your crush out!" : "Korkularınla yüzleş ve aşkına açıl!",
+
+"Bouquet" : "Buket",
+"If you catch this at a wedding, you're next to get married" : "Bunu bir düğünde yakalarsan, bir sonraki evlenecek kişi sen olacaksın",
+
+"Waterbed" : "Su Yatağı",
+"Have a good night" : "İyi geceler",
+
+
+
+
+"Dinnerbone's Head" : "Dinnerbone'un Kafası",
+"No love for Grumm" : "Grumm için aşk yok",
+
+"Jeb's Head" : "Jeb'in Kafası",
+"Baah, Baah, Baah, Baah, Baah, Baah, Baah!" : "Vah, Vah, Vah, Vah, Vah, Vah, Vah!",
+
+"Groot's Stick" : "Groot'un Çubuğu",
+"I am Groot" : "Ben Groot'um",
+
+"Medal of Honor" : "Onur Madalyası",
+"But didn't you start the raid yourself?" : "Ama baskını kendiniz başlatmadınız mı?",
+
+"Wall Street" : "Duvar Cadde (bunu nasıl çeviricem amına koyım)",
+"Yes, it's a wall" : "Evet, bu bir duvar",
+
+"Ominous Shield" : "Uğursuz Kalkan",
+"This shield certifies your rank as a" : "Bu kalkan İsyan Birliğinin,",
+"Pillager of the Arch-Illager's forces" : "Yağmacısı olduğunuzu onaylar",
+
+"Stonk Man's Head" : "Stonk Adam'ın Kafası",
+"STONKS" : "STONKS",
+
+"Your Cat's Prize" : "Kedinizin Ödülü",
+"You have so many cats, that now" : "O kadar çok kediniz var ki,",
+"phantoms have to sleep to avoid meeting you" : "artık hayaletler sizinle karşılaşmamak için uyumak zorunda",
+
+
+
+
+"Quiver" : "Ok Kılıfı",
+"You can't actually store arrows in it" : "Aslında okları içinde saklayamazsınız",
+
+
+
+
+"Master Enchanter's Book" : "Büyü Ustası'nın Kitabı",
+"Congratulations, you did it" : "Tebrikler, başardınız",
+"This document decrees you as a master enchanter" : "Bu döküman bir Usta Büyücü olduğunuzun kanıtıdır",
+"Go see a doctor" : "Gidip bi doktora görün",
+
+"Never gonna give you up" : "Never gonna give you up",
+
+"Finger Guns" : "Parmak Tabancaları",
+"So anyway I started blasting..." : "Neyse, patlamaya başladım..",
+
+"Chaos Emerald" : "Kaos Zümrüdü",
+"Just gotta find six more" : "Sadece altı tane daha bulmalısın..",
+
+
+
+
+"Strider Treat" : "Lavgezer Tedavisi",
+"Your strider deserved it" : "Lavgezerin bunu haketti",
+
+"Enchanter's Tome" : "Büyücünün Cilti",
+"Used by Illager Enchanters to enchant mobs" : "Yağmacı Büyücüleri tarafından yağma çetelerini büyülemek için kullanıldı",
+
+"World's Most Reliable Shoes" : "Dünyanın En Güvenilir Ayakkabıları",
+"The statistics tab shall no longer be the grindy super challenges tab" : "İstatistikler kategorisi artık zorlu süper meydan okumalar kategorisi olmayacak",
+
+"Portable Trampoline" : "Taşınabilir Trambolin",
+"Hours of sick fun for the whole family!" : "Bütün aile için saatlerce deli gibi eğlence!",
+
+"Noah's Ark" : "Nuh'un Gemisi",
+"A deluge is imminent" : "Tufan yakın..",
+
+"Zero Tick Farm" : "Sıfır Saniye Çiftliği",
+"RIP Zero Tick Farms" : "HUZUR İÇİNDE YATSIN",
+"2013 - 2020" : "2013 - 2021",
+
+"Black Pearl" : "Siyah İnci",
+"Wherever we want to go, we'll go" : "Nereye gitmek istersek gideceğiz",
+
+"Superman's Cape" : "Süpermen'in Pelerini",
+"Is it a bird?" : "O bir kuş mu?",
+"Is it a plane?" : "bir uçak?",
+"Is it an egg salad sandwich?" : "twerk yapan bir zenci?",
+"No way, it's a Charizard!" : "Yok artık, o bir Charizard",
+
+"Flowey the Flower" : "Çiçek Flowey",
+"All what's left of Asriel, the monsters' prince" : "Canavarların prensi Asriel'den geriye kalanlar..",
+
+"Firearm's Firearm" : "Ateşli Silahın Ateşli Silahı",
+"Now how did this get here? Seriously?" : "Şimdi bu buraya nasıl geldi? Ciddi anlamda?",
+
+"Refreshment" : "Ferahlatıcı",
+"You'll need it after running that far" : "O kadar uzağa koştuktan sonra ona ihtiyacın olacak",
+
+"Gold Medal" : "Altın Madalya",
+"Probably not real gold" : "Muhtemelen gerçek altın değil..",
+
+"Birthday Cake" : "Doğum Günü Pastası",
+"Happy birthday to you, happy birthday to you," : "Mutlu yıllaaar, mutlu yıllarr sanaaa,",
+"this song is copyrighted, oh wait actually it's public domain!" : "umarım arkadaşların ve ailen de kutlar..",
+
+"Piston Cup" : "Piston Kupası",
+"It's just an empty cup" : "Bu sadece boş bir kupa",
+
+"Thomas the Tank Engine" : "Tank Motoru Thomas",
+"He's number one" : "O bir numara",
+
+"Black Belt" : "Siyah Kuşak",
+"Who is the greatest man?" : "En büyük adam kimmiş?",
+
+
+
+
+"Farmer's Badge V2" : "Çiftçi Rozeti V2",
+"Farm some more they said, it'll be fun they said..." : "Biraz daha çiftlik dediler, eğlenceli olacak dediler..",
+
+"Spinny Top" : "Fırıldak Tepe",
+"If it falls over, it's not a dream" : "Düşerse, rüya değil",
+
+"Stormbreaker" : "Fırtına Kıran",
+"What kind of weapon are we talking about here?" : "Burada ne tür bir silahtan bahsediyoruz?",
+"The Thanos-killing kind" : "Öldüren Tür",
+
+"Baconator" : "Fenerci",
+"Oh... wait, I thought you said Bacon!" : "Her yer sanki pavyon",
+
+"Zork Chop" : "Pomuz Dirzolası",
+"Don't ask" : "Sorma",
+
+
+
+
+"Unknown Mixture" : "Bilinmeyen Karışım",
+"Side effects include possible stomach ache, 20/20 vision," : "Yan etkiler arasında olası mide ağrısı, 20/20 görme bulunur,",
+"acne, extensive back pain and more..." : "sivilce, yaygın sırt ağrısı ve daha fazlası..",
+
+"Stale Milk" : "Bozuk Süt",
+"Please drink this" : "Lütfen iç bunu",
+
+"Fast and Furious" : "Hızlı ve Öfkeli",
+"Getting shot by this will make you fast and furious" : "Bununla vurulmak seni hızlandıracak ve öfkelendirecek",
+
+"This is Anarchy" : "Anarşi",
+"If you want to survive you need a strong belly" : "Hayatta kalmak istiyorsan güçlü bir iştaha ihtiyacın var",
+
+
+
+
+"TARS" : "TARS",
+"Everybody good? Plenty of slaves for my robot colony?" : "Herkes iyi mi? Robot kolonim için yeterince köle var mı?",
+
+"Wizard's Fruit" : "Büyücü'nün Meyvesi",
+"Utilised by the Mayor from Powerpuff Girls" : "Yılmaz Büyükerşen tarafından kullanıldı",
+
+"Portal Bow" : "Portal Yayı",
+"Portal II" : "Portal II",
+
+"Moon Rock" : "Ay Taşı",
+"Looks like he brought some of the moon back" : "Ayın bir kısmını geri getirmiş gibi görünüyor",
+"Smells like cheese" : "Peynir gibi kokuyor",
+
+"Ring of Bedrock" : "Katman Kayası Yüzüğü",
+"The end of the End" : "Endin Sonu",
+
+"Singularity" : "Tekillik",
+"Newton’s third law - the only way humans have ever" : "Newton'un üçüncü yasası - insanların bir yere",
+"figured out of getting somewhere is to leave something behind" : "varmasının tek yolu geride bir şeyler bırakmasıdır.",
+
+
+
+
+"Cosmonaut Helmet" : "Kozmonot Kaskı",
+"It was a Russian who was the first who could truly say this" : "Bunu gerçekten ilk söyleyebilen kişi Rus'tu.",
+
+"Astronaut Helmet" : "Astronot Kaskı",
+"In zero gravity, a feather and a hammer falls at the same speed" : "Sıfır yerçekiminde, bir tüy ve bir çekiç aynı hızda düşer",
+
+"Dragon Bro" : "Ejder Ahbab",
+"Dragon Broooo!!!" : "Ejder Ahbabbbb!!!",
+
+"Power Stone" : "Güç Taşı",
+"Maybe you should start a cool rock collection" : "Belki harika bir taş koleksiyonuna başlamalısın",
+
+"Heart of a Siren" : "Bir Sirenin Kalbi",
+"No, not sirenhead!" : "Hayır, Sirenkafa değil!",
+
+"Amphitrite" : "Amfitrit",
+"Many people called her the personification of the sea itself..." : "Birçok insan ona denizin kendisinin kişileştirilmesi dedi",
+
+"Devil's Pitchfork" : "Şeytanın Dirgeni",
+"One Hell Of A Time" : "Her seferinde bir Cehennem",
+
+"Space Stone" : "Ay Taşı",
+"This universe is finite, its resources, finite" : "Bu evrenin kendisi de kaynakları da sınırsız değil",
+"If life is left unchecked, life will cease to exist" : "Hayat kontrol edilmezse, yok olur",
+"It needs correcting" : "Düzeltilmesi gerekiyor",
+
+"Reality Stone" : "Gerçeklik Taşı",
+"Reality can be whatever I want..." : "gerçeklik ne istersem o olur..",
+
+"Eye of the Apocalypse" : "Kıyametin Gözü",
+"The beginning of the end" : "Sonun başlangıcı",
+
+"Wishing Star" : "Dilek Yıldızı",
+"Make a wish!" : "Bir dilek dile!",
+
+"Corrupted Beacon" : "Bozuk İşaret",
+"The Corrupted Beacon holds immense power within" : "Bozuk İşaret, içinde muazzam bir güce sahip",
+"It waits for the moment to unleash its wrath" : "Gazabını serbest bırakmak için doğru zamanı bekler",
+
+"Treasure Chest" : "Hazine Sandığı",
+"One of each block is stored in there" : "Her bloktan biri orada saklanır",
+
+"Frame of Infinite Items" : "Sonsuz Eşyalar Çerçevesi",
+"One of each item is stored on here" : "Her eşyadan biri burada saklanır",
+
+"Pandora's Box" : "Pandora'nın Kutusu",
+"It is said to have contained all the evils in the world..." : "Dünyadaki tüm kötülükleri içerdiği söyleniyor..",
+
+"Doraemon's Pocket" : "Doraemon'un Cebi",
+"I hope I can get thousands of diamonds in here" : "Umarım buraya binlerce elmas sığdırabilirim",
+
+"Nuclear Reactor" : "Nükleer Reaktör",
+"You have transcended humanity's progression" : "İnsanlığın ilerlemesini aştın",
+
+"Mind Stone" : "Akıl Taşı",
+"The ability to give the mindless minds of their own" : "Akılsız beyinlere kendi beyinlerini verme yeteneği",
+
+"Soul Stone" : "Ruh Taşı",
+"Did you do it?" : "Yaptın mı?",
+"Yes" : "Evet",
+"What did it cost?" : "Neye mal oldu?",
+"8 hours" : "8 saate",
+
+"Cursed Creeper Head" : "Lanetli Creeper Kafası",
+"Wave 5 of 5: CREEPER-GEDDON!!!" : "Dalga 5/5: CREEPER-GEDDON!!!",
+
+"ACDC - Back in Black" : "ACDC - Back in Black",
+"Back in Black stomped Highway to Hell in terms of success" : "Back in Black başarı açısından Cehenneme Giden Yol'u ezdi",
+
+"Endfinity Source" : "Sonsuzluk Kaynağı",
+"They will END the world..." : "Dünyayı bitirecekler..",
+
+"Potion Master's Diploma" : "İksir Ustası Diploması",
+"A certificate granting you the ability to teach" : "İnce bilimi ve tam iksir yapma sanatını,",
+"the subtle science and exact art of potion-making" : "öğretme yetkisi veren bir sertifika",
+
+"Poison Mask" : "Zehir Maskesi",
+"Protects your face from poison but not the rest of your body" : "Yüzünüzü zehirden korur ama vücudunuzun geri kalanını korumaz",
+
+"Infinity Gauntlet" : "Sonsuzluk Eldiveni",
+"Iron Man stole all the stones so the best" : "Iron Man tüm taşları çaldı, bu yüzden",
+"you can do is punch people with it" : "yapabileceğin en iyi şey insanlara yumruk atmak",
+
+"Totem of Immortality" : "Edebilik Totemi",
+"You'll be immortal as long as you don't die" : "Ölmediğin sürece edebi olacaksın",
+
+"Time Stone" : "Zaman Taşı",
+"Perfectly balanced, as all things should be" : "Her şeyin olması gerektiği gibi, mükemmel dengeli",
+
+"Instant Death" : "Ani ölüm",
+"Since you like dying so much..." : "Ölmeyi çok sevdiğinden beri..",
+
+
+
+# Renamed advancements and description changes in 1.11.2
+"Craft or collect all forms of normal, cracked, mossy and chiseled stone bricks" : "Taş tuğla türlerinin hepsini topla ya da yap",
+
+"Swim in water while having the Water Breathing effect" : "Suda Nefes Alma etkisine sahipken suda yüz",
+
+"Ride a Skeleton Horse" : "Bir İskelet At sür",
+
+"Follow the Leader" : "Lideri takip et",
+
+"Barbearian" : "Eskimo",
+
+"Happy New Year!" : "Mutlu Yıllar!",
+"Play for a whole Minecraft year" : "Bir minecraft yılı boyunca oyna"
+
+
+
+# All advancements and trophies that get added in versions 1.12 or later will be added down here for easy locating by translators who wish to update their language file
+}

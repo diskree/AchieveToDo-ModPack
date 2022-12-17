@@ -1,0 +1,57 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:big_dripleaf"
+		},
+		"title": {"translate":"Spleaf"},
+		"description": {"color":"#75E1FF","translate":"Kill a mob using a shovel while both of you are standing on a Big Dripleaf"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:weaponry/shovel_knight",
+	"rewards": {
+		"function": "bc_rewards:weaponry/spleaf"
+	},		
+	"criteria": {
+		"wooden_shovel": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"distance": {
+						"absolute": {
+							"max": 5
+						}
+					},
+					"stepping_on": {
+						"block": {
+							"blocks": [
+								"minecraft:big_dripleaf"
+							]
+						}
+					}
+				},			
+				"killing_blow": {
+					"source_entity": {
+						"equipment": {
+							"mainhand": {
+								"tag": "minecraft:shovels"
+							}
+						},
+						"stepping_on": {
+							"block": {
+								"blocks": [
+									"minecraft:big_dripleaf"
+								]
+							}
+						}
+					},
+					"is_explosion": "false",
+					"is_projectile": "false",
+					"is_magic": "false",
+					"is_fire": "false",
+					"is_lightning": "false"
+				}
+			}
+		}
+	}
+}

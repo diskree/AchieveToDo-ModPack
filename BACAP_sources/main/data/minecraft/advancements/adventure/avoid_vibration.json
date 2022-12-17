@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:sculk"
+		},
+		"title": {"translate":"Sneak 100"},
+		"description": {"color":"green","translate":"Sneak near something in the Deep Dark to prevent being heard"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:mining/deep_slate_nine",
+	"rewards": {
+		"function": "bc_rewards:mining/sneak_100"
+	},
+	"criteria": {
+		"avoid_vibration": {
+			"trigger": "minecraft:avoid_vibration"
+		}
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:pearlescent_froglight"
+		},
+		"title": {"translate":"The Void Frogs"},
+		"description": {"color":"dark_purple","translate":"Lower a Frog into the void using a Slow Falling potion, then kill it so it becomes one with the void"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:end/cow_jumped_over_the_moon",
+	"rewards": {
+		"function": "bc_rewards:end/the_void_frogs"
+	},		
+	"criteria": {
+		"the_void_frogs": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:frog",
+					"location": {
+						"dimension": "the_end",
+						"position": {
+							"y": {
+								"max": 0.0
+							}
+						}
+					},
+					"effects": {
+						"minecraft:slow_falling": {}
+					}
+				}
+			}
+		}
+	}
+}

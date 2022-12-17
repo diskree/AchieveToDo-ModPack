@@ -1,0 +1,27 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:tadpole_bucket"
+		},
+		"title": {"translate":"Bukkit bukkit"},
+		"description": {"color":"green","translate":"Catch a Tadpole in a Bucket"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:animal/frog_family",
+	"rewards": {
+		"function": "bc_rewards:animal/bukkit_bukkit"
+	},		
+	"criteria": {
+		"tadpole_bucket": {
+			"trigger": "minecraft:filled_bucket",
+			"conditions": {
+				"item":
+				{
+					"items": [
+						"minecraft:tadpole_bucket"
+					]
+				}
+			}
+		}		
+	}
+}

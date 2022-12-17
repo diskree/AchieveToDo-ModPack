@@ -1,0 +1,57 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:magma_cream"
+		},
+		"title": {"translate":"Stayin' Frosty"},
+		"description": {"color":"green","translate":"Swim in lava while having the Fire Resistance effect"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:potion/root",
+	"rewards": {
+		"function": "bc_rewards:potion/stayin_frosty"
+	},	
+	"criteria": {
+		"fire_resistance": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"effects": {
+								"minecraft:fire_resistance": {
+									"amplifier": {
+										"min": 0
+									},
+									"duration": {
+										"min": 1
+									}
+								}
+							},
+							"location": {
+								"fluid": {
+									"fluid": "minecraft:lava"
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"parent": "blazeandcave:challenges/stack_all_the_items",	
+	"criteria": {
+		"root": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:challenges/root": "true"
+						}
+					}
+				}
+			}
+		}
+	}
+}

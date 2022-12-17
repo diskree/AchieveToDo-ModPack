@@ -1,0 +1,35 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:verdant_froglight"
+		},
+		"title": {"translate":"Incandescent!"},
+		"description": {"color":"#75E1FF","translate":"Light up the area with all three hues of Froglight"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:building/cerulean",
+	"rewards": {
+		"function": "bc_rewards:building/incandescent"
+	},		
+	"criteria": {
+		"verdant_froglight": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:verdant_froglight"
+			}
+		},
+		"ochre_froglight": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:ochre_froglight"
+			}
+		},
+		"pearlescent_froglight": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"block": "minecraft:pearlescent_froglight"
+			}
+		}
+	}
+}

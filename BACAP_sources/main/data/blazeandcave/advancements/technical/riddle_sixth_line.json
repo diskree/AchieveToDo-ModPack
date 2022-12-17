@@ -1,0 +1,32 @@
+{
+	"rewards": {
+		"function": "blazeandcave:riddle/sixth_line"
+	},		
+	"criteria": {
+		"sixth_line": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"type": "chicken",
+					"nbt": "{OnGround:0b}"
+				},
+				"damage": {
+					"type": {
+						"is_projectile": true,
+						"direct_entity": {
+							"type": "minecraft:egg"
+						}
+					}
+				},
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:technical/riddle_fifth_line": "true"
+						}
+					}
+				}
+			}
+		}
+	}
+}

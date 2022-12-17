@@ -1,0 +1,24 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:oak_sign"
+		},
+		"title": {"translate":"It's a Sign!"},
+		"description": {"color":"green","translate":"Craft and place a sign"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:building/stationary_storage",
+	"rewards": {
+		"function": "bc_rewards:building/its_a_sign"
+	},		
+	"criteria": {
+		"sign": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"item": {			
+					"tag": "minecraft:signs"
+				}
+			}
+		}
+	}
+}

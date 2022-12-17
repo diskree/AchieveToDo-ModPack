@@ -1,0 +1,34 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:carved_pumpkin",
+			"nbt": "{Enchantments:[{id:\"minecraft:binding_curse\",lvl:1}]}"
+        },
+        "title": {"translate":"Handmade Blinding"},
+        "description": {"color":"#75E1FF","translate":"Obtain a carved pumpkin enchanted with Curse of Binding. Be careful not to put it on!"},
+		"frame": "goal"
+    },
+    "parent": "blazeandcave:enchanting/curses",
+	"rewards": {
+		"function": "bc_rewards:enchanting/handmade_blinding"
+    },
+    "criteria": {
+        "binding_pumpkin": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:carved_pumpkin"
+						],
+						"enchantments": [
+							{
+								"enchantment": "minecraft:binding_curse"
+							}
+						]
+					}
+				]
+			}
+		}
+    }
+}

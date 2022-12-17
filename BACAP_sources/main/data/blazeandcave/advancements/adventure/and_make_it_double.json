@@ -1,0 +1,37 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:amethyst_shard"
+		},
+		"title": {"translate":"And make it double!"},
+		"description": {"color":"#75E1FF","translate":"Play a jukebox near some Allays, then give one an Amethyst Shard and see what happens!"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:adventure/evelyn_evergreen",
+	"rewards": {
+		"function": "bc_rewards:adventure/and_make_it_double"
+	},		
+	"criteria": {
+		"duplication": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"predicate": {
+							"type": "minecraft:allay",
+							"nbt": "{DuplicationCooldown:6000L}"
+						},
+						"entity": "this"
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:amethyst_shard"
+					]
+				}
+			}
+		}
+	}
+}

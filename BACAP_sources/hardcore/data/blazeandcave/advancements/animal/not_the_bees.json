@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:spawner"
+        },
+        "title": {"translate":"NOT THE BEES!"},
+        "description": {"translate":"Get stung by a bee"},
+		"hidden": "false"
+    },
+    "parent": "blazeandcave:animal/hive_mind",
+    "rewards": {
+        "function": "bc_rewards:animal/not_the_bees"
+    },		
+    "criteria": {
+        "bee": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "source_entity": {
+						"type": "bee"
+					}
+                }
+            }
+        }
+    }
+}

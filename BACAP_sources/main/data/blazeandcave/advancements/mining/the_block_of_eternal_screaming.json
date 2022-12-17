@@ -1,0 +1,29 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:sculk_shrieker"
+		},
+		"title": {"translate":"The Block of Eternal Screaming"},
+		"description": {"color":"#75E1FF","translate":"Use Silk Touch to pick up a Sculk Shrieker"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:mining/vibe_check",
+	"rewards": {
+		"function": "bc_rewards:mining/the_block_of_eternal_screaming"
+	},		
+	"criteria": {
+		"sculk_shrieker": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sculk_shrieker"
+						]
+					}
+				]
+			}
+		}
+	}
+}

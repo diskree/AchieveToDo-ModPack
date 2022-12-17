@@ -1,0 +1,80 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:paper"
+		},
+		"title": {"translate":"Ooh, Baby!"},
+		"description": {"color":"green","translate":"Kill a baby zombie"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:monsters/dead_dont_die",
+	"rewards": {
+		"function": "bc_rewards:monsters/ooh_baby"
+	},		
+	"criteria": {
+		"zombie": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "zombie",
+					"flags": {
+						"is_baby": "true"
+					}
+				}
+			}
+		},
+		"zombie_villager": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "zombie_villager",
+					"flags": {
+						"is_baby": "true"
+					}
+				}
+			}
+		},
+		"husk": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "husk",
+					"flags": {
+						"is_baby": "true"
+					}
+				}
+			}
+		},
+		"zombified_piglin": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "zombified_piglin",
+					"flags": {
+						"is_baby": "true"
+					}
+				}
+			}
+		},
+		"drowned": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "drowned",
+					"flags": {
+						"is_baby": "true"
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+		"zombie",
+		"zombie_villager",
+		"husk",
+		"zombified_piglin",
+		"drowned"
+		]
+	]
+}

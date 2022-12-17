@@ -1,0 +1,5046 @@
+{
+# BlazeandCave's Advancements Pack Language File
+ 
+# How to use: Name and descriptions of advancement to left of : and put translation to right of :, inside the speech marks "" like this: "Advancement Description"
+# Some advancement titles make use of puns that would work in English but probably not in other languages. Be creative if you wish if you can find any puns in foreign languages.
+
+# This file will be updated with new advancements with each new update.
+# Currently the text that appears with reward functions are not translatable - support for translating the reward functions messages will come in a later update.
+
+# Language: 繁體中文(Traditional Chinese)
+# Author: TorchGod
+# Pack version supported: 1.15
+
+# All language entries are organised in alphabetical order of file name as of 1.3
+# All new advancements added in updates later than 1.3 (1.4, 1.5 and so on) will be put at the bottom of the file for easy locating and adding by translators
+
+# Adventuring tab as of 1.3
+
+"Adventuring Time": "探險時光",
+"Discover every biome": "發現每個生態域",
+
+"Boaty McBoatface": "出航!",
+"Craft a boat for sailing on the high seas": "合成一艘船於大海上遨遊",
+
+"Hired Help": "招募傭兵",
+"Summon an Iron Golem to help defend a village": "生成一隻鐵魔像以協助保衛村莊",
+
+"Cold Feet": "寒冰之足",
+"Discover every cold biome": "發現所有寒冷生態系",
+
+"Disc Jockey": "DJ收藏家",
+"Collect all 12 music discs": "獲得所有12張唱片",
+
+"Do You Want to Trade?": "走過路過不要錯過!",
+"Find an NPC village": "找到一個NPC村莊",
+
+"Dry Spell": "是誰住在深海的大鳳梨裡?",
+"Dry a sponge in a furnace": "在熔爐中烤乾海綿",
+
+"Filthy Rich": "小賺一筆",
+"Make 64 emeralds": "獲得64個綠寶石",
+
+"Filthy Stinkin' Rich": "大發橫財",
+"Make 64 emerald blocks": "合成64個綠寶石塊",
+
+"Flower Power": "權力歸花",
+"Collect all types of flowers": "收集所有種類的花",
+
+"Ghostbuster!": "鍾馗",
+"Bust a Vex summoned by an Evoker": "把喚魔者召喚的惱鬼打得滿地找牙",
+
+"Grave Robber": "盜墓者",
+"Enter a pyramid in a desert": "進入沙漠中的金字塔",
+
+"Heeere's Johnny!": "還敢下來阿冰鳥!!!",
+"Kill a Vindicator": "殺死一隻衛道士",
+
+"House of Psychos": "精神病院",
+"Find a Woodland Mansion": "找到林地府邸",
+
+"I hereby dub thee...": "朕在此賜汝此號",
+"Obtain a name tag": "獲得一個命名牌",
+
+"Just Keep Swimming": "向前遊就對了",
+"Go for a swim": "到水中游泳",
+
+"Kilometre Walk": "遠行一公里",
+"It's not that far in real life": "現實生活中小菜一碟啦!",
+
+"Laser Sharks!": "雷射海底雞!",
+"Defeat a Guardian": "打敗守衛者",
+
+"Magic Book": "魔導書",
+"Trade for an Enchanted Book": "交易獲得附魔書",
+
+"Mapmaker": "製圖師",
+"Craft or trade an empty map": "合成或交易獲得空地圖",
+
+"Monumental": "神殿",
+"Find an Ocean Monument": "找到海底神殿",
+
+"Music To My Ears": "天籟之音",
+"Find a music disc": "在唱片機中播放音樂唱片",
+
+"One with the forest": "森林之王",
+"Discover every forest biome": "發現所有樹林生態系",
+
+"Overgrown!": "枝繁葉茂",
+"Discover every overgrown biome": "發現所有茂密生態系",
+
+"Overpowered": "太強大",
+"Obtain a Notch Apple": "獲得附魔金蘋果",
+
+"Postmortal": "超越生死",
+"Use a Totem of Undying to cheat death": "使用不死圖騰來逃避死亡",
+
+"Adventure": "冒險",
+"Adventure and exploration": "冒險、探索與戰鬥",
+
+"Snow Feet": "凍霜之足",
+"Discover every snowy biome": "探索每個積雪生態系",
+
+"Spear Fishing": "魚叉捕魚",
+"Kill a Guardian with arrows": "用箭射殺守衛者",
+
+"Tarzan": "泰山",
+"Swing (or climb) on some vines": "擺盪（或攀爬）於藤蔓上",
+
+"Ten Thousand Blocks": "旅行一萬里",
+"A journey that long begins with a single step": "千里之行，始於足下",
+
+"The Deep End": "海洋霸主",
+"Defeat an Elder Guardian": "打敗遠古守衛者",
+
+"The Shielding": "神盾局",
+"A shield does no better than a locked door": "但盾依然沒有鎖上的門有效...",
+
+"This is Mine Now!": "天下萬礦，盡歸我有!",
+"Find an abandoned mineshaft that was not dug out by you": "找到一個顯然不是你挖的廢棄礦坑",
+
+"Tomb Raider": "瀆神者",
+"Enter a jungle temple": "進入叢林神殿",
+
+"Treasure Map": "寶藏圖",
+"Trade for an Explorer Map": "交易獲得探險家地圖",
+
+"Voyage": "航海王",
+"A hundred kilometres!": "十萬海哩",
+
+"Warm Feet": "熾熱之足",
+"Discover every dry biome": "發現所有乾燥生態系",
+
+"Wet Feet": "激濤之足",
+"Discover every water biome": "發現所有海洋生態系",
+
+"What a Deal!": "成交!",
+"Successfully trade with a Villager": "成功與村民進行交易",
+
+"Witchcraft": "魔力泉湧",
+"Find a witch hut in a swamp": "在沼澤中找到女巫小屋",
+
+"Wololo!": "啊哇呾喀呾啦",
+"Defeat an Evoker": "打敗喚魔者",
+
+
+
+
+
+# Building tab as of 1.3
+"A Masterpiece!": "絕世神作",
+"Put up a painting": "掛上一幅畫",
+
+"Ah, My Old Enemy...": "啊，我的宿敵...",
+"Craft every type of stairs": "合成所有種類的樓梯",
+
+"Benchmarking": "這是?工作台?",
+"Construct a crafting bench with four wooden planks": "用4塊木材合成一個工作台",
+
+"Bricks!": "磚塊磚頭~♫~好好玩~♫~(有趣喔!)",
+"Fire up that clay!": "燒了那坨粘土!",
+
+"Change of Sheets": "換床單",
+"Dye your bed a different color than white": "將你的床染成白色以外的其他顏色",
+
+"Classy Glassy": "閃亮亮",
+"Smelt sand in a furnace to get glass": "在熔爐中將沙子煉成玻璃",
+
+"Clay-Dough!": "粘土團!",
+"Dig up some clay from a lake": "從湖里挖取粘土",
+
+"Concrete Evidence": "證據確“鑿”",
+"Create concrete from concrete powder by dropping it into water": "將混凝土粉末扔進水里來製造混凝土",
+
+"Creepers and Withers": "夢魘",
+"Engrave sandstone with creeper and wither patterns": "在沙岩上雕刻苦力怕和凋靈的圖案",
+
+"Display your items for all to see...": "炫富者",
+"Craft an item frame for displaying your items": "合成物品展示框來展示你的物品",
+
+"Electric!": "電氣!",
+"Light up the area with some redstone lamps": "用紅石燈照明",
+
+"En Garde": "亡羊補牢",
+"Erect some fencing": "建造一些柵欄",
+
+"Expensive!": "極盡奢華!",
+"Light up the area with some sea lanterns": "用海晶燈照明",
+
+"Fake fortress": "地獄要塞違建",
+"Craft or collect all forms of nether brick, red nether brick, and nether wart blocks": "合成或收集所有類型的地獄磚，紅色地獄磚，與地獄疙瘩磚",
+
+"Fake monument": "海底神殿違建",
+"Craft or collect all forms of prismarine blocks": "合成或收集所有類型的海磷方塊",
+
+"Fake stronghold": "終界要塞違建",
+"Craft or collect normal, cracked, mossy and chiseled stone bricks": "合成或收集石磚，裂石磚，青苔石磚和鏨製石磚",
+
+"Fluorescent!": "螢光棒!",
+"Light up the area with some end rods": "使用終界燭照明",
+
+"Getting Wood": "萬事之始",
+"Attack a tree until a block of wood pops out": "摧毀樹木直到跳出一個木頭方塊",
+
+"Glowing!": "螢光!",
+"Light up the area with glowstone": "使用螢光石照明",
+
+"Greek Art Decor": "希臘藝術風格",
+"Craft quartz blocks, stairs, slabs, pillars and chiseled": "合成所有種類的石英磚",
+
+"Halloween!": "萬聖節!",
+"Light up the area with jack o'lanterns!": "使用南瓜燈照明!",
+
+"It's a Sign!": "注意!",
+"Craft and place a sign": "合成並放置一塊告示牌",
+
+"It's a Trap!": "陷阱!",
+"Craft and place down a trapdoor": "合成並放置一個地板門",
+
+"Jailhouse Block": "監獄",
+"Craft or find iron bars": "合成或找到鐵柵欄",
+
+"Ladder Climbers Inc.": "爬梯公司",
+"Climb the ladder!": "爬梯子!",
+
+"Mannequin": "模特兒",
+"Craft an armor stand for displaying your armor": "合成盔甲架來展示你的盔甲",
+
+"Master Logger": "伐伐伐伐伐木工~",
+"Cut down a full stack of logs of all types": "將每種原木各砍伐一組",
+
+"Pathways": "小徑",
+"Use a shovel to create grass paths": "使用鏟子創造草徑",
+
+"Pot Planter": "綠拇指",
+"Craft and place a flower pot": "合成並放置一個花盆",
+
+"Rainbow Sand": "七彩沙",
+"Craft concrete powder using sand, gravel and dye": "用沙子，礫石和染料合成混凝土粉末",
+
+"Raise the flag!": "升~~旗!",
+"Craft and place a banner": "合成並放置一個旗幟",
+
+"Rock Collection": "崎石收藏家",
+"Collect all the types of rocks": "收集所有種類的石頭",
+
+"Building": "建築",
+"Your only limit is your imagination... and resources": "唯一的阻礙是你的想像力...當然還有資源量",
+
+"Slabs For Days": "囤積半磚",
+"Craft every type of slab": "合成每一種半磚",
+
+"Stationary Storage": "倉儲",
+"Craft and place down a chest for storing your items": "合成並放置一個箱子來儲藏你的物品",
+
+"Sweet dreams": "甜美的夢",
+"Change your respawn point": "在床上睡覺以變更您的重生點",
+
+"The Glazed Terracotta Army": "釉彩兵馬俑",
+"Craft all 16 colors of glazed terracotta": "合成所有16種顏色的陶瓷",
+
+"The Rainbow You Always Wanted": "念念不忘的彩虹",
+"Craft all 16 colors of concrete": "合成所有16種顏色的混凝土",
+
+"The Terracotta Army": "兵馬俑",
+"Craft all 16 colors of terracotta (stained clay)": "合成所有16種顏色的染色粘土",
+
+"The Walls": "戰牆",
+"Build some cobblestone walls": "建造一些圓石牆",
+
+"Torched!": "點燃火炬!",
+"Light up the area with some torches": "使用火把照明",
+
+"Translucence": "若隱若現",
+"Craft all 16 colors of stained glass": "合成所有16種顏色的染色玻璃",
+
+"What a pane": "噢!好痛",
+"Craft some glass panes": "合成一些玻璃板",
+
+"Yay! I got my wood!": "奇木收藏家",
+"Collect all six types of wood": "收集所有6種木頭",
+
+"Your Door Was Locked": "鎖好你的門",
+"Craft a door to stop monsters from entering your house": "合成一扇門來阻止怪物進入你的房屋",
+
+
+
+# Combat tab as of 1.3
+"Blast Shield": "抗爆護盾",
+"Survive a creeper's blast with your shield": "利用盾在苦力怕的爆炸中倖存下來",
+
+"Bombs Away!": "重磅炸彈!",
+"Use gunpowder and sand to craft TNT": "用火藥和沙子來合成TNT",
+
+"Bow Spammer": "諸葛連弩",
+"Attack a mob by bow-spamming": "向一隻怪物瘋狂射箭",
+
+"Creepy Heads": "可“怕”的頭顱",
+"Blow up a creeper with a charged creeper to get a creeper head": "利用高壓苦力怕炸死苦力怕來獲得苦力怕頭顱",
+
+"Dead Don't Die": "不死之軀",
+"Kill a zombie": "殺死一隻殭屍",
+
+"Desert Nomad": "沙漠流浪者",
+"Kill a husk": "殺死一隻屍殼",
+
+"Dungeon Crawler": "地城之主",
+"Defeat all kinds of mobs from special structures": "打敗所有特殊結構中的怪物",
+
+"Egging, Dude!": "砸他!",
+"Vandalise something with eggs": "用雞蛋砸些什麼",
+
+"Ender Worm": "墨影風暴",
+"Prevent an endermite from maturing": "防止終界蟎蛻變成熟",
+
+"Eskimo": "愛斯基摩人",
+"It may be illegal to hunt polar bears in real life, but not in Minecraft": "在現實生活中捕獵北極熊可能是違法的，但在Minecraft中顯然不是",
+
+"Ew Ew Ew!": "嘶嘶作響",
+"Kill a spider": "殺死一隻蜘蛛",
+
+"Fireworks Display": "焰火表演",
+"Use gunpowder and paper to craft fireworks": "用火藥和紙合成煙花火箭",
+
+"Frosty": "凍霜骨骼",
+"Kill a stray": "殺死一隻流髑",
+
+"Gelatinous Cube": "凝膠塊",
+"Kill a slime": "殺死一隻史萊姆",
+
+"Hell Hunter": "地獄獵人",
+"Defeat all kinds of Nether mobs": "打敗所有種類的地獄生物",
+
+"Iron Belly": "鋼腸鐵胃",
+"Stop starvation using rotten flesh": "用腐肉減緩飢餓",
+
+"Leader of the Pack": "野獸領袖",
+"Befriend a wolf": "和一匹狼成為朋友",
+
+"Keep Your Distance": "離我遠點!",
+"Kill a Creeper with arrows": "用箭殺死一隻苦力怕",
+
+"Monster Hunter": "魔物獵人",
+"Kill any hostile monster": "殺死任何敵對怪物",
+
+"Monsters Hunted": "獵取怪物",
+"Kill one of every hostile monster": "殺死每種敵對怪物各一隻",
+
+"Night Runner": "闇夜使者",
+"Defeat all kinds of Overworld night mobs": "打敗所有種類的主世界夜晚生物",
+
+"Not Today, Thank You": "抱歉，今天不行",
+"Deflect an arrow with a shield": "使用盾牌反彈投射物",
+
+"Plane Walker": "星球漫步者",
+"Kill endermen in all three dimensions": "在所有三個維度中殺死終界使者",
+
+"Point Blank": "直截了當",
+"Shoot a mob from point-blank range": "近距離射擊生物",
+
+"Poisonous Ew": "嘶嘶入扣",
+"Kill a cave spider": "殺死一隻洞穴蜘蛛",
+
+"Combat": "執銳披堅",
+"Battle against the monsters of this world": "與這個世界的怪物戰鬥",
+
+"Sniper Duel": "狙擊手對決",
+"Kill a skeleton with an arrow from more than 50 meters": "在距50公尺遠外的地方射殺一隻骷髏",
+
+"Snowball Fight": "雪球大戰",
+"The spirit of Christmas... quickly drowned out by a battle": "聖誕節的精神...老早被雪球大戰淹沒了",
+
+"Spooky Skeleton": "詭異骷髏",
+"Kill a skeleton": "殺死一隻骷髏",
+
+"Spooky Skulls": "詭異頭顱",
+"Blow up a skeleton with a charged creeper to get a skeleton skull": "利用高壓苦力怕炸死骷髏來獲得骷髏頭顱",
+
+"Still Talking!": "陰魂不散",
+"Blow up a zombie with a charged creeper to get a zombie head": "利用高壓苦力怕炸死殭屍來獲得殭屍頭顱",
+
+"Take Aim": "瞄準",
+"Shoot something with a bow and arrow": "使用箭矢射擊任何東西",
+
+"Taste of your own medicine": "自食惡果",
+"Kill a witch with a splash potion": "用噴濺藥水殺死女巫",
+
+"Tele-Morph": "傳送形態",
+"Damage a mob by teleporting into it": "傳送到一隻生物中來傷害它",
+
+"Termite Control": "滅蠹行動",
+"Kill a silverfish": "殺死一隻蠹蟲",
+
+"The ender of ender": "末影的末日",
+"Kill an enderman": "殺死一隻終界使者",
+
+"The Ghastly Eyes": "闇紅的雙眼",
+"Kill an invisible spider": "殺死一隻隱形的蜘蛛",
+
+"The Mighty Hunter": "顯赫的獵人",
+"Hunt all types of animals with your bow": "用你的弓殺死所有種類的動物",
+
+"The Undead Cavalry": "亡靈騎士",
+"Encounter and defeat a skeleton horse in a thunderstorm": "在雷雨天遭遇並擊敗一隊骷髏馬陷阱",
+
+"There has to be another way...": "一定還有什麼別的辦法...",
+"Kill a zombie villager": "殺死一隻殭屍村民",
+
+"Trampoline": "蹦床",
+"Craft a slime block using slimeballs": "用粘液球合成粘液塊",
+
+"Void Ender": "末影虛空",
+"Defeat all kinds of End mobs": "殺死所有種類的末影生物",
+
+"What a creep!": "卑鄙小人!",
+"Kill a creeper": "殺死一隻苦力怕",
+
+"Witch!": "魔女!",
+"Kill a witch": "殺死一隻女巫",
+
+
+
+# Enchanting tab as of 1.3
+"Armor for the masses": "堅不可摧的盔甲",
+"Obtain every protection related enchantment": "獲得所有類型的保護附魔",
+
+"Bane of one-shotting spiders": "除蟲專家",
+"Obtain Bane of Arthropods V": "獲得節肢剋星V附魔",
+
+"Bow down to me!": "“弓”身稱臣吧!",
+"Obtain Power V": "獲得力量V附魔",
+
+"Complete Enchanter": "附魔完結",
+"Obtain every enchantment throughout your enchanting career": "在附魔生涯中獲得所有種類的附魔",
+
+"Curses!": "詛咒!",
+"Obtain both types of curses": "獲得兩種類型的詛咒附魔",
+
+"Fiery": "烽火紛飛",
+"Obtain every fire related enchantment": "獲得所有火焰附魔",
+
+"Fortunate Son": "天選之人",
+"Obtain Fortune III": "獲得幸運III附魔",
+
+"Knocking Your Socks Off": "打得你滿地找牙",
+"Obtain Knockback and Punch enchantments": "獲得擊退和衝擊附魔",
+
+"Let It Go!": "冰雪奇緣",
+"Obtain boots enchanted with Frost Walker": "獲得冰霜行者附魔的靴子",
+
+"Librarian": "圖書管理員",
+"Build some bookshelves for your enchanting table": "為你的附魔台建造書架",
+
+"Like a Cat": "輕盈如羽",
+"Obtain boots enchanted with Feather Falling": "獲得輕盈的靴子",
+
+"Master Armorer": "無冕之王",
+"Create a full suit of armor with all possible enchantments at max level": "製造出一整套所有可能的附魔都達到最高等級的盔甲",
+
+"Master Enchanter": "大魔導師",
+"Obtain every enchantment at their max level throughout your enchanting career": "在附魔生涯中獲得所有附魔種類都達到最高等級",
+
+"Master Fisher": "姜太公",
+"Create a fishing rod with all possible enchantments at max level": "製造出一把所有類型的附魔都達到最高等級的釣魚竿",
+
+"Master Knight": "聖劍EX咖哩棒",
+"Create a sword with all possible enchantments at max level": "製造出一把所有可能的附魔都達到最高等級的劍",
+
+"Master Miner": "爐火純青",
+"Create a pickaxe with all possible enchantments at max level": "製造出一把所有可能的附魔都達到最高等級的鎬",
+
+"Master Sniper": "百步穿楊",
+"Create a bow with all possible enchantments at max level": "製造出一把所有可能的附魔都達到最高等級的弓",
+
+"Needle Sharp": "削鐵如泥",
+"Obtain Sharpness V": "獲得鋒利V附魔",
+
+"Heavy Metal": "重金屬",
+"Craft an anvil": "合成一個鐵砧",
+
+"Overkill": "溢傷",
+"Deal eight hearts of damage in a single blow": "一擊造成八顆心的傷害",
+
+"Pick Like Silk": "絲綢之觸",
+"Use a Silk Touch enchanted pickaxe to obtain diamond ore as a block": "使用絲綢之觸的鎬獲得鑽石礦",
+
+"Enchanting": "附魔師",
+"Enchant items to give them magical abilities": "附魔物品來給予它們神奇的能力",
+
+"Scuba Gear": "水肺裝",
+"Obtain every water related enchantment": "獲得所有與水相關的附魔",
+
+"Super Efficient": "事半功倍",
+"Obtain Efficiency V": "獲得效率V附魔",
+
+"Unbreakable": "堅如磐石",
+"Obtain Mending on an item": "在一個物品上附加經驗修補附魔",
+
+"Undead Slayer": "亡靈殺手",
+"Obtain Smite V": "獲得不死剋星V附魔",
+
+
+
+# End tab as of 1.3
+"Anti-Gravity Generator": "萬有斥力產生機",
+"Bring a shulker into the overworld and let it give you anti-gravity": "將一隻界伏蚌帶到主世界並令它給予你漂浮的能力",
+
+"Cow Jumped Over The Moon": "登上月球的牛",
+"Bring a cow from the Overworld to the End and then kill it": "將一隻牛從主世界帶到末地然後將其殺死",
+
+"Dragon Shield": "騰龍護盾",
+"Attempt to block the dragon's attacks": "嘗試阻擋終界龍的攻擊",
+
+"End Bricks!": "終界磚",
+"Craft end bricks from end stone": "用終界石合成終界磚",
+
+"For Mother, Clarence": "縮頭蚌",
+"Kill a shulker": "殺死一隻界伏蚌",
+
+"Free the End": "解放終界",
+"Good luck": "祝你好運",
+
+"Getting Chorus": "獲得歌萊果",
+"Attack a chorus tree until it collapses": "破壞一株歌萊枝直到它倒塌",
+
+"Great View From Up Here": "上面的風景真好",
+"Levitate up a distance of 50 metres": "利用界伏蚌的攻擊向上飄浮50格",
+
+"I'm Coming Back, Murph!": "好討厭的感覺啊~~",
+"Travel far into the End dimension": "進入終界旅行",
+
+"No! Don't let me leave, Murph!": "飛行荷蘭人",
+"Travel so far into the End dimension you might as well be on another planet": "深入終界旅行直至抵達另一個星球",
+
+"Noxious Fumes": "毒氣彈",
+"Use dragon's breath to brew a lingering potion": "使用龍息煉製滯留藥水",
+
+"Off With His Head!": "拖下去，斬了!",
+"Collect a dragon's head from the bow of an end ship": "從終界船的船首收集一個龍首",
+
+"Poison Dart": "箭毒",
+"Craft tipped arrows of poison": "合成藥水箭",
+
+"Portable Storage": "便攜式儲藏",
+"Use shulker shells to craft a shulker box": "使用潛影殻合成潛影盒",
+
+"Purpurfect!": "紫色完美主義",
+"Craft or collect purpur blocks, slabs, pillars and stairs": "合成或收集紫珀方塊，紫珀磚半磚，紫珀柱和紫珀磚樓梯",
+
+"Remote Getaway": "逃向遠方",
+"Escape the island": "逃離這座島",
+
+"The End": "終界",
+"Or the beginning?": "或是新的開始？",
+
+"Shouldn't my shield levitate too?": "我的盾不也該飄起來嗎?",
+"Block a Shulker's bullet with your shield": "用你的盾格擋界伏蚌的子彈",
+
+"Sky High": "直衝雲霄",
+"Fly up beyond the world height limit": "飛到世界高度限制以上",
+
+"Sky's the Limit": "天下無難事",
+"Find an Elytra": "找到鞘翅",
+
+"Some Breakthrough": "突破性進展",
+"Exhaust your elytra": "耗盡鞘翅的耐久度",
+
+"The City at the End of the Game": "終末都市",
+"Go on in, what could happen?": "進去吧， 還能發生什麼事？",
+
+"The End... Again": "終界... 再臨...",
+"Respawn the Ender Dragon": "重生終界龍",
+
+"The Next Generation": "銀河飛龍",
+"Hold the Dragon Egg": "取得龍蛋",
+
+"The Start of Something": "一元復始",
+"Craft your first ender crystal": "合成第一個末影水晶",
+
+"Uh, Houston? We have a problem": "喂，休斯頓指揮中心?我們遇到緊急狀況了",
+"Fly up to a ridiculous height": "飛上雲霄",
+
+"You Need a Mint": "你需要降火氣",
+"Collect dragon's breath in a glass bottle": "使用玻璃瓶取得龍之吐息",
+
+
+
+# Farming tab as of 1.3
+"24 Carrot Gold": "24克拉純金",
+"Eat a golden carrot": "食用一個金胡蘿蔔",
+
+"A Balanced Diet": "均衡飲食",
+"Eat everything that is edible, even if it's not good for you": "吃遍所有可以食用的東西， 即使它們對你的身體有害",
+
+"A Horse in Shining Armor": "璀璨鐵騎",
+"Find diamond horse armor": "找到鑽石馬鎧",
+
+"A Seedy Place": "汗滴禾下土",
+"Plant a seed and watch it grow": "種下一個種子並見證它的成長",
+
+"Artificial Selection": "人擇",
+"Breed a horse and a donkey to get a mule": "繁殖一隻馬和一隻驢來生出騾",
+
+"Bake Bread": "烤麵包",
+"Grow wheat and use it to bake bread": "種植小麥並用其烤製麵包",
+
+"Bapple!": "紅水晶",
+"Crunch into an apple": "磕一個蘋果",
+
+"Blistering Barnacles!": "口若懸河",
+"Get spat at by a llama": "被羊駝吐口水",
+
+"Breaking the Law of Conservation of Matter": "打破質量守恆定律",
+"Craft 9 melon slices back into a block that, when broken, will probably not give you all 9 slices back": "把9片西瓜片合成回完整的西瓜塊，之後重新砸破，看看會不會還給你相同的9片",
+
+"Care For the Environment": "環保人士",
+"Plant down a sapling": "種下一棵樹苗",
+
+"Catching Nemo": "抓住尼莫",
+"Catch a clownfish": "捕捉一隻熱帶魚",
+
+"Chatterbox": "喋喋不休",
+"Tame a Parrot using seeds. WARNING: Do not use a cookie!": "用種子馴服鸚鵡。警告：禁止使用餅乾!",
+
+"Cow Tipper": "鬥牛士",
+"Harvest some leather": "獲得皮革",
+
+"Cowboy": "牛仔",
+"Tame a horse by jumping on it over and over again": "反覆跳上馬來馴服它",
+
+"Fishy Business": "關漁生意",
+"Catch a fish": "捕獲一條魚",
+
+"Die, Potato!": "掰掰，馬鈴薯!",
+"Squash and eat a potato": "搗碎並吃下一個馬鈴薯",
+
+"Do you want to build a snowman?": "想一起造個雪人嗎?",
+"Use a pumpkin and snow blocks to build a snow golem": "用一個南瓜和雪塊建造雪傀儡",
+
+"Ecologist": "生態學家",
+"Plant down all six types of sapling": "種植所有6種樹苗",
+
+"Feeling Sheepish": "膽小的綿羊",
+"You'll get over it": "終究會過去的",
+
+"Getting Into a Stew": "虐兔",
+"Make and eat some rabbit stew": "製作並食用兔肉湯",
+
+"Have a Shearful Day": "“剪”單愉快的一天",
+"Use two iron ingots to craft shears": "使用兩個鐵錠製作剪刀",
+
+"High Steaks": "高級牛排",
+"The steaks are high for this advancement!": "牛排們對這個成就很嗨喔!",
+
+"Hot Topic": "熱門主題",
+"Construct a furnace out of eight stone blocks": "用八個鵝卵石來製作一個熔爐",
+
+"Lion Tamer": "馴獸師",
+"Tame an Ocelot using fish": "使用魚馴服一隻貓",
+
+"Me Love Cookie": "吾愛曲奇",
+"Bake some cookies... and then scoff them all yourself": "烘焙一些餅乾...然後狼吞虎嚥的吃掉",
+
+"Meat Lovers": "肉食愛好者",
+"Eat every type of meat, even if uncooked or rotten": "使用每一種肉，即便是生的或腐爛的",
+
+"Milk does your body good": "牛奶對你的身體很好",
+"Take a swig swig swig swig": "喝，豪飲，暢飲，大喝特喝",
+
+"Mushroom, Mushroom, Mushroom, Mushroom!": "蘑菇，蘑菇，蘑菇，蘑菇!",
+"Slurp some mushroom stew": "啜飲一些蘑菇湯",
+
+"Naturally Carved": "天然雕琢",
+"Harvest some spooky pumpkins": "收穫一些鬼臉南瓜",
+
+"Not Today!": "別是今天啊!",
+"Eat a poisonous potato": "食用一個毒馬鈴薯",
+
+"Overpopulation": "成雙成對",
+"Breed every type of animal": "繁殖每種動物",
+
+"Pork Chop": "豬排",
+"You know kung fu, how about pork chop?": "你懂功夫，那你聽過豬排嗎?",
+
+"Rabbit Season": "你懂功夫，那你聽過火腿嗎?",
+"Killing bunnies is cruel. Period.": "你怎麼可以殺兔兔?兔兔那麼可愛!",
+
+"Rainbow Collection": "收集彩虹",
+"Gather all 16 colors of wool": "收集所有16種顏色的羊毛",
+
+"Renewable Energy": "可再生能源",
+"Smelt wood trunks using charcoal to make more charcoal": "使用木炭烘烤木頭來獲得更多的木炭",
+
+"Repopulation": "族群復甦",
+"Breed two cows with wheat": "使用小麥繁殖兩頭牛",
+
+"Farming": "農牧業",
+"The world is full of friends and food": "世界無處沒有朋友與美食",
+
+"Salmonella Poisoning": "沙門氏菌中毒",
+"Eat some raw salmon... and not get poisoned after all": "食用生鮭魚...並倖免於中毒",
+
+"Serious Dedication": "敬業樂業",
+"Completely use up a diamond hoe, and then reevaluate your life choices": "使用獄髓錠升級一把鋤頭，然後重新衡量你的人生抉擇",
+
+"So Good": "真舒服",
+"Can't beat it, can't beat it": "爽阿刺阿~~",
+
+"Souperman": "湯師傅",
+"Beetroot soup gives you souperpowers!": "甜菜湯給予你超人的力量",
+
+"Sugar, Sugar": "台南特產",
+"Harvest some sugar cane from a river or ocean": "從河邊或海邊收集一些甘蔗",
+
+"Sushi": "壽司",
+"Eat some raw fish": "食用生魚",
+
+"The Lie": "蛋糕是個謊言",
+"Wheat, sugar, milk and eggs!": "小麥，糖，牛奶和雞蛋!",
+
+"The Melon! The Melon! The Melon!": "吃瓜!吃瓜!吃瓜!",
+"Eat a melon. Be careful not to drop it over a cliff": "吃個西瓜。小心別讓它掉下懸崖",
+
+"The Pie": "派欸!",
+"Bake a pumpkin pie": "烤制一個南瓜派",
+
+"Trimming the Treetops": "修剪樹梢",
+"Use shears to obtain leaf blocks": "使用剪刀獲得樹葉",
+
+"Ultra Hardcore": "極限生存冠軍",
+"Craft and eat a normal golden apple": "合成並食用一個金蘋果",
+
+"Vegetarian": "素食主義者",
+"Eat every type of fruit, vegetables, and any sort of plant matter": "食用每一種水果，蔬菜，和所有與植物有關的食物",
+
+"When Pigs Used to Fly": "當豬飛的時候",
+"Craft a carrot on a stick so you can ride a pig off a cliff": "合成蘿蔔釣竿來騎著豬衝下懸崖",
+
+"You Lead, I'll Follow": "您先請，我隨後跟上",
+"Craft a lead for forming a llama caravan": "合成地毯來組建一個羊駝編隊",
+
+
+
+# Mining tab as of 1.3
+"Acquire Hardware": "來硬的",
+"Smelt an iron ingot": "熔煉一塊鐵錠",
+
+"Bling Bling Gone": "黃粱一夢",
+"Completely use up a golden pickaxe, and then seriously reevaluate your life choices": "用壞一把金稿，然後重新考慮你的人生抉擇",
+
+"Coal Miner": "煤礦工人",
+"Mine a stack of coal": "挖掘一組煤礦",
+
+"Fuel Engine": "內燃機",
+"Craft a powered minecart": "合成一輛動力礦車",
+
+"Cover Me With Diamonds": "用鑽石包覆我",
+"Diamond armor saves lives": "鑽石盔甲救人一命",
+
+"Diamond Clad": "無懈可擊",
+"A full suit of diamond armor saves even more lives": "一整套鑽石裝能救更多條命",
+
+"Diamond Miner": "鑽石礦工",
+"Mine a stack of diamonds. Good luck!": "挖掘一組鑽石，祝你好運!",
+
+"Diamonds!": "鑽石!",
+"Acquire diamonds": "獲得鑽石",
+
+"Electric Rails": "電動鐵軌",
+"Making furnace minecarts completely useless": "使動力礦車完全失去用途",
+
+"Enchanter": "附魔師",
+"Craft an enchanting table": "使用附魔台附魔一件物品",
+
+"Even MOAR Tools": "別具爐錘的矩矱繩尺",
+"Craft a full diamond tools set": "合成一整套鑽石工具",
+
+"Fossil Fuel": "化石燃料",
+"Coal! As in dead dinosaurs!": "煤炭!從死掉的恐龍裡來的",
+
+"Getting an Upgrade": "獲取升級",
+"Construct a better pickaxe": "製作一把更好的鎬",
+
+"Gold Miner": "淘金者",
+"Mine a stack of gold ore": "挖掘一組金礦石",
+
+"Gold Rush": "淘金熱",
+"Strike gold and smelt it into a gold ingot": "敲打黃金並將其熔煉成金錠",
+
+"Hot Stuff": "火熱的東西",
+"Fill a bucket with lava": "把熔岩裝進鐵桶",
+
+"Ice Bucket Challenge": "冰桶挑戰",
+"Form and mine a block of Obsidian": "取得一塊黑曜石",
+
+"Iron Man": "鋼鐵人",
+"Craft a full suit of iron armor": "穿上一整套鐵裝",
+
+"Iron Miner": "鐵礦工",
+"Mine a stack of iron ore": "Mine a stack of iron ore",
+
+"Isn't It Iron Pick": "莫非這是鐵鎬",
+"Upgrade your pickaxe": "升級你的鎬",
+
+"Lapis Lazuli Miner": "青金石礦工",
+"Mine enough lapis lazuli to craft a stack of lapis lazuli blocks": "挖掘足夠多的青金石來合成一整組青金石磚",
+
+"Mineral Collection": "礦石收藏家",
+"Craft every type of mineral block": "合成每一種礦物磚",
+
+"MOAR Tools": "矩矱繩尺",
+"Craft a stone pickaxe, axe, shovel and hoe": "合成一把石稿，石斧，石鍬以及石鋤",
+
+"Aww it broke!": "哎呀它壞了!",
+"Break your first tool": "用壞你的第一把工具",
+
+"On A Rail": "火車快飛",
+"Craft a minecart using five iron ingots": "使用五個鐵錠合成一輛礦車",
+
+"Redstone Miner": "紅石礦工",
+"Mine enough redstone to craft a stack of redstone blocks": "掘足夠多的紅石來合成一整組紅石磚",
+
+"Mining": "採礦",
+"Dig underground, gather resources": "在地下挖掘，收集資源",
+
+"Seeing Red": "血紅的石頭",
+"Mine some redstone from the deepest caves": "在深層的洞穴裡挖掘一些紅石",
+
+"Suit Up": "整裝待發",
+"Protect yourself with a piece of iron armor": "使用鐵製盔甲保護自己",
+
+"The way to spawn": "回到出生點的路",
+"Craft a compass in case you forgot where spawn is": "合成一個指南針，以防萬一忘記了出生點",
+
+"DIAM- oh, wait, no.": "鑽-- 噢，等等，搞錯了",
+"It's still useful for enchanting": "這個在附魔的時候還有用",
+
+"We Need to Go Deeper": "我們必須更深入一點",
+"Build, light and enter a Nether Portal": "建造、點燃並進入地獄傳送門",
+
+"We've broken our last shovel": "我們用壞最後一把鏟子了",
+"Break all five types of shovels": "用壞所有六種類型的鏟子",
+
+"What's the time, Mr Wolf?": "看看現在幾點啦~~",
+"Time to clean your clocks! (Or, craft them!)": "是時候擦乾淨你們的鐘了!（或者，合成一些!)",
+
+
+
+# Nether tab as of 1.3
+"A Terrible Fortress": "可怕的要塞",
+"Break your way into a Nether Fortress": "用自己的方式進入地獄要塞",
+
+"Basis of Brewing": "釀造的基本要素",
+"Harvest some nether wart from a nether fortress": "從下界要塞收穫一些地獄疙瘩",
+
+"Beaconator": "引導者",
+"Bring a beacon to full power": "令烽火台全力運作",
+
+"Bring Home the Beacon": "為家庭帶來光明",
+"Construct and place a Beacon": "建造及放置烽火台",
+
+"Don't Step on it!": "別踩上去!",
+"Mine some magma blocks": "挖掘一些岩漿塊",
+
+"Ender's Chest": "終界使者的箱子",
+"Craft an ender chest for some extra inventory space": "合成一個終界箱以獲得額外的背包空間",
+
+"Eye Spy": "隔牆有眼",
+"Follow an Ender Eye": "跟隨終界之眼",
+
+"Fire Blast Shield": "防爆護盾",
+"Block the explosion of a ghast's fireball": "格擋惡魂火球的爆炸",
+
+"Giant Floating Jellyfish": "巨型漂浮水母",
+"Shoot down a ghast": "射倒一隻地獄幽靈",
+
+"Glows in the Dark": "黑暗中的光芒",
+"Craft spectral arrows using glowstone dust": "用熒石粉合成追跡之箭",
+
+"High Temperature Fluid Monster": "高溫液態怪物",
+"Kill a magma cube": "殺死一隻岩漿怪",
+
+"Into Fire": "與火共舞",
+"Relieve a Blaze of its rod": "讓烈焰使者從烈焰桿中解脫",
+
+"Limbo Walker": "翻牆者",
+"Get above the roof in the nether": "到達地獄的頂部之上",
+
+"Local Brewery": "道地的釀造枋",
+"Craft a Brewing Stand for brewing potions": "釀造一瓶藥水",
+
+"Quicksand": "流沙",
+"You sink like quicksand and move slow like mud": "你像流沙一樣下沉並像泥巴一樣緩慢移動",
+
+"Return to Sender": "以牙還牙",
+"Destroy a Ghast with its fireball": "使用火球殺死地獄幽靈",
+
+"Nether": "地獄",
+"Bring summer clothes": "穿的清涼點~",
+
+"Spooky Scary Skeleton": "詭異又恐怖的骷髏",
+"Obtain a wither skeleton's skull": "取得凋零骷髏的頭顱",
+
+"Subspace Bubble": "子空間氣泡",
+"Use the Nether to travel 7km in the Overworld": "利用地獄在主世界旅行至七公里外",
+
+"The End?": "結束了?",
+"Enter the End Portal": "進入終界傳送門",
+
+"The Hunt Begins": "狩獵開始",
+"Kill a wither skeleton": "殺死一隻凋靈骷髏",
+
+"The Nether's Shield": "地獄護盾",
+"Block some blaze fireballs": "Block some blaze fireballs",
+
+"The Tribal Snouts": "部落衝突",
+"Kill a zombie pigman": "殺死一隻殭屍豬靈",
+
+"Uneasy Alliance": "不安的同盟",
+"Rescue a Ghast from the Nether, bring it safely home to the Overworld... and then kill it": "將地獄幽靈從地獄安全的救回主世界 ......然後讓它解脫",
+
+"Withering Heights": "凋零山莊",
+"Summon the Wither": "召喚凋零怪",
+
+
+
+# Potions tab as of 1.3
+"A Furious Cocktail": "猛烈的雞尾酒",
+"Have every potion effect applied at the same time": "同時擁有所有藥水的效果",
+
+"A Much More Doable Challenge": "一個更加實際可行的挑戰",
+"Get all the effects possible during your life (not all at the same time)": "在你的一生中擁有所有狀態效果（並非在同時）",
+
+"A Weak Brew": "索然無味的佳釀",
+"Brew up a potion of Weakness": "釀造一瓶虛弱藥水",
+
+"Death by Magic": "死靈術師",
+"Kill a mob with a splash potion": "用噴濺藥水殺死一隻生物",
+
+"Hopping Mad": "仗氣使酒",
+"Get jump boost from a beacon or a potion": "從信標或藥水中獲得跳躍提升",
+
+"How did We Get Here?": "我們是如何走到這地步的？",
+"Have every effect applied at the same time": "同時擁有所有狀態效果",
+
+"Hyper-Healing": "超溢補",
+"Brew and drink a regeneration potion": "釀造並飲用一瓶再生藥水",
+
+"Medic!": "醫生!",
+"Brew a healing potion": "釀造一瓶治療藥水",
+
+"Marine Marauder": "海洋掠奪者",
+"Catch a pufferfish and use it to brew a water breathing potion": "捕捉一隻河豚並用它來釀造一瓶水肺藥水",
+
+"Nocturnal": "夜行性動物",
+"Brew and drink a night vision potion": "釀造並飲用一瓶夜視藥水",
+
+"Performance-Enhancing Drugs": "興奮劑",
+"Brew a Speed Potion for cheating on athletics": "釀造一瓶迅捷藥水來在運動項目上作弊",
+
+"Potions": "魔藥",
+"Brewing potions with helpful and hindering effects": "釀造具有正面和負面效果的藥水",
+
+"Stayin' Frosty": "保持酷爽",
+"Drink a fire resistance potion so you can go swimming in lava": "飲用一瓶防火藥水來在岩漿中游泳",
+
+"Super Strength": "力大無窮",
+"Brew a Strength Potion for cheating on weightlifting": "釀造一瓶力量藥水來在舉重中作弊",
+
+"The Invisible Player": "看不見的那位",
+"Brew and drink an invisibility potion": "釀造並飲用一瓶隱身藥水",
+
+"Zombie Doctor": "殭屍醫生",
+"Cure a zombie villager": "弱化並治好一位殭屍村民",
+
+
+
+# Redstone tab as of 1.3
+"Bling Plate": "珠光寶氣的餐盤",
+"Dine in style! (No, not really)": "用獨特的風格進餐（不不，開玩笑的）",
+
+"Comparing Comparator": "比較酷的比較器",
+"Craft a redstone comparator": "合成一個紅石比較器",
+
+"Dispense With This": "發射!",
+"Construct a dispenser": "建造一個發射器",
+
+"Metal Plate": "金屬餐盤",
+"Dinner time!": "晚餐時間!",
+
+"Moving Parts": "運轉部件",
+"Craft a piston so you can push things": "合成一個活塞這樣你就可以推動物體",
+
+"Mozart": "莫扎特",
+"Craft a note block": "合成一個音符盒",
+
+"Observer Buddy": "觀察者夥伴",
+"Craft an observer": "合成一個偵測器",
+
+"Pressure Detector": "壓力感應裝置",
+"Use a pressure plate to craft a detector rail": "使用一個壓力板來合成一個探測鐵軌",
+
+"Quartz Miner": "石英礦工",
+"Mine enough nether quartz to craft a stack of quartz blocks": "挖掘足夠的下界石英來合成一組石英塊",
+
+"Quirky Quartz": "稀奇的石英",
+"Mine Nether Quartz from the Nether": "從地獄挖掘地獄石英",
+
+"Repeating Repeater": "回朔的中繼器",
+"Craft a redstone repeater for delaying signals": "合成一個紅石中繼器來延緩信號",
+
+"Redstone": "紅石",
+"Cracking contraptions": "出色的巧妙裝置",
+
+"Solar Power": "太陽能",
+"Craft a daylight sensor": "合成一個陽光感測器",
+
+"Space Dropper": "空間投擲器",
+"Craft a dropper for item transportation": "合成一個投擲器以用來傳送物品",
+
+"Space Hopper": "空間漏斗",
+"Craft a hopper for item transportation": "合成一個漏斗用來傳送物品",
+
+"Sticky Parts": "粘乎乎的零件",
+"Craft a sticky piston so you can pull things": "合成一個粘性活塞來拉東西",
+
+"Tripping Over": "絆倒",
+"Craft a tripwire hook for your traps": "為你的陷阱合成一個絆線鈎",
+
+"Troll Chest": "惡作劇箱子",
+"Craft a trapped chest to troll your friends": "合成一個陷阱箱來愚弄朋友們",
+
+"Under Pressure": "壓力山大",
+"Craft a pressure plate": "合成一個壓力板",
+
+
+
+# All advancements added in version 1.4 are here
+
+"Beginning": "一切的開始",
+"A brave new world": "一個嶄新的世界",
+
+"Time to Chop!": "伐木時間!",
+"Use planks and sticks to make a axe": "使用木板和木棍來製作斧頭",
+
+"Time to Farm!": "農耕時間!",
+"Use planks and sticks to make a hoe": "使用木板和木棍來製作鋤頭",
+
+"Time to Mine!": "挖礦時間!",
+"Use planks and sticks to make a pickaxe": "使用木板和木棍來製作十字鎬",
+
+"Time to Strike!": "戰鬥時間!",
+"Use planks and sticks to make a sword": "使用木板和木棍來製作劍",
+
+
+
+"Stripper":  "剝離器",
+"Strip the bark off of all six types of logs then pick them up": "給所有六種木頭剝皮",
+
+
+
+"Flint Miner": "燧石礦工",
+"Mine a stack of flint": "挖掘一組燧石",
+
+"My work here is done": "完了...",
+"Get caught in a cave-in of gravel": "被坍塌的砂礫埋住",
+
+"Nananananananana...": "吱吱吱吱吱吱吱吱...",
+"Accidentally hit a bat underground": "Accidentally hit a bat underground",
+
+"Obsidian Miner": "黑曜石礦工",
+"Mine a stack of obsidian. (This might take a while...)": "挖掘一組黑曜石（這可能需要點時間）",
+
+"Rock Bottom": "岩石地基",
+"Dig down to the bottom of the world": "挖掘至世界底部",
+
+"Spelunker": "洞穴勘探者",
+"Enter a cave": "進入洞穴",
+
+"Stone Age": "石器時代",
+"Mine stone with your new pickaxe": "用你的新鎬子挖掘石頭",
+
+
+
+
+"An amazing story!": "精采的故事!",
+"Finish writing in your book or get a book from another player": "創作完一本書或從其他玩家那裡得到一本書",
+
+"Aquatic Biofuel": "海洋生物燃料",
+"Craft a dried kelp block for use as a great fuel source": "合成海帶乾塊來作為優質的染料資源",
+
+"Hay there!": "麥塊!",
+"Craft a stack of hay blocks": "合成一組乾草塊",
+
+"It's full of ink": "充滿墨水",
+"Obtain some ink from hunting a squid": "捕獵魷魚來獲得墨囊",
+
+"It's where nutella comes from": "這即為能多益(nutella)怎麼來的",
+"Obtain some cocoa beans from a jungle": "從叢林中獲得一些可可豆",
+
+"Kelp me!": "“帶”我",
+"Collect some kelp from an ocean": "從海洋中獲得一些海帶",
+
+"Pumpa kungen!": "南瓜王",
+"Carve a stack of pumpkins": "雕刻一整組南瓜",
+
+"The Meloncholy Dane": "吃瓜群眾",
+"Craft a stack of melon blocks": "合成一整組西瓜",
+
+"Undersea Gardener": "海底園藝師",
+"Craft a stack of dried kelp blocks": "合成一整組海帶乾塊",
+
+"Write your thoughts": "記錄思緒",
+"Use a book, ink and a feather to craft a book and quill": "用書，墨囊和羽毛合成書與筆",
+
+
+
+"Animals": "動物",
+
+"Hoe hoe hoe!": "鋤 鋤 鋤!",
+
+"Aquarium": "水族館",
+"Catch all four types of fish and set them free in an aquarium": "捕捉所有四種魚然後在一個水族箱中釋放",
+
+"Are we there yet?": "到了沒?",
+"Tame a donkey": "馴服一隻驢",
+
+"Bacon!": "培根",
+"Gotta kill this pig pig pig pig": "必須宰了這隻胖豬豬",
+
+"Chicken Cooper": "雞舍員",
+"Collect a stack of raw chicken and feathers": "收集一整組生雞肉和羽毛",
+
+"Farrier": "馬醫",
+"Breed a horse in an effort to get a better one": "篩選並繁殖一隻更加優質的良種馬",
+
+"Feeding the §mDucks§r Chickens": "喂§m鴨子§r吃雞肉",
+"Breed chickens by feeding them seeds": "喂食種子來繁殖雞",
+
+"Hey, look, Mom!": "嘿，看，是媽媽!",
+"Use sea grass to make a turtle lay some eggs": "使用海草讓海龜下蛋",
+
+"If only cats grew into kittens": "如果小貓咪永遠者麼大就好...",
+"Breed two cats together to get a kitty!": "繁殖兩隻貓來獲得一隻小貓咪",
+
+"In a hole there lived a Rabbit": "狡兔三窟",
+"Collect a stack of raw rabbit and rabbit hide": "收集一整組生兔肉和兔子皮",
+
+"Mary Had a Little Lamb...": "瑪麗有只小綿羊...",
+"Breed two sheep to get a lamb": "繁殖兩隻羊來獲得一隻羔羊",
+
+"Mooshroom Kingdom": "哞菇王國",
+"Find mooshrooms on a mushroom island": "在蘑菇島上找到哞菇",
+
+"Pig Slaughterer": "豬屠猛進",
+"Collect a stack of raw porkchops": "收集一整組生豬肉",
+
+"Poacher": "盜獵者",
+"Kill a turtle for their shells only to find they don't actually drop any when killed": "為了龜殼殺死海龜後明白它們死的時候其實不掉龜殼",
+
+"Puppies! Yipe!": "小狗!呀!",
+"Breed two wolves together to get a puppy!": "繁殖兩隻狼來獲得一隻狗勾",
+
+"Scuttler": "固若金湯",
+"Get a scute from a baby turtle when it grows up": "一隻幼龜成長的時候從它身上獲得鱗甲",
+
+"Sheariously?": "裁縫",
+"Collect a stack of white wool": "收集一組白色羊毛",
+
+"So I got that going for me": "所以我得到了我想要的物品",
+"Breed two llamas with hay": "用小麥塊繁殖兩隻羊駝",
+
+"Someone's been here before...": "有人來過這裡...",
+"Fish out a ratty old pair of boots": "釣上一雙破爛的舊皮鞋",
+
+"Stay Calmer": "冷靜點",
+"Tame a llama": "馴服一隻羊駝",
+
+"Super Mooshroom": "超級哞菇",
+"Breed two stubborn mooshrooms together": "繁殖兩隻頑固的哞菇",
+
+"Tactical Fishing": "戰術性捕魚",
+"Catch a fish... without a fishing rod!": "釣魚...... 不用釣竿！",
+
+"They're breeding like rabbits!": "繁殖得跟兔子一樣快!",
+"Breed two bunnies together": "繁殖兩隻小兔子",
+
+"Tickle Time!": "撓癢癢時間!",
+"Pluck some feathers from a chicken": "從雞身上扯下一些羽毛",
+
+"Totally not an AFK fisher!": "絶對沒有掛機釣魚",
+"Fish out all types of items": "釣上所有種類的物品",
+
+"Treasure Hunter": "寶藏獵人",
+"Fish out a piece of treasure": "釣上一個寶藏",
+
+"True Cow Tipper": "真正的牧牛人",
+"Collect a stack of raw beef and leather": "收集一組生牛肉和皮革",
+
+"Turtle Army": "海龜軍團",
+"Collect a stack of scutes": "收集一組鱗甲",
+
+"Turtle Soldier": "海龜士兵",
+"Craft a full turtle shell": "合成一個海龜殼",
+
+"What a piece of junk!": "真是垃圾!",
+"Fish out a junk item": "釣上一個垃圾類物品",
+
+"Wooly!": "毛茸茸",
+"Obtain wool from a sheep by killing it": "殺死一隻羊來獲得羊毛",
+
+"Yay! Deadbush!": "耶!枯灌木!",
+"Get a deadbush cause you're a noob": "獲得一叢枯萎的灌木，因為你是個萌新",
+
+
+
+
+"A Throwaway Joke": "免洗笑話",
+"Throw a trident at something. Note: Throwing away your only weapon is not a good idea": "將三叉戟擲向任何物品。注意： 拋棄你僅有的武器並不是個好主意。",
+
+"A Watery Grave": "水中墳墓",
+"Defeat a drowned in the briny depths. ": "在海中打敗一隻沉屍",
+"Gurgle": "汩汩作響",
+
+"Anti-Air": "防空作戰",
+"Shoot down a phantom with a bow from 30 blocks away": "從三十格遠的距離外射死一隻幻翼",
+
+"Because I'm Aquaman!": "因為我是",
+"Obtain a trident from a Drowned": "從沉屍手中獲得一把三叉戟",
+
+"Boned": "去骨",
+"Grind up some bones into bonemeal": "把一些骨頭磨成骨粉",
+
+"Creeper Killer": "苦力怕殺手",
+"Collect a stack of gunpowder": "收集一組火藥",
+
+"Enderman Destroyer": " 終界使者毀滅者",
+"Collect a stack of ender pearls": "收集一組末影珍珠",
+
+"Freezing": "滴水成冰",
+"Bring a husk to a tundra biome and then kill it": "將一隻屍殻帶到苔原生態系並將其擊殺",
+
+"Melting": "烈燄斬",
+"Bring a stray to a desert biome and then kill it": "將一隻流髑帶到沙漠生態系並將其擊殺",
+
+"Phantom Slayer": "夜魅殺戮者",
+"Collect a stack of phantom membranes": "收集一組夜魅皮膜",
+
+"Poseidon vs. Hades": "波賽頓VS黑帝斯",
+"Hunt all types of nether creatures with your trident": "用你的三叉戟獵殺所有地獄生物",
+
+"Ricochet Swoop": "反彈猛撲",
+"Deflect a Phantom's swoop with your shield": "以盾反彈夜魅的猛撲",
+
+"Skeleton Smiter": "骷髏打擊者",
+"Collect a stack of bones": "收集一組骨頭",
+
+"Slime Squisher": "史萊姆碾碎者",
+"Collect a stack of slimeballs": "收集一組粘液球",
+
+"Spider Smasher": "蜘蛛粉碎者",
+"Collect a stack of string from spiders or cobwebs": "從蜘蛛或蜘蛛網處收集一組線",
+
+"The Aquatic Hunter": "海洋獵人",
+"Hunt all types of aquatic creatures with your trident": "用三叉戟獵殺所有種類的海洋生物",
+
+"The Phantom Menace": "夜魅恐嚇",
+"Get attacked by phantoms": "被夜魅攻擊",
+
+"Tridented Shield": "叉子護盾",
+"Block a trident thrown by a Drowned": "用盾格擋沉屍扔出的三叉戟",
+
+"Underwater Duel": "水下決鬥",
+"Kill a drowned using a trident from at least 30 metres": "在三十米以外用三叉戟殺死一隻沉屍",
+
+"We'll handle this": "交給我吧",
+"Lure a Phantom into the Nether and then kill it": "將一隻幻翼引誘至下界並將其擊殺",
+
+"Zombie Slayer": "殭屍殺戮者",
+"Collect a stack of rotten flesh": "收集一組腐肉",
+
+
+
+
+
+"Atlantis": "亞特蘭提斯",
+"Explore some Underwater Ruins": "探索一些水下遺蹟",
+
+"Dolphin Dasher": "海豚衝撞",
+"Get a speed boost from your friendly underwater companions": "從你的水下好夥伴處獲得速度提升",
+
+"Eeuuwww!": "咦~~呀~~",
+"Get stuck in a cobweb": "被蜘蛛網粘住",
+
+"Enchanted Forest": "阿瓦隆的花園",
+"Find a flower forest": "找到一個繁華森林",
+
+"Explorer of Worlds": "探索時光",
+"Discover every biome including special biomes": "探索包括特殊生態系的每個生態系",
+
+"Get Ship-rekt!": "船難",
+"Come across a sunken ship": "偶遇一條沉船",
+
+"Gold Mine!": "金礦脈",
+"Find a mineshaft on the surface of a mesa biome": "在平頂山生態系的表面找到廢棄礦井",
+
+"Guardian Destroyer": "深海守衛消滅者",
+"Collect a stack of prismarine shards and crystals": "收集一組海靈碎片與海靈晶體",
+
+"In a Pickle": "掉進菜罈子",
+"Collect some sea pickles from a coral reef": "從珊瑚中收集一些海鞘",
+
+"Just a sample": "只是取個樣本",
+"Collect some coral from a coral reef": "從珊瑚礁收集些珊瑚",
+
+"No Reefing!": "無暗礁!",
+"Collect all colors of coral blocks, plants and fans (including dead ones)": "收集所有顏色的珊瑚方塊，珊瑚和珊瑚扇（包括死亡的）",
+
+"Power of the Ocean": "海洋之力",
+"Construct a Conduit in the ocean": "在海洋中激活一個海靈核心",
+
+"Secret of the Igloo": "雪屋的秘密",
+"Find an igloo in a snowy tundra": "在白雪皚皚的苔原中找到一個雪屋",
+
+"Spike Ice!": "冰刺之地",
+"Break down an ice spike using a silk touch pickaxe": "用絲綢之處的鎬瓦解一個冰刺",
+
+"Spikey!": "渾身是刺!",
+"Run into a cactus": "撞上仙人掌",
+
+"Sponge Miner": "海綿寶寶",
+"Collect a stack of sponges from ocean monuments": "從海底遺蹟收集一組海綿",
+
+"The Great Blocky Reef": "偉大的珊瑚礁",
+"Come across a coral reef in the ocean": "在海洋中偶遇一片珊瑚礁",
+
+"There's a zombie on the lawn": "有殭屍在草徑上♫",
+"Find a sunflower plains": "找到一個向日葵平原",
+
+"Thick Ice!": "厚冰",
+"Craft or mine a blue ice block from an iceberg": "合成或從冰山處獲得藍冰",
+
+"Thin Ice!": "薄冰",
+"Use a silk touch pickaxe to pick up some ice blocks": "使用絲綢之觸的鎬收集冰塊",
+
+"Titanic": "鐵達尼號",
+"Find a shipwreck in an iceberg biome": "在冰山海洋生態系中找到一艘沉船",
+
+"X Marks the Spot": "寶藏?",
+"Use a treasure map to find a Heart of the Sea in Buried Treasure": "利用寶藏地圖找到埋藏的寶藏",
+
+
+
+
+"Engineer": "工程師",
+"Craft all types of redstone component": "合成所有種類的紅石組件",
+
+"Master Engineer": "元老級工程師",
+"Craft a stack of all types of redstone component": "合成所有種類的紅石組件各一組",
+
+
+
+
+"Boomerang": "迴力鏢",
+"Turn your trident into a boomerang by getting Loyalty on it": "給三叉戟附魔忠誠來把它變成迴力鏢",
+
+"Very Very Frightening": "非常驚世駭俗",
+"Strike a Villager with lightning": "以閃電制裁村民",
+
+"Master Tridenteer": "三叉戟大師",
+"Create a trident with all possible enchantments at max level": "製造一把所有可能的附魔等級都到達最高級的三叉戟",
+
+"Zeus": "宙斯",
+"Obtain Channeling on a trident": "在三叉戟上獲得喚雷附魔",
+
+
+
+
+"Blaze Extinguisher": "烈燄使者毀滅者",
+"Collect a stack of blaze rods": "Collect a stack of blaze rods",
+
+"Ghast Slayer": "惡魂殺戮者",
+"Collect a stack of ghast tears": "收集一組幽靈之淚",
+
+"Glowstone Miner": "螢光石礦工",
+"Mine or craft a stack of glowstone blocks": "挖掘或合成一組螢石磚",
+
+"Magma Cube Squisher": "岩漿怪粉碎者",
+"Collect a stack of magma cream": "收集一組岩漿球",
+
+"Seeing Stars": "靈光乍現",
+"Mine some glowstone dust from the nether": "從地獄挖掘一些螢光石",
+
+
+
+
+"Tank": "坦克",
+"Become nearly invincible to all damage using a Turtle Master Potion": "利用龜仙藥水達到幾乎對所有傷害無敵的效果",
+
+"True Feather Falling": "真正的輕盈如燕",
+"Brew and drink a slow falling potion": "釀造並飲用一瓶緩降藥水",
+
+
+
+
+"Extrabiologist": "外星植物學家",
+"Plant a chorus plant in the overworld for study": "在主世界種植一棵歌萊花以進行進一步的研究",
+
+"Shulker Breaker": "碎殻者",
+"Collect a stack of shulker shells": "收集一整組界伏殻",
+
+"Void Walker": "虛空步行者",
+"Explore every end biome": "探索每一個終界生態系",
+
+
+
+# All advancements added in version 1.5 are here
+
+"Iconic Merchandising Prop": "櫥窗中的陳列品",
+"Create a pickaxe of the highest calibre": "合成一把最高水準的鎬",
+
+"Living Like Kings": "霓裳羽衣",
+"Make yourself shiny with golden armor": "用金質盔甲照亮你",
+
+"Master Coal Miner": "不辭辛勞的煤礦工",
+"Mine enough coal to make a stack of coal blocks": "挖掘足夠的煤來合成一組煤炭磚",
+
+"Master Diamond Miner": "精雕細琢的鑽石礦工",
+"Mine enough diamond to make a stack of diamond blocks": "挖掘足夠的鑽石來合成一組鑽石磚",
+
+"Master Gold Miner": "堅韌不拔的金礦工",
+"Mine enough gold to make a stack of gold blocks": "挖掘足夠的金來合成一組金磚",
+
+"Master Iron Miner": "鍥而不捨的鐵礦工",
+"Mine enough iron to make a stack of iron blocks": "挖掘足夠的鐵來合成一組鐵磚",
+
+"Meet The Flintstones": "摩登原始人",
+"Dig up some flint from a patch of gravel": "從一片砂礫中挖出一些燧石",
+
+"Stabcraft": "屠殺麥塊",
+"Do you like my sword sword": "你喜歡我的劍劍嗎?",
+
+"The Mistake!": "大錯特錯!",
+"Put Mending on a piece of golden armor and realise what you are doing in life": "將經驗修補到一個金質盔甲上然後意識到你的人生意義何在",
+
+
+
+
+"Barking Mad": "韌皮纖維",
+"Craft a bark block": "合成一個木塊",
+
+"Lost Its Bark": "樹皮脫落",
+"Strip a bark block of its bark": "剝掉一棵樹的樹皮",
+
+"No Banner, Only Color!": "濃墨重彩",
+"Craft all 16 banner colors": "合成所有16種顏色的旗幟",
+
+"Professor Birch": "樺木博士",
+"Craft every item made out of birch wood": "合成所有樺木製成的物品",
+
+"Professor Dark Oak": "黑橡木博士",
+"Craft every item made out of dark oak wood": "合成所有黑橡木製成的物品",
+
+"Professor Oak": "橡木博士",
+"Craft every item made out of oak wood": "合成所有橡木製成的物品",
+
+"Rainbow Dreams": "五彩斑斕",
+"Craft every color of bed": "合成所有顏色的床",
+
+"Spruce Lee": "杉小龍",
+"Craft every item made out of spruce wood": "合成所有雲杉木製成的物品",
+
+"The Acacia King": "相思荳",
+"Craft every item made out of acacia wood": "合成所有相思木製成的物品",
+
+"The Jungler": "叢林遊蕩者",
+"Craft every item made out of jungle wood": "合成所有叢林木製成的物品",
+
+
+
+
+"It's a cactus!": "這是?仙人掌!",
+"Break down a cactus in a desert": "在沙漠中破壞一個仙人掌",
+
+"Mega Mushroom": "巨菇",
+"Grow a giant mushroom and then harvest it with silk touch": "種植一株巨型蘑菇並用絲綢之觸收集",
+
+"Shrooms": "魔法蘑菇",
+"Gather both types of mushroom": "收集齊兩種蘑菇",
+
+
+
+
+"Direct Fishing": "直接釣魚",
+"Catch a fish by directly skewering it with a sword": "通過用劍將魚刺穿來捉魚",
+
+"Fuzzy Feet": "毛絨絨",
+"Craft all 16 colors of carpet": "合成所有16種顏色的地毯",
+
+"Grinding Nemo": "碾碎尼莫",
+"Skewer a tropical fish": "刺穿一條熱帶魚",
+
+"Lucky Charm": "護身符",
+"Get a rabbit's foot": "獲得一個兔子腳",
+
+"Master Angler": "嫻熟的漁翁",
+"Collect a stack of all four types of fish": "收集所有四種魚各一組",
+
+"Tropical Collection": "熱帶收藏品",
+"Collect all 22 of the common types of tropical fish": "收集所有22種常見的熱帶魚",
+
+
+
+
+"Camouflage": "偽裝",
+"Kill a mob while wearing the same type of mob head": "在戴著某種生物的生物頭顱時殺死該種生物",
+
+
+
+
+"Businessman": "生意人",
+"Trade with every type of villager career": "與每種職業的村民交易",
+
+"MURDERER!": "殺人犯!",
+"Kill a villager": "殺死一名村民",
+
+"Pushed Around": "任人擺佈",
+"Enter a bubble column": "進入一個氣泡柱",
+
+"Raidin' Master": "強盜頭子",
+"Discover every structure type": "發現所有種類的結構",
+
+"Rekt!": "體無完膚",
+"Get killed by a natural iron golem defending its village": "被一隻保衛村民自然生成的鐵傀儡殺死",
+
+"The sea calls you...": "大海在呼喚我...",
+"Find an ocean": "找到一片海洋",
+
+"Travelling Merchant": "旅行商人",
+"Travel to every type of village": "到訪每種類型的村莊",
+
+
+
+
+"Mobile Explosion": "移動爆炸裝置",
+"Put TNT in a minecart": "在礦車裡裝上TNT",
+
+"Moving Moving Storage": "移動移動儲藏室",
+"Put a hopper in a minecart": "在礦車裡裝上漏斗",
+
+"Moving Storage": "移動儲藏室",
+"Put a chest in a minecart": "在礦車裡裝上箱子",
+
+"Powerful Light": "耀眼的光",
+"Craft and place a redstone torch": "合成並放置一個紅石火把",
+
+"Railwayman": "鐵路工人",
+"Craft a stack of all the different types of rails": "合成所有種類的鐵軌各一組",
+
+
+
+
+"Do A Barrel Roll!": "滾一圈!",
+"Get Riptide on a trident so you can shoot yourself through the water": "在三叉戟上獲得波濤附魔來將自己射向水中",
+
+"Newton's Flaming Laser Sword": "牛頓的火焰激光劍",
+"Have a diamond sword with Fire Aspect II": "擁有火焰II附魔的鑽石劍",
+
+"To Infinity And Beyond!": "超越無限!",
+"Obtain Infinity on a bow": "在弓上獲得無限附魔",
+
+"Ultimate Enchanter": "終極附魔師",
+"Obtain every enchantment at every level throughout your enchanting career": "在你的附魔生涯中獲得所有種類以及所有等級的附魔",
+
+
+
+"Shoot a mob with a spectral arrow": "用追跡之箭射擊一隻生物",
+
+"Bring Down The Beast": "鬼滅之刃",
+"Bring down a ghast with a sword": "用劍擊落地獄幽靈",
+
+
+
+
+"The Point of No Return": "破釜沉舟的深意",
+"Fall into the void": "跌入虛空",
+
+"Furious Ammunition": "槍林彈雨",
+"Craft every type of tipped arrow": "合成所有種類的藥水箭",
+
+"Somewhere Over The Rainbow...": "彩虹之上的某處♫",
+"Craft all 16 shulker box types": "合成所有16種界伏盒",
+
+
+
+
+
+# All advancements added in version 1.6 are here
+"Beethoven": "貝多芬",
+"Craft a jukebox with planks and a diamond": "用鑽石和木板合成一個唱片機",
+
+"Blast it!": "燃燒吧!火鳥!",
+"Upgrade your furnace to a blast furnace using iron and smooth stone for smelting ores quicker": "把一個熔爐升級成高爐",
+
+"Camping Out": "去露營吧",
+"Craft and place a campfire using some logs, sticks and coal": "合成一個營火",
+
+"Classic Pocket Edition Block": "口袋版的經典方塊",
+"Craft a stonecutter using stone and an iron ingot": "合成一個切石機",
+
+"Its original form": "現出原形",
+"Use your furnace to smelt cobblestone back into stone": "把鵝卵石燒成石頭",
+
+"MOAR Broken Tools": "裝備崩壞",
+"Break every single tool and weapon in the game": "用損遊戲內所有的工具和武器",
+
+"Not Chicken McNuggets?": "這不是肯德基!",
+"Craft or find iron nuggets": "製作或者找到鐵粒",
+
+"Not for creating copies of yourself": "禁止自我複製",
+"Craft a smithing table": "合成鍛造台",
+
+"Rest in Pickaxes": "安息吧鎬鎬",
+"Break your first diamond pickaxe": "用壞一個鑽石鎬",
+
+"Sharpening Station": "磨刀石",
+"Craft a grindstone using a stone slab, planks and sticks for repairing tools": "製作一個磨刀石",
+
+"Spawn Camping": "浴火重生",
+"Travel close to 0,0 coordinates and place down a campfire": "在0,0處放下一個營火",
+
+"Smokin' Hot": "燙到冒煙",
+"Upgrade your furnace to a smoker using some logs": "製作一個煙熏爐",
+
+"Smooth, dude!": "滑起來~~",
+"Smelt normal stone further into smooth stone": "把石頭燒製成平滑石頭",
+
+"Where are all your clothes?": "你衣服呢?",
+"Break every type of armor piece in the game": "穿爛遊戲內所有的裝備",
+
+
+
+
+"Barrel Rider": "圓桶騎士",
+"Craft and place a barrel. Totally not for riding in": "製作一個木桶",
+
+"Crazy Walls": "癲狂的高牆",
+"Craft every type of wall": "製作每一種牆",
+
+"Festival of Lights": "節慶之光",
+"Light up the area using a lantern": "放置一個燈籠",
+
+"Logos": "商標",
+"Craft all the special banner patterns": "製作所有的特殊旗幟圖案",
+
+"Fruit of the Looms": "紡織魔人",
+
+"Prepare to meet your Loom!": "準備面對紡織機吧!",
+"Craft a loom with string and planks for creating your own banners": "用線與木材製作一個紡織機",
+
+"Speech! Speech! Speech!": "說話!發言!演講!",
+"Craft a lectern using wooden slabs and a bookshelf then place it": "製作一個講台",
+
+
+
+
+"Berry Nice!": "好果子!",
+"Pick and eat some sweet berries": "吃掉一個莓果",
+
+"Disen Berry Berry Bad!": "壞果子!",
+"Get stuck in a sweet berry bush. Oh, icky yucky goo!": "走進一個莓果叢，痛爆..,",
+
+"I'm gonna be sick!": "我肯定是生病了!",
+"Slurp every kind of suspicious stew": "喝掉每一種可疑的燉湯",
+
+"Suspicious Looking Stew": "迷之燉菜",
+"Slurp some suspicious stew and pray you don't suddenly see giant flying eyeballs in the sky": "喝掉一碗可疑的燉湯然後祈禱你不會突然看見天空中飛過的巨大眼球",
+
+"The garbage will do!": "垃圾就該待在垃圾桶裡",
+"Craft a composter using planks and wooden fences then place it": "製作一個堆肥桶",
+
+
+
+
+"Birdkeeper": "鳥語者",
+"Tame all parrot variants": "馴服每一種鸚鵡",
+
+"Bunny Lover": "擁兔者",
+"Breed a baby bunny of every variant": "培育每一種小兔兔!",
+
+"Colorful Cavalry": "多彩騎兵",
+"Dye 16 sets of leather horse armor each with one of the individual colors": "製作十六種不同顏色的馬鎧",
+
+"Cool Kids": "小帥哥",
+"Craft a leather jacket": "製作一件皮革外套",
+
+"Fashion Statement": "潮流宣言",
+"Dye some leather pants with one color": "染色一條皮革褲子",
+
+"Horse Armorer": "馬鎧",
+"Make horse armor out of dead horses (No, joking, any leather will do)": "殺一隻馬然後用它的皮革做一套馬鎧（開玩笑的，隨便什麼皮革都行）",
+
+"Llama Llama Duck King": "澎澎草泥馬~~",
+"Tame all llama variants": "馴服每一種羊駝",
+
+"Master Farrier": "馴馬大師",
+"Tame all horse variants": "馴服每一種馬",
+
+"Mushroom Scientist": "哞菇科學家",
+"Strike a mooshroom with lightning and see what happens": "讓閃電劈中哞菇。看看會發生什麼",
+
+"Shoe Shed": "鞋櫃",
+"Dye 16 pairs of leather boots each with one of the individual colors": "製作十六種不同顏色的皮革鞋子",
+
+"Snow Fox 64": "雪狐64",
+"Breed two snow foxes with sweet berries": "用莓果培育出一隻小雪狐",
+
+"What Does The Fox Say?": "狐狸說了啥?♫",
+"Breed two red foxes with sweet berries": "用莓果培育出一隻小狐狸",
+
+"Which came first?": "先有雞?",
+"The chicken... or the egg??": "還是先有蛋?",
+
+
+
+
+"Monsters": "怪物",
+
+"Baby, baby, baby noo!!": "喔幹，是小殭屍!!!",
+"Kill one of each of a baby zombie, zombie villager, husk, drowned and zombie pigman": "殺一個幼年殭屍和其他幼年殭屍變種",
+
+"Captain Etho": "乙瑟船長",
+"Defeat a Drowned holding both a nautilus shell and a trident": "擊殺一隻拿著鸚鵡螺殻和三叉戟的溺屍",
+
+"Custom Boss Fight!": "自定義魔王戰",
+"Give a zombie full diamond armor and a diamond sword... then kill it": "給一隻殭屍一套鑽石裝甲和鑽石劍，然後殺死它",
+
+"Handsome Jack": "開膛手傑克",
+"Defeat a mob wearing a Jack o' Lantern on Halloween": "殺死一隻帶著南瓜頭的怪物",
+
+"Legend of the Hell Chicken Rider": "小雞騎士的地獄傳說",
+"Kill a chicken jockey in the nether": "在地獄殺死一隻小雞騎士",
+
+"Mollusc Man": "軟體俠",
+"Defeat a Drowned holding a nautilus shell": "殺死一隻拿著鸚鵡螺殻的溺屍",
+
+"Ooh, Baby!": "哦，是小寶寶!",
+"Kill a baby zombie": "殺死一隻幼年殭屍",
+
+"Trick or Treat!": "不給糖就搗蛋",
+"Defeat a mob wearing a pumpkin": "殺死一隻帶著南瓜頭的生物",
+
+"Two Birds, One Arrow": "一箭雙鵰",
+"Kill two Phantoms with a piercing arrow": "使用貫穿箭矢一次殺死兩隻夜魅",
+
+
+
+
+"A snowball's chance in hell": "雪球的救贖",
+"Defeat a Blaze using snowballs": "用雪球殺死一隻烈焰人",
+
+"Axeman": "紅色斧頭幫",
+"Attack a mob using all five types of axes": "使用每一種斧頭殺死一個生物",
+
+"Demolitions Expert": "爆破專家",
+"Blow up every hostile mob with TNT": "使用TNT殺死每一種敵對生物",
+
+"Diamonds to you!": "去你的鑽石啦!",
+"Hit a mob with diamonds": "用鑽石打一個生物",
+
+"Expelliarmus!": "去去武器走!",
+"Hit a mob with a stick": "Hit a mob with a stick",
+
+"Explosive Fire": "爆破煙火",
+"Load your crossbow with a firework": "在弩上使用煙花火箭",
+
+"Flying Colors": "飛揚的色彩",
+"Apply a banner (with no patterns) to your shield": "用一個沒有圖案的旗幟裝飾你的盾牌",
+
+"Indiana Jones": "印第安納瓊斯",
+"Pull a monster using a fishing rod": "用魚竿把一個怪物勾過來",
+
+"Master Shieldsman": "護盾大師",
+"Deflect an attack from every hostile monster": "用護盾反彈遊戲中所有怪物的攻擊",
+
+"Ol' Betsy": "扣下板機",
+"Shoot a crossbow": "用弩發射箭矢",
+
+"Pig Fishing Tournament": "釣豬大賽",
+"Pull a pig using a fishing rod": "使用魚竿拉一隻豬",
+
+"Revenge!": "復仇!",
+"Blow up a creeper with TNT": "用TNT炸死一隻苦力怕",
+
+"Shield Luck": "幸運護盾",
+"Protect yourself from an enemy's attack with your shield": "使用盾牌格擋一次攻擊",
+
+"Shovel Knight": "鏟騎士",
+"Hit a mob using all five types of shovels": "使用每一種鏟子殺死一個生物",
+
+"Sir Knight": "騎士先生",
+"Use planks and iron to craft a shield": "製作一面盾牌",
+
+"Slapfish": "打臉",
+"Slap a mob across the face with a fish": "用魚毆打一個怪物",
+
+"That is so fletch!": "這也太箭了!",
+"Craft a fletching table": "合成一個制箭台",
+
+"There's yolk on my head": "嘿是誰扔雞蛋的!",
+"Catapult an egg onto a zombie's head": "向殭屍扔雞蛋",
+
+"Viking": "維京",
+"Attack a mob using an axe": "用斧子攻擊一隻生物",
+
+"Weaponry": "武器",
+"Weapons of choice for combat": "選擇武器開始戰鬥!",
+
+"When Pigs Finally Fly": "全世界的豬都飛了",
+"Pull a pig from 25 blocks below you and watch it go": "把一隻在你25個方塊之下的豬拉起來",
+
+"Who's the Pillager Now?": "現在誰才是掠奪者?",
+"Give a Pillager a taste of their own medicine": "讓掠奪者自食其果",
+
+"X-Bow": "諸葛連努",
+"Craft a crossbow using stick, spider string, iron and a hook": "用木棍，縣，鐵漢絆線鉤製作一個弩",
+
+"King of the Sea": "波賽頓",
+
+
+
+
+"Bamboom!": "砍竹子!",
+"Break down some bamboo": "砍倒一些竹子",
+
+"Biomes": "生態域",
+"All around the world!": "環遊世界!",
+
+"Construction Worker": "建築工人",
+"Craft and use some scaffolding": "合成並且放置一些腳手架",
+
+"For you, my sweet": "給你的(愛心)",
+"Pick a flower for someone special": "為某位特別的人摘一朵花",
+
+"Kung Fu Panda!": "功夫熊貓!",
+"Get beaten up by an angry panda": "被一隻生氣的熊貓攻擊",
+
+"Simba": "辛巴",
+"Breed a baby ocelot": "繁殖一隻豹貓",
+
+"The Mighty Jungle": "壯麗的叢林",
+"Go for a safari in the jungle": "去叢林探險",
+
+"Top of the World": "世界之巔",
+"Place scaffolding to the world limit": "用鷹架搭到最高建築限制",
+
+"Zoologist": "動物學家",
+"Breed two pandas to get a baby panda": "繁衍一隻熊貓",
+
+
+
+"Village, Pillage and Dungeons!": "村莊，掠奪和地牢!",
+
+"Kill a Vindicator in a Woodland Mansion": "在森林大宅殺死一個衛道士",
+
+"Defeat an Evoker in a Woodland Mansion": "在森林大宅殺死一個喚魔者",
+
+"All chained up": "鐵鎖連環!",
+"Trade for a piece of chain armor from an armorer villager": "獲得一個鎖鏈甲",
+
+"A Complete Catalogue": "貓科全書",
+"Tame all cat variants!": "馴服所有種類的貓！",
+
+"Crazy Cat Lady": "喵電感應",
+"Tame a stray cat in a village": "馴服一隻在村莊的流浪貓",
+
+"Deal's Off!": "沒門!",
+"Get spat at by one of the Trader Llamas": "被流浪商人的羊駝攻擊",
+
+"Feeling Ill": "姆搭姆搭姆搭!!!",
+"Defeat every type of Illager as part of a raid": "擊敗每一種襲擊中的窳民",
+
+"Florist": "花術士",
+"Trade for a flower from the Wandering Trader": "在流浪商人處獲得一朵花",
+
+"Hero of the Village": "村莊英雄",
+"Triumph over a full raid for the first time": "成功在突襲中守住村莊",
+
+"How to stop a rhino from charging": "如何將一隻衝鋒的犀牛停下",
+"Have a Ravager slam into your shield": "用盾牌格擋劫毀獸的衝鋒",
+
+"Illagers on Patrol": "災厄巡邏",
+"Defeat the leader of an Illager Patrol": "擊敗窳民隊長",
+
+"Voluntary Exile": "自我放逐",
+"Kill a raid captain. Maybe consider staying away from villages for the time being...": "殺死突襲隊長。或許該考慮暫時離村莊遠一點...",
+
+"It's So Beast-Like!": "抓狂了的野獸!",
+"Slay a Ravager in a raid": "殺死一隻劫毀獸",
+
+"Lilypad Hatter": "荷葉帽",
+"Breed and trade with a swamp villager": "繁育並與一個沼澤村民交易",
+
+"Mapmaker's Table": "製圖台",
+"Craft a cartography table with paper and planks": "用紙和木材合成一個製圖台",
+
+"Master Trader": "交易大師",
+"Trade with every type of villager career at master level": "將每一種村民交易都解鎖到大師級",
+
+"Oh, look, it dings!": "響叮噹!",
+"Pick up a bell from a village": "撿起一個鐘",
+
+"Out of Posts": "突襲警報",
+"Enter a Pillager Outpost": "進入一個掠奪者前哨站",
+
+"Picador": "鬥牛士",
+"Hit a Ravager with a thrown trident": "將你的三叉戟扔向一隻劫毀獸",
+
+"Rebuilding the Oceans": "精衛填海",
+"Trade for a coral block from the Wandering Trader": "向流浪商人交易一個珊瑚方塊",
+
+"Retro Future Knight": "復古未來騎士",
+"Trade for full suit of chain armor from an armorer villager": "和村民交易一套鎖鏈裝甲",
+
+"Riot Shield": "抗穿盾牌",
+"Deflect a Pillager's crossbow bolt": "反彈掠奪者的弩箭",
+
+"Shady Deals": "檯面下的交易",
+"Trade with a Wandering Trader while he is invisible": "在流浪商人隱形時和它交易",
+
+"Stockbroker": "股神",
+"Trade with every profession from every biome type": "在每一種生態系和每一種不同的村民交易",
+
+"The Tribal Villagers": "部落",
+"Breed and trade with a jungle villager": "繁育並與一個叢林村民交易",
+
+"The Haggler": "討價還價",
+"Trade with a villager at master level": "和一個大師級村民交易",
+
+"Town Planner": "城市規劃師",
+"Craft and place every type of villager workstation": "合成並且放置每一種村民工作台",
+
+"Traveller": "旅行者",
+"Travel to every type of village and trade with a villager in each": "在每一種生態系的村莊裡和一位村民進行交易",
+
+"Trade with a Wandering Trader": "與流浪商人交易",
+
+"Veteran of the Village": "村莊老兵",
+"Attain the highest level of Hero of the Village": "獲得最高等級的村莊英雄",
+
+"Village Settler": "村莊開拓者",
+"Trade for a new bell to establish a new village": "交易一個鐘來建立起新的村莊",
+
+"War is Coming": "戰爭就要來了!",
+"Defeat enough Illager Patrol leaders to attain the highest level of Bad Omen": "擊殺足夠的窳民隊長來獲取最高等級的不祥之兆",
+
+"You are the Pillager": "你才是掠奪者",
+"Murder one of every villager profession with a crossbow": "用弩擊殺每一種職業的村民",
+
+
+
+
+"Arbalistic": "重弩手",
+"Kill five unique mobs with one crossbow shot": "用弩一擊射殺五種生物",
+
+"Emerald Miner": "綠寶石礦工",
+"Mine a stack of raw emerald ore": "挖掘到一組的綠寶石礦",
+
+"Machine Bow": "機關槍",
+"Fire a crossbow as rapidly as possible": "用最快的速度連發你的弩",
+
+"Master Arbalist": "驚世之銃",
+"Create a crossbow with all possible enchantments at max level": "製作一個滿級附魔的弩",
+
+"Shotbow": "霰彈槍",
+"Shoot three arrows at once with a crossbow": "用弩一次射出三支箭",
+
+
+
+
+"Hell's Bells": "深淵的殘響",
+"Place a bell in the nether": "在地獄放置一個鐘",
+
+"Decaying Beauty": "凋零之美",
+"Pick up some Wither Roses from the damage the Wither wrought on your world": "撿起一些凋零玫瑰",
+
+
+
+
+"Gas!": "毒氣!",
+"Kill a mob using a lingering potion": "用滯留型藥水擊殺一隻生物",
+
+
+
+
+"The Actual End": "終焉",
+"Get killed by an Enderman in The End": "在終界被終界使者擊殺",
+
+"The Beginning": "開始了",
+"Say goodbye to the Wither...": "跟凋靈說掰掰",
+
+
+
+# All advancements added in version 1.7 are here
+"I don't like sand": "我不喜歡沙子",
+"It's coarse, and rough, and irritating, and it gets everywhere": "沙子又粗糙又令人煩躁，還會弄得到處都是",
+
+"Insomniac": "失眠",
+"Go 30 days without sleep": "連續三十天不睡覺",
+
+"Art Gallery": "美術館",
+"Place every type of painting": "放置每一種畫",
+
+"Writer's Block": "作家的方塊",
+
+
+
+
+"Chestful of Cobblestone": "一小箱鵝卵石",
+"Mine 1728 cobblestone, place it in a chest, then stand on it in victory": "挖掘1728個鵝卵石，把它們放到箱子裡並以勝利者的姿態站在上面",
+
+"Bubble, Bubble, Toil and Trouble!": "泡沫爆裂~嗶嗶啵啵",
+"Fill a cauldron using a bucket": "用水桶灌滿一個煉藥鍋",
+
+"Washing Machine": "洗衣機",
+"Use a cauldron to clean leather armor, a banner and a shulker box": "用煉藥鍋清洗皮革套裝，旗幟和界伏盒",
+
+
+
+
+"Must be your birthday": "肯定是你生日",
+"Eat 100 slices of cake": "吃掉一百片蛋糕",
+
+"Castaway": "漂流者",
+"Eat nothing but dried kelp for three in-game days": "不吃除了海帶乾以外的東西度過遊戲中的三天",
+
+
+
+
+"Free Diver": "自由下潛",
+"Stay underwater for 2 minutes": "在水下生存兩分鐘",
+
+"Sleep with the Fishes": "與魚共舞",
+"Spend a day underwater": "在水下生存一天",
+
+"Qinling": "秦嶺",
+"Breed a rare brown panda": "繁殖一隻少見的棕色熊貓",
+
+
+
+
+"We're being attacked!": "我們被襲擊了!",
+"Trigger a Pillager Raid": "觸發一次突襲",
+
+"Superhero of the Village": "村莊超級英雄",
+"Defeat enough raid captains to obtain a stack of Ominous Banners": "擊殺足夠多的突襲隊長並收集一組災厄旗幟",
+
+"I've got a bad feeling about this": "我有種不好的預感",
+
+
+
+
+"Aww man!": "Aww man!♫",
+"That was a nice life you had. Shame it had to end at this time time time": "CREEPER?♫",
+
+"Iskallium Collector": "史萊姆收集器",
+"Collect enough slimeballs to craft a stack of slime blocks": "製作一組粘液塊",
+
+"Spider-skeleton": "蜘蛛人",
+"Does whatever a spider can": "現在還附贈骷髏",
+
+
+
+
+
+"Artillery": "兵火庫",
+"Have nine loaded crossbows in your hotbar. All set!": "在你的工具欄中架上九個上膛的弩",
+
+
+
+
+
+"Magical Stockpile": "魔法倉儲",
+"Obtain a full stack of bottles of enchanting": "獲取一組經驗瓶",
+
+
+
+
+"Ancient Kung Fu Master": "遠古武術家",
+"Sneak 10km": "潛行10公里",
+
+"Black Belt Ninja": "黑帶忍者",
+"Sneak 1km": "潛行1公里",
+
+"Boing, Boing": "蹦蹦跳跳",
+"Jump 10,000 times": "跳1萬次",
+
+"Cupid": "丘比特",
+"Breed 500 animals": "繁殖500隻動物",
+
+"Did you just run across earth?": "你剛才是不是繞了地球一圈?",
+"Sprint 1000km": "跑行1000公里",
+
+"Elderly Enchanter": "賢者附魔師",
+"Enchant 250 items": "附魔250個物品",
+
+"Frequent Flyer": "空中旅客",
+"Fly 100km with elytra": "使用鞘翅飛行100公里",
+
+"Global Railway Network": "環球鐵道系統",
+"Ride 100km in a minecart": "在礦車中行駛100公里",
+
+"Happy Birthday!": "生日快樂!",
+"Play for a whole year!": "玩了一整年!",
+
+"Horse Training": "馬術精通",
+"Ride 1km on a horse": "騎馬1公里",
+
+"I enjoy long walks & playing MC": "我喜歡在Minecraft中散步",
+"Walk 1000km": "行走1000公里",
+
+"I Like Trains": "我愛火車",
+"Ride 10km in a minecart": "在礦車中行駛10公里",
+
+"Journeyman Enchanter": "新手附魔師",
+"Enchant 50 items": "給50個物品附魔",
+
+"Jumping Jacks": "噴射背包",
+"Jump 100,000 times": "跳躍10萬次",
+
+"Laps in the pool": "游泳健將",
+"Swim 1km": "游1公里",
+
+"Level Up": "升級",
+"Reach 30 experience levels": "達到30級",
+
+"Lightning McPig": "閃電麥昆",
+"Ride 10km on a pig": "騎豬10公里",
+
+"Luxury Cruise": "豪華遊輪",
+"Sail 1km in a boat": "划船1公里",
+
+"Marathon": "馬拉松",
+"Sprint 42km": "跑步42.195公里",
+
+"Minecart Rider": "礦車出發!",
+"Ride 1km in a minecart": "在礦車中行駛1公里",
+
+"Novice Enchanter": "菜鳥附魔師",
+"Enchant 10 items": "給10個物品附魔",
+
+"Olympic Athlete": "奧運健將",
+"Swim 10km": "游泳10公里",
+
+"Olympic Gold Medallist": "奧運冠軍",
+"Swim 100km": "游泳100公里",
+
+"Out for a stroll": "出門溜搭",
+"Walk 10km": "走10公里",
+
+"Overlevelling": "過度升級",
+"Reach 100 experience levels": "達到100級",
+
+"Passing the Time": "消磨時光",
+"Play for 100 days": "玩100天",
+
+"Pig Training": "豬豬訓練師",
+"Ride 100m on a pig": "騎豬100米",
+
+"Pirate Captain": "海賊船長",
+"Sail 10km in a boat": "划船10公里",
+
+"Statistics": "數據控",
+"If your numbers go up, you're having more fun": "如果你的數據更高，你的遊戲體驗就更好",
+
+"Sailor of the Seven Seas": "海賊王",
+"Sail 50km in a boat": "划船50公里",
+
+"Scourge of the West": "西部俠客",
+"Ride 50km on a horse": "騎馬50公里",
+
+"Sheriff Firearm": "西部警長",
+"Ride 10km on a horse": "騎馬10公里",
+
+"Sneaky Snitch": "潛行者",
+"Sneak 100m": "潛行100米",
+
+"Snout 500": "咿喔",
+"Ride 1km on a pig": "騎豬1公里",
+
+"Spring in your step": "跳跳虎",
+"Jump 1000 times": "跳躍1000次",
+
+"Supersonic": "超音速",
+"Fly 10km with elytra": "使用鞘翅飛行10公里",
+
+"Take to the Skies": "上天了",
+"Fly 1km with elytra": "使用鞘翅飛行1公里",
+
+"The First Night": "初夜",
+"Survive the first night in your brand new world": "活過新世界的第一天",
+
+"The Parrots and the Bats": "送子鳥的禮物",
+"Breed 100 animals": "促使動物繁殖",
+
+"Two By Two": "成雙成對",
+"Breed 2500 animals": "繁殖所有種類的動物！",
+
+"Who needs cars?": "車?聽都沒聽說過!",
+"Walk 100km": "行走100公里",
+
+"XP Grinder": "自走經驗塔",
+"Reach 1000 experience levels": "達到300級",
+
+"Your legs must be tired": "你的腿肯定酸了",
+"Sprint 250km": "跑250公里",
+
+
+
+
+"Mad Scientist": "瘋狂科學家",
+"Cure a zombie villager of every profession": "治癒每一種殭屍村民",
+
+"A Furious Test Subject": "暴怒的試驗品",
+"Get attacked by a mob with every potion effect": "被一個擁有所有藥水效果的怪物攻擊",
+
+
+
+
+"Event Horizon": "地平線",
+"Survive void damage": "活過虛空傷害",
+
+"Dragon vs Dragon": "雙龍大戰",
+"Kill the Ender Dragon while wearing a Dragon Head": "頭戴龍首時擊敗凋靈",
+
+"Rocketman": "火箭人",
+"Fill your inventory with full stacks of firework rockets": "頭戴龍首時擊敗終界龍",
+
+
+
+
+"A Million Blocks Away": "已過百萬",
+"Travel a million blocks away from spawn": "旅行到距離出生點一百萬個方塊遠",
+
+"Abyss Lord": "深淵君主",
+"Obtain a stack of Conduits": "獲得一組海靈核心",
+
+"All the Blocks!": "我全都要!",
+"Obtain all the blocks!": "獲得每一種方塊",
+
+"All the Items!": "吾全都要!",
+"Obtain all the items!": "獲得每一種物品",
+
+"Biological Warfare": "生化戰爭",
+"Kill every mob in the game with lingering potions": "用滯留藥水擊殺每一種生物",
+
+"Creepergeddon": "苦力怕末日",
+"Obtain a stack of Creeper Heads": "收集一組苦力怕頭顱",
+
+"Death From All": "超級受害者",
+"Get killed by every mob that can kill you. (Ignore in hardcore mode)": "被每一種可以擊殺你的生物擊殺",
+
+"Dragon Army": "龍族大軍",
+"Obtain a stack of Ender Dragon Heads": "收集一組龍首",
+
+"Dragon vs Dragon II: Electric Boogaloo": "雙龍大戰2：飛龍篇",
+"Defeat the Ender Dragon while wearing a dragon head... without touching the ground": "頭戴龍首時擊敗末影龍，但是這次不能落地",
+
+"Endergeddon": "末日",
+"Send every mob to the End... and kill them all there": "將每一種生物帶到終界並擊殺它們",
+
+"Global Vaccination": "無國界疫苗",
+"Cure a zombie villager of every profession... from every biome": "治癒在每一個生態系的每一種職業的殭屍村民",
+
+"Highway to Hell": "地獄直達列車",
+"Send every mob to the Nether... and kill them all there": "將每一種生物帶到地獄並擊殺它們",
+
+"I'm in Space!": "太空漫步",
+"Levitate up a distance of 256 blocks": "漂浮高度達到256",
+
+"Immortal": "無敵",
+"Fill your entire inventory with Totems of Undying": "在你的背包裡放滿不死圖騰",
+
+"Nuclear Fusion": "核聚變",
+"Strike every mob that can transform with lightning at once": "用雷擊打每一種可以異變的生物",
+
+"Potion Master": "藥水大師",
+"Kill every mob in the game with splash potions": "用飛濺藥水擊殺每一種生物",
+
+"Rise of the Skeletons": "骷星崛起",
+"Obtain a stack of Skeleton Skulls": "獲得一組骷髏頭顱",
+
+"Super Challenges": "超級挑戰",
+"Good luck completing... any of these ;)": "祝你好運QAQ",
+
+"Stack All the Blocks!": "囤積狂",
+"Obtain a stack of all the blocks!": "獲得每一種方塊各一組",
+
+"Stack All the Items!": "囤積癖",
+"Obtain a stack of all the items!": "獲得每一種物品各一組",
+
+"The World Is Ending": "世界末日",
+"Summon ten withers at once": "同時召喚10個凋靈",
+
+"Warlock": "導引者",
+"Obtain a stack of Beacons": "獲得一組信標",
+
+"We're in the endgame now": "終局之戰",
+"Construct a village in the End and defend it from a raid": "在終界中建造一個村莊並且在這裡防禦一次襲擊",
+
+"Zombie Apocalypse": "殭屍末日",
+"Obtain a stack of Zombie Heads": "收集一組殭屍頭顱",
+
+
+
+
+# All advancements added in version 1.8 are here
+"Ya like jazz?": "喜歡爵士樂?",
+"Breed two bees using flowers": "繁殖一隻蜜蜂",
+
+"Winnie the Pooh": "小熊維尼",
+"Drink some honey": "喝掉一些蜂蜜",
+
+"Sticky Situation": "陷入膠著",
+"Jump into a honey block to slide down it": "跳向蜂蜜塊安全滑落地面",
+
+"WHERE'S THE HONEY LEBOWSKI": "蜜糖!!!!!",
+"Drink 100 bottles of honey": "喝掉100瓶蜂蜜",
+
+"Hive Mind": "蜂群",
+"Craft a bee hive using planks and honeycombs then place it": "製作一個蜂箱並放置它",
+
+"NOT THE BEES!": "蜜蜂!",
+"Get stung to death by bees": "被蜜蜂蟄死",
+
+"Honey, I'm Home!": "甜蜜蜜",
+"Craft a stack of honeycomb blocks for building a home out of": "製作一組蜂蜜塊",
+
+
+
+
+"Aaaaaand... OPEN!": "芝麻開門!",
+"Craft and place an iron door": "合成並放置一扇鐵門",
+
+"Cut In Half": "對半砍!",
+"Craft some slabs": "製作一些台階",
+
+"Stairs? NOOOOO!": "樓梯?不wwwww",
+"Craft some stairs": "製作一些樓梯",
+
+
+
+
+"Everybody Loves Ice!": "沒有人會討厭冰塊!",
+"Obtain a stack of every type of ice in your inventory": "在你的背包中放置每一種冰塊各一組",
+
+
+
+
+"Full Stomach": "滿腹",
+"Fill both your hunger bar and saturation level": "將你的食物飽食度充滿",
+
+
+
+
+"Help! I've been framed!": "救命，我被眷養了!",
+
+"Craft a composter using wooden slabs then place it": "合成並放置一個堆肥桶",
+
+"Enter an underground cave": "進入一個地下洞穴",
+
+"Heart of Darkness": "闇影",
+"Submerge yourself in complete darkness": "將你自己沉浸入黑暗之中",
+
+"I'm in Lava With You": "我對你的愛熾熱如岩漿",
+"Hit something while you and it are in lava": "在岩漿中對生物造成傷害，並且你和目標都要在岩漿中",
+
+"Total Beelocation": "蜂裝物流",
+"Move a Bee Nest with 3 bees inside using Silk Touch": "使用絲綢之觸來移動裡面有3隻蜜蜂的蜂窩",
+
+"Bee Our Guest": "待客蜂範",
+"Use a bottle to collect Honey from a Beehive with a campfire beneath it so you don't aggravate the bees": "使用營火以在不激怒蜜蜂的情況下用玻璃瓶從蜂窩中取得蜂蜜",
+
+
+
+# All advancements added in version 1.9 are here
+"BlazeandCave's Advancements" : "烈焰與洞穴的冒險成就",
+"Loads of brand new advancements for your Minecraft world!" : "在你的麥塊世界中或的一大堆新成就!",
+
+"Mining Milestone" : "挖掘里程碑",
+"Complete every advancement in the Mining tab" : "完成在挖掘標籤下所有的成就",
+
+"Building Milestone" : "建築里程碑",
+"Complete every advancement in the Building tab" : "完成在建築下所有的成就",
+
+"Farming Milestone" : "農業里程碑",
+"Complete every advancement in the Farming tab" : "完成在農業標籤下所有的成就",
+
+"Animal Milestone" : "動物里程碑",
+"Complete every advancement in the Animal tab" : "完成在動物標籤下所有的成就",
+
+"Monsters Milestone" : "怪物里程碑",
+"Complete every advancement in the Monsters tab" : "完成在怪物標籤下所有的成就",
+
+"Weaponry Milestone" : "武器里程碑",
+"Complete every advancement in the Weaponry tab" : "完成在武器標籤下所有的成就",
+
+"Biomes Milestone" : "生態里程碑",
+"Complete every advancement in the Biomes tab" : "完成在生態標籤下所有的成就",
+
+"Adventure Milestone" : "冒險里程碑",
+"Complete every advancement in the Adventure tab" : "完成在冒險標籤下所有的成就",
+
+"Redstone Milestone" : "紅石里程碑",
+"Complete every advancement in the Redstone tab" : "完成在紅石標籤下所有的成就",
+
+"Enchanting Milestone" : "附魔里程碑",
+"Complete every advancement in the Enchanting tab" : "完成在附魔標籤下所有的成就",
+
+"Statistics Milestone" : "數據里程碑",
+"Complete every advancement in the Statistics tab" : "完成在數據標籤下所有的成就",
+
+"Nether Milestone" : "下界里程碑",
+"Complete every advancement in the Nether tab" : "完成在地獄標籤下所有的成就",
+
+"Potions Milestone" : "藥水里程碑",
+"Complete every advancement in the Potions tab" : "完成在藥水標籤下所有的成就",
+
+"End Milestone" : "終界里程碑",
+"Complete every advancement in the End tab" : "完成在末地標籤下所有的成就",
+
+"Super Challenges Milestone" : "超級挑戰里程碑",
+"Complete every advancement in the Super Challenges tab. Good luck with this one ;)" : "完成在超級挑戰標籤下所有的成就，祝你好運QAQ",
+
+"Advancement Legend" : "成就傳奇",
+"Complete every single advancement in BlazeandCave's Advancements Pack" : "完成在所有{烈焰與洞穴的冒險}中所有的成就",
+
+
+
+
+# Name and description changes in version 1.9
+"I am Ravager, hear me ROAR!" : "我就是劫毀獸!聽我的號令!",
+
+"Dragon vs Dragon II" : "雙龍大戰II",
+
+"Legend of Hell Chicken Riders" : "地獄雞騎士傳說",
+
+"Scientific Inaccuracy" : "科學誤差",
+
+"Olaf" : "雪寶",
+"Do you want to build a snow golem?" : "你想去堆雪人嗎?♫",
+
+"Mushroom, Mushroom!" : "蘑菇!蘑菇!",
+
+"Agent Smithing Table" : "鍛造台特工",
+
+"Foal Play" : "犯規了",
+
+"Moskstraumen" : "這是啥?",
+
+"Ring a bell in a village" : "敲響村莊裡的鐘",
+
+"Ring a bell in the Nether" : "敲響地獄裡的鐘",
+
+
+
+# All advancements added in version 1.10 are here
+"Dungeons and Spawners" : "地牢與生怪箱",
+"Open a chest in a dungeon deep underground" : "打開地牢裡的箱子",
+
+"Steals on Wheels" : "卸掉輪子",
+"Loot a minecart chest from an Abandoned Mineshaft" : "掠奪廢棄礦井裡的箱子",
+
+"Delicious, Hot Schmoes!" : "香噴噴的肉肉",
+"Place every type of cookable food on a campfire" : "在營火旁烤制所有可以烹飪的食物",
+
+"Oresome!" : "礦物風暴",
+"Mine a stack of every ore block" : "挖掘每一種礦物一組",
+
+
+
+
+"Grass Type" : "草ww",
+"Obtain every type of grass block in your inventory" : "收集所有形式的草方塊",
+
+"Shroom Lightyear" : "蕈菇的微光",
+"Light up the area with Shroomlight!" : "用菌光體照亮一片區域",
+
+"Cerulean!" : "蔚藍!",
+"Light up the area with soul fire torches and soul fire lanterns!" : "用靈魂火把與靈魂燈籠照亮一片區域",
+
+"Let There Be Light!" : "神說要有光",
+"Hold a stack of every light-emitting block and item" : "擁有所有會發光的方塊各一組",
+
+"No Chain, No Gain" : "環環相扣",
+"Craft a chain using an iron ingot and iron nuggets" : "用鐵錠和鐵粒合成鎖鏈",
+
+"Blackstonehenge" : "黑石陣",
+"Craft or collect all forms of Blackstone, Polished Blackstone and Polished Blackstone Bricks" : "合成或收集所有形式的黑石，磨製黑石，磨製黑石磚",
+
+"Colors of the Wind" : "飛揚的色彩",
+"Dye a sign with each color of dye" : "用染料給木牌上的文字染色",
+
+
+
+
+"Natural Fertiliser" : "天然農家肥",
+"Fill up a composter" : "裝滿一個堆肥桶",
+
+"Combine Harvester" : "聯合收割機",
+"Use bone meal on everything that can be grown" : "用骨粉催熟所有可以成長的植物",
+
+"What's new with composting?" : "有什麼新的堆肥方式嗎?",
+"Compost every type of compostable item in a Composter" : "用所有可以堆肥的物品在堆肥桶裡堆肥",
+
+"A Gluttonous Diet" : "暴飲暴食",
+"Obtain a full stack of all the foods" : "獲得天下食材各一組",
+
+
+
+
+"Foilage" : "修剪枝葉",
+"Use shears to pick up tall grass or ferns" : "用剪刀獲取高草或大型蕨",
+
+"Going Down the Rabbit Hole" : "沉淪於這迷幻的兔窩",
+"Bring a rabbit to the bottom of the world, then kill it" : "把一隻兔子帶到世界的底層，然後殺掉它",
+
+"Just Keeps Going" : "請繼續你的表演~",
+"Eat Rabbit Stew, then avoid eating for the next 3 in-game days" : "吃一塊兔肉湯，然後在接下來的三天內什麼也不吃",
+
+"Nest, Quick!" : "給我進去啦!",
+"Collect a stack of empty bee nests" : "收集一組空蜂巢",
+
+"Heavy Duty Caravan" : "重量級商隊",
+"Tame a llama with a strength of 5" : "馴服一只能裝得下15格物品的羊駝",
+
+"Save the Turtles!" : "保護海龜!",
+"Collect a stack of turtle eggs" : "收集一組海龜蛋",
+
+
+
+
+"So Long & Thanks For The Fish" : "再見，還有謝謝你的魚",
+"Get murdered by dolphins" : "被海豚殺死",
+
+
+
+
+"Now You’re Thinking With Portals" : "思緒傳送門",
+"Find a broken Nether Portal in the Overworld" : "在主世界找到廢棄傳送門",
+
+"I just want to make toast!" : "我只是想做吐司",
+"Name a bunny 'Toast'" : "給兔子命名“吐司”(Toast)",
+
+"What's Up, Doc?" : "啥事老兄?",
+"Turn a mob upside-down" : "讓動物翻轉過來",
+
+"Nyan Sheep" : "彩虹羊",
+"Nyan Nyan Nyan Nyan..." : "Nya Nya Nya Nya...♫",
+
+"Slenderman" : "斯蘭達",
+"Defeat this terrifying monster" : "擊敗這個恐怖怪物",
+
+"The one and true Johnny" : "如假包換的Jonny",
+"Defeat Johnny" : "擊敗{Jonny}",
+
+"Prime Specimen" : "植物標本",
+"Find Tall Grass or a Large Fern inside a village chest" : "在村莊的箱子裡找到芒草或大型蕨類",
+
+"Redemption Arc" : "化敵為友",
+"Befriend a Pillager that doesn’t have a crossbow" : "和沒有弩的掠奪者交朋友",
+
+"Council of Crafters" : "創造者們的諮詢處",
+"Trade with a villager at height limit" : "在接近世界高度範圍的地方與村民交易",
+
+"Workaholic" : "工作狂",
+"Craft a stack of all the villager job site blocks" : "合成所有的村民職業方塊各一組",
+
+"I am Loot!" : "禮物就是我🖤",
+"Open up every type of loot chest" : "打開所有種類的戰利品箱",
+
+
+
+
+"Paleontologist" : "古生物學家",
+"Craft or mine a stack of bone blocks" : "合成或挖掘一組骨塊",
+
+"Impossible..." : "不可能的事...",
+"Kill an Enderman with an arrow" : "用箭“殺”死一隻末影人",
+
+"Family Reunion" : "不死族的重聚",
+"Reunite all zombie variants (and their baby forms) in one place" : "將所有跟殭屍有關的怪物（包括幼年的怪物）相聚在一個地方",
+
+"Bone-to-party" : "骷髏派對",
+"Reunite all skeleton variants and their three-headed overlord in one place" : "將所有跟骷髏有關的怪物包括它們的三頭君主相聚在一個地方",
+
+
+
+
+"Loser!" : "爛透了!",
+"Die twice within ten seconds" : "在十秒鐘內死亡兩次",
+
+"Multiclassed" : "樣樣精通",
+"Hit a mob with every type of weapon" : "使用各種武器擊殺怪物",
+
+"Pyrotechnic" : "煙花繚亂",
+"Craft a firework of every shape and additional effect" : "合成各種形狀和效果的煙火",
+
+"My eyes!" : "我的眼睛!",
+"Kill a mob using a firework's explosion" : "通過煙花爆炸而殺死一隻怪物",
+
+"Who ya gonna call?" : "你還要絡誰來?",
+"Kill a ghast using a firework's explosion" : "通過煙火爆炸而殺死一隻地獄幽靈",
+
+
+
+
+"Target Acquired" : "目標鎖定",
+"Put up a Target for archery practise" : "放置一個用於射箭練習的標靶",
+
+"Target Practise" : "射擊練習",
+"Hit a Target with all types of projectiles" : "用所有可能的方式射中標靶",
+
+"Bullseye" : "正中紅心",
+"Hit the bullseye of a Target Block with an arrow from 30 blocks away" : "從至少30公尺外擊中標靶的靶心",
+
+
+
+
+"This name sounds cooler" : "這名字聽起來很酷",
+"Name your Diamond Sword 'Diamond Edge'" : "將你的鑽石劍命名為“鑽石鋒刃”(Diamond Edge)",
+
+"I'll be back" : "我會回來的!",
+"Name your bow 'Terminator'" : "將你的弓命名為“終結者”（Terminator）",
+
+"God of Thunder" : "雷神!",
+"Name your Trident with Loyalty III and Channeling 'Mjolnir'" : "將你帶有忠誠III附魔的三叉戟命名為“雷神之錘”(Mjolnir)",
+
+"A rather pointy fence post" : "相當尖鋭的木刀",
+"Enchant a wooden sword with Sharpness V. Not really the best weapon, but it could be a minor annoyance to someone" : "給一把木劍附上鋒利V，雖說這不是最好的武器，但總能讓某些人感到很煩",
+
+"Gotta Go Fast!" : "疾如風",
+"Obtain the Soul Speed enchantment from a Bastion or bartering with Piglins" : "在豬布林交易當中獲得靈魂疾走附魔",
+
+"Handmade Blinding" : "自封雙眼",
+"Wear a carved pumpkin enchanted with Curse of Binding" : "戴上含有綁定詛咒的南瓜頭",
+
+"Master Digger" : "腰纏萬貫的淘金者",
+"Create a shovel with all possible enchantments at max level" : "製造出一把所有類型附魔都達到最高等級的鏟子",
+
+"Master Axeman" : "技藝高超的伐木工",
+"Create an axe with all possible enchantments at max level" : "製造出一把所有類型附魔都達到最高等級的斧頭",
+
+"Master Farmer" : "含辛茹苦的農民",
+"Create a hoe with all possible enchantments at max level" : "製造出一把所有類型附魔都達到最高等級的鋤頭",
+
+
+
+
+"Mob Hunter" : "怪物獵人",
+"Defeat 250 mobs" : "擊殺250隻生物",
+
+"Bloodthirsty" : "嗜血成性",
+"Defeat 2500 mobs" : "擊殺2500隻生物",
+
+"Kill or be Killed" : "殺戮或者被殺AuA",
+"Defeat 25,000 mobs" : "擊殺25000隻生物",
+
+"Taking It In Stride" : "從容接獸",
+"Ride 100m on a Strider" : "用熾足獸騎乘100米",
+
+"Who Needs Boats?" : "船?那是什麼?能吃嗎?",
+"Ride 1km on a Strider" : "用熾足獸騎乘1000米",
+
+"This Ride Is Lit, Yo!" : "喲，這船著火了!",
+"Ride 10km on a Strider" : "用熾足獸騎乘10000米",
+
+
+
+
+"Stem Research" : "菌柄研究",
+"Attack a huge Nether Fungi until a stem pops out" : "摧毀巨型蕈菇直到跳出一個菌柄",
+
+"What a Fungi!" : "這是真的蕈菇",
+"Pick up Crimson or Warped Fungus" : "採集緋紅蕈菇或扭曲蕈菇",
+
+"I am Root" : "我即為菌根",
+"Pick up some crimson or warped roots" : "採集緋紅蕈根或扭曲蕈根",
+
+"Don't Blink" : "不要眨眼",
+"Climb on some Weeping Vines in a Crimson Forest" : "在緋紅森林裡爬垂泣藤",
+
+"Twisted" : "纏繞的怨恨",
+"Climb on some Twisting Vines in a Warped Forest" : "在扭曲森林裡爬扭曲藤",
+
+"What about Corruption Planks?" : "緋紅之王",
+"Craft every item made out of crimson wood" : "用緋紅木材合成每一件製品",
+
+"Welcome to Warp Zone!" : "歡迎來到扭曲之地",
+"Craft every item made out of warped wood" : "用扭曲木材合成每一件製品",
+
+"Hot Tourist Destination" : "「熱」門景點",
+"Explore every Nether biome" : "探索地獄所有的生態域",
+
+"Hell Botanist" : "地獄植物學家",
+"Gather a stack of every Nether plant" : "收集每一種地獄植物各一組",
+
+"Spreading Corruption" : "侵蝕腐敗",
+"Place one of every nether block in the overworld" : "在主世界放置每一種地獄方塊",
+
+"The Struggle Nether Ends" : "侵蝕永不終結",
+"Place one of every nether block in The End" : "在終界放置每一種下界方塊",
+
+"Roadhog" : "路霸",
+"Hunt a Hoglin for food" : "獵殺一隻豬布獸以獲得食物",
+
+"When Hoglins Breed" : "當豬布獸繁殖的時候",
+"Breed a baby Hoglin using Crimson Fungi" : "用緋紅菌繁殖豬布獸",
+
+"Whole Hog" : "烤乳豬好吃嗎?",
+"Get mauled by a Hoglin" : "被豬布獸傷害",
+
+"Giddy Up!" : "快走吧!",
+"Punch a baby Hoglin that is being ridden by a baby Piglin" : "打一下幼年豬布林所騎乘的幼年豬布獸",
+
+"Zork Chop" : "殭硬野豬排",
+"Bring a Hoglin into the Overworld to zombify it, then kill it for zorkchops" : "將一隻豬布獸帶到主世界讓它殭屍化，再宰了它",
+
+"This Boat Has Legs" : "「行」舟",
+"Ride a Strider with a Warped Fungus on a Stick" : "利用扭曲蕈菇釣竿騎乘熾足獸",
+
+"Bobbleheads" : "搖頭娃娃",
+"Breed two Striders using Warped Fungus" : "用扭曲蕈菇繁殖一隻熾足獸",
+
+"This One’s Mine!" : "現在這是我的了!",
+"Kill a Zombified Piglin that is riding a Strider and take its steed" : "殺死一隻騎乘熾足獸的殭屍豬布林，然後騎上它",
+
+"Oh, Shiny!" : "金光閃閃",
+"Distract Piglins with gold" : "用黃金使豬布林分心",
+
+"Cultural Misunderstandings" : "文化誤解",
+"Slay a Piglin in battle... or an accidental incursion" : "惹怒豬布林...或者意外激怒他們",
+
+"Who is Cutting Onions?" : "是誰在切洋蔥？",
+"Obtain Crying Obsidian from a ruined portal or bartering with Piglins" : "從廢棄地獄門或豬布林交易來獲得哭泣的黑曜石",
+
+"Anchorman" : "拋錨人",
+"Craft a Respawn Anchor using Crying Obsidian and Glowstone then place it down" : "用哭泣的黑曜石與螢光石合成重生錨，然後放置它",
+
+"Not Quite 'Nine' Lives" : "非言「九」命",
+"Charge a Respawn Anchor to the maximum" : "將重生錨充滿能量",
+
+"We Got a Live One!" : "We Got a Live One!",
+"Bring a Piglin into the Overworld then spare it from an eternity of zombification" : "把一隻豬靈安全地帶到主世界……然後解救它使其永遠不可能殭屍化AuA",
+
+"When Piglins Fly" : "當豬布林飛的時候",
+"Give a piglin elytra then kill it" : "給豬布林一個鞘翅，然後殺了它",
+
+"Electrifying Alliance" : "震”奮的同盟",
+"Smite a ghast with lightning from the Overworld’s heavens" : "把一隻地獄幽靈從地獄救出，將其安全地帶到主世界……然後用雷劈死它",
+
+"Time to Fire Back" : "是時候反擊了",
+"Craft a stack of fire charges" : "合成一組火焰彈",
+
+"From Whence It Came!" : "從何而來",
+"Find a broken Nether Portal in the Nether" : "在地獄中找到廢棄傳送門",
+
+"Those Were the Days" : "今非昔比",
+"Fight your way into a Bastion Remnant" : "進入堡壘遺蹟",
+
+"War Pigs" : "戰豬",
+"Loot a chest in a Bastion Remnant" : "掠奪一個堡壘遺蹟裡的儲物箱",
+
+"Gilty!" : "人贓俱獲",
+"Mine some Gilded Blackstone from a Bastion Remnant" : "在堡壘遺蹟中挖一些鑲金黑石",
+
+"Wub wub wub!" : "搖滾樂",
+"Obtain the Pigstep music disc from a Bastion Remnant" : "在堡壘遺蹟中找到音樂唱片",
+
+"Nugget in a Biscuit" : "金粒曲奇餅",
+"Mine Nether Gold Ore for a pile of gold nuggets" : "從地獄金礦中挖掘一些金粒",
+
+"Dark Ages" : "黑暗時代",
+"Mine Blackstone from a Basalt Deltas biome" : "從玄武岩三角洲中挖掘一些黑石",
+
+"Burnt Right Into Your Soul" : "燒盡靈魂",
+"Get caught on Soul Fire" : "被靈魂火點燃",
+
+"A Soul For A Soul" : "魂之靈動",
+"Place down a Soul Campfire" : "放置一個靈魂營火",
+
+"Let Me Out!" : "讓我出去!",
+"Stay in the Nether for twenty ingame days" : "持續於遊戲中的20天在地獄中生活",
+
+"Inception" : "盜夢空間",
+"Build a machine that can break a hole in the roof of the Nether" : "建造一個可以破下界基岩層的機器",
+
+"The Descent" : "深入絶地",
+"Dig down into the deepest depths of the Nether" : "向下挖，直到地獄的最深層",
+
+"Nether Say Die" : "深藏不露",
+"Excavate out some Ancient Debris from deep beneath the lava oceans" : "在地獄岩漿海下獲得遠古殘骸",
+
+"Holy Scrap!" : "拆解專家",
+"Smelt Ancient Debris into Netherite Scrap" : "將遠古殘骸冶煉成下界合金碎片",
+
+"Diamonds Are Not Forever" : "鑽石亙古存...錯誤!",
+"Use Gold Ingots and Netherite Scrap to make a Netherite Ingot" : "用金錠與獄髓碎片合成一塊獄髓錠",
+
+"MOAR Upgraded Tools" : "獨具匠心的矩矱繩尺",
+"Craft a Netherite Pickaxe, Axe, Shovel and Hoe" : "鍛造一整套獄髓工具",
+
+"A Knight to Nether Forget" : "殘骸裹身",
+"Use a Smithing Table to upgrade your diamond armor to netherite armor" : "獲得一整套獄髓盔甲",
+
+"Soul Runnings!" : "靈魂疾走!",
+"Step on Soul Sand with Netherite Boots enchanted with Soul Speed III" : "穿上帶有靈魂疾走III的獄髓靴，然後在靈魂沙上行走",
+
+"Fool Me Twice" : "鞠躬盡瘁",
+"Completely use up a netherite hoe. Clearly you have chosen... poorly" : "用壞一把獄髓鋤，很明顯你的人生抉擇選錯了",
+
+"Get a Lode Of This!" : "臣心一片磁針石",
+"Craft a Lodestone using Chiseled Stone Bricks and a Netherite Ingot" : "用鏨制石磚和獄髓錠合成一塊磁石",
+
+"Country Lode, Take Me Home" : "天涯共此石",
+"Use a Compass on a Lodestone" : "對磁石使用羅盤",
+
+"Lodes of Applications" : "羅盤的廣泛應用",
+"Create a Lodestone Compass in all three dimensions" : "擁有屬於主世界，地獄，終界的三種磁石指針",
+
+"Archaeologist" : "考古學家",
+"Mine a stack of Ancient Debris" : "挖掘一組遠古遺骸",
+
+
+
+
+"Failed Concoctions" : "失敗的混合物",
+"Brew a mundane and thick potion" : "釀造平凡的藥水與濃稠的藥水",
+
+
+
+
+"What For?" : "為了什麼?",
+"Craft 64 ender crystals" : "合成一組終界水晶",
+
+"Ring of the End" : "終焉之環",
+"Defeat the Ender Dragon 20 times" : "擊敗20次終界龍",
+
+"In Your Face, Neil Armstrong" : "就在這吧，阿姆斯壯",
+"Colonise the End with potato crops" : "在終界裡建造屬於馬鈴薯的“殖民地”",
+
+"Organizational Wizard" : "有條理的巫師",
+"Name a Shulker Box 'Blocks' for storing your blocks" : "用鐵砧給一隻潛影盒命名為“方塊(Blocks)”,然後你就可以裝方塊了",
+
+"A Wizard’s Breakfast" : "巫師的早點",
+"Eat a stack of Chorus Fruit in one go" : "一次吃一組歌萊果",
+
+
+
+
+"Constellation" : "星座愛好者",
+"Collect 64 nether stars" : "收集64個地獄之星",
+
+"Hearts of the Stack" : "成組的心",
+"Collect 64 Hearts of the Sea" : "收集一組海洋之心",
+
+"The Devil's Distance" : "我與惡魔的距離",
+"Use the Nether to travel 666km in the Overworld" : "利用地獄移動對應主世界666公里的距離",
+
+"Ad Astra" : "星際探索",
+"Reach an altitude of 10,000 blocks above the world" : "探索高度達到10000格高",
+
+"Dragon vs Wither: Pre-Sequel" : "終界龍大戰凋靈：前傳",
+"Defeat the Wither while wearing a Dragon head... without touching the ground" : "頭戴龍首時擊敗凋靈...但是不能落地",
+
+
+
+# Name and description changes in version 1.10
+"Knowledge is Power" : "知識就是力量",
+
+"Obtain all the special banner patterns" : "獲得所有特殊的旗幟圖案",
+
+"Play a music disc in a jukebox" : "在唱片機裡撥放唱片",
+
+"Listen to all the music discs" : "聽過所有唱片",
+
+"Wear a full suit of iron armor" : "穿上一套鐵裝",
+
+"Craft or collect all forms of nether brick and red nether brick" : "合成或蒐集所有種類的地獄磚和紅色地獄磚",
+
+"Craft all forms of quartz blocks" : "合成所有種類的石英磚",
+
+"Sleep in a bed to change your respawn point" : "睡個覺來更改重生點",
+
+"Break all six types of shovels" : "用斷所有六種鏟子",
+
+"Attack a mob using all six types of axes" : "以所有六種斧頭攻擊生物",
+
+"Hit a mob using all six types of shovels" : "以所有六種鏟子攻擊生物",
+
+"Defeat a Drowned that is holding a nautilus shell" : "擊敗一個拿著鸚鵡螺殼的沉屍",
+
+"Defeat a Drowned that is holding both a nautilus shell and a trident" : "擊敗一個拿著鸚鵡螺殼與三叉戟的沉屍",
+
+"Strip the bark off of all six types of logs" : "將所有六種原木剝皮",
+
+"Sprint 42.195km" : "奔跑42.915公里",
+
+"Reach 300 experience levels" :"達到300等",
+
+"Fly 1000km with elytra" : "用鞘翅飛行1000公里",
+
+"Use a treasure map to find Buried Treasure" : "從寶藏圖中找到埋藏的寶藏",
+
+
+
+# Hardcore-Friendly Version description changes
+"Get attacked by a natural iron golem defending its village" : "被正在防衛村莊的鐵巨人攻擊",
+
+"Get attacked by dolphins" : "被海豚攻擊",
+
+"Get hurt by every mob that can kill you" : "被所有能殺死你的生物攻擊",
+
+"Get attacked by an Enderman in The End" : "在終界被終界使者攻擊",
+
+"Take damage twice within ten seconds" : "十秒鐘受到傷害兩次",
+
+"Get attacked by Piglin Brutes" : "被豬布林蠻兵攻擊",
+
+
+# All advancements added in version 1.11 are here
+"Time to Dig!" : "挖掘時間!",
+"Use planks and sticks to make a shovel" : "用木材與木棍合成鏟子",
+
+
+"Throw diamonds at another player or mob" : "往其他玩家或生物丟鑽石",
+
+
+"One Pickle, Two Pickle, Sea Pickle, Four" : "一個海鞘，兩個海鞘，三個海鞘，再來是四個",
+"Place four sea pickles in a group underwater" : "在水底放置四個海鞘",
+
+"Harry Potter" : "哈利波特",
+"Place every type of plant in a flower pot" : "在花盆中種植所有植物",
+
+"Armor Display" : "盔甲展覽",
+"Place all six sets of armor on six different armor stands" : "放置所有六種盔甲套裝至盔甲架上",
+
+
+"Unmasked" : "脫去面紗",
+"Shear the Pumpkin off of a Snow Golem to unveil their true face" : "剪掉雪人的南瓜來窺視他們蠢萌的臉",
+
+
+"Delicious Fish" : "香噴噴的魚",
+"Cook and eat a fish!" : "吃掉香噴噴的烤魚",
+
+"Milkshroom" : "蘑菇奶凍",
+"Milk a mooshroom with a bowl to get mushroom stew" : "用碗盛裝哞菇擠出的蘑菇湯",
+
+"Live and Let Dye" : "染養羊",
+"Dye Sheep with all 16 colors of wool" : "染出16種顏色的羊",
+
+"Foxy Thievery" : "狐狸小偷",
+"Give a fox a Totem of Undying" : "讓狐狸咬著不死圖騰",
+
+"Lead the Way!" : "跟我走!",
+"Craft a lead using string and a slimeball, then attach it to a mob" : "用線和史萊姆求合成韁繩，並繫上一隻動物",
+
+"Beeloons!" : "溜蜂",
+"Attach a lead to a bee" : "幫蜜蜂繫上韁繩",
+
+"Leader of the Animals" : "諾亞",
+"Attach a lead to every mob that can be leashed" : "幫所有能繫上韁繩的生物繫上韁繩",
+
+
+"Echolocation" : "聲納",
+"Feed a dolphin fish to have it lead you to treasure" : "餵食一隻海豚，使他帶領你到寶藏處",
+
+"Lion Hunter" : "鬃獅獵人",
+"Feed an Ocelot fish to try and gain its trust" : "餵食一隻豹貓，並試著獲取它的信任",
+
+
+"Your Daily Fix" : "日常修繕",
+"Use an Iron Ingot to repair a damaged Iron Golem" : "用鐵錠修復一個破損的鐵巨人",
+
+"I'm not lost anymore!" : "永遠不會迷路囉!",
+"Right-click a banner with a map" : "用右鍵在地圖上標記旗幟",
+
+
+"Controlled Detonation" : "既定的爆炸",
+"Persuade a Creeper to blow up using Flint and Steel" : "用打火石點燃一支苦力怕",
+
+"Miracle Drink" : "神飲",
+"Drink milk or honey to cure poison when on half a heart" : "再剩下半顆心時喝牛奶或蜂蜜解毒",
+
+"Dead Really Don’t Die" : "雖死猶在",
+"Give a zombie a Totem... so that you have to kill it twice" : "給予殭屍不死圖騰...這樣你就能殺他兩次",
+
+
+"Half Heart Life" : "極限生存",
+"Be on half a heart of health for a minute" : "維持半顆心一分鐘",
+
+
+"Brute Force" : "蠻荒之力",
+"Defeat a Piglin Brute in a Bastion Remnant" : "在堡壘遺蹟討伐豬布林蠻兵",
+
+"Et tu, Brute?" : "偷襲!",
+"Get murdered by Piglin Brutes" : "被豬布林蠻兵殺死",
+
+"Lava Fishing" : "岩漿垂釣",
+"Reel in a Strider using a Fishing Rod" : "用釣魚竿操縱一隻熾足獸",
+
+"Nether Rock Collection" : "地獄崎石收藏",
+"Mine a stack of Netherrack, Basalt, Blackstone and Glowstone in the Nether" : "在地獄裡挖掘一組地獄石，玄武岩，黑石，和螢光石",
+
+
+# Name and description changes in version 1.11
+"Attach a lead to a llama to form a llama caravan" : "為羊駝繫上韁繩以成立羊駝商隊",
+
+"Use Shears to obtain wool from a sheep" : "用剪刀修剪羊毛",
+
+"Swim in lava while having the Fire Resistance effect" : "在擁有抗火效果時在岩漿裡游泳",
+
+"Diemonds!" : "喪命也是個好鑽石",
+
+
+# Trophies added in version 1.11
+"Awarded for achieving" : "讚頌你的成功!",
+
+
+
+
+"Miner's Trophy" : "礦工的聖杯",
+"Don't mine at night!" : "但別熬夜挖礦啊!",
+
+"Builder's Trophy" : "建築師的聖杯",
+"A build of a thousand blocks begins with a single brick" : "萬尺之樓，始於足下",
+
+"Farmer's Trophy" : "農夫的聖杯",
+"It ain't much but it's honest work" : "沒什麼其他想法就是誠實的工作",
+
+"Butcher's Trophy" : "屠夫的聖杯",
+"No animals were harmed in the obtaining of this trophy" : "沒有動物在得到這個獎盃的過程中受傷AuA",
+"(just simulated ones)" : "(除了馴服的那些)",
+
+"Slayer's Trophy" : "殺手的聖杯",
+"This is all that's left of your foes once you're done with them" : "這即是你的獵物們僅存留下的物品",
+
+"Sword Trophy" : "劍士的聖杯",
+"Slice and dice" : "手起刀落",
+
+"Explorer's Trophy" : "探索者的聖杯",
+"It's a magical world, ol' buddy... let's go exploring!" : "魔幻的世界值得我們探索",
+
+"Adventurer's Trophy" : "冒險者的聖杯",
+"So much to do, so much to see..." : "好多東西能做，更多東西可看...",
+
+"Mechanic's Trophy" : "技師的聖杯",
+"Give me somewhere to stand and I can move the Earth" : "給我一個支點，我可以撐起地球",
+
+"Enchanter's Trophy" : "附魔師的聖杯",
+"What's next? Enchanting mobs?" : "還有啥能附魔?來點生物試試?",
+
+"Statistician's Trophy" : "記錄者的聖杯",
+"Lies, damned lies, and statistics" : "謊言，全是謊言，但又很可靠",
+
+"Nether Adventurer's Trophy" : "地獄冒險者的聖杯",
+"You'll nether find a better trophy anywhere else!" : "哪裡都找不到比這個棒的獎賞!",
+
+"Potion Brewer's Trophy" : "釀造者的聖杯",
+"How did you get here?" : "你怎麼達到這的?",
+
+"End Adventurer's Trophy" : "終界冒險者的聖杯",
+"What could possibly come after the end?" : "還有什麼會從終結後方來呢?",
+
+"Challenger's Trophy" : "挑戰者的聖杯",
+"Imagine what the reward must be for the entire datapack" : "想像一下完成整個冒險之後你會拿到什麼呢?",
+
+"Yellow T-Shirt" : "黃色襯衫",
+"I completed BlazeandCave's Advancements Pack" : "我完成了烈焰與洞穴的冒險包",
+"and all I got was this lousy T-shirt" : "但最後獲得的只有這件遜炮襯衫",
+
+
+
+
+"Spoon" : "湯匙",
+"There is no spoon" : "但這裡沒有湯匙",
+
+"Santa's Present" : "聖誕老人的禮物",
+"Someone's been naughty this year..." : "看來某人今年不太乖喔!",
+
+"Golem Kit" : "巨像套裝",
+"The pumpkin is sold separately" : "但南瓜可是分開賣的",
+
+"Golden Crown" : "金皇冠",
+"Piglin-approved" : "豬布林的認可",
+
+"Mayor's Throne" : "君主的寶座",
+"MUMBO FOR MAYOR!" : "臣服吧!",
+
+
+
+
+"Logolas" : "勒苟拉斯",
+"The axe of choice by the masters of chopping" : "斧靈們的選擇",
+
+"Torch God's Favor" : "把神的癖好",
+"The Torch God shall no longer haunt Minecraft" : "火炬之神應該永遠不會為難你了",
+
+"The Journal" : "紀錄",
+"After all these years, I finally have them all..." : "經過了這麼多年，我終於擁有全套蒐集了...",
+
+"What are you doing reading this for? Go get Advancement Legend already!" : "還在等啥?去完成傳奇成就吧!",
+
+"Magic Wand" : "魔杖",
+"Made of holly, eleven inches long," : "由神聖，11英尺長的樹枝",
+"and contains a single feather from the tail of a phoenix" : "並附上了一片鳳凰的羽毛",
+"Has no function in the hands of a mere muggle" : "但揮舞起來一點屁用都沒有...",
+
+"Sleepless Anchor" : "不眠的癲者",
+"Beds are for losers" : "床是給那些魯蛇用的!",
+
+
+
+
+"A Glutton's Meal" : "老饕的饗宴",
+"I see you have quite the appetite. Fatty." : "我看出你的喜好了，肥的那種最好...",
+
+"Wilson" : "威爾森",
+"Don't worry Wilson, I'll do all the paddling. You just hang on" : "別擔心威爾森，我來划槳，你待著就好",
+
+"Farmer's Badge" : "農夫的勳章",
+"For the continued work you've put out there, take this reward!" : "紀念持續不斷的努力，這個你拿去吧!",
+
+
+
+
+"Cowboy Hat" : "牛仔帽",
+"Don't let it get shot off!" : "別讓這帽帽被射掉了!",
+
+"Earth" : "地球",
+"Seven billion people on the planet" : "七十億人生活於此",
+"Now that sounds overpopulated" : "現在聽起來有點擁擠",
+
+"Super Rod" : "超級釣竿",
+"Catches the best pokemon from the seas" : "幫助從海裡捕捉到最棒的寶可夢!",
+
+"Potato Mine" : "馬鈴薯炸彈!",
+"SPUDOW!" : "SPUDOW!",
+
+"Toilet" : "廁所",
+"WHERE'S THE EFFING HONEY LEBOWSKI?" : "霍芬·萊博斯基在哪裡？",
+
+
+
+
+"Mobestiary" : "生物圖鑑",
+"Available at stores now" : "現在可在商店中購買",
+
+"Vanilla Ice Cream" : "香草冰淇淋",
+"Life would be vanilla ice cream without 31 flavors of individuality" : "如果少了31種獨特的味道的話，生活就像香草冰淇淋一樣",
+
+"Molten Ice Cream" : "融化的冰淇淋",
+"Noo! My ice cream! T_T" : "不~~我的冰淇淋!",
+
+"Hyperlink" : "超連結",
+"This advancement was sponsored by MCStacker" : "這個成就由MCStacker贊助",
+
+"Handsome Pumpkin" : "帥氣南瓜",
+"This guy rushes me with a spoon... A freakin' spoon!" : "這位仁兄拿著湯匙衝過來...好可怕的武器!!",
+
+"Pink Camo Pants" : "粉紅迷彩褲",
+"They don't camouflage anywhere!" : "沒辦法在所有地方偽裝!",
+
+"The Walking Head" : "陰屍顱",
+"Yes, this head totally has legs" : "當然囉，這個頭顱有著完整的雙腳",
+
+"Sans's Head" : "Sans的頭顱",
+"You start to hear distant MEGALOVANIA sounds" : "開始聽到一絲絲的MEGALOVANIA BGM了",
+
+"Ender Arrow" : "終結之箭",
+"This arrow ended an enderman. Seems impossible..." : "這玩意殺了一隻終界使者，但這不可能啊?",
+
+
+
+
+"Boomer T-Shirt" : "嬰兒潮世代T",
+"There are no mistakes, just happy explosions" : "沒什麼錯誤，就僅是快樂的膨脹",
+
+"The Hylian Shield" : "希蓮盾",
+"Should have spoken to the Keaton Mask Soldier" : "你應該與基頓面具士兵交談",
+"to get a discount at the Bazaar" : "來在市集中獲取折扣",
+
+"1000-degree knife" : "1000度的刀子",
+"(GONE WRONG) (NOT CLICKBAIT)" : "(有些技術問題)(不是釣魚網站)",
+
+
+
+
+"Voyager 1" : "探險者一號",
+"Earth's farthest spacecraft" : "離地球最遠的太空梭",
+
+"Cartographer's Quill" : "製圖者的羽毛筆",
+"Freshly not-smashed on the ground" : "還未在地板上輾過",
+
+"A blessing in love" : "愛的祝福",
+"Face your fears and ask your crush out!" : "面對你的恐懼並約你的暗戀對象出去吧!",
+
+"Bouquet" : "禮花",
+"If you catch this at a wedding, you're next to get married" : "當你在婚禮上搶到這個，代表你會下一個結婚囉",
+
+"Waterbed" : "水床",
+"Have a good night" : "祝你有個好夢",
+
+
+
+
+"Dinnerbone's Head" : "Dinnerbone的頭顱",
+"No love for Grumm" : "不太喜歡Grumm呢",
+
+"Jeb's Head" : "Jeb的頭顱",
+"Baah, Baah, Baah, Baah, Baah, Baah, Baah!" : "叭叭叭叭叭叭叭!",
+
+"Groot's Stick" : "Groot的木棍",
+"I am Groot" : "我就是Groot!",
+
+"Medal of Honor" : "榮譽的勳章",
+"But didn't you start the raid yourself?" : "但不就是你發起突襲的嗎?",
+
+"Wall Street" : "華爾街",
+"Yes, it's a wall" : "是的，那就是一面牆而已",
+
+"Ominous Shield" : "不祥的盾牌",
+"This shield certifies your rank as a" : "這個盾牌讓你晉身為",
+"Pillager of the Arch-Illager's forces" : "窳民的掠奪者",
+
+"Stonk Man's Head" : "Stonks人的頭顱",
+"STONKS" : "STONKS",
+
+"Your Cat's Prize" : "貓貓獎賞",
+"You have so many cats, that now" : "你有太多的貓了以至於",
+"phantoms have to sleep to avoid meeting you" : "夜魅需要去睡覺覺來避免遇到你",
+
+
+
+
+"Quiver" : "箭袋",
+"You can't actually store arrows in it" : "但你其實沒辦法在裡面儲存箭矢",
+
+
+
+
+"Master Enchanter's Book" : "傳奇附魔書",
+"Congratulations, you did it" : "恭喜你，你做到了",
+"This document decrees you as a master enchanter" : "這份文件證明你是一位傳奇附魔師",
+"Go see a doctor" : "所以去看醫生吧神經病",
+
+"Never gonna give you up" : "永不放棄",
+
+"Finger Guns" : "靈丸",
+"So anyway I started blasting..." : "所以我就玩開了",
+
+"Chaos Emerald" : "渾沌祖母綠",
+"Just gotta find six more" : "只需要再找到六個就夠啦",
+
+
+
+
+"Strider Treat" : "熾足獸的獎勵",
+"Your strider deserved it" : "你的熾足獸應得的",
+
+"Enchanter's Tome" : "附魔者之卷",
+"Used by Illager Enchanters to enchant mobs" : "這是窳民附魔師們拿來附魔生物的書",
+
+"World's Most Reliable Shoes" : "世界上最值得依靠的鞋子",
+"The statistics tab shall no longer be the grindy super challenges tab" : "統計列表現在應該不會是最農的超級挑戰列表了",
+
+"Portable Trampoline" : "攜帶式蹦床",
+"Hours of sick fun for the whole family!" : "為你的家庭提供長時怪好玩的活動",
+
+"Noah's Ark" : "諾亞方舟",
+"A deluge is imminent" : "大洪水即將到來",
+
+"Zero Tick Farm" : "零刻農場",
+"RIP Zero Tick Farms" : "安息吧零刻農場",
+"2013 - 2020" : "2013 - 2020",
+
+"Black Pearl" : "黑色珍珠",
+"Wherever we want to go, we'll go" : "不管我們想去哪裡，我們就會抵達",
+
+"Superman's Cape" : "超人披風",
+"Is it a bird?" : "那是鳥嗎？",
+"Is it a plane?" : "那是飛機嗎?",
+"Is it an egg salad sandwich?" : "那是雞蛋沙拉三民治嗎?",
+"No way, it's a Charizard!" : "都不是!這是噴火龍!",
+
+"Flowey the Flower" : "Flowey，一朵小花",
+"All what's left of Asriel, the monsters' prince" : "這是Asriel王子，為一留下的灰燼之花",
+
+"Firearm's Firearm" : "槍枝的火槍",
+"Now how did this get here? Seriously?" : "所以這是怎樣做到的?認真嗎?",
+
+"Refreshment" : "回復劑",
+"You'll need it after running that far" : "跑過這麼遠的距離後，你會需要這個的",
+
+"Gold Medal" : "金牌",
+"Probably not real gold" : "但可能不是真金",
+
+"Birthday Cake" : "生日蛋糕",
+"Happy birthday to you, happy birthday to you," : "祝你生日快樂♫~~祝你生日快樂♪~~",
+"this song is copyrighted, oh wait actually it's public domain!" : "但這首歌有版權...等下這是話語霸權!",
+
+"Piston Cup" : "活塞杯",
+"It's just an empty cup" : "就只是個空杯",
+
+"Thomas the Tank Engine" : "湯瑪士小火車",
+"He's number one" : "他是第一名!",
+
+"Black Belt" : "黑帶",
+"Who is the greatest man?" : "誰是最棒的呢?",
+
+
+
+
+"Farmer's Badge V2" : "農夫勳章 v2.0",
+"Farm some more they said, it'll be fun they said..." : "他們說在農多點，會更好玩的他們說",
+
+"Spinny Top" : "永動陀螺",
+"If it falls over, it's not a dream" : "但如果他翻倒了，美夢就結束囉",
+
+"Stormbreaker" : "風暴剋星",
+"What kind of weapon are we talking about here?" : "我們在討論哪種武器?",
+"The Thanos-killing kind" : "塔諾斯殺手那種",
+
+"Baconator" : "培根導引烽火台",
+"Oh... wait, I thought you said Bacon!" : "噢等等，我以為你說培根!",
+
+"Zork Chop" : "殭屍排",
+"Don't ask" : "不要問，你會怕",
+
+
+
+
+"Unknown Mixture" : "未知混和物",
+"Side effects include possible stomach ache, 20/20 vision," : "副作用包誇可能造成腹部疼痛，清晰視野",
+"acne, extensive back pain and more..." : "痘痘生成，劇烈背部疼痛，還有...",
+
+"Stale Milk" : "臭酸的牛奶",
+"Please drink this" : "請喝~",
+
+"Fast and Furious" : "玩命關頭",
+"Getting shot by this will make you fast and furious" : "被這玩意射到會讓你體驗到速度與激情",
+
+"This is Anarchy" : "無政府狀態",
+"If you want to survive you need a strong belly" : "如果想生存你需要一個強壯的肚肚",
+
+
+
+
+"TARS" : "塔爾斯",
+"Everybody good? Plenty of slaves for my robot colony?" : "大家都還好嗎?你們還要成為我的機器人殖民地的奴隸呢",
+
+"Wizard's Fruit" : "巫師的蒴果",
+"Utilised by the Mayor from Powerpuff Girls" : "貝嶼用於飛天小女警上",
+
+"Portal Bow" : "傳送弓",
+"Portal II" : "傳送門 v2.0",
+
+"Moon Rock" : "月亮石",
+"Looks like he brought some of the moon back" : "看來他帶了一部份的月亮回來",
+"Smells like cheese" : "聞起來像起司",
+
+"Ring of Bedrock" : "基岩之戒",
+"The end of the End" : "終末的終結",
+
+"Singularity" : "奇異點",
+"Newton’s third law - the only way humans have ever" : "牛頓第三定律...即為人類想出的唯一解決之道",
+"figured out of getting somewhere is to leave something behind" : "就是把某些東西置之不理",
+
+
+
+
+"Cosmonaut Helmet" : "宇航員頭盔",
+"It was a Russian who was the first who could truly say this" : "俄羅斯人應該是能夠最先講這個的",
+
+"Astronaut Helmet" : "太空盔",
+"In zero gravity, a feather and a hammer falls at the same speed" : "在零重力，羽毛跟槌子會同時落下",
+
+"Dragon Bro" : "龍龍兄弟",
+"Dragon Broooo!!!" : "龍龍兄弟!!!!!",
+
+"Power Stone" : "力量石",
+"Maybe you should start a cool rock collection" : "或許你該開始蒐集酷酷崎岩巨石囉",
+
+"Heart of a Siren" : "賽倫之心",
+"No, not sirenhead!" : "不，這不是她的頭啦",
+
+"Amphitrite" : "安菲特里忒",
+"Many people called her the personification of the sea itself..." : "很多人視她為大海本身的代表...",
+
+"Devil's Pitchfork" : "惡魔之戟",
+"One Hell Of A Time" : "夢魘之初",
+
+"Space Stone" : "空間石",
+"This universe is finite, its resources, finite" : "這個宇宙是有限的，資源也是",
+"If life is left unchecked, life will cease to exist" : "如果生命被置之不理，生活將不復存在",
+"It needs correcting" : "這需要被修改",
+
+"Reality Stone" : "真實石",
+"Reality can be whatever I want..." : "真實應該是任何我想要的才對...",
+
+"Eye of the Apocalypse" : "啟示錄之眼",
+"The beginning of the end" : "終末的初始",
+
+"Wishing Star" : "許願星",
+"Make a wish!" : "許個願吧!",
+
+"Corrupted Beacon" : "腐化烽火台",
+"The Corrupted Beacon holds immense power within" : "腐化烽火台暗含巨大的能量",
+"It waits for the moment to unleash its wrath" : "釋放只需一個時機",
+
+"Treasure Chest" : "寶箱",
+"One of each block is stored in there" : "所有方塊都在這了",
+
+"Frame of Infinite Items" : "無限展示框",
+"One of each item is stored on here" : "所有物品都在這了",
+
+"Pandora's Box" : "潘朵拉之盒",
+"It is said to have contained all the evils in the world..." : "據說儲存了世間上的所有邪惡",
+
+"Doraemon's Pocket" : "哆啦A夢百寶袋",
+"I hope I can get thousands of diamonds in here" : "我希望能在裡面找到成千上萬的鑽石",
+
+"Nuclear Reactor" : "核能反應爐",
+"You have transcended humanity's progression" : "你已經超越了人性的成果",
+
+"Mind Stone" : "里程碑",
+"The ability to give the mindless minds of their own" : "使無所適從的靈魂能夠找到出路",
+
+"Soul Stone" : "靈魂石",
+"Did you do it?" : "你做到了?",
+"Yes" : "對",
+"What did it cost?" : "那你損失了什麼?",
+"8 hours" : "8小時",
+
+"Cursed Creeper Head" : "詛咒的苦力怕頭顱",
+"Wave 5 of 5: CREEPER-GEDDON!!!" : "襲擊5/5:苦力怕襲來!!!",
+
+"ACDC - Back in Black" : "回歸黑暗",
+"Back in Black stomped Highway to Hell in terms of success" : "回歸黑暗朝向地獄之路前進但擁戴勝利回歸",
+
+"Endfinity Source" : "無限終結的奇異點",
+"They will END the world..." : "這會毀滅世界",
+
+"Potion Master's Diploma" : "藥水博士學位",
+"A certificate granting you the ability to teach" : "這個證書是證明你有能力教導他人",
+"the subtle science and exact art of potion-making" : "藥水中分子間的機轉和藥水調製的藝術",
+
+"Poison Mask" : "防毒面具",
+"Protects your face from poison but not the rest of your body" : "保護你的臉龐於毒害侵擾...但身體的其他部份就沒法救了",
+
+"Infinity Gauntlet" : "無限手套",
+"Iron Man stole all the stones so the best" : "鋼鐵人已經偷走了所有寶石所以",
+"you can do is punch people with it" : "你現在能做的就是拿它去揍一些人",
+
+"Totem of Immortality" : "無傷圖騰",
+"You'll be immortal as long as you don't die" : "你會保持永生直到你死亡",
+
+"Time Stone" : "刻刻帝",
+"Perfectly balanced, as all things should be" : "完美的平衡，就如同世間萬物",
+
+"Instant Death" : "立即死亡",
+"Since you like dying so much..." : "既然你如此喜歡死亡...",
+
+
+# Renamed advancements and description changes in 1.11.2
+"Craft or collect all forms of normal, cracked, mossy and chiseled stone bricks" : "合成或蒐集所有種類的石磚，裂石磚，青苔石磚，和鑿製石磚",
+
+"Swim in water while having the Water Breathing effect" : "在擁有水下呼吸效果時在水裡悠游",
+
+"Ride a Skeleton Horse" : "騎上骷髏馬",
+
+"Follow the Leader" : "跟著月亮走",
+
+"Barbearian" : "野蠻熊熊",
+
+"Happy New Year!" : "新年快樂! ",
+"Play for a whole Minecraft year" : "在麥塊中度過了遊戲中的365天",
+
+
+## All advancements added in version 1.12 are here
+"Coppers and Robbers": "煉銅癖",
+"Smelt a Copper Ingot": "冶煉一份銅錠",
+
+"Budget Channeling": "操雷者",
+"Craft a Lightning Rod using Copper Ingots": "用銅錠合成一支避雷針",
+
+"Surge Protector": "突波保護器",
+"Protect a villager from an undesired shock without starting a fire": "保護村民不受雷擊，而且不產生任何火焰",
+
+"Called Shot": "預期之災",
+"Get struck by lightning while standing on a Lightning Rod": "站在避雷針上被閃電擊中",
+
+"Don’t Come a Copper!": "死銅牌",
+"Craft some Cut Copper": "合成切製銅磚",
+
+"Copper Miner": "煉銅煉銅煉銅",
+"Mine a stack of Raw Copper": "挖掘一組銅原礦",
+
+"Master Copper Miner": "銅心者",
+"Mine enough copper to make a stack of Copper Blocks": "挖掘足夠合成一組銅磚的銅錠",
+
+"Wax On": "上蠟",
+"Use Honeycombs to wax a Copper Block, preventing it from oxidising": "為銅方塊塗上蜂蠟！",
+
+"Wax Off": "除蠟",
+"Use an axe to scrape wax off of a Copper Block": "刮除銅方塊上的蠟！",
+
+"The Statue of Liberty": "自由女神",
+"Obtain a fully oxidized Block of Copper": "獲得氧化銅磚",
+
+"Sly Copper: The Copper Heist": "強欲的戀銅者",
+"Collect a stack of every oxidizing stage of Copper Block, Cut Copper, Cut Copper Slabs and Stairs, and the waxed variants of them all": "獲取各階氧化態的銅磚，切製銅磚，切製銅半磚，切製銅階梯，與他們所有的上蠟型態各一組",
+
+"G.I. Geode": "萬象晶簇",
+"Find an Amethyst Geode and mine an Amethyst Cluster": "找到一窟紫晶洞並挖掘一個紫水晶晶簇",
+
+"Good For Your Bones": "維骨力",
+"Mine some Calcite encasing an Amethyst Geode": "挖掘紫晶洞邊上的方解石",
+
+"Galileo Figaro": "伽立列．費格洛",
+"Zoom in on something using a Spyglass": "用望遠鏡放大視野",
+
+"Pixel Perfect": "完美像素",
+"Use a Spyglass to stare at a bat from at least 50 blocks away": "用望遠鏡凝視距離超過50格遠的蝙蝠",
+
+"Blackout": "防曬",
+"Craft Tinted Glass using Glass and Amethyst Shards and use it to block out light": "以玻璃與紫水晶合成遮光玻璃以隔絕光線",
+
+"Amethyst Miner": "水晶礦工",
+"Mine a stack of Amethyst Blocks, Amethyst Clusters, and every size of Amethyst Bud": "挖掘一組紫水晶方塊，紫水晶簇，與每種大小的紫水晶芽",
+
+"Mr. Bean": "豆豆先生",
+"Mine and craft a stack of Raw Iron, Copper and Gold Blocks": "挖掘並合成一組生鐵塊，生銅塊，生金塊",
+
+"Filthy Lich": "骯髒的巫妖",
+"Use shears to obtain Glow Lichen from an underground cave": "在洞窟中用剪刀獲取發光地衣",
+
+"That's the point!": "尖尖石！",
+"Obtain some Pointed Dripstone from a Dripstone Cave": "在鐘乳石洞窟中獲得一些鐘乳石",
+
+"Deep Slate Nine": "銀河前哨",
+"Mine deep enough that the stone darkens": "挖掘到足夠深處以至於石頭改變了顏色",
+
+"Tuff Stuff": "凝灰",
+"Mine some Tuff in the deep underground": "在深處挖掘一些凝灰岩",
+
+"Moss Maker": "蘚苔生長者",
+"Use Bone Meal on Moss to spread its wonderful lushness across hard blocks of stone": "用骨粉使苔蘚頂破堅硬的岩石",
+
+"Iggy": "伊吉",
+"Obtain an Azalea": "獲得一叢杜鵑叢",
+
+"Particle Fan": "粒子愛好者",
+"Obtain a Spore Blossom": "獲得一個孢子花",
+
+"Lush Hour": "葱翠時間",
+"Obtain a stack of all lush-related blocks": "獲得所有葱翠的方塊各一組",
+
+"A Shiny Treat": "閃亮的賞賜",
+"Eat some Glow Berries": "吃一些螢光莓",
+
+"Bulldozer": "推土機",
+"Destroy a total of 10,000 blocks of stone": "摧毀一萬個石頭",
+
+"Strike a Light": "看樣子我們的史前好朋友剛剛發現了火",
+"Craft Flint and Steel and use it to light the ground on fire": "合成打火機並點燃周遭的地板",
+
+"Bonfire Night": "營火晚會",
+"Light every flammable block on fire": "點燃所有可燃的方塊",
+
+
+
+
+"Setting up the mood": "營造氣氛",
+"Place a candle and light it using Flint and Steel": "放置蠟燭並以打火石點燃",
+
+"The Ritual Begins": "兩儀之始",
+"Get one stack of Black Candles": "獲得一組黑色蠟燭",
+
+# Happy Birthday!
+"Place a candle on a cake": "在蛋糕上插上蠟燭",
+
+"Pane in the Glass": "淋漓盡致",
+"Craft a stack of all 16 colors of stained glass panes": "合成所有16色染色玻璃各一組",
+
+"Hot Tub": "豆在釜中泣",
+"Sit in a cauldron filled with lava": "坐在充滿岩漿的鍋釜中",
+
+"Rock Polish": "拋光狂徒",
+"Craft every type of polished block": "合成所有的拋光方塊",
+
+"Deepslate Conspiracy": "深石陰謀",
+"Craft all forms of Deepslate, Polished Deepslate, Deepslate Bricks and Deepslate Tiles": "合成所有型態的深板岩，拋光深板岩，深板岩磚，與深板岩磚瓦",
+
+"Skyblock": "空島",
+"Place a Grass Block high in the sky": "在天際中放置草地",
+
+
+
+
+"One-course meal": "轉骨湯",
+"Use bone meal to grow a sapling into a tree": "用骨粉使樹苗茁壯",
+
+"Come to the countryside!": "來去鄉下住一晚",
+"Plant every single type of crop on farmland": "在耕地上種植每一種作物",
+
+"An Apple a Day": "每日一蘋果",
+"Eat an Apple every day for 30 in-game days": "每天攝取一顆蘋果，持續30個遊戲天",
+
+
+
+
+"Goat out of here!": "山羊滾開！",
+"Slaughter a Goat": "屠殺一隻山羊",
+
+"Billy the Kid": "比利小子",
+"Breed two Goats together using Wheat": "用小麥繁殖山羊",
+
+"Goat Simulator": "山羊模擬器",
+"Get killed by a Goat that rammed into you.": "被一隻朝著你衝撞的山羊殺死",
+"You have Goat to be kidding me!": "你這一定是在開羊笑！",
+
+"Whatever Floats Your Goat!": "飄羊過海！",
+"Get in a Boat and float with a Goat": "與山羊一起乘船航行",
+
+"Screaming Milk": "驚聲尖叫的奶",
+"Milk a screaming Goat": "擠一隻尖叫山羊的奶",
+
+"Cephalight": "探照燈",
+"Kill a Glow Squid": "殺死一隻發光魷魚",
+
+"Glow and Behold": "光輝奪目！",
+"Use a Glow Ink Sac to light up a sign": "使告示牌上的字閃閃發光",
+
+"Flashy Items": "光彩炫麗",
+"Put an item up for display in a Glowing Item Frame": "在發光物品展示框裡展示物品",
+
+"Iceologer Should've Won": "冰霜賢者之榮耀",
+"Kill 100 Glow Squids": "殺死100隻發光魷魚",
+
+"The Cutest Predator": "最萌掠食者",
+"Catch an Axolotl in a Bucket": "用鐵桶捕捉一隻墨西哥鈍口螈",
+
+"The Healing Power of Friendship": "療癒力滿點的友情！",
+"Team up with an Axolotl and win a fight": "和墨西哥鈍口螈結盟並贏得一場戰鬥",
+
+"Thanks a lotl": "真是謝囉！",
+"Team up with an Axolotl in an Ocean Monument to help clear the curse of the Elders": "和墨西哥鈍口螈結盟並於海底遺跡中解除遠古深海守衛的詛咒",
+
+"Axolittle": "小小蠑螈",
+"Breed two Axolotls together using Tropical Fish": "用熱帶魚繁殖墨西哥鈍口螈",
+
+"Axolotl of them": "蠑民們",
+"Catch all variants of Axolotls inside a Bucket": "抓取所有種類的墨西哥鈍口螈至水桶中",
+
+"Axeolotl": "屠螈者",
+"Kill an Axolotl with an axe": "用斧頭殺死一隻墨西哥鈍口螈",
+
+"Humble Bundle": "謙虛的收納袋",
+"Craft a Bundle using Rabbit Hide and String": "用兔子皮和線合成收納袋",
+
+"Fractal": "易碎品",
+"Put a Bundle in a Bundle in a Bundle in a Bundle in a Bundle… 16 layers deep": "將收納袋裝在收納袋裡的收納袋…總共16層",
+
+"Swine Sailing": "天鵝遨遊",
+"Ride a saddled pig in a boat in a minecart": "坐在坐在坐在礦車上的船上的豬上",
+
+"Llama Festival": "羊駝慶典",
+"Sit on Llamas with all 16 colors of carpet. Getting off will reset your progress": "交互乘坐於所有16色的羊駝之上，不能跳下來喔！",
+
+"Is it a Bird?": "那是鳥嗎？",
+"Look at a Parrot through a Spyglass": "藉由望遠鏡凝視一隻鸚鵡",
+
+"So Hungry I Could Eat a Horse!": "餓到馬都能吃馬了！",
+"Feed a Horse every type of food that it can eat": "餵食馬兒所有他能吃的食物",
+
+
+
+
+"Smooth Operator": "滑起來！",
+"Slip and slide on some ice": "在冰上滑行",
+
+"This Snow is Snowier": "雪花冰",
+"Fall into some Powder Snow": "陷入於粉雪中",
+
+"Light as a Rabbit": "輕功雪上飄",
+"Walk on Powder Snow… without sinking in it": "在粉雪上行走...... 並且不陷下去",
+
+"Powder-full": "桶裝雪",
+"Pick up some Powder Snow in a Bucket": "用鐵桶撈取一些粉雪",
+
+"Boatception": "倖存者",
+"Get in a boat within a shipwreck": "在沈船裡悠閒的划船",
+
+"Pandamonium": "熊貓糕點祭",
+"Feed cake to every type of panda": "用蛋糕餵食所有種類的熊貓",
+
+"Edge of the Jungle": "邊境之林",
+"Enter a Modified Jungle Edge - the rarest biome in Minecraft": "進入麥塊最罕見的生態域--叢林邊緣變種",
+
+
+
+
+"This Dirt is Dirtier": "骯髒的土",
+"Trade for some Rooted Dirt from a Wandering Trader": "與旅行商人交易紮根土",
+
+"Leaflet Drop": "草尖的凝露",
+"Fall through a Big Dripleaf": "從大懸葉草上掉下來",
+
+"Hey! You two should kiss!": "嘿，快給我就地結婚啦！",
+"Use a Spyglass to look at two Villagers sitting in a Boat from at least 50 blocks away": "用望遠鏡凝視乘坐在50格遠的船上的兩位村民",
+
+"Rare Candy Shop": "奇異糖果店",
+"Trade for a Bottle o’ Enchanting from a Cleric": "與牧師交易經驗瓶",
+
+"Buy Low, Sell High": "買低賣高",
+"Trade with a villager while under the Hero of the Village effect": "作為村莊英雄與村民交易",
+
+"Justice": "正義",
+"Kill each type of Illager with a single crossbow arrow": "以重弩一發斃命所有種類的窳民",
+
+
+
+
+"Poultry Boy": "德魯伊醬掰掰",
+"Slay the elusive Chicken Jockey": "殺死小雞騎士",
+
+"Basketblock Championship": "籃球超截冠軍",
+"Kill Endermen that are holding every block that they can hold": "殺死拿著所有他們能拿的方塊的終界使者",
+
+"Pupil Poppers": "萬花筒血輪眼",
+"Eat 1000 Spider Eyes": "吃下一千顆蜘蛛眼",
+
+
+
+
+"It's time consuming": "這很費時",
+"Kill something using a clock": "用時鐘殺死某個生物",
+
+"Inspector Gadget": "調查者的專武",
+"Kill a zombie while holding a spyglass": "用望遠鏡殺死一隻殭屍",
+
+"Rock, Paper, Shears!": "剪刀，石頭，布！",
+"Beat a zombie at rock, paper, shears": "在剪刀石頭布中贏過一隻殭屍",
+
+"Backfire": "背刺",
+"Kill a Blaze using a Blaze Rod while both you and it are on fire": "在兩方皆著火時用烈焰桿殺死烈焰使者",
+
+
+
+
+"Take Notes": "音樂筆記",
+"Tune a Note Block through every possible note": "調整一輪音階盒的聲音",
+
+"Noteworthy": "多重樂章",
+"Play every possible instrument on a Note Block": "在音階盒上撥放所有樂器的聲音",
+
+"Travelling Bard": "吟遊詩人",
+"Play a Note Block in every type of biome": "在所有生態域演奏音階盒",
+
+"Vibe Check": "聲納",
+"Obtain a Sculk Sensor": "獲得一個聲音傳感器",
+
+
+
+
+"Over-Overkill": "超溢傷！",
+"Deal sixteen hearts of damage in a single melee blow": "一次造成16顆心的傷害",
+
+
+
+
+# The Haggler
+"Trade with villagers 100 times": "與村民交易100次",
+
+"Big Spender": "投資者",
+"Trade with villagers 500 times": "與村民交易500次",
+
+"STONKS!": "賺爛了賺爛了！",
+"Trade with villagers 2500 times": "與村民交易2500次",
+
+
+
+
+"Ancient Restoration": "遺跡重啟",
+"Rebuild and reactivate a Ruined Portal": "重建並重起一座廢棄地獄門",
+
+"Hot Spring": "溫泉",
+"Sit in water in the Nether": "坐在地獄的水中",
+
+"Polar Opposites": "陰陽調和",
+"Start freezing in the Nether": "在地獄裡凍傷",
+
+"Jenga": "積木",
+"Ride a Strider riding another Strider riding a boat riding a minecart": "乘坐在乘坐在乘坐在礦車上的船上的熾足獸上的熾足獸上",
+
+"Is it a Balloon?": "那是氣球嗎？",
+"Look at a Ghast through a Spyglass": "使用望遠鏡觀察地獄幽靈",
+
+"A Piglin's Best Friend": "豬布林的超級好朋友",
+"Give a total of 500 gold to Piglins during your nether adventures": "在地獄旅行中給予豬布林500個金錠",
+
+"Instant Mining": "立即挖掘",
+"Hold a Diamond or Netherite Pickaxe enchanted with Efficiency V while under the Haste II effect": "在挖掘加速II下用效率V的鑽石鎬或獄髓鎬挖掘方塊",
+
+"Beacon Overlord": "烽火連天",
+"Acquire every beacon-induced effect at once": "同時獲得所有烽火台的效果",
+
+"Master Netherite Miner": "獄髓探索大師",
+"Mine enough Ancient Debris to make a stack of Netherite Ingots (don’t worry, mining a stack of Netherite Blocks is optional in this datapack, I’m not that evil…)": "挖取足夠的獄髓碎片以合成一組獄髓錠(放心，要不要取得一組獄髓磚取決於你，我還沒有那麼邪惡…)",
+
+"Netherite Mad Lad": "獄髓狂熱癲者",
+"Be an absolute madlad and grind enough Ancient Debris to make a stack of Netherite Blocks (this is hidden and not required for Advancement Legend btw…)": "作為癲狂的信徒，農出足夠的獄髓碎片以合成一組獄髓磚(順帶一題這是隱藏成就，並且非獲取大師成就所需要完成的…)",
+
+
+
+
+"Gas Bomb": "瓦斯彈",
+"Ignite a Creeper of each possible effect using Flint and Steel": "用打火機點燃各種可能的藥水效果的苦力怕",
+
+
+
+
+"Is it a Plane?": "那是飛機嗎？",
+"Look at the Ender Dragon through a Spyglass": "用望遠鏡凝視終界龍",
+
+"Good Luck Getting This One": "算是撿到的",
+"Kill a baby Turtle, a Witch, a Phantom, an Elder Guardian and a Piglin Brute with one piercing arrow in The End": "在終界以一支貫穿箭擊斃一隻小海龜，一位女巫，一隻夜魅，一隻遠古深海守衛，和一隻豬布林",
+
+
+
+
+"The Perfect Run": "完美劇本",
+"Summon the Ender Dragon, the Wither, and a Raid within thirty seconds of each other, then defeat all of them without taking damage": "在三十秒內召喚終界龍，凋零怪，和一場突襲，並無傷解決他們",
+
+"Telescopic": "洞悉者",
+"Look at every mob using a Spyglass, each from at least 25 blocks away": "用望遠鏡凝視距離25格遠的，所有種類的生物",
+
+
+
+
+# Renamed advancements and description changes in 1.12
+"Professional": "專家",
+
+"Hot Reels!": "滾燙的卷軸！",
+
+"Netherite Miner": "獄髓礦工",
+
+"Stepping on Legos": "採到樂高",
+"Walk on some hot Magma Blocks in the Nether": "在地獄得滾燙岩漿塊上行走",
+
+"Mine a stack of Raw Iron": "挖掘一組生鐵",
+
+"Mine a stack of Raw Gold": "挖掘一組生金",
+
+"Craft and ride a boat to sail on the high seas": "合成並在海上悠閒划船",
+
+"Mine a stack of Netherrack, Basalt, Blackstone and Magma in the Nether": "在地獄中挖掘地獄石，玄武岩，黑石，與岩漿塊各一組",
+
+"Use a shovel to create dirt paths": "用鏟子挖出草徑",
+
+"Deal eight hearts of damage in a single melee blow": "一次造成8顆心的傷害",
+
+
+
+
+# Hardcore-Friendly Version for 1.12 description changes
+"Get stung by a bee": "被蜜蜂叮到",
+
+"Get rammed into by a Goat.": "被山羊衝撞",
+
+"Obtain a carved pumpkin enchanted with Curse of Binding. Be careful not to put it on!": "獲得一個擁有綁定詛咒的南瓜，小心不要戴上它了！",
+
+
+
+
+# Trophies added in 1.12
+"Octuple Compressed Cobblestone": "八重壓縮鵝卵石",
+"Just imagine how much cobblestone it contains…": "想像他到底內含多少鵝卵石…",
+
+"Golden Cobblestone": "金閃閃鵝卵石",
+"Congratulations!": "恭喜！",
+"You mined 10,000 blocks of Cobblestone": "你已經挖了一萬個鵝卵石",
+"and unlocked the Golden Cobblestone Skin!": "並解鎖金閃閃鵝卵石造型！",
+
+"Weathered Copper BlocK": "峯樺地瞳顓",
+"It was spelt like this for six whole snapshots": "這東西就是這麼拼了六個快照版本，不要懷疑",
+
+"Copper Shortsword": "銅製短劍",
+"The Moon Lord fears no weapon, but this one… it scares him": "月神不懼怕任何武器，但這把…真的嚇到他了",
+
+"Baseball Bat": "蝙蝠棒球",
+"What?... Oh, when you said stare at a bat,": "什麼？喔，我以為你叫我盯著蝙蝠",
+"I thought you meant this bat!": "我以為你是指這根球棒！",
+
+"Energy Crystal": "能量晶球",
+"Looks like a slimy slug sucked all the power out of it…": "看起來一隻黏黏的蛞蝓吸盡了它所有的能量",
+
+"Bean Block": "豆格",
+"Mmm, tasty": "嗯，好吃",
+
+"Silver Armor Stand": "銀製盔甲架",
+"To display your best armor set!": "用來你展示你最棒的盔甲套裝",
+
+"Annoying Orange": "煩人的橘子",
+"Hey apple, can you spit seeds?": "嘿蘋果，你會吐籽嗎？",
+
+"Mr Finch's Hoe": "芬奇先生的鋤頭",
+"Did you at least harvest the sugar cane?": "你應該至少有採收過甘蔗吧？",
+
+"Compost Mate": "堆肥摯友",
+"There is ": "這裡有",
+"1 Composter": "一位堆肥者",
+" among us": "在我們之中",
+
+"Black Bird": "烏",
+"They should add Crows to Minecraft. Caw!": "他們應該在麥塊中加入烏鴉。呱！",
+
+"Fake Tropical Fish": "假熱帶魚",
+"Not as beautiful, but much tastier": "雖然沒有那麼好看，但更好吃！",
+
+"Barry B. Benson's Hive": "巴瑞‧B‧班森的蜂巢",
+"According to all known laws of aviation…": "根據所有已知的航空法…",
+
+"Ice Wand": "冰霜法杖",
+"The Ice Wand was trapped in a tomb of ice for ages,": "多年來，冰霜法杖被懼怕他強大的能力的那些",
+"sealed away by those who feared its power": "封印在冰霜的陵墓之中",
+
+"Llama Drama": "羊駝慘劇",
+"In memoriam of the Great Spitting Massacre of 2021": "為紀念2021年的口水大屠殺",
+
+"Matryoshka Doll": "俄羅斯套娃",
+"And they don't stop coming,": "然而他們一直出現…",
+"and they don't stop coming,": "一直出現…",
+"and they don't stop coming…": "一直出現………",
+
+"Basketblock": "籃塊",
+"That's right Number 7, it's a cube!": "對7號選手，它是個方塊！",
+
+"Etho's Anvil": "伊索的鐵砧",
+"Awarded to distinguished individuals who complete Etho’s challenge": "頒給那些完成了伊索挑戰的那些強者們",
+
+"Multiweapon": "多重武器",
+"It's a sword, axe and…": "它是支劍，是支斧頭，也…",
+"Never mind, it broke": "當我沒說，它壞了",
+
+"Bamboo Sword": "竹劍",
+"Not the best material for a weapon…": "不是一個做為武器的最佳材料",
+
+"The Jungle Book": "叢林之書",
+"In the jungle, the mighty jungle…": "在叢林中，那個偉大的叢林中",
+
+"The Moon": "月色",
+"Yeah, it's just me, you, and the moon": "僅有我與你，和那璀璨的月",
+
+"The Salad Bowl": "沙拉盅",
+"Perfect for serving justice in": "完美的釋放正義",
+
+"Steam Engine": "蒸汽引擎",
+"The beginning of the Industrial Revolution": "工業革命之始",
+
+"New Year's Firework": "新年煙火",
+"It's the final countdown!": "最後倒數！",
+
+"Big Pointy Arrow": "大尖箭",
+"Things are on the up and up!": "美好都處於最最上方！",
+
+"One-Punch Man's Fist": "一拳超人的拳頭",
+"ONE PUUUUUNNNCCHHH!!!": "ONE PUUUUUNNNCCHHH!!!",
+"(though in honesty killing everything in one punch": "(但老實說所有事物都一擊必殺",
+"gets kinda boring after awhile…)": "過久了就挺無聊的)",
+
+"Gilded Blade": "鍍金刀片",
+"A powerful weapon wielded by ancient mobs": "對付遠古怪物的終極專武",
+
+"Brick Astley": "磚克‧遙",
+"Nether gonna brick you up!": "地獄不會放棄磚！",
+
+"Ultimate Flex": "最終通牒",
+"Dab on dem haters": "刺向那些仇恨者",
+
+"Wormhole": "蟲洞",
+"Is this some kind of portal?": "那是一種傳送門嗎？",
+"Aaah!..": "啊！…",
+
+"Mario's Hat": "瑪莉歐之帽",
+"Mario, number one! Yahoo!": "瑪莉歐第一名！呀吼！",
+
+
+
+
+# 'Experience' label in Experience Rewards text
+"Experience" : "經驗",
+
+
+
+
+# Text that appears when unlocking a new tab
+"You have unlocked the root of the Adventure tab": "你踏上了冒險列表的始途",
+
+"You have unlocked the root of the Animals tab": "你踏上了動物列表的始途",
+
+"You have unlocked the root of the Biomes tab": "你踏上了生態域列表的始途",
+
+"You have unlocked the root of the Building tab": "你踏上了建築列表的始途",
+
+"You have unlocked the root of the Super Challenges tab": "你踏上了超級挑戰列表的始途",
+"WARNING: These are very difficult": "警告：這些成就異常艱難",
+
+"You have unlocked the root of the Enchanting tab": "你踏上了附魔列表的始途",
+
+"You have unlocked the root of the End tab": "你踏上了終界列表的始途",
+
+"You have unlocked the root of the Farming tab": "你踏上了農耕列表的始途",
+
+"You have unlocked the root of the Mining tab": "你踏上了挖礦列表的始途",
+
+"You have unlocked the root of the Monsters tab": "你踏上了怪物列表的始途",
+
+"You have unlocked the root of the Nether tab": "你踏上了地獄列表的始途",
+
+"You have unlocked the root of the Potions tab": "你踏上了藥水列表的始途",
+
+"You have unlocked the root of the Redstone tab": "你踏上了紅石列表的始途",
+
+"You have unlocked the root of the Statistics tab": "你踏上了資料列表的始途",
+
+"You have unlocked the root of the Weaponry tab": "你踏上了武器列表的始途",
+
+
+
+
+# Welcome message
+"This world is using ": "這個世界使用",
+"Blaze": "烈焰",
+"and": "與",
+"Cave": "洞穴",
+"'s Advancements Pack!": "的冒險成就！",
+
+" Over ": "超過",
+## Number is inserted here
+" brand new advancements in your Minecraft world!": "個新成就於你的麥塊世界！",
+
+" - Created by ": "作者：",
+## Cavinator1
+
+" - For information ": "更多資訊",
+"click here": "按此",
+
+" - Join my discord ": "加入作者DC",
+"here": "這裡",
+
+"Special thanks to my patreon donors: ": "特別感謝贊助者們",
+## Patreon Donors' names are listed here
+
+
+
+
+# Configuration Menu
+## BlazeandCave
+"'s Advancements Pack Config": "的成就包設定",
+
+"Welcome Message currently enabled": "歡迎訊息啟用中",
+"Welcome Message currently disabled": "歡迎訊息禁用中",
+
+"Item Rewards currently enabled": "物品獎勵啟用中",
+"Item Rewards currently disabled": "物品獎勵禁用中",
+
+"Experience Rewards currently enabled": "經驗獎勵啟用中",
+"Experience Rewards currently disabled": "經驗獎勵禁用中",
+
+"Trophies currently enabled": "獎盃啟用中",
+"Trophies currently disabled": "獎盃禁用中",
+
+"Display scoreboard on tab list": "顯示記分板於線上列表",
+"Clear scoreboard from tab list": "清除記分板於線上列表",
+
+"Display scoreboard on sidebar": "顯示記分板於右側列版",
+"Clear scoreboard from sidebar": "清除記分板於右側列版",
+
+"Update scoreboard": "更新記分板",
+
+"Grant trophies": "獲取獎盃",
+
+"Click to enable": "按此以啟用",
+"Click to disable": "按此以禁用",
+"Click to run": "按此以執行",
+
+# Update scoreboard message
+"The advancement count of all players currently online has been updated.": "現於伺服器中的所有玩家的成就數目皆已被更新",
+
+# Grant trophies are you sure message
+"Are you sure?": "你確定嗎?",
+"This function should only be used in worlds that used the Advancements Pack before updating to the Trophy Update.": "這個指令只應使用於那些於獎盃更新前已經安裝此成就指令包的世界",
+"This function may also grossly fill inventories so make sure everyone is prepared to receive them!": "這個指令也會大幅占用背包空間，所以請確保所有玩家都已經準備好領取獎賞了！",
+
+"[ Yes ]": "[ 是 ]",
+"Click to confirm": "按此以確定",
+
+"[ No ]": "[ 否 ]",
+"Click to go back": "按此以返回",
+
+# Grant trophies confirmation message
+"All players have been granted trophies.": "所以玩家已經領取獎盃",
+"Players that have been granted trophies by this function in the past did not receive any now. To manually re-enable trophy granting for them use the command:": "之前已經用此指令領取獎盃的玩家不會獲得任何獎盃，若要手動獲得獎盃請使用此指令",
+"Click to insert command into chat": "按此以發送指令於聊天室",
+
+
+## All advancements added in version 1.13 are here
+"Dripstone Drop": "滴血不漏",
+"Survive a fall of at least 10 blocks onto some Pointed Dripstone": "跌落在高度距離10格以上的鐘乳石上並存活",
+
+"Lucky Break": "極限倖存者",
+"Survive a long fall with just a sliver of health remaining": "Survive a long fall with just a sliver of health remaining",
+
+"Caves & Cliffs": "深淵與天際",
+"Free fall from the top of the world (build limit) to the bottom of the world and survive": "從世界高度限制掉落到積岩層並存活",
+
+"Bottom to Top": "反轉世界",
+"Place every cave block at the very top of the world": "放置所有洞穴方塊至世界的頂端",
+
+
+"A Good Start": "好的開始",
+"Chop down enough trees to collect a full stack of one log type": "砍伐夠多的數以湊及一組原木",
+
+
+"Squid Game": "魷魚遊戲",
+"Hunt enough Squids to collect a stack of Ink Sacs": "獵殺夠多的墨魚以獲得一組墨囊",
+
+
+"Blackberry Market": "黑莓市場",
+"Trade some sweet berries to a Fox with an emerald in their mouth": "用莓果讓咬著綠寶石的狐狸鬆口",
+
+
+"We’re Going on a Bear Hunt": "熊熊獵人",
+"Get hunted by a Polar Bear": "被北極熊獵捕",
+
+"Dive Bomb": "深水炸彈",
+"Dive into water from a cliff at least 50 blocks tall": "跳水距離超過五十格高",
+
+"Captain America": "美國隊長",
+"Get completely frozen inside two blocks of Powder Snow for a loooong time.": "在粉雪中被深度凍結很長一段時間",
+"Big question is: Can you do this all day?": "但最大的問題是：你還能撐多久？",
+
+
+"Map Room": "地圖室",
+"Place a map in an item frame": "放置地圖於物品展示框上",
+
+"Sound the Alarm!": "擊響警報",
+"Ring the bell with a hostile enemy in the village": "在村莊出現敵對生物時敲鐘",
+
+"The Sound of Music": "天籟之音",
+"Make the Meadows come alive with the sound of music from a jukebox": "使用唱片機撥放音樂讓原野變得更加有趣",
+
+
+"Click!": "點擊！",
+"Place and push a button": "放置並按下按鈕",
+
+"Leveraging Synergy": "偕同效應",
+"Flick a lever": "撥動控制桿",
+
+"On A Rail": "一方通行",
+"Travel by Minecart in a straight line to at least 1 km from where you started": "用礦車移動超過一公里的直線距離",
+
+
+"Baron of Blacksmiths": "鐵匠男爵",
+"Get a stack of regular, chipped and damaged Anvils": "獲得一般的、微損的、與耗損的鐵砧各一組",
+
+
+"65": "65",
+"hours of walking": "小時的旅程",
+"Walk 1000km. The statistics tab shall no longer be the grindy super challenges tab": "行走一千公里。統計列表不應該是很農的超級挑戰列表",
+
+
+"Feels Like Home": "家鄉的味道",
+"Take a Strider for a loooong ride on a lava lake in the Overworld": "在主世界的岩漿湖騎乘熾足獸很長一段時間",
+
+"Gilded Miner": "鍍金的礦工",
+"Mine a stack of Gilded Blackstone from Bastion Remnants": "在豬布林堡壘中挖掘一組鑲金黑石",
+
+"Astrobrute": "太空蠻兵",
+"Send a Piglin Brute to the End and kill it there before it zombifies": "傳送一隻豬布林蠻兵至終界並在他殭屍化之前處死他",
+
+"Ludicrous Speed!": "可笑的速度",
+"Achieve an absolutely insane speed by combining the Speed II effect, Dolphin’s Grace, Depth Strider III, Soul Speed III and sprinting": "結合加速II、海豚悠游、深海漫遊III、靈魂疾走III，達到近乎瘋狂的速度",
+
+
+"Stealth Takedown": "暗殺",
+"Dispatch a Creeper at melee range while you are invisible": "在隱形時以近戰方式毀滅一隻苦力怕",
+
+"Dogfight": "空戰",
+"Kill a Skeleton or Stray while both you and it have levitation": "在你與骷髏或流髑都於漂浮狀態下擊殺對方",
+
+"Riddle Me This": "謎語解碼",
+"The first is to smith a compass that vanishes": "一是鍛造一個消失的指南針",
+"The second is to slay a corpse that fishes": "二是殺掉會捕魚的屍體",
+"The third is to travel on an upside-down mount": "三是旅行於一座顛倒的山",
+"The fourth is to take a temple tripwire into account": "四是考慮叢林神廟絆線",
+"The fifth is to be invisible yet be visible everywhere": "第五是成為看不見卻處處可見",
+"The sixth is to return the product of a fowl in mid-air": "六是在空中送回禽製品",
+"The seventh is to allow a child to commit the act of stealing": "七是允許孩子進行偷竊行為",
+"The eighth is to smite a Wither with splash healing": "八是用飛濺治療來打擊凋靈",
+"The ninth is to be a pirate; parrot, spyglass, map, and boat": "第九是成為海盜；鸚鵡、望遠鏡、地圖和船",
+"The tenth, if you can achieve it, you will be the G.O.A.T.": "第十，如果你能達成，你就成為了G.O.A.T.",
+
+# Riddle Me This messages and hints
+"First line complete…": "第一支線完成……",
+"Second line complete…": "第二支線完成……",
+"Third line complete…": "第三支線完成……",
+"Fourth line complete…": "第四支線完成……",
+"Fifth line complete…": "第五支線完成……",
+"Sixth line complete…": "第六支線完成……",
+"Seventh line complete…": "第七支線完成……",
+"Eighth line complete…": "第八支線完成……",
+"Ninth line complete…": "第九支線完成……",
+
+"Tenth Parchment": "第十張羊皮紙",
+"Place Warped Buttons to number a thousand": "放置一千個扭曲按鈕",
+"For this was the thousandth item added to the game": "畢竟這是第一千個加入遊戲的物品",
+"Like how this is the thousandth advancement added to the pack": "也就如同這是第一千個加入成就包的成就",
+
+
+# Renamed advancements and description changes in 1.12
+"All Aboard!": "啟程！",
+"Craft and board a Minecart for railway journeys": "合成並搭乘礦車優遊",
+
+"Star Trader": "星際貿易商",
+"Trade with a villager at the build height limit": "與村民在高度限制上交易",
+
+"High Feet": "高腳丫",
+"Discover every mountain biome": "發現所有高山生態域",
+
+"Natural Sprinter": "山地同胞",
+"Sprint 10km": "衝刺十公里",
+
+"Lichen Subscribe": "按讚訂閱小苔癬",
+
+"Atlantis?": "亞特蘭提斯?",
+
+"Ahoy!": "Ahoy!",
+
+"Foliage": "葉",
+
+"How Did We Get Here?": "我們是怎麼達到這的？",
+
+
+# Description changes
+
+# # Adventuring Time
+"Discover every surface biome in the Overworld": "探索所有主世界的表面生態系",
+
+# # Explorer of Worlds
+"Discover every biome in every dimension": "探索所有緯度的所有生態域",
+
+# # Trampoline
+"Bounce onto a slime block from at least 30 blocks high": "跳向距離至少30格高的史萊姆方塊",
+
+# # Cool Kids
+"Craft and wear a leather jacket": "合成並穿上皮革夾克",
+
+# # Fashion Statement
+"Dye some leather pants with one color, then put them on": "將皮革長褲染色並穿上",
+
+# # Fuel Engine
+"Craft a Minecart with Furnace and use coal or charcoal to send it chugging": "合成一台熔爐礦車並添加煤炭或木炭使其奔馳",
+
+# # Troll Chest
+"Trigger a trapped chest. Good for trolling your friends!": "觸動陷阱儲物箱。這是一個整你朋友的好方法！",
+
+# # Tripping Over
+"Place a line of string between two tripwire hooks, and trigger it": "用線連接兩個絆線鉤，使其觸動",
+
+# # Under Pressure
+"Step on a pressure plate": "踩上一個壓力板",
+
+# # Let It Go!
+"Using Frost Walker boots, walk on frozen water over a deep ocean": "使用冰霜行者在深海上奔馳",
+
+# # Do A Barrel Roll!
+"Use Riptide to give yourself a boost": "使用波濤加速",
+
+# # Kilometre Walk
+"Travel at least 1000 blocks from the centre of the world in any direction.": "從世界中心旅遊至只少一千格遠的地方",
+
+# # Ten Thousand Blocks
+"Travel at least 10,000 blocks from the centre of the world in any direction.": "從世界中心旅遊至只少一萬格遠的地方",
+
+# # Olympic Gold Medallist
+"Swim 50km": "游泳50公里",
+
+# # Global Railway Network
+"Ride 50km in a minecart": "搭乘礦車50公里",
+
+# # Who needs cars?
+"Walk 50km": "走50公里",
+
+# # I enjoy long walks and playing MC
+"Walk 250km": "走250公里",
+
+# # Time to Chop!
+"Use planks and sticks to make an axe": "使用木材與木棒合成一把斧頭",
+
+
+
+# Custom Advancement Completion messages
+# # Has the syntax <Player> has made the advancement <Advancement's name>
+"has made the advancement": "已創建成就",
+"has reached the goal": "已完成成就",
+"has completed the challenge": "已完成挑戰",
+"has completed the super challenge": "已完成超級挑戰",
+"has found the hidden advancement": "已發現隱藏的成就",
+
+# # For milestones, it goes <Player> has completed every advancement in the <Tab name> tab, earning them the advancement <Milestone's name>
+"has completed every advancement in the": "已完成所有位於",
+"tab, earning them the advancement": "列表的成就，將獲得成就：",
+
+# # Note: Because The End already has a 'the' in it, this line is exclusively used in 'End Milestone'
+"has completed every advancement in": "已完成所有成就位於",
+
+# # Advancement Legend
+"has completed every advancement in BlazeandCave's Advancements Pack, earning them the coveted title of": "已完成所有烈焰與洞穴的成就，將獲得頭銜：",
+
+
+
+# Trophies added in 1.13
+"Azalea Parachute": "杜鵑花降落傘",
+"Good thing you didn't need this": "好消息是你從未需要過這個",
+
+"Pyro's Mask": "火槍兵的面罩",
+"One shudders to imagine what inhuman thoughts lie behind that mask": "人們不寒而栗地想像面具背後隱藏著什麼非人的思想",
+
+"Deepslate Emerald Ore": "深板岩綠寶石礦",
+"A rare specimen of emeralds embedded in the deepest of caves": "是鑲嵌在深淵深處最稀有的綠寶石亞種",
+
+"Flex Tape": "Flex Tape",
+"To show the power of Flex Tape, you sawed all the blocks in half!": "為了展現Flex Tape的實力，我們將所有方塊都裁成一半了！",
+"#NotSponsored": "#懇求廠商大大贊助",
+
+"Stairway to Heaven": "通往天堂的階梯",
+"Whatever you do, don't listen to it backwards!": "無論你聽到什麼，不要往後看！",
+
+"Hot Potato": "燒燙燙的鈴鈴薯",
+"Whooo, wiggy wiggy wiggy": "阿燙燙燙燙燙燙~",
+"Gimme that, gimme that, hoo": "快拿手套來啊~燒阿~",
+
+"Captain America's Shield": "美國隊長之盾",
+"Unfortunately there are no circles in Minecraft,": "不幸的是，在麥塊裡沒有圓形",
+"meaning this shield is not very aerodynamic for throwing": "導致這個盾牌在投擲時不是非常符合流體力學",
+
+"Harp String": "豎琴弦",
+"Playing so much must be wearing out your strings...": "長時間的演奏必定耗損了你的弦吧…",
+"Here! Have an extra.": "來！再給你一條！",
+
+"Roller Coaster Cart": "雲霄飛車",
+"Hey Ferb, I know what we're gonna do today!": "嘿小佛，我知道我們今天該做什麼了！",
+
+"Time Machine": "時光機",
+"You'll need it to get back all those hours you spent": "你需要奪回那些逝去的時間",
+
+"Plaid Block": "格紋磚",
+"They've gone to plaid!": "他們需要是格紋的！",
+
+"Stink Bomb": "異臭彈",
+"P.U!": "咻！",
+
+"Amalgamation": "合成獸",
+"The sheer gravitational forces of killing these mobs": "殺死這些暴徒的絕對引力",
+"appears to have morphed them all together": "似乎已經將它們全部幻化在一起了",
+
+"Hubble Space Telescope": "哈勃太空望遠鏡",
+"A telescope orbiting in outer space,": "在外太空運行的望遠鏡",
+"it can see to infinity and beyond": "它可以看到無限遠處",
+
+"Golden Advancement Plaque": "金色成就匾額",
+"Awarded to this datapack for reaching 1000 advancements": "贈給在此成就包中拿到一千個成就的你",
+
+# # The Toilet trophy for 'WHERE'S THE HONEY LEBOWSKI' received a description change
+"WHERE'S THE HONEY?!!!": "蜂蜜呢?!!!",
+
+
+# Configuration menu additions in 1.13
+"Cooperative Mode currently enabled": "合作模式啟用中",
+"Cooperative Mode currently disabled": "合作模式禁用中",
+
+"Cooperative Mode makes it so that whenever a player gets an advancement, that advancement will be shared across all players.": "在合作模式下，當有玩家達成成就時，所有玩家皆會獲得該成就",
+"Everyone's currently-obtained advancements will be shared between all players immediately when turning this setting on.": "當此設定被啟用時，各個玩家目前已經獲得的成就將會被共享",
+"While the mode can be turned off, shared advancements cannot be easily revoked.": "雖然此模式可以被關閉，但已經共享的成就無法輕易撤回",
+
+
+"Click to enable for all players": "按此啟用於所有玩家",
+"Click to enable only for the first player to get an advancement": "按此以啟用於首位完成成就的玩家",
+"Click to disable for all players": "按此已禁用於所有玩家",
+
+# The syntax for these text strings is e.g. 'Item Rewards: All players'
+"Item Rewards:": "物品獎賞",
+"Experience Rewards:": "經驗獎賞",
+"Trophies:": "獎盃",
+
+"All players": "所有玩家",
+"First player only": "本人限定",
+"Disabled": "禁用",
+#
+
+"Advancement Completion Message Settings": "成就完成訊息設定",
+"Advancement Scoreboard Display Settings": "成就記錄板顯示設定",
+
+"Click to view": "按此查閱",
+
+"Display Advancements Scoreboard on tab list": "顯示成就記錄板於連線名單",
+"Display First Advancements Scoreboard on tab list": "顯示首位達成記錄版於連線名單",
+
+"Display Advancements Scoreboard on sidebar": "顯示成就記錄版於右側",
+"Display First Advancements Scoreboard on sidebar": "顯示首位達成記錄版於右側",
+
+"The Advancements Scoreboard keeps track of how many advancements each player has obtained": "成就記錄板會記錄各玩家所達成的成就數目",
+"The First Advancements Scoreboard keeps track of how many advancements each player was the first to obtain": "首位達成記錄板會記錄成就達成時為首位玩家的成就數目",
+"Click to display": "按此顯示",
+"Click to clear": "按此清除",
+
+# The syntax for these text strings is e.g. 'Task Advancements: All players'
+"Task": "任務",
+"Goal": "目標",
+"Challenge": "挑戰",
+"Super Challenges": "超級挑戰",
+"Milestone": "里程碑",
+
+"Advancements:": "成就",
+#
+
+"Turn all messages on": "開啟所有訊息",
+"Turn all messages off": "關閉所有訊息",
+"Set all messages to first-player only (recommended and default for Cooperative Mode)": "設置所有訊息至僅供本人查看(多人模式推薦)",
+"Turn all on except tasks (recommended for large servers)": "開啟所有除了任務的訊息(大型伺服器推薦)",
+"Turn all on except tasks and goals": "開啟所有除了任務與目標的訊息",
+
+"Click to set": "按此設置",
+
+
+"Go back to main config menu": "返回到主選單",
+
+
+# Advancements added in the Terralith version for BACAP 1.13.1
+"A Cliffhanger!": "攀岩者",
+"Discover every type of cliff biome": "發現所有高嶺生態系",
+
+"A Grassy Nature": "自然綠意",
+"Discover every grasslands biome": "發現所有草原生態系",
+
+"A E S T H E T I C": "極致美學",
+"Discover the Mirage Isles. No, they’re not not real": "發現海市蜃樓群島。不，我想他們並非不存在",
+
+"Alpha Days": "阿爾法時光",
+"Discover the mythical islands of Alpha": "發現魔幻的阿爾法群島",
+
+"Bushranger": "叢林遊俠",
+"Discover every shrublands biome": "發現所有灌木生態系",
+
+"Choco Mountain": "巧克山",
+"Discover a White Mesa": "發現懷特梅薩",
+
+"Eruption in the Air": "高空噴發",
+"Enter a volcano biome": "進入火山生態系",
+
+"Highlander": "高原人",
+"Discover every highlands biome": "發現所有高原生態系",
+
+"Master Spelunker": "探險大師",
+"Discover every cave biome": "發現所有洞穴生態系",
+
+"O-Land-o Bloom": "綻放的大地",
+"Discover a blooming biome": "發現綻放生態系",
+
+"One Small Steppe For Man": "我的小小草原",
+"Discover a steppe biome": "發現草原生態系",
+
+"Over the Moon": "月色粼粼",
+"Discover a moonlight biome": "發現月光生態系",
+
+"Pretty in Purple": "萬紫千紅",
+"Discover every biome with trees of purple leaves": "發現所有擁有紫色樹葉的樹的生態系",
+
+"Skylanders": "天際移民",
+"Discover some mysterious lands floating high above the ground": "發現一些懸於天際的神祕空島",
+
+"Smarter than the Average Bear": "比棕熊的平均智商還聰明",
+"Discover the Yellowstone biome": "發現黃石生態系",
+
+"Terralithic": "特拉利斯",
+"Discover every Terralith biome": "發現所有特拉利斯生態系",
+
+"The Boreal Deal": "飄向北方",
+"Discover every boreal biome": "發現所有北域生態系",
+
+"The World Is Your Canvas": "整個世界都是我的畫布",
+"Discover the Painted Mountains": "發現異色山嶺",
+
+# Adjusted descriptions
+"Discover every vanilla surface biome in the Overworld": "發現所有主世界的地表生態系",
+"Discover every vanilla biome from every dimension": "發現所有緯度的原版生態系",
+
+"Stardust": "星塵",
+
+"You have explored everything this world has to offer": "你已經探索了這個世界的所有",
+"But at the end of it all, it is all still made from stardust": "但在旅途的終點，星球的每個部份依然都是由星塵所構",
+
+
+
+# Configuration menu additions in 1.13.3-1.13.6
+"First player on each team": "隊伍之首",
+"Click to enable for the first player on each team": "按此以啟用隊中之長",
+
+"Click to enable Cooperative Mode": "按此以啟用合作模式",
+"Click to disable Cooperative Mode": "按此以禁用合作模式",
+"Click to enable Team Cooperative Mode": "按此以啟用隊伍合作模式",
+"Team Cooperative Mode currently enabled": "隊伍合作模式啟用中",
+
+
+
+"Click to view preset options": "按此以查看模板選項",
+"Message Presets": "訊息模板",
+"Set all messages to first-player-on-team only (recommended and default for Team Cooperative Mode)": "設置所有訊息僅傳送至隊長(隊伍合作模式的預設選項，推薦其使用)",
+"Turn vanilla messages on (recommended for servers that use plugins that draw from them such as DiscordSRV)": "開啟原版訊息(推薦會從遊戲聊天室中抓取訊息，如DiscordSRV插件的伺服器使用)",
+
+
+
+"Advancement Scoreboard Display Settings": "成就記分板顯示設定",
+
+"Advancements Scoreboard": "成就記分板",
+"First Advancements Scoreboard": "首筆成就記分板",
+
+"Team Advancements": "隊伍總分成就",
+"The Team Advancements Scoreboard lists every team, and adds up the Advancements score of every member in each team": "隊伍總分成就列出所有隊伍，並將成員獲得的成就分數加總顯示",
+"For example, if Alex and Steve are on Blue team and both have 100 advancements, Blue team would be listed as 200": "舉例來說，若Alex與Steve都是藍隊，並且都達成100個成就，那藍隊獲得200分",
+
+"Total Team Advancements": "團隊成就",
+"The Total Team Advancements Scoreboard lists every team, and counts how many advancements have been obtained by any member in each team": "團隊成就列出所有隊伍，並將團隊已獲得的成就加總顯示",
+"For example, if Alex and Steve are on Blue team and both have 100 advancements, but 50 of them are advancements they both got, Blue team would be listed as 150": "舉例來說，若Alex與Steve都是藍隊，並且都達成100個成就，但其中有50個成就重複，那藍隊獲得150分",
+
+"Team First Advancements": "首位隊伍總分成就",
+"The Team First Advancements Scoreboard lists every team, and adds up the First Advancements score of every member in each team": "首位隊伍總分成就列出所有隊伍，並將成員獲得的首位成就加總顯示",
+"For example, if Alex and Steve are on Blue team and both were the first to get 100 advancements, Blue team would be listed as 200": "舉例來說，若Alex與Steve都是藍隊，並且都獲得100個首位成就，那藍隊獲得200分",
+
+"First Advancements in Team": "隊伍中首位成就",
+"The First Advancements in Team Scoreboard lists every player, and counts how many advancements they were the first to get out of everyone on their team": "隊伍中首位成就列出隊伍中所有玩家，並計算隊伍成員之中，他們獲得的首位成就數目",
+"For example, if Alex and Steve are on Blue team and Steve gets 'Monster Hunter', Steve will have this score increase by 1, but when Alex gets it they won't. If Bob is on Red team and gets 'Monster Hunter' after Steve did, they will have this score increase by 1": "舉例來說，若Alex與Steve都是藍隊，且Steve獲得了'魔物獵人'成就，那Steve的分數+1，但其後Alex獲得此成就時分數+0，若Bob位於紅隊且在Steve獲得'魔物獵人'成就後獲得成就，分數依然會+1",
+
+"Recommended for Cooperative Mode": "合作模式下推薦使用",
+"Recommended when NOT using Cooperative Mode": "不在合作模式下推薦使用",
+"Recommended when NOT using Cooperative or Team Cooperative Mode": "不在合作模式與隊伍合作模式下推薦使用",
+"Recommended for Team Cooperative Mode": "隊伍合作模式下推薦使用",
+"Not recommended for Cooperative Mode": "合作模式下不推薦使用",
+"Recommended for Cooperative or Team Cooperative Mode": "合作模式與隊伍合作模式下推薦使用",
+
+"How would you like this scoreboard to be displayed?": "你希望計分板顯示於何處？",
+"On tab list": "在Tab列表",
+"On sidebar": "在右側",
+"Below each player's name": "在每個玩家的ID下方",
+
+"Clear scoreboard from below player names": "清除玩家ID下方的記分板",
+
+
+
+"Technical Settings": "技術設置",
+"Warning: Some of these settings may cause adverse effects on your progress, and will cause a lag-spike upon being used. Only use if you absolutely know what they do! Use with caution!": "警告：某些設置可能對你的進度產生副作用，且會造成一個延遲突波。請小心並在你確信你了解他們能做些什麼以後使用！",
+
+# Update Scoreboard
+"Goes through every advancement for every player online, and recounts how many advancements they have": "重新計算所有在線玩家的成就數目",
+"Should be used if:": "只應在下列情形使用：",
+"- You have recently updated to a new datapack version, especially across a new Minecraft update": "你更新了指令包版本，尤其是在Mincraft也經歷了版本更新之下",
+"- You have been using commands to manually revoke the advancements of player(s)": "你有用指令手動撤銷過玩家的成就",
+
+"Update team scoreboards": "更新隊伍記分板",
+"Re-calculates the value of team scoreboards that draw from players' advancement and first advancement scores": "重新計算隊伍成就從玩家成就與首位成就中記分的分數",
+
+"Reset obtained advancements": "重置獲得的成就",
+"Resets the 'bac_obtained' scoreboard. This will make it so that Cooperative Mode will no longer see any advancements as complete and hence not share any, and also set every advancement back up for grabs for the First Advancement scoreboard": "重置'bac_obtained'記分板。這會使合作模式重置並取消共享所有成就，並且將所有首位成就設置為可重新取得",
+"This function will stop sharing of advancements in Cooperative Mode until they are obtained again, and also reopen every advancement for the First Advancements scoreboard": "這個指令會在合作模式獲得成就前取消共享成就，並且重新啟用首位成就記分板的所有成就",
+"This function should only be used if you intend to turn off Cooperative Mode": "這個指令應只在你想要關閉合作模式時使用",
+
+"Refresh Cooperative Mode advancement sharing": "重新整理合作模式共享成就",
+
+"Grant missing trophies": "給予遺失的獎盃",
+"Gives every online player every trophy from advancements they have obtained so far": "給予所有在線玩家所有他們從成就中已經獲得的獎盃",
+"This function should only be used on worlds created before the Trophy Update (BACAP 1.11) or if you really want an easy way of getting them back": "這個指令應只被在獎盃更新前(BACAP 1.11)就已經創建的世界使用，又或是你單純想要一個簡單的方法來重新獲得他們",
+
+"Revoke all advancements": "撤銷所有成就",
+"Revokes every advancement, including resetting scoreboards": "撤銷所有成就，包括重置記分板",
+"You may choose to revoke from either yourself, the closest player to you, or from everyone currently online": "你可以選擇撤銷你的成就，或是離你最近的玩家的成就，或是正在線上的所有玩家的成就",
+
+"Once advancements are revoked, they cannot be recovered.": "當成就被撤銷後無法恢復",
+"Some statistics advancements may come back automatically. If you wish for these to be reset too, you will need to delete the statistics file of players you want to revoke prior to revoking": "某些數據成就可能會自動取回，若你也想要這些成就被重置，你需要在撤銷成就前，將這些玩家的數據檔案率先刪除",
+"Please choose who you would like to revoke advancements from, or to go back": "請選擇須撤銷成就的玩家，或取消並返回",
+"Yourself": "你自己",
+"The closest player": "離你最近的玩家",
+"EVERYONE!! (who is online)": "所有玩家(線上)",
+">:)": ">:)",
+
+"All advancements have been revoked from %1$s": "已從%1$s取回所有成就",
+"Error: There are no other players online": "錯誤：沒有玩家在線",
+
+"Go back": "返回",
+
+
+
+# Advancements added in the Terralith version for BACAP 1.13.5
+"A Journey Begins": "旅途之始",
+"Find a Traveller’s Map": "找到探索者地圖",
+
+"Castle of Hrrms": "赫爾姆斯城堡",
+"Enter a Fortified Village": "進入要塞村莊",
+
+"Expedition of Discovery": "遠征探索",
+"Find a Traveller’s Map that leads to a rare biome, then enter that biome with the map in your hand": "找到稀有生態域的探索者地圖，並且帶著地圖進入生態域",
+
+"Land of Icicles": "冰棘之地",
+"Discover a Glacial Chasm biome": "發現冰川裂谷生態域",
+
+"Remote Shelter": "偏僻避難所",
+"Locate a Glacial Hut deep in a Glacial Chasm biome": "找到冰川裂谷生態域中的冰屋",
+
+"Spire of Ice": "凍漣之塔",
+"Enter the Spire, located in a frigidly cold biome": "進入在凍霜生態系中的高塔",
+
+"Under the Ice": "冰層之下",
+"Delve deep beneath the Spire and open up a loot chest": "潛入塔的深淵並開啟寶藏箱",
+
+
+
+## All advancements added in version 1.14 are here
+"Sneak 100": "暗影潛行",
+"Sneak near something in the Deep Dark to prevent being heard": "在深暗之域中潛行以避免被什麼東西聽到",
+
+"It spreads!": "疫情擴散!",
+"Kill a mob near a Sculk Catalyst": "在幽匿催發體旁殺死生物",
+
+"Shriek Forever After": "永恆的尖嘯中",
+"Trigger a Sculk Shrieker in the Deep Dark. Might not want to do that too many more times…": "在深暗之域中觸發一個幽匿尖嘯體，你不會想要再次這麼做的…",
+
+"The Block of Eternal Screaming": "永嘯之核",
+"Use Silk Touch to pick up a Sculk Shrieker": "以絲綢之觸撿起一個幽匿尖嘯體",
+
+"Cataclyst": "催化劑",
+"Kill a Wither near a Sculk Catalyst to unleash a large explosion of sculk": "在幽匿催發體旁殺死凋零來釋放幽匿爆炸",
+
+"Monstrous Sacrifices": "魔獸之祭",
+"Kill every hostile monster near a Sculk Catalyst": "在幽匿催發體旁殺死每個敵對生物",
+
+"The Incredible Sculk": "幽匿之奇",
+"Collect a stack of all sculk-related blocks": "蒐集所有種類的幽匿方塊各一組",
+
+"Sculker Box": "幽匿箱",
+"Hold a Shulker Box that is completely filled with Sculk": "拿著一個塞滿幽匿方塊的界伏盒",
+
+"Fallen Kingdom": "失落王國",
+"Find and enter an Ancient City deep underground": "找到並進入一個深淵中的遠古城市",
+
+"Frigid Diversions": "急凍的消遣",
+"Loot a chest inside an ice box in an Ancient City": "在遠古城市的冰箱中打開寶箱",
+
+"Death Pointer": "尋路計",
+"Using Echo Shards found in Ancient Cities, craft a Recovery Compass": "以在遠古城市中找到的迴響碎片合成一個追溯指針",
+
+"9 to 5": "9幻為5",
+"Collect enough Disc Fragments to craft another producer of mysterious sounds": "蒐集足夠的唱片殘片以合成另一個產出謎之聲響的東西",
+
+"Echonomy": "殘響和鳴",
+"Collect a stack of Echo Shards": "蒐集一組迴響碎片",
+
+"Blind as a Bat": "闇影蝙蝠",
+"Kill a Bat while under the blindness or darkness effect": "在失明或黑暗效果下殺死一隻蝙蝠",
+
+
+"Stuck in the Mud": "陷入泥沼",
+"Use a Water Bottle on some Dirt to turn it into Mud": "用水瓶將一些泥土轉化為泥巴",
+
+"Elmer Mudd": "埃爾默·泥尼",
+"Craft or obtain all forms of Mud and Mud Brick": "合成或獲得所有種類的泥巴與泥磚",
+
+"Mangrove Master": "紅樹精",
+"Craft every item made out of mangrove wood": "合成以紅樹木材製作的所有物品",
+
+"Incandescent!": "白如熾耀",
+"Light up the area with all three hues of Froglight": "用三種蛙明燈照亮四周",
+
+
+"A Mangrove Grove": "紅樹林",
+"Plant a Mangrove Propagule in a Grove biome": "在沼澤生態域中種下紅樹林樹苗",
+
+
+"Frog Family": "青蛙家族",
+"Breed two Frogs together using slimeballs": "用史萊姆球繁殖兩隻青蛙",
+
+"Bukkit bukkit": "桶裝桶",
+"Catch a Tadpole in a Bucket": "用水桶捕捉一隻蝌蚪",
+
+"When the Squad Hops into Town": "當小隊步入城鎮",
+"Attach a lead to each variant of Frog": "拴住所有種類的青蛙",
+
+"Ram": "羝",
+"Obtain a Goat’s Horn by having one ram into a block": "使山羊撞上一格方塊來獲得一隻山羊角",
+
+"Loud and Proud": "高昂且飛揚",
+"Play a Goat Horn in the Deep Dark": "在深暗之域中演奏山羊角",
+
+"Battle of the Bands": "激奏樂章",
+"Blow into a Goat Horn during a raid": "在突襲中吹響山羊角",
+
+"Caprymphony": "即興曲",
+"Blow every type of Goat Horn": "吹奏所有種類的山羊角",
+
+"Animal Kingdom": "動物王國",
+"Bring one of every type of animal to one place (have them all within 32 blocks of you)": "攜帶所有種類的動物各一隻在你身旁(32格之內)",
+
+
+"Cargo Carrier": "運貨員",
+"Ride a Boat with a Chest in it": "乘坐副著箱子的船",
+
+"Flipper": "飛揚者",
+"Give a Dolphin something to play with": "送海豚點東西玩",
+
+
+"Allayance": "羈絆",
+"Rescue an Allay from a Pillager Outpost or Woodland Mansion and give it something to play with": "在掠奪者哨塔或森林大宅中拯救一隻悅靈，並且給他點東西玩",
+
+"You’ve Got a Friend in Me": "我們是朋友了",
+"Have an Allay deliver items to you": "獲得悅靈運送的物品",
+
+"Evelyn Evergreen": "常綠的伊芙琳",
+"Have an Allay deliver Spruce Saplings to you while chopping down trees": "在砍伐樹木時獲得悅靈運送的樹苗",
+
+"Budget Vex": "惱鬼Cosplay",
+"Give an Allay an Iron Sword": "給予悅靈一把鐵劍",
+
+"Diagon Allay": "對角之繫",
+"Have an Allay deliver a potion to you in the Deep Dark": "在深暗之域中獲得悅靈運送的藥水",
+
+"Birthday Song": "生日快樂歌",
+"Have an Allay drop a cake at a note block": "使悅靈在音階盒上丟下蛋糕",
+
+"Awards Ceremony": "頒獎典禮",
+"Have an Allay present to you a trophy awarded from completing one of the advancements": "讓悅靈為您獻上完成成就獲得的獎盃",
+
+
+"Now that's a lot of damage": "噢它嘛痛",
+"Succumb to the Warden": "於堅守者周旋中殞落",
+
+"Blind Stare": "石化瞪視",
+"Look at a Warden with a Spyglass": "用望遠鏡觀察一個堅守者",
+
+"Stealth is Optional": "潛影非必要",
+"Overcome a Warden in the deepest and darkest of caves": "在深淵中突破堅守者",
+
+"Warden Frostbite": "凍漣的堅守者",
+"Bring a Warden to the surface of a snowy plains biome and kill it": "帶堅守者至寒冷平原生態系並擊殺之",
+
+"Not Afraid of Heights": "無畏天際",
+"Bring a Warden to world height. It can’t be afraid of heights if it can’t see": "在世界高度限制上擊殺堅守者。它不會恐高的畢竟它看不到",
+
+"House of Freaks": "精神病院",
+"Summon five Wardens and have them all be within 16 blocks of the player": "生成5之堅守者並讓他們與玩家處於16格內",
+
+
+"Like a Ninja": "像忍者一樣",
+"Find the Swift Sneak enchantment on an Enchanted Book in an Ancient City": "在遠古城市中取得迅捷潛行的附魔書",
+
+"Silent But Deadly": "暗影瞬殺",
+"Sneak and sprint on sculk with Speed II while wearing Swift Sneak III leggings. Try saying that six times swiftly": "穿著迅捷潛行III護腿，並在擁有速度II效果時，於幽匿方塊上潛行並衝刺。試著以六倍速流暢的講講看這句話",
+
+
+"Hung, Drawn and Bartered": "談判，殺價，成交",
+"Barter for every possible type of item with Piglins": "於豬布林交易中取得所有種類的物品",
+
+
+"The Void Frogs": "虛無之蛙",
+"Lower a Frog into the void using a Slow Falling potion, then kill it so it becomes one with the void": "以緩降效果讓青蛙墜路深淵，並擊殺之使它成為深淵的一部份",
+
+
+"Farlander": "旅者",
+"Travel all the way to the border of the world": "跋涉至世界的邊境",
+
+
+# Description changes in 1.14
+
+# Vibe Check
+"Use Silk Touch to pick up a Sculk Sensor or find one among Ancient City treasure": "以絲綢之觸或在遠古城市的寶箱中獲得幽匿感測體",
+
+# Spelunker
+"Discover every cave biome": "發現所有洞穴生態域",
+
+# Yay! I got my wood!
+"Collect every type of log": "蒐集所有種類的原木",
+
+# Stripper
+"Strip the bark off every type of log": "削下所有種類原木的皮",
+
+# Ecologist
+"Plant down all types of saplings": "種下所有種類的樹苗",
+
+# The Mighty Hunter
+"Hunt all types of land animals with your bow": "用弓獵殺所有陸上動物",
+
+# Adventuring Time
+"Discover each type of surface biome in the Overworld": "發現所有主世界的表層生態域",
+
+
+# The word 'tab' as it appears when mousing over an Advancement in chat
+"tab": "列表",
+
+
+# Trophies added in 1.14
+"Mobbo": "莫波",
+"They are your bestest friend!": "他們是你最棒棒的朋友!",
+
+"The Cataclyst": "催化劑．極",
+"When detonated, it kills every single avatar and NPC in the sector": "引爆時，它會殺死該區域中的所有化身和NPC",
+
+"Claptrap": "胡扯",
+"No, I said “Aaaaaand OPEN!”,": "不!我說「開門!」",
+"not “Aaaaand close a secondary set of doors!”": "不是叫你把「第二層門關上!」",
+
+"Pickle Rick": "醃菜瑞克",
+"Look Morty, I've turned myself into a pickle!": "看阿莫提，我把自己轉化成醃菜了!",
+
+"Magic Paintbrush": "魔法繪筆",
+"For painting with all the colors of the wind": "風中奇緣彩繪",
+
+"Very Muddy Boots": "非常泥濘的靴子",
+"The result of too long in muddy fields": "它待在泥濘中太久了",
+
+"Pride Rock": "驕傲之岩",
+"Look, Simba. Everything the light touches is our kingdom": "看阿辛巴，所有光芒都照耀著我們王國",
+
+"Copper Goat Horn": "銅製山羊號角",
+"Such a fun and jazzy instrument, sadly not canon": "真是個有趣且爵士風的樂器，可惜他不能當大砲用",
+
+"FrogChamp": "蛙之冠",
+"It’s Wednesday, my dudes!": "今天可是星期三呢，我的朋友!",
+
+"Warden Head": "堅守者之顱",
+"Players: How are you meant to kill the Warden?": "玩家：道理我都懂，但到底要怎麼幹掉堅守者?",
+"Mojang: That's the neat part - you don't!": "Mojang：這就是我們想要的–你不需要啊!",
+"You: Hold my golden carrots": "你：一袋米要扛幾樓!",
+
+"The Warden's Sign": "堅守者之警告詔示",
+"This sign can’t stop me because I can't see!": "它看不見所以沒用的!",
+
+"Reuben the Wither Storm Ender": "魯本．凋零風暴",
+"He was a great pig": "它曾是之偉大的豬…",
+
+"The Trophy Trophy": "獎盃的獎盃",
+"If an Allay brings you this, you will": "如果讓悅靈獻上這玩意，你就會",
+"receive the Trophy Trophy Trophy": "獲得獎盃的獎盃的獎盃",
+
+"Spongebob Squarepants": "海綿寶寶",
+"Who lives in a pineapple under the sea?": "是誰住在深海的大鳳梨裡?",
+
+"Fence Post": "圍籬",
+"Look at this luxurious fence post": "看看這個奢華的圍籬",
+"With its courageously mundane colour": "與他勇極的平實顏色",
+"And violent corners": "和他狂野的邊角",
+"This isn't just any fence post…": "這不是隨便的一個圍籬…",
+"It's my fence post! Seriously, get out!": "這是我的圍籬!知道嗎?現在馬上滾出這裡!",
+
+"Stone of the Farlands": "邊際之岩",
+"A preserved piece of stone from the lands that existed before Beta 1.8": "這是從Beta 1.8版本完好保存至今的一塊石頭",
+
+
+
+## All advancements added in version 1.15 are here
+"Nerds Never Die": "Nerds Never Die",
+"Name a Piglin Brute 'Technoblade'": "將一隻豬布林蠻兵命名為'Technoblade'",
+
+"And make it double!": "今年不是五倍嗎？",
+"Play a jukebox near some Allays, then give one an Amethyst Shard and see what happens!": "在悅靈們旁放置音樂盒，且給予其中一隻紫水晶碎片並期待好事發生",
+
+"Living Dummy": "自動人形",
+"Get killed from hitting an Armor Stand": "因與盔甲架搏鬥而死",
+
+# Used in hardcore version
+"Get hurt from hitting an Armor Stand": "因與盔甲架搏鬥而受傷",
+
+"Built on Sand, Set in Stone": "建於沙、座於石",
+"Craft or collect a stack of all forms of Sandstone and Red Sandstone": "合成並收集所有種類的砂岩與紅砂岩各一組",
+
+"Hot Chocolate": "熱巧克力",
+"Plant some cocoa in the nice steamy Nether": "在蒸氣繚繞的地獄裡種一些可可豆",
+
+"Silence of the Lambs": "羊禁城",
+"Bring a Sheep into an Ancient City and silence it": "帶一隻羊進入遠古城市並使其永久噤聲",
+
+"It's High Noon": "日上三竿",
+"Snipe a Husk from 50 blocks away while riding a Horse": "騎著馬在50格遠處狙擊一隻屍殼",
+
+"Spleaf": "雪祭血蓮",
+"Kill a mob using a shovel while both of you are standing on a Big Dripleaf": "在彼此都站在大懸葉草上時，以鏟殺死一隻生物",
+
+"There it goes…": "去吧！",
+"Kill a mob at the bottom of the world from the build limit using any kind of projectile": "在建築限制上方以任何投擲物殺死一隻生物",
+
+"Unending Hell": "永劫之獄",
+"Travel directly from the End to the Nether": "從終界直接穿越至地獄",
+
+
+# Missing from previous versions
+"Undying Fandom": "永生之祭",
+"Receive every type of gift from Villagers as a Hero of the Village": "在村莊英雄效果下獲得所有種類的村民禮物",
+
+"Dig through some Rooted Dirt beneath an Azalea Tree so you can find a Lush Cave": "挖穿一些位於杜鵑樹底下的紮根土以找到蒼鬱洞窟",
+
+
+# Added to Terralith version
+"Totally Not Terraria": "絕對不是泰拉瑞亞",
+"Find an Underground Cabin": "找到一間地下小屋",
+
+
+# Trophies added in 1.15
+"Crown of the Potato King": "皇者的薯冠",
+"A crown forged in the purest gold, made by the richest of Piglins": "純金鑄成的皇冠，由最富有的豬布林們打造",
+"Worn only by Alex (aka Technoblade), the one and only Potato King": "只曾被Alex，那位也被稱為Technoblade，唯一的馬鈴薯王戴過",
+
+"Tinfoil Mining Helmet": "錫箔礦工盔",
+"Baked by a chef and hermit known for": "由一位隱居大廚所製",
+"extensive and exquisite branch mining": "其以廣泛而精緻的魚骨挖掘法而著稱",
+
+"Calendar": "日曆",
+"I hate Mondays": "憂鬱的週一",
+
+# Farlander trophy description fix
+"A preserved piece of stone from": "一塊被保存至今的石頭",
+"the lands that existed before Beta 1.8": "來自那些曾存於Beta 1.8的遙遠之地",
+
+
+# Miscellaneous strings from compatibility versions
+"Advancement added by Terralith version": "成就由Terralith擴充包加入",
+
+"Modified by the Amplified Nether version": "成就由Amplified Nether擴充包修改",
+
+
+# Configuration menu additions in 1.15 (including the Help Menu)
+"The Welcome Message appears when a player logs into the world for the first time. On servers that already have a custom welcome message, this should be turned off": "歡迎訊息只在玩家第一次進入世界時產生。這應該在那些已經有自訂的歡迎訊息的伺服器上關閉",
+
+"Item Rewards are a small amount of bonus items awarded upon completing some advancements": "物品獎勵是在完成某些成就時，給予小量的獎勵物品",
+"Experience Rewards are awarded upon completing some advancements, adding directly to a player's XP count": "經驗獎勵是在完成某些成就時，直接為玩家添加一些經驗",
+"Trophies are decorative items awarded upon completing some advancements, in particular challenges, super challenges and milestones": "獎杯是在完成里程碑、超級成就、或某些成就時，所獎勵的裝飾性物品",
+
+"Cooperative Mode shares every advancement gained among every player": "合作模式下所有玩家共享了所有成就",
+"Team Cooperative Mode works similarly, but only shares among players of the same team": "團隊合作模式下運作模式雷同，但成就只在團隊成員中共享",
+
+"Settings for what messages that appear upon completing each tier of advancement should appear": "設定哪些訊息應在完成各個等級的成就時顯示",
+"Settings for what type of scoreboard to display and where": "設定記分板顯示類別與顯示處",
+"Functions for updating, resetting and revoking advancements": "更新、重置、與取回成就的指令",
+"Need help understanding how the datapack, this config menu, or anything else works?": "需要對於指令包、此設定介面、或任何問題的幫助嗎？",
+
+"Help": "幫助",
+
+# Help Menu
+"Help Menu": "幫助列表",
+
+"Full documentation on how to use the Config Menu": "完整的如何使用設定介面的教學檔",
+"How to update to new datapack versions": "如何更新指令包版本",
+"How to add players to teams": "如何將玩家加入陣營",
+"Important Links": "重要連結",
+"Troubleshooting": "除錯",
+"Frequently Asked Questions": "常見的問題",
+
+# # How to update to new datapack versions
+"1) Make a backup of your world for safety if you mess anything up": "1)先為你的世界備份，以防你在接下操作中搞砸任何東西",
+"2) Leave your world for more safety and don't go in during the process": "2)離開你的世界以確保安全，且不要在操作時進入世界",
+"3) Delete the old datapacks COMPLETELY from your world": "3)【完整地】刪除相關的指令包",
+"4) Copy and paste in the new updated datapacks": "4)複製新版本的指令包並貼上",
+"5) Go into your world. If the new datapacks are for a newer version of Minecraft make sure you are now using that version": "5)確認Minecraft的版本與指令包所預期使用的版本相符，並進入世界",
+"6) If you messed up, go to your backup, make a backup of your backup, then repeat steps 2-6 on the backup": "6)如果你搞砸了任何部分，備份你的世界備份，並重複步驟2至6",
+
+# # How to add players to teams
+"This datapack adds 16 teams, one of each colour, that this datapack can work with.": "這個指令包將加入其所使用的，16組不同顏色的隊伍",
+"For Team Cooperative Mode and team-based scoreboards to work properly, players MUST be added to these teams using the following command:": "為使團隊合作模式與團隊記分板能夠正常運作，玩家【必須】以下方指令加入隊伍",
+# Command is not translatable
+"You may freely change the team's display name, prefix and suffix using their respective commands as well": "你也可以自由地以其所屬的指令，更換隊伍的顯示名稱、前輟、與後輟",
+
+# # Important Links
+"Language Pack": "翻譯包",
+"The Language Pack is a resource pack that translates all advancements and trophies into other languages.": "翻譯包是會將所有成就與獎盃轉換成各個語言的資源包",
+
+"Hardcore Version": "極限擴充包",
+"The Hardcore Version is an add-on datapack that makes the datapack possible to complete in Hardcore Mode.": "極限擴充包是使成就包能在極限模式下完成的擴充包",
+
+"Terralith Version": "Terralith擴充包",
+"The Terralith Version is an add-on datapack that adds advancements for the Terralith datapack by Starmute.": "Terralith擴充包是為了Terralith指令包(作者：Starmute)所加入的嶄新成就包",
+
+"Advancements Docmentation": "成就資料檔",
+"The Advancements Docmentation is a spreadsheet detailing every advancement in the datapack.": "成就資料檔是紀錄所有成就包裡成就的表格",
+
+"List of Trophies": "獎盃列表",
+"A spreadsheet detailing every trophy in the datapack.": "列出所有成就包獎盃的表格",
+
+"Discord": "Discord",
+
+"Patreon": "Patreon",
+
+# # Troubleshooting
+"If certain aspects of this datapack are not working properly (e.g. Advancements are granted automatically when they shouldn't), make sure you are using the correct version of the datapack for the Minecraft version you are running.": "若某些方面運行出現問題(舉例：某些成就未完成就直接取得)，請先確認你是使用正確對應運行中Minecraft版本的資料包版本",
+"In addition, some advancements may break on Spigot or Paper servers.": "順帶一提，某些成就可能在Spigot與Paper伺服器上出錯",
+
+# # FAQ Menu
+"Why aren't all tabs visible at the start?": "為何所有成就列表並非初始即可見？",
+"How do I install the Language Pack?": "我該如何安裝翻譯包？",
+"How can I translate the advancements into a new language?": "我該如何翻譯成就至新的語言？",
+"What is the name of the mod that lets you see progress on advancements?": "那個能讓你看見成就完成進度的模組叫什麼？",
+
+# # # Why aren't all tabs visible at the start?
+"A tab will not show up if you haven't gained any advancements in that tab yet.": "若你為完成任何該列表的成就時，該成就列表將不會顯示",
+"Most root advancements are easy to obtain, but some are further along in progression.": "大部分根源成就很易取得，但某些需要遊戲進展才會一併取得",
+"Notably, the Super Challenges tab is not unlocked until after defeating the Ender Dragon.": "其中，超級成就在擊敗終界龍前不會解鎖",
+
+# # # How do I install the Language Pack?
+"The Language Pack is NOT a datapack and is not installed in the same way.": "翻譯包並非指令包，所以與指令包安裝方式不同",
+"Instead, it is a resource pack, and it is installed just like any other resource pack.": "相反地，它是一個資源包，所以請照資源包的安裝模式安裝：",
+"Place it into your resourcepacks folder, then select it in the resource pack menu.": "將其放置於你的資料包資料夾，並且將其在資料包選單中啟用",
+"Once you do this, the custom advancements will appear in whatever language you have selected if this language is supported.": "一旦你完成這些步驟，若該語言有翻譯支援，這些自定義成就將會以遊玩的遊戲語言顯示",
+
+# # # How can I translate the advancements into a new language?
+"Download the Language Pack, unzip it, then locate the file named base_language_file.json": "請下載翻譯包並解壓縮，最後尋找base_language_file.json",
+"Follow the instructions within in order to translate your language.": "按照檔案上面的指示來翻譯至你希望的語言",
+"If you finish translating a new language, you can send it to the creator (Cavinator1) on Planet Minecraft or Discord and it may get added in a future update!": "如果你完成了新的語言翻譯，你可以於Planet Minecraft或Discord上，傳給作者：Cavinator1，它將會在下次更新中一併加入！",
+"You will be credited for your contributions to translation.": "當然，我們一定會認可您在社群翻譯上的貢獻",
+
+# # # What is the name of the mod that lets you see progress on advancements?
+"The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "您所詢問的模組叫做Advancement Info，它會顯示各個成就所達成的進度需求",
+"It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "在完成如'我全都要!'，那些有極多進度需求的超級成就上極為有用",
+"It can be downloaded here:": "連結如下"
+# Link is not translatable
+
+
+
+
+# All advancements, trophies and other text strings that get added in versions 1.16 or later will be added down here for easy locating by translators who wish to update their language file
+}

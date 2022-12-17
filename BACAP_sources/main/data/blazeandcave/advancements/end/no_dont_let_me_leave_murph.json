@@ -1,0 +1,161 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:chorus_plant"
+		},
+		"title": {"translate":"No! Don't let me leave, Murph!"},
+		"description": {"color":"dark_purple","translate":"Travel so far into the End dimension you might as well be on another planet"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:end/im_coming_back_murph",
+	"rewards": {
+		"function": "bc_rewards:end/no_dont_let_me_leave_murph"
+	},		
+	"criteria": {
+		"outer_pos_x": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"dimension": "the_end",
+								"position": {
+									"x": {
+										"min": 100000.0
+									}
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"outer_pos_z": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"dimension": "the_end",
+								"position": {
+									"z": {
+										"min": 100000.0
+									}
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"outer_neg_x": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"dimension": "the_end",
+								"position": {
+									"x": {
+										"max": -100000.0
+									}
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"outer_neg_z": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"dimension": "the_end",
+								"position": {
+									"z": {
+										"max": -100000.0
+									}
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}	
+	},
+	"requirements": [
+		[
+			"outer_pos_x",
+			"outer_pos_z",
+			"outer_neg_x",
+			"outer_neg_z"
+		]
+	]
+}

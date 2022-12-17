@@ -1,0 +1,158 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:structure_void"
+		},
+		"title": {"translate":"Farlander"},
+		"description": {"color":"light_purple","translate":"Travel all the way to the border of the world"},
+		"announce_to_chat": "true",
+		"frame": "challenge",
+		"hidden": "true"
+	},
+	"parent": "blazeandcave:challenges/a_million_blocks_away",
+	"rewards": {
+		"function": "bc_rewards:challenges/farlander"
+	},		
+	"criteria": {
+		"outer_pos_x": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"position": {
+									"x": {
+										"min": 29999983.0
+									}
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"outer_pos_z": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"position": {
+									"z": {
+										"min": 29999983.0
+									}
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"outer_neg_x": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"position": {
+									"x": {
+										"max": -29999983.0
+									}
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"outer_neg_z": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"position": {
+									"z": {
+										"max": -29999983.0
+									}
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}	
+	},
+	"requirements": [
+		[
+			"outer_pos_x",
+			"outer_pos_z",
+			"outer_neg_x",
+			"outer_neg_z"
+		]
+	]
+}

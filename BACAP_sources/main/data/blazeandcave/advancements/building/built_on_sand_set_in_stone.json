@@ -1,0 +1,277 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:smooth_red_sandstone_stairs"
+		},
+		"title": {"translate":"Built on Sand, Set in Stone"},
+		"description": {"color":"#75E1FF","translate":"Craft or collect a stack of all forms of Sandstone and Red Sandstone"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:building/creepers_and_withers",
+	"rewards": {
+		"function": "bc_rewards:building/built_on_sand_set_in_stone"
+	},		
+	"criteria": {
+		"sandstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sandstone"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"sandstone_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sandstone_slab"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"sandstone_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sandstone_stairs"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"sandstone_wall": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sandstone_wall"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"cut_sandstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cut_sandstone"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"cut_sandstone_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cut_sandstone_slab"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"smooth_sandstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:smooth_sandstone"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"smooth_sandstone_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:smooth_sandstone_slab"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"smooth_sandstone_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:smooth_sandstone_stairs"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"chiseled_sandstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:chiseled_sandstone"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"red_sandstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:red_sandstone"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"red_sandstone_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:red_sandstone_slab"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"red_sandstone_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:red_sandstone_stairs"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"red_sandstone_wall": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:red_sandstone_wall"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"cut_red_sandstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cut_red_sandstone"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"cut_red_sandstone_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cut_red_sandstone_slab"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"smooth_red_sandstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:smooth_red_sandstone"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"smooth_red_sandstone_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:smooth_red_sandstone_slab"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"smooth_red_sandstone_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:smooth_red_sandstone_stairs"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"chiseled_red_sandstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:chiseled_red_sandstone"
+						],
+						"count": 64
+					}
+				]
+			}
+		}
+	}		
+}

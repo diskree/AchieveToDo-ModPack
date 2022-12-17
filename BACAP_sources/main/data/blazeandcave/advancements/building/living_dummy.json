@@ -1,0 +1,27 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:chainmail_chestplate",
+			"nbt": "{Enchantments:[{id:\"minecraft:thorns\",lvl:3}]}"
+		},
+		"title": {"translate":"Living Dummy"},
+		"description": {"color":"#75E1FF","translate":"Get killed from hitting an Armor Stand"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+
+	},
+	"parent": "blazeandcave:building/mannequin",
+	"rewards": {
+		"function": "bc_rewards:building/living_dummy"
+	},		
+	"criteria": {
+		"armor_stand": {
+			"trigger": "minecraft:entity_killed_player",
+			"conditions": {
+				"entity": {
+					"type": "armor_stand"
+				}
+			}
+		}
+	}
+}

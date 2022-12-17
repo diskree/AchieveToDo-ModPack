@@ -1,0 +1,28 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:cyan_shulker_box"
+		},
+		"title": {"translate":"Sculker Box"},
+		"description": {"color":"dark_purple","translate":"Hold a Shulker Box that is completely filled with Sculk"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:mining/the_incredible_sculk",
+	"rewards": {
+		"function": "bc_rewards:mining/sculker_box"
+	},		
+	"criteria": {
+		"sculker_box": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "minecraft:shulker_boxes",
+						"nbt": "{BlockEntityTag:{Items:[{Count:64b,Slot:0b,id:\"minecraft:sculk\"},{Count:64b,Slot:1b,id:\"minecraft:sculk\"},{Count:64b,Slot:2b,id:\"minecraft:sculk\"},{Count:64b,Slot:3b,id:\"minecraft:sculk\"},{Count:64b,Slot:4b,id:\"minecraft:sculk\"},{Count:64b,Slot:5b,id:\"minecraft:sculk\"},{Count:64b,Slot:6b,id:\"minecraft:sculk\"},{Count:64b,Slot:7b,id:\"minecraft:sculk\"},{Count:64b,Slot:8b,id:\"minecraft:sculk\"},{Count:64b,Slot:9b,id:\"minecraft:sculk\"},{Count:64b,Slot:10b,id:\"minecraft:sculk\"},{Count:64b,Slot:11b,id:\"minecraft:sculk\"},{Count:64b,Slot:12b,id:\"minecraft:sculk\"},{Count:64b,Slot:13b,id:\"minecraft:sculk\"},{Count:64b,Slot:14b,id:\"minecraft:sculk\"},{Count:64b,Slot:15b,id:\"minecraft:sculk\"},{Count:64b,Slot:16b,id:\"minecraft:sculk\"},{Count:64b,Slot:17b,id:\"minecraft:sculk\"},{Count:64b,Slot:18b,id:\"minecraft:sculk\"},{Count:64b,Slot:19b,id:\"minecraft:sculk\"},{Count:64b,Slot:20b,id:\"minecraft:sculk\"},{Count:64b,Slot:21b,id:\"minecraft:sculk\"},{Count:64b,Slot:22b,id:\"minecraft:sculk\"},{Count:64b,Slot:23b,id:\"minecraft:sculk\"},{Count:64b,Slot:24b,id:\"minecraft:sculk\"},{Count:64b,Slot:25b,id:\"minecraft:sculk\"},{Count:64b,Slot:26b,id:\"minecraft:sculk\"}]}}"
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:player_head",
+			"nbt": "{SkullOwner:\"MHF_Enderman\"}"
+        },
+        "title": {"translate":"The Actual End"},
+        "description": {"translate":"Get attacked by an Enderman in The End"}
+    },
+    "parent": "minecraft:end/kill_dragon",
+    "rewards": {
+        "function": "bc_rewards:end/the_actual_end"
+    },		
+    "criteria": {
+        "enderman": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "source_entity": {
+						"type": "enderman",
+						"location": {
+							"dimension": "the_end"
+						}
+					}
+                }
+            }
+        }
+    }
+}

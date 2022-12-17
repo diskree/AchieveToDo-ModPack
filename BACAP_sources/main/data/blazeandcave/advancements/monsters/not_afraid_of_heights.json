@@ -1,0 +1,20 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:black_concrete_powder"
+		},
+		"title": {"translate":"Not Afraid of Heights"},
+		"description": {"color":"dark_purple","translate":"Bring a Warden to world height. It can’t be afraid of heights if it can’t see"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:monsters/stealth_is_optional",
+	"rewards": {
+		"function": "bc_rewards:monsters/not_afraid_of_heights"
+	},		
+	"criteria": {
+		"not_afraid_of_heights": {
+			"trigger": "minecraft:impossible"
+		}
+	}
+}

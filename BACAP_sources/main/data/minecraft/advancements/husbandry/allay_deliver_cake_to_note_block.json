@@ -1,0 +1,34 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:note_block"
+		},
+		"title": {"translate":"Birthday Song"},
+		"description": {"color":"#75E1FF","translate":"Have an Allay drop a cake at a note block"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:adventure/and_make_it_double",
+	"rewards": {
+		"function": "bc_rewards:adventure/birthday_song"
+	},		
+	"criteria": {
+		"allay_deliver_cake_to_note_block": {
+			"trigger": "minecraft:allay_drop_item_on_block",
+			"conditions": {
+				"location": {
+					"block": {
+						"blocks": [
+							"minecraft:note_block"
+						]
+					}
+				},
+				"item": {
+					"items": [
+						"minecraft:cake"
+					]
+				}
+			}
+		}
+	}
+}

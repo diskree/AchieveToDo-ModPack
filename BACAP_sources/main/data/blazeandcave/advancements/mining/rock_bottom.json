@@ -1,0 +1,70 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:bedrock"
+		},
+		"title": {"translate":"Rock Bottom"},
+		"description": {"color":"#75E1FF","translate":"Dig down to the bottom of the world"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:mining/tuff_stuff",
+	"rewards": {
+		"function": "bc_rewards:mining/rock_bottom"
+	},		
+	"criteria": {
+		"bedrock_level": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:alternative",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"dimension": "minecraft:overworld",
+										"position": {
+											"y": {
+												"max": -59.5
+											}
+										}
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"dimension": "minecraft:the_nether",
+										"position": {
+											"y": {
+												"max": 4.5
+											}
+										}
+									}
+								}
+							}
+						]
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

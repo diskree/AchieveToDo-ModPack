@@ -1,0 +1,1151 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:magenta_wool"
+		},
+		"title": {"translate":"Undying Fandom"},
+		"description": {"color":"dark_purple","translate":"Receive every type of gift from Villagers as a Hero of the Village"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:adventure/buy_low_sell_high",
+	"rewards": {
+		"function": "bc_rewards:adventure/undying_fandom"
+	},		
+	"criteria": {
+		"poppy": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:poppy"
+					]
+				}
+			}
+		},
+		"chainmail_helmet": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:chainmail_helmet"
+					]
+				}
+			}
+		},
+		"chainmail_chestplate": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:chainmail_chestplate"
+					]
+				}
+			}
+		},
+		"chainmail_leggings": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:chainmail_leggings"
+					]
+				}
+			}
+		},
+		"chainmail_boots": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:chainmail_boots"
+					]
+				}
+			}
+		},
+		"cooked_chicken": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:cooked_chicken"
+					]
+				}
+			}
+		},
+		"cooked_mutton": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:cooked_mutton"
+					]
+				}
+			}
+		},
+		"cooked_porkchop": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:cooked_porkchop"
+					]
+				}
+			}
+		},
+		"cooked_rabbit": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:cooked_rabbit"
+					]
+				}
+			}
+		},
+		"cooked_beef": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:cooked_beef"
+					]
+				}
+			}
+		},
+		"map": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:map"
+					]
+				}
+			}
+		},
+		"paper": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:paper"
+					]
+				}
+			}
+		},
+		"lapis_lazuli": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:lapis_lazuli"
+					]
+				}
+			}
+		},
+		"redstone": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:redstone"
+					]
+				}
+			}
+		},
+		"bread": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:bread"
+					]
+				}
+			}
+		},
+		"cookie": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:cookie"
+					]
+				}
+			}
+		},
+		"pumpkin_pie": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:pumpkin_pie"
+					]
+				}
+			}
+		},
+		"cod": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:cod"
+					]
+				}
+			}
+		},
+		"salmon": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:salmon"
+					]
+				}
+			}
+		},
+		"arrow": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:arrow"
+					]
+				}
+			}
+		},
+		"tipped_arrow_fire_resistance": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:fire_resistance\"}"
+				}
+			}
+		},
+		"tipped_arrow_harming": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:harming\"}"
+				}
+			}
+		},
+		"tipped_arrow_healing": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:healing\"}"
+				}
+			}
+		},
+		"tipped_arrow_invisibility": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:invisibility\"}"
+				}
+			}
+		},
+		"tipped_arrow_leaping": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:leaping\"}"
+				}
+			}
+		},
+		"tipped_arrow_night_vision": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:night_vision\"}"
+				}
+			}
+		},
+		"tipped_arrow_poison": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:poison\"}"
+				}
+			}
+		},
+		"tipped_arrow_regeneration": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:regeneration\"}"
+				}
+			}
+		},
+		"tipped_arrow_slowness": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:slowness\"}"
+				}
+			}
+		},
+		"tipped_arrow_strength": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:strength\"}"
+				}
+			}
+		},
+		"tipped_arrow_swiftness": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:swiftness\"}"
+				}
+			}
+		},
+		"tipped_arrow_water_breathing": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:water_breathing\"}"
+				}
+			}
+		},
+		"tipped_arrow_weakness": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:tipped_arrow"
+					],
+					"nbt": "{Potion:\"minecraft:weakness\"}"
+				}
+			}
+		},
+		"leather": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:leather"
+					]
+				}
+			}
+		},
+		"book": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:book"
+					]
+				}
+			}
+		},
+		"clay": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:clay"
+					]
+				}
+			}
+		},
+		"white_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:white_wool"
+					]
+				}
+			}
+		},
+		"orange_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:orange_wool"
+					]
+				}
+			}
+		},
+		"magenta_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:magenta_wool"
+					]
+				}
+			}
+		},
+		"light_blue_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:light_blue_wool"
+					]
+				}
+			}
+		},
+		"yellow_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:yellow_wool"
+					]
+				}
+			}
+		},
+		"lime_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:lime_wool"
+					]
+				}
+			}
+		},
+		"pink_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:pink_wool"
+					]
+				}
+			}
+		},
+		"gray_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:gray_wool"
+					]
+				}
+			}
+		},
+		"light_gray_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:light_gray_wool"
+					]
+				}
+			}
+		},
+		"cyan_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:cyan_wool"
+					]
+				}
+			}
+		},
+		"purple_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:purple_wool"
+					]
+				}
+			}
+		},
+		"blue_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:blue_wool"
+					]
+				}
+			}
+		},
+		"brown_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:brown_wool"
+					]
+				}
+			}
+		},
+		"green_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:green_wool"
+					]
+				}
+			}
+		},
+		"red_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:red_wool"
+					]
+				}
+			}
+		},
+		"black_wool": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:black_wool"
+					]
+				}
+			}
+		},
+		"stone_axe": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:stone_axe"
+					]
+				}
+			}
+		},
+		"stone_hoe": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:stone_hoe"
+					]
+				}
+			}
+		},
+		"stone_pickaxe": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:stone_pickaxe"
+					]
+				}
+			}
+		},
+		"stone_shovel": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:stone_shovel"
+					]
+				}
+			}
+		},
+		"golden_axe": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:golden_axe"
+					]
+				}
+			}
+		},
+		"iron_axe": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:iron_axe"
+					]
+				}
+			}
+		},
+		"wheat_seeds": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:villager"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:wheat_seeds"
+					]
+				}
+			}
+		}
+	}
+}

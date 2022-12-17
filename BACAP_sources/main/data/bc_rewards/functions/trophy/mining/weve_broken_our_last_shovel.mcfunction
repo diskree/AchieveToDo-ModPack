@@ -1,0 +1,2 @@
+give @s minecraft:iron_shovel{Trophy:1,CustomModelData:131,HideFlags:71,Unbreakable:1,Enchantments:[{id:"minecraft:unbreaking",lvl:1}],display:{Name:"{\"italic\":\"false\",\"bold\":\"true\",\"color\":\"#ECECEC\",\"translate\":\"Spoon\"}",Lore:["{\"color\":\"#ECECEC\",\"translate\":\"There is no spoon\"}","{\"text\":\" \"}","{\"color\":\"gray\",\"translate\":\"Awarded for achieving\"}","{\"italic\":\"false\",\"color\":\"light_purple\",\"translate\":\"We've broken our last shovel\"}"]}} 1
+tellraw @s {"color":"gold","text":" +1 ","extra":[{"translate":"Spoon"}]}

@@ -1,0 +1,64 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:potion",
+			"nbt": "{CustomPotionColor:8453375}"
+		},
+		"title": {"translate":"Diagon Allay"},
+		"description": {"color":"#75E1FF","translate":"Have an Allay deliver a potion to you in the Deep Dark"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:adventure/budget_vex",
+	"rewards": {
+		"function": "bc_rewards:adventure/diagon_allay"
+	},		
+	"criteria": {
+		"diagon_allay": {
+			"trigger": "minecraft:thrown_item_picked_up_by_player",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:allay"
+						}
+					}
+				],
+				"item": {
+					"items": [
+						"minecraft:potion",
+						"minecraft:splash_potion",
+						"minecraft:lingering_potion"
+					]
+				},
+				"player": [
+					{
+						"condition": "minecraft:alternative",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"biome": "minecraft:deep_dark"
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"structure": "minecraft:ancient_city"
+									}
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

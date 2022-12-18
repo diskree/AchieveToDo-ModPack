@@ -20,9 +20,6 @@ public class CreateWorldScreenMixin {
     public boolean hardcore;
 
     @Shadow
-    private ButtonWidget dataPacksButton;
-
-    @Shadow
     protected DataConfiguration dataConfiguration;
 
     @Inject(method = "createLevel", at = @At("HEAD"))
@@ -33,10 +30,4 @@ public class CreateWorldScreenMixin {
             dataConfiguration = new DataConfiguration(new DataPackSettings(enabled, new ArrayList<>()), dataConfiguration.enabledFeatures());
         }
     }
-
-    @Inject(method = "init", at = @At("RETURN"))
-    public void initInject(CallbackInfo ci) {
-        dataPacksButton.active = false;
-    }
-
 }

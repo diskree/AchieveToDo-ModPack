@@ -20,5 +20,7 @@ This modpack require Minecraft 1.19.2 and last fabric version and based on the ð
 # How to update
 1. Download AchieveToDo.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
 2. Create new instance by move downloaded zip into [MultiMC](https://multimc.org/#Download) launcher window
-3. Copy your saves into new instance and tests migration
+3. Copy your saves and settings into new instance and tests migration
 4. Remove old instance if all right
+
+I am not responsible for the performance of the assembly in case of adding any external mods.

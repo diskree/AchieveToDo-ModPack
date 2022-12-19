@@ -23,6 +23,4 @@ This modpack require Minecraft 1.19.2 and last fabric version and based on the ð
 3. Copy your saves and settings into new instance and tests migration
 4. Remove old instance if all right
 
-*If you are creating a world with experimental features enabled (bundles and/or 1.20 content) you will need to relog into the world immediately after world creation
-
-Also I am not responsible for the performance of the assembly in case of adding any external mods.*
+*If you are creating a world with experimental features enabled (bundles and/or 1.20 content) you will need to relog into the world immediately after world creation. Also I am not responsible for the performance of the assembly in case of adding any external mods.*

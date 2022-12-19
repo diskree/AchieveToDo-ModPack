@@ -12,11 +12,15 @@ BlazeandCave's is already configured to work with this modpack, so you DO NOT ne
 
 You can also create a hardcore world, the corresponding datapack will be included automatically.
 
+If you are creating a world with experimental features enabled (bundles and/or 1.20 content) you will need to relog into the world immediately after world creation. Also I am not responsible for the stability of the modpack in case of adding any external mods.
+
 # How to install
-This modpack require Minecraft 1.19.2 and last fabric version and based on the 💜 [Sugar modpack](https://modrinth.com/modpack/sugar). Thanks for the work on the optimization and quality of the Minecraft game!
+This modpack require Minecraft 1.19.3 and last fabric version and based on the 💜 [Sugar modpack](https://modrinth.com/modpack/sugar). Thanks for the work on the optimization and quality of the Minecraft game!
 1. Download AchieveToDo.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
-2. Just move downloaded zip into [MultiMC](https://multimc.org/#Download) launcher window
+2. Move downloaded zip into [MultiMC](https://multimc.org/#Download) launcher window
 
 # How to update
-1. Download AchieveToDo_minimal.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
-2. Extract downloaded zip into .minecraft folder with files replacing
+1. Download AchieveToDo.zip from [last release](https://github.com/diskree/AchieveToDo/releases/latest) page
+2. Create new instance by move downloaded zip into [MultiMC](https://multimc.org/#Download) launcher window
+3. Copy your saves and settings into new instance and tests migration
+4. Remove old instance if all right

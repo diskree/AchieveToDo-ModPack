@@ -37,6 +37,7 @@
     "AdvancementsEnlargerTabTypeMixin",
     "CreateWorldScreenMixin",
     "MinecraftClientMixin",
+    "ResourcePackOrganizerMixin",
     "ToastManagerMixin"
   ],
   "injectors": {

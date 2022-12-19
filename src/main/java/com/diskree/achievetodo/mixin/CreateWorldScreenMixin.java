@@ -1,7 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
-import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.resource.DataConfiguration;
 import net.minecraft.resource.DataPackSettings;
 import org.spongepowered.asm.mixin.Mixin;
@@ -23,11 +22,17 @@ public class CreateWorldScreenMixin {
     protected DataConfiguration dataConfiguration;
 
     @Inject(method = "createLevel", at = @At("HEAD"))
-    public void applyDataPacksInject(CallbackInfo ci) {
+    public void createLevelInject(CallbackInfo ci) {
+        List<String> enabled = new ArrayList<>(dataConfiguration.dataPacks().getEnabled());
+        List<String> disabled = new ArrayList<>(dataConfiguration.dataPacks().getDisabled());
+        enabled.add("file/BACAP.zip");
+        enabled.add("file/BACAP_AchieveToDo-core.zip");
+        disabled.remove("file/BACAP.zip");
+        disabled.remove("file/BACAP_AchieveToDo-core.zip");
         if (hardcore) {
-            List<String> enabled = new ArrayList<>(dataConfiguration.dataPacks().getEnabled());
-            enabled.add("globalOpt:BACAP_HC.zip");
-            dataConfiguration = new DataConfiguration(new DataPackSettings(enabled, new ArrayList<>()), dataConfiguration.enabledFeatures());
+            enabled.add("file/BACAP_HC.zip");
+            disabled.remove("file/BACAP_HC.zip");
         }
+        dataConfiguration = new DataConfiguration(new DataPackSettings(enabled, disabled), dataConfiguration.enabledFeatures());
     }
 }

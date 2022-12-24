@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:smoker"
     },
-    "title": "Коптильня",
+    "title": {"translate": "Smoker"},
     "description": {
-      "translate": "Возможность использовать коптильню"
+      "translate":"Ability to use a smoker"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:tropical_fish"
     },
-    "title": "Тропическая рыба",
+    "title": {"translate": "Tropical fish"},
     "description": {
-      "translate": "Возможность есть тропическую рыбу"
+      "translate":"Ability to eat tropical fish"
     },
     "show_toast": false,
     "announce_to_chat": false

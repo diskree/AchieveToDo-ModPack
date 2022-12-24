@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:glow_berries"
     },
-    "title": "Светящиеся ягоды",
+    "title": {"translate": "Glow berries"},
     "description": {
-      "translate": "Возможность есть светящиеся ягоды"
+      "translate":"Ability to eat glow berries"
     },
     "show_toast": false,
     "announce_to_chat": false

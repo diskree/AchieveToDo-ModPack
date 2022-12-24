@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:oak_boat"
     },
-    "title": "Садиться в лодку",
+    "title": {"translate": "Boat"},
     "description": {
-      "translate": "Возможность садиться в лодку"
+      "translate":"Ability to ride a boat"
     },
     "show_toast": false,
     "announce_to_chat": false

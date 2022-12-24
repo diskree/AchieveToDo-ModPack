@@ -1,13 +1,15 @@
 package com.diskree.achievetodo;
 
+import net.minecraft.text.Text;
+
 public enum BlockedActionType {
-    FOOD("Доступна еда"),
-    ACTION("Доступно действие"),
-    BLOCK("Доступен блок"),
-    TOOLS("Доступны инструменты"),
-    ARMOR("Доступна броня"),
-    PORTAL("Доступен портал"),
-    VILLAGER("Доступен житель");
+    FOOD("unblock.food"),
+    ACTION("unblock.action"),
+    BLOCK("unblock.block"),
+    TOOLS("unblock.tools"),
+    ARMOR("unblock.armor"),
+    PORTAL("unblock.portal"),
+    VILLAGER("unblock.villager");
 
     private final String unlockPopupTitle;
 
@@ -16,6 +18,6 @@ public enum BlockedActionType {
     }
 
     public String getUnlockPopupTitle() {
-        return unlockPopupTitle;
+        return Text.translatable(unlockPopupTitle).getString();
     }
 }

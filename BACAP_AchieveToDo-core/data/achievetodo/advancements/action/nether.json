@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:obsidian"
     },
-    "title": "Нижний Мир",
+    "title": {"translate": "The Nether"},
     "description": {
-      "translate": "Возможность перехода в измерение Нижний Мир"
+      "translate":"Ability to enter The Nether"
     },
     "show_toast": false,
     "announce_to_chat": false

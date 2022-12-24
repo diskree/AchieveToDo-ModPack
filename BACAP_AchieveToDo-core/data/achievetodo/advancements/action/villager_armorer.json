@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:blast_furnace"
     },
-    "title": "Бронник",
+    "title": {"translate": "Armorer"},
     "description": {
-      "translate": "Возможность торговли с бронником"
+      "translate":"Ability to trade with an armorer"
     },
     "show_toast": false,
     "announce_to_chat": false

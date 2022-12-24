@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cooked_rabbit"
     },
-    "title": "Жареная крольчатина",
+    "title": {"translate": "Cooked rabbit"},
     "description": {
-      "translate": "Возможность есть жареную крольчатину"
+      "translate": "Ability to eat cooked rabbit"
     },
     "show_toast": false,
     "announce_to_chat": false

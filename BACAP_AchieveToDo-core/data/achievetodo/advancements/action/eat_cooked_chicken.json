@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cooked_chicken"
     },
-    "title": "Жареная курица",
+    "title": {"translate": "Cooked chicken"},
     "description": {
-      "translate": "Возможность есть жареную курицу"
+      "translate":"Ability to eat cooked chicken"
     },
     "show_toast": false,
     "announce_to_chat": false

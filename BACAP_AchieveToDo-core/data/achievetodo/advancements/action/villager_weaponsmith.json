@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:grindstone"
     },
-    "title": "Оружейник",
+    "title": {"translate": "Weaponsmith"},
     "description": {
-      "translate": "Возможность торговли с оружейником"
+      "translate":"Ability to trade with a weaponsmith"
     },
     "show_toast": false,
     "announce_to_chat": false

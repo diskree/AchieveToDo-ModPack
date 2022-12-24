@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:carrot"
     },
-    "title": "Морковь",
+    "title": {"translate": "Carrot"},
     "description": {
-      "translate": "Возможность есть морковь"
+      "translate":"Ability to eat carrot"
     },
     "show_toast": false,
     "announce_to_chat": false

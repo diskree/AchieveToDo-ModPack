@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:totem_of_undying"
     },
-    "title": "Тотем бессмертия",
+    "title": {"translate": "Totem of Undying"},
     "description": {
-      "translate": "При убийстве заклинателя будет выпадать тотем бессмертия"
+      "translate": "Totem of Undying will be dropped by an Evoker"
     },
     "show_toast": false,
     "announce_to_chat": false

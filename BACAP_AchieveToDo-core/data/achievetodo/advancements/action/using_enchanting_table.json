@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:enchanting_table"
     },
-    "title": "Чародейский стол",
+    "title": {"translate": "Enchanting table"},
     "description": {
-      "translate": "Возможность использовать чародейский стол"
+      "translate":"Ability to use an enchanting table"
     },
     "show_toast": false,
     "announce_to_chat": false

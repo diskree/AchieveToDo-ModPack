@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:end_stone_bricks"
     },
-    "title": "Дальний Энд",
+    "title": {"translate": "End gateway"},
     "description": {
-      "translate": "Возможность перехода в Дальний Энд"
+      "translate":"Ability to use end gateways"
     },
     "show_toast": false,
     "announce_to_chat": false

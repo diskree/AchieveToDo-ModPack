@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:dried_kelp"
     },
-    "title": "Сушёная ламинария",
+    "title": {"translate": "Dried kelp"},
     "description": {
-      "translate": "Возможность есть сушёную ламинарию"
+      "translate":"Ability to eat dried kelp"
     },
     "show_toast": false,
     "announce_to_chat": false

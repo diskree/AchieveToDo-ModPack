@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:enchanted_golden_apple"
     },
-    "title": "Зачарованное золотое яблоко",
+    "title": {"translate": "Enchanted golden apple"},
     "description": {
-      "translate": "Возможность есть зачарованное золотое яблоко"
+      "translate":"Ability to eat enchanted golden apple"
     },
     "show_toast": false,
     "announce_to_chat": false

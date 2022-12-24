@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:mushroom_stew"
     },
-    "title": "Тушёные грибы",
+    "title": {"translate": "Mushroom stew"},
     "description": {
-      "translate": "Возможность есть тушёные грибы"
+      "translate":"Ability to eat mushroom stew"
     },
     "show_toast": false,
     "announce_to_chat": false

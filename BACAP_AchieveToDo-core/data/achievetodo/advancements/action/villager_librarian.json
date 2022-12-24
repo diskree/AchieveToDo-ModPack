@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:lectern"
     },
-    "title": "Библиотекарь",
+    "title": {"translate": "Librarian"},
     "description": {
-      "translate": "Возможность торговли с библиотекарем"
+      "translate":"Ability to trade with a librarian"
     },
     "show_toast": false,
     "announce_to_chat": false

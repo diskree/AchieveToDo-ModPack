@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cooked_beef"
     },
-    "title": "Стейк",
+    "title": {"translate": "Steak"},
     "description": {
-      "translate": "Возможность есть стейк"
+      "translate":"Ability to eat steak"
     },
     "show_toast": false,
     "announce_to_chat": false

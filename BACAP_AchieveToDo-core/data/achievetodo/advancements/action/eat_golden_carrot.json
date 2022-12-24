@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:golden_carrot"
     },
-    "title": "Золотая морковь",
+    "title": {"translate": "Golden carrot"},
     "description": {
-      "translate": "Возможность есть золотую морковь"
+      "translate":"Ability to eat golden carrot"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:smithing_table"
     },
-    "title": "Инструменталищик",
+    "title": {"translate": "Toolsmith"},
     "description": {
-      "translate": "Возможность торговли с инструментальщиком"
+      "translate":"Ability to trade with a toolsmith"
     },
     "show_toast": false,
     "announce_to_chat": false

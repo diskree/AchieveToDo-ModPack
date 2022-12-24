@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:bow"
     },
-    "title": "Лук",
+    "title": {"translate": "Bow"},
     "description": {
-      "translate": "Возможность использовать лук"
+      "translate":"Ability to use a bow"
     },
     "show_toast": false,
     "announce_to_chat": false

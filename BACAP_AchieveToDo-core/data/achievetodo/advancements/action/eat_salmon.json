@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:salmon"
     },
-    "title": "Сырой лосось",
+    "title": {"translate": "Raw salmon"},
     "description": {
-      "translate": "Возможность есть сырой лосось"
+      "translate":"Ability to eat raw salmon"
     },
     "show_toast": false,
     "announce_to_chat": false

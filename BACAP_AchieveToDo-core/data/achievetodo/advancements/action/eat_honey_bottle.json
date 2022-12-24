@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:honey_bottle"
     },
-    "title": "Бутылочка мёда",
+    "title": {"translate": "Honey bottle"},
     "description": {
-      "translate": "Возможность есть бутылочку мёда"
+      "translate":"Ability to drink honey"
     },
     "show_toast": false,
     "announce_to_chat": false

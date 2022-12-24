@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:porkchop"
     },
-    "title": "Сырая свинина",
+    "title": {"translate": "Raw porkchop"},
     "description": {
-      "translate": "Возможность есть сырую свинину"
+      "translate":"Ability to eat raw porkchop"
     },
     "show_toast": false,
     "announce_to_chat": false

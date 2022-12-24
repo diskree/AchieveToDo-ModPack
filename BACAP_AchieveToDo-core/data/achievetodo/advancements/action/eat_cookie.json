@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cookie"
     },
-    "title": "Печенье",
+    "title": {"translate": "Cookie"},
     "description": {
-      "translate": "Возможность есть печенье"
+      "translate":"Ability to eat cookie"
     },
     "show_toast": false,
     "announce_to_chat": false

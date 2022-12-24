@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:rabbit_stew"
     },
-    "title": "Тушёный кролик",
+    "title": {"translate": "Rabbit stew"},
     "description": {
-      "translate": "Возможность есть тушёного кролика"
+      "translate":"Ability to eat rabbit stew"
     },
     "show_toast": false,
     "announce_to_chat": false

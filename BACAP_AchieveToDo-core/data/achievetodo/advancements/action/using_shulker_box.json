@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:shulker_box"
     },
-    "title": "Шалкеровый ящик",
+    "title": {"translate": "Shulker box"},
     "description": {
-      "translate": "Возможность использовать шалкеровый ящик"
+      "translate":"Ability to use shulker boxes"
     },
     "show_toast": false,
     "announce_to_chat": false

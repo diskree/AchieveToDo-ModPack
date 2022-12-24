@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:fletching_table"
     },
-    "title": "Лучник",
+    "title": {"translate": "Fletcher"},
     "description": {
-      "translate": "Возможность торговли с лучником"
+      "translate":"Ability to trade with a fletcher"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:diamond_chestplate"
     },
-    "title": "Алмазная броня",
+    "title": {"translate": "Diamond armor"},
     "description": {
-      "translate": "Возможность надевать алмазную броню"
+      "translate":"Ability to equip diamond armor"
     },
     "show_toast": false,
     "announce_to_chat": false

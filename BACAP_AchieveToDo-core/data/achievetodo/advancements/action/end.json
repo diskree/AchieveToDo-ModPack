@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:end_portal_frame"
     },
-    "title": "Энд",
+    "title": {"translate": "The End"},
     "description": {
-      "translate": "Возможность перехода в измерение Энд"
+      "translate":"Ability to enter The End"
     },
     "show_toast": false,
     "announce_to_chat": false

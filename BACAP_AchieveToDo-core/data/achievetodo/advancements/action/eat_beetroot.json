@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:beetroot"
     },
-    "title": "Свекла",
+    "title": {"translate": "Beetroot"},
     "description": {
-      "translate": "Возможность есть свеклу"
+      "translate": "Ability to eat beetroot"
     },
     "show_toast": false,
     "announce_to_chat": false

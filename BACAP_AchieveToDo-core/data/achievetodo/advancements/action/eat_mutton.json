@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:mutton"
     },
-    "title": "Сырая баранина",
+    "title": {"translate": "Raw mutton"},
     "description": {
-      "translate": "Возможность есть сырую баранину"
+      "translate":"Ability to eat raw mutton"
     },
     "show_toast": false,
     "announce_to_chat": false

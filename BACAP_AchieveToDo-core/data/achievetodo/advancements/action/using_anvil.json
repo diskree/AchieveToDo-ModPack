@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:anvil"
     },
-    "title": "Наковальня",
+    "title": {"translate": "Anvil"},
     "description": {
-      "translate": "Возможность использовать наковальню"
+      "translate":"Ability to use an anvil"
     },
     "show_toast": false,
     "announce_to_chat": false

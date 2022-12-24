@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:brewing_stand"
     },
-    "title": "Священник",
+    "title": {"translate": "Cleric"},
     "description": {
-      "translate": "Возможность торговли со священником"
+      "translate":"Ability to trade with a cleric"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:diamond_pickaxe"
     },
-    "title": "Алмазные инструменты",
+    "title": {"translate": "Diamond tools"},
     "description": {
-      "translate": "Возможность использовать алмазные инструменты"
+      "translate":"Ability to use diamond tools"
     },
     "show_toast": false,
     "announce_to_chat": false

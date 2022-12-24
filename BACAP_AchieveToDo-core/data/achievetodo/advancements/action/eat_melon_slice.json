@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:melon_slice"
     },
-    "title": "Ломтик арбуза",
+    "title": {"translate": "Melon slice"},
     "description": {
-      "translate": "Возможность есть ломтик арбуза"
+      "translate":"Ability to eat melon slices"
     },
     "show_toast": false,
     "announce_to_chat": false

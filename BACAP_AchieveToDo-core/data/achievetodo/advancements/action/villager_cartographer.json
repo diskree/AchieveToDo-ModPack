@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cartography_table"
     },
-    "title": "Картографер",
+    "title": {"translate": "Cartographer"},
     "description": {
-      "translate": "Возможность торговли с картографером"
+      "translate":"Ability to trade with a cartographer"
     },
     "show_toast": false,
     "announce_to_chat": false

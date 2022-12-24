@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:composter"
     },
-    "title": "Фермер",
+    "title": {"translate": "Farmer"},
     "description": {
-      "translate": "Возможность торговли с фермером"
+      "translate":"Ability to trade with a farmer"
     },
     "show_toast": false,
     "announce_to_chat": false

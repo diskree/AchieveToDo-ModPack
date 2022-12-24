@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:blast_furnace"
     },
-    "title": "Плавильная печь",
+    "title": {"translate": "Blast furnace"},
     "description": {
-      "translate": "Возможность использовать плавильную печь"
+      "translate":"Ability to use a blast furnace"
     },
     "show_toast": false,
     "announce_to_chat": false

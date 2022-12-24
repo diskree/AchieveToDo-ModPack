@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:chicken"
     },
-    "title": "Курятина",
+    "title": {"translate": "Raw chicken"},
     "description": {
-      "translate": "Возможность есть курятину"
+      "translate":"Ability to eat raw chicken"
     },
     "show_toast": false,
     "announce_to_chat": false

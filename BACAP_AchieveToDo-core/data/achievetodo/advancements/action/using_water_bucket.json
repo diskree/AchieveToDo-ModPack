@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:water_bucket"
     },
-    "title": "Разливать воду из ведра",
+    "title": {"translate": "Water bucket"},
     "description": {
-      "translate": "Возможность разливать воду из ведра"
+      "translate":"Ability to use a water bucket"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cod"
     },
-    "title": "Треска",
+    "title": {"translate": "Raw cod"},
     "description": {
-      "translate": "Возможность есть треску"
+      "translate":"Ability to eat raw cod"
     },
     "show_toast": false,
     "announce_to_chat": false

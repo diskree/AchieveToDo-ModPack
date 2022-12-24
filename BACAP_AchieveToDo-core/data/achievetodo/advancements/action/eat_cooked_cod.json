@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:cooked_cod"
     },
-    "title": "Жареный лосось",
+    "title": {"translate": "Cooked cod"},
     "description": {
-      "translate": "Возможность есть жареный лосось"
+      "translate": "Ability to eat cooked cod"
     },
     "show_toast": false,
     "announce_to_chat": false

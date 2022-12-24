@@ -3,9 +3,9 @@
     "icon": {
       "item": "minecraft:barrel"
     },
-    "title": "Рыбак",
+    "title": {"translate": "Fisherman"},
     "description": {
-      "translate": "Возможность торговли с рыбаком"
+      "translate":"Ability to trade with a fisherman"
     },
     "show_toast": false,
     "announce_to_chat": false

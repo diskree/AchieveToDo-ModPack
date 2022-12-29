@@ -12,7 +12,7 @@ public enum BlockedAction {
     eat_cod("blocked.food", BlockedActionType.FOOD, FoodComponents.COD, null, 3),
     eat_tropical_fish("blocked.food", BlockedActionType.FOOD, FoodComponents.TROPICAL_FISH, null, 4),
     eat_rotten_flesh("blocked.food", BlockedActionType.FOOD, FoodComponents.ROTTEN_FLESH, null, 6),
-    jump("blocked.jump", BlockedActionType.ACTION,null, null, 7),
+    jump("blocked.jump", BlockedActionType.ACTION, null, null, 7),
     eat_spider_eye("blocked.food", BlockedActionType.FOOD, FoodComponents.SPIDER_EYE, null, 8),
     eat_pufferfish("blocked.food", BlockedActionType.FOOD, FoodComponents.PUFFERFISH, null, 12),
     eat_chicken("blocked.food", BlockedActionType.FOOD, FoodComponents.CHICKEN, null, 15),

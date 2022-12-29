@@ -2,16 +2,22 @@ package com.diskree.achievetodo;
 
 import com.diskree.achievetodo.advancements.AchieveToDoToast;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerWorldEvents;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.server.integrated.IntegratedServer;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.VillagerProfession;
@@ -19,6 +25,7 @@ import net.minecraft.world.World;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class AchieveToDoMod implements ModInitializer {
 
@@ -150,6 +157,14 @@ public class AchieveToDoMod implements ModInitializer {
     @Override
     public void onInitialize() {
         Registry.register(Registries.ITEM, new Identifier(AchieveToDoMod.ID, "locked_action"), MYSTERY_MASK_ITEM);
+        Optional<ModContainer> modContainerOptional = FabricLoader.getInstance().getModContainer(ID);
+        if (modContainerOptional.isPresent()) {
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap"), modContainerOptional.get(), Text.of("BACAP Data Pack"), ResourcePackActivationType.ALWAYS_ENABLED);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap_achievetodo-core"), modContainerOptional.get(), Text.of("AchieveToDo Core Data Pack"), ResourcePackActivationType.ALWAYS_ENABLED);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap_hc"), modContainerOptional.get(), Text.of("BACAP Hardcore Data Pack"), ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap_lp"), modContainerOptional.get(), Text.of("BACAP Language Resource Pack"), ResourcePackActivationType.DEFAULT_ENABLED);
+        }
+
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {
                 if (pos.getY() >= 0 && isActionBlocked(BlockedAction.break_blocks_in_positive_y) || pos.getY() < 0 && isActionBlocked(BlockedAction.break_blocks_in_negative_y)) {
@@ -174,5 +189,17 @@ public class AchieveToDoMod implements ModInitializer {
             }
             return ActionResult.PASS;
         });
+        ServerWorldEvents.LOAD.register(((server, world) -> {
+            String hardcoreDatapack = new Identifier(AchieveToDoMod.ID, "bacap_hc").toString();
+            List<String> newEnabledPacks = new ArrayList<>(server.getDataPackManager().getEnabledNames());
+            if (server.isHardcore()) {
+                if (!newEnabledPacks.contains(hardcoreDatapack)) {
+                    newEnabledPacks.add(hardcoreDatapack);
+                }
+            } else {
+                newEnabledPacks.remove(hardcoreDatapack);
+            }
+            server.getDataPackManager().setEnabledProfiles(newEnabledPacks);
+        }));
     }
 }

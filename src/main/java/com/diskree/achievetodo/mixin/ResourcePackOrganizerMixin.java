@@ -1,5 +1,6 @@
 package com.diskree.achievetodo.mixin;
 
+import com.diskree.achievetodo.AchieveToDoMod;
 import net.minecraft.client.gui.screen.pack.ResourcePackOrganizer;
 import net.minecraft.resource.ResourcePackManager;
 import net.minecraft.resource.ResourcePackProfile;
@@ -22,6 +23,9 @@ public class ResourcePackOrganizerMixin {
     @Final
     List<ResourcePackProfile> disabledPacks;
 
+    @Shadow @Final
+    List<ResourcePackProfile> enabledPacks;
+
     @Inject(method = "<init>", at = @At("RETURN"))
     public void initInject(Runnable updateCallback, Function iconIdSupplier, ResourcePackManager resourcePackManager, Consumer applier, CallbackInfo ci) {
         hideInternalDatapacks();
@@ -33,10 +37,19 @@ public class ResourcePackOrganizerMixin {
     }
 
     private void hideInternalDatapacks() {
+        List<ResourcePackProfile> newEnabledPacks = new ArrayList<>();
+        for (ResourcePackProfile pack : enabledPacks) {
+            String name = pack.getName();
+            if (!name.startsWith(AchieveToDoMod.ID)) {
+                newEnabledPacks.add(pack);
+            }
+        }
+        enabledPacks.clear();
+        enabledPacks.addAll(newEnabledPacks);
         List<ResourcePackProfile> newDisabledPacks = new ArrayList<>();
         for (ResourcePackProfile pack : disabledPacks) {
             String name = pack.getName();
-            if (!name.equals("file/BACAP.zip") && !name.equals("file/BACAP_AchieveToDo-core.zip") && !name.equals("file/BACAP_HC.zip")) {
+            if (!name.startsWith(AchieveToDoMod.ID)) {
                 newDisabledPacks.add(pack);
             }
         }

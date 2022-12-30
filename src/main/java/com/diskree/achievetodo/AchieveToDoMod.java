@@ -159,9 +159,9 @@ public class AchieveToDoMod implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier(AchieveToDoMod.ID, "locked_action"), MYSTERY_MASK_ITEM);
         Optional<ModContainer> modContainerOptional = FabricLoader.getInstance().getModContainer(ID);
         if (modContainerOptional.isPresent()) {
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap"), modContainerOptional.get(), Text.of("BACAP Data Pack"), ResourcePackActivationType.ALWAYS_ENABLED);
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap_achievetodo-core"), modContainerOptional.get(), Text.of("AchieveToDo Core Data Pack"), ResourcePackActivationType.ALWAYS_ENABLED);
             ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap_hc"), modContainerOptional.get(), Text.of("BACAP Hardcore Data Pack"), ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap_achievetodo-core"), modContainerOptional.get(), Text.of("AchieveToDo Core Data Pack"), ResourcePackActivationType.ALWAYS_ENABLED);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap"), modContainerOptional.get(), Text.of("BACAP Data Pack"), ResourcePackActivationType.ALWAYS_ENABLED);
             ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap_lp"), modContainerOptional.get(), Text.of("BACAP Language Resource Pack"), ResourcePackActivationType.DEFAULT_ENABLED);
         }
 

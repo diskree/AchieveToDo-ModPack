@@ -1,6 +1,7 @@
 package com.diskree.achievetodo;
 
 import com.diskree.achievetodo.advancements.AchieveToDoToast;
+import com.google.common.collect.Lists;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerWorldEvents;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
@@ -16,6 +17,8 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.resource.ResourcePackManager;
+import net.minecraft.resource.ResourcePackProfile;
 import net.minecraft.server.integrated.IntegratedServer;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -26,6 +29,7 @@ import net.minecraft.world.World;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class AchieveToDoMod implements ModInitializer {
 
@@ -190,16 +194,21 @@ public class AchieveToDoMod implements ModInitializer {
             return ActionResult.PASS;
         });
         ServerWorldEvents.LOAD.register(((server, world) -> {
+            String mainDatapack = new Identifier(AchieveToDoMod.ID, "bacap").toString();
+            String coreDatapack = new Identifier(AchieveToDoMod.ID, "bacap_achievetodo-core").toString();
             String hardcoreDatapack = new Identifier(AchieveToDoMod.ID, "bacap_hc").toString();
-            List<String> newEnabledPacks = new ArrayList<>(server.getDataPackManager().getEnabledNames());
+
+            ResourcePackManager resourcePackManager = server.getDataPackManager();
+            ArrayList<ResourcePackProfile> list = Lists.newArrayList(resourcePackManager.getEnabledProfiles());
+            list.remove(resourcePackManager.getProfile(mainDatapack));
+            list.remove(resourcePackManager.getProfile(coreDatapack));
+            list.remove(resourcePackManager.getProfile(hardcoreDatapack));
+            list.add(resourcePackManager.getProfile(mainDatapack));
+            list.add(resourcePackManager.getProfile(coreDatapack));
             if (server.isHardcore()) {
-                if (!newEnabledPacks.contains(hardcoreDatapack)) {
-                    newEnabledPacks.add(hardcoreDatapack);
-                }
-            } else {
-                newEnabledPacks.remove(hardcoreDatapack);
+                list.add(resourcePackManager.getProfile(hardcoreDatapack));
             }
-            server.getDataPackManager().setEnabledProfiles(newEnabledPacks);
+            server.reloadResources(list.stream().map(ResourcePackProfile::getName).collect(Collectors.toList()));
         }));
     }
 }

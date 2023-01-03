@@ -11,7 +11,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
-import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.item.*;
@@ -28,12 +27,16 @@ import net.minecraft.world.World;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class AchieveToDoMod implements ModInitializer {
 
     public static final String ID = "achievetodo";
+    private static final Identifier BACAP_MAIN_DATA_PACK = new Identifier(ID, "bacap");
+    private static final Identifier CORE_DATA_PACK = new Identifier(ID, "bacap_achievetodo-core");
+    private static final Identifier HARDCORE_DATA_PACK = new Identifier(ID, "bacap_hc");
+    private static final Identifier BACAP_LANGUAGE_RESOURCE_PACK = new Identifier(ID, "bacap_lp");
+
     public static final String ADVANCEMENT_PATH_PREFIX = "action/";
     public static final String ADVANCEMENT_CRITERIA_PREFIX = "action_";
     public static final Item MYSTERY_MASK_ITEM = new Item(new FabricItemSettings());
@@ -129,6 +132,12 @@ public class AchieveToDoMod implements ModInitializer {
         return null;
     }
 
+    public static boolean isInternalDatapack(String resourceId) {
+        return resourceId.equals(BACAP_MAIN_DATA_PACK.toString()) ||
+                resourceId.equals(CORE_DATA_PACK.toString()) ||
+                resourceId.equals(HARDCORE_DATA_PACK.toString());
+    }
+
     private static void grantActionAdvancement(BlockedAction action) {
         IntegratedServer server = MinecraftClient.getInstance().getServer();
         if (server == null) {
@@ -161,13 +170,12 @@ public class AchieveToDoMod implements ModInitializer {
     @Override
     public void onInitialize() {
         Registry.register(Registries.ITEM, new Identifier(AchieveToDoMod.ID, "locked_action"), MYSTERY_MASK_ITEM);
-        Optional<ModContainer> modContainerOptional = FabricLoader.getInstance().getModContainer(ID);
-        if (modContainerOptional.isPresent()) {
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap_hc"), modContainerOptional.get(), Text.of("BACAP Hardcore Data Pack"), ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap_achievetodo-core"), modContainerOptional.get(), Text.of("AchieveToDo Core Data Pack"), ResourcePackActivationType.ALWAYS_ENABLED);
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap"), modContainerOptional.get(), Text.of("BACAP Data Pack"), ResourcePackActivationType.ALWAYS_ENABLED);
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(AchieveToDoMod.ID, "bacap_lp"), modContainerOptional.get(), Text.of("BACAP Language Resource Pack"), ResourcePackActivationType.DEFAULT_ENABLED);
-        }
+        FabricLoader.getInstance().getModContainer(ID).ifPresent((modContainer -> {
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_MAIN_DATA_PACK, modContainer, Text.of("BACAP Data Pack"), ResourcePackActivationType.ALWAYS_ENABLED);
+            ResourceManagerHelper.registerBuiltinResourcePack(CORE_DATA_PACK, modContainer, Text.of("AchieveToDo Core Data Pack"), ResourcePackActivationType.ALWAYS_ENABLED);
+            ResourceManagerHelper.registerBuiltinResourcePack(HARDCORE_DATA_PACK, modContainer, Text.of("BACAP Hardcore Data Pack"), ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_LANGUAGE_RESOURCE_PACK, modContainer, Text.of("BACAP Language Resource Pack"), ResourcePackActivationType.DEFAULT_ENABLED);
+        }));
 
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {
@@ -194,19 +202,15 @@ public class AchieveToDoMod implements ModInitializer {
             return ActionResult.PASS;
         });
         ServerWorldEvents.LOAD.register(((server, world) -> {
-            String mainDatapack = new Identifier(AchieveToDoMod.ID, "bacap").toString();
-            String coreDatapack = new Identifier(AchieveToDoMod.ID, "bacap_achievetodo-core").toString();
-            String hardcoreDatapack = new Identifier(AchieveToDoMod.ID, "bacap_hc").toString();
-
             ResourcePackManager resourcePackManager = server.getDataPackManager();
             ArrayList<ResourcePackProfile> list = Lists.newArrayList(resourcePackManager.getEnabledProfiles());
-            list.remove(resourcePackManager.getProfile(mainDatapack));
-            list.remove(resourcePackManager.getProfile(coreDatapack));
-            list.remove(resourcePackManager.getProfile(hardcoreDatapack));
-            list.add(resourcePackManager.getProfile(mainDatapack));
-            list.add(resourcePackManager.getProfile(coreDatapack));
+            list.remove(resourcePackManager.getProfile(BACAP_MAIN_DATA_PACK.toString()));
+            list.remove(resourcePackManager.getProfile(CORE_DATA_PACK.toString()));
+            list.remove(resourcePackManager.getProfile(HARDCORE_DATA_PACK.toString()));
+            list.add(resourcePackManager.getProfile(BACAP_MAIN_DATA_PACK.toString()));
+            list.add(resourcePackManager.getProfile(CORE_DATA_PACK.toString()));
             if (server.isHardcore()) {
-                list.add(resourcePackManager.getProfile(hardcoreDatapack));
+                list.add(resourcePackManager.getProfile(HARDCORE_DATA_PACK.toString()));
             }
             server.reloadResources(list.stream().map(ResourcePackProfile::getName).collect(Collectors.toList()));
         }));

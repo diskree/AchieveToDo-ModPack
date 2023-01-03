@@ -23,7 +23,8 @@ public class ResourcePackOrganizerMixin {
     @Final
     List<ResourcePackProfile> disabledPacks;
 
-    @Shadow @Final
+    @Shadow
+    @Final
     List<ResourcePackProfile> enabledPacks;
 
     @Inject(method = "<init>", at = @At("RETURN"))
@@ -39,8 +40,7 @@ public class ResourcePackOrganizerMixin {
     private void hideInternalDatapacks() {
         List<ResourcePackProfile> newEnabledPacks = new ArrayList<>();
         for (ResourcePackProfile pack : enabledPacks) {
-            String name = pack.getName();
-            if (!name.startsWith(AchieveToDoMod.ID)) {
+            if (!AchieveToDoMod.isInternalDatapack(pack.getName())) {
                 newEnabledPacks.add(pack);
             }
         }
@@ -48,8 +48,7 @@ public class ResourcePackOrganizerMixin {
         enabledPacks.addAll(newEnabledPacks);
         List<ResourcePackProfile> newDisabledPacks = new ArrayList<>();
         for (ResourcePackProfile pack : disabledPacks) {
-            String name = pack.getName();
-            if (!name.startsWith(AchieveToDoMod.ID)) {
+            if (!AchieveToDoMod.isInternalDatapack(pack.getName())) {
                 newDisabledPacks.add(pack);
             }
         }

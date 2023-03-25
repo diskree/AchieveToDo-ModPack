@@ -1,7 +1,8 @@
 # AchieveToDo
 
 Forget about regular Minecraft. Welcome to a world where gameplay mechanics, food, items, and blocks require more from you! Created for crazy explorers of the cubic world, tired of monotony in progression and survival. Maximally close to the vanilla game.
-This modpack is designed for single player use only and is based on Minecraft 1.19.3 + 💜 [Sugar modpack](https://modrinth.com/modpack/sugar). Thank you for the great work on optimizing and enhancing the Minecraft experience!
+
+This modpack is designed for single-player use only and is based on Minecraft 1.19.3 + 💜 [Sugar modpack](https://modrinth.com/modpack/sugar). Thank you for the great work on optimizing and enhancing the Minecraft experience!
 
 Every world you create includes [BlazeandCave's datapack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/) with over 1000 achievements. Your possibilities open up as your achievement counter grows. At the very beginning, you can't eat or even jump.
 

@@ -76,7 +76,7 @@ public class AchieveToDoToast implements Toast {
                 }
             }
 
-            manager.getClient().getItemRenderer().renderInGui(advancementDisplay.getIcon(), 8, 8);
+            manager.getClient().getItemRenderer().renderInGui(matrices, advancementDisplay.getIcon(), 8, 8);
             return startTime >= 5000L ? Toast.Visibility.HIDE : Toast.Visibility.SHOW;
         } else {
             return Toast.Visibility.HIDE;

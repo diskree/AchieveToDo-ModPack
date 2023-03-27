@@ -21,7 +21,7 @@
     "FireworkRocketItemMixin",
     "HoneyBottleItemMixin",
     "ItemMixin",
-    "PlayerAdvancementTrackerMixin",
+    "AdvancementDisplaysMixin",
     "PlayerEntityMixin",
     "PlayerScreenHandlerMixin",
     "ScoreboardPlayerScoreMixin",
@@ -34,8 +34,6 @@
     "VillagerEntityMixin"
   ],
   "client": [
-    "AdvancementsEnlargerTabTypeMixin",
-    "MinecraftClientMixin",
     "ResourcePackOrganizerMixin",
     "ToastManagerMixin"
   ],

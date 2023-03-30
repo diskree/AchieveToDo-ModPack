@@ -34,7 +34,7 @@ public class AchieveToDoToast implements Toast {
     public AchieveToDoToast(Advancement advancement, BlockedAction blockedAction) {
         this.advancement = advancement;
         this.blockedAction = blockedAction;
-        TEXTURE = new Identifier(AchieveToDoMod.ID, "textures/gui/toasts_" + blockedAction.getActionType().name().toLowerCase() + ".png");
+        TEXTURE = new Identifier(AchieveToDoMod.ID, "textures/gui/toasts_" + blockedAction.actionType.name().toLowerCase() + ".png");
     }
 
     public Toast.Visibility draw(MatrixStack matrices, ToastManager manager, long startTime) {
@@ -47,13 +47,13 @@ public class AchieveToDoToast implements Toast {
             List<OrderedText> list = manager.getClient().textRenderer.wrapLines(advancementDisplay.getTitle(), 125);
             int i = advancementDisplay.getFrame() == AdvancementFrame.CHALLENGE ? 16746751 : 16776960;
             if (list.size() == 1) {
-                manager.getClient().textRenderer.draw(matrices, Text.of(blockedAction.getActionType().getUnlockPopupTitle() + "!"), 30.0F, 7.0F, i | -16777216);
+                manager.getClient().textRenderer.draw(matrices, Text.of(blockedAction.actionType.getUnlockPopupTitle() + "!"), 30.0F, 7.0F, i | -16777216);
                 manager.getClient().textRenderer.draw(matrices, list.get(0), 30.0F, 18.0F, -1);
             } else {
                 int k;
                 if (startTime < 1500L) {
                     k = MathHelper.floor(MathHelper.clamp((float) (1500L - startTime) / 300.0F, 0.0F, 1.0F) * 255.0F) << 24 | 67108864;
-                    manager.getClient().textRenderer.draw(matrices, Text.of(blockedAction.getActionType().getUnlockPopupTitle() + "!"), 30.0F, 11.0F, i | k);
+                    manager.getClient().textRenderer.draw(matrices, Text.of(blockedAction.actionType.getUnlockPopupTitle() + "!"), 30.0F, 11.0F, i | k);
                 } else {
                     k = MathHelper.floor(MathHelper.clamp((float) (startTime - 1500L) / 300.0F, 0.0F, 1.0F) * 252.0F) << 24 | 67108864;
                     int var10000 = this.getHeight() / 2;

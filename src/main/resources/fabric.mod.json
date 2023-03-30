@@ -2,35 +2,32 @@
   "schemaVersion": 1,
   "id": "achievetodo",
   "version": "${version}",
-
   "name": "AchieveToDo",
   "description": "",
   "authors": [
     "diskree"
   ],
-
-  "license": "CC0-1.0",
-  "icon": "assets/achievetodo/icon.png",
-
+  "license": "The Unlicense",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.diskree.achievetodo.AchieveToDoMod"
+      {
+        "adapter": "kotlin",
+        "value": "com.diskree.achievetodo.AchieveToDoMod"
+      }
     ]
   },
   "mixins": [
     "achievetodo.mixins.json"
   ],
-  "loom": {
-    "accessWidener" : "achievetodo.accesswidener"
-  },
   "depends": {
-    "fabricloader": ">=0.14.18",
-    "fabric": "*",
-    "minecraft": ">1.19",
-    "java": ">=17"
+    "fabricloader": ">=${fabricloader}",
+    "fabric-api": ">=${fabric_api}",
+    "fabric-language-kotlin": ">=${fabric_language_kotlin}",
+    "minecraft": ">=1.19",
+    "java": ">=${java}"
   },
-  "suggests": {
-    "another-mod": "*"
+  "loom": {
+    "accessWidener": "achievetodo.accesswidener"
   }
 }

@@ -23,6 +23,7 @@
     "EntityMixin",
     "FireworkRocketItemMixin",
     "HoneyBottleItemMixin",
+    "ItemDisplayEntityMixin",
     "ItemMixin",
     "PlayerEntityMixin",
     "PlayerScreenHandlerMixin",

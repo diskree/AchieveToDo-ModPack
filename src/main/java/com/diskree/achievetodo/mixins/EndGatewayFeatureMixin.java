@@ -14,6 +14,8 @@ public class EndGatewayFeatureMixin {
 
     @Inject(method = "generate", at = @At("TAIL"))
     public void generateInject(FeatureContext<EndGatewayFeatureConfig> context, CallbackInfoReturnable<Boolean> cir) {
-        ((EndGatewayFeature) (Object) this).setBlockState(context.getWorld(), context.getOrigin().up(3), Blocks.DRAGON_EGG.getDefaultState());
+        if (context.getConfig().getExitPos().isEmpty()) {
+            ((EndGatewayFeature) (Object) this).setBlockState(context.getWorld(), context.getOrigin().up(3), Blocks.DRAGON_EGG.getDefaultState());
+        }
     }
 }

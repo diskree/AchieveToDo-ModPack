@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "achievetodo:block/ancient_city_portal_ns"
+    },
+    "axis=z": {
+      "model": "achievetodo:block/ancient_city_portal_ew"
+    }
+  }
+}

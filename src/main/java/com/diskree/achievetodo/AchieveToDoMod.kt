@@ -4,6 +4,8 @@ import com.diskree.achievetodo.advancements.AchieveToDoToast
 import com.diskree.achievetodo.ancient_city_portal.*
 import com.google.common.collect.Lists
 import net.fabricmc.api.ModInitializer
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerWorldEvents
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback
@@ -11,12 +13,16 @@ import net.fabricmc.fabric.api.event.player.AttackEntityCallback
 import net.fabricmc.fabric.api.event.player.UseBlockCallback
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricEntityTypeBuilder
+import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType
 import net.fabricmc.loader.api.FabricLoader
 import net.fabricmc.loader.api.ModContainer
 import net.minecraft.advancement.Advancement
+import net.minecraft.block.AbstractBlock
+import net.minecraft.block.piston.PistonBehavior
 import net.minecraft.client.MinecraftClient
+import net.minecraft.client.render.RenderLayer
 import net.minecraft.entity.Entity
 import net.minecraft.entity.SpawnGroup
 import net.minecraft.entity.player.PlayerEntity
@@ -26,6 +32,7 @@ import net.minecraft.registry.Registry
 import net.minecraft.resource.ResourcePackProfile
 import net.minecraft.server.MinecraftServer
 import net.minecraft.server.world.ServerWorld
+import net.minecraft.sound.BlockSoundGroup
 import net.minecraft.text.Text
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
@@ -42,7 +49,9 @@ class AchieveToDoMod : ModInitializer {
 
     override fun onInitialize() {
         registerPacks()
+        registerBlocks()
         registerItems()
+        registerParticles()
         registerAncientCityPortalEntities()
 
         AttackBlockCallback.EVENT.register(AttackBlockCallback { player: PlayerEntity, world: World?, _: Hand?, pos: BlockPos?, _: Direction? ->
@@ -75,13 +84,13 @@ class AchieveToDoMod : ModInitializer {
         ServerWorldEvents.LOAD.register(ServerWorldEvents.Load { server: MinecraftServer, _: ServerWorld? ->
             val resourcePackManager = server.dataPackManager
             val list = Lists.newArrayList(resourcePackManager.enabledProfiles)
-            list.remove(resourcePackManager.getProfile(BACAP_MAIN_DATA_PACK.toString()))
-            list.remove(resourcePackManager.getProfile(CORE_DATA_PACK.toString()))
-            list.remove(resourcePackManager.getProfile(HARDCORE_DATA_PACK.toString()))
-            list.add(resourcePackManager.getProfile(BACAP_MAIN_DATA_PACK.toString()))
-            list.add(resourcePackManager.getProfile(CORE_DATA_PACK.toString()))
+            list.remove(resourcePackManager.getProfile(BACAP_MAIN_DATA_PACK_ID.toString()))
+            list.remove(resourcePackManager.getProfile(CORE_DATA_PACK_ID.toString()))
+            list.remove(resourcePackManager.getProfile(HARDCORE_DATA_PACK_ID.toString()))
+            list.add(resourcePackManager.getProfile(BACAP_MAIN_DATA_PACK_ID.toString()))
+            list.add(resourcePackManager.getProfile(CORE_DATA_PACK_ID.toString()))
             if (server.isHardcore) {
-                list.add(resourcePackManager.getProfile(HARDCORE_DATA_PACK.toString()))
+                list.add(resourcePackManager.getProfile(HARDCORE_DATA_PACK_ID.toString()))
             }
             server.reloadResources(list.stream().map { obj: ResourcePackProfile? -> obj!!.name }
                 .collect(Collectors.toList()))
@@ -91,25 +100,25 @@ class AchieveToDoMod : ModInitializer {
     private fun registerPacks() {
         FabricLoader.getInstance().getModContainer(ID).ifPresent { modContainer: ModContainer? ->
             ResourceManagerHelper.registerBuiltinResourcePack(
-                BACAP_MAIN_DATA_PACK,
+                BACAP_MAIN_DATA_PACK_ID,
                 modContainer,
                 Text.of("BACAP Data Pack"),
                 ResourcePackActivationType.ALWAYS_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
-                CORE_DATA_PACK,
+                CORE_DATA_PACK_ID,
                 modContainer,
                 Text.of("AchieveToDo Core Data Pack"),
                 ResourcePackActivationType.ALWAYS_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
-                HARDCORE_DATA_PACK,
+                HARDCORE_DATA_PACK_ID,
                 modContainer,
                 Text.of("BACAP Hardcore Data Pack"),
                 ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
-                BACAP_LANGUAGE_RESOURCE_PACK,
+                BACAP_LANGUAGE_RESOURCE_PACK_ID,
                 modContainer,
                 Text.of("BACAP Language Resource Pack"),
                 ResourcePackActivationType.DEFAULT_ENABLED
@@ -117,29 +126,44 @@ class AchieveToDoMod : ModInitializer {
         }
     }
 
+    private fun registerBlocks() {
+        Registry.register(Registries.BLOCK, Identifier(ID, "ancient_city_portal"), ANCIENT_CITY_PORTAL_BLOCK)
+        BlockRenderLayerMap.INSTANCE.putBlock(ANCIENT_CITY_PORTAL_BLOCK, RenderLayer.getTranslucent())
+    }
+
     private fun registerItems() {
-        Registry.register(Registries.ITEM, Identifier(ID, "locked_action"), LOCKED_ACTION_MASK)
+        Registry.register(Registries.ITEM, Identifier(ID, "locked_action"), LOCKED_ACTION_ITEM)
+    }
+
+    private fun registerParticles() {
+        Registry.register(
+            Registries.PARTICLE_TYPE,
+            Identifier(ID, "ancient_city_portal_particles"),
+            ANCIENT_CITY_PORTAL_PARTICLES
+        )
+        ParticleFactoryRegistry.getInstance()
+            .register(ANCIENT_CITY_PORTAL_PARTICLES, ::AncientCityPortalParticleFactory)
     }
 
     private fun registerAncientCityPortalEntities() {
         val tabEntity = Registry.register(
             Registries.ENTITY_TYPE,
-            ANCIENT_CITY_PORTAL_TAB_ENTITY,
+            ANCIENT_CITY_PORTAL_TAB_ENTITY_ID,
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalTabEntity).build()
         )
         val advancementEntity = Registry.register(
             Registries.ENTITY_TYPE,
-            ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY,
+            ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID,
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalAdvancementEntity).build()
         )
         val promptEntity = Registry.register(
             Registries.ENTITY_TYPE,
-            ANCIENT_CITY_PORTAL_PROMPT_ENTITY,
+            ANCIENT_CITY_PORTAL_PROMPT_ENTITY_ID,
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalPromptEntity).build()
         )
         val lifeEntity = Registry.register(
             Registries.ENTITY_TYPE,
-            ANCIENT_CITY_PORTAL_LIFE_ENTITY,
+            ANCIENT_CITY_PORTAL_LIFE_ENTITY_ID,
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalLifeEntity).build()
         )
 
@@ -170,17 +194,31 @@ class AchieveToDoMod : ModInitializer {
         const val ADVANCEMENT_PATH_PREFIX = "action/"
         private const val ADVANCEMENT_CRITERIA_PREFIX = "action_"
 
-        private val BACAP_MAIN_DATA_PACK = Identifier(ID, "bacap")
-        private val CORE_DATA_PACK = Identifier(ID, "bacap_achievetodo-core")
-        private val HARDCORE_DATA_PACK = Identifier(ID, "bacap_hc")
-        private val BACAP_LANGUAGE_RESOURCE_PACK = Identifier(ID, "bacap_lp")
+        private val BACAP_MAIN_DATA_PACK_ID = Identifier(ID, "bacap")
+        private val CORE_DATA_PACK_ID = Identifier(ID, "bacap_achievetodo-core")
+        private val HARDCORE_DATA_PACK_ID = Identifier(ID, "bacap_hc")
+        private val BACAP_LANGUAGE_RESOURCE_PACK_ID = Identifier(ID, "bacap_lp")
 
-        val LOCKED_ACTION_MASK = Item(FabricItemSettings())
+        @JvmField
+        val ANCIENT_CITY_PORTAL_BLOCK = AncientCityPortalBlock(
+            AbstractBlock.Settings.create()
+                .noCollision()
+                .ticksRandomly()
+                .strength(-1.0f)
+                .sounds(BlockSoundGroup.GLASS)
+                .luminance { 11 }
+                .pistonBehavior(PistonBehavior.BLOCK)
+        )
 
-        val ANCIENT_CITY_PORTAL_TAB_ENTITY = Identifier(ID, "ancient_city_portal_tab_entity")
-        val ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY = Identifier(ID, "ancient_city_portal_advancement_entity")
-        val ANCIENT_CITY_PORTAL_PROMPT_ENTITY = Identifier(ID, "ancient_city_portal_prompt_entity")
-        val ANCIENT_CITY_PORTAL_LIFE_ENTITY = Identifier(ID, "ancient_city_portal_life_entity")
+        private val LOCKED_ACTION_ITEM = Item(FabricItemSettings())
+
+        val ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = Identifier(ID, "ancient_city_portal_tab_entity")
+        val ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID = Identifier(ID, "ancient_city_portal_advancement_entity")
+        val ANCIENT_CITY_PORTAL_PROMPT_ENTITY_ID = Identifier(ID, "ancient_city_portal_prompt_entity")
+        val ANCIENT_CITY_PORTAL_LIFE_ENTITY_ID = Identifier(ID, "ancient_city_portal_life_entity")
+
+        @JvmField
+        val ANCIENT_CITY_PORTAL_PARTICLES = FabricParticleTypes.simple()
 
         @JvmField
         var lastAchievementsCount = 0
@@ -277,9 +315,9 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmStatic
         fun isNotInternalDatapack(resourceId: String): Boolean {
-            return resourceId != BACAP_MAIN_DATA_PACK.toString() &&
-                    resourceId != CORE_DATA_PACK.toString() &&
-                    resourceId != HARDCORE_DATA_PACK.toString()
+            return resourceId != BACAP_MAIN_DATA_PACK_ID.toString() &&
+                    resourceId != CORE_DATA_PACK_ID.toString() &&
+                    resourceId != HARDCORE_DATA_PACK_ID.toString()
         }
 
         private fun grantActionAdvancement(action: BlockedAction) {

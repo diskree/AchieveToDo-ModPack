@@ -25,6 +25,7 @@
     "HoneyBottleItemMixin",
     "ItemDisplayEntityMixin",
     "ItemMixin",
+    "JukeboxBlockEntityMixin",
     "PlayerEntityMixin",
     "PlayerScreenHandlerMixin",
     "ScoreboardPlayerScoreMixin",

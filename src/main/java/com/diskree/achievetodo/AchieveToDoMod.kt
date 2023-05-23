@@ -27,6 +27,7 @@ import net.minecraft.entity.Entity
 import net.minecraft.entity.SpawnGroup
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.*
+import net.minecraft.particle.DefaultParticleType
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.resource.ResourcePackProfile
@@ -43,6 +44,7 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.Direction
 import net.minecraft.village.VillagerProfession
 import net.minecraft.world.World
+import net.minecraft.world.event.GameEvent
 import java.util.stream.Collectors
 
 class AchieveToDoMod : ModInitializer {
@@ -52,6 +54,7 @@ class AchieveToDoMod : ModInitializer {
         registerBlocks()
         registerItems()
         registerParticles()
+        registerEvents()
         registerAncientCityPortalEntities()
 
         AttackBlockCallback.EVENT.register(AttackBlockCallback { player: PlayerEntity, world: World?, _: Hand?, pos: BlockPos?, _: Direction? ->
@@ -145,6 +148,11 @@ class AchieveToDoMod : ModInitializer {
             .register(ANCIENT_CITY_PORTAL_PARTICLES, ::AncientCityPortalParticleFactory)
     }
 
+    private fun registerEvents() {
+        Registry.register(Registries.GAME_EVENT, JUKEBOX_PLAY_EVENT_ID, JUKEBOX_PLAY)
+        Registry.register(Registries.GAME_EVENT, JUKEBOX_STOP_PLAY_EVENT_ID, JUKEBOX_STOP_PLAY)
+    }
+
     private fun registerAncientCityPortalEntities() {
         val tabEntity = Registry.register(
             Registries.ENTITY_TYPE,
@@ -212,13 +220,22 @@ class AchieveToDoMod : ModInitializer {
 
         private val LOCKED_ACTION_ITEM = Item(FabricItemSettings())
 
+        @JvmField
+        val ANCIENT_CITY_PORTAL_PARTICLES: DefaultParticleType = FabricParticleTypes.simple()
+
+        private val JUKEBOX_PLAY_EVENT_ID = Identifier(ID, "jukebox_play")
+        private val JUKEBOX_STOP_PLAY_EVENT_ID = Identifier(ID, "jukebox_stop_play")
+
+        @JvmField
+        val JUKEBOX_PLAY = GameEvent(JUKEBOX_PLAY_EVENT_ID.toString(), AncientCityPortalAdvancementEntity.RITUAL_RADIUS)
+
+        @JvmField
+        val JUKEBOX_STOP_PLAY = GameEvent(JUKEBOX_STOP_PLAY_EVENT_ID.toString(), AncientCityPortalAdvancementEntity.RITUAL_RADIUS)
+
         val ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = Identifier(ID, "ancient_city_portal_tab_entity")
         val ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID = Identifier(ID, "ancient_city_portal_advancement_entity")
         val ANCIENT_CITY_PORTAL_PROMPT_ENTITY_ID = Identifier(ID, "ancient_city_portal_prompt_entity")
         val ANCIENT_CITY_PORTAL_LIFE_ENTITY_ID = Identifier(ID, "ancient_city_portal_life_entity")
-
-        @JvmField
-        val ANCIENT_CITY_PORTAL_PARTICLES = FabricParticleTypes.simple()
 
         @JvmField
         var lastAchievementsCount = 0

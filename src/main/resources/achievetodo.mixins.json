@@ -37,7 +37,8 @@
     "SlotMixin",
     "StewItemMixin",
     "SuspiciousStewItemMixin",
-    "VillagerEntityMixin"
+    "VillagerEntityMixin",
+    "WorldAccessMixin"
   ],
   "client": [
     "ResourcePackOrganizerMixin",

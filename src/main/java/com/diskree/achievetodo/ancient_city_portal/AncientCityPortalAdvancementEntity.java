@@ -15,6 +15,7 @@ import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtHelper;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.event.EntityPositionSource;
@@ -30,8 +31,10 @@ import java.util.function.BiConsumer;
 
 public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDisplayEntity {
 
-    private static final int PORTAL_WIDTH = 21;
-    private static final int PORTAL_HEIGHT = 7;
+    public static final int RITUAL_RADIUS = 20;
+
+    private static final int PORTAL_WIDTH = 22;
+    private static final int PORTAL_HEIGHT = 8;
 
     @Nullable
     private BlockPos jukeboxPos;
@@ -40,7 +43,7 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
 
     public AncientCityPortalAdvancementEntity(EntityType<?> entityType, World world) {
         super(entityType, world);
-        this.jukeboxEventHandler = new EntityGameEventHandler<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalAdvancementEntity.this, 0), 20));
+        this.jukeboxEventHandler = new EntityGameEventHandler<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalAdvancementEntity.this, 0), AchieveToDoMod.JUKEBOX_PLAY.getRange()));
     }
 
     @Override
@@ -206,19 +209,24 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         return world != null && world.getBlockState(pos).isOf(AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK);
     }
 
-    private BlockPos getPortalLeftTopCornerPos() {
-        return getBlockPos().up(3).offset(getHorizontalFacing().rotateYCounterclockwise(), 11);
-    }
-
     private ArrayList<BlockPos> getPortalBlocks(boolean perimeter) {
+        int axisWidth = PORTAL_WIDTH - 1;
+        int axisHeight = PORTAL_HEIGHT - 1;
+        Direction facingDirection = getHorizontalFacing();
+        Direction toOriginDirection = facingDirection.rotateYCounterclockwise();
+        Direction fromOriginDirection = facingDirection.rotateYClockwise();
+        BlockPos origin = getBlockPos().offset(toOriginDirection, axisWidth / 2).up(axisHeight / 2);
+        if (facingDirection.getAxis() == Direction.Axis.X && facingDirection.getDirection() == Direction.AxisDirection.POSITIVE || facingDirection.getAxis() == Direction.Axis.Z && facingDirection.getDirection() == Direction.AxisDirection.NEGATIVE) {
+            origin = origin.offset(toOriginDirection, 1);
+        }
         ArrayList<BlockPos> blocks = new ArrayList<>();
-        for (int x = 0; x <= PORTAL_WIDTH; x++) {
-            for (int y = 0; y <= PORTAL_HEIGHT; y++) {
-                if (x == 0 && y == 0 || x == 0 && y == PORTAL_HEIGHT || x == PORTAL_WIDTH && y == 0 || x == PORTAL_WIDTH && y == PORTAL_HEIGHT) {
+        for (int x = 0; x <= axisWidth; x++) {
+            for (int y = 0; y <= axisHeight; y++) {
+                if (x == 0 && y == 0 || x == 0 && y == axisHeight || x == axisWidth && y == 0 || x == axisWidth && y == axisHeight) {
                     continue;
                 }
-                BlockPos pos = getPortalLeftTopCornerPos().offset(getHorizontalFacing().rotateYClockwise(), x).down(y);
-                if (x == 0 || y == 0 || x == PORTAL_WIDTH || y == PORTAL_HEIGHT) {
+                BlockPos pos = origin.offset(fromOriginDirection, x).down(y);
+                if (x == 0 || y == 0 || x == axisWidth || y == axisHeight) {
                     if (perimeter) {
                         blocks.add(pos);
                     }
@@ -253,11 +261,11 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
 
         @Override
         public boolean listen(ServerWorld world, GameEvent event, GameEvent.Emitter emitter, Vec3d emitterPos) {
-            if (event == GameEvent.JUKEBOX_PLAY) {
+            if (event == AchieveToDoMod.JUKEBOX_PLAY) {
                 AncientCityPortalAdvancementEntity.this.updateJukeboxPos(BlockPos.ofFloored(emitterPos), true);
                 return true;
             }
-            if (event == GameEvent.JUKEBOX_STOP_PLAY) {
+            if (event == AchieveToDoMod.JUKEBOX_STOP_PLAY) {
                 AncientCityPortalAdvancementEntity.this.updateJukeboxPos(BlockPos.ofFloored(emitterPos), false);
                 return true;
             }

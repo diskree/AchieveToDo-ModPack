@@ -1,3 +1,4 @@
 accessWidener v1 named
 
 accessible class net/minecraft/advancement/AdvancementDisplays$Status
+accessible method net/minecraft/world/gen/feature/Feature setBlockState (Lnet/minecraft/world/ModifiableWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V

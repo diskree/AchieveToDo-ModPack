@@ -39,7 +39,6 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
     @Nullable
     private BlockPos jukeboxPos;
     private final EntityGameEventHandler<JukeboxEventListener> jukeboxEventHandler;
-    private boolean isHalfOfPortalActivationSkipped;
 
     public AncientCityPortalAdvancementEntity(EntityType<?> entityType, World world) {
         super(entityType, world);
@@ -82,31 +81,34 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
                 this.jukeboxPos = jukeboxPos;
             }
             ArrayList<BlockPos> portalAirBlocks = getPortalAirBlocks();
-            if (!isHalfOfPortalActivationSkipped && portalAirBlocks.size() == 60) {
-                isHalfOfPortalActivationSkipped = true;
-                return;
-            }
             Collections.shuffle(portalAirBlocks);
             for (int i = 0; i < (portalAirBlocks.size() % 10 == 0 ? 4 : 3); i++) {
-                getWorld().setBlockState(portalAirBlocks.get(0), AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK.getDefaultState().with(AncientCityPortalBlock.AXIS, getHorizontalFacing().rotateYClockwise().getAxis()));
-                ((AncientCityPortalBlock) getWorld().getBlockState(portalAirBlocks.get(0)).getBlock()).hideParticles();
-                portalAirBlocks.remove(0);
-                if (isPortalActivated()) {
-                    for (BlockPos pos : getPortalBlocks(false)) {
-                        if (isPortal(pos)) {
-                            ((AncientCityPortalBlock) getWorld().getBlockState(pos).getBlock()).impulseParticles();
-                        }
-                    }
+                if (portalAirBlocks.isEmpty()) {
                     break;
+                }
+                getWorld().setBlockState(portalAirBlocks.get(0), AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK.getDefaultState().with(AncientCityPortalBlock.AXIS, getHorizontalFacing().rotateYClockwise().getAxis()));
+                portalAirBlocks.remove(0);
+            }
+            boolean isPortalActivated = isPortalActivated();
+            for (BlockPos pos : getPortalBlocks(false)) {
+                if (!isPortal(pos)) {
+                    continue;
+                }
+                AncientCityPortalBlock portalBlock = (AncientCityPortalBlock) getWorld().getBlockState(pos).getBlock();
+                if (isPortalActivated) {
+                    portalBlock.impulseParticles();
+                } else {
+                    portalBlock.hideParticles();
                 }
             }
         } else {
             stopJukebox(jukeboxPos);
             this.jukeboxPos = null;
             for (BlockPos pos : getPortalBlocks(false)) {
-                if (isPortal(pos)) {
-                    getWorld().setBlockState(pos, Blocks.AIR.getDefaultState());
+                if (!isPortal(pos)) {
+                    continue;
                 }
+                getWorld().setBlockState(pos, Blocks.AIR.getDefaultState());
             }
         }
     }
@@ -169,9 +171,10 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
     private ArrayList<BlockPos> getPortalAirBlocks() {
         ArrayList<BlockPos> blocks = new ArrayList<>();
         for (BlockPos pos : getPortalBlocks(false)) {
-            if (isAir(pos)) {
-                blocks.add(pos);
+            if (!isAir(pos)) {
+                continue;
             }
+            blocks.add(pos);
         }
         return blocks;
     }

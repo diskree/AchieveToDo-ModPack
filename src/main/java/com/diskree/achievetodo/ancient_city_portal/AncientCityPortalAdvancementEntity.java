@@ -69,17 +69,21 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
     }
 
     private void updateJukeboxPos(BlockPos jukeboxPos, boolean playing) {
-        boolean isAnotherJukebox = this.jukeboxPos != null && !this.jukeboxPos.equals(jukeboxPos) && isPortalActivationInProgress();
-        if (isAnotherJukebox || isPortalActivated()) {
-            if (isAnotherJukebox || canStopJukeboxAfterPortalActivation(jukeboxPos)) {
+        if (this.jukeboxPos != null && !this.jukeboxPos.equals(jukeboxPos)) {
+            stopJukebox(jukeboxPos);
+            return;
+        }
+        boolean isPortalActivated = isPortalActivated();
+        boolean isDiskRelaxPartPlaying = isDiskRelaxPartPlaying(jukeboxPos);
+        if (isPortalActivated || isDiskRelaxPartPlaying) {
+            if (!isPortalActivated || !isDiskRelaxPartPlaying) {
                 stopJukebox(jukeboxPos);
+                this.jukeboxPos = null;
             }
             return;
         }
-        if (playing && checkPlayer() && checkDisk(jukeboxPos) && checkPortalFrame()) {
-            if (!isPortalActivationInProgress()) {
-                this.jukeboxPos = jukeboxPos;
-            }
+        if (playing && checkPlayer() && checkDisk(jukeboxPos) && checkPortal()) {
+            this.jukeboxPos = jukeboxPos;
             ArrayList<BlockPos> portalAirBlocks = getPortalAirBlocks();
             Collections.shuffle(portalAirBlocks);
             for (int i = 0; i < (portalAirBlocks.size() % 10 == 0 ? 4 : 3); i++) {
@@ -89,7 +93,7 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
                 getWorld().setBlockState(portalAirBlocks.get(0), AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK.getDefaultState().with(AncientCityPortalBlock.AXIS, getHorizontalFacing().rotateYClockwise().getAxis()));
                 portalAirBlocks.remove(0);
             }
-            boolean isPortalActivated = isPortalActivated();
+            isPortalActivated = isPortalActivated();
             for (BlockPos pos : getPortalBlocks(false)) {
                 if (!isPortal(pos)) {
                     continue;
@@ -133,7 +137,7 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         return jukebox.getStack() != null && Items.MUSIC_DISC_5.equals(jukebox.getStack().getItem());
     }
 
-    private boolean checkPortalFrame() {
+    private boolean checkPortal() {
         for (BlockPos pos : getPortalBlocks(false)) {
             if (!isAir(pos) && !isPortal(pos)) {
                 return false;
@@ -179,10 +183,10 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         return blocks;
     }
 
-    private boolean canStopJukeboxAfterPortalActivation(BlockPos jukeboxPos) {
+    private boolean isDiskRelaxPartPlaying(BlockPos jukeboxPos) {
         BlockEntity blockEntity = getWorld().getBlockEntity(jukeboxPos);
         if (blockEntity instanceof JukeboxBlockEntityImpl jukebox) {
-            return jukebox.isDiskRelaxPartFinished() || jukebox.isDiskStartedJustNow();
+            return jukebox.isDiskRelaxPartPlaying();
         }
         return true;
     }

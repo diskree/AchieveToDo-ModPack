@@ -15,12 +15,8 @@ public abstract class JukeboxBlockEntityMixin implements JukeboxBlockEntityImpl 
     private long recordStartTick;
 
     @Override
-    public boolean isDiskRelaxPartFinished() {
-        return tickCount >= recordStartTick + 1259;
-    }
-
-    @Override
-    public boolean isDiskStartedJustNow() {
-        return tickCount - recordStartTick <= 20L;
+    public boolean isDiskRelaxPartPlaying() {
+        long currentTicks = tickCount - recordStartTick;
+        return currentTicks > 739 && currentTicks < 1259;
     }
 }

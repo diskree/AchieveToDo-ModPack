@@ -2,6 +2,7 @@ package com.diskree.achievetodo.ancient_city_portal;
 
 import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.JukeboxBlockEntityImpl;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.JukeboxBlockEntity;
@@ -14,6 +15,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtHelper;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
@@ -32,9 +34,10 @@ import java.util.function.BiConsumer;
 public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDisplayEntity {
 
     public static final int RITUAL_RADIUS = 20;
+    public static final int PORTAL_WIDTH = 22;
+    public static final int PORTAL_HEIGHT = 8;
 
-    private static final int PORTAL_WIDTH = 22;
-    private static final int PORTAL_HEIGHT = 8;
+    public static final BooleanProperty REINFORCED_DEEPSLATE_CHARGED_STATE = BooleanProperty.of("charged");
 
     @Nullable
     private BlockPos jukeboxPos;
@@ -43,6 +46,43 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
     public AncientCityPortalAdvancementEntity(EntityType<?> entityType, World world) {
         super(entityType, world);
         this.jukeboxEventHandler = new EntityGameEventHandler<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalAdvancementEntity.this, 0), AchieveToDoMod.JUKEBOX_PLAY.getRange()));
+    }
+
+    public boolean isPortalBlock(BlockPos pos) {
+        for (BlockPos portalBlock : getPortalBlocks(false)) {
+            if (portalBlock.equals(pos)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isPortalFrameBlock(BlockPos pos) {
+        for (BlockPos portalBlock : getPortalBlocks(true, true)) {
+            if (portalBlock.equals(pos)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void setDragonEgg() {
+        for (BlockPos portalBlock : getPortalBlocks(true, true)) {
+            getWorld().setBlockState(portalBlock, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_STATE, true));
+        }
+    }
+
+    public boolean isPortalActivated() {
+        for (BlockPos pos : getPortalBlocks(false)) {
+            if (!isPortal(pos)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int getPortalFrameLightLevel(BlockState state) {
+        return state.get(REINFORCED_DEEPSLATE_CHARGED_STATE) ? 15 : 0;
     }
 
     @Override
@@ -151,27 +191,6 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         return true;
     }
 
-    private boolean isPortalActivated() {
-        for (BlockPos pos : getPortalBlocks(false)) {
-            if (!isPortal(pos)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private boolean isPortalActivationInProgress() {
-        if (isPortalActivated()) {
-            return false;
-        }
-        for (BlockPos pos : getPortalBlocks(false)) {
-            if (isPortal(pos)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     private ArrayList<BlockPos> getPortalAirBlocks() {
         ArrayList<BlockPos> blocks = new ArrayList<>();
         for (BlockPos pos : getPortalBlocks(false)) {
@@ -217,6 +236,10 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
     }
 
     private ArrayList<BlockPos> getPortalBlocks(boolean perimeter) {
+        return getPortalBlocks(perimeter, false);
+    }
+
+    private ArrayList<BlockPos> getPortalBlocks(boolean perimeter, boolean includeCorners) {
         int axisWidth = PORTAL_WIDTH - 1;
         int axisHeight = PORTAL_HEIGHT - 1;
         Direction facingDirection = getHorizontalFacing();
@@ -229,7 +252,7 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         ArrayList<BlockPos> blocks = new ArrayList<>();
         for (int x = 0; x <= axisWidth; x++) {
             for (int y = 0; y <= axisHeight; y++) {
-                if (x == 0 && y == 0 || x == 0 && y == axisHeight || x == axisWidth && y == 0 || x == axisWidth && y == axisHeight) {
+                if (!includeCorners && (x == 0 && y == 0 || x == 0 && y == axisHeight || x == axisWidth && y == 0 || x == axisWidth && y == axisHeight)) {
                     continue;
                 }
                 BlockPos pos = origin.offset(fromOriginDirection, x).down(y);

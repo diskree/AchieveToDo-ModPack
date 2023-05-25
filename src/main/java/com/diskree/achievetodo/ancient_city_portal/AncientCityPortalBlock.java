@@ -12,15 +12,17 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockRotation;
+import net.minecraft.util.TypeFilter;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
-import net.minecraft.world.dimension.NetherPortal;
 
+import java.util.List;
 import java.util.Objects;
 
 public class AncientCityPortalBlock extends Block {
@@ -59,7 +61,7 @@ public class AncientCityPortalBlock extends Block {
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         Direction.Axis axis = direction.getAxis();
         Direction.Axis axis2 = state.get(AXIS);
-        if (axis2 != axis && axis.isHorizontal() || neighborState.isOf(this) || new NetherPortal(world, pos, axis2).wasAlreadyValid()) {
+        if (axis2 != axis && axis.isHorizontal() || neighborState.isOf(this) || neighborState.isOf(Blocks.REINFORCED_DEEPSLATE)) {
             return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
         }
         return Blocks.AIR.getDefaultState();
@@ -67,6 +69,19 @@ public class AncientCityPortalBlock extends Block {
 
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (entity instanceof ItemEntity itemEntity && itemEntity.getStack().isOf(Items.DRAGON_EGG)) {
+            Direction.Axis axis = state.get(AXIS);
+            Direction.Axis reverseAxis = axis == Direction.Axis.X ? Direction.Axis.Z : Direction.Axis.X;
+            Box box = new Box(
+                    pos.offset(axis, -AncientCityPortalAdvancementEntity.PORTAL_WIDTH).offset(reverseAxis, -1).down(AncientCityPortalAdvancementEntity.PORTAL_HEIGHT),
+                    pos.offset(axis, AncientCityPortalAdvancementEntity.PORTAL_WIDTH).offset(reverseAxis, 1).up(AncientCityPortalAdvancementEntity.PORTAL_HEIGHT)
+            );
+            List<AncientCityPortalAdvancementEntity> entities = world.getEntitiesByType(TypeFilter.instanceOf(AncientCityPortalAdvancementEntity.class), box, (portalEntity) -> portalEntity.isPortalBlock(pos));
+            if (entities.size() == 1) {
+                entities.get(0).setDragonEgg();
+                entity.kill();
+            }
+        }
     }
 
     @Override

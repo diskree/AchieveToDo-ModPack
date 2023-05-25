@@ -6,6 +6,8 @@
     "defaultRequire": 1
   },
   "mixins": [
+    "AbstractBlockMixin",
+    "AbstractBlockSettingsMixin",
     "AbstractFurnaceBlockMixin",
     "AdvancementDisplaysMixin",
     "AnvilBlockMixin",
@@ -30,6 +32,7 @@
     "JukeboxBlockEntityMixin",
     "PlayerEntityMixin",
     "PlayerScreenHandlerMixin",
+    "ReinforcedDeepslateMixin",
     "ScoreboardPlayerScoreMixin",
     "ServerPlayerEntityMixin",
     "ShieldItemMixin",

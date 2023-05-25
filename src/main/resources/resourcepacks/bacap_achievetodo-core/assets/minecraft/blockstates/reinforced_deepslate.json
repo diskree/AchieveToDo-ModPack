@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "charged=false": { "model": "minecraft:block/reinforced_deepslate" },
+    "charged=true": { "model": "achievetodo:block/reinforced_deepslate_charged" }
+  }
+}

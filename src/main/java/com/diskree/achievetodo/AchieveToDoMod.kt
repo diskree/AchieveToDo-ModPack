@@ -227,10 +227,16 @@ class AchieveToDoMod : ModInitializer {
         private val JUKEBOX_STOP_PLAY_EVENT_ID = Identifier(ID, "jukebox_stop_play")
 
         @JvmField
-        val JUKEBOX_PLAY = GameEvent(JUKEBOX_PLAY_EVENT_ID.toString(), AncientCityPortalAdvancementEntity.RITUAL_RADIUS)
+        val JUKEBOX_PLAY = GameEvent(
+            JUKEBOX_PLAY_EVENT_ID.toString(),
+            AncientCityPortalAdvancementEntity.RITUAL_RADIUS
+        )
 
         @JvmField
-        val JUKEBOX_STOP_PLAY = GameEvent(JUKEBOX_STOP_PLAY_EVENT_ID.toString(), AncientCityPortalAdvancementEntity.RITUAL_RADIUS)
+        val JUKEBOX_STOP_PLAY = GameEvent(
+            JUKEBOX_STOP_PLAY_EVENT_ID.toString(),
+            AncientCityPortalAdvancementEntity.RITUAL_RADIUS
+        )
 
         val ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = Identifier(ID, "ancient_city_portal_tab_entity")
         val ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID = Identifier(ID, "ancient_city_portal_advancement_entity")

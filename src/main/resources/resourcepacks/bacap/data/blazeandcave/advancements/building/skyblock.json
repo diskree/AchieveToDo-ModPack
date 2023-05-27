@@ -1,0 +1,40 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:grass_block"
+		},
+		"title": {"translate":"Skyblock"},
+		"description": {"color":"#75E1FF","translate":"Place a Grass Block high in the sky"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:building/grass_type",
+	"rewards": {
+		"function": "bc_rewards:building/skyblock"
+	},		
+	"criteria": {
+		"grass_block": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:grass_block"
+								]
+							},
+							"position": {
+								"y": {
+									"min": 280
+								},
+								"dimension": "minecraft:overworld"
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

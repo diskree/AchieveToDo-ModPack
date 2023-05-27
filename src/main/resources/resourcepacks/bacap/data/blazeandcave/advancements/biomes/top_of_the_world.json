@@ -16,63 +16,55 @@
 		"scaffolding": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"item": {
-					"items": [
-						"minecraft:scaffolding"
-					]
-				},
-				"location": {
-					"position": {
-						"y": {
-							"min": 319
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:scaffolding"
+							]
 						}
 					},
-					"dimension": "minecraft:overworld"
-				}
-			}
-		},
-		"scaffolding_nether": {
-			"trigger": "minecraft:placed_block",
-			"conditions": {
-				"item": {
-					"items": [
-						"minecraft:scaffolding"
-					]
-				},
-				"location": {
-					"position": {
-						"y": {
-							"min": 255
-						}
-					},
-					"dimension": "minecraft:the_nether"
-				}
-			}
-		},
-		"scaffolding_end": {
-			"trigger": "minecraft:placed_block",
-			"conditions": {
-				"item": {
-					"items": [
-						"minecraft:scaffolding"
-					]
-				},
-				"location": {
-					"position": {
-						"y": {
-							"min": 255
-						}
-					},
-					"dimension": "minecraft:the_end"
-				}
+					{
+						"condition": "minecraft:any_of",
+						"terms": [
+							{
+								"condition": "minecraft:location_check",
+								"predicate": {
+									"position": {
+										"y": {
+											"min": 319
+										}
+									},
+									"dimension": "minecraft:overworld"
+								}
+							},
+							{
+								"condition": "minecraft:location_check",
+								"predicate": {
+									"position": {
+										"y": {
+											"min": 255
+										}
+									},
+									"dimension": "minecraft:the_nether"
+								}
+							},
+							{
+								"condition": "minecraft:location_check",
+								"predicate": {
+									"position": {
+										"y": {
+											"min": 255
+										}
+									},
+									"dimension": "minecraft:the_end"
+								}
+							}
+						]
+					}
+				]
 			}
 		}
-	},
-	"requirements": [
-		[
-			"scaffolding",
-			"scaffolding_nether",
-			"scaffolding_end"
-		]
-	]
+	}
 }

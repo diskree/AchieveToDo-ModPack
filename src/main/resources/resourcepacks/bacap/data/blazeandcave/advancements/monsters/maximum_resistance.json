@@ -1,0 +1,92 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:netherite_chestplate",
+			"nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:4}]}"
+		},
+		"title": {"translate":"Maximum Resistance"},
+		"description": {"color":"dark_purple","translate":"Take a hit from the Warden with the maximum possible protection"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:monsters/warden_frostbite",
+	"rewards": {
+		"function": "bc_rewards:monsters/maximum_resistance"
+	},		
+	"criteria": {
+		"phantom": {
+			"trigger": "minecraft:entity_hurt_player",
+			"conditions": {
+				"damage": {
+					"source_entity": {
+						"type": "warden"
+					}
+				},
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"items": [
+										"minecraft:netherite_helmet"
+									],
+									"enchantments": [
+										{
+											"enchantment": "minecraft:protection",
+											"levels": 4
+										}
+									]
+								},
+								"chest": {
+									"items": [
+										"minecraft:netherite_chestplate"
+									],
+									"enchantments": [
+										{
+											"enchantment": "minecraft:protection",
+											"levels": 4
+										}
+									]
+								},
+								"legs": {
+									"items": [
+										"minecraft:netherite_leggings"
+									],
+									"enchantments": [
+										{
+											"enchantment": "minecraft:protection",
+											"levels": 4
+										}
+									]
+								},
+								"feet": {
+									"items": [
+										"minecraft:netherite_boots"
+									],
+									"enchantments": [
+										{
+											"enchantment": "minecraft:protection",
+											"levels": 4
+										}
+									]
+								}
+							},
+							"effects": {
+								"minecraft:resistance": {
+									"amplifier": {
+										"min": 3
+									},
+									"duration": {
+										"min": 1
+									}
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

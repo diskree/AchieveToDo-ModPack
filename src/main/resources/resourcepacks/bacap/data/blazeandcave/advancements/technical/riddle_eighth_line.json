@@ -10,7 +10,7 @@
 					"type": "wither"
 				},
 				"killing_blow": {
-					"is_magic": "true",
+
 					"direct_entity": {
 						"type": "minecraft:potion"
 					}

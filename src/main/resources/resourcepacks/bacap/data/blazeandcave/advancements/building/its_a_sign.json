@@ -7,7 +7,7 @@
 		"description": {"color":"green","translate":"Craft and place a sign"},
 		"announce_to_chat": "true"
 	},
-	"parent": "blazeandcave:building/stationary_storage",
+	"parent": "blazeandcave:building/your_door_was_locked",
 	"rewards": {
 		"function": "bc_rewards:building/its_a_sign"
 	},		
@@ -15,9 +15,14 @@
 		"sign": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"item": {			
-					"tag": "minecraft:signs"
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"tag": "minecraft:signs"
+						}
+					}
+				]
 			}
 		}
 	}

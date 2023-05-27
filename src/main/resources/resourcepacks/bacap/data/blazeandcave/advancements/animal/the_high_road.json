@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:iron_sword"
+		},
+		"title": {"translate":"The High Road"},
+		"description": {"color":"#75E1FF","translate":"Kill a hostile monster with a melee attack while riding a Camel"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:animal/hump_day",
+	"rewards": {
+		"function": "bc_rewards:animal/the_high_road"
+	},		
+	"criteria": {
+		"overkill": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "#blazeandcave:hostile_monsters"
+				},
+				"killing_blow": {
+					"tags": [
+						{
+							"id": "minecraft:player_attack",
+							"expected": true
+						}
+					]
+				},
+				"player": {
+					"vehicle": {
+						"type": "camel"
+					}
+				}
+			}
+		}
+	}
+}

@@ -15,7 +15,18 @@
 		"flower_pot": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:flower_pot"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:flower_pot"
+								]
+							}
+						}
+					}
+				]
 			}
 		}
 	}

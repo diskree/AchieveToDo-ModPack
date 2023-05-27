@@ -1013,6 +1013,19 @@
 					}
 				}
 			}
+		},
+		"maximum_resistance": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:monsters/maximum_resistance": "true"
+						}
+					}
+				}
+			}
 		}
 	}
 }

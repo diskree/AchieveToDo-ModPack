@@ -1,0 +1,29 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:oak_hanging_sign"
+		},
+		"title": {"translate":"Hanging Around"},
+		"description": {"color":"green","translate":"Put up a Hanging Sign"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:building/its_a_sign",
+	"rewards": {
+		"function": "bc_rewards:building/hanging_around"
+	},		
+	"criteria": {
+		"hanging_sign": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"tag": "minecraft:hanging_signs"
+						}
+					}
+				]
+			}
+		}
+	}
+}

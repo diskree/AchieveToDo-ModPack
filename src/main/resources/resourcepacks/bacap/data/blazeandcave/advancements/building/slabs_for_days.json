@@ -648,6 +648,42 @@
 					}
 				]
 			}
+		},
+		"bamboo_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_slab"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_mosaic_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_mosaic_slab"
+						]
+					}
+				]
+			}
+		},
+		"cherry_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_slab"
+						]
+					}
+				]
+			}
 		}
 	}		
 }

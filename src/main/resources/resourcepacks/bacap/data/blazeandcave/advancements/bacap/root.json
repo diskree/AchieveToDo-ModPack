@@ -1,0 +1,20 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:grass_block"
+		},
+		"title": {"translate":"BlazeandCave's Advancements"},
+		"description": {"color":"#CCCCCC","translate":"Loads of brand new advancements for your Minecraft world!","extra":[{"text":"\n\n"},{"color":"gray","translate":"Thank you to all of my Patrons!"},{"text":"\n"},{"color":"#FF8000","bold":"false","text":"Fiery_Crystal"},{"color":"gray","bold":"false","text":", "},{"color":"#FFDDF4","bold":"false","text":"FixingGlobe"},{"color":"gray","bold":"false","text":", "},{"color":"#E7FF00","bold":"false","text":"Wolfguy2005"},{"color":"gray","bold":"false","text":", "},{"color":"#3D3ED7","bold":"false","text":"Infinity InGloriouS"},{"color":"gray","bold":"false","text":", "},{"color":"#006003","bold":"false","text":"saladbowls"},{"color":"gray","bold":"false","text":", "},{"color":"white","bold":"false","text":"Daleth"},{"color":"gray","bold":"false","text":", "},{"color":"#54ABC6","bold":"false","text":"ilyYerin"},{"color":"gray","bold":"false","text":", "},{"color":"#0000B6","bold":"false","text":"WeeAngus"},{"color":"gray","bold":"false","text":", "},{"color":"#ccff33","bold":"false","text":"PortableGames"},{"color":"gray","bold":"false","text":", "},{"color":"#ffe400","bold":"false","text":"PointyPlayz"},{"color":"gray","bold":"false","text":", "},{"color":"#71f3fd","bold":"false","text":"syntonical"},{"color":"gray","bold":"false","text":", "},{"color":"#5b69a7","bold":"false","text":"AmericanAir88"},{"color":"gray","bold":"false","text":", "},{"color":"#800336","bold":"false","text":"Jamsamamsa"},{"color":"gray","bold":"false","text":", "},{"color":"gray","bold":"false","text":"CyberDaxter"},{"color":"gray","bold":"false","text":", "},{"color":"gray","bold":"false","text":"Blobbie01"},{"color":"gray","bold":"false","text":" and "},{"color":"gray","bold":"false","text":"Keisti"}]},
+		"background": "minecraft:textures/block/dirt.png",
+		"show_toast": false,
+		"announce_to_chat": "false"
+	},
+	"rewards": {
+		"function": "bc_rewards:bacap/root"
+	},		
+	"criteria": {
+		"location": {
+			"trigger": "minecraft:location"
+		}
+	}
+}

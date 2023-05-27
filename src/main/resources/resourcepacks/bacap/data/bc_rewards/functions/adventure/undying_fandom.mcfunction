@@ -17,6 +17,24 @@ execute if score challenge bac_settings matches -2 if entity @s[team=bac_team_li
 execute if score challenge bac_settings matches -2 if entity @s[team=bac_team_yellow] unless score blazeandcave:adventure/undying_fandom bac_obtained_yellow matches 1.. run function bc_rewards:msg/adventure/undying_fandom
 execute if score challenge bac_settings matches -2 if entity @s[team=bac_team_white] unless score blazeandcave:adventure/undying_fandom bac_obtained_white matches 1.. run function bc_rewards:msg/adventure/undying_fandom
 
+execute if score trophy bac_settings matches 1 run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -1 unless score blazeandcave:adventure/undying_fandom bac_obtained matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_black] unless score blazeandcave:adventure/undying_fandom bac_obtained_black matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_dark_blue] unless score blazeandcave:adventure/undying_fandom bac_obtained_dark_blue matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_dark_green] unless score blazeandcave:adventure/undying_fandom bac_obtained_dark_green matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_dark_aqua] unless score blazeandcave:adventure/undying_fandom bac_obtained_dark_aqua matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_dark_red] unless score blazeandcave:adventure/undying_fandom bac_obtained_dark_red matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_dark_purple] unless score blazeandcave:adventure/undying_fandom bac_obtained_dark_purple matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_gold] unless score blazeandcave:adventure/undying_fandom bac_obtained_gold matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_gray] unless score blazeandcave:adventure/undying_fandom bac_obtained_gray matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_dark_gray] unless score blazeandcave:adventure/undying_fandom bac_obtained_dark_gray matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_blue] unless score blazeandcave:adventure/undying_fandom bac_obtained_blue matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_green] unless score blazeandcave:adventure/undying_fandom bac_obtained_green matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_aqua] unless score blazeandcave:adventure/undying_fandom bac_obtained_aqua matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_red] unless score blazeandcave:adventure/undying_fandom bac_obtained_red matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_light_purple] unless score blazeandcave:adventure/undying_fandom bac_obtained_light_purple matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_yellow] unless score blazeandcave:adventure/undying_fandom bac_obtained_yellow matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
+execute if score trophy bac_settings matches -2 if entity @s[team=bac_team_white] unless score blazeandcave:adventure/undying_fandom bac_obtained_white matches 1.. run function bc_rewards:trophy/adventure/undying_fandom
 execute if score reward bac_settings matches 1 run function bc_rewards:reward/adventure/undying_fandom
 execute if score reward bac_settings matches -1 unless score blazeandcave:adventure/undying_fandom bac_obtained matches 1.. run function bc_rewards:reward/adventure/undying_fandom
 execute if score reward bac_settings matches -2 if entity @s[team=bac_team_black] unless score blazeandcave:adventure/undying_fandom bac_obtained_black matches 1.. run function bc_rewards:reward/adventure/undying_fandom

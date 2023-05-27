@@ -1,0 +1,35 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:barrier"
+		},
+		"title": {"translate":"You are a big cheater!"},
+		"description": {"color":"red","translate":"You don't want to have this advancement unlocked!"},
+		"announce_to_chat": "true",
+		"frame": "goal",
+		"hidden": "true"
+	},
+	"parent": "blazeandcave:technical/big_cheater",
+	"rewards": {
+		"function": "bc_rewards:technical/cheater2"
+	},		
+	"criteria": {
+		"big_cheater": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "player",
+								"gamemode": "creative"
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

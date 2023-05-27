@@ -8,7 +8,7 @@
 		"announce_to_chat": "true",
 		"frame": "goal"
 	},
-	"parent": "blazeandcave:building/professor_dark_oak",
+	"parent": "blazeandcave:building/bamboozled",
 	"rewards": {
 		"function": "bc_rewards:building/mangrove_master"
 	},		
@@ -200,6 +200,18 @@
 					{
 						"items": [
 							"minecraft:mangrove_sign"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_hanging_sign"
 						]
 					}
 				]

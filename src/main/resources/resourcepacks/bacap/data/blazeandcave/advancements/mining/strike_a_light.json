@@ -15,11 +15,16 @@
 		"candle": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"item": {
-					"items": [
-						"minecraft:flint_and_steel"
-					]
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:flint_and_steel"
+							]
+						}
+					}
+				]
 			}
 		}
 	}

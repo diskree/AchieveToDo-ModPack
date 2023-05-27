@@ -4,7 +4,7 @@
 			"item": "minecraft:popped_chorus_fruit"
 		},
 		"title": {"translate":"Stack All the Items!"},
-		"description": {"color":"#FF2A2A","translate":"Obtain a stack of all the items!"},
+		"description": {"color":"#FF2A2A","translate":"Obtain a stack of all the items!","extra":[{"text":"\n\n"},{"italic":"true","color":"dark_gray","translate":"The following are not required:"},{"text":"\n"},{"color":"gray","translate":"item.minecraft.recovery_compass"},{"color":"gray","text":", "},{"color":"gray","translate":"Pottery Sherd"},{"color":"gray","text":". \n"},{"color":"gray","translate":"You only need a stack of one kind of Smithing Template"}]},
 		"announce_to_chat": "true",
 		"frame": "challenge"
 	},
@@ -3385,18 +3385,6 @@
 				]
 			}
 		},
-		"recovery_compass": {
-			"trigger": "minecraft:inventory_changed",
-			"conditions": {
-				"items": [
-					{
-						"items": [
-							"minecraft:recovery_compass"
-						]
-					}
-				]
-			}
-		},
 		"oak_chest_boat": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -3477,6 +3465,133 @@
 						"items": [
 							"minecraft:mangrove_chest_boat"
 						]
+					}
+				]
+			}
+		},
+		"brush": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:brush"
+						]
+					}
+				]
+			}
+		},
+		"music_disc_relic": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:music_disc_relic"
+						]
+					}
+				]
+			}
+		},
+		"pitcher_pod": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:pitcher_pod"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"torchflower_seeds": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:torchflower_seeds"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"bamboo_raft": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_raft"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_chest_raft": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_chest_raft"
+						]
+					}
+				]
+			}
+		},
+		"cherry_boat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_boat"
+						]
+					}
+				]
+			}
+		},
+		"cherry_chest_boat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_chest_boat"
+						]
+					}
+				]
+			}
+		},
+		"smithing_template": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:netherite_upgrade_smithing_template",
+							"minecraft:sentry_armor_trim_smithing_template",
+							"minecraft:dune_armor_trim_smithing_template",
+							"minecraft:coast_armor_trim_smithing_template",
+							"minecraft:wild_armor_trim_smithing_template",
+							"minecraft:wayfinder_armor_trim_smithing_template",
+							"minecraft:raiser_armor_trim_smithing_template",
+							"minecraft:shaper_armor_trim_smithing_template",
+							"minecraft:host_armor_trim_smithing_template",
+							"minecraft:ward_armor_trim_smithing_template",
+							"minecraft:silence_armor_trim_smithing_template",
+							"minecraft:eye_armor_trim_smithing_template",
+							"minecraft:vex_armor_trim_smithing_template",
+							"minecraft:tide_armor_trim_smithing_template",
+							"minecraft:snout_armor_trim_smithing_template",
+							"minecraft:rib_armor_trim_smithing_template",
+							"minecraft:spire_armor_trim_smithing_template"
+						],
+						"count": 64
 					}
 				]
 			}

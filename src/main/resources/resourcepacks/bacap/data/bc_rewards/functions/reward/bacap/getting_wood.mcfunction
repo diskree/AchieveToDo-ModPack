@@ -18,3 +18,6 @@ tellraw @s[advancements={blazeandcave:bacap/getting_wood={dark_oak_log=true,oak_
 
 give @s[advancements={blazeandcave:bacap/getting_wood={mangrove_log=true,oak_log=false}}] minecraft:mangrove_log 2
 tellraw @s[advancements={blazeandcave:bacap/getting_wood={mangrove_log=true,oak_log=false}}] {"color":"green","text":" +2 ","extra":[{"translate":"block.minecraft.mangrove_log"}]}
+
+give @s[advancements={blazeandcave:bacap/getting_wood={cherry_log=true,oak_log=false}}] minecraft:cherry_log 2
+tellraw @s[advancements={blazeandcave:bacap/getting_wood={cherry_log=true,oak_log=false}}] {"color":"green","text":" +2 ","extra":[{"translate":"block.minecraft.cherry_log"}]}

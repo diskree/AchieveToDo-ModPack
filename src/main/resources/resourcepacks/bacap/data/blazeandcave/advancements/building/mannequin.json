@@ -1,0 +1,28 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:armor_stand"
+		},
+		"title": {"translate":"Mannequin"},
+		"description": {"color":"green","translate":"Craft an armor stand for displaying your armor"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:building/smooth_dude",
+	"rewards": {
+		"function": "bc_rewards:building/mannequin"
+	},		
+	"criteria": {
+		"armor_stand": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:armor_stand"
+						]
+					}
+				]
+			}
+		}
+	}
+}

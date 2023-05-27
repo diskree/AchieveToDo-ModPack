@@ -18,3 +18,9 @@ tellraw @s[advancements={blazeandcave:farming/care_for_the_environment={dark_oak
 
 give @s[advancements={blazeandcave:farming/care_for_the_environment={mangrove_propagule=true,oak_sapling=false}}] minecraft:mangrove_propagule 2
 tellraw @s[advancements={blazeandcave:farming/care_for_the_environment={mangrove_propagule=true,oak_sapling=false}}] {"color":"green","text":" +2 ","extra":[{"translate":"block.minecraft.mangrove_propagule"}]}
+
+give @s[advancements={blazeandcave:farming/care_for_the_environment={bamboo_sapling=true,oak_sapling=false}}] minecraft:bamboo 2
+tellraw @s[advancements={blazeandcave:farming/care_for_the_environment={bamboo_sapling=true,oak_sapling=false}}] {"color":"green","text":" +2 ","extra":[{"translate":"block.minecraft.bamboo"}]}
+
+give @s[advancements={blazeandcave:farming/care_for_the_environment={cherry_sapling=true,oak_sapling=false}}] minecraft:cherry_sapling 2
+tellraw @s[advancements={blazeandcave:farming/care_for_the_environment={cherry_sapling=true,oak_sapling=false}}] {"color":"green","text":" +2 ","extra":[{"translate":"block.minecraft.cherry_sapling"}]}

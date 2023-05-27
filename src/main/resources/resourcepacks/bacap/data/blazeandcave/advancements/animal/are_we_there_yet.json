@@ -7,7 +7,7 @@
 		"description": {"color":"green","translate":"Tame a donkey"},
 		"announce_to_chat": "true"
 	},
-	"parent": "blazeandcave:animal/a_horse_in_shining_armor",
+	"parent": "blazeandcave:animal/cowboy",
 	"rewards": {
 		"function": "bc_rewards:animal/are_we_there_yet"
 	},		

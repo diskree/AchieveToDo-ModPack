@@ -15,9 +15,14 @@
 		"trapdoor": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"item": {			
-					"tag": "minecraft:trapdoors"
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"tag": "minecraft:trapdoors"
+						}
+					}
+				]
 			}
 		}
 	}	

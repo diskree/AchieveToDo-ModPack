@@ -16,37 +16,137 @@
 		"wheat": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:wheat"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:wheat"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"pumpkin_stem": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:pumpkin_stem"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:pumpkin_stem"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"melon_stem": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:melon_stem"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:melon_stem"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"beetroots": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:beetroots"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:beetroots"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"carrots": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:carrots"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:carrots"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"potatoes": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:potatoes"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:potatoes"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"torchflower_crop": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:torchflower_crop"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"pitcher_crop": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:pitcher_crop"
+								]
+							}
+						}
+					}
+				]
 			}
 		}
 	}

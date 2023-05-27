@@ -804,6 +804,28 @@
 					}
 				}
 			}
+		},
+		"camel": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "camel",
+					"location": {
+						"dimension": "the_nether"
+					}
+				}
+			}
+		},
+		"sniffer": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"entity": {
+					"type": "sniffer",
+					"location": {
+						"dimension": "the_nether"
+					}
+				}
+			}
 		}
 	}
 }

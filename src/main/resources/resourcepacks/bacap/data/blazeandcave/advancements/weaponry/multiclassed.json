@@ -1,0 +1,356 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:netherite_sword"
+		},
+		"title": {"translate":"Multiclassed"},
+		"description": {"color":"dark_purple","translate":"Hit a mob with every type of weapon"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:weaponry/shovel_knight",
+	"rewards": {
+		"function": "bc_rewards:weaponry/multiclassed"
+	},		
+	"criteria": {
+		"axe": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"distance": {
+						"absolute": {
+							"max": 5
+						}
+					}
+				},			
+				"damage": {
+					"type": {
+						"source_entity": {
+							"equipment": {
+								"mainhand": {
+									"tag": "minecraft:axes"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"shovel": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"distance": {
+						"absolute": {
+							"max": 5
+						}
+					}
+				},			
+				"damage": {
+					"type": {
+						"source_entity": {
+							"equipment": {
+								"mainhand": {
+									"tag": "minecraft:shovels"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"pickaxe": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"distance": {
+						"absolute": {
+							"max": 5
+						}
+					}
+				},			
+				"damage": {
+					"type": {
+						"source_entity": {
+							"equipment": {
+								"mainhand": {
+									"tag": "minecraft:pickaxes"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"hoe": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"distance": {
+						"absolute": {
+							"max": 5
+						}
+					}
+				},			
+				"damage": {
+					"type": {
+						"source_entity": {
+							"equipment": {
+								"mainhand": {
+									"tag": "minecraft:hoes"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"sword": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"distance": {
+						"absolute": {
+							"max": 5
+						}
+					}
+				},			
+				"damage": {
+					"type": {
+						"source_entity": {
+							"equipment": {
+								"mainhand": {
+									"tag": "minecraft:swords"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"bow": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"damage": {
+					"type": {
+						"source_entity": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:bow"
+									]
+								}
+							}
+						},
+						"tags": [
+							{
+								"id": "minecraft:is_projectile",
+								"expected": true
+							}
+						],
+						"direct_entity": {
+							"type": "minecraft:arrow"
+						}
+					}
+				}
+			}
+		},
+		"crossbow": {
+			"trigger": "minecraft:shot_crossbow",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:crossbow"
+					]
+				}
+			}
+		},
+		"trident_melee": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"distance": {
+						"absolute": {
+							"max": 5
+						}
+					}
+				},
+				"damage": {
+					"type": {
+						"source_entity": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:trident"
+									]
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"trident_thrown": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"damage": {
+					"type": {
+						"tags": [
+							{
+								"id": "minecraft:is_projectile",
+								"expected": true
+							}
+						],
+						"direct_entity": {
+							"type": "minecraft:trident"
+						}
+					}
+				}
+			}
+		},
+		"tnt": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"damage": {
+					"type": {
+						"tags": [
+							{
+								"id": "minecraft:is_projectile",
+								"expected": true
+							}
+						]
+					}
+				}
+			}
+		},
+		"snowball": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"damage": {
+					"type": {
+						"tags": [
+							{
+								"id": "minecraft:is_projectile",
+								"expected": true
+							}
+						],
+						"direct_entity": {
+							"type": "minecraft:snowball"
+						}
+					}
+				}
+			}
+		},
+		"egg": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"damage": {
+					"type": {
+						"tags": [
+							{
+								"id": "minecraft:is_projectile",
+								"expected": true
+							}
+						],
+						"direct_entity": {
+							"type": "minecraft:egg"
+						}
+					}
+				}
+			}
+		},
+		"fishing_rod": {
+			"trigger": "minecraft:fishing_rod_hooked",
+			"conditions": {
+				"entity": {
+					"distance": {
+						"absolute": {
+							"min": 0
+						}
+					}
+				}
+			}
+		},
+		"splash_potion": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"damage": {
+					"type": {
+						"tags": [
+							{
+								"id": "minecraft:is_projectile",
+								"expected": true
+							}
+						],
+						"direct_entity": {
+							"type": "minecraft:potion"
+						}
+					}
+				}
+			}
+		},
+		"lingering_potion": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"damage": {
+					"type": {
+						"tags": [
+							{
+								"id": "minecraft:is_projectile",
+								"expected": true
+							}
+						],
+						"direct_entity": {
+							"type": "minecraft:area_effect_cloud"
+						}
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"axe"
+		],
+		[
+			"shovel"
+		],
+		[
+			"pickaxe"
+		],
+		[
+			"hoe"
+		],
+		[
+			"sword"
+		],
+		[
+			"bow"
+		],
+		[
+			"crossbow"
+		],
+		[
+			"trident_melee",
+			"trident_thrown"
+		],
+		[
+			"tnt"
+		],
+		[
+			"snowball"
+		],
+		[
+			"egg"
+		],
+		[
+			"fishing_rod"
+		],
+		[
+			"splash_potion"
+		],
+		[
+			"lingering_potion"
+		]
+	]
+}

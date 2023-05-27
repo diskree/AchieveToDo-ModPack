@@ -4,7 +4,7 @@
 			"item": "minecraft:oak_planks"
 		},
 		"title": {"translate":"Building"},
-		"description": {"color":"green","translate":"Your only limit is your imagination... and resources"},
+		"description": {"color":"#CCCCCC","translate":"Your only limit is your imagination... and resources"},
 		"background": "minecraft:textures/block/oak_planks.png",
 		"show_toast": false,
 		"announce_to_chat": "false"

@@ -116,6 +116,21 @@
 					}
 				]
 			}
+		},
+		"cherry_log": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_log",
+							"minecraft:stripped_cherry_log",
+							"minecraft:cherry_wood",
+							"minecraft:stripped_cherry_wood"
+						]
+					}
+				]
+			}
 		}
 	},
 	"requirements": [
@@ -126,7 +141,8 @@
 		"jungle_log",
 		"acacia_log",
 		"dark_oak_log",
-		"mangrove_log"
+		"mangrove_log",
+		"cherry_log"
 		]
 	]
 }

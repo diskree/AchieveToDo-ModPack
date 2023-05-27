@@ -1,0 +1,27 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:cactus"
+		},
+		"title": {"translate":"Hump Day"},
+		"description": {"color":"green","translate":"Breed two Camels using cactus"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:animal/desert_rider",
+	"rewards": {
+		"function": "bc_rewards:animal/hump_day"
+	},		
+	"criteria": {
+		"camel": {
+			"trigger": "minecraft:bred_animals",
+			"conditions": {
+				"parent": {
+					"type": "minecraft:camel"
+				},
+				"partner": {
+					"type": "minecraft:camel"
+				}
+			}
+		}
+	}
+}

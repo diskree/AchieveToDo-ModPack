@@ -8,6 +8,8 @@ tellraw @s {"bold":"false","text":" ","extra":[{"color":"red","bold":"false","tr
 
 tellraw @s {"text":"                                             ","color":"dark_gray","strikethrough":true}
 
+# Global Install
+tellraw @s ["",{"text":"[ »» ]","color":"light_purple","clickEvent":{"action":"run_command","value":"/function blazeandcave:global_install"},"hoverEvent":{"action":"show_text","contents":["",{"translate":"Properly installs Hardcore, Terralith and other add-on versions of BlazeandCave's Advancements Pack that have been placed in your world's datapacks folder by reordering datapack priorities","color":"white"},{"text":"\n"},{"translate":"Click to run","color":"gold"}]}}," ",{"translate":"Global install"}]
 # Update Scoreboard
 tellraw @s ["",{"text":"[ »» ]","color":"green","clickEvent":{"action":"run_command","value":"/function bc_rewards:update_score"},"hoverEvent":{"action":"show_text","contents":["",{"translate":"Goes through every advancement for every player online, and recounts how many advancements they have","color":"white"},{"text":"\n"},{"translate":"Should be used if:","color":"white"},{"text":"\n"},{"translate":"- You have recently updated to a new datapack version, especially across a new Minecraft update","color":"white"},{"text":"\n"},{"translate":"- You have been using commands to manually revoke the advancements of player(s)","color":"white"},{"text":"\n"},{"translate":"Click to run","color":"gold"}]}}," ",{"translate":"Update scoreboard"}]
 # Update Team Scoreboard

@@ -14,6 +14,19 @@
 		"function": "bc_rewards:potion/furious_ammunition"
 	},	
 	"criteria": {
+		"water": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:tipped_arrow"
+						],
+						"potion": "minecraft:water"
+					}
+				]
+			}
+		},
 		"thick": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {

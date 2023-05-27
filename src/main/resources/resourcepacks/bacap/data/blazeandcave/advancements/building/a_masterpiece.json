@@ -1,0 +1,31 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:painting"
+		},
+		"title": {"translate":"A Masterpiece!"},
+		"description": {"color":"green","translate":"Put up a painting"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:building/help_ive_been_framed",
+	"rewards": {
+		"function": "bc_rewards:building/a_masterpiece"
+	},		
+	"criteria": {
+		"painting": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:painting"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

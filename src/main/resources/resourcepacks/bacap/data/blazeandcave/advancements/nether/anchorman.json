@@ -16,7 +16,18 @@
 		"respawn_anchor": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:respawn_anchor"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:respawn_anchor"
+								]
+							}
+						}
+					}
+				]
 			}
 		}
 	}

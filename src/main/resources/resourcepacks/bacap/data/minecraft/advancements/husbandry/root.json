@@ -4,7 +4,7 @@
 			"item": "minecraft:beef"
 		},
 		"title": {"translate":"Animals"},
-		"description": {"color":"green","translate":"The world is full of friends and food"},
+		"description": {"color":"#CCCCCC","translate":"The world is full of friends and food"},
 		"background": "minecraft:textures/block/green_concrete_powder.png",
 		"show_toast": false,
 		"announce_to_chat": "false"

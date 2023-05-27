@@ -4,7 +4,7 @@
 			"item": "minecraft:potion"
 		},
 		"title": {"translate":"Potions"},
-		"description": {"color":"green","translate":"Brewing potions with helpful and hindering effects"},
+		"description": {"color":"#CCCCCC","translate":"Brewing potions with helpful and hindering effects"},
 		"background": "minecraft:textures/block/glowstone.png",
 		"show_toast": false,
 		"announce_to_chat": "false"		

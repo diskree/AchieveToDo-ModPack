@@ -15,29 +15,37 @@
 		"soul_torch": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:soul_torch"
-			}
-		},
-		"soul_wall_torch": {
-			"trigger": "minecraft:placed_block",
-			"conditions": {
-				"block": "minecraft:soul_wall_torch"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:soul_torch",
+									"minecraft:soul_wall_torch"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"soul_lantern": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:soul_lantern"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:soul_lantern"
+								]
+							}
+						}
+					}
+				]
 			}
 		}
-	},
-	"requirements": [
-		[
-		"soul_torch",
-		"soul_wall_torch"
-		],
-		[
-		"soul_lantern"
-		]
-	]
+	}
 }

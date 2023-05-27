@@ -16,31 +16,75 @@
 		"hit_in_lava": {
 			"trigger": "minecraft:player_hurt_entity",
 			"conditions": {
-				"entity": {
-					"location": {
-						"block": {
-							"blocks": [
-								"minecraft:lava"
-							]
-						}
-					},
-					"distance": {
-						"absolute": {
-							"min": 0.1
-						}
-					}
-				},
-				"damage": {
-					"source_entity": {
-						"location": {
-							"block": {
-								"blocks": [
-									"minecraft:lava"
-								]
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"distance": {
+								"absolute": {
+									"min": 0.1
+								}
 							}
 						}
+					},
+					{
+						"condition": "minecraft:any_of",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"fluid": {
+											"fluid": "minecraft:lava"
+										}
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"fluid": {
+											"fluid": "minecraft:flowing_lava"
+										}
+									}
+								}
+							}
+						]
 					}
-				}
+				],
+				"player": [
+					{
+						"condition": "minecraft:any_of",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"fluid": {
+											"fluid": "minecraft:lava"
+										}
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"fluid": {
+											"fluid": "minecraft:flowing_lava"
+										}
+									}
+								}
+							}
+						]
+					}
+				]
 			}
 		}
 	}

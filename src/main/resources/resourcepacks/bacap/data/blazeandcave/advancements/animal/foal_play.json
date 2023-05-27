@@ -7,7 +7,7 @@
 		"description": {"color":"green","translate":"Breed a horse in an effort to get a better one"},
 		"announce_to_chat": "true"
 	},
-	"parent": "blazeandcave:animal/horse_armorer",
+	"parent": "blazeandcave:animal/cowboy",
 	"rewards": {
 		"function": "bc_rewards:animal/foal_play"
 	},		

@@ -1364,6 +1364,32 @@
 					}
 				}
 			}
+		},
+		"time_to_upgrade": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:nether/time_to_upgrade": "true"
+						}
+					}
+				}
+			}
+		},
+		"piglin_peril": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:nether/piglin_peril": "true"
+						}
+					}
+				}
+			}
 		}
 	}
 }

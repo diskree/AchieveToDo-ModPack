@@ -8,7 +8,7 @@
 # Currently the text that appears with reward functions are not translatable - support for translating the reward functions messages will come in a later update.
 
 # Language: Russian
-# Author: SoSeDiK (1.4-1.10), vlad8599 (1.10), KorS1z (1.11-1.12), Marsik_the_alien(1.12 - 1.13), _InGloriouS_ (1.13.7)
+# Author: SoSeDiK (1.4-1.10), vlad8599 (1.10), KorS1z (1.11-1.12), Marsik_the_alien(1.12 - 1.13), _InGloriouS_ (1.13.7), HarryDi (1.14), StrongDeep (1.15)
 # Pack version supported: 1.13.7
 
 # All language entries are organised in alphabetical order of file name as of 1.3
@@ -4897,10 +4897,179 @@
 "It's my fence post! Seriously, get out!": "Это моя ограда! Убирайся!",
 
 "Stone of the Farlands": "Камень Фарланда",
-"A preserved piece of stone from the lands that existed before Beta 1.8": "Сохраненный кусок камня из земли, существовавших до Beta 1.8"
+"A preserved piece of stone from the lands that existed before Beta 1.8": "Сохраненный кусок камня из земли, существовавших до Beta 1.8",
 
 
 
 
-# All advancements and trophies that get added in versions 1.15 or later will be added down here for easy locating by translators who wish to update their language file
+## All advancements added in version 1.15 are here
+"Nerds Never Die": "Ботаники никогда не умирают",
+"Name a Piglin Brute 'Technoblade'": "Назовите брутального пиглина 'Technoblade",
+
+"And make it double!": "И пусть она будет двойной!",
+"Play a jukebox near some Allays, then give one an Amethyst Shard and see what happens!": "Поставьте пластинку в проигрыватель рядом с тихонями, а затем дайте одному из них аметистовый осколок и посмотрите, что произойдёт!",
+
+"Living Dummy": "Живой манекен",
+"Get killed from hitting an Armor Stand": "Погибните от удара о стойку для брони",
+
+# Used in hardcore version
+"Get hurt from hitting an Armor Stand": "Получите урон от стойки для брони",
+
+"Built on Sand, Set in Stone": "Построен на песке, установлен в камне",
+"Craft or collect a stack of all forms of Sandstone and Red Sandstone": "Создайте или соберите стак всех форм песчаника и красного песчаника",
+
+"Hot Chocolate": "Горячий шоколад",
+"Plant some cocoa in the nice steamy Nether": "Посадите немного какао-бобов в приятном парном Незере",
+
+"Silence of the Lambs": "Молчание ягнят",
+"Bring a Sheep into an Ancient City and silence it": "Приведите овцу в древний город и заставьте её замолчать",
+
+"It's High Noon": "Сейчас полдень",
+"Snipe a Husk from 50 blocks away while riding a Horse": "Подстрелите кадавра с расстояния 50 блоков, сидя верхом на лошади",
+
+"Spleaf": "Сплиф",
+"Kill a mob using a shovel while both of you are standing on a Big Dripleaf": "Убейте моба с помощью лопаты, когда вы оба стоите на большой бросянке",
+
+"There it goes…": "Вот так...",
+"Kill a mob at the bottom of the world from the build limit using any kind of projectile": "Убейте моба, в самой нижней части мира, находясь в самой верхней его части, используя любой вид снаряда",
+
+"Unending Hell": "Нескончаемый ад",
+"Travel directly from the End to the Nether": "Пропутешествуйте прямо из Энда в Незер",
+
+
+# Missing from previous versions
+"Undying Fandom": "Бессмертный фандом",
+"Receive every type of gift from Villagers as a Hero of the Village": "Получите каждый тип подарка от крестьян как герой деревни",
+
+"Dig through some Rooted Dirt beneath an Azalea Tree so you can find a Lush Cave": "Раскопайте немного корневой земли под деревом азалии, чтобы найти пышную пещеру",
+
+
+# Added to Terralith version
+"Totally Not Terraria": "Совершенно не Террария",
+"Find an Underground Cabin": "Найдите подземную хижину",
+
+
+# Trophies added in 1.15
+"Crown of the Potato King": "Корона картофельного короля",
+"A crown forged in the purest gold, made by the richest of Piglins": "Корона, выкованная из чистейшего золота, сделанная богатейшим из пиглинов",
+"Worn only by Alex (aka Technoblade), the one and only Potato King": "Носит только Алекс (он же Техноблейд), единственный и неповторимый Картофельный Король",
+
+"Tinfoil Mining Helmet": "Шахтёрский шлем из фольги",
+"Baked by a chef and hermit known for": "Выпечка от шеф-повара и отшельника, известного",
+"extensive and exquisite branch mining": "обширной и изысканной добычей",
+
+"Calendar": "Календарь",
+"I hate Mondays": "Я ненавижу понедельники",
+
+# Farlander trophy description fix
+"A preserved piece of stone from": "Сохранившийся кусок камня из",
+"the lands that existed before Beta 1.8": "земель, существовавших до версии Бета 1.8",
+
+
+# Miscellaneous strings from compatibility versions
+"Advancement added by Terralith version": "Достижение, добавленное версией Terralith",
+
+"Modified by the Amplified Nether version": "Модифицировано версией Amplified Nether",
+
+
+# Configuration menu additions in 1.15 (including the Help Menu)
+"Click to follow link": "Кликните, чтобы перейти по ссылке",
+
+"The Welcome Message appears when a player logs into the world for the first time. On servers that already have a custom welcome message, this should be turned off": "Приветственное сообщение появляется, когда игрок впервые входит в мир. На серверах, где уже есть пользовательское приветственное сообщение, его следует отключить",
+
+"Item Rewards are a small amount of bonus items awarded upon completing some advancements": "Предметные вознаграждения - это небольшое количество бонусных предметов, выдаваемых по завершении некоторых достижений",
+"Experience Rewards are awarded upon completing some advancements, adding directly to a player's XP count": "Награды за опыт начисляются по завершении некоторых достижений и добавляются непосредственно к количеству XP игрока.",
+"Trophies are decorative items awarded upon completing some advancements, in particular challenges, super challenges and milestones": "Трофеи - это декоративные предметы, вручаемые по завершении некоторых достижений, в частности, испытаний, сверхвызовов и этапов.",
+
+"Cooperative Mode shares every advancement gained among every player": "В кооперативном режиме каждое полученное достижение делится между всеми игроками",
+"Team Cooperative Mode works similarly, but only shares among players of the same team": "Командный кооперативный режим работает аналогично, но только между игроками одной команды",
+
+"Settings for what messages that appear upon completing each tier of advancement should appear": "Настройки того, какие сообщения должны появляться после завершения каждого уровня достижения",
+"Settings for what type of scoreboard to display and where": "Настройки для выбора типа и места отображения табло",
+"Functions for updating, resetting and revoking advancements": "Функции для обновления, сброса и отзыва достижений",
+"Need help understanding how the datapack, this config menu, or anything else works?": "Нужна помощь в понимании того, как работает датапак, это меню конфигурации или что-либо еще?",
+
+"Help": "Помощь",
+
+# Help Menu
+"Help Menu": "Меню помощи",
+
+"Full documentation on how to use the Config Menu": "Полная документация о том, как использовать меню конфиг",
+"How to update to new datapack versions": "Как обновиться до новейшей версии датапака",
+"How to add players to teams": "Как добавлять игроков в команды",
+"Important Links": "Важные ссылки",
+"Troubleshooting": "Устранение неполадок",
+"Frequently Asked Questions": "Часто задаваемые вопросы",
+
+# # How to update to new datapack versions
+"1) Make a backup of your world for safety if you mess anything up": "1) Создайте резервную копию вашего мира для безопасности, если вы что-то испортите",
+"2) Leave your world for more safety and don't go in during the process": "2) Покиньте свой мир для большей безопасности и не входите в него во время процесса",
+"3) Delete the old datapacks COMPLETELY from your world": "3) Полностью удалите старые датапаки из вашего мира",
+"4) Copy and paste in the new updated datapacks": "4) Скопируйте и вставьте новые обновленные датапаки",
+"5) Go into your world. If the new datapacks are for a newer version of Minecraft make sure you are now using that version": "5) Зайдите в свой мир. Если новые датапаки предназначены для более новой версии Minecraft, убедитесь, что вы используете эту версию.",
+"6) If you messed up, go to your backup, make a backup of your backup, then repeat steps 2-6 on the backup": "6) Если вы что-то напутали, перейдите к резервной копии, сделайте резервную копию резервной копии, затем повторите шаги 2-6 на резервной копии.",
+
+# # How to add players to teams
+"This datapack adds 16 teams, one of each colour, that this datapack can work with.": "Этот датапак добавляет 16 команд, по одной каждого цвета, с которыми может работать этот датапак.",
+"For Team Cooperative Mode and team-based scoreboards to work properly, players MUST be added to these teams using the following command:": "Чтобы командный кооперативный режим и командные табло работали правильно, игроки ДОЛЖНЫ быть добавлены в эти команды с помощью следующей команды:",
+# Command is not translatable
+"You may freely change the team's display name, prefix and suffix using their respective commands as well": "Вы можете свободно изменять отображаемое имя команды, префикс и суффикс, используя соответствующие команды",
+
+# # Important Links
+"Language Pack": "Языковой пакет",
+"The Language Pack is a resource pack that translates all advancements and trophies into other languages.": "Языковой пакет - это ресурспак, который переводит все достижения и трофеи на другие языки.",
+
+"Hardcore Version": "Хардкорная версия",
+"The Hardcore Version is an add-on datapack that makes the datapack possible to complete in Hardcore Mode.": "Хардкорная версия - это дополнительный датапак, который позволяет завершить игру в режиме Хардкор.",
+
+"Terralith Version": "Версия Terralith",
+"The Terralith Version is an add-on datapack that adds advancements for the Terralith datapack by Starmute.": "Версия Terralith - это дополнительный датапак, который добавляет достижения для датапака Terralith от Starmute.",
+
+"Advancements Docmentation": "Документация о достижениях",
+"The Advancements Docmentation is a spreadsheet detailing every advancement in the datapack.": "Документация о достижениях - это электронная таблица с подробным описанием всех достижений в датапаке.",
+
+"List of Trophies": "Список трофеев",
+"A spreadsheet detailing every trophy in the datapack.": "Электронная таблица с подробным описанием каждого трофея в датапаке.",
+
+"Discord": "Discord",
+
+"Patreon": "Patreon",
+
+# # Troubleshooting
+"If certain aspects of this datapack are not working properly (e.g. Advancements are granted automatically when they shouldn't), make sure you are using the correct version of the datapack for the Minecraft version you are running.": "Если некоторые аспекты этого датапака работают неправильно (например, достижения даются автоматически, когда они не должны), убедитесь, что вы используете правильную версию датапака для версии Minecraft, которую вы запускаете.",
+"In addition, some advancements may break on Spigot or Paper servers.": "Кроме того, некоторые достижения могут сломаться на серверах Spigot или Paper.",
+
+# # FAQ Menu
+"Why aren't all tabs visible at the start?": "Почему не все вкладки видны в самом начале?",
+"How do I install the Language Pack?": "Как установить языковой пакет?",
+"How can I translate the advancements into a new language?": "Как перевести достижения на новый язык?",
+"What is the name of the mod that lets you see progress on advancements?": "Как называется мод, позволяющий видеть прогресс в достижениях?",
+
+# # # Why aren't all tabs visible at the start?
+"A tab will not show up if you haven't gained any advancements in that tab yet.": "Вкладка не будет отображаться, если вы еще не получили никаких достижений в этой вкладке.",
+"Most root advancements are easy to obtain, but some are further along in progression.": "Большинство начальных достижений легко получить, но некоторые получаются дольше.",
+"Notably, the Super Challenges tab is not unlocked until after defeating the Ender Dragon.": "Примечательно, что вкладка Сверхвызовы открывается только после победы над драконом Эндера.",
+
+# # # How do I install the Language Pack?
+"The Language Pack is NOT a datapack and is not installed in the same way.": "Языковой пакет НЕ является датапакои и не устанавливается таким же образом.",
+"Instead, it is a resource pack, and it is installed just like any other resource pack.": "Вместо этого это ресурспак, и он устанавливается так же, как и любой другой ресурспак.",
+"Place it into your resourcepacks folder, then select it in the resource pack menu.": "Поместите его в папку resourcepacks, затем выберите его в меню Наборов данных.",
+"Once you do this, the custom advancements will appear in whatever language you have selected if this language is supported.": "Как только вы это сделаете, пользовательские достижения появятся на том языке, который вы выбрали, если этот язык поддерживается.",
+
+# # # How can I translate the advancements into a new language?
+"Download the Language Pack, unzip it, then locate the file named base_language_file.json": "Скачайте языковой пакет, распакуйте его, затем найдите файл с именем base_language_file.json",
+"Follow the instructions within in order to translate your language.": "Для перевода следуйте приведенным в нем инструкциям.",
+"If you finish translating a new language, you can send it to the creator (Cavinator1) on Planet Minecraft or Discord and it may get added in a future update!": "Если вы закончили перевод нового языка, вы можете отправить его создателю (Cavinator1) на Planet Minecraft или Discord, и он может быть добавлен в будущем обновлении!",
+"You will be credited for your contributions to translation.": "Вы будете отмечены в помощи перевода.",
+
+# # # What is the name of the mod that lets you see progress on advancements?
+"The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "Мод, о котором идет речь, называется Advancement Info, он отображает требования, которые были выполнены для каждого достижения.",
+"It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "Это очень полезно, особенно для сверхзадач с большим количеством требований, таких как 'Все блоки'.",
+"It can be downloaded here:": "Его можно скачать здесь:"
+# Link is not translatable
+
+
+
+
+# All advancements, trophies and other text strings that get added in versions 1.16 or later will be added down here for easy locating by translators who wish to update their language file
 }

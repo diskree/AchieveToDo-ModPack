@@ -1,0 +1,803 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:redstone_block"
+		},
+		"title": {"translate":"Master Engineer"},
+		"description": {"color":"dark_purple","translate":"Craft a stack of all types of redstone component"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:redstone/engineer",
+	"rewards": {
+		"function": "bc_rewards:redstone/master_engineer"
+	},
+	"criteria": {
+		"redstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:redstone"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"redstone_torch": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:redstone_torch"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"redstone_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:redstone_block"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"repeater": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:repeater"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"comparator": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:comparator"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"target": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:target"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"lever": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:lever"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"oak_button": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:oak_button"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"stone_button": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:stone_button"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"oak_pressure_plate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:stone_pressure_plate"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"light_weighted_pressure_plate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:light_weighted_pressure_plate"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"heavy_weighted_pressure_plate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:heavy_weighted_pressure_plate"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"sculk_sensor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sculk_sensor"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"calibrated_sculk_sensor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:calibrated_sculk_sensor"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"sculk_shrieker": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sculk_shrieker"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"amethyst_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:amethyst_block"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"white_wool": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:white_wool"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"tripwire_hook": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:tripwire_hook"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"string": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:string"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"lectern": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:lectern"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"daylight_detector": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:daylight_detector"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"lightning_rod": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:lightning_rod"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"piston": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:piston"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"sticky_piston": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sticky_piston"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"slime_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:slime_block"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"honey_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:honey_block"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"dispenser": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:dispenser"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"dropper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:dropper"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"hopper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:hopper"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"chest": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:chest"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"barrel": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:barrel"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"chiseled_bookshelf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:chiseled_bookshelf"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"furnace": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:furnace"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"trapped_chest": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:trapped_chest"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"jukebox": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:jukebox"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"observer": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:observer"
+						],
+						"count": 64
+					}
+				]
+			}
+		},	
+		"note_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:note_block"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"composter": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:composter"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"cauldron": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cauldron"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"rail": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:rail"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"powered_rail": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:powered_rail"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"detector_rail": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:detector_rail"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"activator_rail": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:activator_rail"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"minecart": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:minecart"
+						]
+					}
+				]
+			}
+		},
+		"hopper_minecart": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:hopper_minecart"
+						]
+					}
+				]
+			}
+		},
+		"chest_minecart": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:chest_minecart"
+						]
+					}
+				]
+			}
+		},
+		"furnace_minecart": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:furnace_minecart"
+						]
+					}
+				]
+			}
+		},
+		"tnt_minecart": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:tnt_minecart"
+						]
+					}
+				]
+			}
+		},
+		"oak_chest_boat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:oak_chest_boat"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_chest_raft": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_chest_raft"
+						]
+					}
+				]
+			}
+		},
+		"oak_door": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:oak_door"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"iron_door": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:iron_door"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"oak_fence_gate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:oak_fence_gate"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"oak_trapdoor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:oak_trapdoor"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"iron_trapdoor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:iron_trapdoor"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"tnt": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:tnt"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"redstone_lamp": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:redstone_lamp"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"bell": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bell"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"big_dripleaf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:big_dripleaf"
+						],
+						"count": 64
+					}
+				]
+			}
+		},
+		"armor_stand": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:armor_stand"
+						],
+						"count": 16
+					}
+				]
+			}
+		},
+		"redstone_ore": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:redstone_ore"
+						],
+						"count": 64
+					}
+				]
+			}
+		}
+	}
+}

@@ -16,40 +16,64 @@
 		"clean_leather_armor": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"tag": "minecraft:cauldrons"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"tag": "minecraft:cauldrons"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"tag": "minecraft:leather_armor"
+						}
 					}
-				},
-				"item": {
-					"tag": "minecraft:leather_armor"
-				}
+				]
 			}
 		},
 		"clean_banner": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"tag": "minecraft:cauldrons"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"tag": "minecraft:cauldrons"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"tag": "minecraft:banners"
+						}
 					}
-				},
-				"item": {
-					"tag": "minecraft:banners"
-				}
+				]
 			}
 		},
 		"clean_shulker_box": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"tag": "minecraft:cauldrons"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"tag": "minecraft:cauldrons"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"tag": "minecraft:shulker_boxes"
+						}
 					}
-				},
-				"item": {
-					"tag": "minecraft:shulker_boxes"
-				}
+				]
 			}
 		}
 	}

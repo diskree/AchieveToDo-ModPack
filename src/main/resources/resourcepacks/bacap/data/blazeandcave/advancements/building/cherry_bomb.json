@@ -1,0 +1,221 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:cherry_sapling"
+		},
+		"title": {"translate":"Cherry Bomb"},
+		"description": {"color":"#75E1FF","translate":"Craft every item made out of cherry wood"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:building/professor_dark_oak",
+	"rewards": {
+		"function": "bc_rewards:building/cherry_bomb"
+	},		
+	"criteria": {
+		"cherry_planks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_planks"
+						]
+					}
+				]
+			}
+		},
+		"cherry_log": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_log"
+						]
+					}
+				]
+			}
+		},
+		"cherry_wood": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_wood"
+						]
+					}
+				]
+			}
+		},
+		"stripped_cherry_log": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:stripped_cherry_log"
+						]
+					}
+				]
+			}
+		},
+		"stripped_cherry_wood": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:stripped_cherry_wood"
+						]
+					}
+				]
+			}
+		},
+		"cherry_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_slab"
+						]
+					}
+				]
+			}
+		},
+		"cherry_pressure_plate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_pressure_plate"
+						]
+					}
+				]
+			}
+		},
+		"cherry_fence": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_fence"
+						]
+					}
+				]
+			}
+		},
+		"cherry_trapdoor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_trapdoor"
+						]
+					}
+				]
+			}
+		},
+		"cherry_fence_gate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_fence_gate"
+						]
+					}
+				]
+			}
+		},
+		"cherry_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_stairs"
+						]
+					}
+				]
+			}
+		},
+		"cherry_button": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_button"
+						]
+					}
+				]
+			}
+		},
+		"cherry_door": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_door"
+						]
+					}
+				]
+			}
+		},
+		"cherry_boat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_boat"
+						]
+					}
+				]
+			}
+		},
+		"cherry_chest_boat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_chest_boat"
+						]
+					}
+				]
+			}
+		},
+		"cherry_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_sign"
+						]
+					}
+				]
+			}
+		},
+		"cherry_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_hanging_sign"
+						]
+					}
+				]
+			}
+		}
+	}
+}

@@ -4,7 +4,7 @@
 			"item": "minecraft:apple"
 		},
 		"title": {"translate":"An Apple a Day"},
-		"description": {"color":"dark_purple","translate":"Eat an Apple every day for 30 in-game days"},
+		"description": {"color":"dark_purple","translate":"Eat an Apple every day for 30 in-game days","extra":[{"text":"\n\n"},{"italic":"true","color":"dark_gray","translate":"To view progress, run:"},{"color":"gray","text":"\n/trigger bac_apple_a_day"}]},
 		"announce_to_chat": "true",
 		"frame": "challenge"
 	},

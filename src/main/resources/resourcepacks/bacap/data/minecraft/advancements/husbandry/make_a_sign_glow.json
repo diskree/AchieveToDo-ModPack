@@ -15,16 +15,24 @@
 		"glow_ink_sac": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"tag": "minecraft:signs"
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:glow_ink_sac"
+							]
+						}
+					},
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"tag": "minecraft:all_signs"
+							}
+						}
 					}
-				},
-				"item": {
-					"items": [
-						"minecraft:glow_ink_sac"
-					]
-				}
+				]
 			}
 		}
 	}	

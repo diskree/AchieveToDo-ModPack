@@ -1,0 +1,302 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:diamond_boots",
+			"nbt": "{Trim:{material:\"minecraft:redstone\",pattern:\"minecraft:sentry\"}}"
+		},
+		"title": {"translate":"Coordinated Flair"},
+		"description": {"color":"#75E1FF","translate":"Wear a suit of armor with all four pieces trimmed with the same material"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:adventure/mold_maker",
+	"rewards": {
+		"function": "bc_rewards:adventure/coordinated_flair"
+	},
+	"criteria": {
+		"amethyst": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"nbt": "{Trim:{material:\"minecraft:amethyst\"}}"
+								},
+								"chest": {
+									"nbt": "{Trim:{material:\"minecraft:amethyst\"}}"
+								},
+								"legs": {
+									"nbt": "{Trim:{material:\"minecraft:amethyst\"}}"
+								},
+								"feet": {
+									"nbt": "{Trim:{material:\"minecraft:amethyst\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"copper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"nbt": "{Trim:{material:\"minecraft:copper\"}}"
+								},
+								"chest": {
+									"nbt": "{Trim:{material:\"minecraft:copper\"}}"
+								},
+								"legs": {
+									"nbt": "{Trim:{material:\"minecraft:copper\"}}"
+								},
+								"feet": {
+									"nbt": "{Trim:{material:\"minecraft:copper\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"diamond": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"nbt": "{Trim:{material:\"minecraft:diamond\"}}"
+								},
+								"chest": {
+									"nbt": "{Trim:{material:\"minecraft:diamond\"}}"
+								},
+								"legs": {
+									"nbt": "{Trim:{material:\"minecraft:diamond\"}}"
+								},
+								"feet": {
+									"nbt": "{Trim:{material:\"minecraft:diamond\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"emerald": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"nbt": "{Trim:{material:\"minecraft:emerald\"}}"
+								},
+								"chest": {
+									"nbt": "{Trim:{material:\"minecraft:emerald\"}}"
+								},
+								"legs": {
+									"nbt": "{Trim:{material:\"minecraft:emerald\"}}"
+								},
+								"feet": {
+									"nbt": "{Trim:{material:\"minecraft:emerald\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"gold": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"nbt": "{Trim:{material:\"minecraft:gold\"}}"
+								},
+								"chest": {
+									"nbt": "{Trim:{material:\"minecraft:gold\"}}"
+								},
+								"legs": {
+									"nbt": "{Trim:{material:\"minecraft:gold\"}}"
+								},
+								"feet": {
+									"nbt": "{Trim:{material:\"minecraft:gold\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"iron": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"nbt": "{Trim:{material:\"minecraft:iron\"}}"
+								},
+								"chest": {
+									"nbt": "{Trim:{material:\"minecraft:iron\"}}"
+								},
+								"legs": {
+									"nbt": "{Trim:{material:\"minecraft:iron\"}}"
+								},
+								"feet": {
+									"nbt": "{Trim:{material:\"minecraft:iron\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"lapis": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"nbt": "{Trim:{material:\"minecraft:lapis\"}}"
+								},
+								"chest": {
+									"nbt": "{Trim:{material:\"minecraft:lapis\"}}"
+								},
+								"legs": {
+									"nbt": "{Trim:{material:\"minecraft:lapis\"}}"
+								},
+								"feet": {
+									"nbt": "{Trim:{material:\"minecraft:lapis\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"quartz": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"nbt": "{Trim:{material:\"minecraft:quartz\"}}"
+								},
+								"chest": {
+									"nbt": "{Trim:{material:\"minecraft:quartz\"}}"
+								},
+								"legs": {
+									"nbt": "{Trim:{material:\"minecraft:quartz\"}}"
+								},
+								"feet": {
+									"nbt": "{Trim:{material:\"minecraft:quartz\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"netherite": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"nbt": "{Trim:{material:\"minecraft:netherite\"}}"
+								},
+								"chest": {
+									"nbt": "{Trim:{material:\"minecraft:netherite\"}}"
+								},
+								"legs": {
+									"nbt": "{Trim:{material:\"minecraft:netherite\"}}"
+								},
+								"feet": {
+									"nbt": "{Trim:{material:\"minecraft:netherite\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"redstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"head": {
+									"nbt": "{Trim:{material:\"minecraft:redstone\"}}"
+								},
+								"chest": {
+									"nbt": "{Trim:{material:\"minecraft:redstone\"}}"
+								},
+								"legs": {
+									"nbt": "{Trim:{material:\"minecraft:redstone\"}}"
+								},
+								"feet": {
+									"nbt": "{Trim:{material:\"minecraft:redstone\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"amethyst",
+			"copper",
+			"diamond",
+			"emerald",
+			"gold",
+			"iron",
+			"lapis",
+			"quartz",
+			"netherite",
+			"redstone"
+		]
+	]
+}

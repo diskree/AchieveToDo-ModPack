@@ -8,7 +8,7 @@
 		"announce_to_chat": "true",
 		"frame": "goal"
 	},
-	"parent": "blazeandcave:building/raise_the_flag",
+	"parent": "blazeandcave:building/prepare_to_meet_your_loom",
 	"rewards": {
 		"function": "bc_rewards:building/no_banner_only_color"
 	},		

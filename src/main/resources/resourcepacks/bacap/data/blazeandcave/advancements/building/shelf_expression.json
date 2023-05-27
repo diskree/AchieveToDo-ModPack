@@ -1,0 +1,52 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:chiseled_bookshelf"
+		},
+		"title": {"translate":"Shelf Expression"},
+		"description": {"color":"green","translate":"Fill a Chiseled Bookshelf with books"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:building/writers_block",
+	"rewards": {
+		"function": "bc_rewards:building/shelf_expression"
+	},		
+	"criteria": {
+		"chiseled_bookshelf": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:chiseled_bookshelf"
+								],
+								"state": {
+									"slot_0_occupied": true,
+									"slot_1_occupied": true,
+									"slot_2_occupied": true,
+									"slot_3_occupied": true,
+									"slot_4_occupied": true,
+									"slot_5_occupied": true
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:book",
+								"minecraft:enchanted_book",
+								"minecraft:writable_book",
+								"minecraft:written_book"
+							]
+						}
+					}
+				]
+			}
+		}
+	}	
+}

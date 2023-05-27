@@ -1,0 +1,18 @@
+{
+	"rewards": {
+		"function": "blazeandcave:statistics/consume_food_null"
+	},
+	"criteria": {
+		"consume_food_null": {
+			"trigger": "consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:potion",
+						"minecraft:milk_bucket"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,139 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:diamond"
+		},
+		"title": {"translate":"Mold Maker"},
+		"description": {"color":"green","translate":"Use seven diamonds to duplicate a Smithing Template"},
+		"announce_to_chat": "true"
+	},
+	"parent": "minecraft:adventure/trim_with_any_armor_pattern",
+	"rewards": {
+		"function": "bc_rewards:adventure/mold_maker"
+	},		
+	"criteria": {
+		"netherite_upgrade": {
+		"conditions": {
+				"recipe_id": "minecraft:netherite_upgrade_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"coast_armor_trim": {
+		"conditions": {
+				"recipe_id": "minecraft:coast_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"dune_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:dune_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"eye_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:eye_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"host_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:host_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"raiser_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:raiser_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"rib_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:rib_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"sentry_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:sentry_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"shaper_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:shaper_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"silence_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:silence_armor_trim_smithing_template"
+			},	
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"snout_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:snout_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"spire_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:spire_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"tide_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:tide_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"vex_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:vex_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"ward_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:ward_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"wayfinder_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:wayfinder_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		},
+		"wild_armor_trim": {
+			"conditions": {
+				"recipe_id": "minecraft:wild_armor_trim_smithing_template"
+			},
+			"trigger": "minecraft:recipe_crafted"
+		}
+	},
+	"requirements": [
+		[
+			"netherite_upgrade",
+			"tide_armor_trim",
+			"snout_armor_trim",
+			"wild_armor_trim",
+			"sentry_armor_trim",
+			"raiser_armor_trim",
+			"coast_armor_trim",
+			"host_armor_trim",
+			"rib_armor_trim",
+			"eye_armor_trim",
+			"silence_armor_trim",
+			"spire_armor_trim",
+			"shaper_armor_trim",
+			"wayfinder_armor_trim",
+			"vex_armor_trim",
+			"ward_armor_trim",
+			"dune_armor_trim"
+		]
+	]
+}

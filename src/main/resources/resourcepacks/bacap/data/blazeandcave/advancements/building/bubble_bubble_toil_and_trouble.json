@@ -15,18 +15,26 @@
 		"fill_cauldron": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:water_cauldron"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:water_cauldron"
+								]
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:water_bucket"
+							]
+						}
 					}
-				},
-				"item": {
-					"items": [
-						"minecraft:water_bucket"
-					]
-				}
+				]
 			}
 		}
 	}

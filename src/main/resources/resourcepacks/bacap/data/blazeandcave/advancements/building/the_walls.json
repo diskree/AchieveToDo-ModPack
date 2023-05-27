@@ -15,7 +15,18 @@
 		"cobblestone_wall": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:cobblestone_wall"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:cobblestone_wall"
+								]
+							}
+						}
+					}
+				]
 			}
 		}
 	}

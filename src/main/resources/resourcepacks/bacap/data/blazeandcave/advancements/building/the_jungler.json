@@ -204,6 +204,18 @@
 					}
 				]
 			}
+		},
+		"jungle_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:jungle_hanging_sign"
+						]
+					}
+				]
+			}
 		}
 	}
 }

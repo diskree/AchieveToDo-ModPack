@@ -16,79 +16,222 @@
 		"composter": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:composter"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:composter"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"barrel": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:barrel"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:barrel"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"loom": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:loom"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:loom"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"fletching_table": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:fletching_table"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:fletching_table"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"brewing_stand": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:brewing_stand"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:brewing_stand"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"smoker": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:smoker"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:smoker"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"cauldron": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:cauldron"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:cauldron"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"grindstone": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:grindstone"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:grindstone"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"blast_furnace": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:blast_furnace"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:blast_furnace"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"smithing_table": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:smithing_table"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:smithing_table"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"lectern": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:lectern"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:lectern"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"cartography_table": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:cartography_table"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:cartography_table"
+								]
+							}
+						}
+					}
+				]
 			}
 		},
 		"stonecutter": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:stonecutter"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:stonecutter"
+								]
+							}
+						}
+					}
+				]
 			}
 		}
 	}

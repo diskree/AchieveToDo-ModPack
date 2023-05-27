@@ -4,7 +4,7 @@
 			"item": "minecraft:firework_rocket"
 		},
 		"title": {"translate":"Happy New Year!"},
-		"description": {"color":"dark_purple","translate":"Play for a whole Minecraft year"},
+		"description": {"color":"dark_purple","translate":"Play for a whole Minecraft year","extra":[{"text":"\n\n"},{"italic":"true","color":"dark_gray","translate":"To view progress, run:"},{"color":"gray","text":"\n/trigger bac_statistics"}]},
 		"announce_to_chat": "true",
 		"frame": "challenge"
 	},

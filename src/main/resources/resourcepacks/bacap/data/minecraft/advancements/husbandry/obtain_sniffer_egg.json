@@ -1,0 +1,28 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:sniffer_egg"
+		},
+		"title": {"translate":"Life… uhh… finds a way"},
+		"description": {"color":"green","translate":"Find a strange egg among the sand of an Ocean Ruin using a Brush. Smells interesting"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:adventure/brushed_away",
+	"rewards": {
+		"function": "bc_rewards:adventure/life_uhh_finds_a_way"
+	},
+	"criteria": {
+		"obtain_sniffer_egg": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sniffer_egg"
+						]
+					}
+				]
+			}
+		}
+	}
+}

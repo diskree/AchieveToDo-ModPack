@@ -4,7 +4,7 @@
 			"item": "minecraft:map"
 		},
 		"title": {"translate":"Adventure"},
-		"description": {"color":"green","translate":"Village, Pillage and Dungeons!"},
+		"description": {"color":"#CCCCCC","translate":"Village, pillage and exploration"},
 		"background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
 		"show_toast": false,
 		"announce_to_chat": "false"

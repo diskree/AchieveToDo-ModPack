@@ -16,17 +16,25 @@
 		"play_jukebox_in_meadows": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:jukebox"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:jukebox"
+								]
+							},
+							"biome": "minecraft:meadow"
+						}
 					},
-					"biome": "minecraft:meadow"
-				},
-				"item": {
-					"tag": "minecraft:music_discs"
-				}
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"tag": "minecraft:music_discs"
+						}
+					}
+				]
 			}
 		}
 	}

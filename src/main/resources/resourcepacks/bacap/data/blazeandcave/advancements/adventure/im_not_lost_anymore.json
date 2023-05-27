@@ -15,16 +15,24 @@
 		"map": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"tag": "minecraft:banners"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"tag": "minecraft:banners"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:filled_map"
+							]
+						}
 					}
-				},
-				"item": {
-					"items": [
-						"minecraft:filled_map"
-					]
-				}
+				]
 			}
 		}
 	}

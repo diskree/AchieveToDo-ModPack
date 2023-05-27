@@ -4,7 +4,7 @@
 			"item": "minecraft:ender_eye"
 		},
 		"title": {"translate":"Super Challenges"},
-		"description": {"color":"dark_purple","translate":"Good luck completing... any of these ;)"},
+		"description": {"color":"#CCCCCC","translate":"Good luck completing... any of these ;)"},
 		"background": "minecraft:textures/block/bedrock.png",
 		"show_toast": false,
 		"announce_to_chat": "false",
@@ -676,6 +676,19 @@
 					}
 				}
 			}
+		},
+		"poglin": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:challenges/poglin": "true"
+						}
+					}
+				}
+			}
 		}
 	},
 	"requirements": [
@@ -725,7 +738,8 @@
 			"the_perfect_run",
 			"telescopic",
 			"riddle_me_this",
-			"farlander"
+			"farlander",
+			"poglin"
 		]
 	]
 }

@@ -45,11 +45,12 @@
 							}
 						}
 					},
-					"is_explosion": "false",
-					"is_projectile": "false",
-					"is_magic": "false",
-					"is_fire": "false",
-					"is_lightning": "false"
+					"tags": [
+						{
+							"id": "minecraft:player_attack",
+							"expected": true
+						}
+					]
 				}
 			}
 		}

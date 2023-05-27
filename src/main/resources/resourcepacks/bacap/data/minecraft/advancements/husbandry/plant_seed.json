@@ -1,0 +1,146 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:wheat_seeds"
+		},
+		"title": {"translate":"A Seedy Place"},
+		"description": {"color":"green","translate":"Plant a seed and watch it grow"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:farming/root",
+	"rewards": {
+		"function": "bc_rewards:farming/a_seedy_place"
+	},		
+	"criteria": {
+		"wheat": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:wheat"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"pumpkin_stem": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:pumpkin_stem"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"melon_stem": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:melon_stem"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"beetroots": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:beetroots"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"nether_wart": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:nether_wart"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"torchflower_crop": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:torchflower_crop"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"pitcher_crop": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:pitcher_crop"
+								]
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+		"wheat",
+		"pumpkin_stem",
+		"melon_stem",
+		"beetroots",
+		"nether_wart",
+		"torchflower_crop",
+		"pitcher_crop"
+		]
+	]
+}

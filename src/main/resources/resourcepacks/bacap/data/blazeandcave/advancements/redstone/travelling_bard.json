@@ -16,16 +16,21 @@
 		"snowy_plains": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -66,14 +71,19 @@
 		"snowy_taiga": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "minecraft:snowy_taiga"
-				},
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "minecraft:snowy_taiga"
+						}
+					}
+				],
 				"player": [
 					{
 						"condition": "minecraft:inverted",
@@ -94,16 +104,21 @@
 		"windswept_hills": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -153,14 +168,19 @@
 		"taiga": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "minecraft:taiga"
-				},
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "minecraft:taiga"
+						}
+					}
+				],
 				"player": [
 					{
 						"condition": "minecraft:inverted",
@@ -181,16 +201,21 @@
 		"old_growth_taiga": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -231,16 +256,21 @@
 		"plains": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -281,16 +311,21 @@
 		"forest": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -331,16 +366,21 @@
 		"birch_forest": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -381,14 +421,19 @@
 		"dark_forest": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "minecraft:dark_forest"
-				},
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "minecraft:dark_forest"
+						}
+					}
+				],
 				"player": [
 					{
 						"condition": "minecraft:inverted",
@@ -409,16 +454,21 @@
 		"swamp": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -459,16 +509,21 @@
 		"jungle": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -527,16 +582,21 @@
 		"river": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -577,16 +637,21 @@
 		"beach": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -636,14 +701,19 @@
 		"mushroom_fields": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "minecraft:mushroom_fields"
-				},
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "minecraft:mushroom_fields"
+						}
+					}
+				],
 				"player": [
 					{
 						"condition": "minecraft:inverted",
@@ -664,14 +734,19 @@
 		"desert": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "minecraft:desert"
-				},
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "minecraft:desert"
+						}
+					}
+				],
 				"player": [
 					{
 						"condition": "minecraft:inverted",
@@ -692,16 +767,21 @@
 		"savanna": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -751,16 +831,21 @@
 		"badlands": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -810,14 +895,19 @@
 		"warm_ocean": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "minecraft:warm_ocean"
-				},
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "minecraft:warm_ocean"
+						}
+					}
+				],
 				"player": [
 					{
 						"condition": "minecraft:inverted",
@@ -838,16 +928,21 @@
 		"lukewarm_ocean": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -888,16 +983,21 @@
 		"ocean": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -938,16 +1038,21 @@
 		"cold_ocean": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -988,16 +1093,21 @@
 		"frozen_ocean": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -1038,14 +1148,19 @@
 		"meadow": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "minecraft:meadow"
-				},
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "minecraft:meadow"
+						}
+					}
+				],
 				"player": [
 					{
 						"condition": "minecraft:inverted",
@@ -1066,16 +1181,21 @@
 		"snowy_slopes_or_grove": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -1116,16 +1236,21 @@
 		"peaks": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -1175,81 +1300,111 @@
 		"nether_wastes": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "nether_wastes"
-				}
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "nether_wastes"
+						}
+					}
+				]
 			}
 		},
 		"soul_sand_valley": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "soul_sand_valley"
-				}
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "soul_sand_valley"
+						}
+					}
+				]
 			}
 		},
 		"crimson_forest": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "crimson_forest"
-				}
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "crimson_forest"
+						}
+					}
+				]
 			}
 		},
 		"warped_forest": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "warped_forest"
-				}
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "warped_forest"
+						}
+					}
+				]
 			}
 		},
 		"basalt_deltas": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "basalt_deltas"
-				}
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "basalt_deltas"
+						}
+					}
+				]
 			}
 		},
 		"the_end": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
+				],
 				"player": [
 					{
-						"condition": "minecraft:alternative",
+						"condition": "minecraft:any_of",
 						"terms": [
 							{
 								"condition": "minecraft:entity_properties",
@@ -1317,40 +1472,73 @@
 		"lush_caves": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "lush_caves"
-				}
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "lush_caves"
+						}
+					}
+				]
 			}
 		},
 		"dripstone_caves": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "dripstone_caves"
-				}
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "dripstone_caves"
+						}
+					}
+				]
 			}
 		},
 		"deep_dark": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
-					},
-					"biome": "deep_dark"
-				}
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "deep_dark"
+						}
+					}
+				]
+			}
+		},
+		"cherry_grove": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							},
+							"biome": "cherry_grove"
+						}
+					}
+				]
 			}
 		}
 	}

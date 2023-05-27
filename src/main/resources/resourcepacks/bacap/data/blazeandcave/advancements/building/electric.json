@@ -15,7 +15,18 @@
 		"redstone_lamp": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:redstone_lamp"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:redstone_lamp"
+								]
+							}
+						}
+					}
+				]
 			}
 		}
 	}

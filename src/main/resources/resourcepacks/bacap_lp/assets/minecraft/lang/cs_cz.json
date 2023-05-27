@@ -9,7 +9,7 @@
 
 # Language: czech
 # Author: mc.planetcraft.cz - Tereza Breburdová
-# Pack version supported: 1.13.7
+# Pack version supported: 1.15
 
 # All language entries are organised in alphabetical order of file name as of 1.3
 # All new advancements added in updates later than 1.3 (1.4, 1.5 and so on) will be put at the bottom of the file for easy locating and adding by translators
@@ -4515,7 +4515,7 @@
 "You have explored everything this world has to offer": "Objevil/a jsi všechno, co tento svět nabízí",
 "But at the end of it all, it is all still made from stardust": "Ale nakonec je to všechno stejně vyrobené z hvězdného prachu",
 
-
+
 
 # Configuration menu additions in 1.13.3-1.13.6
 "First player on each team": "První hráč každého týmu",
@@ -4794,7 +4794,7 @@
 # Description changes in 1.14
  
 # Vibe Check
-"Use Silk Touch to pick up a Sculk Sensor or find one among Ancient City treasure": "Použij očarování Silk Touch k sebrání skulkového čidla (Sculk Sensor), nebo ho zkus najít v pokladu v Ancient City",
+"Use Silk Touch to pick up a Sculk Sensor or find one among Ancient City treasure": "Použij očarování Silk Touch k sebrání skulkového čidla (Sculk Sensor), nebo ho zkus najít v pokladu Ztraceného Města",
  
 # Spelunker
 "Discover every cave biome": "Prozkoumej každý jeskynní biom",
@@ -4874,10 +4874,176 @@
 "It's my fence post! Seriously, get out!": "To je MŮJ rohový sloupek! A teď vážně, vypadni!",
  
 "Stone of the Farlands": "Kámen z Farlands",
-"A preserved piece of stone from the lands that existed before Beta 1.8": "Zachovalý kus kamene ze zemí, které existovaly před Beta"
+"A preserved piece of stone from the lands that existed before Beta 1.8": "Zachovalý kus kamene ze zemí, které existovaly před Beta",
+
+## All advancements added in version 1.15 are here
+"Nerds Never Die": "Nerdi Nikdy Neumírají",
+"Name a Piglin Brute 'Technoblade'": "Pojmenuj Piglin Bruta 'Technoblade'",
+
+"And make it double!": "A zdvojnásob to!",
+"Play a jukebox near some Allays, then give one an Amethyst Shard and see what happens!": "Vlož disk do jukeboxu poblíž nějakých Alíků (Allays), poté jednomu dej Ametystový Střep, a sleduj, co se stane!",
+
+"Living Dummy": "Živý Panák",
+"Get killed from hitting an Armor Stand": "Zemři při bouchaní do Stojanu na zbroj",
+
+# Used in hardcore version
+"Get hurt from hitting an Armor Stand": "Nech se udeřit Stojanem na zbroj",
+
+"Built on Sand, Set in Stone": "Postaven na písku, Zasazen v kameni",
+"Craft or collect a stack of all forms of Sandstone and Red Sandstone": "Vyrob nebo posbírej stack všech forem Pískovce a Rudého Pískovce",
+
+"Hot Chocolate": "Horká Čokoláda",
+"Plant some cocoa in the nice steamy Nether": "Zasaď v Netheru Kakaové boby",
+
+"Silence of the Lambs": "Mlčení Jehňátek",
+"Bring a Sheep into an Ancient City and silence it": "Přiveď do Ztraceného Města ovci, a umlč ji",
+
+"It's High Noon": "Dvanáctá hodina",
+"Snipe a Husk from 50 blocks away while riding a Horse": "Sestřel Pouštní zombie na vzdálenost 50 metrů, zatímco jedeš na koni",
+
+"Spleaf": "Podkopávačka",
+"Kill a mob using a shovel while both of you are standing on a Big Dripleaf": "Zabij moba lopatou, zatímco oba stojíte na Velké krápence",
+
+"There it goes…": "A je to pryč..",
+"Kill a mob at the bottom of the world from the build limit using any kind of projectile": "Zabij moba na dně světa ze stavebního limitu, za použítí jakéhokoliv projektilu",
+
+"Unending Hell": "Nekonečné Peklo",
+"Travel directly from the End to the Nether": "Cestuj z Endu přímo do Netheru",
+
+
+# Missing from previous versions
+"Undying Fandom": "Nesmrtelné Fanouškovství",
+"Receive every type of gift from Villagers as a Hero of the Village": "Dostaň od Vesničanů každý druh dárku jakožto Hrdina Vesnice",
+
+"Dig through some Rooted Dirt beneath an Azalea Tree so you can find a Lush Cave": "Prokopej se Prorostlou hlínou pod Azalkou, pro nalezení Zarostlé jeskyně",
+
+
+# Added to Terralith version
+"Totally Not Terraria": "Určitě ne Terraria",
+"Find an Underground Cabin": "Najdi Podzemní domeček",
+
+
+# Trophies added in 1.15
+"Crown of the Potato King": "Koruna Bramborového Krále",
+"A crown forged in the purest gold, made by the richest of Piglins": "Koruna ulita z nejčistšího zlata, ukována nejbohatšími Pigliny",
+"Worn only by Alex (aka Technoblade), the one and only Potato King": "Nošena pouze Alexem (Technobladem), jediným právoplatným Bramborovým Králem",
+
+"Tinfoil Mining Helmet": "Těžařská Čepička z Alobalu",
+"Baked by a chef and hermit known for": "Upečeno kuchařem a poustevníkem, známým za",
+"extensive and exquisite branch mining": "extenzivní a exkvizitní větvené kopání",
+
+"Calendar": "Kelandář",
+"I hate Mondays": "Nesnáším Pondělí",
+
+# Farlander trophy description fix
+"A preserved piece of stone from": "Prezervovaný kus kamene z",
+"the lands that existed before Beta 1.8": "krajů, které existovaly před Betou 1.8",
+
+
+# Miscellaneous strings from compatibility versions
+"Advancement added by Terralith version": "Pokrok přidaný v Terralith verzi",
+
+"Modified by the Amplified Nether version": "Upravený Vylepšenou Nether Verzí",
+
+
+# Configuration menu additions in 1.15 (including the Help Menu)
+"Click to follow link": "Klikni pro následování odkazu",
+
+"The Welcome Message appears when a player logs into the world for the first time. On servers that already have a custom welcome message, this should be turned off": "Uvítací zpráva se objeví při prvním připojení hráče. Na serverech s vlastní uvítací zprávou by toto mělo být vypnuté.",
+
+"Item Rewards are a small amount of bonus items awarded upon completing some advancements": "Odměny jsou malé bonusy, obdržené za plnění některých Úspěchů",
+"Experience Rewards are awarded upon completing some advancements, adding directly to a player's XP count": "Zkušenostní odměny jsou připisovány přímo k hráčským zkušenostem",
+"Trophies are decorative items awarded upon completing some advancements, in particular challenges, super challenges and milestones": "Trofeje jsou dekorativní předměty, obdržené za plnění určitých Úspěchů, Výzev, Supervýzev, a milníků",
+
+"Cooperative Mode shares every advancement gained among every player": "Kooperativní Mód sdílí Úspěchy mezi všemi hráči",
+"Team Cooperative Mode works similarly, but only shares among players of the same team": "Týmový Kooperativní Mód funguje podobně, ale sdílí Úspěchy pouze mezi hráči ve stejném Týmu",
+
+"Settings for what messages that appear upon completing each tier of advancement should appear": "Nastavení pro zprávy, které se budou ukazovat po splnění každého stupně Úspěchu",
+"Settings for what type of scoreboard to display and where": "Nastavení pro to, kde a jakou tabulku ukazovat",
+"Functions for updating, resetting and revoking advancements": "Funkce pro updatování, resetování, a odebírání Úspěchů",
+"Need help understanding how the datapack, this config menu, or anything else works?": "Potřebuješ vysvětlit jak datapack, konfigurační menu, nebo cokoliv jiného funguje?",
+
+"Help": "Pomoc",
+
+# Help Menu
+"Help Menu": "Pomocné menu",
+
+"Full documentation on how to use the Config Menu": "Kompletní návod jak použít Konfigurační menu",
+"How to update to new datapack versions": "Jak přejít na novou verzi datapacku",
+"How to add players to teams": "Jak přidat hráče do týmu",
+"Important Links": "Důležité odkazy",
+"Troubleshooting": "Pomoc s potížemi",
+"Frequently Asked Questions": "Často Tázané Otázky",
+
+# # How to update to new datapack versions
+"1) Make a backup of your world for safety if you mess anything up": "1) Udělej si zálohu světa, pro případ že se něco pokazí",
+"2) Leave your world for more safety and don't go in during the process": "2) Odejdi z tvého světa pro větší bezpečnost, a nevracej se do něj během procesu",
+"3) Delete the old datapacks COMPLETELY from your world": "3) ÚPLNĚ odstraň staré datapacky z tvého světa",
+"4) Copy and paste in the new updated datapacks": "4) Zkopíruj a vlož nové updatované datapacky",
+"5) Go into your world. If the new datapacks are for a newer version of Minecraft make sure you are now using that version": "5) Vrať se do tvého světa. Pokud jsou datapacky pro novější verzi hry, ujisti se, že ji používáš",
+"6) If you messed up, go to your backup, make a backup of your backup, then repeat steps 2-6 on the backup": "6) Pokud se něco nepovedlo, vrať se k záloze, udělej si zálohu zálohy, a opakuj kroky 2-6",
+
+# # How to add players to teams
+"This datapack adds 16 teams, one of each colour, that this datapack can work with.": "Tento datapack přidává 16 týmů, každý s jinou barvou, ke které se může hráč připojit.",
+"For Team Cooperative Mode and team-based scoreboards to work properly, players MUST be added to these teams using the following command:": "Pro to, aby fungovaly tabulky v Týmovém Kooperativním Módu, se hráči MUSÍ přidat do týmu pomocí následujícího příkazu:",
+# Command is not translatable
+"You may freely change the team's display name, prefix and suffix using their respective commands as well": "Můžeš volně změnit jméno týmu, prefix a suffix za pomocí přiřazených příkazů",
+
+# # Important Links
+"Language Pack": "Jazykový soubor",
+"The Language Pack is a resource pack that translates all advancements and trophies into other languages.": "Tento jazykový soubor je soubor, který překládá všechny úspěchy a trofeje do jiných jazyků.",
+
+"Hardcore Version": "Hardcore Verze",
+"The Hardcore Version is an add-on datapack that makes the datapack possible to complete in Hardcore Mode.": "Hardcore Verze je verze datapacku, která umožňuje splnit všechny úspěchy i v Hardcore režimu",
+
+"Terralith Version": "Terralith Verze",
+"The Terralith Version is an add-on datapack that adds advancements for the Terralith datapack by Starmute.": "Terralith Verze je verze datapacku, která přidává úspěchy v Terralith Datapacku od Starmute.",
+
+"Advancements Docmentation": "Dokumentace Úspěchů",
+"The Advancements Docmentation is a spreadsheet detailing every advancement in the datapack.": "Dokumentace Úspěchů popisuje každý úspěch v datapacku.",
+
+"List of Trophies": "Seznam Trofejí",
+"A spreadsheet detailing every trophy in the datapack.": "Tabulka popisující všechny Trofeje v Datapacku",
+
+"Discord": "Discord",
+
+"Patreon": "Patreon",
+
+# # Troubleshooting
+"If certain aspects of this datapack are not working properly (e.g. Advancements are granted automatically when they shouldn't), make sure you are using the correct version of the datapack for the Minecraft version you are running.": "Pokud některé aspekty tohoto datapacku nefungují (např. že se plní Úspěchy, které by se plnit neměly), ujisti se, že používáš správnou verzi datapacku pro verzi hry, na které hraješ.",
+"In addition, some advancements may break on Spigot or Paper servers.": "A dodatečně, některé úspěchy se můžou rozbít na Spigot a Paper serverech.",
+
+# # FAQ Menu
+"Why aren't all tabs visible at the start?": "Proč nejsou všechny kategorie viditelné už od začátku?",
+"How do I install the Language Pack?": "Jak nainstaluju jazykový soubor?",
+"How can I translate the advancements into a new language?": "Jak můžu přeložit úspěchy do nového jazyku?",
+"What is the name of the mod that lets you see progress on advancements?": "Jaký je název modu, který umožňuje vidět postup v daném úspěchu?",
+
+# # # Why aren't all tabs visible at the start?
+"A tab will not show up if you haven't gained any advancements in that tab yet.": "Kategorie se neukážou, dokud v nich nesplníte aspoň jeden úspěch.",
+"Most root advancements are easy to obtain, but some are further along in progression.": "Některé kořenové úspěchy jsou jednoduché, ale některé jsou až v pokročilejším stádiu.",
+"Notably, the Super Challenges tab is not unlocked until after defeating the Ender Dragon.": "Například Super Výzvy se odemknou až po zabití Ender Draka.",
+
+# # # How do I install the Language Pack?
+"The Language Pack is NOT a datapack and is not installed in the same way.": "Jazykový soubor NENÍ datapack a neinstaluje se stejným způsobem.",
+"Instead, it is a resource pack, and it is installed just like any other resource pack.": "Je to resource pack, a instaluje se jako každý jiný.",
+"Place it into your resourcepacks folder, then select it in the resource pack menu.": "Vlož soubor do tvé resourcepacks složky, a pak ho vyber v resource pack menu.",
+"Once you do this, the custom advancements will appear in whatever language you have selected if this language is supported.": "Jakmile tohle uděláš, úspěchy se budou zobrazovat v jazyce, který chceš, pokud je tento jazyk podporovaný.",
+
+# # # How can I translate the advancements into a new language?
+"Download the Language Pack, unzip it, then locate the file named base_language_file.json": "Stáhni si Jazykový soubor, odzipuj ho, najdi soubor base_language_file.json",
+"Follow the instructions within in order to translate your language.": "A následuj instrukce uvnitř při překládání do tvého jazyka.",
+"If you finish translating a new language, you can send it to the creator (Cavinator1) on Planet Minecraft or Discord and it may get added in a future update!": "Pokud dokončíš překlad do nového jazyka, pošli soubor tvůrci (Cavinator1) na Planet Minecraft, nebo na Discordu, a může být přidán v následujících updatech!",
+"You will be credited for your contributions to translation.": "Za tvůj překlad dostaneš kredit.",
+
+# # # What is the name of the mod that lets you see progress on advancements?
+"The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "Tento mod se nazývá Advancement Info, a zobrazuje požadavky, které je potřeba splnit u každého úspěchu.",
+"It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "Je neskutečně užitečný, obzvlášť při Super Výzvách se spoustu požadavky, jako je například 'Všechny Bloky'.",
+"It can be downloaded here:": "Stáhnout ho můžeš zde:"
+# Link is not translatable
 
 
 
 
-# All advancements and trophies that get added in versions 1.15 or later will be added down here for easy locating by translators who wish to update their language file
+# All advancements, trophies and other text strings that get added in versions 1.16 or later will be added down here for easy locating by translators who wish to update their language file
 }

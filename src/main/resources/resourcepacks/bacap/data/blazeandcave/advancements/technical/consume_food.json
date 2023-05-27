@@ -1,0 +1,10 @@
+{
+	"rewards": {
+		"function": "blazeandcave:statistics/consume_food"
+	},
+	"criteria": {
+		"consume_food": {
+			"trigger": "consume_item"
+		}
+	}
+}

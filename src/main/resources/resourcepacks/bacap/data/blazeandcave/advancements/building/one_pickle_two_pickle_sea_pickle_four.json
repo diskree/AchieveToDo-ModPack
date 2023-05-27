@@ -15,22 +15,30 @@
 		"sea_pickle": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:sea_pickle"
-						],
-						"state": {
-							"pickles": 4,
-							"waterlogged": true
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:sea_pickle"
+								],
+								"state": {
+									"pickles": 4,
+									"waterlogged": true
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:sea_pickle"
+							]
 						}
 					}
-				},
-				"item": {
-					"items": [
-						"minecraft:sea_pickle"
-					]
-				}
+				]
 			}
 		}
 	}

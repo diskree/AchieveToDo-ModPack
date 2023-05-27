@@ -1,0 +1,26 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:suspicious_sand"
+		},
+		"title": {"translate":"Respecting the Remnants"},
+		"description": {"color":"green","translate":"Using a Brush, carefully excavate a Pottery Sherd from a suspicious block"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:adventure/brushed_away",
+	"rewards": {
+		"function": "bc_rewards:adventure/respecting_the_remnants"
+	},	
+	"criteria": {
+		"has_sherd": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "minecraft:decorated_pot_sherds"
+					}
+				]
+			}
+		}
+	}
+}

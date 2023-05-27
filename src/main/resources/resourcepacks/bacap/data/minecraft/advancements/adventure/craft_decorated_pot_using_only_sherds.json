@@ -1,0 +1,38 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:decorated_pot",
+			"nbt": "{BlockEntityTag:{sherds:[\"minecraft:brick\",\"minecraft:heart_pottery_sherd\",\"minecraft:brick\",\"minecraft:explorer_pottery_sherd\"]}}"
+		},
+		"title": {"translate":"Careful Restoration"},
+		"description": {"color":"#75E1FF","translate":"Put together a Decorated Pot using four Pottery Sherds"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "minecraft:adventure/salvage_sherd",
+	"rewards": {
+		"function": "bc_rewards:adventure/careful_restoration"
+	},		
+	"criteria": {
+		"pot_crafted_using_only_sherds": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "minecraft:decorated_pot",
+				"ingredients": [
+					{
+						"tag": "minecraft:decorated_pot_sherds"
+					},
+					{
+						"tag": "minecraft:decorated_pot_sherds"
+					},
+					{
+						"tag": "minecraft:decorated_pot_sherds"
+					},
+					{
+						"tag": "minecraft:decorated_pot_sherds"
+					}
+				]
+			}
+		}
+	}
+}

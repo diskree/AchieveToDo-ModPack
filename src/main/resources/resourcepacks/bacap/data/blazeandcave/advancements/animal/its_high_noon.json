@@ -1,0 +1,43 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:bow"
+		},
+		"title": {"translate":"It's High Noon"},
+		"description": {"color":"dark_purple","translate":"Snipe a Husk from 50 blocks away while riding a Horse"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:animal/so_hungry_i_could_eat_a_horse",
+	"rewards": {
+		"function": "bc_rewards:animal/its_high_noon"
+	},	
+	"criteria": {
+		"high_noon": {
+			"trigger": "minecraft:player_killed_entity",
+			"conditions": {
+				"killing_blow": {
+					"tags": [
+							{
+								"id": "minecraft:is_projectile",
+								"expected": true
+							}
+						]
+				},
+				"entity": {
+					"type": "husk",
+					"distance": {
+						"horizontal": {
+							"min": 50
+						}
+					}
+				},
+				"player": {
+					"vehicle": {
+						"type": "horse"
+					}
+				}
+			}
+		}	
+	}
+}

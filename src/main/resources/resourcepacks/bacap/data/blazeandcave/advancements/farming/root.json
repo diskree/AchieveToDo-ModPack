@@ -4,7 +4,7 @@
 			"item": "minecraft:hay_block"
 		},
 		"title": {"translate":"Farming"},
-		"description": {"color":"green","translate":"Hoe hoe hoe!"},
+		"description": {"color":"#CCCCCC","translate":"Hoe hoe hoe!"},
 		"background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png",
 		"show_toast": false,
 		"announce_to_chat": "false"

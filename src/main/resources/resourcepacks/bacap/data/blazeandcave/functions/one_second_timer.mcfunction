@@ -1,8 +1,14 @@
 # Function runs once per second
 
-# # An Apple a Day /trigger command
+# # Trigger commands
+
+# An Apple a Day
 scoreboard players enable @a bac_apple_a_day
 execute as @a if score @s bac_apple_a_day matches 1.. run function blazeandcave:apple_a_day_trigger
+
+# Statistics
+scoreboard players enable @a bac_statistics
+execute as @a if score @s bac_statistics matches 1.. run function blazeandcave:statistics_trigger
 
 
 # # Llama Festival (progress resets if the player has not completed the advancement and is not sitting on a llama)

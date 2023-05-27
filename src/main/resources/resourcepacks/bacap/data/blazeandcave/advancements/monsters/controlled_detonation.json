@@ -16,10 +16,7 @@
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"item": {
-					"items": [
-						"minecraft:flint_and_steel",
-						"minecraft:fire_charge"
-					]
+					"tag": "minecraft:creeper_igniters"
 				},
 				"entity": [
 					{

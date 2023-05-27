@@ -9288,6 +9288,606 @@
 					}
 				]
 			}
+		},
+		"bamboo_mosaic": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_mosaic"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_mosaic_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_mosaic_stairs"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_mosaic_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_mosaic_slab"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_planks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_planks"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_button": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_button"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_door": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_door"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_fence": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_fence"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_fence_gate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_fence_gate"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_pressure_plate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_pressure_plate"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_sign"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_slab"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_stairs"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_trapdoor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_trapdoor"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_block"
+						]
+					}
+				]
+			}
+		},
+		"stripped_bamboo_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:stripped_bamboo_block"
+						]
+					}
+				]
+			}
+		},
+		"calibrated_sculk_sensor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:calibrated_sculk_sensor"
+						]
+					}
+				]
+			}
+		},
+		"cherry_leaves": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_leaves"
+						]
+					}
+				]
+			}
+		},
+		"cherry_log": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_log"
+						]
+					}
+				]
+			}
+		},
+		"stripped_cherry_log": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:stripped_cherry_log"
+						]
+					}
+				]
+			}
+		},
+		"cherry_planks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_planks"
+						]
+					}
+				]
+			}
+		},
+		"cherry_slab": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_slab"
+						]
+					}
+				]
+			}
+		},
+		"cherry_pressure_plate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_pressure_plate"
+						]
+					}
+				]
+			}
+		},
+		"cherry_fence": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_fence"
+						]
+					}
+				]
+			}
+		},
+		"cherry_trapdoor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_trapdoor"
+						]
+					}
+				]
+			}
+		},
+		"cherry_fence_gate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_fence_gate"
+						]
+					}
+				]
+			}
+		},
+		"cherry_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_stairs"
+						]
+					}
+				]
+			}
+		},
+		"cherry_button": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_button"
+						]
+					}
+				]
+			}
+		},
+		"cherry_door": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_door"
+						]
+					}
+				]
+			}
+		},
+		"cherry_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_sign"
+						]
+					}
+				]
+			}
+		},
+		"cherry_sapling": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_sapling"
+						]
+					}
+				]
+			}
+		},
+		"cherry_wood": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_wood"
+						]
+					}
+				]
+			}
+		},
+		"stripped_cherry_wood": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:stripped_cherry_wood"
+						]
+					}
+				]
+			}
+		},
+		"chiseled_bookshelf": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:chiseled_bookshelf"
+						]
+					}
+				]
+			}
+		},
+		"decorated_pot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:decorated_pot"
+						]
+					}
+				]
+			}
+		},
+		"oak_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:oak_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"spruce_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:spruce_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"birch_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:birch_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"jungle_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:jungle_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"acacia_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:acacia_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"dark_oak_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:dark_oak_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"mangrove_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:mangrove_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"crimson_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:crimson_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"warped_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:warped_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"cherry_hanging_sign": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_hanging_sign"
+						]
+					}
+				]
+			}
+		},
+		"piglin_head": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:piglin_head"
+						]
+					}
+				]
+			}
+		},
+		"pink_petals": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:pink_petals"
+						]
+					}
+				]
+			}
+		},
+		"pitcher_plant": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:pitcher_plant"
+						]
+					}
+				]
+			}
+		},
+		"sniffer_egg": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sniffer_egg"
+						]
+					}
+				]
+			}
+		},
+		"torchflower": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:torchflower"
+						]
+					}
+				]
+			}
 		}
 	}
 }

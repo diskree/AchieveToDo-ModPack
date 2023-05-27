@@ -16,18 +16,26 @@
 		"allay_deliver_cake_to_note_block": {
 			"trigger": "minecraft:allay_drop_item_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						]
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:cake"
+							]
+						}
+					},
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								]
+							}
+						}
 					}
-				},
-				"item": {
-					"items": [
-						"minecraft:cake"
-					]
-				}
+				]
 			}
 		}
 	}

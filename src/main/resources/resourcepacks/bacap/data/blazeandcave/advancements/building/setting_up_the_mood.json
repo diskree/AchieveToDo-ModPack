@@ -15,14 +15,22 @@
 		"candle": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"tag": "minecraft:candles"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"tag": "blazeandcave:candles_and_cakes"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"tag": "blazeandcave:candle_lightables"
+						}
 					}
-				},
-				"item": {
-					"tag": "blazeandcave:candle_lightables"
-				}
+				]
 			}
 		}
 	}

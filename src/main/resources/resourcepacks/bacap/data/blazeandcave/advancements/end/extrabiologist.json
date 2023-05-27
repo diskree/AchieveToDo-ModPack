@@ -15,10 +15,19 @@
 		"chorus_flower": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:chorus_flower",
-				"location": {
-					"dimension": "overworld"
-				}
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:chorus_flower"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
 			}
 		}
 	}

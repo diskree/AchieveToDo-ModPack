@@ -15,8 +15,19 @@
 		"iron_door": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:iron_door"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:iron_door"
+								]
+							}
+						}
+					}
+				]
 			}
-		}		
+		}	
 	}
 }

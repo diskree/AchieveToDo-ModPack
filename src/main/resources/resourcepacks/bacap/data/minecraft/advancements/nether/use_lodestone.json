@@ -16,18 +16,26 @@
 		"use_lodestone": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [ 
-							"minecraft:lodestone"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:lodestone"
+								]
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:compass"
+							]
+						}
 					}
-				},
-				"item": {
-					"items": [ 
-						"minecraft:compass"
-					]
-				}
+				]
 			}
 		}
 	}

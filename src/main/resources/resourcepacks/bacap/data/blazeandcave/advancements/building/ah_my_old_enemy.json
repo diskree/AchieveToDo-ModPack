@@ -612,6 +612,42 @@
 					}
 				]
 			}
+		},
+		"bamboo_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_stairs"
+						]
+					}
+				]
+			}
+		},
+		"bamboo_mosaic_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bamboo_mosaic_stairs"
+						]
+					}
+				]
+			}
+		},
+		"cherry_stairs": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cherry_stairs"
+						]
+					}
+				]
+			}
 		}
 	}		
 }

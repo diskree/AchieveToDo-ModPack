@@ -24,10 +24,11 @@
 								"block": {
 									"blocks": [
 										"minecraft:pointed_dripstone"
-									]
-								},
-								"state": {
-									"thickness": "tip"
+									],
+									"state": {
+										"thickness": "tip",
+										"waterlogged": "false"
+									}
 								}
 							}
 						},

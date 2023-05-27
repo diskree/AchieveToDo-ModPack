@@ -1,0 +1,44 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:sentry_armor_trim_smithing_template"
+		},
+		"title": {"translate":"Good-Lookin’ Treasure"},
+		"description": {"color":"green","translate":"Find a Smithing Template"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:adventure/tomb_raider",
+	"rewards": {
+		"function": "bc_rewards:adventure/good_lookin_treasure"
+	},		
+	"criteria": {
+		"trim_templates": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "minecraft:trim_templates"
+					}
+				]
+			}
+		},
+		"netherite_upgrade": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:netherite_upgrade_smithing_template"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+		"trim_templates",
+		"netherite_upgrade"
+		]
+	]
+}

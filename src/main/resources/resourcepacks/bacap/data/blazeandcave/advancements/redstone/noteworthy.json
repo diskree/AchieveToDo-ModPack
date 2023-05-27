@@ -16,241 +16,321 @@
 		"banjo": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "banjo"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "banjo"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"basedrum": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "basedrum"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "basedrum"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"bass": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "bass"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "bass"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"bell": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "bell"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "bell"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"bit": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "bit"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "bit"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"chime": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "chime"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "chime"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"cow_bell": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "cow_bell"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "cow_bell"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"didgeridoo": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "didgeridoo"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "didgeridoo"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"flute": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "flute"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "flute"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"guitar": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "guitar"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "guitar"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"harp": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "harp"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "harp"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"hat": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "hat"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "hat"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"iron_xylophone": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "iron_xylophone"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "iron_xylophone"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"pling": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "pling"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "pling"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"snare": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "snare"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "snare"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		},
 		"xylophone": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:note_block"
-						],
-						"state": {
-							"instrument": "xylophone"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:note_block"
+								],
+								"state": {
+									"instrument": "xylophone"
+								}
+							}
 						}
 					}
-				}
+				]
 			}
 		}
 	}

@@ -15,7 +15,18 @@
 		"jack_o_lantern": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"block": "minecraft:jack_o_lantern"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:jack_o_lantern"
+								]
+							}
+						}
+					}
+				]
 			}
 		}
 	}

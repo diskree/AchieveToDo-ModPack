@@ -25,16 +25,24 @@
 		"directly_wax_block": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"tag": "blazeandcave:waxed_copper_blocks"
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"tag": "blazeandcave:waxed_copper_blocks"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:honeycomb"
+							]
+						}
 					}
-				},
-				"item": {
-					"items": [
-						"minecraft:honeycomb"
-					]
-				}
+				]
 			}
 		}
 	},

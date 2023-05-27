@@ -16,45 +16,61 @@
 		"cod_bucket": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"item":
-				{
-					"items": [
-						"minecraft:cod_bucket"
-					]
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:cod_bucket"
+							]
+						}
+					}
+				]
 			}
 		},
 		"salmon_bucket": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"item":
-				{
-					"items": [
-						"minecraft:salmon_bucket"
-					]
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:salmon_bucket"
+							]
+						}
+					}
+				]
 			}
 		},
 		"pufferfish_bucket": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"item":
-				{
-					"items": [
-						"minecraft:pufferfish_bucket"
-					]
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:pufferfish_bucket"
+							]
+						}
+					}
+				]
 			}
 		},
 		"tropical_fish_bucket": {
 			"trigger": "minecraft:placed_block",
 			"conditions": {
-				"item":
-				{
-					"items": [
-						"minecraft:tropical_fish_bucket"
-					]
-				}
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": [
+								"minecraft:tropical_fish_bucket"
+							]
+						}
+					}
+				]
 			}
 		}		
 	}

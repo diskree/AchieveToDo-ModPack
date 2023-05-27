@@ -20,7 +20,12 @@
 					"type": "minecraft:ghast"
 				},
 				"killing_blow": {
-					"is_projectile": true,
+					"tags": [
+							{
+								"id": "minecraft:is_projectile",
+								"expected": true
+							}
+						],
 					"direct_entity": {
 						"type": "minecraft:fireball"
 					}

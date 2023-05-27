@@ -1,0 +1,29 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:vex_armor_trim_smithing_template"
+		},
+		"title": {"translate":"Vexingly Hard to Find"},
+		"description": {"color":"#75E1FF","translate":"Find the Vex Smithing Template in a Woodland Mansion"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:adventure/genesis_of_the_end",
+	"rewards": {
+		"function": "bc_rewards:adventure/vexingly_hard_to_find"
+	},		
+	"criteria": {
+		"vex_armor_trim_smithing_template": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:vex_armor_trim_smithing_template"
+						]
+					}
+				]
+			}
+		}
+	}
+}

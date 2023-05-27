@@ -1,0 +1,29 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:sculk_sensor"
+		},
+		"title": {"translate":"Vibe Check"},
+		"description": {"color":"green","translate":"Use Silk Touch to pick up a Sculk Sensor or find one among Ancient City treasure"},
+		"announce_to_chat": "true",
+		"frame": "task"
+	},
+	"parent": "blazeandcave:redstone/root",
+	"rewards": {
+		"function": "bc_rewards:redstone/vibe_check"
+	},		
+	"criteria": {
+		"sculk_sensor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sculk_sensor"
+						]
+					}
+				]
+			}
+		}
+	}
+}

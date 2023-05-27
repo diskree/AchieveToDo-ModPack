@@ -1,0 +1,36 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:netherite_axe"
+		},
+		"title": {"translate":"Over-Overkill"},
+		"description": {"color":"dark_purple","translate":"Deal sixteen hearts of damage in a single melee blow"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:enchanting/overkill",
+	"rewards": {
+		"function": "bc_rewards:enchanting/over_overkill"
+	},		
+	"criteria": {
+		"overkill": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"damage": {
+					"dealt": {
+						"min": 32.0,
+						"max": 999.0
+					},
+					"type": {
+						"tags": [
+							{
+								"id": "minecraft:player_attack",
+								"expected": true
+							}
+						]
+					}
+				}
+			}
+		}
+	}
+}

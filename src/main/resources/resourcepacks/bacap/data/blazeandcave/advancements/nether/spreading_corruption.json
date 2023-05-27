@@ -1,0 +1,341 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:basalt"
+		},
+		"title": {"translate":"Spreading Corruption"},
+		"description": {"color":"dark_purple","translate":"Place one of every nether block in the overworld"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:nether/hell_botanist",
+	"rewards": {
+		"function": "bc_rewards:nether/spreading_corruption"
+	},		
+	"criteria": {
+		"netherrack": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:netherrack"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"soul_sand": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:soul_sand"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"glowstone": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:glowstone"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"magma_block": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:magma_block"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"soul_soil": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:soul_soil"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"basalt": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:basalt"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"ancient_debris": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:ancient_debris"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"crimson_nylium": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:crimson_nylium"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"warped_nylium": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:warped_nylium"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"crimson_stem": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:crimson_stem"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"warped_stem": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:warped_stem"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"nether_wart_block": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:nether_wart_block"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"warped_wart_block": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:warped_wart_block"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"shroomlight": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:shroomlight"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"nether_quartz_ore": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:nether_quartz_ore"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"nether_gold_ore": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:nether_gold_ore"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"soul_fire": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:soul_fire"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		},
+		"blackstone": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:blackstone"
+								]
+							},
+							"dimension": "overworld"
+						}
+					}
+				]
+			}
+		}
+	}
+}

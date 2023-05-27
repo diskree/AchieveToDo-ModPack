@@ -7,7 +7,7 @@
 		"description": {"color":"green","translate":"Craft a piston so you can push things"},
 		"announce_to_chat": "true"
 	},
-	"parent": "blazeandcave:redstone/root",
+	"parent": "blazeandcave:redstone/repeating_repeater",
 	"rewards": {
 		"function": "bc_rewards:redstone/moving_parts"
 	},

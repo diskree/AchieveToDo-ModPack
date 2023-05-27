@@ -4,7 +4,7 @@
 			"item": "minecraft:red_nether_bricks"
 		},
 		"title": {"translate":"Nether"},
-		"description": {"color":"green","translate":"Bring summer clothes"},
+		"description": {"color":"#CCCCCC","translate":"Bring summer clothes"},
 		"background": "minecraft:textures/block/netherrack.png",
 		"show_toast": false,
 		"announce_to_chat": "false"

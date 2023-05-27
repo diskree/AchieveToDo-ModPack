@@ -29,13 +29,35 @@
 										"min": 1
 									}
 								}
-							},
-							"location": {
-								"fluid": {
-									"fluid": "minecraft:lava"
-								}
 							}
 						}
+					},
+					{
+						"condition": "minecraft:any_of",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"fluid": {
+											"fluid": "minecraft:lava"
+										}
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"fluid": {
+											"fluid": "minecraft:flowing_lava"
+										}
+									}
+								}
+							}
+						]
 					},
 					{
 						"condition": "minecraft:inverted",

@@ -1,0 +1,30 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:piglin_head"
+		},
+		"title": {"translate":"Poglin!"},
+		"description": {"color":"#FF2A2A","translate":"Obtain a stack of Piglin Heads"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:challenges/creepergeddon",
+	"rewards": {
+		"function": "bc_rewards:challenges/poglin"
+	},		
+	"criteria": {
+		"creeper_head": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:piglin_head"
+						],
+						"count": 64
+					}
+				]
+			}
+		}
+	}
+}

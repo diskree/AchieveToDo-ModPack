@@ -9,7 +9,7 @@
 		"announce_to_chat": "true",
 		"frame": "goal"
 	},
-	"parent": "blazeandcave:animal/horse_armorer",
+	"parent": "blazeandcave:animal/a_horse_in_shining_armor",
 	"rewards": {
 		"function": "bc_rewards:animal/colorful_cavalry"
 	},		

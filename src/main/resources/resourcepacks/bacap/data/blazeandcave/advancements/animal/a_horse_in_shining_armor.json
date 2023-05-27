@@ -7,7 +7,7 @@
 		"description": {"color":"green","translate":"Find diamond horse armor"},
 		"announce_to_chat": "true"
 	},
-	"parent": "blazeandcave:animal/foal_play",
+	"parent": "blazeandcave:animal/horse_armorer",
 	"rewards": {
 		"function": "bc_rewards:animal/a_horse_in_shining_armor"
 	},		

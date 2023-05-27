@@ -196,6 +196,22 @@
 		  "type": "minecraft:frog"
 		}
 	  }
+	},
+	"minecraft:camel": {
+	  "trigger": "minecraft:bred_animals",
+	  "conditions": {
+		"parent": {
+		  "type": "minecraft:camel"
+		}
+	  }
+	},
+	"minecraft:sniffer": {
+	  "trigger": "minecraft:bred_animals",
+	  "conditions": {
+		"parent": {
+		  "type": "minecraft:sniffer"
+		}
+	  }
 	}
   }
 }

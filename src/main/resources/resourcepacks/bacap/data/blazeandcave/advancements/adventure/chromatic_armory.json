@@ -1,0 +1,118 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:netherite_chestplate",
+			"nbt": "{Trim:{material:\"minecraft:gold\",pattern:\"minecraft:sentry\"}}"
+		},
+		"title": {"translate":"Chromatic Armory"},
+		"description": {"color":"#75E1FF","translate":"Trim pieces of armor with all types of materials"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:adventure/coordinated_flair",
+	"rewards": {
+		"function": "bc_rewards:adventure/chromatic_armory"
+	},
+	"criteria": {
+		"amethyst": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{Trim:{material:\"minecraft:amethyst\"}}"
+					}
+				]
+			}
+		},
+		"copper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{Trim:{material:\"minecraft:copper\"}}"
+					}
+				]
+			}
+		},
+		"diamond": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{Trim:{material:\"minecraft:diamond\"}}"
+					}
+				]
+			}
+		},
+		"emerald": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{Trim:{material:\"minecraft:emerald\"}}"
+					}
+				]
+			}
+		},
+		"gold": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{Trim:{material:\"minecraft:gold\"}}"
+					}
+				]
+			}
+		},
+		"iron": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{Trim:{material:\"minecraft:iron\"}}"
+					}
+				]
+			}
+		},
+		"lapis": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{Trim:{material:\"minecraft:lapis\"}}"
+					}
+				]
+			}
+		},
+		"quartz": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{Trim:{material:\"minecraft:quartz\"}}"
+					}
+				]
+			}
+		},
+		"netherite": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{Trim:{material:\"minecraft:netherite\"}}"
+					}
+				]
+			}
+		},
+		"redstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{Trim:{material:\"minecraft:redstone\"}}"
+					}
+				]
+			}
+		}
+	}
+}

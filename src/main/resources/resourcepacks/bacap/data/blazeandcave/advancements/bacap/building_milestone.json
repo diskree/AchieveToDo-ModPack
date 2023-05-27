@@ -195,14 +195,14 @@
 				}
 			}
 		},
-		"display_your_items_for_all_to_see": {
+		"help_ive_been_framed": {
 			"trigger": "minecraft:location",
 			"conditions": {
 				"player":  {
 					"type_specific": {
 						"type": "player",
 						"advancements": {
-							"blazeandcave:building/display_your_items_for_all_to_see": "true"
+							"blazeandcave:building/help_ive_been_framed": "true"
 						}
 					}
 				}
@@ -1334,6 +1334,71 @@
 						"type": "player",
 						"advancements": {
 							"blazeandcave:building/built_on_sand_set_in_stone": "true"
+						}
+					}
+				}
+			}
+		},
+		"hanging_around": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:building/hanging_around": "true"
+						}
+					}
+				}
+			}
+		},
+		"sign_off": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:building/sign_off": "true"
+						}
+					}
+				}
+			}
+		},
+		"shelf_expression": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:building/shelf_expression": "true"
+						}
+					}
+				}
+			}
+		},
+		"bamboozled": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:building/bamboozled": "true"
+						}
+					}
+				}
+			}
+		},
+		"cherry_bomb": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:building/cherry_bomb": "true"
 						}
 					}
 				}

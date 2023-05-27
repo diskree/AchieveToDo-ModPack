@@ -1,0 +1,341 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:obsidian"
+		},
+		"title": {"translate":"The Struggle Nether Ends"},
+		"description": {"color":"dark_purple","translate":"Place one of every nether block in The End"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:nether/spreading_corruption",
+	"rewards": {
+		"function": "bc_rewards:nether/the_struggle_nether_ends"
+	},		
+	"criteria": {
+		"netherrack": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:netherrack"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"soul_sand": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:soul_sand"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"glowstone": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:glowstone"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"magma_block": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:magma_block"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"soul_soil": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:soul_soil"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"basalt": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:basalt"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"ancient_debris": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:ancient_debris"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"crimson_nylium": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:crimson_nylium"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"warped_nylium": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:warped_nylium"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"crimson_stem": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:crimson_stem"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"warped_stem": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:warped_stem"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"nether_wart_block": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:nether_wart_block"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"warped_wart_block": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:warped_wart_block"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"shroomlight": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:shroomlight"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"nether_quartz_ore": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:nether_quartz_ore"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"nether_gold_ore": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:nether_gold_ore"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"soul_fire": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:soul_fire"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		},
+		"blackstone": {
+			"trigger": "minecraft:placed_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:blackstone"
+								]
+							},
+							"dimension": "the_end"
+						}
+					}
+				]
+			}
+		}
+	}
+}

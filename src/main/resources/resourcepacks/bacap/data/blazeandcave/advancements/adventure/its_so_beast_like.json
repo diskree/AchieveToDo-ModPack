@@ -8,7 +8,7 @@
 		"announce_to_chat": "true",
 		"frame": "goal"
 	},
-	"parent": "blazeandcave:adventure/were_being_attacked",
+	"parent": "blazeandcave:adventure/sound_the_alarm",
 	"rewards": {
 		"function": "bc_rewards:adventure/its_so_beast_like"
 	},		

@@ -8,7 +8,7 @@
 		"announce_to_chat": "true",
 		"frame": "challenge"
 	},
-	"parent": "blazeandcave:challenges/creepergeddon",
+	"parent": "blazeandcave:challenges/poglin",
 	"rewards": {
 		"function": "bc_rewards:challenges/dragon_army"
 	},		

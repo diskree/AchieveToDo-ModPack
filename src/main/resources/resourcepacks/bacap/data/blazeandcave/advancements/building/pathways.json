@@ -15,16 +15,24 @@
 		"dirt_path": {
 			"trigger": "minecraft:item_used_on_block",
 			"conditions": {
-				"location": {
-					"block": {
-						"blocks": [
-							"minecraft:dirt_path"
-						]
+				"location": [
+					{
+						"condition": "minecraft:location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"minecraft:dirt_path"
+								]
+							}
+						}
+					},
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"tag": "minecraft:shovels"
+						}
 					}
-				},
-				"item": {
-					"tag": "minecraft:shovels"
-				}
+				]
 			}
 		}
 	}

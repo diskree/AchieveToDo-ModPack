@@ -506,6 +506,123 @@
 					}
 				}
 			}
+		},
+		"vibe_check": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:redstone/vibe_check": "true"
+						}
+					}
+				}
+			}
+		},
+		"the_block_of_eternal_screaming": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:redstone/the_block_of_eternal_screaming": "true"
+						}
+					}
+				}
+			}
+		},
+		"cataclyst": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:redstone/cataclyst": "true"
+						}
+					}
+				}
+			}
+		},
+		"monstrous_sacrifices": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:redstone/monstrous_sacrifices": "true"
+						}
+					}
+				}
+			}
+		},
+		"the_incredible_sculk": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:redstone/the_incredible_sculk": "true"
+						}
+					}
+				}
+			}
+		},
+		"sculker_box": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:redstone/sculker_box": "true"
+						}
+					}
+				}
+			}
+		},
+		"calibration_sensation": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:redstone/calibration_sensation": "true"
+						}
+					}
+				}
+			}
+		},
+		"monstrous_music": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:redstone/monstrous_music": "true"
+						}
+					}
+				}
+			}
+		},
+		"the_power_of_books": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"minecraft:adventure/read_power_of_chiseled_bookshelf": "true"
+						}
+					}
+				}
+			}
 		}
 	}
 }

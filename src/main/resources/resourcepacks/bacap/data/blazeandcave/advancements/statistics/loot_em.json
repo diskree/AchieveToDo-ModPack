@@ -1,0 +1,19 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:chest"
+		},
+		"title": {"translate":"Loot ‘Em!"},
+		"description": {"color":"green","translate":"Open 10 loot chests","extra":[{"text":"\n\n"},{"italic":"true","color":"dark_gray","translate":"To view progress, run:"},{"color":"gray","text":"\n/trigger bac_statistics"}]},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:technical/you_are_a_big_cheater",
+	"rewards": {
+		"function": "bc_rewards:statistics/loot_em"
+	},		
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:impossible"
+		}
+	}
+}

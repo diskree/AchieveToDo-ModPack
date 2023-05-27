@@ -1,0 +1,45 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:white_glazed_terracotta"
+		},
+		"title": {"translate":"Happy Trails!"},
+		"description": {"color":"green","translate":"Discover the Trail Ruins"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:adventure/brushed_away",
+	"rewards": {
+		"function": "bc_rewards:adventure/happy_trails"
+	},		
+	"criteria": {
+		"desert_pyramid": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"structure": "minecraft:trail_ruins"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}		
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:wayfinder_armor_trim_smithing_template"
+		},
+		"title": {"translate":"Raiders of the Lost Trim"},
+		"description": {"color":"#75E1FF","translate":"Carefully excavate a Smithing Template from the Trail Ruins"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:adventure/happy_trails",
+	"rewards": {
+		"function": "bc_rewards:adventure/raiders_of_the_lost_trim"
+	},		
+	"criteria": {
+		"wayfinder_armor_trim_smithing_template": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:wayfinder_armor_trim_smithing_template",
+							"minecraft:raiser_armor_trim_smithing_template",
+							"minecraft:shaper_armor_trim_smithing_template",
+							"minecraft:host_armor_trim_smithing_template"
+						]
+					}
+				]
+			}
+		}
+	}
+}

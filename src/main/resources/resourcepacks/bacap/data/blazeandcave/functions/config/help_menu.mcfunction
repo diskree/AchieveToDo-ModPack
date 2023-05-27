@@ -4,7 +4,7 @@ tellraw @s {"color":"gray","bold":"false","text":" ","extra":[{"color":"gray","b
 tellraw @s {"text":"                                             ","color":"dark_gray","strikethrough":true}
 
 # Link to Config Menu Documentation
-tellraw @s ["",{"text":"[ »» ]","color":"green","clickEvent":{"action":"open_url","value":"https://bit.ly/3DEOBzY"},"hoverEvent":{"action":"show_text","contents":["",{"translate":"Click to follow link","color":"gold"}]}}," ",{"translate":"Full documentation on how to use the Config Menu"}]
+tellraw @s ["",{"text":"[ »» ]","color":"green","clickEvent":{"action":"open_url","value":"http://bit.ly/3HXkft2"},"hoverEvent":{"action":"show_text","contents":["",{"translate":"Click to follow link","color":"gold"}]}}," ",{"translate":"Full documentation on how to use the Config Menu"}]
 
 # How to update to newer versions of the datapack
 tellraw @s ["",{"text":"[ »» ]","color":"yellow","clickEvent":{"action":"run_command","value":"/function blazeandcave:config/help_new_version_update"},"hoverEvent":{"action":"show_text","contents":["",{"translate":"Click to view","color":"gold"}]}}," ",{"translate":"How to update to new datapack versions"}]

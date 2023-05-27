@@ -8,7 +8,7 @@
 		"announce_to_chat": "true",
 		"frame": "goal"
 	},
-	"parent": "blazeandcave:nether/gilty",
+	"parent": "blazeandcave:nether/time_to_upgrade",
 	"rewards": {
 		"function": "bc_rewards:nether/wub_wub_wub"
 	},	

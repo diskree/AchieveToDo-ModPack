@@ -1,0 +1,529 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:fire_charge"
+		},
+		"title": {"translate":"Demolitions Expert"},
+		"description": {"color":"dark_purple","translate":"Blow up every hostile mob with TNT"},
+		"announce_to_chat": "true",
+		"frame": "challenge"
+	},
+	"parent": "blazeandcave:weaponry/revenge",
+	"rewards": {
+		"function": "bc_rewards:weaponry/demolitions_expert"
+	},		
+	"criteria": {
+	"cave_spider": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "cave_spider"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"spider": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:spider"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"zombified_piglin": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:zombified_piglin"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"enderman": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:enderman"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"blaze": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:blaze"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"creeper": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:creeper"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"ghast": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:ghast"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"guardian": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:guardian"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"husk": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:husk"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"magma_cube": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:magma_cube"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"shulker": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:shulker"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"silverfish": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:silverfish"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"skeleton": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:skeleton"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"slime": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:slime"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"stray": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:stray"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"vindicator": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:vindicator"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"witch": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:witch"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"wither_skeleton": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:wither_skeleton"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"zombie": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:zombie"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"zombie_villager": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:zombie_villager"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"phantom": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:phantom"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"drowned": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:drowned"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"endermite": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:endermite"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"pillager": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:pillager"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"ravager": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:ravager"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"evoker": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:evoker"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"vex": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:vex"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"piglin": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:piglin"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"hoglin": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:hoglin"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"zoglin": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:zoglin"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"piglin_brute": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:piglin_brute"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	},
+	"warden": {
+	  "trigger": "minecraft:player_killed_entity",
+	  "conditions": {
+		"entity": {
+		  "type": "minecraft:warden"
+		},
+		"killing_blow": {
+		  "tags": [
+							{
+								"id": "minecraft:is_explosion",
+								"expected": true
+							}
+						]
+		}
+	  }
+	}
+  }
+}

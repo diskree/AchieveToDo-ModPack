@@ -144,7 +144,7 @@ execute if score blazeandcave:building/classy_glassy bac_obtained matches 1.. ru
 execute if score blazeandcave:building/clay_dough bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/clay_dough
 execute if score blazeandcave:building/concrete_evidence bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/concrete_evidence
 execute if score blazeandcave:building/creepers_and_withers bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/creepers_and_withers
-execute if score blazeandcave:building/display_your_items_for_all_to_see bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/display_your_items_for_all_to_see
+execute if score blazeandcave:building/help_ive_been_framed bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/help_ive_been_framed
 execute if score blazeandcave:building/electric bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/electric
 execute if score blazeandcave:building/en_garde bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/en_garde
 execute if score blazeandcave:building/expensive bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/expensive
@@ -1074,7 +1074,7 @@ execute if score blazeandcave:weaponry/backfire bac_obtained matches 1.. run adv
 execute if score blazeandcave:redstone/take_notes bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/take_notes
 execute if score blazeandcave:redstone/noteworthy bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/noteworthy
 execute if score blazeandcave:redstone/travelling_bard bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/travelling_bard
-execute if score blazeandcave:mining/vibe_check bac_obtained matches 1.. run advancement grant @a only blazeandcave:mining/vibe_check
+execute if score blazeandcave:redstone/vibe_check bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/vibe_check
 
 execute if score blazeandcave:enchanting/over_overkill bac_obtained matches 1.. run advancement grant @a only blazeandcave:enchanting/over_overkill
 
@@ -1172,11 +1172,11 @@ execute if score blazeandcave:adventure/expedition_of_discovery bac_obtained mat
 execute if score minecraft:adventure/avoid_vibration bac_obtained matches 1.. run advancement grant @a only minecraft:adventure/avoid_vibration
 execute if score minecraft:adventure/kill_mob_near_sculk_catalyst bac_obtained matches 1.. run advancement grant @a only minecraft:mining/kill_mob_near_sculk_catalyst
 execute if score blazeandcave:mining/shriek_forever_after bac_obtained matches 1.. run advancement grant @a only blazeandcave:mining/shriek_forever_after
-execute if score blazeandcave:mining/the_block_of_eternal_screaming bac_obtained matches 1.. run advancement grant @a only blazeandcave:mining/the_block_of_eternal_screaming
-execute if score blazeandcave:mining/cataclyst bac_obtained matches 1.. run advancement grant @a only blazeandcave:mining/cataclyst
-execute if score blazeandcave:mining/monstrous_sacrifices bac_obtained matches 1.. run advancement grant @a only blazeandcave:mining/monstrous_sacrifices
-execute if score blazeandcave:mining/the_incredible_sculk bac_obtained matches 1.. run advancement grant @a only blazeandcave:mining/the_incredible_sculk
-execute if score blazeandcave:mining/sculker_box bac_obtained matches 1.. run advancement grant @a only blazeandcave:mining/sculker_box
+execute if score blazeandcave:redstone/the_block_of_eternal_screaming bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/the_block_of_eternal_screaming
+execute if score blazeandcave:redstone/cataclyst bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/cataclyst
+execute if score blazeandcave:redstone/monstrous_sacrifices bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/monstrous_sacrifices
+execute if score blazeandcave:redstone/the_incredible_sculk bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/the_incredible_sculk
+execute if score blazeandcave:redstone/sculker_box bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/sculker_box
 execute if score blazeandcave:mining/fallen_kingdom bac_obtained matches 1.. run advancement grant @a only blazeandcave:mining/fallen_kingdom
 execute if score blazeandcave:mining/frigid_diversions bac_obtained matches 1.. run advancement grant @a only blazeandcave:mining/frigid_diversions
 execute if score blazeandcave:mining/death_pointer bac_obtained matches 1.. run advancement grant @a only blazeandcave:mining/death_pointer
@@ -1241,3 +1241,61 @@ execute if score blazeandcave:weaponry/there_it_goes bac_obtained matches 1.. ru
 execute if score blazeandcave:end/unending_hell bac_obtained matches 1.. run advancement grant @a only blazeandcave:end/unending_hell
 
 execute if score blazeandcave:adventure/totally_not_terraria bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/totally_not_terraria
+
+# The following advancements were added in version 1.16
+execute if score blazeandcave:redstone/calibration_sensation bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/calibration_sensation
+
+execute if score blazeandcave:building/hanging_around bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/hanging_around
+execute if score blazeandcave:building/sign_off bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/sign_off
+execute if score blazeandcave:building/shelf_expression bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/shelf_expression
+execute if score blazeandcave:building/bamboozled bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/bamboozled
+execute if score blazeandcave:building/cherry_bomb bac_obtained matches 1.. run advancement grant @a only blazeandcave:building/cherry_bomb
+
+execute if score blazeandcave:animal/desert_rider bac_obtained matches 1.. run advancement grant @a only blazeandcave:animal/desert_rider
+execute if score blazeandcave:animal/hump_day bac_obtained matches 1.. run advancement grant @a only blazeandcave:animal/hump_day
+execute if score blazeandcave:animal/the_high_road bac_obtained matches 1.. run advancement grant @a only blazeandcave:animal/the_high_road
+
+execute if score blazeandcave:biomes/pretty_in_pink bac_obtained matches 1.. run advancement grant @a only blazeandcave:biomes/pretty_in_pink
+
+execute if score blazeandcave:adventure/brushed_away bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/brushed_away
+execute if score minecraft:adventure/salvage_sherd bac_obtained matches 1.. run advancement grant @a only minecraft:adventure/salvage_sherd
+execute if score minecraft:adventure/craft_decorated_pot_using_only_sherds bac_obtained matches 1.. run advancement grant @a only minecraft:adventure/craft_decorated_pot_using_only_sherds
+execute if score blazeandcave:adventure/pottery_exhibition bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/pottery_exhibition
+execute if score minecraft:husbandry/obtain_sniffer_egg bac_obtained matches 1.. run advancement grant @a only minecraft:husbandry/obtain_sniffer_egg
+execute if score blazeandcave:adventure/truffle_worm bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/truffle_worm
+execute if score blazeandcave:adventure/jurassic_sniff bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/jurassic_sniff
+execute if score blazeandcave:adventure/happy_trails bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/happy_trails
+execute if score blazeandcave:adventure/raiders_of_the_lost_trim bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/raiders_of_the_lost_trim
+execute if score blazeandcave:adventure/good_lookin_treasure bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/good_lookin_treasure
+execute if score minecraft:adventure/trim_with_any_armor_pattern bac_obtained matches 1.. run advancement grant @a only minecraft:adventure/trim_with_any_armor_pattern
+execute if score blazeandcave:adventure/mold_maker bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/mold_maker
+execute if score blazeandcave:adventure/coordinated_flair bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/coordinated_flair
+execute if score blazeandcave:adventure/chromatic_armory bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/chromatic_armory
+execute if score blazeandcave:adventure/genesis_of_the_end bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/genesis_of_the_end
+execute if score blazeandcave:adventure/vexingly_hard_to_find bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/vexingly_hard_to_find
+execute if score blazeandcave:adventure/the_sound_of_silence bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/the_sound_of_silence
+execute if score minecraft:adventure/trim_with_all_exclusive_armor_patterns bac_obtained matches 1.. run advancement grant @a only minecraft:adventure/trim_with_all_exclusive_armor_patterns
+execute if score blazeandcave:adventure/stacked_smither bac_obtained matches 1.. run advancement grant @a only blazeandcave:adventure/stacked_smither
+
+execute if score blazeandcave:monsters/maximum_resistance bac_obtained matches 1.. run advancement grant @a only blazeandcave:monsters/maximum_resistance
+
+execute if score blazeandcave:redstone/monstrous_music bac_obtained matches 1.. run advancement grant @a only blazeandcave:redstone/monstrous_music
+
+execute if score blazeandcave:statistics/om_nom_nom bac_obtained matches 1.. run advancement grant @a only blazeandcave:statistics/om_nom_nom
+execute if score blazeandcave:statistics/yum_yum_yummo bac_obtained matches 1.. run advancement grant @a only blazeandcave:statistics/yum_yum_yummo
+execute if score blazeandcave:statistics/food_glorious_food bac_obtained matches 1.. run advancement grant @a only blazeandcave:statistics/food_glorious_food
+execute if score blazeandcave:statistics/loot_em bac_obtained matches 1.. run advancement grant @a only blazeandcave:statistics/loot_em
+execute if score blazeandcave:statistics/more_for_me bac_obtained matches 1.. run advancement grant @a only blazeandcave:statistics/more_for_me
+execute if score blazeandcave:statistics/i_heart_chests bac_obtained matches 1.. run advancement grant @a only blazeandcave:statistics/i_heart_chests
+execute if score blazeandcave:statistics/giga_xp_grinder bac_obtained matches 1.. run advancement grant @a only blazeandcave:statistics/giga_xp_grinder
+
+execute if score blazeandcave:nether/time_to_upgrade bac_obtained matches 1.. run advancement grant @a only blazeandcave:nether/time_to_upgrade
+execute if score blazeandcave:nether/piglin_peril bac_obtained matches 1.. run advancement grant @a only blazeandcave:nether/piglin_peril
+
+execute if score blazeandcave:challenges/poglin bac_obtained matches 1.. run advancement grant @a only blazeandcave:challenges/poglin
+
+execute if score blazeandcave:adventure/a_chiptune_relic bac_obtained matches 1.. run advancement grant @a only blazeandcave:challenges/a_chiptune_relic
+execute if score minecraft:husbandry/feed_snifflet bac_obtained matches 1.. run advancement grant @a only minecraft:husbandry/feed_snifflet
+execute if score minecraft:husbandry/plant_any_sniffer_seed bac_obtained matches 1.. run advancement grant @a only minecraft:husbandry/plant_any_sniffer_seed
+execute if score minecraft:adventure/read_power_of_chiseled_bookshelf bac_obtained matches 1.. run advancement grant @a only minecraft:adventure/read_power_of_chiseled_bookshelf
+

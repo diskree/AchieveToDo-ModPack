@@ -519,6 +519,19 @@
 					"max": 0
 				}
 			}
+		},
+		"brush": {
+			"trigger": "minecraft:item_durability_changed",
+			"conditions": {
+				"item": {
+					"items": [
+						"minecraft:brush"
+					]
+				},
+				"durability": {
+					"max": 0
+				}
+			}
 		}
 	}
 }

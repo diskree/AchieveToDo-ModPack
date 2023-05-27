@@ -9,7 +9,7 @@
 
 # Language: Vietnamese
 # Author: Quin (and FehnLmao lol)
-# Pack version supported: 1.14
+# Pack version supported: 1.15
 
 # All language entries are organised in alphabetical order of file name as of 1.3
 # All new advancements added in updates later than 1.3 (1.4, 1.5 and so on) will be put at the bottom of the file for easy locating and adding by translators
@@ -4618,7 +4618,7 @@
 "A Journey Begins": "Một hành trình bắt đầu",
 "Find a Traveller’s Map": "Tìm thấy một cái bản đồ lữ khách",
 
-"Castle of Hrrms": "Lâu đài Hrrms",
+"Castle of Hrrms": "Lâu đài 'Hrrms'",
 "Enter a Fortified Village": "Vào một Ngôi làng được gia cố",
 
 "Expedition of Discovery": "Sự chinh phạt của sự khám phá",
@@ -4875,10 +4875,179 @@
 "It's my fence post! Seriously, get out!": "Đó là cọc hàng rào của tôi! Nghiêm túc đấy, tránh ra!",
 
 "Stone of the Farlands": "Hòn đá của Farlands",
-"A preserved piece of stone from the lands that existed before Beta 1.8": "Một mảnh đá được bảo tồn từ những vùng đất tồn tại trước bản Beta 1.8"
+"A preserved piece of stone from the lands that existed before Beta 1.8": "Một mảnh đá được bảo tồn từ những vùng đất tồn tại trước bản Beta 1.8",
 
 
 
 
-# All advancements and trophies that get added in versions 1.15 or later will be added down here for easy locating by translators who wish to update their language file
+## All advancements added in version 1.15 are here
+"Nerds Never Die": "Tên Nghiện Không Bao Giờ Chết",
+"Name a Piglin Brute 'Technoblade'": "Đặt tên cho một con Piglin tàn bạo là 'Technoblade'",
+
+"And make it double!": "Nhân đôi nó đi!",
+"Play a jukebox near some Allays, then give one an Amethyst Shard and see what happens!": "Bật một máy phát nhạc gần một vài con Allay, sau đó đưa cho một con một Mảnh Pha Lê và xem điều gì sẽ xảy ra!",
+
+"Living Dummy": "Hình nhân sống",
+"Get killed from hitting an Armor Stand": "Bị giết bởi việc đánh một cái Giá để giáp",
+
+# Used in hardcore version
+"Get hurt from hitting an Armor Stand": "Bị thương bởi việc đánh một cái Giá để giáp",
+
+"Built on Sand, Set in Stone": "Được xây dựng trên cát, được đặt trong đá",
+"Craft or collect a stack of all forms of Sandstone and Red Sandstone": "Chế tạo hoặc thu thập một stack Cát kết và Cát kết đỏ",
+
+"Hot Chocolate": "Sô-cô-la nóng",
+"Plant some cocoa in the nice steamy Nether": "Trồng một ít ca cao ở dưới Địa ngục ẩm thấp đẹp đẽ",
+
+"Silence of the Lambs": "Sự câm lặng của những con cừu nhỏ",
+"Bring a Sheep into an Ancient City and silence it": "Mang một con cừu vào Thành phố cổ và khiến nó im lặng",
+
+"It's High Noon": "It's High Noon",
+"Snipe a Husk from 50 blocks away while riding a Horse": "Bắn tỉa một con Quái khô tàn từ khoảng cách 50 block khi đang cưỡi Ngựa",
+
+"Spleaf": "Diệp khai",
+"Kill a mob using a shovel while both of you are standing on a Big Dripleaf": "Giết một con mob bằng xẻng khi cả hai đều đang đứng trên Lá nhỏ giọt lớn",
+
+"There it goes…": "Thế là xong…",
+"Kill a mob at the bottom of the world from the build limit using any kind of projectile": "Giết một con mob ở dưới cùng của thế giới từ giới hạn xây dựng bằng cách sử dụng bất kỳ loại vật đánh xa nào",
+
+"Unending Hell": "Địa Ngục Vô Tận",
+"Travel directly from the End to the Nether": "Di chuyển trực tiếp từ dưới End tới Địa ngục",
+
+
+# Missing from previous versions
+"Undying Fandom": "Cộng đồng fan bất diệt",
+"Receive every type of gift from Villagers as a Hero of the Village": "Nhận mọi loại quà tặng từ Dân làng với tư cách là Người hùng của Làng",
+
+"Dig through some Rooted Dirt beneath an Azalea Tree so you can find a Lush Cave": "Đào qua một số khối Đất có rễ bên dưới cây Đỗ quyên để bạn có thể tìm thấy một Hang động tươi tốt",
+
+
+# Added to Terralith version
+"Totally Not Terraria": "Hoàn toàn không phải Terraria",
+"Find an Underground Cabin": "Tìm được một cái Cabin dưới đất",
+
+
+# Trophies added in 1.15
+"Crown of the Potato King": "Vương miện của Vua Khoai Tây",
+"A crown forged in the purest gold, made by the richest of Piglins": "Một chiếc vương miện được rèn bằng vàng nguyên chất nhất, được làm bởi những con Piglins giàu có nhất",
+"Worn only by Alex (aka Technoblade), the one and only Potato King": "Chỉ được mặc bởi Alex (hay còn gọi là Technoblade), Vua Khoai Tây duy nhất",
+
+"Tinfoil Mining Helmet": "Mũ Thợ Mỏ Giấy Bạc",
+"Baked by a chef and hermit known for": "Nướng bởi một đầu bếp và ẩn sĩ nổi tiếng với",
+"extensive and exquisite branch mining": "khai thác theo nhánh rộng mở và tinh tế",
+
+"Calendar": "Cuốn lịch",
+"I hate Mondays": "Tôi ghét Thứ hai",
+
+# Farlander trophy description fix
+"A preserved piece of stone from": "Một mảnh đá được bảo quản từ",
+"the lands that existed before Beta 1.8": "những vùng đất tồn tại trước bản Beta 1.8",
+
+
+# Miscellaneous strings from compatibility versions
+"Advancement added by Terralith version": "Tiến trình được thêm vào bởi phiên bản Terralith",
+
+"Modified by the Amplified Nether version": "Được sửa đổi bởi phiên bản Amplified Nether",
+
+
+# Configuration menu additions in 1.15 (including the Help Menu)
+"Click to follow link": "Nhấp để theo dõi liên kết",
+
+"The Welcome Message appears when a player logs into the world for the first time. On servers that already have a custom welcome message, this should be turned off": "Thông báo Chào mừng xuất hiện khi người chơi đăng nhập vào thế giới lần đầu tiên. Trên các máy chủ đã có thông báo chào mừng tùy chỉnh, thông báo này sẽ được tắt đi",
+
+"Item Rewards are a small amount of bonus items awarded upon completing some advancements": "Phần thưởng vật phẩm là một lượng nhỏ vật phẩm thưởng được trao khi hoàn thành một số tiến trình",
+"Experience Rewards are awarded upon completing some advancements, adding directly to a player's XP count": "Phần thưởng Kinh nghiệm được trao khi hoàn thành một số tiến trình, thêm trực tiếp vào số XP của người chơi",
+"Trophies are decorative items awarded upon completing some advancements, in particular challenges, super challenges and milestones": "Danh hiệu là vật phẩm trang trí được trao khi hoàn thành một số tiến trình, đặc biệt là thử thách, siêu thử thách và cột mốc",
+
+"Cooperative Mode shares every advancement gained among every player": "Chế độ hợp tác chia sẻ mọi tiến trình đạt được giữa mọi người chơi",
+"Team Cooperative Mode works similarly, but only shares among players of the same team": "Chế độ hợp tác nhóm hoạt động tương tự, nhưng chỉ chia sẻ giữa những người chơi trong cùng một đội",
+
+"Settings for what messages that appear upon completing each tier of advancement should appear": "Cài đặt cho những thông báo xuất hiện sau khi hoàn thành từng bậc tiến trình sẽ xuất hiện",
+"Settings for what type of scoreboard to display and where": "Cài đặt cho loại bảng điểm sẽ hiển thị và hiển thị ở đâu",
+"Functions for updating, resetting and revoking advancements": "Chức năng cập nhật, đặt lại và thu hồi tiến trình",
+"Need help understanding how the datapack, this config menu, or anything else works?": "Cần hỗ trợ để hiểu cách gói dữ liệu, menu cấu hình này hoặc bất kỳ thứ gì khác hoạt động?",
+
+"Help": "Hỗ trợ",
+
+# Help Menu
+"Help Menu": "Menu Hỗ Trợ",
+
+"Full documentation on how to use the Config Menu": "Tài liệu đầy đủ về cách sử dụng Menu cấu hình",
+"How to update to new datapack versions": "Cách cập nhật lên các phiên bản gói dữ liệu mới",
+"How to add players to teams": "Cách thêm người vào các đội",
+"Important Links": "Liên kết quan trọng",
+"Troubleshooting": "Xử lý sự cố",
+"Frequently Asked Questions": "Các câu hỏi thường gặp",
+
+# # How to update to new datapack versions
+"1) Make a backup of your world for safety if you mess anything up": "1) Sao lưu thế giới của bạn để đảm bảo an toàn nếu bạn làm hỏng mọi thứ",
+"2) Leave your world for more safety and don't go in during the process": "2) Rời khỏi thế giới của bạn để an toàn hơn và không vào trong quá trình này",
+"3) Delete the old datapacks COMPLETELY from your world": "3) Xóa các gói dữ liệu cũ HOÀN TOÀN khỏi thế giới của bạn",
+"4) Copy and paste in the new updated datapacks": "4) Sao chép và dán vào gói dữ liệu cập nhật mới",
+"5) Go into your world. If the new datapacks are for a newer version of Minecraft make sure you are now using that version": "5) Vào thế giới của bạn. Nếu các gói dữ liệu mới dành cho phiên bản Minecraft mới hơn, hãy đảm bảo rằng bạn hiện đang sử dụng phiên bản đó",
+"6) If you messed up, go to your backup, make a backup of your backup, then repeat steps 2-6 on the backup": "6) Nếu bạn làm hỏng, hãy chuyển đến bản sao lưu của bạn, tạo bản sao lưu của bản sao lưu, sau đó lặp lại các bước 2-6 trên bản sao lưu",
+
+# # How to add players to teams
+"This datapack adds 16 teams, one of each colour, that this datapack can work with.": "Gói dữ liệu này thêm 16 đội, mỗi nhóm một màu, mà gói dữ liệu này có thể hoạt động cùng.",
+"For Team Cooperative Mode and team-based scoreboards to work properly, players MUST be added to these teams using the following command:": "Để Chế độ hợp tác nhóm và bảng điểm dựa trên nhóm hoạt động chính xác, người chơi PHẢI được thêm vào các nhóm này bằng cách sử dụng lệnh sau",
+# Command is not translatable
+"You may freely change the team's display name, prefix and suffix using their respective commands as well": "Bạn cũng có thể tự do thay đổi tên hiển thị, tiền tố và hậu tố của nhóm bằng cách sử dụng các lệnh tương ứng của chúng",
+
+# # Important Links
+"Language Pack": "Gói ngôn ngữ",
+"The Language Pack is a resource pack that translates all advancements and trophies into other languages.": "Gói ngôn ngữ là gói tài nguyên dịch tất cả các tiến bộ và danh hiệu sang các ngôn ngữ khác.",
+
+"Hardcore Version": "Phiên bản siêu khó",
+"The Hardcore Version is an add-on datapack that makes the datapack possible to complete in Hardcore Mode.": "Phiên bản Siêu khó là một gói dữ liệu bổ sung giúp gói dữ liệu có thể hoàn thành ở Chế độ Siêu khó.",
+
+"Terralith Version": "Phiên bản Terralith",
+"The Terralith Version is an add-on datapack that adds advancements for the Terralith datapack by Starmute.": "Phiên bản Terralith là gói dữ liệu bổ sung bổ sung các tiến trình cho gói dữ liệu Terralith của Starmute.",
+
+"Advancements Docmentation": "Tài liệu tiến trình",
+"The Advancements Docmentation is a spreadsheet detailing every advancement in the datapack.": "Tài liệu tiến trình là một bảng tính trình bày chi tiết mọi tiến trình trong gói dữ liệu.",
+
+"List of Trophies": "Danh sách danh hiệu",
+"A spreadsheet detailing every trophy in the datapack.": "Một bảng tính trình bày chi tiết mọi danh hiệu trong gói dữ liệu.",
+
+"Discord": "Discord",
+
+"Patreon": "Patreon",
+
+# # Troubleshooting
+"If certain aspects of this datapack are not working properly (e.g. Advancements are granted automatically when they shouldn't), make sure you are using the correct version of the datapack for the Minecraft version you are running.": "Nếu một số khía cạnh của gói dữ liệu này không hoạt động bình thường (ví dụ: Các tiến trình được cấp tự động khi lẽ ra chúng chưa đạt được), hãy đảm bảo rằng bạn đang sử dụng đúng phiên bản của gói dữ liệu cho phiên bản Minecraft mà bạn đang chạy.",
+"In addition, some advancements may break on Spigot or Paper servers.": "Ngoài ra, một số tiến trình có thể bị hỏng trên máy chủ Spigot hoặc Paper.",
+
+# # FAQ Menu
+"Why aren't all tabs visible at the start?": "Tại sao tất cả các mục không hiển thị ngay từ đầu?",
+"How do I install the Language Pack?": "Làm thế nào để cài đặt Gói ngôn ngữ?",
+"How can I translate the advancements into a new language?": "Làm thế nào để dịch các tiến trình sang một ngôn ngữ mới?",
+"What is the name of the mod that lets you see progress on advancements?": "Mod nào có thể giúp thấy quá trình của các tiến trình?",
+
+# # # Why aren't all tabs visible at the start?
+"A tab will not show up if you haven't gained any advancements in that tab yet.": "Một mục sẽ không hiện lên nếu bạn chưa đạt được một thành tựu nào trong mục đó.",
+"Most root advancements are easy to obtain, but some are further along in progression.": "Hầu hết các thành tựu gốc dễ để đạt được, nhưng một vài thì phải cần tiến xa hơn.",
+"Notably, the Super Challenges tab is not unlocked until after defeating the Ender Dragon.": "Đáng chú ý, mục Siêu thử thách không được mở khóa cho đến sau khi đánh bại Rồng Ender.",
+
+# # # How do I install the Language Pack?
+"The Language Pack is NOT a datapack and is not installed in the same way.": "Gói ngôn ngữ KHÔNG là một gói dữ liệu và không được cài theo cùng một cách",
+"Instead, it is a resource pack, and it is installed just like any other resource pack.": "Thay vào đó, nó là một gói tài nguyên, và nó được cài đặt như các gói tài nguyên khác.",
+"Place it into your resourcepacks folder, then select it in the resource pack menu.": "Đặt nó vào thư mục gói tài nguyên của bạn, sau đó chọn nó trong menu gói tài nguyên.",
+"Once you do this, the custom advancements will appear in whatever language you have selected if this language is supported.": "Sau khi bạn thực hiện việc này, các tiến trình tùy chỉnh sẽ xuất hiện bằng bất kỳ ngôn ngữ nào bạn đã chọn nếu ngôn ngữ này được hỗ trợ.",
+
+# # # How can I translate the advancements into a new language?
+"Download the Language Pack, unzip it, then locate the file named base_language_file.json": "Tải xuống Gói ngôn ngữ, giải nén nó, sau đó tìm tệp có tên base_language_file.json",
+"Follow the instructions within in order to translate your language.": "Thực hiện theo các hướng dẫn bên trong để dịch ngôn ngữ của bạn.",
+"If you finish translating a new language, you can send it to the creator (Cavinator1) on Planet Minecraft or Discord and it may get added in a future update!": "Nếu dịch xong một ngôn ngữ mới, bạn có thể gửi ngôn ngữ đó cho người sáng tạo (Cavinator1) trên Planet Minecraft hoặc Discord và ngôn ngữ này có thể được thêm vào trong bản cập nhật trong tương lai!",
+"You will be credited for your contributions to translation.": "Bạn sẽ được ghi nhận vì những đóng góp của bạn cho bản dịch.",
+
+# # # What is the name of the mod that lets you see progress on advancements?
+"The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "Bản mod được đề cập có tên là Advancement Info, hiển thị các yêu cầu đã được hoàn thành cho mỗi tiến trình.",
+"It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "Nó cực kỳ hữu ích, đặc biệt là đối với các Siêu thử thách có nhiều yêu cầu như 'Tất cả các khối'.",
+"It can be downloaded here:": "Nó có thể được tải xuống ở đây:"
+# Link is not translatable
+
+
+
+
+# All advancements, trophies and other text strings that get added in versions 1.16 or later will be added down here for easy locating by translators who wish to update their language file
 }

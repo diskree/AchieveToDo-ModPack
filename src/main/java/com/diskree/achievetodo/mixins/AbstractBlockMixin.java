@@ -26,7 +26,7 @@ public abstract class AbstractBlockMixin {
 
     @Inject(method = "getStateForNeighborUpdate", at = @At("HEAD"))
     public void getStateForNeighborUpdateInject(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos, CallbackInfoReturnable<BlockState> cir) {
-        if (AchieveToDoMod.isReinforcedDeepslate(getHardness(), resistance)) {
+        if (AncientCityPortalEntity.isReinforcedDeepslate(getHardness(), resistance)) {
             AncientCityPortalEntity portalEntity = AncientCityPortalEntity.findForBlock(world, pos);
             if (portalEntity != null) {
                 portalEntity.checkCharging();

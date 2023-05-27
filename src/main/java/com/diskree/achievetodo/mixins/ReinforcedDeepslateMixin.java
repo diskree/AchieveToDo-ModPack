@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.ancient_city_portal.AncientCityPortalEntity;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -23,19 +23,23 @@ public abstract class ReinforcedDeepslateMixin {
     @Inject(method = "<init>", at = @At("RETURN"))
     public void initReturnInject(AbstractBlock.Settings settings, CallbackInfo ci) {
         if (isReinforcedDeepslate()) {
-            setDefaultState(getDefaultState().with(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY, false));
+            setDefaultState(getDefaultState().with(AncientCityPortalEntity.REINFORCED_DEEPSLATE_CHARGED_PROPERTY, false));
         }
     }
 
     @Inject(method = "appendProperties", at = @At("RETURN"))
     protected void appendPropertiesInject(StateManager.Builder<Block, BlockState> builder, CallbackInfo ci) {
         if (isReinforcedDeepslate()) {
-            builder.add(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY);
+            builder.add(AncientCityPortalEntity.REINFORCED_DEEPSLATE_CHARGED_PROPERTY);
         }
     }
 
     private boolean isReinforcedDeepslate() {
         Block block = (Block) (Object) this;
-        return AchieveToDoMod.isReinforcedDeepslate(block.getHardness(), block.getBlastResistance());
+        try {
+            return AncientCityPortalEntity.isReinforcedDeepslate(block.getHardness(), block.getBlastResistance());
+        } catch (Throwable t) {
+            return false;
+        }
     }
 }

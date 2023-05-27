@@ -20,7 +20,7 @@ public abstract class AbstractBlockSettingsMixin {
 
     @Inject(method = "strength(FF)Lnet/minecraft/block/AbstractBlock$Settings;", at = @At("HEAD"))
     public void onUseInject(float hardness, float resistance, CallbackInfoReturnable<AbstractBlock.Settings> cir) {
-        if (AchieveToDoMod.isReinforcedDeepslate(hardness, resistance)) {
+        if (AncientCityPortalEntity.isReinforcedDeepslate(hardness, resistance)) {
             luminance(AncientCityPortalEntity::getPortalFrameLightLevel);
         }
     }

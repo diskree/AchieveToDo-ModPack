@@ -37,7 +37,6 @@ import net.minecraft.resource.ResourcePackProfile
 import net.minecraft.server.MinecraftServer
 import net.minecraft.server.world.ServerWorld
 import net.minecraft.sound.BlockSoundGroup
-import net.minecraft.state.property.BooleanProperty
 import net.minecraft.text.Text
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
@@ -183,13 +182,6 @@ class AchieveToDoMod : ModInitializer {
         EntityRendererRegistry.register(
             Registry.register(
                 Registries.ENTITY_TYPE,
-                ANCIENT_CITY_PORTAL_LIFE_ENTITY_ID,
-                FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalLifeEntity).build()
-            ), ::AncientCityPortalItemDisplayEntityRenderer
-        )
-        EntityRendererRegistry.register(
-            Registry.register(
-                Registries.ENTITY_TYPE,
                 ANCIENT_CITY_PORTAL_EXPERIENCE_ORB_ENTITY_ID,
                 EXPERIENCE_ORB
             ), ::AncientCityPortalExperienceOrbEntityRenderer
@@ -262,7 +254,6 @@ class AchieveToDoMod : ModInitializer {
         val ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = Identifier(ID, "ancient_city_portal_tab_entity")
         val ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID = Identifier(ID, "ancient_city_portal_advancement_entity")
         val ANCIENT_CITY_PORTAL_PROMPT_ENTITY_ID = Identifier(ID, "ancient_city_portal_prompt_entity")
-        val ANCIENT_CITY_PORTAL_LIFE_ENTITY_ID = Identifier(ID, "ancient_city_portal_life_entity")
         val ANCIENT_CITY_PORTAL_EXPERIENCE_ORB_ENTITY_ID = Identifier(ID, "ancient_city_portal_experience_orb")
 
         @JvmField
@@ -274,13 +265,7 @@ class AchieveToDoMod : ModInitializer {
                 .build()
 
         @JvmField
-        val REINFORCED_DEEPSLATE_CHARGED_PROPERTY: BooleanProperty = BooleanProperty.of("charged")
-
-        @JvmField
         var lastAchievementsCount = 0
-
-        @JvmStatic
-        fun isReinforcedDeepslate(hardness: Float, resistance: Float) = hardness == 55.0f && resistance == 1200.0f
 
         @JvmStatic
         fun getPlayer() = MinecraftClient.getInstance().player

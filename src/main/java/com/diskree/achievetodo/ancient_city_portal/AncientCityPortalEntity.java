@@ -19,6 +19,7 @@ import net.minecraft.nbt.NbtHelper;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
@@ -42,6 +43,8 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
     public static final int RITUAL_RADIUS = 20;
     public static final int PORTAL_WIDTH = 22;
     public static final int PORTAL_HEIGHT = 8;
+
+    public static final BooleanProperty REINFORCED_DEEPSLATE_CHARGED_PROPERTY = BooleanProperty.of("charged");
 
     @Nullable
     private BlockPos jukeboxPos;
@@ -69,6 +72,10 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             return portalEntities.get(0);
         }
         return null;
+    }
+
+    public static boolean isReinforcedDeepslate(float hardness, float resistance) {
+        return hardness == 55.0f && resistance == 1200.0f;
     }
 
     public boolean isPortalBlock(BlockPos pos) {
@@ -103,14 +110,14 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         if (entity instanceof AncientCityPortalExperienceOrbEntity) {
             ArrayList<BlockPos> blocksToCharge = new ArrayList<>();
             for (BlockPos pos : getPortalBlocks(true, true)) {
-                if (!isReinforcedDeepslate(pos) || getWorld().getBlockState(pos).get(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY)) {
+                if (!isReinforcedDeepslate(pos) || getWorld().getBlockState(pos).get(REINFORCED_DEEPSLATE_CHARGED_PROPERTY)) {
                     continue;
                 }
                 blocksToCharge.add(pos);
             }
             Collections.shuffle(blocksToCharge);
             BlockPos randomPortalFrameBlockPos = blocksToCharge.get(0);
-            getWorld().setBlockState(randomPortalFrameBlockPos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY, true));
+            getWorld().setBlockState(randomPortalFrameBlockPos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_PROPERTY, true));
             getWorld().playSound(null, (double) randomPortalFrameBlockPos.getX() + 0.5, (double) randomPortalFrameBlockPos.getY() + 0.5, (double) randomPortalFrameBlockPos.getZ() + 0.5, SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 1.0f, 1.0f);
             if (blocksToCharge.size() == 1) {
                 for (BlockPos pos : getPortalBlocks(false)) {
@@ -146,7 +153,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             if (!isReinforcedDeepslate(pos)) {
                 continue;
             }
-            getWorld().setBlockState(pos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY, false));
+            getWorld().setBlockState(pos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_PROPERTY, false));
         }
     }
 
@@ -181,7 +188,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
     public ArrayList<BlockPos> getPortalFrameUnchargedBlocks() {
         ArrayList<BlockPos> unchargedBlocks = new ArrayList<>();
         for (BlockPos pos : getPortalBlocks(true, true)) {
-            if (!isReinforcedDeepslate(pos) || getWorld().getBlockState(pos).get(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY)) {
+            if (!isReinforcedDeepslate(pos) || getWorld().getBlockState(pos).get(REINFORCED_DEEPSLATE_CHARGED_PROPERTY)) {
                 continue;
             }
             unchargedBlocks.add(pos);
@@ -190,7 +197,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
     }
 
     public static int getPortalFrameLightLevel(BlockState state) {
-        return state.get(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY) ? 15 : 0;
+        return state.get(REINFORCED_DEEPSLATE_CHARGED_PROPERTY) ? 15 : 0;
     }
 
     @Override

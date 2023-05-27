@@ -44,6 +44,7 @@
     "WorldAccessMixin"
   ],
   "client": [
+    "ClientPlayNetworkHandlerMixin",
     "ResourcePackOrganizerMixin",
     "ToastManagerMixin"
   ]

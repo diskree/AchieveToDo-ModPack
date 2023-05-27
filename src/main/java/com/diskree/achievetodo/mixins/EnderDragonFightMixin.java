@@ -10,7 +10,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(EnderDragonFight.class)
 public class EnderDragonFightMixin {
 
-    @Shadow private boolean previouslyKilled;
+    @Shadow
+    private boolean previouslyKilled;
 
     @Inject(method = "generateNewEndGateway", at = @At("HEAD"))
     public void generateNewEndGatewayInject(CallbackInfo ci) {

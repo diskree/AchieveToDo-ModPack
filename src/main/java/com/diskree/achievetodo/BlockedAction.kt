@@ -8,11 +8,11 @@ import net.minecraft.util.Identifier
 import net.minecraft.village.VillagerProfession
 
 enum class BlockedAction(
-        private val description: String,
-        @JvmField val actionType: BlockedActionType,
-        val foodComponent: FoodComponent?,
-        val villagerProfession: VillagerProfession?,
-        val achievementsCountToUnlock: Int
+    private val description: String,
+    @JvmField val actionType: BlockedActionType,
+    val foodComponent: FoodComponent?,
+    val villagerProfession: VillagerProfession?,
+    val achievementsCountToUnlock: Int
 ) {
     EAT_SALMON("blocked.food", BlockedActionType.FOOD, FoodComponents.SALMON, null, 2),
     EAT_COD("blocked.food", BlockedActionType.FOOD, FoodComponents.COD, null, 3),
@@ -87,7 +87,13 @@ enum class BlockedAction(
     VILLAGER_WEAPONSMITH("blocked.trading", BlockedActionType.VILLAGER, null, VillagerProfession.WEAPONSMITH, 590),
     END("blocked.end", BlockedActionType.PORTAL, null, null, 600),
     EQUIP_ELYTRA("blocked.elytra", BlockedActionType.ARMOR, null, null, 650),
-    EAT_ENCHANTED_GOLDEN_APPLE("blocked.food", BlockedActionType.FOOD, FoodComponents.ENCHANTED_GOLDEN_APPLE, null, 680),
+    EAT_ENCHANTED_GOLDEN_APPLE(
+        "blocked.food",
+        BlockedActionType.FOOD,
+        FoodComponents.ENCHANTED_GOLDEN_APPLE,
+        null,
+        680
+    ),
     EAT_CHORUS_FRUIT("blocked.food", BlockedActionType.FOOD, FoodComponents.CHORUS_FRUIT, null, 700),
     END_GATE("blocked.gateway", BlockedActionType.PORTAL, null, null, 800),
     USING_SHULKER_BOX("blocked.shulker_box", BlockedActionType.BLOCK, null, null, 825),
@@ -100,13 +106,14 @@ enum class BlockedAction(
 
     fun isUnlocked(): Boolean = AchieveToDoMod.lastAchievementsCount >= achievementsCountToUnlock
 
-    fun buildAdvancementId(): Identifier = Identifier(AchieveToDoMod.ID, AchieveToDoMod.ADVANCEMENT_PATH_PREFIX + name.lowercase())
+    fun buildAdvancementId(): Identifier =
+        Identifier(AchieveToDoMod.ID, AchieveToDoMod.ADVANCEMENT_PATH_PREFIX + name.lowercase())
 
     fun buildLockDescription(): Text {
         val leftAchievementsCount = achievementsCountToUnlock - AchieveToDoMod.lastAchievementsCount
         return Text.of(Text.translatable(description).string + Text.translatable("unblock.amount").string + leftAchievementsCount)
-                .copy()
-                .formatted(Formatting.YELLOW)
+            .copy()
+            .formatted(Formatting.YELLOW)
     }
 
     companion object {

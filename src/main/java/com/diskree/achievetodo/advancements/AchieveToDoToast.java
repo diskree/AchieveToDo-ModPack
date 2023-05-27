@@ -6,6 +6,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
+
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.advancement.Advancement;
@@ -19,9 +20,9 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.OrderedText;
 import net.minecraft.util.math.MathHelper;
 
-@Environment(value=EnvType.CLIENT)
+@Environment(value = EnvType.CLIENT)
 public class AchieveToDoToast
-implements Toast {
+        implements Toast {
     public final BlockedAction blockedAction;
     private final Identifier TEXTURE;
 
@@ -50,10 +51,10 @@ implements Toast {
                 int j = 1500;
                 float f = 300.0f;
                 if (startTime < 1500L) {
-                    int k = MathHelper.floor(MathHelper.clamp((float)(1500L - startTime) / 300.0f, 0.0f, 1.0f) * 255.0f) << 24 | 0x4000000;
+                    int k = MathHelper.floor(MathHelper.clamp((float) (1500L - startTime) / 300.0f, 0.0f, 1.0f) * 255.0f) << 24 | 0x4000000;
                     context.drawText(manager.getClient().textRenderer, Text.of(blockedAction.actionType.getUnlockPopupTitle() + "!"), 30, 11, i | k, false);
                 } else {
-                    int k = MathHelper.floor(MathHelper.clamp((float)(startTime - 1500L) / 300.0f, 0.0f, 1.0f) * 252.0f) << 24 | 0x4000000;
+                    int k = MathHelper.floor(MathHelper.clamp((float) (startTime - 1500L) / 300.0f, 0.0f, 1.0f) * 252.0f) << 24 | 0x4000000;
                     int l = this.getHeight() / 2 - list.size() * manager.getClient().textRenderer.fontHeight / 2;
                     for (OrderedText orderedText : list) {
                         context.drawText(manager.getClient().textRenderer, orderedText, 30, l, 0xFFFFFF | k, false);
@@ -68,7 +69,7 @@ implements Toast {
                 }
             }
             context.drawItemWithoutEntity(advancementDisplay.getIcon(), 8, 8);
-            return (double)startTime >= 5000.0 * manager.getNotificationDisplayTimeMultiplier() ? Toast.Visibility.HIDE : Toast.Visibility.SHOW;
+            return (double) startTime >= 5000.0 * manager.getNotificationDisplayTimeMultiplier() ? Toast.Visibility.HIDE : Toast.Visibility.SHOW;
         }
         return Toast.Visibility.HIDE;
     }

@@ -6,7 +6,9 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.JukeboxBlockEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.decoration.DisplayEntity;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -15,6 +17,8 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtHelper;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -41,7 +45,9 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
 
     @Nullable
     private BlockPos jukeboxPos;
+    private boolean isCharging;
     private final EntityGameEventHandler<JukeboxEventListener> jukeboxEventHandler;
+    private int spawnExpDelay;
 
     public AncientCityPortalAdvancementEntity(EntityType<?> entityType, World world) {
         super(entityType, world);
@@ -54,10 +60,6 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
                 return true;
             }
         }
-        return false;
-    }
-
-    public boolean isPortalFrameBlock(BlockPos pos) {
         for (BlockPos portalBlock : getPortalBlocks(true, true)) {
             if (portalBlock.equals(pos)) {
                 return true;
@@ -66,9 +68,79 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         return false;
     }
 
-    public void setDragonEgg() {
-        for (BlockPos portalBlock : getPortalBlocks(true, true)) {
-            getWorld().setBlockState(portalBlock, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_STATE, true));
+    public void charge(Entity entity) {
+        if (!isPortalActivated() || entity.isRemoved() || spawnExpDelay != 0) {
+            return;
+        }
+        if (entity instanceof AncientCityPortalExperienceOrbEntity) {
+            if (!isCharging) {
+                return;
+            }
+        } else {
+            if (isCharging) {
+                return;
+            }
+        }
+        isCharging = true;
+        entity.kill();
+        if (entity instanceof AncientCityPortalExperienceOrbEntity) {
+            ArrayList<BlockPos> blocksToCharge = new ArrayList<>();
+            for (BlockPos pos : getPortalBlocks(true, true)) {
+                if (!isReinforcedDeepslate(pos) || getWorld().getBlockState(pos).get(REINFORCED_DEEPSLATE_CHARGED_STATE)) {
+                    continue;
+                }
+                blocksToCharge.add(pos);
+            }
+            Collections.shuffle(blocksToCharge);
+            BlockPos randomPortalFrameBlockPos = blocksToCharge.get(0);
+            getWorld().setBlockState(randomPortalFrameBlockPos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_STATE, true));
+            getWorld().playSound(null, (double) randomPortalFrameBlockPos.getX() + 0.5, (double) randomPortalFrameBlockPos.getY() + 0.5, (double) randomPortalFrameBlockPos.getZ() + 0.5, SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 1.0f, 1.0f);
+            if (blocksToCharge.size() == 1) {
+                for (BlockPos pos : getPortalBlocks(false)) {
+                    if (!isPortal(pos)) {
+                        continue;
+                    }
+                    getWorld().setBlockState(pos, Blocks.AIR.getDefaultState());
+                }
+            } else {
+                spawnExpDelay = 5;
+            }
+        } else {
+            spawnExpDelay = 5;
+        }
+    }
+
+    @Override
+    public boolean damage(DamageSource source, float amount) {
+        return false;
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        if (spawnExpDelay > 0) {
+            if (--spawnExpDelay == 0) {
+                if (AchieveToDoMod.getPlayer() == null) {
+                    return;
+                }
+                Vec3d playerPos = AchieveToDoMod.getPlayer().getBlockPos().toCenterPos();
+                ArrayList<BlockPos> portalBlocks = getPortalBlocks(false);
+                Collections.shuffle(portalBlocks);
+                getWorld().spawnEntity(new AncientCityPortalExperienceOrbEntity(getWorld(), playerPos.getX(), playerPos.getY(), playerPos.getZ(), portalBlocks.get(0)));
+            }
+        }
+    }
+
+    public void checkCharging() {
+        if (isPortalActivated()) {
+            return;
+        }
+        isCharging = false;
+        for (BlockPos pos : getPortalBlocks(true, true)) {
+            if (!isReinforcedDeepslate(pos)) {
+                continue;
+            }
+            getWorld().setBlockState(pos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_STATE, false));
         }
     }
 
@@ -98,6 +170,7 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         if (jukeboxPos != null) {
             nbt.put("JukeboxPos", NbtHelper.fromBlockPos(jukeboxPos));
         }
+        nbt.putBoolean("IsCharging", isCharging);
     }
 
     @Override
@@ -106,13 +179,15 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         if (nbt.contains("JukeboxPos", NbtElement.COMPOUND_TYPE)) {
             jukeboxPos = NbtHelper.toBlockPos(nbt.getCompound("JukeboxPos"));
         }
+        isCharging = nbt.getBoolean("IsCharging");
+        System.out.println("readCustomDataFromNbt = " + isCharging);
     }
 
     private void updateJukeboxPos(BlockPos jukeboxPos, boolean playing) {
-        if (this.jukeboxPos != null && !this.jukeboxPos.equals(jukeboxPos)) {
-            stopJukebox(jukeboxPos);
-            return;
-        }
+//        if (this.jukeboxPos != null && !this.jukeboxPos.equals(jukeboxPos)) {
+//            stopJukebox(jukeboxPos);
+//            return;
+//        }
         boolean isPortalActivated = isPortalActivated();
         boolean isDiskRelaxPartPlaying = isDiskRelaxPartPlaying(jukeboxPos);
         if (isPortalActivated || isDiskRelaxPartPlaying) {
@@ -239,7 +314,7 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         return getPortalBlocks(perimeter, false);
     }
 
-    private ArrayList<BlockPos> getPortalBlocks(boolean perimeter, boolean includeCorners) {
+    private ArrayList<BlockPos> getPortalBlocks(boolean frame, boolean includeCorners) {
         int axisWidth = PORTAL_WIDTH - 1;
         int axisHeight = PORTAL_HEIGHT - 1;
         Direction facingDirection = getHorizontalFacing();
@@ -257,11 +332,11 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
                 }
                 BlockPos pos = origin.offset(fromOriginDirection, x).down(y);
                 if (x == 0 || y == 0 || x == axisWidth || y == axisHeight) {
-                    if (perimeter) {
+                    if (frame) {
                         blocks.add(pos);
                     }
                 } else {
-                    if (!perimeter) {
+                    if (!frame) {
                         blocks.add(pos);
                     }
                 }

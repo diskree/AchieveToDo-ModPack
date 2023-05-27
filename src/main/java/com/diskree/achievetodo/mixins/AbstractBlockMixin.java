@@ -28,20 +28,16 @@ public abstract class AbstractBlockMixin {
     @Final
     protected float resistance;
 
-    @Inject(method = "getStateForNeighborUpdate", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "getStateForNeighborUpdate", at = @At("HEAD"))
     public void getStateForNeighborUpdateInject(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos, CallbackInfoReturnable<BlockState> cir) {
         if (getHardness() == 55.0f && resistance == 1200.0f) {
-            if (neighborState.isOf(Blocks.REINFORCED_DEEPSLATE) && !neighborState.get(AncientCityPortalAdvancementEntity.REINFORCED_DEEPSLATE_CHARGED_STATE)) {
-                cir.setReturnValue(Blocks.REINFORCED_DEEPSLATE.getDefaultState());
-                return;
-            }
             Box box = new Box(
                     pos.offset(Direction.Axis.X, -AncientCityPortalAdvancementEntity.PORTAL_WIDTH).offset(Direction.Axis.Z, -AncientCityPortalAdvancementEntity.PORTAL_WIDTH).down(AncientCityPortalAdvancementEntity.PORTAL_HEIGHT),
                     pos.offset(Direction.Axis.X, AncientCityPortalAdvancementEntity.PORTAL_WIDTH).offset(Direction.Axis.Z, AncientCityPortalAdvancementEntity.PORTAL_WIDTH).up(AncientCityPortalAdvancementEntity.PORTAL_HEIGHT)
             );
-            List<AncientCityPortalAdvancementEntity> entities = world.getEntitiesByType(TypeFilter.instanceOf(AncientCityPortalAdvancementEntity.class), box, (portalEntity) -> portalEntity.isPortalFrameBlock(pos));
-            if (entities.size() == 1 && !entities.get(0).isPortalActivated()) {
-                cir.setReturnValue(Blocks.REINFORCED_DEEPSLATE.getDefaultState());
+            List<AncientCityPortalAdvancementEntity> portalEntities = world.getEntitiesByType(TypeFilter.instanceOf(AncientCityPortalAdvancementEntity.class), box, (portalEntity) -> portalEntity.isPortalBlock(pos));
+            if (portalEntities.size() == 1) {
+                portalEntities.get(0).checkCharging();
             }
         }
     }

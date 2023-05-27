@@ -1,13 +1,13 @@
 package com.diskree.achievetodo.ancient_city_portal;
 
 import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.ExperienceOrbEntityImpl;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
@@ -69,26 +69,22 @@ public class AncientCityPortalBlock extends Block {
 
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-        if (entity instanceof ItemEntity itemEntity && itemEntity.getStack().isOf(Items.DRAGON_EGG)) {
+        if (entity instanceof AncientCityPortalExperienceOrbEntity || entity instanceof ItemEntity && ((ItemEntity) entity).getStack().isOf(Items.DRAGON_EGG)) {
             Direction.Axis axis = state.get(AXIS);
             Direction.Axis reverseAxis = axis == Direction.Axis.X ? Direction.Axis.Z : Direction.Axis.X;
             Box box = new Box(
                     pos.offset(axis, -AncientCityPortalAdvancementEntity.PORTAL_WIDTH).offset(reverseAxis, -1).down(AncientCityPortalAdvancementEntity.PORTAL_HEIGHT),
                     pos.offset(axis, AncientCityPortalAdvancementEntity.PORTAL_WIDTH).offset(reverseAxis, 1).up(AncientCityPortalAdvancementEntity.PORTAL_HEIGHT)
             );
-            List<AncientCityPortalAdvancementEntity> entities = world.getEntitiesByType(TypeFilter.instanceOf(AncientCityPortalAdvancementEntity.class), box, (portalEntity) -> portalEntity.isPortalBlock(pos));
-            if (entities.size() == 1) {
-                entities.get(0).setDragonEgg();
-                entity.kill();
+            List<AncientCityPortalAdvancementEntity> portalEntities = world.getEntitiesByType(TypeFilter.instanceOf(AncientCityPortalAdvancementEntity.class), box, (portalEntity) -> portalEntity.isPortalBlock(pos));
+            if (portalEntities.size() == 1) {
+                portalEntities.get(0).charge(entity);
             }
         }
     }
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (random.nextInt(100) == 0) {
-            world.playSound((double) pos.getX() + 0.5, (double) pos.getY() + 0.5, (double) pos.getZ() + 0.5, SoundEvents.BLOCK_PORTAL_AMBIENT, SoundCategory.BLOCKS, 0.5f, random.nextFloat() * 0.4f + 0.8f, false);
-        }
         if (hideParticles) {
             return;
         }

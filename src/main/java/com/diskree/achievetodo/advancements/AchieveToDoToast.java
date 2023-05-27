@@ -2,11 +2,6 @@ package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
-
-import java.util.List;
-
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.advancement.Advancement;
@@ -18,15 +13,18 @@ import net.minecraft.client.toast.Toast;
 import net.minecraft.client.toast.ToastManager;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.OrderedText;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
+import java.util.List;
+
 @Environment(value = EnvType.CLIENT)
-public class AchieveToDoToast
-        implements Toast {
+public class AchieveToDoToast implements Toast {
+
     public final BlockedAction blockedAction;
     private final Identifier TEXTURE;
 
-    public static final int DEFAULT_DURATION_MS = 5000;
     private final Advancement advancement;
     private boolean soundPlayed;
 
@@ -41,15 +39,12 @@ public class AchieveToDoToast
         AdvancementDisplay advancementDisplay = this.advancement.getDisplay();
         context.drawTexture(TEXTURE, 0, 0, 0, 0, this.getWidth(), this.getHeight());
         if (advancementDisplay != null) {
-            int i;
+            int i = advancementDisplay.getFrame() == AdvancementFrame.CHALLENGE ? 0xFF88FF : 0xFFFF00;
             List<OrderedText> list = manager.getClient().textRenderer.wrapLines(advancementDisplay.getTitle(), 125);
-            int n = i = advancementDisplay.getFrame() == AdvancementFrame.CHALLENGE ? 0xFF88FF : 0xFFFF00;
             if (list.size() == 1) {
                 context.drawText(manager.getClient().textRenderer, Text.of(blockedAction.actionType.getUnlockPopupTitle() + "!"), 30, 7, i | 0xFF000000, false);
                 context.drawText(manager.getClient().textRenderer, list.get(0), 30, 18, -1, false);
             } else {
-                int j = 1500;
-                float f = 300.0f;
                 if (startTime < 1500L) {
                     int k = MathHelper.floor(MathHelper.clamp((float) (1500L - startTime) / 300.0f, 0.0f, 1.0f) * 255.0f) << 24 | 0x4000000;
                     context.drawText(manager.getClient().textRenderer, Text.of(blockedAction.actionType.getUnlockPopupTitle() + "!"), 30, 11, i | k, false);

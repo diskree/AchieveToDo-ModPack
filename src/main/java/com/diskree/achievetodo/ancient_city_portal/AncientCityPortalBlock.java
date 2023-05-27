@@ -1,10 +1,8 @@
 package com.diskree.achievetodo.ancient_city_portal;
 
 import com.diskree.achievetodo.AchieveToDoMod;
-import com.diskree.achievetodo.ExperienceOrbEntityImpl;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -12,9 +10,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockRotation;
-import net.minecraft.util.TypeFilter;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
@@ -22,10 +18,10 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-import java.util.List;
 import java.util.Objects;
 
 public class AncientCityPortalBlock extends Block {
+
     public static final EnumProperty<Direction.Axis> AXIS = Properties.HORIZONTAL_AXIS;
 
     protected static final VoxelShape X_SHAPE = Block.createCuboidShape(0.0, 0.0, 6.0, 16.0, 16.0, 10.0);
@@ -69,16 +65,13 @@ public class AncientCityPortalBlock extends Block {
 
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (world.isClient) {
+            return;
+        }
         if (entity instanceof AncientCityPortalExperienceOrbEntity || entity instanceof ItemEntity && ((ItemEntity) entity).getStack().isOf(Items.DRAGON_EGG)) {
-            Direction.Axis axis = state.get(AXIS);
-            Direction.Axis reverseAxis = axis == Direction.Axis.X ? Direction.Axis.Z : Direction.Axis.X;
-            Box box = new Box(
-                    pos.offset(axis, -AncientCityPortalAdvancementEntity.PORTAL_WIDTH).offset(reverseAxis, -1).down(AncientCityPortalAdvancementEntity.PORTAL_HEIGHT),
-                    pos.offset(axis, AncientCityPortalAdvancementEntity.PORTAL_WIDTH).offset(reverseAxis, 1).up(AncientCityPortalAdvancementEntity.PORTAL_HEIGHT)
-            );
-            List<AncientCityPortalAdvancementEntity> portalEntities = world.getEntitiesByType(TypeFilter.instanceOf(AncientCityPortalAdvancementEntity.class), box, (portalEntity) -> portalEntity.isPortalBlock(pos));
-            if (portalEntities.size() == 1) {
-                portalEntities.get(0).charge(entity);
+            AncientCityPortalEntity portalEntity = AncientCityPortalEntity.findForBlock(world, pos);
+            if (portalEntity != null) {
+                portalEntity.charge(entity);
             }
         }
     }

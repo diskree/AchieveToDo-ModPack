@@ -19,11 +19,12 @@ import net.minecraft.nbt.NbtHelper;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.minecraft.world.event.EntityPositionSource;
 import net.minecraft.world.event.GameEvent;
 import net.minecraft.world.event.PositionSource;
@@ -33,25 +34,41 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.function.BiConsumer;
 
-public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDisplayEntity {
+public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public static final int RITUAL_RADIUS = 20;
     public static final int PORTAL_WIDTH = 22;
     public static final int PORTAL_HEIGHT = 8;
 
-    public static final BooleanProperty REINFORCED_DEEPSLATE_CHARGED_STATE = BooleanProperty.of("charged");
-
     @Nullable
     private BlockPos jukeboxPos;
-    private boolean isCharging;
+    private boolean isEnderDragonEggGranted;
     private final EntityGameEventHandler<JukeboxEventListener> jukeboxEventHandler;
-    private int spawnExpDelay;
 
-    public AncientCityPortalAdvancementEntity(EntityType<?> entityType, World world) {
+    public AncientCityPortalEntity(EntityType<?> entityType, World world) {
         super(entityType, world);
-        this.jukeboxEventHandler = new EntityGameEventHandler<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalAdvancementEntity.this, 0), AchieveToDoMod.JUKEBOX_PLAY.getRange()));
+        this.jukeboxEventHandler = new EntityGameEventHandler<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalEntity.this, 0), AchieveToDoMod.JUKEBOX_PLAY.getRange()));
+    }
+
+    @Nullable
+    public static AncientCityPortalEntity findForBlock(WorldAccess world, BlockPos blockPos) {
+        Box box = new Box(
+                blockPos
+                        .offset(Direction.Axis.X, -AncientCityPortalEntity.PORTAL_WIDTH)
+                        .offset(Direction.Axis.Z, -AncientCityPortalEntity.PORTAL_WIDTH)
+                        .down(AncientCityPortalEntity.PORTAL_HEIGHT),
+                blockPos.offset(Direction.Axis.X, AncientCityPortalEntity.PORTAL_WIDTH)
+                        .offset(Direction.Axis.Z, AncientCityPortalEntity.PORTAL_WIDTH)
+                        .up(AncientCityPortalEntity.PORTAL_HEIGHT)
+        );
+        List<AncientCityPortalEntity> portalEntities = world.getEntitiesByClass(AncientCityPortalEntity.class, box, (portalEntity) -> portalEntity.isPortalBlock(blockPos));
+        if (portalEntities.size() == 1) {
+            return portalEntities.get(0);
+        }
+        return null;
     }
 
     public boolean isPortalBlock(BlockPos pos) {
@@ -69,31 +86,31 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
     }
 
     public void charge(Entity entity) {
-        if (!isPortalActivated() || entity.isRemoved() || spawnExpDelay != 0) {
+        if (!isPortalActivated()) {
             return;
         }
         if (entity instanceof AncientCityPortalExperienceOrbEntity) {
-            if (!isCharging) {
+            if (!isEnderDragonEggGranted) {
                 return;
             }
         } else {
-            if (isCharging) {
+            if (isEnderDragonEggGranted) {
                 return;
             }
         }
-        isCharging = true;
         entity.kill();
+        isEnderDragonEggGranted = true;
         if (entity instanceof AncientCityPortalExperienceOrbEntity) {
             ArrayList<BlockPos> blocksToCharge = new ArrayList<>();
             for (BlockPos pos : getPortalBlocks(true, true)) {
-                if (!isReinforcedDeepslate(pos) || getWorld().getBlockState(pos).get(REINFORCED_DEEPSLATE_CHARGED_STATE)) {
+                if (!isReinforcedDeepslate(pos) || getWorld().getBlockState(pos).get(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY)) {
                     continue;
                 }
                 blocksToCharge.add(pos);
             }
             Collections.shuffle(blocksToCharge);
             BlockPos randomPortalFrameBlockPos = blocksToCharge.get(0);
-            getWorld().setBlockState(randomPortalFrameBlockPos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_STATE, true));
+            getWorld().setBlockState(randomPortalFrameBlockPos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY, true));
             getWorld().playSound(null, (double) randomPortalFrameBlockPos.getX() + 0.5, (double) randomPortalFrameBlockPos.getY() + 0.5, (double) randomPortalFrameBlockPos.getZ() + 0.5, SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 1.0f, 1.0f);
             if (blocksToCharge.size() == 1) {
                 for (BlockPos pos : getPortalBlocks(false)) {
@@ -102,11 +119,16 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
                     }
                     getWorld().setBlockState(pos, Blocks.AIR.getDefaultState());
                 }
-            } else {
-                spawnExpDelay = 5;
             }
-        } else {
-            spawnExpDelay = 5;
+        }
+        if (!isPortalCharged()) {
+            if (AchieveToDoMod.getPlayer() == null) {
+                return;
+            }
+            ArrayList<BlockPos> portalBlocks = getPortalBlocks(false);
+            Collections.shuffle(portalBlocks);
+            Vec3d playerPos = AchieveToDoMod.getPlayer().getPos().offset(Direction.UP, 1);
+            getWorld().spawnEntity(new AncientCityPortalExperienceOrbEntity(getWorld(), playerPos.getX(), playerPos.getY(), playerPos.getZ(), portalBlocks.get(0)));
         }
     }
 
@@ -115,32 +137,16 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         return false;
     }
 
-    @Override
-    public void tick() {
-        super.tick();
-        if (spawnExpDelay > 0) {
-            if (--spawnExpDelay == 0) {
-                if (AchieveToDoMod.getPlayer() == null) {
-                    return;
-                }
-                Vec3d playerPos = AchieveToDoMod.getPlayer().getBlockPos().toCenterPos();
-                ArrayList<BlockPos> portalBlocks = getPortalBlocks(false);
-                Collections.shuffle(portalBlocks);
-                getWorld().spawnEntity(new AncientCityPortalExperienceOrbEntity(getWorld(), playerPos.getX(), playerPos.getY(), playerPos.getZ(), portalBlocks.get(0)));
-            }
-        }
-    }
-
     public void checkCharging() {
         if (isPortalActivated()) {
             return;
         }
-        isCharging = false;
+        isEnderDragonEggGranted = false;
         for (BlockPos pos : getPortalBlocks(true, true)) {
             if (!isReinforcedDeepslate(pos)) {
                 continue;
             }
-            getWorld().setBlockState(pos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_STATE, false));
+            getWorld().setBlockState(pos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY, false));
         }
     }
 
@@ -153,8 +159,38 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         return true;
     }
 
+    public boolean isPortalActivationInProgress() {
+        if (isPortalActivated()) {
+            return false;
+        }
+        for (BlockPos pos : getPortalBlocks(false)) {
+            if (isPortal(pos)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isPortalCharged() {
+        if (!isPortalActivated()) {
+            return false;
+        }
+        return getPortalFrameUnchargedBlocks().isEmpty();
+    }
+
+    public ArrayList<BlockPos> getPortalFrameUnchargedBlocks() {
+        ArrayList<BlockPos> unchargedBlocks = new ArrayList<>();
+        for (BlockPos pos : getPortalBlocks(true, true)) {
+            if (!isReinforcedDeepslate(pos) || getWorld().getBlockState(pos).get(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY)) {
+                continue;
+            }
+            unchargedBlocks.add(pos);
+        }
+        return unchargedBlocks;
+    }
+
     public static int getPortalFrameLightLevel(BlockState state) {
-        return state.get(REINFORCED_DEEPSLATE_CHARGED_STATE) ? 15 : 0;
+        return state.get(AchieveToDoMod.REINFORCED_DEEPSLATE_CHARGED_PROPERTY) ? 15 : 0;
     }
 
     @Override
@@ -170,7 +206,7 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         if (jukeboxPos != null) {
             nbt.put("JukeboxPos", NbtHelper.fromBlockPos(jukeboxPos));
         }
-        nbt.putBoolean("IsCharging", isCharging);
+        nbt.putBoolean("EnderDragonEggGranted", isEnderDragonEggGranted);
     }
 
     @Override
@@ -179,15 +215,14 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         if (nbt.contains("JukeboxPos", NbtElement.COMPOUND_TYPE)) {
             jukeboxPos = NbtHelper.toBlockPos(nbt.getCompound("JukeboxPos"));
         }
-        isCharging = nbt.getBoolean("IsCharging");
-        System.out.println("readCustomDataFromNbt = " + isCharging);
+        isEnderDragonEggGranted = nbt.getBoolean("EnderDragonEggGranted");
     }
 
     private void updateJukeboxPos(BlockPos jukeboxPos, boolean playing) {
-//        if (this.jukeboxPos != null && !this.jukeboxPos.equals(jukeboxPos)) {
-//            stopJukebox(jukeboxPos);
-//            return;
-//        }
+        if (this.jukeboxPos != null && !this.jukeboxPos.equals(jukeboxPos) && isPortalActivationInProgress()) {
+            stopJukebox(jukeboxPos);
+            return;
+        }
         boolean isPortalActivated = isPortalActivated();
         boolean isDiskRelaxPartPlaying = isDiskRelaxPartPlaying(jukeboxPos);
         if (isPortalActivated || isDiskRelaxPartPlaying) {
@@ -295,16 +330,19 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         }
     }
 
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private boolean isReinforcedDeepslate(BlockPos pos) {
         World world = getWorld();
         return world != null && world.getBlockState(pos).isOf(Blocks.REINFORCED_DEEPSLATE);
     }
 
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private boolean isAir(BlockPos pos) {
         World world = getWorld();
         return world != null && world.getBlockState(pos).isAir();
     }
 
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private boolean isPortal(BlockPos pos) {
         World world = getWorld();
         return world != null && world.getBlockState(pos).isOf(AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK);
@@ -367,11 +405,11 @@ public class AncientCityPortalAdvancementEntity extends DisplayEntity.ItemDispla
         @Override
         public boolean listen(ServerWorld world, GameEvent event, GameEvent.Emitter emitter, Vec3d emitterPos) {
             if (event == AchieveToDoMod.JUKEBOX_PLAY) {
-                AncientCityPortalAdvancementEntity.this.updateJukeboxPos(BlockPos.ofFloored(emitterPos), true);
+                AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.ofFloored(emitterPos), true);
                 return true;
             }
             if (event == AchieveToDoMod.JUKEBOX_STOP_PLAY) {
-                AncientCityPortalAdvancementEntity.this.updateJukeboxPos(BlockPos.ofFloored(emitterPos), false);
+                AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.ofFloored(emitterPos), false);
                 return true;
             }
             return false;

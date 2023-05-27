@@ -37,37 +37,31 @@ extends EntityRenderer<AncientCityPortalExperienceOrbEntity> {
     public void render(AncientCityPortalExperienceOrbEntity experienceOrbEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
         matrixStack.push();
         int j = experienceOrbEntity.getOrbSize();
-        float h = (float)(j % 4 * 16 + 0) / 64.0f;
+        float h = (float)(j % 4 * 16) / 64.0f;
         float k = (float)(j % 4 * 16 + 16) / 64.0f;
-        float l = (float)(j / 4 * 16 + 0) / 64.0f;
+        float l = (float)(j / 4 * 16) / 64.0f;
         float m = (float)(j / 4 * 16 + 16) / 64.0f;
-        float n = 1.0f;
-        float o = 0.5f;
-        float p = 0.25f;
-        float q = 255.0f;
         float r = ((float)experienceOrbEntity.age + g) / 2.0f;
         int s = (int)((MathHelper.sin(r + 0.0f) + 1.0f) * 0.5f * 255.0f);
-        int t = 255;
         int u = (int)((MathHelper.sin(r + 4.1887903f) + 1.0f) * 0.1f * 255.0f);
         matrixStack.translate(0.0f, 0.1f, 0.0f);
         matrixStack.multiply(this.dispatcher.getRotation());
         matrixStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180.0f));
-        float v = 0.3f;
         matrixStack.scale(0.3f, 0.3f, 0.3f);
         VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(LAYER);
         MatrixStack.Entry entry = matrixStack.peek();
         Matrix4f matrix4f = entry.getPositionMatrix();
         Matrix3f matrix3f = entry.getNormalMatrix();
-        AncientCityPortalExperienceOrbEntityRenderer.vertex(vertexConsumer, matrix4f, matrix3f, -0.5f, -0.25f, s, 255, u, h, m, i);
-        AncientCityPortalExperienceOrbEntityRenderer.vertex(vertexConsumer, matrix4f, matrix3f, 0.5f, -0.25f, s, 255, u, k, m, i);
-        AncientCityPortalExperienceOrbEntityRenderer.vertex(vertexConsumer, matrix4f, matrix3f, 0.5f, 0.75f, s, 255, u, k, l, i);
-        AncientCityPortalExperienceOrbEntityRenderer.vertex(vertexConsumer, matrix4f, matrix3f, -0.5f, 0.75f, s, 255, u, h, l, i);
+        AncientCityPortalExperienceOrbEntityRenderer.vertex(vertexConsumer, matrix4f, matrix3f, -0.5f, -0.25f, s, u, h, m, i);
+        AncientCityPortalExperienceOrbEntityRenderer.vertex(vertexConsumer, matrix4f, matrix3f, 0.5f, -0.25f, s, u, k, m, i);
+        AncientCityPortalExperienceOrbEntityRenderer.vertex(vertexConsumer, matrix4f, matrix3f, 0.5f, 0.75f, s, u, k, l, i);
+        AncientCityPortalExperienceOrbEntityRenderer.vertex(vertexConsumer, matrix4f, matrix3f, -0.5f, 0.75f, s, u, h, l, i);
         matrixStack.pop();
         super.render(experienceOrbEntity, f, g, matrixStack, vertexConsumerProvider, i);
     }
 
-    private static void vertex(VertexConsumer vertexConsumer, Matrix4f positionMatrix, Matrix3f normalMatrix, float x, float y, int red, int green, int blue, float u, float v, int light) {
-        vertexConsumer.vertex(positionMatrix, x, y, 0.0f).color(red, green, blue, 128).texture(u, v).overlay(OverlayTexture.DEFAULT_UV).light(light).normal(normalMatrix, 0.0f, 1.0f, 0.0f).next();
+    private static void vertex(VertexConsumer vertexConsumer, Matrix4f positionMatrix, Matrix3f normalMatrix, float x, float y, int red, int blue, float u, float v, int light) {
+        vertexConsumer.vertex(positionMatrix, x, y, 0.0f).color(red, 255, blue, 128).texture(u, v).overlay(OverlayTexture.DEFAULT_UV).light(light).normal(normalMatrix, 0.0f, 1.0f, 0.0f).next();
     }
 
     @Override

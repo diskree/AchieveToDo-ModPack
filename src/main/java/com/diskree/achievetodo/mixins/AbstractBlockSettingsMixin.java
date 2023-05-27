@@ -1,6 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.ancient_city_portal.AncientCityPortalAdvancementEntity;
+import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.ancient_city_portal.AncientCityPortalEntity;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
@@ -19,8 +20,8 @@ public abstract class AbstractBlockSettingsMixin {
 
     @Inject(method = "strength(FF)Lnet/minecraft/block/AbstractBlock$Settings;", at = @At("HEAD"))
     public void onUseInject(float hardness, float resistance, CallbackInfoReturnable<AbstractBlock.Settings> cir) {
-        if (hardness == 55.0f && resistance == 1200.0f) {
-            luminance(AncientCityPortalAdvancementEntity::getPortalFrameLightLevel);
+        if (AchieveToDoMod.isReinforcedDeepslate(hardness, resistance)) {
+            luminance(AncientCityPortalEntity::getPortalFrameLightLevel);
         }
     }
 }

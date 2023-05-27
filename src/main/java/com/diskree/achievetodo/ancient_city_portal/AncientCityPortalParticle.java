@@ -6,6 +6,7 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.math.ColorHelper;
 
 public class AncientCityPortalParticle extends SpriteBillboardParticle {
+
     private final double startX;
     private final double startY;
     private final double startZ;
@@ -26,7 +27,6 @@ public class AncientCityPortalParticle extends SpriteBillboardParticle {
         this.red = j * 0.2f;
         this.green = j * 0.1f;
         this.blue = j;
-        // 01809d
         int color = ColorHelper.Argb.getArgb(255, 204, 31, 102);
         this.setColor(ColorHelper.Argb.getRed(color), ColorHelper.Argb.getGreen(color), ColorHelper.Argb.getBlue(color));
 

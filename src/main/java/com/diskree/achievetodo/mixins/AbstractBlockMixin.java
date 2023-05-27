@@ -1,12 +1,10 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.ancient_city_portal.AncientCityPortalAdvancementEntity;
+import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.ancient_city_portal.AncientCityPortalEntity;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.util.TypeFilter;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 import org.spongepowered.asm.mixin.Final;
@@ -15,8 +13,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
-import java.util.List;
 
 @Mixin(AbstractBlock.class)
 public abstract class AbstractBlockMixin {
@@ -30,14 +26,10 @@ public abstract class AbstractBlockMixin {
 
     @Inject(method = "getStateForNeighborUpdate", at = @At("HEAD"))
     public void getStateForNeighborUpdateInject(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos, CallbackInfoReturnable<BlockState> cir) {
-        if (getHardness() == 55.0f && resistance == 1200.0f) {
-            Box box = new Box(
-                    pos.offset(Direction.Axis.X, -AncientCityPortalAdvancementEntity.PORTAL_WIDTH).offset(Direction.Axis.Z, -AncientCityPortalAdvancementEntity.PORTAL_WIDTH).down(AncientCityPortalAdvancementEntity.PORTAL_HEIGHT),
-                    pos.offset(Direction.Axis.X, AncientCityPortalAdvancementEntity.PORTAL_WIDTH).offset(Direction.Axis.Z, AncientCityPortalAdvancementEntity.PORTAL_WIDTH).up(AncientCityPortalAdvancementEntity.PORTAL_HEIGHT)
-            );
-            List<AncientCityPortalAdvancementEntity> portalEntities = world.getEntitiesByType(TypeFilter.instanceOf(AncientCityPortalAdvancementEntity.class), box, (portalEntity) -> portalEntity.isPortalBlock(pos));
-            if (portalEntities.size() == 1) {
-                portalEntities.get(0).checkCharging();
+        if (AchieveToDoMod.isReinforcedDeepslate(getHardness(), resistance)) {
+            AncientCityPortalEntity portalEntity = AncientCityPortalEntity.findForBlock(world, pos);
+            if (portalEntity != null) {
+                portalEntity.checkCharging();
             }
         }
     }

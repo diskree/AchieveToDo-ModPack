@@ -24,7 +24,10 @@ import net.minecraft.block.AbstractBlock
 import net.minecraft.block.piston.PistonBehavior
 import net.minecraft.client.MinecraftClient
 import net.minecraft.client.render.RenderLayer
-import net.minecraft.entity.*
+import net.minecraft.entity.Entity
+import net.minecraft.entity.EntityDimensions
+import net.minecraft.entity.EntityType
+import net.minecraft.entity.SpawnGroup
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.*
 import net.minecraft.particle.DefaultParticleType
@@ -34,6 +37,7 @@ import net.minecraft.resource.ResourcePackProfile
 import net.minecraft.server.MinecraftServer
 import net.minecraft.server.world.ServerWorld
 import net.minecraft.sound.BlockSoundGroup
+import net.minecraft.state.property.BooleanProperty
 import net.minecraft.text.Text
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
@@ -56,9 +60,7 @@ class AchieveToDoMod : ModInitializer {
         registerParticles()
         registerEvents()
         registerEntities()
-        ClientPlayNetworking.registerGlobalReceiver(
-            Identifier(ID, "ancient_city_portal_experience_c2s_packet")
-        ) { _, handler, buf, _ -> AncientCityPortalExperienceOrbSpawnS2CPacket(buf).apply(handler) }
+        registerNetworking()
 
         AttackBlockCallback.EVENT.register(AttackBlockCallback { player: PlayerEntity, world: World?, _: Hand?, pos: BlockPos?, _: Direction? ->
             if (world != null && world.registryKey == World.OVERWORLD && pos != null) {
@@ -168,7 +170,7 @@ class AchieveToDoMod : ModInitializer {
             Registry.register(
                 Registries.ENTITY_TYPE,
                 ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID,
-                FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalAdvancementEntity).build()
+                FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalEntity).build()
             ), ::AncientCityPortalItemDisplayEntityRenderer
         )
         EntityRendererRegistry.register(
@@ -192,6 +194,12 @@ class AchieveToDoMod : ModInitializer {
                 EXPERIENCE_ORB
             ), ::AncientCityPortalExperienceOrbEntityRenderer
         )
+    }
+
+    private fun registerNetworking() {
+        ClientPlayNetworking.registerGlobalReceiver(
+            Identifier(ID, "ancient_city_portal_experience_c2s_packet")
+        ) { _, handler, buf, _ -> AncientCityPortalExperienceOrbSpawnS2CPacket(buf).apply(handler) }
     }
 
     private fun isToolBlocked(itemStack: ItemStack): Boolean {
@@ -242,13 +250,13 @@ class AchieveToDoMod : ModInitializer {
         @JvmField
         val JUKEBOX_PLAY = GameEvent(
             JUKEBOX_PLAY_EVENT_ID.toString(),
-            AncientCityPortalAdvancementEntity.RITUAL_RADIUS
+            AncientCityPortalEntity.RITUAL_RADIUS
         )
 
         @JvmField
         val JUKEBOX_STOP_PLAY = GameEvent(
             JUKEBOX_STOP_PLAY_EVENT_ID.toString(),
-            AncientCityPortalAdvancementEntity.RITUAL_RADIUS
+            AncientCityPortalEntity.RITUAL_RADIUS
         )
 
         val ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = Identifier(ID, "ancient_city_portal_tab_entity")
@@ -258,17 +266,27 @@ class AchieveToDoMod : ModInitializer {
         val ANCIENT_CITY_PORTAL_EXPERIENCE_ORB_ENTITY_ID = Identifier(ID, "ancient_city_portal_experience_orb")
 
         @JvmField
-        val EXPERIENCE_ORB: EntityType<AncientCityPortalExperienceOrbEntity> = FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalExperienceOrbEntity)
-            .dimensions(EntityDimensions(0.5f, 0.5f, false)).trackRangeChunks(6).trackedUpdateRate(20).build()
+        val EXPERIENCE_ORB: EntityType<AncientCityPortalExperienceOrbEntity> =
+            FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalExperienceOrbEntity)
+                .dimensions(EntityDimensions(0.5f, 0.5f, false))
+                .trackRangeChunks(6)
+                .trackedUpdateRate(20)
+                .build()
+
+        @JvmField
+        val REINFORCED_DEEPSLATE_CHARGED_PROPERTY: BooleanProperty = BooleanProperty.of("charged")
 
         @JvmField
         var lastAchievementsCount = 0
 
         @JvmStatic
+        fun isReinforcedDeepslate(hardness: Float, resistance: Float) = hardness == 55.0f && resistance == 1200.0f
+
+        @JvmStatic
         fun getPlayer() = MinecraftClient.getInstance().player
 
         @JvmStatic
-        fun showFoodBlockedDescription(food: FoodComponent) {
+        fun showFoodBlockedDescription(food: FoodComponent?) {
             if (getPlayer() == null) {
                 return
             }
@@ -301,8 +319,8 @@ class AchieveToDoMod : ModInitializer {
         }
 
         @JvmStatic
-        fun isActionBlocked(action: BlockedAction): Boolean {
-            if (getPlayer() == null || getPlayer()!!.isCreative || action.isUnlocked()) {
+        fun isActionBlocked(action: BlockedAction?): Boolean {
+            if (action == null || getPlayer() == null || getPlayer()!!.isCreative || action.isUnlocked()) {
                 return false
             }
             getPlayer()?.sendMessage(action.buildLockDescription(), true)
@@ -311,7 +329,7 @@ class AchieveToDoMod : ModInitializer {
         }
 
         @JvmStatic
-        fun isFoodBlocked(food: FoodComponent): Boolean {
+        fun isFoodBlocked(food: FoodComponent?): Boolean {
             if (getPlayer() == null || getPlayer()!!.isCreative) {
                 return false
             }
@@ -322,7 +340,7 @@ class AchieveToDoMod : ModInitializer {
         }
 
         @JvmStatic
-        fun isEquipmentBlocked(stack: Item): Boolean {
+        fun isEquipmentBlocked(stack: Item?): Boolean {
             if (stack === Items.ELYTRA && isActionBlocked(BlockedAction.EQUIP_ELYTRA)) {
                 return true
             }
@@ -336,15 +354,15 @@ class AchieveToDoMod : ModInitializer {
         }
 
         @JvmStatic
-        fun isVillagerBlocked(profession: VillagerProfession): Boolean {
+        fun isVillagerBlocked(profession: VillagerProfession?): Boolean {
             return BlockedAction.values().find { it.villagerProfession == profession }?.let { action ->
                 return@let isActionBlocked(action)
             } ?: false
         }
 
         @JvmStatic
-        fun getBlockedActionFromAdvancement(advancement: Advancement): BlockedAction? {
-            if (advancement.id.namespace == ID && advancement.id.path.startsWith(ADVANCEMENT_PATH_PREFIX)) {
+        fun getBlockedActionFromAdvancement(advancement: Advancement?): BlockedAction? {
+            if (advancement?.id?.namespace == ID && advancement.id.path.startsWith(ADVANCEMENT_PATH_PREFIX)) {
                 val key = advancement.id.path
                     .split(ADVANCEMENT_PATH_PREFIX.toRegex())
                     .dropLastWhile { it.isEmpty() }
@@ -355,7 +373,7 @@ class AchieveToDoMod : ModInitializer {
         }
 
         @JvmStatic
-        fun isNotInternalDatapack(resourceId: String): Boolean {
+        fun isNotInternalDatapack(resourceId: String?): Boolean {
             return resourceId != BACAP_MAIN_DATA_PACK_ID.toString() &&
                     resourceId != CORE_DATA_PACK_ID.toString() &&
                     resourceId != HARDCORE_DATA_PACK_ID.toString()

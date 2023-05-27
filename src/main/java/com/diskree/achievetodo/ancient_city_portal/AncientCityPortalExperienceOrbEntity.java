@@ -16,13 +16,11 @@ import net.minecraft.world.World;
 
 public class AncientCityPortalExperienceOrbEntity extends Entity {
 
-    private int amount;
     private BlockPos target;
 
     public AncientCityPortalExperienceOrbEntity(World world, double x, double y, double z, BlockPos pos) {
         this(AchieveToDoMod.EXPERIENCE_ORB, world);
         target = pos;
-        amount = 10;
         noClip = true;
         setPosition(x, y, z);
         setNoGravity(true);
@@ -30,10 +28,6 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
 
     public AncientCityPortalExperienceOrbEntity(EntityType<?> type, World world) {
         super(type, world);
-    }
-
-    public void setTarget(BlockPos target) {
-        this.target = target;
     }
 
     @Override
@@ -46,9 +40,16 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
     public void tick() {
         super.tick();
         if (this.target != null) {
-            Vec3d vec3d = new Vec3d(this.target.getX() + 0.5f - this.getX(), this.target.getY() + 0.5f - this.getY(), this.target.getZ() + 0.5f - this.getZ())
-                    .add((random.nextDouble() - 0.5) * 0.5, (random.nextDouble() - 0.5) * 0.5, (random.nextDouble() - 0.5) * 0.5);
-            this.setVelocity(this.getVelocity().add(vec3d.normalize().multiply(0.35)));
+            Vec3d vec3d = new Vec3d(
+                    this.target.getX() + 0.5f - this.getX(),
+                    this.target.getY() + 0.5f - this.getY(),
+                    this.target.getZ() + 0.5f - this.getZ()
+            ).add(
+                    (random.nextDouble() - 0.5) * 0.5,
+                    (random.nextDouble() - 0.5) * 0.5,
+                    (random.nextDouble() - 0.5) * 0.5
+            );
+            this.setVelocity(this.getVelocity().add(vec3d.normalize().multiply(0.4)));
             this.move(MovementType.SELF, this.getVelocity());
             this.setVelocity(this.getVelocity().multiply(0.98, 0.98, 0.98));
         }
@@ -65,7 +66,6 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
 
     @Override
     protected void readCustomDataFromNbt(NbtCompound nbt) {
-        this.amount = nbt.getShort("Value");
         if (nbt.contains("Target", NbtElement.COMPOUND_TYPE)) {
             target = NbtHelper.toBlockPos(nbt.getCompound("Target"));
         }
@@ -73,7 +73,6 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
 
     @Override
     protected void writeCustomDataToNbt(NbtCompound nbt) {
-        nbt.putShort("Value", (short) this.amount);
         if (target != null) {
             nbt.put("Target", NbtHelper.fromBlockPos(target));
         }
@@ -90,10 +89,6 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
 
     public BlockPos getTarget() {
         return target;
-    }
-
-    public int getExperienceAmount() {
-        return this.amount;
     }
 
     @Override

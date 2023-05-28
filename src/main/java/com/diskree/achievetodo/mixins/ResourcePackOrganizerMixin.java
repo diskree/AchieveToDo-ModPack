@@ -41,17 +41,19 @@ public class ResourcePackOrganizerMixin {
     private void hideInternalDatapacks() {
         List<ResourcePackProfile> newEnabledPacks = new ArrayList<>();
         for (ResourcePackProfile pack : enabledPacks) {
-            if (AchieveToDoMod.isNotInternalDatapack(pack.getName())) {
-                newEnabledPacks.add(pack);
+            if (AchieveToDoMod.isInternalDatapack(pack.getName())) {
+                continue;
             }
+            newEnabledPacks.add(pack);
         }
         enabledPacks.clear();
         enabledPacks.addAll(newEnabledPacks);
         List<ResourcePackProfile> newDisabledPacks = new ArrayList<>();
         for (ResourcePackProfile pack : disabledPacks) {
-            if (AchieveToDoMod.isNotInternalDatapack(pack.getName())) {
-                newDisabledPacks.add(pack);
+            if (AchieveToDoMod.isInternalDatapack(pack.getName())) {
+                continue;
             }
+            newDisabledPacks.add(pack);
         }
         disabledPacks.clear();
         disabledPacks.addAll(newDisabledPacks);

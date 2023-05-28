@@ -22,7 +22,7 @@ public class ScoreboardPlayerScoreMixin {
     @Inject(method = "setScore", at = @At("HEAD"))
     public void setScoreInject(int score, CallbackInfo ci) {
         if (this.objective != null && this.objective.getName().equalsIgnoreCase("bac_advancements")) {
-            AchieveToDoMod.setAchievementsCount(score);
+            AchieveToDoMod.setAdvancementsCount(score);
         }
     }
 }

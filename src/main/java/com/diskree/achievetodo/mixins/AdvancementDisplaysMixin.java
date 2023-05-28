@@ -15,8 +15,13 @@ import java.util.function.Predicate;
 public class AdvancementDisplaysMixin {
 
     @Inject(method = "shouldDisplay(Lnet/minecraft/advancement/Advancement;Lit/unimi/dsi/fastutil/Stack;Ljava/util/function/Predicate;Lnet/minecraft/advancement/AdvancementDisplays$ResultConsumer;)Z", at = @At("HEAD"), cancellable = true)
-    private static void shouldDisplayInject(Advancement advancement, Stack<AdvancementDisplays.Status> statuses, Predicate<Advancement> donePredicate, AdvancementDisplays.ResultConsumer consumer, CallbackInfoReturnable<Boolean> cir) {
+    private static void calculateDisplayInject(Advancement advancement, Stack<AdvancementDisplays.Status> statuses, Predicate<Advancement> donePredicate, AdvancementDisplays.ResultConsumer consumer, CallbackInfoReturnable<Boolean> cir) {
         if (AchieveToDoMod.getBlockedActionFromAdvancement(advancement) != null) {
+            statuses.push(AdvancementDisplays.Status.SHOW);
+            for (Advancement child : advancement.getChildren()) {
+                AdvancementDisplays.shouldDisplay(child, statuses, donePredicate, consumer);
+            }
+            consumer.accept(advancement, true);
             cir.setReturnValue(true);
         }
     }

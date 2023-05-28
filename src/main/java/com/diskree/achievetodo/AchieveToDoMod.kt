@@ -1,6 +1,7 @@
 package com.diskree.achievetodo
 
 import com.diskree.achievetodo.advancements.AchieveToDoToast
+import com.diskree.achievetodo.advancements.AdvancementRoot
 import com.diskree.achievetodo.ancient_city_portal.*
 import com.google.common.collect.Lists
 import net.fabricmc.api.ModInitializer
@@ -212,9 +213,6 @@ class AchieveToDoMod : ModInitializer {
     companion object {
         const val ID = "achievetodo"
 
-        const val ADVANCEMENT_PATH_PREFIX = "action/"
-        private const val ADVANCEMENT_CRITERIA_PREFIX = "action_"
-
         private val BACAP_MAIN_DATA_PACK_ID = Identifier(ID, "bacap")
         private val CORE_DATA_PACK_ID = Identifier(ID, "bacap_achievetodo-core")
         private val HARDCORE_DATA_PACK_ID = Identifier(ID, "bacap_hc")
@@ -231,7 +229,8 @@ class AchieveToDoMod : ModInitializer {
                 .pistonBehavior(PistonBehavior.BLOCK)
         )
 
-        private val LOCKED_ACTION_ITEM = Item(FabricItemSettings())
+        @JvmField
+        val LOCKED_ACTION_ITEM = Item(FabricItemSettings())
 
         @JvmField
         val ANCIENT_CITY_PORTAL_PARTICLES: DefaultParticleType = FabricParticleTypes.simple()
@@ -264,8 +263,10 @@ class AchieveToDoMod : ModInitializer {
                 .trackedUpdateRate(20)
                 .build()
 
+        const val ADVANCEMENTS_SCREEN_MARGIN = 30
+
         @JvmField
-        var lastAchievementsCount = 0
+        var currentAdvancementsCount = 0
 
         @JvmStatic
         fun getPlayer() = MinecraftClient.getInstance().player
@@ -276,28 +277,28 @@ class AchieveToDoMod : ModInitializer {
                 return
             }
             BlockedAction.values().find { it.foodComponent == food }?.let { action ->
-                getPlayer()!!.sendMessage(action.buildLockDescription(), true)
+                getPlayer()!!.sendMessage(action.buildBlockedDescription(), true)
             }
         }
 
         @JvmStatic
-        fun setAchievementsCount(count: Int) {
-            if (count == 0 || count < lastAchievementsCount) {
-                lastAchievementsCount = 0
+        fun setAdvancementsCount(count: Int) {
+            if (count == 0 || count < currentAdvancementsCount) {
+                currentAdvancementsCount = 0
             }
-            if (lastAchievementsCount == count) {
+            if (currentAdvancementsCount == count) {
                 return
             }
-            val oldCount = lastAchievementsCount
-            lastAchievementsCount = count
-            val actionsToUnlock: MutableList<BlockedAction> = ArrayList()
+            val oldCount = currentAdvancementsCount
+            currentAdvancementsCount = count
+            val actionsToUnblock: MutableList<BlockedAction> = ArrayList()
             BlockedAction.values().forEach { action ->
-                if (action.isUnlocked() && oldCount < action.achievementsCountToUnlock && oldCount != 0) {
-                    actionsToUnlock.add(action)
+                if (action.isUnblocked() && oldCount < action.unblockAdvancementsCount && oldCount != 0) {
+                    actionsToUnblock.add(action)
                 }
             }
             val server = MinecraftClient.getInstance().server ?: return
-            actionsToUnlock.forEach { action ->
+            actionsToUnblock.forEach { action ->
                 val advancement = server.advancementLoader[action.buildAdvancementId()]
                 MinecraftClient.getInstance().toastManager.add(AchieveToDoToast(advancement, action))
             }
@@ -305,10 +306,10 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmStatic
         fun isActionBlocked(action: BlockedAction?): Boolean {
-            if (action == null || getPlayer() == null || getPlayer()!!.isCreative || action.isUnlocked()) {
+            if (action == null || getPlayer() == null || getPlayer()!!.isCreative || action.isUnblocked()) {
                 return false
             }
-            getPlayer()?.sendMessage(action.buildLockDescription(), true)
+            getPlayer()?.sendMessage(action.buildBlockedDescription(), true)
             grantActionAdvancement(action)
             return true
         }
@@ -320,7 +321,7 @@ class AchieveToDoMod : ModInitializer {
             }
             return BlockedAction.values().find { it.foodComponent == food }?.let { action ->
                 grantActionAdvancement(action)
-                return@let action.isUnlocked()
+                return@let !action.isUnblocked()
             } ?: false
         }
 
@@ -346,22 +347,15 @@ class AchieveToDoMod : ModInitializer {
         }
 
         @JvmStatic
-        fun getBlockedActionFromAdvancement(advancement: Advancement?): BlockedAction? {
-            if (advancement?.id?.namespace == ID && advancement.id.path.startsWith(ADVANCEMENT_PATH_PREFIX)) {
-                val key = advancement.id.path
-                    .split(ADVANCEMENT_PATH_PREFIX.toRegex())
-                    .dropLastWhile { it.isEmpty() }
-                    .toTypedArray()[1]
-                return BlockedAction.map(key)
-            }
-            return null
-        }
+        fun getBlockedActionFromAdvancement(advancement: Advancement?): BlockedAction? = BlockedAction.map(
+            advancement?.id?.path?.split(AdvancementRoot.ACTION.name.lowercase() + "/")?.last()
+        )
 
         @JvmStatic
-        fun isNotInternalDatapack(resourceId: String?): Boolean {
-            return resourceId != BACAP_MAIN_DATA_PACK_ID.toString() &&
-                    resourceId != CORE_DATA_PACK_ID.toString() &&
-                    resourceId != HARDCORE_DATA_PACK_ID.toString()
+        fun isInternalDatapack(resourceId: String?): Boolean {
+            return resourceId == BACAP_MAIN_DATA_PACK_ID.toString() &&
+                    resourceId == CORE_DATA_PACK_ID.toString() &&
+                    resourceId == HARDCORE_DATA_PACK_ID.toString()
         }
 
         private fun grantActionAdvancement(action: BlockedAction) {
@@ -369,7 +363,7 @@ class AchieveToDoMod : ModInitializer {
             val tab = server.advancementLoader[action.buildAdvancementId()]
             server.playerManager.playerList[0]?.advancementTracker?.grantCriterion(
                 tab,
-                ADVANCEMENT_CRITERIA_PREFIX + action.name
+                AdvancementRoot.ACTION.name.lowercase() + "_" + action.name.lowercase()
             )
         }
     }

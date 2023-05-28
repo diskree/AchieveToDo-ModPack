@@ -1,5 +1,6 @@
 package com.diskree.achievetodo
 
+import com.diskree.achievetodo.advancements.AdvancementRoot
 import net.minecraft.item.FoodComponent
 import net.minecraft.item.FoodComponents
 import net.minecraft.text.Text
@@ -12,7 +13,7 @@ enum class BlockedAction(
     @JvmField val actionType: BlockedActionType,
     val foodComponent: FoodComponent?,
     val villagerProfession: VillagerProfession?,
-    val achievementsCountToUnlock: Int
+    val unblockAdvancementsCount: Int
 ) {
     EAT_SALMON("blocked.food", BlockedActionType.FOOD, FoodComponents.SALMON, null, 2),
     EAT_COD("blocked.food", BlockedActionType.FOOD, FoodComponents.COD, null, 3),
@@ -104,19 +105,20 @@ enum class BlockedAction(
     USING_ENCHANTING_TABLE("blocked.enchanting_table", BlockedActionType.BLOCK, null, null, 950),
     DROP_TOTEM("blocked.totem", BlockedActionType.ACTION, null, null, 1000);
 
-    fun isUnlocked(): Boolean = AchieveToDoMod.lastAchievementsCount >= achievementsCountToUnlock
+    fun isUnblocked(): Boolean = AchieveToDoMod.currentAdvancementsCount >= unblockAdvancementsCount
 
     fun buildAdvancementId(): Identifier =
-        Identifier(AchieveToDoMod.ID, AchieveToDoMod.ADVANCEMENT_PATH_PREFIX + name.lowercase())
+        Identifier(AchieveToDoMod.ID, AdvancementRoot.ACTION.name.lowercase() + "/" + name.lowercase())
 
-    fun buildLockDescription(): Text {
-        val leftAchievementsCount = achievementsCountToUnlock - AchieveToDoMod.lastAchievementsCount
-        return Text.of(Text.translatable(description).string + Text.translatable("unblock.amount").string + leftAchievementsCount)
+    fun buildBlockedDescription(): Text {
+        val leftAdvancementsCount = unblockAdvancementsCount - AchieveToDoMod.currentAdvancementsCount
+        return Text.of(Text.translatable(description).string + Text.translatable("unblock.amount").string + leftAdvancementsCount)
             .copy()
             .formatted(Formatting.YELLOW)
     }
 
     companion object {
-        fun map(name: String): BlockedAction? = values().find { it.name.equals(name, true) }
+        @JvmStatic
+        fun map(name: String?): BlockedAction? = values().find { it.name.equals(name, ignoreCase = true) }
     }
 }

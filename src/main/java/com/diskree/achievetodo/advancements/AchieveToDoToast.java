@@ -42,12 +42,12 @@ public class AchieveToDoToast implements Toast {
             int i = advancementDisplay.getFrame() == AdvancementFrame.CHALLENGE ? 0xFF88FF : 0xFFFF00;
             List<OrderedText> list = manager.getClient().textRenderer.wrapLines(advancementDisplay.getTitle(), 125);
             if (list.size() == 1) {
-                context.drawText(manager.getClient().textRenderer, Text.of(blockedAction.actionType.getUnlockPopupTitle() + "!"), 30, 7, i | 0xFF000000, false);
+                context.drawText(manager.getClient().textRenderer, Text.of(blockedAction.actionType.getUnblockPopupTitle()), 30, 7, i | 0xFF000000, false);
                 context.drawText(manager.getClient().textRenderer, list.get(0), 30, 18, -1, false);
             } else {
                 if (startTime < 1500L) {
                     int k = MathHelper.floor(MathHelper.clamp((float) (1500L - startTime) / 300.0f, 0.0f, 1.0f) * 255.0f) << 24 | 0x4000000;
-                    context.drawText(manager.getClient().textRenderer, Text.of(blockedAction.actionType.getUnlockPopupTitle() + "!"), 30, 11, i | k, false);
+                    context.drawText(manager.getClient().textRenderer, Text.of(blockedAction.actionType.getUnblockPopupTitle()), 30, 11, i | k, false);
                 } else {
                     int k = MathHelper.floor(MathHelper.clamp((float) (startTime - 1500L) / 300.0f, 0.0f, 1.0f) * 252.0f) << 24 | 0x4000000;
                     int l = this.getHeight() / 2 - list.size() * manager.getClient().textRenderer.fontHeight / 2;

@@ -9,7 +9,7 @@
     "description": {
       "translate": ""
     },
-    "background": "minecraft:textures/block/bedrock.png",
+    "background": "minecraft:textures/block/cherry_trapdoor.png",
     "show_toast": false,
     "announce_to_chat": "false"
   },

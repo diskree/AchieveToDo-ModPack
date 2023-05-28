@@ -10,6 +10,7 @@
     "AbstractBlockSettingsMixin",
     "AbstractFurnaceBlockMixin",
     "AdvancementDisplaysMixin",
+    "AdvancementProgressMixin",
     "AnvilBlockMixin",
     "ArmorItemMixin",
     "BeaconBlockMixin",
@@ -44,6 +45,11 @@
     "WorldAccessMixin"
   ],
   "client": [
+    "AdvancementMixin",
+    "AdvancementsScreenMixin",
+    "AdvancementTabMixin",
+    "AdvancementTabTypeMixin",
+    "AdvancementWidgetMixin",
     "ClientPlayNetworkHandlerMixin",
     "ResourcePackOrganizerMixin",
     "ToastManagerMixin"

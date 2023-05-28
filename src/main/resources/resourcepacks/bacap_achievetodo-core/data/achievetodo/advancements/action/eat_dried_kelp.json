@@ -12,7 +12,7 @@
   },
   "parent": "achievetodo:action/eat_potato",
   "criteria": {
-    "action_eat_enchanted_golden_apple": {
+    "action_eat_dried_kelp": {
       "trigger": "minecraft:impossible"
     }
   }

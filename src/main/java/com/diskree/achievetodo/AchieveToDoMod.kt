@@ -4,11 +4,13 @@ import com.diskree.achievetodo.advancements.AchieveToDoToast
 import com.diskree.achievetodo.advancements.AdvancementRoot
 import com.diskree.achievetodo.ancient_city_portal.*
 import com.google.common.collect.Lists
+import com.mojang.brigadier.Command
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerWorldEvents
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback
@@ -36,10 +38,12 @@ import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.resource.ResourcePackProfile
 import net.minecraft.server.MinecraftServer
+import net.minecraft.server.command.CommandManager.literal
 import net.minecraft.server.world.ServerWorld
 import net.minecraft.sound.BlockSoundGroup
 import net.minecraft.text.Text
 import net.minecraft.util.ActionResult
+import net.minecraft.util.Formatting
 import net.minecraft.util.Hand
 import net.minecraft.util.Identifier
 import net.minecraft.util.hit.BlockHitResult
@@ -64,10 +68,7 @@ class AchieveToDoMod : ModInitializer {
 
         AttackBlockCallback.EVENT.register(AttackBlockCallback { player: PlayerEntity, world: World?, _: Hand?, pos: BlockPos?, _: Direction? ->
             if (world != null && world.registryKey == World.OVERWORLD && pos != null) {
-                if (pos.y >= 0 && isActionBlocked(BlockedAction.BREAK_BLOCKS_IN_POSITIVE_Y) || pos.y < 0 && isActionBlocked(
-                        BlockedAction.BREAK_BLOCKS_IN_NEGATIVE_Y
-                    )
-                ) {
+                if (pos.y >= 0 && isActionBlocked(BlockedAction.BREAK_BLOCKS_IN_POSITIVE_Y) || pos.y < 0 && isActionBlocked(BlockedAction.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
                     return@AttackBlockCallback ActionResult.FAIL
                 }
             }
@@ -100,36 +101,55 @@ class AchieveToDoMod : ModInitializer {
             if (server.isHardcore) {
                 list.add(resourcePackManager.getProfile(HARDCORE_DATA_PACK_ID.toString()))
             }
-            server.reloadResources(list.stream().map { obj: ResourcePackProfile? -> obj!!.name }
-                .collect(Collectors.toList()))
+            server.reloadResources(list.stream().map { obj: ResourcePackProfile? -> obj!!.name }.collect(Collectors.toList()))
+        })
+        CommandRegistrationCallback.EVENT.register(CommandRegistrationCallback { dispatcher, _, _ ->
+            dispatcher.register(literal("random").executes { context ->
+                val player = MinecraftClient.getInstance().server?.playerManager?.playerList?.first()
+                MinecraftClient.getInstance().player?.networkHandler?.advancementHandler?.manager?.advancements?.filter { advancement ->
+                    advancement?.requirementCount == 1 &&
+                            advancement.display?.isHidden == false &&
+                            advancement.id?.path?.endsWith("/root") == false &&
+                            !advancement.id.path.startsWith(AdvancementRoot.ACTION.name.lowercase()) &&
+                            !advancement.id.path.startsWith(AdvancementRoot.STATISTICS.name.lowercase()) &&
+                            player?.advancementTracker?.getProgress(advancement)?.isDone == false
+                }?.shuffled()?.firstOrNull()?.let { randomAdvancement ->
+                    context.source.sendMessage(Text.of("==========").copy().formatted(Formatting.GOLD))
+                    context.source.sendMessage(randomAdvancement.root.display?.title?.copy()?.formatted(Formatting.BLUE, Formatting.BOLD))
+                    context.source.sendMessage(randomAdvancement.display?.title?.copy()?.formatted(Formatting.AQUA, Formatting.ITALIC))
+                    context.source.sendMessage(randomAdvancement.display?.description?.copy()?.formatted(Formatting.YELLOW))
+                    context.source.sendMessage(Text.of("==========").copy().formatted(Formatting.GOLD))
+                } ?: context.source.sendMessage(Text.of(Text.translatable("commands.random.no_advancements").string))
+                Command.SINGLE_SUCCESS
+            })
         })
     }
 
     private fun registerPacks() {
         FabricLoader.getInstance().getModContainer(ID).ifPresent { modContainer: ModContainer? ->
             ResourceManagerHelper.registerBuiltinResourcePack(
-                BACAP_MAIN_DATA_PACK_ID,
-                modContainer,
-                Text.of("BACAP Data Pack"),
-                ResourcePackActivationType.ALWAYS_ENABLED
+                    BACAP_MAIN_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("BACAP Data Pack"),
+                    ResourcePackActivationType.ALWAYS_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
-                CORE_DATA_PACK_ID,
-                modContainer,
-                Text.of("AchieveToDo Core Data Pack"),
-                ResourcePackActivationType.ALWAYS_ENABLED
+                    CORE_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("AchieveToDo Core Data Pack"),
+                    ResourcePackActivationType.ALWAYS_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
-                HARDCORE_DATA_PACK_ID,
-                modContainer,
-                Text.of("BACAP Hardcore Data Pack"),
-                ResourcePackActivationType.NORMAL
+                    HARDCORE_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("BACAP Hardcore Data Pack"),
+                    ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
-                BACAP_LANGUAGE_RESOURCE_PACK_ID,
-                modContainer,
-                Text.of("BACAP Language Resource Pack"),
-                ResourcePackActivationType.DEFAULT_ENABLED
+                    BACAP_LANGUAGE_RESOURCE_PACK_ID,
+                    modContainer,
+                    Text.of("BACAP Language Resource Pack"),
+                    ResourcePackActivationType.DEFAULT_ENABLED
             )
         }
     }
@@ -145,12 +165,12 @@ class AchieveToDoMod : ModInitializer {
 
     private fun registerParticles() {
         Registry.register(
-            Registries.PARTICLE_TYPE,
-            Identifier(ID, "ancient_city_portal_particles"),
-            ANCIENT_CITY_PORTAL_PARTICLES
+                Registries.PARTICLE_TYPE,
+                Identifier(ID, "ancient_city_portal_particles"),
+                ANCIENT_CITY_PORTAL_PARTICLES
         )
         ParticleFactoryRegistry.getInstance()
-            .register(ANCIENT_CITY_PORTAL_PARTICLES, ::AncientCityPortalParticleFactory)
+                .register(ANCIENT_CITY_PORTAL_PARTICLES, ::AncientCityPortalParticleFactory)
     }
 
     private fun registerEvents() {
@@ -160,38 +180,38 @@ class AchieveToDoMod : ModInitializer {
 
     private fun registerEntities() {
         EntityRendererRegistry.register(
-            Registry.register(
-                Registries.ENTITY_TYPE,
-                ANCIENT_CITY_PORTAL_TAB_ENTITY_ID,
-                FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalTabEntity).build()
-            ), ::AncientCityPortalItemDisplayEntityRenderer
+                Registry.register(
+                        Registries.ENTITY_TYPE,
+                        ANCIENT_CITY_PORTAL_TAB_ENTITY_ID,
+                        FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalTabEntity).build()
+                ), ::AncientCityPortalItemDisplayEntityRenderer
         )
         EntityRendererRegistry.register(
-            Registry.register(
-                Registries.ENTITY_TYPE,
-                ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID,
-                FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalEntity).build()
-            ), ::AncientCityPortalItemDisplayEntityRenderer
+                Registry.register(
+                        Registries.ENTITY_TYPE,
+                        ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID,
+                        FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalEntity).build()
+                ), ::AncientCityPortalItemDisplayEntityRenderer
         )
         EntityRendererRegistry.register(
-            Registry.register(
-                Registries.ENTITY_TYPE,
-                ANCIENT_CITY_PORTAL_PROMPT_ENTITY_ID,
-                FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalPromptEntity).build()
-            ), ::AncientCityPortalItemDisplayEntityRenderer
+                Registry.register(
+                        Registries.ENTITY_TYPE,
+                        ANCIENT_CITY_PORTAL_PROMPT_ENTITY_ID,
+                        FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalPromptEntity).build()
+                ), ::AncientCityPortalItemDisplayEntityRenderer
         )
         EntityRendererRegistry.register(
-            Registry.register(
-                Registries.ENTITY_TYPE,
-                ANCIENT_CITY_PORTAL_EXPERIENCE_ORB_ENTITY_ID,
-                EXPERIENCE_ORB
-            ), ::AncientCityPortalExperienceOrbEntityRenderer
+                Registry.register(
+                        Registries.ENTITY_TYPE,
+                        ANCIENT_CITY_PORTAL_EXPERIENCE_ORB_ENTITY_ID,
+                        EXPERIENCE_ORB
+                ), ::AncientCityPortalExperienceOrbEntityRenderer
         )
     }
 
     private fun registerNetworking() {
         ClientPlayNetworking.registerGlobalReceiver(
-            Identifier(ID, "ancient_city_portal_experience_c2s_packet")
+                Identifier(ID, "ancient_city_portal_experience_c2s_packet")
         ) { _, handler, buf, _ -> AncientCityPortalExperienceOrbSpawnS2CPacket(buf).apply(handler) }
     }
 
@@ -220,13 +240,13 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmField
         val ANCIENT_CITY_PORTAL_BLOCK = AncientCityPortalBlock(
-            AbstractBlock.Settings.create()
-                .noCollision()
-                .ticksRandomly()
-                .strength(-1.0f)
-                .sounds(BlockSoundGroup.GLASS)
-                .luminance { 11 }
-                .pistonBehavior(PistonBehavior.BLOCK)
+                AbstractBlock.Settings.create()
+                        .noCollision()
+                        .ticksRandomly()
+                        .strength(-1.0f)
+                        .sounds(BlockSoundGroup.GLASS)
+                        .luminance { 11 }
+                        .pistonBehavior(PistonBehavior.BLOCK)
         )
 
         @JvmField
@@ -240,14 +260,14 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmField
         val JUKEBOX_PLAY = GameEvent(
-            JUKEBOX_PLAY_EVENT_ID.toString(),
-            AncientCityPortalEntity.RITUAL_RADIUS
+                JUKEBOX_PLAY_EVENT_ID.toString(),
+                AncientCityPortalEntity.RITUAL_RADIUS
         )
 
         @JvmField
         val JUKEBOX_STOP_PLAY = GameEvent(
-            JUKEBOX_STOP_PLAY_EVENT_ID.toString(),
-            AncientCityPortalEntity.RITUAL_RADIUS
+                JUKEBOX_STOP_PLAY_EVENT_ID.toString(),
+                AncientCityPortalEntity.RITUAL_RADIUS
         )
 
         val ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = Identifier(ID, "ancient_city_portal_tab_entity")
@@ -257,11 +277,11 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmField
         val EXPERIENCE_ORB: EntityType<AncientCityPortalExperienceOrbEntity> =
-            FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalExperienceOrbEntity)
-                .dimensions(EntityDimensions(0.5f, 0.5f, false))
-                .trackRangeChunks(6)
-                .trackedUpdateRate(20)
-                .build()
+                FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalExperienceOrbEntity)
+                        .dimensions(EntityDimensions(0.5f, 0.5f, false))
+                        .trackRangeChunks(6)
+                        .trackedUpdateRate(20)
+                        .build()
 
         const val ADVANCEMENTS_SCREEN_MARGIN = 30
 
@@ -348,7 +368,7 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmStatic
         fun getBlockedActionFromAdvancement(advancement: Advancement?): BlockedAction? = BlockedAction.map(
-            advancement?.id?.path?.split(AdvancementRoot.ACTION.name.lowercase() + "/")?.last()
+                advancement?.id?.path?.split(AdvancementRoot.ACTION.name.lowercase() + "/")?.last()
         )
 
         @JvmStatic
@@ -362,8 +382,8 @@ class AchieveToDoMod : ModInitializer {
             val server = MinecraftClient.getInstance().server ?: return
             val tab = server.advancementLoader[action.buildAdvancementId()]
             server.playerManager.playerList[0]?.advancementTracker?.grantCriterion(
-                tab,
-                AdvancementRoot.ACTION.name.lowercase() + "_" + action.name.lowercase()
+                    tab,
+                    AdvancementRoot.ACTION.name.lowercase() + "_" + action.name.lowercase()
             )
         }
     }

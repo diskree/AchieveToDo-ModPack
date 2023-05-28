@@ -38,5 +38,7 @@
   "unblock.tools": "Tools available",
   "unblock.armor": "Armor available",
   "unblock.portal": "Portal available",
-  "unblock.villager": "Villager available"
+  "unblock.villager": "Villager available",
+
+  "commands.random.no_advancements": "No advancements found"
 }

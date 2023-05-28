@@ -16,8 +16,6 @@ public abstract class AdvancementProgressMixin {
     @Shadow
     private String[][] requirements;
 
-    @Shadow public abstract boolean isDone();
-
     @Inject(method = "getProgressBarPercentage", at = @At("HEAD"), cancellable = true)
     public void getProgressBarPercentageInject(CallbackInfoReturnable<Float> cir) {
         float actionUnblockAdvancementsCount = getActionUnblockAdvancementsCount();

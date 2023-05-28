@@ -65,13 +65,13 @@ public class AncientCityPortalBlock extends Block {
 
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-        if (world.isClient) {
+        if (world.isClient || entity == null || entity.isRemoved()) {
             return;
         }
         if (entity instanceof AncientCityPortalExperienceOrbEntity || entity instanceof ItemEntity && ((ItemEntity) entity).getStack().isOf(Items.DRAGON_EGG)) {
             AncientCityPortalEntity portalEntity = AncientCityPortalEntity.findForBlock(world, pos);
-            if (portalEntity != null) {
-                portalEntity.charge(entity);
+            if (portalEntity != null && portalEntity.charge(entity instanceof AncientCityPortalExperienceOrbEntity)) {
+                entity.kill();
             }
         }
     }

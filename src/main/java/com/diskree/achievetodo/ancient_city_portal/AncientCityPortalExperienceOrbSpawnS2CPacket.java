@@ -13,6 +13,7 @@ public class AncientCityPortalExperienceOrbSpawnS2CPacket implements Packet<Clie
     private final double y;
     private final double z;
     private final BlockPos target;
+    private final int size;
 
     public AncientCityPortalExperienceOrbSpawnS2CPacket(AncientCityPortalExperienceOrbEntity experienceOrbEntity) {
         this.id = experienceOrbEntity.getId();
@@ -20,6 +21,7 @@ public class AncientCityPortalExperienceOrbSpawnS2CPacket implements Packet<Clie
         this.y = experienceOrbEntity.getY();
         this.z = experienceOrbEntity.getZ();
         this.target = experienceOrbEntity.getTarget();
+        this.size = experienceOrbEntity.getOrbSize();
     }
 
     public AncientCityPortalExperienceOrbSpawnS2CPacket(PacketByteBuf buf) {
@@ -28,6 +30,7 @@ public class AncientCityPortalExperienceOrbSpawnS2CPacket implements Packet<Clie
         this.y = buf.readDouble();
         this.z = buf.readDouble();
         this.target = buf.readBlockPos();
+        this.size = buf.readInt();
     }
 
     @Override
@@ -37,6 +40,7 @@ public class AncientCityPortalExperienceOrbSpawnS2CPacket implements Packet<Clie
         buf.writeDouble(this.y);
         buf.writeDouble(this.z);
         buf.writeBlockPos(this.target);
+        buf.writeInt(this.size);
     }
 
     @Override
@@ -62,5 +66,9 @@ public class AncientCityPortalExperienceOrbSpawnS2CPacket implements Packet<Clie
 
     public BlockPos getTarget() {
         return target;
+    }
+
+    public int getSize() {
+        return size;
     }
 }

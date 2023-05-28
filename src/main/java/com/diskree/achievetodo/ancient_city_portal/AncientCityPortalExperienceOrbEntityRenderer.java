@@ -1,5 +1,6 @@
 package com.diskree.achievetodo.ancient_city_portal;
 
+import com.diskree.achievetodo.AchieveToDoMod;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.OverlayTexture;
@@ -19,7 +20,7 @@ import org.joml.Matrix4f;
 @Environment(value=EnvType.CLIENT)
 public class AncientCityPortalExperienceOrbEntityRenderer
 extends EntityRenderer<AncientCityPortalExperienceOrbEntity> {
-    private static final Identifier TEXTURE = new Identifier("textures/entity/experience_orb.png");
+    private static final Identifier TEXTURE = new Identifier(AchieveToDoMod.ID, "textures/entity/ancient_city_portal_experience_orb.png");
     private static final RenderLayer LAYER = RenderLayer.getItemEntityTranslucentCull(TEXTURE);
 
     public AncientCityPortalExperienceOrbEntityRenderer(EntityRendererFactory.Context context) {
@@ -30,7 +31,7 @@ extends EntityRenderer<AncientCityPortalExperienceOrbEntity> {
 
     @Override
     protected int getBlockLight(AncientCityPortalExperienceOrbEntity experienceOrbEntity, BlockPos blockPos) {
-        return MathHelper.clamp(super.getBlockLight(experienceOrbEntity, blockPos) + 7, 0, 15);
+        return 15;
     }
 
     @Override
@@ -61,7 +62,7 @@ extends EntityRenderer<AncientCityPortalExperienceOrbEntity> {
     }
 
     private static void vertex(VertexConsumer vertexConsumer, Matrix4f positionMatrix, Matrix3f normalMatrix, float x, float y, int red, int blue, float u, float v, int light) {
-        vertexConsumer.vertex(positionMatrix, x, y, 0.0f).color(red, 255, blue, 128).texture(u, v).overlay(OverlayTexture.DEFAULT_UV).light(light).normal(normalMatrix, 0.0f, 1.0f, 0.0f).next();
+        vertexConsumer.vertex(positionMatrix, x, y, 0.0f).color(255, 255, 255, 128).texture(u, v).overlay(OverlayTexture.DEFAULT_UV).light(light).normal(normalMatrix, 0.0f, 1.0f, 0.0f).next();
     }
 
     @Override

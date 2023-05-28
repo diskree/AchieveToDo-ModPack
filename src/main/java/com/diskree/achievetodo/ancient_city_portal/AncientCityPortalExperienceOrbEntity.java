@@ -17,9 +17,11 @@ import net.minecraft.world.World;
 public class AncientCityPortalExperienceOrbEntity extends Entity {
 
     private BlockPos target;
+    private int size;
 
-    public AncientCityPortalExperienceOrbEntity(World world, double x, double y, double z, BlockPos pos) {
+    public AncientCityPortalExperienceOrbEntity(World world, double x, double y, double z, BlockPos pos, int size) {
         this(AchieveToDoMod.EXPERIENCE_ORB, world);
+        this.size = size;
         target = pos;
         noClip = true;
         setPosition(x, y, z);
@@ -44,12 +46,8 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
                     this.target.getX() + 0.5f - this.getX(),
                     this.target.getY() + 0.5f - this.getY(),
                     this.target.getZ() + 0.5f - this.getZ()
-            ).add(
-                    (random.nextDouble() - 0.5) * 0.5,
-                    (random.nextDouble() - 0.5) * 0.5,
-                    (random.nextDouble() - 0.5) * 0.5
             );
-            this.setVelocity(this.getVelocity().add(vec3d.normalize().multiply(0.4)));
+            this.setVelocity(this.getVelocity().add(vec3d.normalize().multiply(0.2)));
             this.move(MovementType.SELF, this.getVelocity());
             this.setVelocity(this.getVelocity().multiply(0.98, 0.98, 0.98));
         }
@@ -69,6 +67,7 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
         if (nbt.contains("Target", NbtElement.COMPOUND_TYPE)) {
             target = NbtHelper.toBlockPos(nbt.getCompound("Target"));
         }
+        size = nbt.getInt("OrbSize");
     }
 
     @Override
@@ -76,6 +75,7 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
         if (target != null) {
             nbt.put("Target", NbtHelper.fromBlockPos(target));
         }
+        nbt.putInt("OrbSize", size);
     }
 
     @Override
@@ -83,8 +83,13 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
         return false;
     }
 
+    @Override
+    public boolean canUsePortals() {
+        return false;
+    }
+
     public int getOrbSize() {
-        return 10;
+        return size;
     }
 
     public BlockPos getTarget() {

@@ -286,6 +286,9 @@ class AchieveToDoMod : ModInitializer {
         const val ADVANCEMENTS_SCREEN_MARGIN = 30
 
         @JvmField
+        val EVOKER_NO_TOTEM_OF_UNDYING_LOOT_TABLE = Identifier(ID, "entities/evoker_no_totem_of_undying")
+
+        @JvmField
         var currentAdvancementsCount = 0
 
         @JvmStatic

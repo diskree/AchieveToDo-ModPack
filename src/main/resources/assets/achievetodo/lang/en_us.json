@@ -30,7 +30,7 @@
   "blocked.shulker_box": "You cannot use a shulker box yet",
   "blocked.firework": "You cannot use fireworks for flying yet",
   "blocked.enchanting_table": "You cannot use an enchanting table yet",
-  "blocked.totem": "Totem of Undying is locked",
+
   "unblock.amount": ". Advancements left until unlocking: ",
   "unblock.food": "Food available",
   "unblock.action": "Action available",

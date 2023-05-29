@@ -102,8 +102,7 @@ enum class BlockedAction(
     VILLAGER_TOOLSMITH("blocked.trading", BlockedActionType.VILLAGER, null, VillagerProfession.TOOLSMITH, 860),
     EAT_GOLDEN_CARROT("blocked.food", BlockedActionType.FOOD, FoodComponents.GOLDEN_CARROT, null, 888),
     VILLAGER_LIBRARIAN("blocked.trading", BlockedActionType.VILLAGER, null, VillagerProfession.LIBRARIAN, 900),
-    USING_ENCHANTING_TABLE("blocked.enchanting_table", BlockedActionType.BLOCK, null, null, 950),
-    DROP_TOTEM("blocked.totem", BlockedActionType.ACTION, null, null, 1000);
+    USING_ENCHANTING_TABLE("blocked.enchanting_table", BlockedActionType.BLOCK, null, null, 950);
 
     fun isUnblocked(): Boolean = AchieveToDoMod.currentAdvancementsCount >= unblockAdvancementsCount
 

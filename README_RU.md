@@ -24,7 +24,7 @@
 
 :x: Логотип AchieveToDo в главном меню игры
 
-:white_check_mark: `Minecraft 1.20-pre6` от _25.05.2023_
+:white_check_mark: `Minecraft 1.20-pre7` от _29.05.2023_
 
 :white_check_mark: `BlazeandCaves 1.16 Beta Build 6` от _17.05.2023_
 

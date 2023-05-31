@@ -1,7 +1,7 @@
 package com.diskree.achievetodo
 
-import com.diskree.achievetodo.advancements.AchieveToDoToast
 import com.diskree.achievetodo.advancements.AdvancementRoot
+import com.diskree.achievetodo.advancements.UnblockActionToast
 import com.diskree.achievetodo.ancient_city_portal.*
 import com.google.common.collect.Lists
 import com.mojang.brigadier.Command
@@ -93,13 +93,29 @@ class AchieveToDoMod : ModInitializer {
         ServerWorldEvents.LOAD.register(ServerWorldEvents.Load { server: MinecraftServer, _: ServerWorld? ->
             val resourcePackManager = server.dataPackManager
             val list = Lists.newArrayList(resourcePackManager.enabledProfiles)
-            list.remove(resourcePackManager.getProfile(BACAP_MAIN_DATA_PACK_ID.toString()))
+
+            list.remove(resourcePackManager.getProfile(BACAP_DATA_PACK_ID.toString()))
+            list.remove(resourcePackManager.getProfile(BACAP_HARDCORE_DATA_PACK_ID.toString()))
             list.remove(resourcePackManager.getProfile(CORE_DATA_PACK_ID.toString()))
-            list.remove(resourcePackManager.getProfile(HARDCORE_DATA_PACK_ID.toString()))
-            list.add(resourcePackManager.getProfile(BACAP_MAIN_DATA_PACK_ID.toString()))
-            list.add(resourcePackManager.getProfile(CORE_DATA_PACK_ID.toString()))
+            list.remove(resourcePackManager.getProfile(REWARDS_ITEM_DATA_PACK_ID.toString()))
+            list.remove(resourcePackManager.getProfile(REWARDS_EXPERIENCE_DATA_PACK_ID.toString()))
+            list.remove(resourcePackManager.getProfile(REWARDS_TROPHY_DATA_PACK_ID.toString()))
+
+            list.add(resourcePackManager.getProfile(BACAP_DATA_PACK_ID.toString()))
             if (server.isHardcore) {
-                list.add(resourcePackManager.getProfile(HARDCORE_DATA_PACK_ID.toString()))
+                list.add(resourcePackManager.getProfile(BACAP_HARDCORE_DATA_PACK_ID.toString()))
+            }
+            list.add(resourcePackManager.getProfile(CORE_DATA_PACK_ID.toString()))
+            (server as? MinecraftServerImpl)?.let {
+                if (it.isItemRewardsEnabled) {
+                    list.add(resourcePackManager.getProfile(REWARDS_ITEM_DATA_PACK_ID.toString()))
+                }
+                if (it.isExperienceRewardsEnabled) {
+                    list.add(resourcePackManager.getProfile(REWARDS_EXPERIENCE_DATA_PACK_ID.toString()))
+                }
+                if (it.isTrophyRewardsEnabled) {
+                    list.add(resourcePackManager.getProfile(REWARDS_TROPHY_DATA_PACK_ID.toString()))
+                }
             }
             server.reloadResources(list.stream().map { obj: ResourcePackProfile? -> obj!!.name }.collect(Collectors.toList()))
         })
@@ -128,21 +144,39 @@ class AchieveToDoMod : ModInitializer {
     private fun registerPacks() {
         FabricLoader.getInstance().getModContainer(ID).ifPresent { modContainer: ModContainer? ->
             ResourceManagerHelper.registerBuiltinResourcePack(
-                    BACAP_MAIN_DATA_PACK_ID,
+                    BACAP_DATA_PACK_ID,
                     modContainer,
-                    Text.of("BACAP Data Pack"),
+                    Text.of("BACAP"),
                     ResourcePackActivationType.ALWAYS_ENABLED
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    BACAP_HARDCORE_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("BACAP Hardcore"),
+                    ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
                     CORE_DATA_PACK_ID,
                     modContainer,
-                    Text.of("AchieveToDo Core Data Pack"),
+                    Text.of("AchieveToDo Core"),
                     ResourcePackActivationType.ALWAYS_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
-                    HARDCORE_DATA_PACK_ID,
+                    REWARDS_ITEM_DATA_PACK_ID,
                     modContainer,
-                    Text.of("BACAP Hardcore Data Pack"),
+                    Text.of("BACAP item rewards"),
+                    ResourcePackActivationType.NORMAL
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    REWARDS_EXPERIENCE_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("BACAP experience rewards"),
+                    ResourcePackActivationType.NORMAL
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    REWARDS_TROPHY_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("BACAP trophy rewards"),
                     ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
@@ -233,9 +267,13 @@ class AchieveToDoMod : ModInitializer {
     companion object {
         const val ID = "achievetodo"
 
-        private val BACAP_MAIN_DATA_PACK_ID = Identifier(ID, "bacap")
+        private val BACAP_DATA_PACK_ID = Identifier(ID, "bacap")
+        private val BACAP_HARDCORE_DATA_PACK_ID = Identifier(ID, "bacap_hc")
         private val CORE_DATA_PACK_ID = Identifier(ID, "bacap_achievetodo-core")
-        private val HARDCORE_DATA_PACK_ID = Identifier(ID, "bacap_hc")
+        private val REWARDS_ITEM_DATA_PACK_ID = Identifier(ID, "rewards_item")
+        private val REWARDS_EXPERIENCE_DATA_PACK_ID = Identifier(ID, "rewards_experience")
+        private val REWARDS_TROPHY_DATA_PACK_ID = Identifier(ID, "rewards_trophy")
+
         private val BACAP_LANGUAGE_RESOURCE_PACK_ID = Identifier(ID, "bacap_lp")
 
         @JvmField
@@ -323,7 +361,7 @@ class AchieveToDoMod : ModInitializer {
             val server = MinecraftClient.getInstance().server ?: return
             actionsToUnblock.forEach { action ->
                 val advancement = server.advancementLoader[action.buildAdvancementId()]
-                MinecraftClient.getInstance().toastManager.add(AchieveToDoToast(advancement, action))
+                MinecraftClient.getInstance().toastManager.add(UnblockActionToast(advancement, action))
             }
         }
 
@@ -376,9 +414,12 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmStatic
         fun isInternalDatapack(resourceId: String?): Boolean {
-            return resourceId == BACAP_MAIN_DATA_PACK_ID.toString() &&
-                    resourceId == CORE_DATA_PACK_ID.toString() &&
-                    resourceId == HARDCORE_DATA_PACK_ID.toString()
+            return resourceId == BACAP_DATA_PACK_ID.toString() ||
+                    resourceId == BACAP_HARDCORE_DATA_PACK_ID.toString() ||
+                    resourceId == CORE_DATA_PACK_ID.toString() ||
+                    resourceId == REWARDS_ITEM_DATA_PACK_ID.toString() ||
+                    resourceId == REWARDS_EXPERIENCE_DATA_PACK_ID.toString() ||
+                    resourceId == REWARDS_TROPHY_DATA_PACK_ID.toString()
         }
 
         private fun grantActionAdvancement(action: BlockedAction) {

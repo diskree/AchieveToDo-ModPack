@@ -4,3 +4,6 @@ accessible class net/minecraft/advancement/AdvancementDisplays$Status
 accessible method net/minecraft/world/gen/feature/Feature setBlockState (Lnet/minecraft/world/ModifiableWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V
 accessible method net/minecraft/advancement/AdvancementDisplays shouldDisplay (Lnet/minecraft/advancement/Advancement;Lit/unimi/dsi/fastutil/Stack;Ljava/util/function/Predicate;Lnet/minecraft/advancement/AdvancementDisplays$ResultConsumer;)Z
 accessible class net/minecraft/client/gui/screen/advancement/AdvancementTabType
+accessible class net/minecraft/client/gui/screen/world/CreateWorldScreen$GameTab
+accessible class net/minecraft/client/gui/screen/world/WorldScreenOptionGrid
+accessible field net/minecraft/client/gui/screen/Screen client Lnet/minecraft/client/MinecraftClient;

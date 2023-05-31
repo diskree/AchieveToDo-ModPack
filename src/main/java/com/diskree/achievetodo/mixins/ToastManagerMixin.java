@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.advancements.AchieveToDoToast;
+import com.diskree.achievetodo.advancements.UnblockActionToast;
 import net.minecraft.client.toast.Toast;
 import net.minecraft.client.toast.ToastManager;
 import org.spongepowered.asm.mixin.Final;
@@ -21,9 +21,9 @@ public class ToastManagerMixin {
 
     @Inject(method = "add", at = @At("HEAD"), cancellable = true)
     public void addInject(Toast t, CallbackInfo ci) {
-        if (t instanceof AchieveToDoToast toast) {
+        if (t instanceof UnblockActionToast toast) {
             for (Toast qt : toastQueue) {
-                if (qt instanceof AchieveToDoToast queueToast) {
+                if (qt instanceof UnblockActionToast queueToast) {
                     if (queueToast.blockedAction == toast.blockedAction) {
                         ci.cancel();
                     }

@@ -40,5 +40,12 @@
   "unblock.portal": "Доступен портал",
   "unblock.villager": "Доступен житель",
 
-  "commands.random.no_advancements": "Достижения не найдены"
+  "commands.random.no_advancements": "Достижения не найдены",
+
+  "createWorld.rewards.item": "Предметы",
+  "createWorld.rewards.experience": "Опыт",
+  "createWorld.rewards.trophy": "Трофеи",
+  "createWorld.rewards.item.info": "Вы будете получать предметы из игры за выполнение достижений. Например, несколько брёвен при первой вырубке дерева.",
+  "createWorld.rewards.experience.info": "Вы будете получать игровой опыт за выполнение достижений. Особенно сильно поощряются самые сложные достижения.",
+  "createWorld.rewards.trophy.info": "Вы будете получать коллекционные предметы за выполнение достижений. Например, бесконечный железный топор за сбор стака брёвен каждого типа дерева."
 }

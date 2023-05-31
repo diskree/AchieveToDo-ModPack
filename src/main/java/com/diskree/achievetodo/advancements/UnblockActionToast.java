@@ -20,7 +20,7 @@ import net.minecraft.util.math.MathHelper;
 import java.util.List;
 
 @Environment(value = EnvType.CLIENT)
-public class AchieveToDoToast implements Toast {
+public class UnblockActionToast implements Toast {
 
     public final BlockedAction blockedAction;
     private final Identifier TEXTURE;
@@ -28,7 +28,7 @@ public class AchieveToDoToast implements Toast {
     private final Advancement advancement;
     private boolean soundPlayed;
 
-    public AchieveToDoToast(Advancement advancement, BlockedAction blockedAction) {
+    public UnblockActionToast(Advancement advancement, BlockedAction blockedAction) {
         this.advancement = advancement;
         this.blockedAction = blockedAction;
         TEXTURE = new Identifier(AchieveToDoMod.ID, "textures/gui/toasts_" + blockedAction.actionType.name().toLowerCase() + ".png");

@@ -19,6 +19,7 @@
     "BrewingStandBlockMixin",
     "ChorusFruitItemMixin",
     "CraftingTableBlockMixin",
+    "CreateWorldScreenMixin",
     "ElytraItemMixin",
     "EnchantingTableBlockMixin",
     "EnderChestBlockMixin",
@@ -30,11 +31,15 @@
     "ItemDisplayEntityMixin",
     "ItemMixin",
     "JukeboxBlockEntityMixin",
+    "LevelInfoMixin",
+    "LevelPropertiesMixin",
     "LivingEntityMixin",
+    "MinecraftServerMixin",
     "PlayerEntityMixin",
     "PlayerScreenHandlerMixin",
     "RaiderEntityMixin",
     "ReinforcedDeepslateMixin",
+    "SavePropertiesMixin",
     "ScoreboardPlayerScoreMixin",
     "ServerPlayerEntityMixin",
     "ShieldItemMixin",
@@ -53,6 +58,7 @@
     "AdvancementWidgetMixin",
     "ClientPlayNetworkHandlerMixin",
     "ResourcePackOrganizerMixin",
-    "ToastManagerMixin"
+    "ToastManagerMixin",
+    "WorldCreatorMixin"
   ]
 }

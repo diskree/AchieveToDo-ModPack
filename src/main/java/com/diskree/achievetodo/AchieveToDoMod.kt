@@ -367,7 +367,8 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmStatic
         fun isActionBlocked(action: BlockedAction?): Boolean {
-            if (action == null || getPlayer() == null || getPlayer()!!.isCreative || action.isUnblocked()) {
+            val player = getPlayer()
+            if (action == null || action.isUnblocked() || player == null || player.isCreative || player.world?.isClient == true && !MinecraftClient.getInstance().isInSingleplayer) {
                 return false
             }
             getPlayer()?.sendMessage(action.buildBlockedDescription(), true)
@@ -377,7 +378,8 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmStatic
         fun isFoodBlocked(food: FoodComponent?): Boolean {
-            if (getPlayer() == null || getPlayer()!!.isCreative) {
+            val player = getPlayer()
+            if (food == null || player == null || player.isCreative || player.world?.isClient == true && !MinecraftClient.getInstance().isInSingleplayer) {
                 return false
             }
             return BlockedAction.values().find { it.foodComponent == food }?.let { action ->

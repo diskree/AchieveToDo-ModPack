@@ -47,5 +47,7 @@
   "createWorld.rewards.trophy": "Trophies",
   "createWorld.rewards.item.info": "You will receive items for completing advancements. For example, several logs for the first felling of a tree.",
   "createWorld.rewards.experience.info": "You will receive experience for completing advancements. The most difficult advancements are especially well rewarded.",
-  "createWorld.rewards.trophy.info": "You will receive exclusive collectibles for completing advancements. For example, an unbreakable iron axe for collecting a stack of each type of wood log."
+  "createWorld.rewards.trophy.info": "You will receive exclusive collectibles for completing advancements. For example, an unbreakable iron axe for collecting a stack of each type of wood log.",
+
+  "menu.shareToLan.info": "AchieveToDo worlds do not support multiplayer"
 }

@@ -57,6 +57,7 @@
     "AdvancementTabTypeMixin",
     "AdvancementWidgetMixin",
     "ClientPlayNetworkHandlerMixin",
+    "GameMenuScreenMixin",
     "ResourcePackOrganizerMixin",
     "ToastManagerMixin",
     "WorldCreatorMixin"

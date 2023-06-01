@@ -59,7 +59,6 @@
     "ClientPlayNetworkHandlerMixin",
     "GameMenuScreenMixin",
     "ResourcePackOrganizerMixin",
-    "ToastManagerMixin",
     "WorldCreatorMixin"
   ]
 }

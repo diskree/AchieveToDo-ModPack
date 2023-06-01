@@ -21,7 +21,7 @@ public class ScoreboardPlayerScoreMixin {
 
     @Inject(method = "setScore", at = @At("HEAD"))
     public void setScoreInject(int score, CallbackInfo ci) {
-        if (this.objective != null && this.objective.getName().equalsIgnoreCase("bac_advancements")) {
+        if (this.objective != null && "bac_advancements".equals(this.objective.getName())) {
             AchieveToDoMod.setAdvancementsCount(score);
         }
     }

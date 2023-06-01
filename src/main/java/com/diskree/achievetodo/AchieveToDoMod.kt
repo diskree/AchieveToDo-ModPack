@@ -91,6 +91,8 @@ class AchieveToDoMod : ModInitializer {
             ActionResult.PASS
         })
         ServerWorldEvents.LOAD.register(ServerWorldEvents.Load { server: MinecraftServer, _: ServerWorld? ->
+            currentAdvancementsCount = 0
+
             val resourcePackManager = server.dataPackManager
             val list = Lists.newArrayList(resourcePackManager.enabledProfiles)
 
@@ -344,24 +346,20 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmStatic
         fun setAdvancementsCount(count: Int) {
-            if (count == 0 || count < currentAdvancementsCount) {
-                currentAdvancementsCount = 0
-            }
-            if (currentAdvancementsCount == count) {
+            if (count in 0..currentAdvancementsCount) {
                 return
             }
             val oldCount = currentAdvancementsCount
             currentAdvancementsCount = count
-            val actionsToUnblock: MutableList<BlockedAction> = ArrayList()
-            BlockedAction.values().forEach { action ->
-                if (action.isUnblocked() && oldCount < action.unblockAdvancementsCount && oldCount != 0) {
-                    actionsToUnblock.add(action)
+
+            if (oldCount != 0) {
+                val server = MinecraftClient.getInstance().server ?: return
+                BlockedAction.values().forEach { action ->
+                    if (action.isUnblocked() && oldCount < action.unblockAdvancementsCount) {
+                        val advancement = server.advancementLoader[action.buildAdvancementId()]
+                        MinecraftClient.getInstance().toastManager.add(UnblockActionToast(advancement, action))
+                    }
                 }
-            }
-            val server = MinecraftClient.getInstance().server ?: return
-            actionsToUnblock.forEach { action ->
-                val advancement = server.advancementLoader[action.buildAdvancementId()]
-                MinecraftClient.getInstance().toastManager.add(UnblockActionToast(advancement, action))
             }
         }
 

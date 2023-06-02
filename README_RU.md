@@ -22,7 +22,7 @@
 
 :x: Настроенный BetterF3 с минимализмом
 
-:x: Логотип AchieveToDo в главном меню игры
+:white_check_mark: Логотип AchieveToDo в главном меню игры
 
 :white_check_mark: `Minecraft 1.20-rc1` от _31.05.2023_
 

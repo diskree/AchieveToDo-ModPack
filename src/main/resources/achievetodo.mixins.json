@@ -60,6 +60,7 @@
     "CyclingButtonWidgetMixin",
     "GameMenuScreenMixin",
     "GameTabMixin",
+    "LockButtonWidgetMixin",
     "ResourcePackOrganizerMixin",
     "WorldCreatorMixin"
   ]

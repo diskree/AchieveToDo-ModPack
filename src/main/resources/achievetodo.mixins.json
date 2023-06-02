@@ -61,7 +61,9 @@
     "GameMenuScreenMixin",
     "GameTabMixin",
     "LockButtonWidgetMixin",
+    "LogoDrawerMixin",
     "ResourcePackOrganizerMixin",
+    "SplashTextRendererMixin",
     "WorldCreatorMixin"
   ]
 }

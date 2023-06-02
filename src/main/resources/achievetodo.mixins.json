@@ -57,7 +57,9 @@
     "AdvancementTabTypeMixin",
     "AdvancementWidgetMixin",
     "ClientPlayNetworkHandlerMixin",
+    "CyclingButtonWidgetMixin",
     "GameMenuScreenMixin",
+    "GameTabMixin",
     "ResourcePackOrganizerMixin",
     "WorldCreatorMixin"
   ]

@@ -7,15 +7,13 @@ import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.decoration.DisplayEntity;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.RotationAxis;
 import org.jetbrains.annotations.Nullable;
 
-public class AncientCityPortalItemDisplayEntityRenderer extends DisplayEntityRenderer<DisplayEntity.ItemDisplayEntity, DisplayEntity.ItemDisplayEntity.Data> {
+public class AncientCityPortalItemDisplayEntityRenderer2 extends DisplayEntityRenderer<DisplayEntity.ItemDisplayEntity, DisplayEntity.ItemDisplayEntity.Data> {
 
     private final ItemRenderer itemRenderer;
 
-    public AncientCityPortalItemDisplayEntityRenderer(EntityRendererFactory.Context context) {
+    public AncientCityPortalItemDisplayEntityRenderer2(EntityRendererFactory.Context context) {
         super(context);
         this.itemRenderer = context.getItemRenderer();
     }

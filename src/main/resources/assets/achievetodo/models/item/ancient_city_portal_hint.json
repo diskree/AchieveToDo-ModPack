@@ -1,0 +1,74 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/barrier"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damage": 0.01
+      },
+      "model": "achievetodo:item/cat_black"
+    },
+    {
+      "predicate": {
+        "damage": 0.02
+      },
+      "model": "achievetodo:item/cat_tabby"
+    },
+    {
+      "predicate": {
+        "damage": 0.03
+      },
+      "model": "achievetodo:item/cat_ragdoll"
+    },
+    {
+      "predicate": {
+        "damage": 0.04
+      },
+      "model": "achievetodo:item/cat_british_shorthair"
+    },
+    {
+      "predicate": {
+        "damage": 0.05
+      },
+      "model": "achievetodo:item/cat_white"
+    },
+    {
+      "predicate": {
+        "damage": 0.06
+      },
+      "model": "achievetodo:item/cat_persian"
+    },
+    {
+      "predicate": {
+        "damage": 0.07
+      },
+      "model": "achievetodo:item/cat_calico"
+    },
+    {
+      "predicate": {
+        "damage": 0.08
+      },
+      "model": "achievetodo:item/cat_siamese"
+    },
+    {
+      "predicate": {
+        "damage": 0.09
+      },
+      "model": "achievetodo:item/cat_all_black"
+    },
+    {
+      "predicate": {
+        "damage": 0.10
+      },
+      "model": "achievetodo:item/cat_jellie"
+    },
+    {
+      "predicate": {
+        "damage": 0.11
+      },
+      "model": "achievetodo:item/cat_red"
+    }
+  ]
+}

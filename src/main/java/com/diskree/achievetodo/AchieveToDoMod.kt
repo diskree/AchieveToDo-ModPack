@@ -1,5 +1,6 @@
 package com.diskree.achievetodo
 
+import com.diskree.achievetodo.advancements.AdvancementGenerator
 import com.diskree.achievetodo.advancements.AdvancementRoot
 import com.diskree.achievetodo.advancements.UnblockActionToast
 import com.diskree.achievetodo.ancient_city_portal.*
@@ -26,6 +27,7 @@ import net.minecraft.advancement.Advancement
 import net.minecraft.block.AbstractBlock
 import net.minecraft.block.piston.PistonBehavior
 import net.minecraft.client.MinecraftClient
+import net.minecraft.client.item.ModelPredicateProviderRegistry
 import net.minecraft.client.render.RenderLayer
 import net.minecraft.entity.Entity
 import net.minecraft.entity.EntityDimensions
@@ -123,15 +125,7 @@ class AchieveToDoMod : ModInitializer {
         })
         CommandRegistrationCallback.EVENT.register(CommandRegistrationCallback { dispatcher, _, _ ->
             dispatcher.register(literal("random").executes { context ->
-                val player = MinecraftClient.getInstance().server?.playerManager?.playerList?.first()
-                MinecraftClient.getInstance().player?.networkHandler?.advancementHandler?.manager?.advancements?.filter { advancement ->
-                    advancement?.requirementCount == 1 &&
-                            advancement.display?.isHidden == false &&
-                            advancement.id?.path?.endsWith("/root") == false &&
-                            !advancement.id.path.startsWith(AdvancementRoot.ACTION.name.lowercase()) &&
-                            !advancement.id.path.startsWith(AdvancementRoot.STATISTICS.name.lowercase()) &&
-                            player?.advancementTracker?.getProgress(advancement)?.isDone == false
-                }?.shuffled()?.firstOrNull()?.let { randomAdvancement ->
+                AdvancementGenerator.generateForCommand()?.let { randomAdvancement ->
                     context.source.sendMessage(Text.of("==========").copy().formatted(Formatting.GOLD))
                     context.source.sendMessage(randomAdvancement.root.display?.title?.copy()?.formatted(Formatting.BLUE, Formatting.BOLD))
                     context.source.sendMessage(randomAdvancement.display?.title?.copy()?.formatted(Formatting.AQUA, Formatting.ITALIC))
@@ -187,6 +181,12 @@ class AchieveToDoMod : ModInitializer {
                     Text.of("BACAP Language Resource Pack"),
                     ResourcePackActivationType.DEFAULT_ENABLED
             )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID,
+                    modContainer,
+                    Text.of("Tropical Fish & Axolotl Buckets"),
+                    ResourcePackActivationType.ALWAYS_ENABLED
+            )
         }
     }
 
@@ -197,16 +197,13 @@ class AchieveToDoMod : ModInitializer {
 
     private fun registerItems() {
         Registry.register(Registries.ITEM, Identifier(ID, "locked_action"), LOCKED_ACTION_ITEM)
+        Registry.register(Registries.ITEM, Identifier(ID, "ancient_city_portal_hint"), ANCIENT_CITY_PORTAL_HINT_ITEM)
+        ModelPredicateProviderRegistry.register(ANCIENT_CITY_PORTAL_HINT_ITEM, ModelPredicateProviderRegistry.DAMAGE_ID, ModelPredicateProviderRegistry.DAMAGE_PROVIDER)
     }
 
     private fun registerParticles() {
-        Registry.register(
-                Registries.PARTICLE_TYPE,
-                Identifier(ID, "ancient_city_portal_particles"),
-                ANCIENT_CITY_PORTAL_PARTICLES
-        )
-        ParticleFactoryRegistry.getInstance()
-                .register(ANCIENT_CITY_PORTAL_PARTICLES, ::AncientCityPortalParticleFactory)
+        Registry.register(Registries.PARTICLE_TYPE, Identifier(ID, "ancient_city_portal_particles"), ANCIENT_CITY_PORTAL_PARTICLES)
+        ParticleFactoryRegistry.getInstance().register(ANCIENT_CITY_PORTAL_PARTICLES, ::AncientCityPortalParticleFactory)
     }
 
     private fun registerEvents() {
@@ -215,34 +212,17 @@ class AchieveToDoMod : ModInitializer {
     }
 
     private fun registerEntities() {
-        EntityRendererRegistry.register(
-                Registry.register(
-                        Registries.ENTITY_TYPE,
-                        ANCIENT_CITY_PORTAL_TAB_ENTITY_ID,
-                        FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalTabEntity).build()
-                ), ::AncientCityPortalItemDisplayEntityRenderer
-        )
-        EntityRendererRegistry.register(
-                Registry.register(
-                        Registries.ENTITY_TYPE,
-                        ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID,
-                        FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalEntity).build()
-                ), ::AncientCityPortalItemDisplayEntityRenderer
-        )
-        EntityRendererRegistry.register(
-                Registry.register(
-                        Registries.ENTITY_TYPE,
-                        ANCIENT_CITY_PORTAL_PROMPT_ENTITY_ID,
-                        FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalPromptEntity).build()
-                ), ::AncientCityPortalItemDisplayEntityRenderer
-        )
-        EntityRendererRegistry.register(
-                Registry.register(
-                        Registries.ENTITY_TYPE,
-                        ANCIENT_CITY_PORTAL_EXPERIENCE_ORB_ENTITY_ID,
-                        EXPERIENCE_ORB
-                ), ::AncientCityPortalExperienceOrbEntityRenderer
-        )
+        Registry.register(Registries.ENTITY_TYPE, ANCIENT_CITY_PORTAL_TAB_ENTITY_ID, ANCIENT_CITY_PORTAL_TAB)
+        EntityRendererRegistry.register(ANCIENT_CITY_PORTAL_TAB, ::AncientCityPortalItemDisplayEntityRenderer)
+
+        Registry.register(Registries.ENTITY_TYPE, ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID, ANCIENT_CITY_PORTAL_ADVANCEMENT)
+        EntityRendererRegistry.register(ANCIENT_CITY_PORTAL_ADVANCEMENT, ::AncientCityPortalItemDisplayEntityRenderer)
+
+        Registry.register(Registries.ENTITY_TYPE, ANCIENT_CITY_PORTAL_PROMPT_ENTITY_ID, ANCIENT_CITY_PORTAL_HINT)
+        EntityRendererRegistry.register(ANCIENT_CITY_PORTAL_HINT, ::AncientCityPortalItemDisplayEntityRenderer)
+
+        Registry.register(Registries.ENTITY_TYPE, ANCIENT_CITY_PORTAL_EXPERIENCE_ORB_ENTITY_ID, EXPERIENCE_ORB)
+        EntityRendererRegistry.register(EXPERIENCE_ORB, ::AncientCityPortalExperienceOrbEntityRenderer)
     }
 
     private fun registerNetworking() {
@@ -277,6 +257,7 @@ class AchieveToDoMod : ModInitializer {
         private val REWARDS_TROPHY_DATA_PACK_ID = Identifier(ID, "rewards_trophy")
 
         private val BACAP_LANGUAGE_RESOURCE_PACK_ID = Identifier(ID, "bacap_lp")
+        private val VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID = Identifier(ID, "visual_fish_buckets")
 
         @JvmField
         val ANCIENT_CITY_PORTAL_BLOCK = AncientCityPortalBlock(
@@ -291,6 +272,9 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmField
         val LOCKED_ACTION_ITEM = Item(FabricItemSettings())
+
+        @JvmField
+        val ANCIENT_CITY_PORTAL_HINT_ITEM = Item(FabricItemSettings().maxDamage(100))
 
         @JvmField
         val ANCIENT_CITY_PORTAL_PARTICLES: DefaultParticleType = FabricParticleTypes.simple()
@@ -314,6 +298,30 @@ class AchieveToDoMod : ModInitializer {
         val ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID = Identifier(ID, "ancient_city_portal_advancement_entity")
         val ANCIENT_CITY_PORTAL_PROMPT_ENTITY_ID = Identifier(ID, "ancient_city_portal_prompt_entity")
         val ANCIENT_CITY_PORTAL_EXPERIENCE_ORB_ENTITY_ID = Identifier(ID, "ancient_city_portal_experience_orb")
+
+        @JvmField
+        val ANCIENT_CITY_PORTAL_TAB: EntityType<AncientCityPortalTabEntity> =
+                FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalTabEntity)
+                        .dimensions(EntityDimensions.changing(0.0f, 0.0f))
+                        .trackRangeChunks(10)
+                        .trackedUpdateRate(1)
+                        .build()
+
+        @JvmField
+        val ANCIENT_CITY_PORTAL_ADVANCEMENT: EntityType<AncientCityPortalEntity> =
+                FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalEntity)
+                        .dimensions(EntityDimensions.changing(0.0f, 0.0f))
+                        .trackRangeChunks(10)
+                        .trackedUpdateRate(1)
+                        .build()
+
+        @JvmField
+        val ANCIENT_CITY_PORTAL_HINT: EntityType<AncientCityPortalPromptEntity> =
+                FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::AncientCityPortalPromptEntity)
+                        .dimensions(EntityDimensions.changing(0.0f, 0.0f))
+                        .trackRangeChunks(10)
+                        .trackedUpdateRate(1)
+                        .build()
 
         @JvmField
         val EXPERIENCE_ORB: EntityType<AncientCityPortalExperienceOrbEntity> =

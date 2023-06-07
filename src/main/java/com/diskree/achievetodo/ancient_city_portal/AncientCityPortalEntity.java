@@ -1,7 +1,11 @@
 package com.diskree.achievetodo.ancient_city_portal;
 
 import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.ItemDisplayEntityImpl;
 import com.diskree.achievetodo.JukeboxBlockEntityImpl;
+import com.diskree.achievetodo.advancements.AdvancementGenerator;
+import com.diskree.achievetodo.advancements.AdvancementHint;
+import net.minecraft.advancement.Advancement;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
@@ -11,6 +15,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.decoration.DisplayEntity;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
@@ -251,6 +256,28 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
     }
 
     private void updateJukeboxPos(BlockPos jukeboxPos, boolean playing) {
+        if (true) {
+            AdvancementHint hint = AdvancementGenerator.generateForHint();
+            if (hint != null) {
+                Advancement advancement = hint.advancement();
+                ((ItemDisplayEntityImpl) this).publicSetItemStack(advancement.getDisplay().getIcon());
+
+                BlockPos tabEntityPos = getBlockPos().offset(getHorizontalFacing().rotateYCounterclockwise(), 5);
+                List<AncientCityPortalTabEntity> tabEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_TAB, Box.of(tabEntityPos.toCenterPos(), 1, 1, 1), (entity) -> true);
+                if (tabEntities != null && tabEntities.size() == 1) {
+                    AncientCityPortalTabEntity tabEntity = tabEntities.get(0);
+                    ((ItemDisplayEntityImpl) tabEntity).publicSetItemStack(advancement.getRoot().getDisplay().getIcon());
+                }
+
+                BlockPos hintEntityPos = getBlockPos().offset(getHorizontalFacing().rotateYClockwise(), 5);
+                List<AncientCityPortalPromptEntity> hintEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT, Box.of(hintEntityPos.toCenterPos(), 1, 1, 1), (entity) -> true);
+                if (hintEntities != null && hintEntities.size() == 1) {
+                    AncientCityPortalPromptEntity hintEntity = hintEntities.get(0);
+                    ((ItemDisplayEntityImpl) hintEntity).publicSetItemStack(hint.hint());
+                }
+            }
+            return;
+        }
         if (this.jukeboxPos != null && !this.jukeboxPos.equals(jukeboxPos) && isPortalActivationInProgress()) {
             stopJukebox(jukeboxPos);
             return;

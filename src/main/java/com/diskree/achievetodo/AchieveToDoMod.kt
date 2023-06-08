@@ -274,7 +274,7 @@ class AchieveToDoMod : ModInitializer {
         val LOCKED_ACTION_ITEM = Item(FabricItemSettings())
 
         @JvmField
-        val ANCIENT_CITY_PORTAL_HINT_ITEM = Item(FabricItemSettings().maxDamage(100))
+        val ANCIENT_CITY_PORTAL_HINT_ITEM = Item(FabricItemSettings().maxDamage(1000))
 
         @JvmField
         val ANCIENT_CITY_PORTAL_PARTICLES: DefaultParticleType = FabricParticleTypes.simple()

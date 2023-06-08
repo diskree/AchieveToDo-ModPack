@@ -23,7 +23,7 @@ public class GameMenuScreenMixin {
     private void initWidgetsInject(Args args) {
         ButtonWidget lanButton = args.get(0);
         if (lanButton.getMessage() == SHARE_TO_LAN_TEXT) {
-            lanButton.active = false;
+//            lanButton.active = false;
             lanButton.setTooltip(Tooltip.of(Text.translatable("menu.shareToLan.info")));
         }
     }

@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 32],
 	"textures": {
-		"texture": "achievetodo:item/cat_ocelot"
+		"texture": "achievetodo:item/ocelot"
 	},
 	"elements": [
 		{
@@ -15,7 +15,7 @@
 				"south": {"uv": [0.5, 13, 1.25, 14], "texture": "#texture"},
 				"west": {"uv": [0.25, 13, 0.5, 14], "texture": "#texture"},
 				"up": {"uv": [0.5, 12.5, 1.25, 13], "rotation": 180, "texture": "#texture"},
-				"down": {"uv": [1.5, 4.5, 2.25, 5], "rotation": 180, "texture": "#texture"}
+				"down": {"uv": [1.25, 12.5, 2, 13], "rotation": 180, "texture": "#texture"}
 			}
 		},
 		{
@@ -28,7 +28,7 @@
 				"south": {"uv": [1.25, 2.5, 2.5, 4.5], "texture": "#texture"},
 				"west": {"uv": [1, 2.5, 1.25, 4.5], "texture": "#texture"},
 				"up": {"uv": [1.25, 2, 2.5, 2.5], "rotation": 180, "texture": "#texture"},
-				"down": {"uv": [1.25, 4.5, 2.5, 5], "rotation": 180, "texture": "#texture"}
+				"down": {"uv": [2.5, 2, 3.75, 2.5], "rotation": 180, "texture": "#texture"}
 			}
 		}
 	],

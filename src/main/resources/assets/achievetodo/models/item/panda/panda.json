@@ -1,0 +1,31 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"texture": "achievetodo:item/panda/panda"
+	},
+	"elements": [
+		{
+			"from": [1.5, 3, 6.5],
+			"to": [14.5, 13, 7.5],
+			"faces": {
+				"east": {"uv": [5.5, 3.75, 5.75, 6.25], "texture": "#texture"},
+				"south": {"uv": [2.25, 3.75, 5.5, 6.25], "texture": "#texture"},
+				"west": {"uv": [2, 3.75, 2.25, 6.25], "texture": "#texture"},
+				"up": {"uv": [2.25, 3.5, 5.5, 3.75], "texture": "#texture"},
+				"down": {"uv": [5.5, 3.5, 8.75, 3.75], "texture": "#texture"}
+			}
+		},
+		{
+			"from": [4.5, 3, 7.5],
+			"to": [11.5, 8, 9.5],
+			"faces": {
+				"east": {"uv": [13.5, 4.5, 14, 5.75], "texture": "#texture"},
+				"south": {"uv": [11.75, 4.5, 13.5, 5.75], "texture": "#texture"},
+				"west": {"uv": [11.25, 4.5, 11.75, 5.75], "texture": "#texture"},
+				"up": {"uv": [11.75, 4, 13.5, 4.5], "texture": "#texture"},
+				"down": {"uv": [13.5, 4, 15.25, 4.5], "texture": "#texture"}
+			}
+		}
+	]
+}

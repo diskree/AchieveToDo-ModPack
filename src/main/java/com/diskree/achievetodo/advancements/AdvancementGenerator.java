@@ -124,6 +124,19 @@ public class AdvancementGenerator {
                         default -> throw new IllegalStateException("Unexpected value: " + criterion);
                     });
                 }
+                case "blazeandcave:biomes/pandamonium" -> {
+                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                    nbt.putInt("Damage", switch (criterion) {
+                        case "normal" -> 12;
+                        case "aggressive" -> 13;
+                        case "lazy" -> 14;
+                        case "worried" -> 15;
+                        case "playful" -> 16;
+                        case "weak" -> 17;
+                        case "brown" -> 18;
+                        default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                    });
+                }
             }
         }
         if (hintItem == Items.AIR) {

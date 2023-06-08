@@ -8,67 +8,109 @@
       "predicate": {
         "damage": 0.001
       },
-      "model": "achievetodo:item/cat_black"
+      "model": "achievetodo:item/cat/black"
     },
     {
       "predicate": {
         "damage": 0.002
       },
-      "model": "achievetodo:item/cat_tabby"
+      "model": "achievetodo:item/cat/tabby"
     },
     {
       "predicate": {
         "damage": 0.003
       },
-      "model": "achievetodo:item/cat_ragdoll"
+      "model": "achievetodo:item/cat/ragdoll"
     },
     {
       "predicate": {
         "damage": 0.004
       },
-      "model": "achievetodo:item/cat_british_shorthair"
+      "model": "achievetodo:item/cat/british_shorthair"
     },
     {
       "predicate": {
         "damage": 0.005
       },
-      "model": "achievetodo:item/cat_white"
+      "model": "achievetodo:item/cat/white"
     },
     {
       "predicate": {
         "damage": 0.006
       },
-      "model": "achievetodo:item/cat_persian"
+      "model": "achievetodo:item/cat/persian"
     },
     {
       "predicate": {
         "damage": 0.007
       },
-      "model": "achievetodo:item/cat_calico"
+      "model": "achievetodo:item/cat/calico"
     },
     {
       "predicate": {
         "damage": 0.008
       },
-      "model": "achievetodo:item/cat_siamese"
+      "model": "achievetodo:item/cat/siamese"
     },
     {
       "predicate": {
         "damage": 0.009
       },
-      "model": "achievetodo:item/cat_all_black"
+      "model": "achievetodo:item/cat/all_black"
     },
     {
       "predicate": {
         "damage": 0.010
       },
-      "model": "achievetodo:item/cat_jellie"
+      "model": "achievetodo:item/cat/jellie"
     },
     {
       "predicate": {
         "damage": 0.011
       },
-      "model": "achievetodo:item/cat_red"
+      "model": "achievetodo:item/cat/red"
+    },
+    {
+      "predicate": {
+        "damage": 0.012
+      },
+      "model": "achievetodo:item/panda/panda"
+    },
+    {
+      "predicate": {
+        "damage": 0.013
+      },
+      "model": "achievetodo:item/panda/aggressive_panda"
+    },
+    {
+      "predicate": {
+        "damage": 0.014
+      },
+      "model": "achievetodo:item/panda/lazy_panda"
+    },
+    {
+      "predicate": {
+        "damage": 0.015
+      },
+      "model": "achievetodo:item/panda/worried_panda"
+    },
+    {
+      "predicate": {
+        "damage": 0.016
+      },
+      "model": "achievetodo:item/panda/playful_panda"
+    },
+    {
+      "predicate": {
+        "damage": 0.017
+      },
+      "model": "achievetodo:item/panda/weak_panda"
+    },
+    {
+      "predicate": {
+        "damage": 0.018
+      },
+      "model": "achievetodo:item/panda/brown_panda"
     }
   ]
 }

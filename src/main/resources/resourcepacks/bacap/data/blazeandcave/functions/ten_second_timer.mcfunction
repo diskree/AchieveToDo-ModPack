@@ -19,11 +19,11 @@ execute store result score time bac_current_time run time query daytime
 execute if score time bac_current_time matches 0..200 run function blazeandcave:increase_day
 
 # If it is just before a sunrise players gain "The First Night"
-execute if score time bac_current_time matches 23000..23200 run advancement grant @a[gamemode=!spectator] until blazeandcave:statistics/the_first_night
+execute if score time bac_current_time matches 23000..23200 run advancement grant @a[gamemode=!spectator] only blazeandcave:statistics/the_first_night
 
 # "The First Night" is also achieved upon sleeping through the night. Because sleeping resets the time back to zero, it checks if the previous time was far greater than the time now
 scoreboard players operation previous bac_current_time -= time bac_current_time
-execute unless score previous bac_current_time matches ..13000 run advancement grant @a[gamemode=!spectator] until blazeandcave:statistics/the_first_night
+execute unless score previous bac_current_time matches ..13000 run advancement grant @a[gamemode=!spectator] only blazeandcave:statistics/the_first_night
 
 
 

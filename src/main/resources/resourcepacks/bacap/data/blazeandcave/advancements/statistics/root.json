@@ -13,6 +13,19 @@
 		"function": "bc_rewards:statistics/root"
 	},		
 	"criteria": {
+		"the_first_night": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"type_specific": {
+						"type": "player",
+						"advancements": {
+							"blazeandcave:statistics/the_first_night": "true"
+						}
+					}
+				}
+			}
+		},
 		"diamond": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -40,9 +53,10 @@
 	},
 	"requirements": [
 		[
-		"diamond",
-		"entered_nether_portal",
-		"entered_end_portal"
+			"the_first_night",
+			"diamond",
+			"entered_nether_portal",
+			"entered_end_portal"
 		]
 	]
 }

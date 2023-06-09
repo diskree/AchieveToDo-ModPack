@@ -157,7 +157,7 @@ execute unless score bac_created bac_created matches 1 run function blazeandcave
 
 # # These functions are run only if this is an Alpha or Beta Build, and give a warning to players based on the nature
 scoreboard players set alpha_build bac_settings 0
-scoreboard players set beta_build bac_settings 1
+scoreboard players set beta_build bac_settings 0
 
 execute if score alpha_build bac_settings matches 1 run schedule function blazeandcave:msg_alpha_build 3s replace
 execute if score beta_build bac_settings matches 1 run schedule function blazeandcave:msg_beta_build 3s replace

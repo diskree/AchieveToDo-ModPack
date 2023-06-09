@@ -15,21 +15,7 @@
 	},		
 	"criteria": {
 		"big_cheater": {
-			"trigger": "minecraft:location",
-			"conditions": {
-				"player": [
-					{
-						"condition": "minecraft:entity_properties",
-						"entity": "this",
-						"predicate": {
-							"type_specific": {
-								"type": "player",
-								"gamemode": "creative"
-							}
-						}
-					}
-				]
-			}
+			"trigger": "minecraft:impossible"
 		}
 	}
 }

@@ -1,5 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
+import com.diskree.achievetodo.AchieveToDoMod;
 import net.minecraft.client.gui.screen.GameMenuScreen;
 import net.minecraft.client.gui.tooltip.Tooltip;
 import net.minecraft.client.gui.widget.ButtonWidget;
@@ -23,7 +24,7 @@ public class GameMenuScreenMixin {
     private void initWidgetsInject(Args args) {
         ButtonWidget lanButton = args.get(0);
         if (lanButton.getMessage() == SHARE_TO_LAN_TEXT) {
-//            lanButton.active = false;
+            lanButton.active = AchieveToDoMod.DEBUG;
             lanButton.setTooltip(Tooltip.of(Text.translatable("menu.shareToLan.info")));
         }
     }

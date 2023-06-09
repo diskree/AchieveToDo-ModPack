@@ -247,6 +247,7 @@ class AchieveToDoMod : ModInitializer {
     }
 
     companion object {
+        const val DEBUG = true
         const val ID = "achievetodo"
 
         private val BACAP_DATA_PACK_ID = Identifier(ID, "bacap")

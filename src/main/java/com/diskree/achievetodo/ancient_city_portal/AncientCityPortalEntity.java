@@ -257,23 +257,20 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     private void updateJukeboxPos(BlockPos jukeboxPos, boolean playing) {
         if (true) {
-            AdvancementHint hint = AdvancementGenerator.generateForHint();
-            if (hint != null) {
-                Advancement advancement = hint.advancement();
-                ((ItemDisplayEntityImpl) this).publicSetItemStack(advancement.getDisplay().getIcon());
-
+            AdvancementHint advancementHint = AdvancementGenerator.generateForHint();
+            if (advancementHint != null) {
+                ((ItemDisplayEntityImpl) this).publicSetItemStack(advancementHint.advancement());
                 BlockPos tabEntityPos = getBlockPos().offset(getHorizontalFacing().rotateYCounterclockwise(), 5);
                 List<AncientCityPortalTabEntity> tabEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_TAB, Box.of(tabEntityPos.toCenterPos(), 1, 1, 1), (entity) -> true);
                 if (tabEntities != null && tabEntities.size() == 1) {
                     AncientCityPortalTabEntity tabEntity = tabEntities.get(0);
-                    ((ItemDisplayEntityImpl) tabEntity).publicSetItemStack(advancement.getRoot().getDisplay().getIcon());
+                    ((ItemDisplayEntityImpl) tabEntity).publicSetItemStack(advancementHint.tab());
                 }
-
                 BlockPos hintEntityPos = getBlockPos().offset(getHorizontalFacing().rotateYClockwise(), 5);
                 List<AncientCityPortalPromptEntity> hintEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT, Box.of(hintEntityPos.toCenterPos(), 1, 1, 1), (entity) -> true);
                 if (hintEntities != null && hintEntities.size() == 1) {
                     AncientCityPortalPromptEntity hintEntity = hintEntities.get(0);
-                    ((ItemDisplayEntityImpl) hintEntity).publicSetItemStack(hint.hint());
+                    ((ItemDisplayEntityImpl) hintEntity).publicSetItemStack(advancementHint.hint());
                 }
             }
             return;

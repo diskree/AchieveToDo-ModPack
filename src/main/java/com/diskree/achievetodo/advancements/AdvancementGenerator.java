@@ -40,6 +40,11 @@ public class AdvancementGenerator {
         if (advancement == null) {
             return null;
         }
+        AdvancementDisplay tabDisplay = advancement.getRoot().getDisplay();
+        AdvancementDisplay advancementDisplay = advancement.getDisplay();
+        if (tabDisplay == null || advancementDisplay == null) {
+            return null;
+        }
         ArrayList<String> incompleteCriteria = new ArrayList<>();
         AdvancementProgress progress = serverPlayer.getAdvancementTracker().getProgress(advancement);
         for (String[] requirement : advancement.getRequirements()) {
@@ -59,92 +64,113 @@ public class AdvancementGenerator {
             return null;
         }
         String criterion = incompleteCriteria.get(serverPlayer.getRandom().nextBetween(0, incompleteCriteria.size() - 1));
-        Item hintItem = Registries.ITEM.get(new Identifier(criterion));
+        Item hintItem = null;
         NbtCompound nbt = new NbtCompound();
-        if (hintItem == Items.AIR) {
-            switch (advancement.getId().toString()) {
-                case "blazeandcave:mining/bonfire_night" -> {
-                    switch (criterion) {
-                        case "sweet_berry_bush" -> hintItem = Items.SWEET_BERRIES; // block variant?
-                    }
+        switch (advancement.getId().toString()) {
+            case "blazeandcave:mining/bonfire_night" -> {
+                switch (criterion) {
+                    case "sweet_berry_bush" -> hintItem = Items.SWEET_BERRIES; // block variant?
                 }
-                case "blazeandcave:animal/tropical_collection" -> {
-                    hintItem = Items.TROPICAL_FISH_BUCKET;
-                    nbt.putInt("BucketVariantTag", switch (criterion) {
-                        case "fish1" -> 65536;
-                        case "fish2" -> 917504;
-                        case "fish3" -> 918273;
-                        case "fish4" -> 918529;
-                        case "fish5" -> 16778497;
-                        case "fish6" -> 50660352;
-                        case "fish7" -> 50726144;
-                        case "fish8" -> 67108865;
-                        case "fish9" -> 67110144;
-                        case "fish10" -> 67371009;
-                        case "fish11" -> 67764993;
-                        case "fish12" -> 101253888;
-                        case "fish13" -> 117441025;
-                        case "fish14" -> 67699456;
-                        case "fish15" -> 117441793;
-                        case "fish16" -> 117506305;
-                        case "fish17" -> 117899265;
-                        case "fish18" -> 118161664;
-                        case "fish19" -> 459008;
-                        case "fish20" -> 185008129;
-                        case "fish21" -> 234882305;
-                        case "fish22" -> 235340288;
-                        default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                    });
+            }
+            case "blazeandcave:animal/tropical_collection" -> {
+                hintItem = Items.TROPICAL_FISH_BUCKET;
+                nbt.putInt("BucketVariantTag", switch (criterion) {
+                    case "fish1" -> 65536;
+                    case "fish2" -> 917504;
+                    case "fish3" -> 918273;
+                    case "fish4" -> 918529;
+                    case "fish5" -> 16778497;
+                    case "fish6" -> 50660352;
+                    case "fish7" -> 50726144;
+                    case "fish8" -> 67108865;
+                    case "fish9" -> 67110144;
+                    case "fish10" -> 67371009;
+                    case "fish11" -> 67764993;
+                    case "fish12" -> 101253888;
+                    case "fish13" -> 117441025;
+                    case "fish14" -> 67699456;
+                    case "fish15" -> 117441793;
+                    case "fish16" -> 117506305;
+                    case "fish17" -> 117899265;
+                    case "fish18" -> 118161664;
+                    case "fish19" -> 459008;
+                    case "fish20" -> 185008129;
+                    case "fish21" -> 234882305;
+                    case "fish22" -> 235340288;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:animal/axolotl_of_them" -> {
+                hintItem = Items.AXOLOTL_BUCKET;
+                nbt.putInt("Variant", switch (criterion) {
+                    case "leucistic" -> 0;
+                    case "wild" -> 1;
+                    case "gold" -> 2;
+                    case "cyan" -> 3;
+                    case "blue" -> 4;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "minecraft:husbandry/complete_catalogue" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "minecraft:black" -> 1;
+                    case "minecraft:tabby" -> 2;
+                    case "minecraft:ragdoll" -> 3;
+                    case "minecraft:british_shorthair" -> 4;
+                    case "minecraft:white" -> 5;
+                    case "minecraft:persian" -> 6;
+                    case "minecraft:calico" -> 7;
+                    case "minecraft:siamese" -> 8;
+                    case "minecraft:all_black" -> 9;
+                    case "minecraft:jellie" -> 10;
+                    case "minecraft:red" -> 11;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:biomes/pandamonium" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "normal" -> 12;
+                    case "aggressive" -> 13;
+                    case "lazy" -> 14;
+                    case "worried" -> 15;
+                    case "playful" -> 16;
+                    case "weak" -> 17;
+                    case "brown" -> 18;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:building/creepers_and_withers" -> {
+                switch (criterion) {
+                    case "sandstone" -> hintItem = Items.CHISELED_SANDSTONE;
+                    case "red_sandstone" -> hintItem = Items.CHISELED_RED_SANDSTONE;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 }
-                case "blazeandcave:animal/axolotl_of_them" -> {
-                    hintItem = Items.AXOLOTL_BUCKET;
-                    nbt.putInt("Variant", switch (criterion) {
-                        case "leucistic" -> 0;
-                        case "wild" -> 1;
-                        case "gold" -> 2;
-                        case "cyan" -> 3;
-                        case "blue" -> 4;
-                        default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                    });
+            }
+            case "minecraft:husbandry/froglights" -> {
+                switch (criterion) {
+                    case "verdant_froglight" -> hintItem = Items.VERDANT_FROGLIGHT;
+                    case "ochre_froglight" -> hintItem = Items.OCHRE_FROGLIGHT;
+                    case "pearlescent_froglight" -> hintItem = Items.PEARLESCENT_FROGLIGHT;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 }
-                case "minecraft:husbandry/complete_catalogue" -> {
-                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
-                    nbt.putInt("Damage", switch (criterion) {
-                        case "minecraft:black" -> 1;
-                        case "minecraft:tabby" -> 2;
-                        case "minecraft:ragdoll" -> 3;
-                        case "minecraft:british_shorthair" -> 4;
-                        case "minecraft:white" -> 5;
-                        case "minecraft:persian" -> 6;
-                        case "minecraft:calico" -> 7;
-                        case "minecraft:siamese" -> 8;
-                        case "minecraft:all_black" -> 9;
-                        case "minecraft:jellie" -> 10;
-                        case "minecraft:red" -> 11;
-                        default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                    });
-                }
-                case "blazeandcave:biomes/pandamonium" -> {
-                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
-                    nbt.putInt("Damage", switch (criterion) {
-                        case "normal" -> 12;
-                        case "aggressive" -> 13;
-                        case "lazy" -> 14;
-                        case "worried" -> 15;
-                        case "playful" -> 16;
-                        case "weak" -> 17;
-                        case "brown" -> 18;
-                        default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                    });
+            }
+            case "blazeandcave:biomes/everybody_loves_ice" -> {
+                switch (criterion) {
+                    case "blue_ice" -> hintItem = Items.BLUE_ICE;
+                    case "packed_ice" -> hintItem = Items.PACKED_ICE;
+                    case "ice" -> hintItem = Items.ICE;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 }
             }
         }
-        if (hintItem == Items.AIR) {
-            hintItem = Items.BARRIER;
+        if (hintItem == null) {
+            return null;
         }
-        ItemStack itemStack = new ItemStack(hintItem);
-        itemStack.setNbt(nbt);
-        return new AdvancementHint(advancement, itemStack);
+        ItemStack hint = new ItemStack(hintItem);
+        hint.setNbt(nbt);
+        return new AdvancementHint(tabDisplay.getIcon(), advancementDisplay.getIcon(), hint);
     }
 
     private static Advancement generateRandomAdvancement(boolean withSingleRequirement) {

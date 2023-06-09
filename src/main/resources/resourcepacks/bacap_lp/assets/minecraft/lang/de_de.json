@@ -9,7 +9,7 @@
 
 # Language: German / Deutsch (Deutschland)
 # Author: Puddingpapst / Enucius
-# Pack version supported: 1.14
+# Pack version supported: 1.16
 
 # All language entries are organised in alphabetical order of file name as of 1.3
 # All new advancements added in updates later than 1.3 (1.4, 1.5 and so on) will be put at the bottom of the file for easy locating and adding by translators
@@ -748,7 +748,7 @@
 "Completely use up a golden pickaxe, and then seriously reevaluate your life choices": "Benutze eine Goldspitzhacke, bis sie verbraucht ist und überdenke dann dein Leben.",
 
 "Coal Miner": "Kohle-Bergmann",
-"Mine a stack of coal": "Baue einen kompletten Stack Kohle ab",
+"Mine a stack of coal": "Baue einen kompletten Stapel Kohle ab",
 
 "Fuel Engine": "Kraftstoffe und Motoren",
 "Craft a powered minecart": "Stelle eine Antriebslore her",
@@ -760,7 +760,7 @@
 "A full suit of diamond armor saves even more lives": "Eine vollständige Diamantrüstung rettet sogar noch mehr Leben",
 
 "Diamond Miner": "Diamant-Bergmann",
-"Mine a stack of diamonds. Good luck!": "Baue einen kompletten Stack Diamanten ab. Viel Glück!",
+"Mine a stack of diamonds. Good luck!": "Baue einen kompletten Stapel Diamanten ab. Viel Glück!",
 
 "Diamonds!": "Diamanten!",
 "Acquire diamonds": "Beschaffe Diamanten",
@@ -781,7 +781,7 @@
 "Construct a better pickaxe": "Stelle eine bessere Spitzhacke her",
 
 "Gold Miner": "Gold-Bergmann",
-"Mine a stack of gold ore": "Baue einen kompletten Stack Golderz ab",
+"Mine a stack of gold ore": "Baue einen kompletten Stapel Golderz ab",
 
 "Gold Rush": "Gold Rush",
 "Strike gold and smelt it into a gold ingot": "Schmelze Gold zu einem Goldbarren",
@@ -796,13 +796,13 @@
 "Craft a full suit of iron armor": "Stelle ein komplettes Set Eisenrüstung her",
 
 "Iron Miner": "Eisen-Bergmann",
-"Mine a stack of iron ore": "Baue einen kompletten Stack Eisenerz ab",
+"Mine a stack of iron ore": "Baue einen kompletten Stapel Eisenerz ab",
 
 "Isn't It Iron Pick": "Zu viel Eisen im Blut",
 "Upgrade your pickaxe": "Verbessere deine Spitzhacke",
 
 "Lapis Lazuli Miner": "Lapis Lazuli-Bergmann",
-"Mine enough lapis lazuli to craft a stack of lapis lazuli blocks": "Baue genug Lapis Lazuli ab, um einen kompletten Stack Lapis Lazuli Blöcke herzustellen",
+"Mine enough lapis lazuli to craft a stack of lapis lazuli blocks": "Baue genug Lapis Lazuli ab, um einen kompletten Stapel Lapis Lazuli Blöcke herzustellen",
 
 "Mineral Collection": "Mineralsammlung",
 "Craft every type of mineral block": "Stelle jede Art von Mineralblock her",
@@ -817,7 +817,7 @@
 "Craft a minecart using five iron ingots": "Stelle eine Lore mit der Hilfe von fünf Eisenbarren her",
 
 "Redstone Miner": "Redstone-Bergmann",
-"Mine enough redstone to craft a stack of redstone blocks": "Baue genug Redstone ab, um einen kompletten Stack Redstoneblöcke herzustellen",
+"Mine enough redstone to craft a stack of redstone blocks": "Baue genug Redstone ab, um einen kompletten Stapel Redstoneblöcke herzustellen",
 
 "Mining": "Bergbau",
 "Dig underground, gather resources": "Gehe unter die Erde und sammle Ressourcen",
@@ -1000,7 +1000,7 @@
 "Use a pressure plate to craft a detector rail": "Nutze eine Druckplatte um eine Sensorschiene herzustellen",
 
 "Quartz Miner": "Quarz-Bergmann",
-"Mine enough nether quartz to craft a stack of quartz blocks": "Baue genug Netherquarz ab um einen kompletten Stack Quarzblöcke herzustellen",
+"Mine enough nether quartz to craft a stack of quartz blocks": "Baue genug Netherquarz ab um einen kompletten Stapel Quarzblöcke herzustellen",
 
 "Quirky Quartz": "Schrulliger Quarz",
 "Mine Nether Quartz from the Nether": "Baue Netherquarz ab",
@@ -1059,7 +1059,7 @@
 
 
 "Flint Miner": "Feuersteinsammler",
-"Mine a stack of flint": "Sammle einen kompletten Stack Feuersteine",
+"Mine a stack of flint": "Sammle einen kompletten Stapel Feuersteine",
 
 "My work here is done": "Meine Arbeit hier ist getan",
 "Get caught in a cave-in of gravel": "Werde von herunterfallendem Kies gefangen",
@@ -1068,7 +1068,7 @@
 "Accidentally hit a bat underground": "Schlage ausversehen eine Fledermaus im Untergrund",
 
 "Obsidian Miner": "Obsidian-Bergmann",
-"Mine a stack of obsidian. (This might take a while...)": "Baue einen kompletten Stack Obsidian ab. (Das wird eine Weile dauern...)",
+"Mine a stack of obsidian. (This might take a while...)": "Baue einen kompletten Stapel Obsidian ab. (Das wird eine Weile dauern...)",
 
 "Rock Bottom": "Felsiger Boden",
 "Dig down to the bottom of the world": "Grabe dich bis zum Boden der Welt hinunter",
@@ -1089,7 +1089,7 @@
 "Craft a dried kelp block for use as a great fuel source": "Stelle einen getrockneten Seetangblock her, der als großartige Brennstoffquelle dient",
 
 "Hay there!": "Heu du!",
-"Craft a stack of hay blocks": "Stelle einen kompletten Stack Heublöcke her",
+"Craft a stack of hay blocks": "Stelle einen kompletten Stapel Heublöcke her",
 
 "It's full of ink": "Es ist voll mit Tinte",
 "Obtain some ink from hunting a squid": "Erhalte ein paar Tintensäcke von einem Tintenfisch",
@@ -1101,13 +1101,13 @@
 "Collect some kelp from an ocean": "Sammle etwas Seetang aus dem Ozean",
 
 "Pumpa kungen!": "Pumpa kungen!",
-"Carve a stack of pumpkins": "Schnitze einen Stack Kürbisse",
+"Carve a stack of pumpkins": "Schnitze einen Stapel Kürbisse",
 
 "The Meloncholy Dane": "The Meloncholy Dane",
-"Craft a stack of melon blocks": "Stelle einen kompletten Stack Melonenblöcke her",
+"Craft a stack of melon blocks": "Stelle einen kompletten Stapel Melonenblöcke her",
 
 "Undersea Gardener": "Unterwasser-Gärtner",
-"Craft a stack of dried kelp blocks": "Stelle einen Stack getrocknete Seetangblöcke her",
+"Craft a stack of dried kelp blocks": "Stelle einen Stapel getrocknete Seetangblöcke her",
 
 "Write your thoughts": "Schreibe deine Gedanken auf",
 "Use a book, ink and a feather to craft a book and quill": "Benutze ein Buch, einen Tintensack und eine Feder um ein beschreibbares Buch herzustellen",
@@ -1128,7 +1128,7 @@
 "Gotta kill this pig pig pig pig": "Ich muss das Schwein töten töten töten töten!",
 
 "Chicken Cooper": "Hühnchenkollege",
-"Collect a stack of raw chicken and feathers": "Sammle einen kompletten Stack rohes Hühnchen und Federn",
+"Collect a stack of raw chicken and feathers": "Sammle einen kompletten Stapel rohes Hühnchen und Federn",
 
 "Farrier": "Hufschmied",
 "Breed a horse in an effort to get a better one": "Züchte ein Pferd mit der Absicht ein besseres zu erhalten",
@@ -1143,7 +1143,7 @@
 "Breed two cats together to get a kitty!": "Paare zwei Katzen, um ein Kätzchen zu bekommen!",
 
 "In a hole there lived a Rabbit": "In einem Loch, da lebte einmal ein Kaninchen",
-"Collect a stack of raw rabbit and rabbit hide": "Sammle einen Stack rohes Kaninchen und Kaninchenfell",
+"Collect a stack of raw rabbit and rabbit hide": "Sammle einen Stapel rohes Kaninchen und Kaninchenfell",
 
 "Mary Had a Little Lamb...": "Mary hatte ein kleines Lamm...",
 "Breed two sheep to get a lamb": "Paare zwei Schafe um ein Lamm zu erhalten",
@@ -1152,7 +1152,7 @@
 "Find mooshrooms on a mushroom island": "Finde Pilze auf einer Pilzinsel",
 
 "Pig Slaughterer": "Schweine-Schlachter",
-"Collect a stack of raw porkchops": "Sammle einen Stack rohes Schweinefleisch",
+"Collect a stack of raw porkchops": "Sammle einen Stapel rohes Schweinefleisch",
 
 "Poacher": "Wilderer",
 "Kill a turtle for their shells only to find they don't actually drop any when killed": "Töte eine Schildkröte für ihre Muscheln, nur um herauszufinden, dass sie keine fallen lassen, wenn sie getötet werden",
@@ -1164,7 +1164,7 @@
 "Get a scute from a baby turtle when it grows up": "Erschreck dich vor einer Babyschildkröte, wenn sie erwachsen wird",
 
 "Sheariously?": "Sheariously?",
-"Collect a stack of white wool": "Sammle einen Stack weiße Wolle",
+"Collect a stack of white wool": "Sammle einen Stapel weiße Wolle",
 
 "So I got that going for me": "Also ich habe das erledigt",
 "Breed two llamas with hay": "Paare zwei Lamas mit Heu",
@@ -1194,10 +1194,10 @@
 "Fish out a piece of treasure": "Angle ein kleines Stück von einem Schatz",
 
 "True Cow Tipper": "Echter Kuhschubser",
-"Collect a stack of raw beef and leather": "Sammle einen Stack rohes Steak und Leder",
+"Collect a stack of raw beef and leather": "Sammle einen Stapel rohes Steak und Leder",
 
 "Turtle Army": "Schildkrötenarmee",
-"Collect a stack of scutes": "Sammle einen Stack Hornschilder",
+"Collect a stack of scutes": "Sammle einen Stapel Hornschilder",
 
 "Turtle Soldier": "Schildkrötensoldat",
 "Craft a full turtle shell": "Stelle einen Schildkrötenpanzer her",
@@ -1231,10 +1231,10 @@
 "Grind up some bones into bonemeal": "Zermahle ein paar Knochen zu Knochenmehl",
 
 "Creeper Killer": "Creeper-Schlächter",
-"Collect a stack of gunpowder": "Sammle einen Stack Schwarzpulver",
+"Collect a stack of gunpowder": "Sammle einen Stapel Schwarzpulver",
 
 "Enderman Destroyer": "Enderman-Zerstörer",
-"Collect a stack of ender pearls": "Sammle einen Stack Enderperlen",
+"Collect a stack of ender pearls": "Sammle einen Stapel Enderperlen",
 
 "Freezing": "Eiskalt",
 "Bring a husk to a tundra biome and then kill it": "Bringe einen Wüstenzombie zu einem Tundra-Biom und töte ihn dann",
@@ -1243,7 +1243,7 @@
 "Bring a stray to a desert biome and then kill it": "Bringe einen Eiswanderer in eine Wüste und töte ihn dort",
 
 "Phantom Slayer": "Phantom-Schlächter",
-"Collect a stack of phantom membranes": "Sammle einen Stack Phantomhaut",
+"Collect a stack of phantom membranes": "Sammle einen Stapel Phantomhaut",
 
 "Poseidon vs. Hades": "Poseidon vs. Hades",
 "Hunt all types of nether creatures with your trident": "Jage alle Monster im Nether mit deinem Dreizack",
@@ -1252,13 +1252,13 @@
 "Deflect a Phantom's swoop with your shield": "Währe die Attacke eines Phantoms mit deinem Schild ab",
 
 "Skeleton Smiter": "Skelett-Zerstörer",
-"Collect a stack of bones": "Sammle einen Stack Knochen",
+"Collect a stack of bones": "Sammle einen Stapel Knochen",
 
 "Slime Squisher": "Schleim-Zerquetscher",
-"Collect a stack of slimeballs": "Sammle einen Stack Schleimbälle",
+"Collect a stack of slimeballs": "Sammle einen Stapel Schleimbälle",
 
 "Spider Smasher": "Spinnen-Schläger",
-"Collect a stack of string from spiders or cobwebs": "Sammle einen Stack Fäden durch das töten von Spinnen oder durch das abbauen von Spinnennetzen",
+"Collect a stack of string from spiders or cobwebs": "Sammle einen Stapel Fäden durch das töten von Spinnen oder durch das abbauen von Spinnennetzen",
 
 "The Aquatic Hunter": "Der Tiefsee Jäger",
 "Hunt all types of aquatic creatures with your trident": "Jage alle Tiefsee Kreaturen mit deinem Dreizack",
@@ -1276,7 +1276,7 @@
 "Lure a Phantom into the Nether and then kill it": "Locke ein Phantom in den Nether und töte es dort",
 
 "Zombie Slayer": "Zombie-Schlächter",
-"Collect a stack of rotten flesh": "Sammle einen Stack verrottetes Fleisch",
+"Collect a stack of rotten flesh": "Sammle einen Stapel verrottetes Fleisch",
 
 
 
@@ -1304,7 +1304,7 @@
 "Find a mineshaft on the surface of a mesa biome": "Finde einen Minenschacht an der Oberfläche eines Mesa Biomes",
 
 "Guardian Destroyer": "Guardian-Zerstörer",
-"Collect a stack of prismarine shards and crystals": "Sammle einen Stack Prismarinscherben und Kristalle",
+"Collect a stack of prismarine shards and crystals": "Sammle einen Stapel Prismarinscherben und Kristalle",
 
 "In a Pickle": "Auf Seegurkenjagt",
 "Collect some sea pickles from a coral reef": "Sammle ein paar Seegurken aus einem Korallenriff",
@@ -1328,7 +1328,7 @@
 "Run into a cactus": "Laufe in einen Katkus",
 
 "Sponge Miner": "Schwammsammler",
-"Collect a stack of sponges from ocean monuments": "Sammle einen Stack Schwämme aus Ozeanmonumenten",
+"Collect a stack of sponges from ocean monuments": "Sammle einen Stapel Schwämme aus Ozeanmonumenten",
 
 "The Great Blocky Reef": "Das große blockige Riff",
 "Come across a coral reef in the ocean": "Entdecke ein Korallenriff in einem Ozean",
@@ -1355,7 +1355,7 @@
 "Craft all types of redstone component": "Stelle alle Arten von Redstonekompunenten her",
 
 "Master Engineer": "Meister-Techniker",
-"Craft a stack of all types of redstone component": "Stelle einen Stack aller Arten von Redstonekompunenten her",
+"Craft a stack of all types of redstone component": "Stelle einen Stapel aller Arten von Redstonekompunenten her",
 
 
 
@@ -1376,16 +1376,16 @@
 
 
 "Blaze Extinguisher": "Blaze-Auslöscher",
-"Collect a stack of blaze rods": "Sammle einen Stack Lohenruten",
+"Collect a stack of blaze rods": "Sammle einen Stapel Lohenruten",
 
 "Ghast Slayer": "Ghast-Schlächter",
-"Collect a stack of ghast tears": "Sammle einen Stack Ghasttränen",
+"Collect a stack of ghast tears": "Sammle einen Stapel Ghasttränen",
 
 "Glowstone Miner": "Glowstonesammler",
-"Mine or craft a stack of glowstone blocks": "Crafte oder sammle einen Stack Glowstoneblöcke",
+"Mine or craft a stack of glowstone blocks": "Crafte oder sammle einen Stapel Glowstoneblöcke",
 
 "Magma Cube Squisher": "Magmawürfel-Zerquetscher",
-"Collect a stack of magma cream": "Sammle einen Stack Magmacreme",
+"Collect a stack of magma cream": "Sammle einen Stapel Magmacreme",
 
 "Seeing Stars": "Ich sehe Sterne",
 "Mine some glowstone dust from the nether": "Baue ein bisschen Glowstonestaub aus dem Nether ab",
@@ -1406,7 +1406,7 @@
 "Plant a chorus plant in the overworld for study": "Pflanze eine Chroruspflanze in der Oberwelt für Lernzwecke",
 
 "Shulker Breaker": "Shulkerbrecher",
-"Collect a stack of shulker shells": "Sammle einen Stack Schulkerschalen",
+"Collect a stack of shulker shells": "Sammle einen Stapel Schulkerschalen",
 
 "Void Walker": "Läufer der Leere",
 "Explore every end biome": "Erkunde jedes Endbiom",
@@ -1423,16 +1423,16 @@
 "Make yourself shiny with golden armor": "Scheine wie die Sterne mit deiner Goldrüstung",
 
 "Master Coal Miner": "Meister-Kohlebergmann",
-"Mine enough coal to make a stack of coal blocks": "Baue genug Kohle ab, um einen Stack Kohleblöcke herzustellen",
+"Mine enough coal to make a stack of coal blocks": "Baue genug Kohle ab, um einen Stapel Kohleblöcke herzustellen",
 
 "Master Diamond Miner": "Meister-Diamantbergmann",
-"Mine enough diamond to make a stack of diamond blocks": "Baue genug Diamanten ab, um einen Stack Diamantblöcke herzustellen",
+"Mine enough diamond to make a stack of diamond blocks": "Baue genug Diamanten ab, um einen Stapel Diamantblöcke herzustellen",
 
 "Master Gold Miner": "Meister-Goldbergmann",
-"Mine enough gold to make a stack of gold blocks": "Baue genug Gold ab, um einen Stack Goldblöcke herzustellen",
+"Mine enough gold to make a stack of gold blocks": "Baue genug Gold ab, um einen Stapel Goldblöcke herzustellen",
 
 "Master Iron Miner": "Meister-Eisenbergmann",
-"Mine enough iron to make a stack of iron blocks": "Baue genug Eisen ab, um einen Stack Eisenblöcke herzustellen",
+"Mine enough iron to make a stack of iron blocks": "Baue genug Eisen ab, um einen Stapel Eisenblöcke herzustellen",
 
 "Meet The Flintstones": "Lerne die Feuersteine kennen",
 "Dig up some flint from a patch of gravel": "Grabe etwas Feuerstein aus einem Stück Kies",
@@ -1504,7 +1504,7 @@
 "Get a rabbit's foot": "Erhalte eine Kaninchenpfote",
 
 "Master Angler": "Meister-Angler",
-"Collect a stack of all four types of fish": "Sammle einen Stack aller vier Fischarten",
+"Collect a stack of all four types of fish": "Sammle einen Stapel aller vier Fischarten",
 
 "Tropical Collection": "Tropische Kollektion",
 "Collect all 22 of the common types of tropical fish": "Sammle alle 22 häufig vorkommenden tropischen Fischarten",
@@ -1555,7 +1555,7 @@
 "Craft and place a redstone torch": "Stelle eine Redstonefackel her und platziere sie",
 
 "Railwayman": "Schienenmann",
-"Craft a stack of all the different types of rails": "Stelle einen Stack aller verschiedenen Schienentypen her",
+"Craft a stack of all the different types of rails": "Stelle einen Stapel aller verschiedenen Schienentypen her",
 
 
 
@@ -1964,7 +1964,7 @@
 "Kill five unique mobs with one crossbow shot": "Töte fünf verschiedene Kreaturen mit einem einzigen Schuss mit einer Armbrust",
 
 "Emerald Miner": "Smaragd-Bergmann",
-"Mine a stack of raw emerald ore": "Baue einen Stack rohes Smaragderz ab",
+"Mine a stack of raw emerald ore": "Baue einen Stapel rohes Smaragderz ab",
 
 "Machine Bow": "Maschienenarmbrust",
 "Fire a crossbow as rapidly as possible": "Feuere eine Armbrust so schnell wie möglich hintereinander ab",
@@ -2053,7 +2053,7 @@
 "Trigger a Pillager Raid": "Löse einen Plündererangriff auf ein Dorf aus",
 
 "Superhero of the Village": "Superheld des Dorfes",
-"Defeat enough raid captains to obtain a stack of Ominous Banners": "Besiege genügend Plündererkapitäne um einen Stack Ominöse Banner zu besitzen",
+"Defeat enough raid captains to obtain a stack of Ominous Banners": "Besiege genügend Plündererkapitäne um einen Stapel Ominöse Banner zu besitzen",
 
 "I've got a bad feeling about this": "Ich habe ein schlechtes Gefühl",
 
@@ -2064,7 +2064,7 @@
 "That was a nice life you had. Shame it had to end at this time time time": "Das war ein schönes Leben, das du hattest. Schade, dass es zu dieser Zeit enden musste musste musste",
 
 "Iskallium Collector": "Iskallium Collector",
-"Collect enough slimeballs to craft a stack of slime blocks": "Sammle genügend Schleimbälle um einen Stack Schleimblöcke herzustellen",
+"Collect enough slimeballs to craft a stack of slime blocks": "Sammle genügend Schleimbälle um einen Stapel Schleimblöcke herzustellen",
 
 "Spider-skeleton": "Spinnen-Skelett",
 "Does whatever a spider can": "Tut was immer eine Spinne tun kann",
@@ -2081,7 +2081,7 @@
 
 
 "Magical Stockpile": "Magischer Vorrat",
-"Obtain a full stack of bottles of enchanting": "Erhalte einen Stack Erfahrungsfläschchen",
+"Obtain a full stack of bottles of enchanting": "Erhalte einen Stapel Erfahrungsfläschchen",
 
 
 
@@ -2243,7 +2243,7 @@
 "Travel a million blocks away from spawn": "Reise eine Millionen Blöcke vom Spawn weg",
 
 "Abyss Lord": "Abyss Lord",
-"Obtain a stack of Conduits": "Erhalte einen Stack Aquisatoren",
+"Obtain a stack of Conduits": "Erhalte einen Stapel Aquisatoren",
 
 "All the Blocks!": "All die Blöcke!",
 "Obtain all the blocks!": "Erhalte alle Blöcke!",
@@ -2255,13 +2255,13 @@
 "Kill every mob in the game with lingering potions": "Töte alle Kreaturen des Spiels mit Verweiltränken",
 
 "Creepergeddon": "Creepergeddon",
-"Obtain a stack of Creeper Heads": "Erhalte einen Stack Creeperköpfe",
+"Obtain a stack of Creeper Heads": "Erhalte einen Stapel Creeperköpfe",
 
 "Death From All": "Tod durch alle",
 "Get killed by every mob that can kill you. (Ignore in hardcore mode)": "Werde durch jede Kreatur getötet, die dich töten kann. (Das solltest du im Hardcoremodus ignorieren)",
 
 "Dragon Army": "Drachenarmee",
-"Obtain a stack of Ender Dragon Heads": "Erhalte einen Stack Drachenköpfe",
+"Obtain a stack of Ender Dragon Heads": "Erhalte einen Stapel Drachenköpfe",
 
 "Dragon vs Dragon II: Electric Boogaloo": "Drache vs. Drache II",
 "Defeat the Ender Dragon while wearing a dragon head... without touching the ground": "Besiege den Enderdrachen während du einen Drachenkopf trägst... ohne den Boden zu berühren",
@@ -2288,28 +2288,28 @@
 "Kill every mob in the game with splash potions": "Töte jede Kreatur im Spiel mit einem Wurftrank des Schadens",
 
 "Rise of the Skeletons": "Aufstieg der Skelette",
-"Obtain a stack of Skeleton Skulls": "Erhalte einen Stack Skelettschädel",
+"Obtain a stack of Skeleton Skulls": "Erhalte einen Stapel Skelettschädel",
 
-"Super Challenges": "Super-Challanges",
-"Good luck completing... any of these ;)": "Viel Glück beim erreichen einer dieser Errungenschaften ;)",
+"Super Challenges": "Super-Challenges",
+"Good luck completing... any of these ;)": "Viel Glück beim Erreichen... irgendeines dieser Erfolge ;)",
 
-"Stack All the Blocks!": "Stacke alle Blöcke",
-"Obtain a stack of all the blocks!": "Besitze einen Stack jedes Blocks im Spiel",
+"Stack All the Blocks!": "Staple alle Blöcke",
+"Obtain a stack of all the blocks!": "Besitze einen Stapel jedes Blocks im Spiel",
 
-"Stack All the Items!": "Stacke alle Items",
-"Obtain a stack of all the items!": "Besitze einen Stack jedes Items im Spiel",
+"Stack All the Items!": "Staple alle Items",
+"Obtain a stack of all the items!": "Besitze einen Stapel jedes Items im Spiel",
 
 "The World Is Ending": "Die Welt endet",
 "Summon ten withers at once": "Beschwöre zehn Wither gleichzeitig",
 
 "Warlock": "Warlock",
-"Obtain a stack of Beacons": "Erhalte einen Stack Leuchtfeuer",
+"Obtain a stack of Beacons": "Erhalte einen Stapel Leuchtfeuer",
 
 "We're in the endgame now": "Wir sind jetzt im Endgame",
 "Construct a village in the End and defend it from a raid": "Konstruiere ein Dorf im End und Beschütze es vor einem Plündererangriff",
 
 "Zombie Apocalypse": "Zombie Apokalypse",
-"Obtain a stack of Zombie Heads": "Erhalte einen Stack Zombieköpfe",
+"Obtain a stack of Zombie Heads": "Erhalte einen Stapel Zombieköpfe",
 
 
 
@@ -2337,7 +2337,7 @@
 "Pick up a bee's nest using silk touch": "Klaue einen Bienenstock mit einem Werkzeug, welches die Behutsamkeitsverzauberung hat",
 
 "Honey, I'm Home!": "Honey, Ich bin zu Hause!",
-"Craft a stack of honeycomb blocks for building a home out of": "Stelle einen Stack Honigwabenblöcke her um dein Haus daraus zu bauen",
+"Craft a stack of honeycomb blocks for building a home out of": "Stelle einen Stapel Honigwabenblöcke her um dein Haus daraus zu bauen",
 
 
 
@@ -2355,7 +2355,7 @@
 
 
 "Everybody Loves Ice!": "Jeder liebt Eis!",
-"Obtain a stack of every type of ice in your inventory": "Sammle einen Stack jeder Art von Eisblöcken und leg sie in dein Inventar",
+"Obtain a stack of every type of ice in your inventory": "Sammle einen Stapel jeder Art von Eisblöcken und leg sie in dein Inventar",
 
 
 
@@ -2482,7 +2482,7 @@
 "Place every type of cookable food on a campfire" : "Platziere jede Art von kochbarem Essen auf einem Lagerfeuer",
 
 "Oresome!" : "Oresome!",
-"Mine a stack of every ore block" : "Baue einen Stack von jedem Erzblock ab",
+"Mine a stack of every ore block" : "Baue einen Stapel von jedem Erzblock ab",
 
 
 
@@ -2497,7 +2497,7 @@
 "Light up the area with soul fire torches and soul fire lanterns!" : "Erleuchte die Gegend mit Seelenfackeln und Seelenlaternen!",
 
 "Let There Be Light!" : "Es werde Licht!",
-"Hold a stack of every light-emitting block and item" : "Besitze einen Stack von jedem leuchtenden Block und Item",
+"Hold a stack of every light-emitting block and item" : "Besitze einen Stapel von jedem leuchtenden Block und Item",
 
 "No Chain, No Gain" : "No Chain, No Gain",
 "Craft a chain using an iron ingot and iron nuggets" : "Stelle eine Kette mithilfe von Eisenbarren und Eisenklumpen her",
@@ -2521,7 +2521,7 @@
 "Compost every type of compostable item in a Composter" : "Kompostiere alle kompostierbaren Items in einem Komposter",
 
 "A Gluttonous Diet" : "Eine schlemmerhafte Diät",
-"Obtain a full stack of all the foods" : "Erhalte einen Stack von allen essbaren Items",
+"Obtain a full stack of all the foods" : "Erhalte einen Stapel von allen essbaren Items",
 
 
 
@@ -2536,13 +2536,13 @@
 "Eat Rabbit Stew, then avoid eating for the next 3 in-game days" : "Iss Kaninchenragout und dann in den nachfolgenden 3 Ingame-Tagen gar nichts",
 
 "Nest, Quick!" : "Nest, Quick!",
-"Collect a stack of empty bee nests" : "Sammle einen Stack voll leerer Bienennester",
+"Collect a stack of empty bee nests" : "Sammle einen Stapel voll leerer Bienennester",
 
 "Heavy Duty Caravan" : "Schwerlast-Karawane",
 "Tame a llama with a strength of 5" : "Zähme ein Lama der Stärke 5",
 
 "Save the Turtles!" : "Rettet die Schildkröten!",
-"Collect a stack of turtle eggs" : "Sammle einen stack voll Schildkröteneier",
+"Collect a stack of turtle eggs" : "Sammle einen Stapel voll Schildkröteneier",
 
 
 
@@ -2581,16 +2581,16 @@
 "Trade with a villager at height limit" : "Handle mit einem Villager auf der maximalen Bauhöhe",
 
 "Workaholic" : "Worcaholic",
-"Craft a stack of all the villager job site blocks" : "Stelle einen Stack von jedem Arbeitsplatzblock her, den Villager für sich beanspruchen können",
+"Craft a stack of all the villager job site blocks" : "Stelle einen Stapel von jedem Arbeitsplatzblock her, den Villager für sich beanspruchen können",
 
 "I am Loot!" : "Ich bin Loot",
-"Open up every type of loot chest" : "Öffne jede Art von Lootkisten",
+"Open up every type of loot chest" : "Öffne jede Art von Beutekisten",
 
 
 
 
 "Paleontologist" : "Paläontologe",
-"Craft or mine a stack of bone blocks" : "Sammle einen Stack voll Knochenblöcke oder stelle ihn her",
+"Craft or mine a stack of bone blocks" : "Sammle einen Stapel voll Knochenblöcke oder stelle ihn her",
 
 "Impossible..." : "Unmöglich...",
 "Kill an Enderman with an arrow" : "Töte einen Enderman mit einem Pfeil",
@@ -2710,7 +2710,7 @@
 "Explore every Nether biome" : "Erkunde alle Biome im Nether",
 
 "Hell Botanist" : "Höllen-Botaniker",
-"Gather a stack of every Nether plant" : "Sammle einen Stack von jeder Nether-Pflanze",
+"Gather a stack of every Nether plant" : "Sammle einen Stapel von jeder Nether-Pflanze",
 
 "Spreading Corruption" : "Sich ausbreitende Korruption",
 "Place one of every nether block in the overworld" : "Platziere jeden Block aus dem Nether in der Oberwelt",
@@ -2767,7 +2767,7 @@
 "Smite a ghast with lightning from the Overworld’s heavens" : "Schlage einen Ghast mithilfe eines Blitzes aus der Oberwelt",
 
 "Time to Fire Back" : "Zeit zurückzuschlagen",
-"Craft a stack of fire charges" : "Stelle einen Stack Feuerkugeln her",
+"Craft a stack of fire charges" : "Stelle einen Stapel Feuerkugeln her",
 
 "From Whence It Came!" : "Von woher es kam!",
 "Find a broken Nether Portal in the Nether" : "Finde eine Portalruine im Nether",
@@ -2836,7 +2836,7 @@
 "Create a Lodestone Compass in all three dimensions" : "Erschaffe einen Leitstein-Kompass in allen drei Dimensionen",
 
 "Archaeologist" : "Archäologe",
-"Mine a stack of Ancient Debris" : "Sammle einen Stack antiken Schutt",
+"Mine a stack of Ancient Debris" : "Sammle einen Stapel antiken Schutt",
 
 
 
@@ -3017,7 +3017,7 @@
 "Reel in a Strider using a Fishing Rod" : "Angle einen Schreiter mithilfe einer Angelrute",
 
 "Nether Rock Collection" : "Nather-Stein-Kollektion",
-"Mine a stack of Netherrack, Basalt, Blackstone and Glowstone in the Nether" : "Sammle jeweils einen Stack Netherrack, Basalt, Schwarzstein und Glowstone im Nether",
+"Mine a stack of Netherrack, Basalt, Blackstone and Glowstone in the Nether" : "Sammle jeweils einen Stapel Netherrack, Basalt, Schwarzstein und Glowstone im Nether",
 
 
 # Name and description changes in version 1.11
@@ -3513,10 +3513,10 @@
 "Craft some Cut Copper": "Stelle geschnittene Kupferblöcke her",
 
 "Copper Miner": "Kupfer-Bergmann",
-"Mine a stack of Raw Copper": "Sammle einen Stack voll Rohkupfer",
+"Mine a stack of Raw Copper": "Sammle einen Stapel voll Rohkupfer",
 
 "Master Copper Miner": "Meister-Kupferbergmann",
-"Mine enough copper to make a stack of Copper Blocks": "Sammle genügend Kupfer, um einen Stack voll Kupferblöcke herzustellen",
+"Mine enough copper to make a stack of Copper Blocks": "Sammle genügend Kupfer, um einen Stapel voll Kupferblöcke herzustellen",
 
 "Wax On": "Wachs an",
 "Use Honeycombs to wax a Copper Block, preventing it from oxidising": "Benutze Honigwaben, um einen Kupferblock zu wachsen und ihn so vor dem Oxidieren zu bewahren",
@@ -3528,7 +3528,7 @@
 "Obtain a fully oxidized Block of Copper": "Erhalte einen komplett oxidierten Kupferblock",
 
 "Sly Copper: The Copper Heist": "Sly Copper: The Copper Heist",
-"Collect a stack of every oxidizing stage of Copper Block, Cut Copper, Cut Copper Slabs and Stairs, and the waxed variants of them all": "Erhalte einen Stack voll von jedem Oxidationsschritt folgender Blöcke: Kupfer, geschnittenes Kupfer, geschnittene Kupferhalbstufen und -treppen und alle gewachsten Varianten",
+"Collect a stack of every oxidizing stage of Copper Block, Cut Copper, Cut Copper Slabs and Stairs, and the waxed variants of them all": "Erhalte einen Stapel voll von jedem Oxidationsschritt folgender Blöcke: Kupfer, geschnittenes Kupfer, geschnittene Kupferhalbstufen und -treppen und alle gewachsten Varianten",
 
 "G.I. Geode": "G.I. Geode",
 "Find an Amethyst Geode and mine an Amethyst Cluster": "Finde eine Amethystgeode und baue einen Amethysthaufen ab",
@@ -3546,10 +3546,10 @@
 "Craft Tinted Glass using Glass and Amethyst Shards and use it to block out light": "Stelle getöntes Glas mithilfe von Glas und Amethystscherben her und nutze es, um das Licht zu unterbrechen",
 
 "Amethyst Miner": "Amethyst-Bergmann",
-"Mine a stack of Amethyst Blocks, Amethyst Clusters, and every size of Amethyst Bud": "Sammle einen Stack voll Amethystblöcke, Amethysthaufen und jeder Größe von Amethystknospen",
+"Mine a stack of Amethyst Blocks, Amethyst Clusters, and every size of Amethyst Bud": "Sammle einen Stapel voll Amethystblöcke, Amethysthaufen und jeder Größe von Amethystknospen",
 
 "Mr. Bean": "Mr. Bean",
-"Mine and craft a stack of Raw Iron, Copper and Gold Blocks": "Sammle und stelle einen Stack voller Roheisenblöcke, Rohkupferblöcke und Rohgoldblöcke her",
+"Mine and craft a stack of Raw Iron, Copper and Gold Blocks": "Sammle und stelle einen Stapel voller Roheisenblöcke, Rohkupferblöcke und Rohgoldblöcke her",
 
 "Filthy Lich": "StinkLeich",
 "Use shears to obtain Glow Lichen from an underground cave": "Benutze eine Schere, um eine Leuchtflechte aus einer unterirdischen Höhle zu erhalten",
@@ -3573,7 +3573,7 @@
 "Obtain a Spore Blossom": "Erhalte eine Sporenblüte",
 
 "Lush Hour": "Lush Hour",
-"Obtain a stack of all lush-related blocks": "Erhalte einen Stack voll von allen Blöcken, die mit den Üppigen Höhlen zu tun haben",
+"Obtain a stack of all lush-related blocks": "Erhalte einen Stapel voll von allen Blöcken, die mit den Üppigen Höhlen zu tun haben",
 
 "A Shiny Treat": "Ein glänzender Leckerbissen",
 "Eat some Glow Berries": "Iss Leuchtbeeren",
@@ -3594,13 +3594,13 @@
 "Place a candle and light it using Flint and Steel": "Platziere eine Kerze und zünde sie mithilfe von einem Feuerzeug an",
 
 "The Ritual Begins": "Das Ritual kann beginnen",
-"Get one stack of Black Candles": "Sammle einen Stack voller schwarzer Kerzen",
+"Get one stack of Black Candles": "Sammle einen Stapel voller schwarzer Kerzen",
 
 # Happy Birthday!
 "Place a candle on a cake": "Platziere eine Kerze auf einem Kuchen",
 
 "Pane in the Glass": "Pane in the Glass",
-"Craft a stack of all 16 colors of stained glass panes": "Stelle einen Stack von jeder Variante gefärbter Glasscheiben her",
+"Craft a stack of all 16 colors of stained glass panes": "Stelle einen Stapel von jeder Variante gefärbter Glasscheiben her",
 
 "Hot Tub": "Whirlpool",
 "Sit in a cauldron filled with lava": "Setz dich in einen Kessel, der mit Lava gefüllt ist",
@@ -3826,7 +3826,7 @@
 "Acquire every beacon-induced effect at once": "Erlange jeden Effekt gleichzeitig, den man auch durch ein Leuchtfeuer erhalten kann",
 
 "Master Netherite Miner": "Meister-Netheritbergmann",
-"Mine enough Ancient Debris to make a stack of Netherite Ingots (don’t worry, mining a stack of Netherite Blocks is optional in this datapack, I’m not that evil…)": "Sammle genügend antiken Schutt, um damit einen Stack voller Netheritbarren herstellen zu können (mach dir keine Sorgen, einen ganzen Stack voll Netheritblöcke zu sammeln, ist in diesem Datenpaket optional, so böse bin ich dann auch wieder nicht...)",
+"Mine enough Ancient Debris to make a stack of Netherite Ingots (don’t worry, mining a stack of Netherite Blocks is optional in this datapack, I’m not that evil…)": "Sammle genügend antiken Schutt, um damit einen Stapel voller Netheritbarren herstellen zu können (mach dir keine Sorgen, einen ganzen Stack voll Netheritblöcke zu sammeln, ist in diesem Datenpaket optional, so böse bin ich dann auch wieder nicht...)",
 
 "Netherite Mad Lad": "Netherit-Irrer",
 "Be an absolute madlad and grind enough Ancient Debris to make a stack of Netherite Blocks (this is hidden and not required for Advancement Legend btw…)": "Sei irre genug und sammle so viel antiken Schutt, dass du damit einen ganzen Stack voll Netheritblöcke herstellen kannst (dieser Erfolg ist übrigens versteckt und wird für den Advancement Legend-Erfolg nicht benötigt...)",
@@ -3868,13 +3868,13 @@
 "Stepping on Legos": "Auf Legosteine treten",
 "Walk on some hot Magma Blocks in the Nether": "Laufe über heiße Magmablöcke im Nether",
 
-"Mine a stack of Raw Iron": "Sammle einen Stack voll Roheisen",
+"Mine a stack of Raw Iron": "Sammle einen Stapel voll Roheisen",
 
-"Mine a stack of Raw Gold": "Sammle einen Stack voll Rohgold",
+"Mine a stack of Raw Gold": "Sammle einen Stapel voll Rohgold",
 
 "Craft and ride a boat to sail on the high seas": "Stelle ein Boot her und segle damit auf hoher See",
 
-"Mine a stack of Netherrack, Basalt, Blackstone and Magma in the Nether": "Sammle einen Stack voll Netherrack, Basalt, Schwarzstein und Magmablöcke im Nether",
+"Mine a stack of Netherrack, Basalt, Blackstone and Magma in the Nether": "Sammle einen Stapel voll Netherrack, Basalt, Schwarzstein und Magmablöcke im Nether",
 
 "Use a shovel to create dirt paths": "Benutze eine Schaufel, um Trampelpfade zu erschaffen",
 
@@ -4141,11 +4141,11 @@
 
 
 "A Good Start": "Ein Guter Start",
-"Chop down enough trees to collect a full stack of one log type": "Fälle genügend Bäume für einen kompletten Stack Holzstämme einer Holzart",
+"Chop down enough trees to collect a full stack of one log type": "Fälle genügend Bäume für einen kompletten Stapel Holzstämme einer Holzart",
 
 
 "Squid Game": "Squid Game",
-"Hunt enough Squids to collect a stack of Ink Sacs": "Jage genügend Tintenfische für einen kompletten Stack Tintenfischbeutel",
+"Hunt enough Squids to collect a stack of Ink Sacs": "Jage genügend Tintenfische für einen kompletten Stapel Tintenfischbeutel",
 
 
 "Blackberry Market": "Schwarz(beeren)markt",
@@ -4184,7 +4184,7 @@
 
 
 "Baron of Blacksmiths": "Baron der Schmiede",
-"Get a stack of regular, chipped and damaged Anvils": "Sammle jeweils einen kompletten Stack normale, angeschlagene und beschädigte Ambosse",
+"Get a stack of regular, chipped and damaged Anvils": "Sammle jeweils einen kompletten Stapel normale, angeschlagene und beschädigte Ambosse",
 
 
 "65": "65",
@@ -4196,7 +4196,7 @@
 "Take a Strider for a loooong ride on a lava lake in the Overworld": "Reite einen Schreiter für eine laaaange Zeit auf einem Lavasee in der Oberwelt",
 
 "Gilded Miner": "Vergoldeter Bergmann",
-"Mine a stack of Gilded Blackstone from Bastion Remnants": "Sammle einen Stack voll golddurchzogenen Schwarzstein aus einer Bastionsruine",
+"Mine a stack of Gilded Blackstone from Bastion Remnants": "Sammle einen Stapel voll golddurchzogenen Schwarzstein aus einer Bastionsruine",
 
 "Astrobrute": "Astro-Barbar",
 "Send a Piglin Brute to the End and kill it there before it zombifies": "Schicke einen Piglin-Barbar ins Ende unt töte ihn dort, bevor er zombifiziert wird",
@@ -4442,8 +4442,8 @@
 # The syntax for these text strings is e.g. 'Task Advancements: All players'
 "Task": "Aufgabe",
 "Goal": "Ziel",
-"Challenge": "Challenge",
-"Super Challenges": "Super Challenge",
+"Challenge": "Herausforderung",
+"Super Challenges": "Superherausforderung",
 "Milestone": "Meilenstein",
 
 "Advancements:": "Erfolge",
@@ -4668,7 +4668,7 @@
 "Kill every hostile monster near a Sculk Catalyst": "Töte jede feindliche Kreatur in der Nähe eines Sculk-Katalysators",
 
 "The Incredible Sculk": "Der Unglaubliche Sculk",
-"Collect a stack of all sculk-related blocks": "Sammle einen kompletten Stack von allen Blöcken, die mit Sculk zu tun haben",
+"Collect a stack of all sculk-related blocks": "Sammle einen kompletten Stapel von allen Blöcken, die mit Sculk zu tun haben",
 
 "Sculker Box": "Sculker-Kiste",
 "Hold a Shulker Box that is completely filled with Sculk": "Halte eine Shulkerkiste in der Hand, die komplett mit Sculk gefüllt ist",
@@ -4686,7 +4686,7 @@
 "Collect enough Disc Fragments to craft another producer of mysterious sounds": "Sammle genügend Plattenbruchstücke, um einen weiteren Produzenten von mysteriösen Geräuschen herzustellen",
 
 "Echonomy": "Echonomy",
-"Collect a stack of Echo Shards": "Sammle einen Stack voll Echoscherben",
+"Collect a stack of Echo Shards": "Sammle einen Stapel voll Echoscherben",
 
 "Blind as a Bat": "Blind wie eine Fledermaus",
 "Kill a Bat while under the blindness or darkness effect": "Töte eine Fledermaus, während du den Blindheit- oder Dunkelheit-Effekt hast",
@@ -4884,10 +4884,458 @@
 "It's my fence post! Seriously, get out!": "Das ist mein Zaunpfahl! Ernsthaft, raus hier!",
 
 "Stone of the Farlands": "Stein der Farlands",
-"A preserved piece of stone from the lands that existed before Beta 1.8": "Ein konserviertes Stück Stein der Länder, die vor der Beta 1.8 existierten"
+"A preserved piece of stone from the lands that existed before Beta 1.8": "Ein konserviertes Stück Stein der Länder, die vor der Beta 1.8 existierten",
 
 
 
 
-# All advancements and trophies that get added in versions 1.15 or later will be added down here for easy locating by translators who wish to update their language file
+## All advancements added in version 1.15 are here
+"Nerds Never Die": "Nerds Sterben Nie",
+"Name a Piglin Brute 'Technoblade'": "Nenne einen Piglin-Barbar 'Technoblade'",
+
+"And make it double!": "Und verdopple es!",
+"Play a jukebox near some Allays, then give one an Amethyst Shard and see what happens!": "Lass einen Plattenspieler in der Nähe von Hilfsgeistern erklingen, dann gib einem von ihnen eine Amethystscherbe und schaue, was passiert!",
+
+"Living Dummy": "Lebendige Attrappe",
+"Get killed from hitting an Armor Stand": "Werde getötet, indem du einen Rüstungsständer schlägst",
+
+# Used in hardcore version
+"Get hurt from hitting an Armor Stand": "Nimm Schaden, indem du einen Rüstungsständer schlägst",
+
+"Built on Sand, Set in Stone": "Gebaut auf Sand, Gemeißelt in Stein",
+"Craft or collect a stack of all forms of Sandstone and Red Sandstone": "Sammle oder stelle einen Stapel von allen Varianten von Sandstein und Rotem Sandstein her",
+
+"Hot Chocolate": "Heiße Schokolade",
+"Plant some cocoa in the nice steamy Nether": "Pflanze eine Kakaobohne im schönen, dampfigen Nether",
+
+"Silence of the Lambs": "Schweigen der Lämmer",
+"Bring a Sheep into an Ancient City and silence it": "Befördere ein Schaf in eine Antike Stadt und bringe es zum Schweigen",
+
+"It's High Noon": "Es ist Mittag",
+"Snipe a Husk from 50 blocks away while riding a Horse": "Erschieße einen Wüstenzombie aus 50 Blöcken Entfernung während du auf einem Pferd reitest",
+
+"Spleaf": "Spleaf",
+"Kill a mob using a shovel while both of you are standing on a Big Dripleaf": "Töte ein Monster mit einer Schaufel, während ihr beide euch auf einem Großen Tropfblatt befindet",
+
+"There it goes…": "Weg ist es…",
+"Kill a mob at the bottom of the world from the build limit using any kind of projectile": "Töte ein Monster am unteren Ende der Welt von der maximalen Bauhöhe aus mit einem Projektil",
+
+"Unending Hell": "Endlose Hölle",
+"Travel directly from the End to the Nether": "Reise vom Ende aus direkt in den Nether",
+
+
+# Missing from previous versions
+"Undying Fandom": "Unsterbliche Fangemeinde",
+"Receive every type of gift from Villagers as a Hero of the Village": "Erhalte jede Geschenk-Art von Dorfbewohnern als ein Held des Dorfes",
+
+"Dig through some Rooted Dirt beneath an Azalea Tree so you can find a Lush Cave": "Grabe dich durch Wurzelerde unter einem Azaleenbaum, um die Üppigen Höhlen zu finden",
+
+
+# Added to Terralith version
+"Totally Not Terraria": "Auf gar keinen Fall Terraria",
+"Find an Underground Cabin": "Finde eine Underground Cabin",
+
+
+# Trophies added in 1.15
+"Crown of the Potato King": "Krone des Kartoffelkönigs",
+"A crown forged in the purest gold, made by the richest of Piglins": "Eine Krone, geschmiedet in reinstem Gold, erschaffen vom reichsten Piglin",
+"Worn only by Alex (aka Technoblade), the one and only Potato King": "Einzig getragen von Alex (aka Technoblade), dem einzig wahren Kartoffelkönig",
+
+"Tinfoil Mining Helmet": "Bergbau-Helm aus Alufolie",
+"Baked by a chef and hermit known for": "Gebacken von einem Koch und Einsiedler, bekannt für",
+"extensive and exquisite branch mining": "umfangreichen und exquisiten Zweig-Bergbau",
+
+"Calendar": "Kalender",
+"I hate Mondays": "Ich hasse Montage",
+
+# Farlander trophy description fix
+"A preserved piece of stone from": "Ein konserviertes Stück Stein aus",
+"the lands that existed before Beta 1.8": "den Landen, welche vor der Beta 1.8 existierten",
+
+
+# Miscellaneous strings from compatibility versions
+"Advancement added by Terralith version": "Von Terralith hinzugefügter Erfolg",
+
+"Modified by the Amplified Nether version": "Modifiziert von der Amplified Nether-Version",
+
+
+# Configuration menu additions in 1.15 (including the Help Menu)
+"Click to follow link": "Klicke, um dem Link zu folgen",
+
+"The Welcome Message appears when a player logs into the world for the first time. On servers that already have a custom welcome message, this should be turned off": "Die Willkommensnachricht erscheint, sobald ein Spieler zum ersten Mal die Welt betritt. Auf Servern mit eigener Willkommensnachricht sollte dies deaktiviert werden.",
+
+"Item Rewards are a small amount of bonus items awarded upon completing some advancements": "Gegenstandbelohnungen sind eine kleine Menge Extragegenstände, welche beim Meistern von einigen Erfolgen verliehen werden.",
+"Experience Rewards are awarded upon completing some advancements, adding directly to a player's XP count": "Erfahrungsbelohnungen werden beim Meistern von einigen Erfolgen direkt der Erfahrungsleiste des Spielers gutgeschrieben",
+"Trophies are decorative items awarded upon completing some advancements, in particular challenges, super challenges and milestones": "Trophäen sind dekorative Gegenstände, welche beim Meistern einiger Erfolge verliehen werden; besonders bei Herausforderungen, Superherausforderungen und Meilensteinen",
+
+"Cooperative Mode shares every advancement gained among every player": "Der Koop-Modus verleiht jedem Spieler jeden gemeisterten Erfolg",
+"Team Cooperative Mode works similarly, but only shares among players of the same team": "Der Team Koop-Modus funktioniert ähnlich, verleiht die Erfolge jedoch nur den Teammitgliedern desselben Teams",
+
+"Settings for what messages that appear upon completing each tier of advancement should appear": "Einstellungen dafür, welche der Nachrichten erscheinen soll, die beim Meistern der verschiedenen Erfolgs-Ebenen erscheinen",
+"Settings for what type of scoreboard to display and where": "Einstellungen dafür, welches Scoreboard wo angezeigt werden soll",
+"Functions for updating, resetting and revoking advancements": "Funktionen für das Aktualisieren, Zurücksetzen und Widerrufen von Erfolgen",
+"Need help understanding how the datapack, this config menu, or anything else works?": "Brauchst du Hilfe dabei zu verstehen, wie das Datenpaket, dieses Einstellungsmenü oder irgendetwas Anderes funktioniert?",
+
+"Help": "Hilfe",
+
+# Help Menu
+"Help Menu": "Hilfe-Menü",
+
+"Full documentation on how to use the Config Menu": "Vollständige Dokumentation über die Benutzung des Einstellungsmenüs",
+"How to update to new datapack versions": "Wie man das Datenpaket auf neuere Versionen aktualisiert",
+"How to add players to teams": "Wie man Spieler zu Teams hinzufügt",
+"Important Links": "Wichtige Links",
+"Troubleshooting": "Fehlerbehebung",
+"Frequently Asked Questions": "Häufig gestellte Fragen",
+
+# # How to update to new datapack versions
+"1) Make a backup of your world for safety if you mess anything up": "Erstelle eine Sicherung deiner Welt für den Fall, dass etwas schiefgeht",
+"2) Leave your world for more safety and don't go in during the process": "Verlasse deine Welt für mehr Sicherheit und betritt sie während des Prozesses nicht",
+"3) Delete the old datapacks COMPLETELY from your world": "Lösche die alten Datenpakete VOLLSTÄNDIG von deiner Welt",
+"4) Copy and paste in the new updated datapacks": "Kopiere die neuen, aktualisierten Datenpakete und füge sie ein",
+"5) Go into your world. If the new datapacks are for a newer version of Minecraft make sure you are now using that version": "Betritt deine Welt. Falls die neuen Datenpakete für eine neuere Version von Minecraft gedacht sind, stelle sicher, dass du diese Version nutzt",
+"6) If you messed up, go to your backup, make a backup of your backup, then repeat steps 2-6 on the backup": "Wenn du einen Fehler gemacht hast, dann suche deine Sicherung, erstelle eine Sicherung der Sicherung und wiederhole die Schritte 2-6 mit der Sicherung",
+
+# # How to add players to teams
+"This datapack adds 16 teams, one of each colour, that this datapack can work with.": "Dieses Datenpaket fügt 16 Teams hinzu, eines für jede Farbe, mit denen das Datenpaket arbeiten kann.",
+"For Team Cooperative Mode and team-based scoreboards to work properly, players MUST be added to these teams using the following command:": "Für den Team Koop-Modus und andere Scoreboards, welche auf Teams basieren, MÜSSEN Spieler mit dem folgenden Befehl zu den Teams hinzugefügt werden:",
+# Command is not translatable
+"You may freely change the team's display name, prefix and suffix using their respective commands as well": "Du kannst auch jederzeit den Anzeigenamen, das Präfix und das Suffix der Teams mit den jeweiligen Befehlen ändern",
+
+# # Important Links
+"Language Pack": "Sprachenpaket",
+"The Language Pack is a resource pack that translates all advancements and trophies into other languages.": "Das Sprachenpaket ist ein Ressourcenpaket, welches alle Erfolge und Trophäen in andere Sprachen übersetzt.",
+
+"Hardcore Version": "Hardcore-Version",
+"The Hardcore Version is an add-on datapack that makes the datapack possible to complete in Hardcore Mode.": "Die Hardcore-Version ist ein zusätzliches Datenpaket, welches es ermöglicht, das Datenpaket im Hardcoremodus zu meistern.",
+
+"Terralith Version": "Terralith-Version",
+"The Terralith Version is an add-on datapack that adds advancements for the Terralith datapack by Starmute.": "Die Terralith-Version ist ein zusätzliches Datenpaket, das Erfolge für das Terralith-Datenpaket von Starmute hinzufügt.",
+
+"Advancements Docmentation": "Dokumentation der Erfolge",
+"The Advancements Docmentation is a spreadsheet detailing every advancement in the datapack.": "Die Dokumentation der Erfolge ist eine Tabelle, die alle Erfolge im Datenpaket näher erklärt.",
+
+"List of Trophies": "Liste der Trophäen",
+"A spreadsheet detailing every trophy in the datapack.": "Eine Tabelle, die alle Trophäen im Datenpaket näher erklärt.",
+
+"Discord": "Discord",
+
+"Patreon": "Patreon",
+
+# # Troubleshooting
+"If certain aspects of this datapack are not working properly (e.g. Advancements are granted automatically when they shouldn't), make sure you are using the correct version of the datapack for the Minecraft version you are running.": "Wenn bestimmte Aspekte des Datenpakets nicht funktionieren (z. B. wenn Erfolge verliehen werden, wenn dies nicht geschehen soll), dan stelle sicher, dass du die richtige Datenpaket-Version für die Minecraft-Version installiert hast, die du nutzt.",
+"In addition, some advancements may break on Spigot or Paper servers.": "Außerdem können manche Erfolge auf Spigot- und Paper-Servern fehlerhaft sein",
+
+# # FAQ Menu
+"Why aren't all tabs visible at the start?": "Wieso sind nicht alle Tabs von Beginn an sichtbar?",
+"How do I install the Language Pack?": "Wie kann ich das Sprachenpaket installieren?",
+"How can I translate the advancements into a new language?": "Wie kann ich die Erfolge in eine neue Sprache übersetzen?",
+"What is the name of the mod that lets you see progress on advancements?": "Wie lautet der Name der Mod, mit der sich der Fortschritt der Erfolge einsehen lässt?",
+
+# # # Why aren't all tabs visible at the start?
+"A tab will not show up if you haven't gained any advancements in that tab yet.": "Ein Tab erscheint nicht, wenn du bis jetzt noch keinen Erfolg in diesem Tab gemeistert hast.",
+"Most root advancements are easy to obtain, but some are further along in progression.": "Einige Start-Erfolge sind einfach zu erhalten, Andere wiederum befinden sich weiter im Fortschritt.",
+"Notably, the Super Challenges tab is not unlocked until after defeating the Ender Dragon.": "Vor allem der Superherausforderungs-Tab wird erst nach dem Besiegen des Enderdrachens freigeschaltet.",
+
+# # # How do I install the Language Pack?
+"The Language Pack is NOT a datapack and is not installed in the same way.": "Das Sprachenpaket ist KEIN Datenpaket und wird nicht auf dieselbe Weise installiert.",
+"Instead, it is a resource pack, and it is installed just like any other resource pack.": "Stattdessen handelt es sich um ein Ressourcenpaket und wie gleich installiert wie andere Ressourcenpakete.",
+"Place it into your resourcepacks folder, then select it in the resource pack menu.": "Platziere es in deinem Ressourcenpaket-Ordner und wähle es dann im Ressourcenpaket-Menü aus.",
+"Once you do this, the custom advancements will appear in whatever language you have selected if this language is supported.": "Wenn du dies getan hast, werden die Erfolge in der Sprache angezeigt, die du ausgewählt hast, solange diese im Sprachenpaket verfügbar ist.",
+
+# # # How can I translate the advancements into a new language?
+"Download the Language Pack, unzip it, then locate the file named base_language_file.json": "Lade das Sprachenpaket herunter, entpacke es und suche die Datei namens base_language_file.json",
+"Follow the instructions within in order to translate your language.": "Folge den darin enthaltenen Anweisungen, um die Erfolge in deine Sprache zu übersetzen.",
+"If you finish translating a new language, you can send it to the creator (Cavinator1) on Planet Minecraft or Discord and it may get added in a future update!": "Wenn du fertig mit dem Übersetzen in eine neue Sprache bist, kannst du die Datei dem Entwickler (Cavinator1) auf Planet Minecraft oder Discord senden und eventuell wird die Sprache in einem zukünftigen Update hinzugefügt!",
+"You will be credited for your contributions to translation.": "Für deinen Beitrag in Form der Übersetzung wirst du zu den Credits hinzugefügt.",
+
+# # # What is the name of the mod that lets you see progress on advancements?
+"The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "Die gefragte Mod heißt Advancement Info und zeigt die erfüllten Anforderungen von jedem Erfolg an.",
+"It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "Dies ist sehr hilfreich, vor allem für Superherausforderungen mit vielen Anforderungen wie 'All die Blöcke'.",
+"It can be downloaded here:": "Hier kann sie heruntergeladen werden:",
+# Link is not translatable
+
+
+
+
+## All advancements added in version 1.16 are here
+"Hanging Around": "Herumhängen",
+"Put up a Hanging Sign": "Stelle ein Hängeschild auf",
+
+"Sign Off": "Sign Off",
+"Use honeycomb to wax a sign, setting its ink for eternity": "Benutze Honigwaben, um ein Schild zu wachsen und die Tinte für die Ewigkeit festzuhalten",
+
+"Shelf Expression": "Ist Das Regal?",
+"Fill a Chiseled Bookshelf with books": "Fülle ein Gearbeitetes Bücherregal mit Büchern",
+
+"Bamboozled": "Bamboozled",
+"Craft every item made out of bamboo wood": "Stelle jeden Gegenstand aus Bambusholz her",
+
+"Cherry Bomb": "Kirschbombe",
+"Craft every item made out of cherry wood": "Stelle jeden Gegenstand aus Kirschholz her",
+
+
+"Desert Rider": "Wüstenfahrer",
+"Find a Camel in a desert village and ride it": "Finde ein Kamel in einem Wüstendorf und reite auf ihm",
+
+"Hump Day": "Buckliger Tag",
+"Breed two Camels using cactus": "Züchte zwei Kamele mit Kakteen",
+
+"The High Road": "Auf Nummer Sicher Gehen",
+"Kill a hostile monster with a melee attack while riding a Camel": "Töte ein feindliches Monster mit einer Nahkampfattacke, während du auf einem Kamel reitest",
+
+
+"Pretty in Pink": "Hübsch in Pink",
+"Find a Cherry Grove": "Finde einen Kirschberghain",
+
+
+"Brushed Away": "Weggepinselt",
+"Craft a Brush using a feather, copper and a stick": "Stelle mithilfe einer Feder, Kupfer und einem Stock einen Pinsel her",
+
+"Respecting the Remnants": "Respektieren der Überreste",
+"Using a Brush, carefully excavate a Pottery Sherd from a suspicious block": "Grabe mithilfe eines Pinsels vorsichtig eine Töpferscherbe aus einem Seltsamen Block aus",
+
+"Careful Restoration": "Vorsichtige Wiederherstellung",
+"Put together a Decorated Pot using four Pottery Sherds": "Setze einen Verzierten Krug aus vier Töpferscherben zusammen",
+
+"Pottery Exhibition": "Keramik-Ausstellung",
+"Find one of each type of Pottery Sherd throughout your archaeology expeditions": "Finde alle verschiedenen Töpferscherben während deiner Archäologie-Expeditionen",
+
+"Life… uhh… finds a way": "Das Leben… ähm… findet einen Weg",
+"Find a strange egg among the sand of an Ocean Ruin using a Brush. Smells interesting": "Finde ein seltsames Ei mithilfe eines Pinsels im Sand einer Ozeanruine. Riecht interessant.",
+
+"Truffle Worm": "Trüffelwurm",
+"Have a Sniffer dig up seeds": "Lass einen Schnüffler Samen ausgraben",
+
+"Jurassic Sniff": "Jura-Riecher",
+"Breed two Sniffers together using Torchflower Seeds": "Züchte zwei Schnüffler mithilfe von Fackelliliensamen",
+
+"Little Sniffs": "Kleiner Schnupperer",
+"Feed a Snifflet": "Füttere ein Schnüfflerjunges",
+
+"Planting the Past": "Anpflanzen der Vergangenheit",
+"Plant any Sniffer Seed": "Pflanze einen Schnüffler-Samen",
+
+"Happy Trails!": "Fröhliche Pfade!",
+"Discover the Trail Ruins": "Entdecke die Trail Ruins",
+
+"Raiders of the Lost Trim": "Räuber des Verlorenen Schnitts",
+"Carefully excavate a Smithing Template from the Trail Ruins": "Grabe vorsichtig eine Schmiedevorlage aus den Trail Ruins aus",
+
+"A Chiptune Relic": "Ein Chiptune-Relikt",
+"Excavate an ancient record from within the Trail Ruins": "Grabe eine antike Aufzeichnung aus den Trail Ruins aus",
+
+"Good-Lookin’ Treasure": "Gutaussehender Schatz",
+"Find a Smithing Template": "Finde eine Schmiedevorlage",
+
+"Crafting a New Look": "Herstellung eines Neuen Looks",
+"Use a Smithing Template to apply a trim to a piece of armor": "Nutze eine Schmiedevorlage",
+
+"Mold Maker": "Gussform-Hersteller",
+"Use seven diamonds to duplicate a Smithing Template": "Nutze sieben Diamanten, um eine Schmiedevorlage zu duplizieren",
+
+"Coordinated Flair": "Koordinierter Stil",
+"Wear a suit of armor with all four pieces trimmed with the same material": "Trage einen Satz aus allen vier Rüstungsteilen, welche mit demselben Material getrimmt wurden",
+
+"Chromatic Armory": "Verchromte Rüstung",
+"Trim pieces of armor with all types of materials": "Trimme Rüstungsteile mit allen möglichen Materialien",
+
+"Genesis of the End": "Entstehung des Endes",
+"Find the Eye Smithing Template in a Stronghold": "Finde den Augen-Rüstungsbesatz in einer Festung",
+
+"Vexingly Hard to Find": "Vervext Schwer zu Finden",
+"Find the Vex Smithing Template in a Woodland Mansion": "Finde den Plagegeist-Rüstungsbesatz in einem Waldanwesen",
+
+"The Sound of Silence": "Der Klang der Stille",
+"Find the Silence Smithing Template in an Ancient City": "Finde den Stille-Rüstungsbesatz in einer Antiken Stadt",
+
+"Smithing With Style": "Schmieden Mit Stil",
+"Apply every type of armor trim at least once": "Nutze jede Art von Rüstungsbesatz mindestens einmal",
+
+"Stacked Smither": "Gestapelter Schmied",
+"Obtain a stack of every Smithing Template": "Erhalte einen Stapel von jeder Schmiedevorlage",
+
+
+"Maximum Resistance": "Maximale Resistenz",
+"Take a hit from the Warden with the maximum possible protection": "Stecke den Schlag eines Wärters mit dem bestmöglichen Schutz ein",
+
+
+"The Power of Books": "Die Kraft der Bücher",
+"Read the power signal of a Chiseled Bookshelf using a comparator": "Lies die Signalstärke eines Gearbeiteten Bücherregals mit einem Redstone-Komparator ab",
+
+"Calibration Sensation": "Kalibrierungs-Sensation",
+"Craft a Calibrated Sculk Sensor using Amethyst Shards": "Stelle einen Kalibrierten Sculk-Sensor mithilfe von Amethystscherben her",
+
+"Monstrous Music": "Monströse Musik",
+"Play Note Blocks with each type of mob head above it": "Lass jeweils einen Notenblock mit allen möglichen Monster-Köpfen darauf erklingen",
+
+
+"Om Nom Nom": "Om Nom Nom",
+"Eat 200 food items": "Iss 200 Nahrungsgegenstände",
+
+"Yum Yum Yummo": "Yum Yum Yummo",
+"Eat 1000 food items": "Iss 1000 Nahrungsgegenstände",
+
+"Food, Glorious Food!": "Essen, Herrliches Essen!",
+"Eat 5000 food items": "Iss 5000 Nahrungsgegenstände",
+
+"Loot ‘Em!": "Loote sie!",
+"Open 10 loot chests": "Öffne 10 Beutekisten",
+
+"More For Me": "Mehr Für Mich",
+"Open 100 loot chests": "Öffne 100 Beutekisten",
+
+"I <3 Chests": "Ich <3 Truhen",
+"Open 500 loot chests": "Öffne 500 Beutekisten",
+
+"Giga XP Grinder": "Giga XP-Grinder",
+"Reach 1000 experience levels": "Erreiche 1000 Erfahrungslevel",
+
+
+"Time to Upgrade!": "Zeit zum Aufrüsten!",
+"Find a Netherite Upgrade Smithing Template in a Bastion Remnant": "Finde eine Netheritaufwertungs-Schmiedevorlage in einer Bastionsruine",
+
+"Piglin Peril": "Piglin-Gefahr",
+"Obtain a Piglin Head by blowing up a Piglin with a Charged Creeper": "Erhalte einen Piglin-Kopf, indem du einen Piglin mit einem geladenen Creeper in die Luft sprengst",
+
+
+"Poglin!": "Poglin!",
+"Obtain a stack of Piglin Heads": "Erhalte einen Stapel Piglin-Köpfe",
+
+
+"You are a big cheater!": "Du bist ein übler Cheater!",
+"You don't want to have this advancement unlocked!": "Diesen Erfolg möchtest du nicht freischalten!",
+
+
+# Description additions and changes in 1.16
+
+## This is used to list blocks and items that are not required for certain advancements
+"The following are not required:": "Folgendes wird nicht benötigt",
+
+## New description for 'Stripper'
+"Strip the bark off every type of log, stem, and bamboo block": "Streife die Rinde von jedem Stamm, Stängel und Bambusblock",
+
+## New description for 'Master Logger'
+"Cut down a full stack of logs and stems of all types": "Fälle einen kompletten Stapel Stämme und Stengel jeder Art",
+
+## New descriptions for Mining, Monsters and Adventure tab root advancements
+"Dig deep down, mine up ore": "Grabe dich tief hinab, baue Erz ab",
+
+"Battle against the monsters of darkness": "Kämpfe gegen die Monster der Dunkelheit",
+
+"Village, pillage and exploration": "Dörfer, Überfälle und Erkundung",
+
+
+# Trophies added in 1.16
+"Ch-ch-ch-ch-ch-ch-Cherry bomb!": "K-k-k-k-k-k-Kirschbombe!",
+"“I wanna explode,” says Cherry #1": "“Ich möchte explodieren”, sagt Kirsche #1",
+"“No, let's detonate instead!” says his brother, Cherry #2": "“Nein, lass uns lieber detonieren!”, sagt sein Bruder, Kirsche #2",
+"After intense consultation they agree to EXPLODONATE": "Nach eingehender Beratung werden sie sich einig zu EXPLODETONIEREN",
+
+"Nokia 3310": "Nokia 3310",
+"Awarded to players who prove themselves as unbreakable as this object": "Wird Spielern verliehen, die sich selbst als unzerstörbar wie dieses Objekt beweisen",
+
+"Body Pillow": "Körperkissen",
+"Large fandoms result in questionable merchandise such as": "Große Fangemeinden haben zur Folge, dass fragwürdiges Merchandise, wie z. B.",
+"body pillows featuring your own likeness being produced": "Körperkissen mit der Darstellung deines eigenen Abbildes, produziert wird",
+
+"Golden Idol": "Goldenes Idol",
+"Stealing this may result in a giant boulder rolling after you": "Dies zu klauen könnte dazu führen, dass ein riesiger Felsblock auf dich zurollt",
+
+"Tron Suit": "Tron-Anzug",
+"The Grid. A digital frontier": "Das Raster. Eine digitale Grenze",
+"I tried to picture clusters of information": "Ich versuchte, Informationsbünel darzustellen,",
+"as they moved through the computer": "während sie sich durch den computer bewegt haben",
+"What did they look like? Ships? Motorcycles?": "Wie haben sie ausgesehen? Schiffe? Motorräder?",
+"Were the circuits like freeways?": "Waren die Schaltkreise wie Autobahnen?",
+"I kept dreaming of a world I thought I'd never see": "Ich träumte weiterhin von einer Welt, von der ich glaubte sie niemals zu sehen",
+"And then, one day... I got in": "Und dann, eines Tages... bin ich reingekommen",
+
+"The Midnight - Monsters": "The Midnight - Monsters",
+"I was wrong, love's a con": "Ich lag falsch, Liebe ist Betrug",
+
+"Fart in a Jar": "Furz im Glas",
+"May annoy others": "Könnte Andere verärgern",
+
+"Mammoth Steak": "Mammutsteak",
+"Just picture a mammoth steak, fried, roasted or stewed!": "Stell dir einfach ein Mammutsteak vor; gebraten, geröstet oder gedünstet",
+
+"Mimic": "Nachahmerisch",
+"You didn't think you could open that many chests": "Du hast nicht etwa gedacht, dass du so viele Truhen öffnen kannst",
+"and not come across one of these?": "und nicht auf so etwas triffst?",
+
+"Poglin": "Poglin",
+"So when I MLG water-bucket... Poglin!": "Also wenn ich mit dem Wassereimer ein MLG mache... Poglin!",
+
+
+# New welcome message strings
+"Welcome!": "Willkommen!",
+
+"If you enjoy, your presence on my": "Wenn du es genießt, wäre deine Anwesenheit auf meinem",
+# Discord
+"would be welcome!": "sehr willkommen!",
+
+"Thank you for downloading": "Danke für's Herunterladen",
+"If you wish to change settings, use the following command:": "Wenn du die Einstellungen verändern möchtest, dann nutze den folgenden Befehl:",
+"Want to keep up with updates to the Advancements Pack? Join my": "Möchtest du mit den Updates des Advancements Pack mithalten? Dann tritt meinem",
+# Discord
+"and give yourself the Advancement Pack Squad in #roles!": "bei und gib dir selbst die Rolle 'Advancement Pack Squad' in #roles!",
+
+"Note from the developer": "Notiz des Entwicklers",
+
+"This is an Alpha Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "Dies ist eine Alpha-Version von BlazeandCave's Advancements Pack, welche für die Entwicklungsversionen des nächsten größeren Minecraft-Updates designt wurde.",
+"All brand-new advancements included in this version are intended for trigger testing purposes and do not yet have reward functions.": "Alle brandneuen Erfolge, die in dieser Version hinzugefügt wurden, sind rein zum Aktivierungstesten und besitzen noch keine Belohnungsfunktionen.",
+"This means they currently do not have custom advancement completion messages, will not count towards the advancements scoreboard, and don't get shared in cooperative mode.": "Das bedeutet, dass die Erfolge aktuell noch keine individuellen Erfolgs-Abschlussnachrichten besitzen, nicht in das Erfolgs-Scoreboard miteingerechnet werden und nicht im Koop-Modus geteilt werden.",
+"This functionality will be added in the first Beta Build, which will be released when Minecraft snapshots begin entering a largely bug-fixing period in preparation for the major Minecraft update's release.": "Diese Funktionalität wird in der ersten Beta-Version hinzugefügt, welche veröffentlich wird, sobald die Minecraft-Entwicklungsversionen sich in Hinblick auf das Erscheinen der Vollversion größtenteils auf das Beseitigen von Bugs fokussieren.",
+"Thank you for your patience and understanding.": "Danke für deine Geduld und dein Verständnis.",
+
+"This is a Beta Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "Dies ist eine Beta-Version von BlazeandCave's Advancements Pack, welche für die Entwicklungsversionen des nächsten größeren Minecraft-Updates designt wurde.",
+"This version of the datapack should be fairly stable and playable, with every brand-new advancement working at full functionality, but there may be some unwanted bugs or other issues.": "Diese Version des Datenpakets sollte ziemlich stabil und spielbar sein, dadurch dass alle brandneuen Erfolge ihre volle Funktionalität besitzen, es können jedoch trotzdem ungewollte Bugs oder andere Probleme auftreten.",
+"Thank you for your patience and understanding.": "Danke für deine Geduld und dein Verständnis.",
+
+
+# New trigger command-related strings
+
+## Contained in description of advancements that have a trigger command
+"To view progress, run:": "Um den Fortschritt anzusehen, führe Folgendes aus",
+
+"Custom Statistics": "Individuelle Statistik",
+
+"Days played:": "Tage gespielt:",
+"Food items eaten:": "Nahrungsgegenstände gegessen:",
+"Loot chests opened:": "Beutetruhen geöffnet:",
+"Gold Bartered to Piglins:": "Gold mit Piglins getauscht:",
+
+"You have eaten an apple every day for": "Du hast",
+# Number
+"days.": "Tage lang jeweils einen Apfel gegessen.",
+"You have eaten an apple today.": "Du hast heute einen Apfel gegessen.",
+"You have not eaten an apple today.": "Du hast heute keinen Apfel gegessen.",
+"If you have just slept, and it says you have eaten an apple when you actually haven't yet, try running this trigger again in 10 seconds.": "Wenn du gerade geschlafen hast und dennoch angezeigt wird, dass du schon einen Apfel gegessen hast, dann warte 10 Sekunden und nutze den Auslöser erneut.",
+
+
+# Miscellaneous
+
+## Contained in description of the root in the BlazeandCave's Advancements tab
+"Thank you to all of my Patrons!": "Vielen Dank an alle Patrons!",
+
+## Contained in the reward text of the 'Smithing With Style' advancement
+"of each kind of Smithing Template": "von jeder Schmiedevorlage",
+
+## Contained in the description of 'Stack all the Items'
+"Pottery Sherd": "Töpferscherbe",
+"You only need a stack of one kind of Smithing Template": "Du brauchst nur einen Stapel von einer einzigen Sorte der Schmiedevorlagen",
+
+## Used in advancement message tooltips, where the %1$s bit is replaced with the name of the tab that advancement is contained in
+## For example 'Mining tab', 'Building tab', etc.
+"%1$s tab": "%1$s-Tab",
+
+## Global Install function in the Technical Settings
+"Global install": "Globale Installation",
+"Properly installs Hardcore, Terralith and other add-on versions of BlazeandCave's Advancements Pack that have been placed in your world's datapacks folder by reordering datapack priorities": "Installiert Hardcore-, Terralith- oder andere zusätzliche Versionen von BlazeandCave's Advancements Pack ordnungsgemäß, welche zuvor im Datenpaket-Ordner der Welt platziert wurden durch das Neuordnen der Datenpaket-Prioritäten"
+
+
+
+
+# All advancements, trophies and other text strings that get added in versions 1.17 or later will be added down here for easy locating by translators who wish to update their language file
 }

@@ -9,7 +9,7 @@
 
 # Language: Vietnamese
 # Author: Quin (and FehnLmao lol)
-# Pack version supported: 1.15
+# Pack version supported: 1.16
 
 # All language entries are organised in alphabetical order of file name as of 1.3
 # All new advancements added in updates later than 1.3 (1.4, 1.5 and so on) will be put at the bottom of the file for easy locating and adding by translators
@@ -5043,11 +5043,290 @@
 # # # What is the name of the mod that lets you see progress on advancements?
 "The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "Bản mod được đề cập có tên là Advancement Info, hiển thị các yêu cầu đã được hoàn thành cho mỗi tiến trình.",
 "It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "Nó cực kỳ hữu ích, đặc biệt là đối với các Siêu thử thách có nhiều yêu cầu như 'Tất cả các khối'.",
-"It can be downloaded here:": "Nó có thể được tải xuống ở đây:"
+"It can be downloaded here:": "Nó có thể được tải xuống ở đây:",
 # Link is not translatable
 
 
 
 
-# All advancements, trophies and other text strings that get added in versions 1.16 or later will be added down here for easy locating by translators who wish to update their language file
+## All advancements added in version 1.16 are here
+"Hanging Around": "Thong dong treo bảng",
+"Put up a Hanging Sign": "Dựng một cái Biển Báo Treo",
+
+"Sign Off": "Kí Kết",
+"Use honeycomb to wax a sign, setting its ink for eternity": "Dùng sáp ong để bôi lên một cái biển báo, khiến cho mực của nó tồn tại vĩnh viễn",
+
+"Shelf Expression": "Sự thể hiện bản thân kệ sách",
+"Fill a Chiseled Bookshelf with books": "Lấp đầy một cái Kệ sách được điêu khắc với những quyển sách",
+
+"Bamboozled": "Tre hóa",
+"Craft every item made out of bamboo wood": "Chế tạo mọi vật phẩm làm từ gỗ tre",
+
+"Cherry Bomb": "Bom anh đào",
+"Craft every item made out of cherry wood": "Chế tạo mọi vật phẩm làm từ gỗ anh đào",
+
+
+"Desert Rider": "Kỵ sĩ sa mạc",
+"Find a Camel in a desert village and ride it": "Tìm thấy một con Lạc đà ở một ngôi làng sa mạc và cưỡi nó",
+
+"Hump Day": "Ngày bướu",
+"Breed two Camels using cactus": "Phối giống hai con Lạc đà bằng xương rồng",
+
+"The High Road": "Đường bộ trên cao",
+"Kill a hostile monster with a melee attack while riding a Camel": "Giết một con quái vật thù địch bằng tấn công cận chiến khi cưỡi một con Lạc đà",
+
+
+"Pretty in Pink": "Hoa lệ trong sắc hồng",
+"Find a Cherry Grove": "Tìm thấy một Rừng cây anh đào",
+
+
+"Brushed Away": "Quét sạch",
+"Craft a Brush using a feather, copper and a stick": "Chế tạo một cái Bàn chải bằng lông vũ, đồng và gậy",
+
+"Respecting the Remnants": "Tôn trọng những Tàn dư",
+"Using a Brush, carefully excavate a Pottery Sherd from a suspicious block": "Sử dụng Bàn chải, cẩn thận khai quật một mảnh gốm từ một khối khả nghi",
+
+"Careful Restoration": "Sự phục hồi cẩn thận",
+"Put together a Decorated Pot using four Pottery Sherds": "Hợp thành một chiếc Bình được trang trí bằng bốn Mảnh gốm",
+
+"Pottery Exhibition": "Triển lãm gốm sứ",
+"Find one of each type of Pottery Sherd throughout your archaeology expeditions": "Tìm một trong mỗi loại Mảnh gốm trong các chuyến thám hiểm khảo cổ học của bạn",
+
+"Life… uhh… finds a way": "Sự sống… uhh… luôn tìm được lối đi",
+"Find a strange egg among the sand of an Ocean Ruin using a Brush. Smells interesting": "Tìm thấy một quả trứng kì lạ trong lớp cát của một cái Tàn tích Đại dương bằng Bàn chải. Cỏ vẻ thú vị",
+
+"Truffle Worm": "Sâu nấm Truffle",
+"Have a Sniffer dig up seeds": "Có một con Khịt mũi để đào hạt giống",
+
+"Jurassic Sniff": "Khịt mũi kỉ Jura",
+"Breed two Sniffers together using Torchflower Seeds": "Phối gống hai con Khịt mũi bằng Hạt hoa đuốc",
+
+"Little Sniffs": "Khịt mũi bé nhỏ",
+"Feed a Snifflet": "Cho một con Khịt mũi con ăn",
+
+"Planting the Past": "Vun trồng Quá khứ",
+"Plant any Sniffer Seed": "Trồng bất kì một hạt giống của con Khịt mũi",
+
+"Happy Trails!": "Những dấu vết hạnh phúc!",
+"Discover the Trail Ruins": "Khám phá Tàn tích dấu vết",
+
+"Raiders of the Lost Trim": "Kẻ cướp tấm khắc giáp thất lạc",
+"Carefully excavate a Smithing Template from the Trail Ruins": "Cẩn thận khai quật một cái Mẫu rèn từ Tàn tích dấu vết",
+
+"A Chiptune Relic": "Một cổ vật Chiptune",
+"Excavate an ancient record from within the Trail Ruins": "Khai quật một bản ghi âm cổ đại từ một Tàn tích dấu vết",
+
+"Good-Lookin’ Treasure": "Kho báu bắt mắt",
+"Find a Smithing Template": "Tìm thấy một cái Mẫu rèn",
+
+"Crafting a New Look": "Chế tạo ngoại hình mới",
+"Use a Smithing Template to apply a trim to a piece of armor": "Dùng một cái Mẫu rèn để khắc lên một mảnh giáp",
+
+"Mold Maker": "Người làm khuôn",
+"Use seven diamonds to duplicate a Smithing Template": "Dùng bảy viên kim cương để nhân đôi một cái Mẫu rèn",
+
+"Coordinated Flair": "Phối đồ tinh tế",
+"Wear a suit of armor with all four pieces trimmed with the same material": "Mặc một bộ áo giáp với tất cả đều đươc khắc cùng một chất liệu",
+
+"Chromatic Armory": "Sắc màu áo giáp",
+"Trim pieces of armor with all types of materials": "Khắc áo giáp với tất cả các chất liện",
+
+"Genesis of the End": "Khởi nguyên của sự kết thúc",
+"Find the Eye Smithing Template in a Stronghold": "Tìm thấy một Mẫu rèn hình Mắt trong một cái Stronghold",
+
+"Vexingly Hard to Find": "Khó tìm đến khó chịu",
+"Find the Vex Smithing Template in a Woodland Mansion": "Tìm thấy một Mẫu rèn hình Vex trong một cái Biệt thự tron rừng",
+
+"The Sound of Silence": "Âm thanh của sự tĩnh lặng",
+"Find the Silence Smithing Template in an Ancient City": "Tìm thấy một Mẫu rèn hình Tĩnh lặng trong một cái Thành phố cổ đại",
+
+"Smithing With Style": "Rèn với phong cách",
+"Apply every type of armor trim at least once": "Khắc mỗi áo giáp với mỗi loại Mẫu rèn ít nhấ một lần",
+
+"Stacked Smither": "Thợ rèn chất đống",
+"Obtain a stack of every Smithing Template": "Có được một stack tất cả các loại Mẫu rèn",
+
+
+"Maximum Resistance": "Phòng thủ  tối đa",
+"Take a hit from the Warden with the maximum possible protection": "Nhận một hit từ con Kẻ cai ngục với chỉ số bảo vệ tối đa có thể đạt được",
+
+
+"The Power of Books": "Sức mạnh của sách",
+"Read the power signal of a Chiseled Bookshelf using a comparator": "Kích hoạt tín hiệu đá đỏ từ một cái Tủ sách được chạm khắc dùng bộ so sánh đá đỏ",
+
+"Calibration Sensation": "Sự cảm biến định cỡ",
+"Craft a Calibrated Sculk Sensor using Amethyst Shards": "Chế tạo một cái Cảm biến âm thanh đã được hiệu chỉnh bằng Mảnh thạch anh tím",
+
+"Monstrous Music": "Âm nhạc Ma mị",
+"Play Note Blocks with each type of mob head above it": "Chơi Khối nốt nhạc với mỗi đầu con mob trên đó",
+
+
+"Om Nom Nom": "Nhồm nhoằm nhoằm",
+"Eat 200 food items": "Ăn 200 vật phẩm thức ăn",
+
+"Yum Yum Yummo": "Nhăm nhăm nhom",
+"Eat 1000 food items": "Ăn 1000 vật phẩm thức ăn",
+
+"Food, Glorious Food!": "Thức ăn, Hào quang rực rỡ thức ăn!",
+"Eat 5000 food items": "Ăn 5000 vật phẩm thức ăn",
+
+"Loot ‘Em!": "Lấy hết đi!",
+"Open 10 loot chests": "Mở 10 rương chiến lợi phẩm",
+
+"More For Me": "Nhiều hơn nữa cho ta",
+"Open 100 loot chests": "Mở 100 rương chiến lợi phẩm",
+
+"I <3 Chests": "Tôi <3 Rương",
+"Open 500 loot chests": "Mở 5000 rương chiến lợi phẩm",
+
+"Giga XP Grinder": "Kẻ cày Kinh nghiệm Siêu to khổng lồ",
+"Reach 1000 experience levels": "Đạt 1000 cấp kinh nghiệm",
+
+
+"Time to Upgrade!": "Đến giờ nâng cấp rồi!",
+"Find a Netherite Upgrade Smithing Template in a Bastion Remnant": "Tìm thấy một cái Mẫu rèn nâng cấp Netherite từ một cái tàn tích pháo đài",
+
+"Piglin Peril": "Hiểm họa Piglin",
+"Obtain a Piglin Head by blowing up a Piglin with a Charged Creeper": "Lấy được một cái Đầu Piglin bằng cách cho nổ tung một con Piglin với một con Creeper bị sét đánh",
+
+
+"Poglin!": "Poglin!",
+"Obtain a stack of Piglin Heads": "Thu thập một stack Đầu Piglin",
+
+
+"You are a big cheater!": "Bạn là một kẻ gian lận tồi tệ!",
+"You don't want to have this advancement unlocked!": "Bạn một muốn có thành tựu này được mở khóa!",
+
+
+# Description additions and changes in 1.16
+
+## This is used to list blocks and items that are not required for certain advancements
+"The following are not required:": "Những thứ sau đây là không cần thiết:",
+
+## New description for 'Stripper'
+"Strip the bark off every type of log, stem, and bamboo block": "Cạo vỏ của mọi loại gỗ, thân và khối tre",
+
+## New description for 'Master Logger'
+"Cut down a full stack of logs and stems of all types": "Chặt một stack gỗ và thân các loại",
+
+## New descriptions for Mining, Monsters and Adventure tab root advancements
+"Dig deep down, mine up ore": "Đào sâu xuống, đào lên quặng",
+
+"Battle against the monsters of darkness": "Cuộc chiến chống lại những con quái vật của bóng tối",
+
+"Village, pillage and exploration": "Ngôi làng, cướp làng và sự khám phá",
+
+
+# Trophies added in 1.16
+"Ch-ch-ch-ch-ch-ch-Cherry bomb!": "Bom A-a-a-a-a-a-Anh đào!",
+"“I wanna explode,” says Cherry #1": "“Tôi muốn nổ tung,” Quả anh đào #1 nói",
+"“No, let's detonate instead!” says his brother, Cherry #2": "“Không, thay vào đó hãy kích nổ!” anh trai của anh ấy nói, Quả anh đào #2",
+"After intense consultation they agree to EXPLODONATE": "Sau khi tham khảo ý kiến ​​căng thẳng, họ đồng ý KÍCH NỔ TUNG",
+
+"Nokia 3310": "Nokia 3310",
+"Awarded to players who prove themselves as unbreakable as this object": "Được trao cho những người chơi chứng tỏ mình là không thể phá vỡ như đối tượng này",
+
+"Body Pillow": "Gối ôm",
+"Large fandoms result in questionable merchandise such as": "Các Fandom lớn dẫn đến hàng hóa có vấn đề như",
+"body pillows featuring your own likeness being produced": "gối ôm có chân dung của riêng bạn được sản xuất",
+
+"Golden Idol": "Thần tượng vàng",
+"Stealing this may result in a giant boulder rolling after you": "Lấy cắp thứ này có thể dẫn đến một tảng đá khổng lồ lăn sau bạn",
+
+"Tron Suit": "Bộ đồ Tron",
+"The Grid. A digital frontier": "Cái rãnh. Giới hạn của kỹ thuật số",
+"I tried to picture clusters of information": "Tôi đã cố gắng hình dung các cụm thông tin",
+"as they moved through the computer": "khi chúng di chuyển qua máy tính",
+"What did they look like? Ships? Motorcycles?": "Chúng trông như thế nào? Tàu thuyền? Xe máy?",
+"Were the circuits like freeways?": "Là các mạch giống như đường cao tốc?",
+"I kept dreaming of a world I thought I'd never see": "Tôi cứ mơ về một thế giới mà tôi nghĩ mình sẽ không bao giờ nhìn thấy",
+"And then, one day... I got in": "Và rồi, một ngày... tôi bước vào",
+
+"The Midnight - Monsters": "Nửa Đêm - Quái Vật",
+"I was wrong, love's a con": "Tôi đã sai, tình yêu là một trò lừa bịp",
+
+"Fart in a Jar": "Rắm ở trong một cái lọ",
+"May annoy others": "Có thể làm phiền người khác",
+
+"Mammoth Steak": "Bít tết Voi ma mút",
+"Just picture a mammoth steak, fried, roasted or stewed!": "Chỉ cần hình dung một miếng bít tết voi ma mút, chiên, nướng hoặc hầm!",
+
+"Mimic": "Kẻ giả tạo",
+"You didn't think you could open that many chests": "Bạn không nghĩ rằng bạn có thể mở nhiều rương như vậy",
+"and not come across one of these?": "và gặp qua một trong những thứ này?",
+
+"Poglin": "Poglin",
+"So when I MLG water-bucket... Poglin!": "Vậy khi tôi MLG bằng xô nước... Poglin!",
+
+
+# New welcome message strings
+"Welcome!": "Chào mừng!",
+
+"If you enjoy, your presence on my": "Nếu bạn thích, sự hiện diện của bạn trên",
+# Discord
+"would be welcome!": "của tôi sẽ được chào đón!",
+
+"Thank you for downloading": "Cảm ơn vì đã tải",
+"If you wish to change settings, use the following command:": "Nếu bạn muốn thay đổi cài đặt, hãy sử dụng lệnh sau:",
+"Want to keep up with updates to the Advancements Pack? Join my": "Bạn muốn cập nhật các bản cập nhật cho Gói Tiến trình? Tham gia",
+# Discord
+"and give yourself the Advancement Pack Squad in #roles!": "của tôi và tự lấy cho bạn Advancement Pack Squad ở trong kênh #roles!",
+
+"Note from the developer": "Lưu ý từ nhà phát triển",
+
+"This is an Alpha Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "Đây là Bản Alpha của Gói Tiến trình của BlazeandCave, được thiết kế cho snapshot và các bản cập nhật Minecraft lớn tiếp theo.",
+"All brand-new advancements included in this version are intended for trigger testing purposes and do not yet have reward functions.": "Tất cả các tiến trình hoàn toàn mới có trong phiên bản này đều nhằm mục đích thử nghiệm kích hoạt và chưa có chức năng phần thưởng",
+"This means they currently do not have custom advancement completion messages, will not count towards the advancements scoreboard, and don't get shared in cooperative mode.": "Điều này có nghĩa là chúng hiện không có thông báo hoàn thành tiến trình tùy chỉnh, sẽ không được tính vào bảng điểm tiến trình và không được chia sẻ trong chế độ hợp tác.",
+"This functionality will be added in the first Beta Build, which will be released when Minecraft snapshots begin entering a largely bug-fixing period in preparation for the major Minecraft update's release.": "Chức năng này sẽ được thêm vào Bản Beta đầu tiên, sẽ được phát hành khi snapshot Minecraft bắt đầu bước vào giai đoạn sửa lỗi phần lớn để chuẩn bị cho việc phát hành bản cập nhật Minecraft chính.",
+"Thank you for your patience and understanding.": "Cảm ơn bạn vì sự kiên nhẫn và thấu hiểu của bạn.",
+
+"This is a Beta Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "Đây là Bản Beta của Gói Tiến trình của BlazeandCave, được thiết kế cho snapshot và các bản cập nhật Minecraft lớn tiếp theo.",
+"This version of the datapack should be fairly stable and playable, with every brand-new advancement working at full functionality, but there may be some unwanted bugs or other issues.": "Phiên bản gói dữ liệu này phải khá ổn định và có thể chơi được, với mọi tiến trình hoàn toàn mới đều hoạt động với đầy đủ chức năng, nhưng có thể có một số lỗi không mong muốn hoặc các vấn đề khác.",
+"Thank you for your patience and understanding.": "Cảm ơn bạn vì sự kiên nhẫn và thấu hiểu của bạn.",
+
+
+# New trigger command-related strings
+
+## Contained in description of advancements that have a trigger command
+"To view progress, run:": "Để xem quá trình, khởi động:",
+
+"Custom Statistics": "Số liệu tùy chỉnh",
+
+"Days played:": "Ngày đã chơi:",
+"Food items eaten:": "Vật phẩm đồ ăn đã ăn:",
+"Loot chests opened:": "Rương chiến lợi phẩm đã mở:",
+"Gold Bartered to Piglins:": "Vàng đã trao đổi với Piglin:",
+
+"You have eaten an apple every day for": "Bạn đã ăn một quả táo mỗi ngày trong",
+# Number
+"days.": "ngày.",
+"You have eaten an apple today.": "Bạn đã ăn một quả táo hôm nay.",
+"You have not eaten an apple today.": "Bạn chưa ăn một quả táo hôm nay.",
+"If you have just slept, and it says you have eaten an apple when you actually haven't yet, try running this trigger again in 10 seconds.": "Nếu bạn vừa mới ngủ, và thông báo cho biết bạn đã ăn một quả táo trong khi thực tế là bạn chưa ăn, hãy thử chạy lại trình kích hoạt này sau 10 giây.",
+
+
+# Miscellaneous
+
+## Contained in description of the root in the BlazeandCave's Advancements tab
+"Thank you to all of my Patrons!": "Cảm ơn tất cả các nhà tài trợ Patron của tôi!",
+ 
+## Contained in the reward text of the 'Smithing With Style' advancement
+"of each kind of Smithing Template": "của mỗi loại Mẫu rèn",
+
+## Contained in the description of 'Stack all the Items'
+"Pottery Sherd": "Mảnh gốm",
+"You only need a stack of one kind of Smithing Template": "Bạn chỉ cần một stack của một loại Mẫu rèn",
+
+## Used in advancement message tooltips, where the %1$s bit is replaced with the name of the tab that advancement is contained in
+## For example 'Mining tab', 'Building tab', etc.
+"%1$s tab": "thanh %1$s",
+
+## Global Install function in the Technical Settings
+"Global install": "Cài đặt toàn cầu",
+"Properly installs Hardcore, Terralith and other add-on versions of BlazeandCave's Advancements Pack that have been placed in your world's datapacks folder by reordering datapack priorities": "Cài đặt đúng cách bản Hardcore, Terralith và các phiên bản bổ sung khác của Gói Tiến trình của BlazeandCave đã được đặt trong thư mục gói dữ liệu trên thế giới của bạn bằng cách sắp xếp lại thứ tự ưu tiên của gói dữ liệu"
+
+
+
+
+# All advancements, trophies and other text strings that get added in versions 1.17 or later will be added down here for easy locating by translators who wish to update their language file
 }

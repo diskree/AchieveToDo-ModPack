@@ -1,0 +1,29 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:chainmail_chestplate",
+			"nbt": "{Enchantments:[{id:\"minecraft:thorns\",lvl:3}]}"
+		},
+		"title": {"translate":"Living Dummy"},
+		"description": {"color":"#75E1FF","translate":"Get hurt from hitting an Armor Stand"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+
+	},
+	"parent": "blazeandcave:building/mannequin",
+	"rewards": {
+		"function": "bc_rewards:building/living_dummy"
+	},		
+	"criteria": {
+        "armor_stand": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "source_entity": {
+						"type": "armor_stand"
+					}
+                }
+            }
+        }
+	}
+}

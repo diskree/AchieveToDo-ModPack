@@ -5036,11 +5036,290 @@
 # # # What is the name of the mod that lets you see progress on advancements?
 "The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "Da mod in qwestshun iz Advnsment Info, which dsplays rekwirementz that hav biin dun on each advnsment.",
 "It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "Itz poggers 2 uze, espeshully 4 Supa Dumb Nuts like 'All da Blukz!'",
-"It can be downloaded here:": "Downlode it here:"
+"It can be downloaded here:": "Downlode it here:",
 # Link is not translatable
 
 
 
 
-# All advancements, trophies and other text strings that get added in versions 1.16 or later will be added down here for easy locating by translators who wish to update their language file
+## All advancements added in version 1.16 are here
+"Hanging Around": "Danglin' Around",
+"Put up a Hanging Sign": "Put up a Danglin' Sign",
+
+"Sign Off": "Sign Oof",
+"Use honeycomb to wax a sign, setting its ink for eternity": "Uze honyconb 2 wax ur sine, settling its ink 4 eternty",
+
+"Shelf Expression": "Hollow Bed Not 4 Me",
+"Fill a Chiseled Bookshelf with books": "Fill a Hollow Bed with Buuks",
+
+"Bamboozled": "bamBOOzld",
+"Craft every item made out of bamboo wood": "Maek evri ietm oot ov bamBOO wuud",
+
+"Cherry Bomb": "Sakura luvs Naruto",
+"Craft every item made out of cherry wood": "Ship Sakura with Naruto",
+
+
+"Desert Rider": "Bumpy Ridr",
+"Find a Camel in a desert village and ride it": "Find a Bumpy Banana Hors in a dessert villaj & sit on it",
+
+"Hump Day": "Hump Day",
+"Breed two Camels using cactus": "Breed 2 Bumpy Banana Horses wit spiky green plants",
+
+"The High Road": "Da High Seat",
+"Kill a hostile monster with a melee attack while riding a Camel": "Scratch a bad monsta kitteh while sittin' on a Bumpy Banana Hors",
+
+
+"Pretty in Pink": "Pritty in Pink",
+"Find a Cherry Grove": "Find a Sakura Groav",
+
+
+"Brushed Away": "Brooming urself",
+"Craft a Brush using a feather, copper and a stick": "Kraft a mini broom with a dether, copurr & stik",
+
+"Respecting the Remnants": "Pres F to pey respectz",
+"Using a Brush, carefully excavate a Pottery Sherd from a suspicious block": "Destroi a Sussy blok to get a Containr Thingy",
+
+"Careful Restoration": "Pretteh Containr",
+"Put together a Decorated Pot using four Pottery Sherds": "Maek a Ancient Containr out ov 4 Ancient Containr Thingyz",
+
+"Pottery Exhibition": "Poppurry Exibishun",
+"Find one of each type of Pottery Sherd throughout your archaeology expeditions": "Find all da Ancient Containr Thingyz",
+
+"Life… uhh… finds a way": "Lief… mehh… findz a way",
+"Find a strange egg among the sand of an Ocean Ruin using a Brush. Smells interesting": "Find a strng ec amogus da sand ov a oshun ruin wit a mini broom. Gud smell",
+
+"Truffle Worm": "Twuffl Wurm",
+"Have a Sniffer dig up seeds": "Haf a Sniffr dig up seedz",
+
+"Jurassic Sniff": "Jurassic Park i mean Snif",
+"Breed two Sniffers together using Torchflower Seeds": "Brid 2 Sniffrs 2gethr with burny flowr seeedz",
+
+"Little Sniffs": "Kute Sniftehz!!",
+"Feed a Snifflet": "Fed a Snifflet",
+
+"Planting the Past": "Once upon teh taim...",
+"Plant any Sniffer Seed": "Plant any Sniffr sed",
+
+"Happy Trails!": "HAPPY TAILS!",
+"Discover the Trail Ruins": "Discuvvah da tail ruins",
+
+"Raiders of the Lost Trim": "Indiana Cats & raidrs uv da lost drip",
+"Carefully excavate a Smithing Template from the Trail Ruins": "Dig up a smissing thingy frum da tail ruuns",
+
+"A Chiptune Relic": "A Cattune Relic",
+"Excavate an ancient record from within the Trail Ruins": "Dig up a cattune record frum within da Tail Riuns",
+
+"Good-Lookin’ Treasure": "Got drip?",
+"Find a Smithing Template": "Find a Smissing thingy",
+
+"Crafting a New Look": "Got da drip",
+"Use a Smithing Template to apply a trim to a piece of armor": "Craf a gud-lookin suit at a Smissin Tabel",
+
+"Mold Maker": "Muld Maeker",
+"Use seven diamonds to duplicate a Smithing Template": "Uze seven shinees to dupe smissin thingies",
+
+"Coordinated Flair": "Cordnated Drip",
+"Wear a suit of armor with all four pieces trimmed with the same material": "Wear a priti katsuit all tha same color",
+
+"Chromatic Armory": "Nyan Drip",
+"Trim pieces of armor with all types of materials": "Drip ur suits with all da materials",
+
+"Genesis of the End": "Eye C u",
+"Find the Eye Smithing Template in a Stronghold": "Find da BLINK BLINK smissinng thingy in a Stranglehold",
+
+"Vexingly Hard to Find": "ghostily hard 2 find",
+"Find the Vex Smithing Template in a Woodland Mansion": "Find da ghosty smising thingy in a Hoomanshun",
+
+"The Sound of Silence": "Da sound ov *shhhhhh*",
+"Find the Silence Smithing Template in an Ancient City": "Find da *shhhhhh* smissinng thingy in a Anchent Citty",
+
+"Smithing With Style": "I smiss ur wae",
+"Apply every type of armor trim at least once": "Maek every drip into armor at least 1nce",
+
+"Stacked Smither": "stakkata smissa",
+"Obtain a stack of every Smithing Template": "Obtayn a stak ov all da smissing thingys",
+
+
+"Maximum Resistance": "Tank Stratz",
+"Take a hit from the Warden with the maximum possible protection": "Tank a hit frum blu shrek wit max possibel prot",
+
+
+"The Power of Books": "KNOLEGGE POWAH!",
+"Read the power signal of a Chiseled Bookshelf using a comparator": "Let teh Redston Stuf fel the POWAH OF NERDY STUFZ!",
+
+"Calibration Sensation": "Smart Catibrashun",
+"Craft a Calibrated Sculk Sensor using Amethyst Shards": "Maek a sculk detektor smart with purpur shinee pices",
+
+"Monstrous Music": "Monsta Moosic",
+"Play Note Blocks with each type of mob head above it": "Plae nowht blohks with each type ov head above 'em",
+
+
+"Om Nom Nom": "om nom nOm num Nom nuM",
+"Eat 200 food items": "Eat 200 fuuds",
+
+"Yum Yum Yummo": "um yum num nom nUm yub nub",
+"Eat 1000 food items": "Eat 1000 fuuds",
+
+"Food, Glorious Food!": "Fuud Glurius Fuud!",
+"Eat 5000 food items": "SID! Eat 5000 fuuds",
+
+"Loot ‘Em!": "Luut em!",
+"Open 10 loot chests": "Open 10 looty cat boxs",
+
+"More For Me": "Moar 4 meh",
+"Open 100 loot chests": "Open 100 luut cat boxes",
+
+"I <3 Chests": "I <3 Cat Boxes",
+"Open 500 loot chests": "Open 500 loot cat boxs",
+
+"Giga XP Grinder": "GIGA HAX",
+"Reach 1000 experience levels": "Get ur poke-mon on lvl 1000, evn moar illegal",
+
+
+"Time to Upgrade!": "Tiem 2 lvl UP!",
+"Find a Netherite Upgrade Smithing Template in a Bastion Remnant": "Find a netherite lvl up smissing thingy in a spoooky place",
+
+"Piglin Peril": "Piglin Purril",
+"Obtain a Piglin Head by blowing up a Piglin with a Charged Creeper": "Scratch off tha hed ov a Piglin",
+
+
+"Poglin!": "POGlin!",
+"Obtain a stack of Piglin Heads": "Horde a stck ov piglin heds",
+
+
+"You are a big cheater!": "u big cheetah!",
+"You don't want to have this advancement unlocked!": "U dunt want dis advnsmtnt 2 B unloked",
+
+
+# Description additions and changes in 1.16
+
+## This is used to list blocks and items that are not required for certain advancements
+"The following are not required:": "Da following R not REEEquird:",
+
+## New description for 'Stripper'
+"Strip the bark off every type of log, stem, and bamboo block": "S Trip Dog Noise off all logz, stemz & thicc bamboo",
+
+## New description for 'Master Logger'
+"Cut down a full stack of logs and stems of all types": "Cut dawn a full stak ov all da logz!! (stemz too)",
+
+## New descriptions for Mining, Monsters and Adventure tab root advancements
+"Dig deep down, mine up ore": "Dig under da howse & get stuff",
+
+"Battle against the monsters of darkness": "Fite agenst da bad kittehs",
+
+"Village, pillage and exploration": "Vilaj, Pilag, & explurashun",
+
+
+# Trophies added in 1.16
+"Ch-ch-ch-ch-ch-ch-Cherry bomb!": "Pink furball",
+"“I wanna explode,” says Cherry #1": "“I wanna has pink fur,” says Kitty #1",
+"“No, let's detonate instead!” says his brother, Cherry #2": "“No, I wanna has pink fur!” says his brother, Kitty #2",
+"After intense consultation they agree to EXPLODONATE": "Aftur intens kitteh fite they agree 2 both has pink fur",
+
+"Nokia 3310": "nOkIa 3310",
+"Awarded to players who prove themselves as unbreakable as this object": "Da only scratch-proof hooman phone in existens",
+
+"Body Pillow": "Kitty Pillow",
+"Large fandoms result in questionable merchandise such as": "Big enuff fur a hooman,",
+"body pillows featuring your own likeness being produced": "ownd by da cats insted",
+
+"Golden Idol": "GULDEN IDUL",
+"Stealing this may result in a giant boulder rolling after you": "Cue da indy jons music!",
+
+"Tron Suit": "Cat Video Suit",
+"The Grid. A digital frontier": "Da cat video. A digital frontier",
+"I tried to picture clusters of information": "I tried to record myself & go viral",
+"as they moved through the computer": "With inspirashun frum other cats",
+"What did they look like? Ships? Motorcycles?": "What were they doin? Knock things off high places? Chasing mice?",
+"Were the circuits like freeways?": "Were they ninja-attacking raccoons?",
+"I kept dreaming of a world I thought I'd never see": "I kept dreaming ov fame me thought me'd never git into",
+"And then, one day... I got in": "And then, one day... me got in!",
+
+"The Midnight - Monsters": "Da Midnight - Monstahs",
+"I was wrong, love's a con": "endless summer iz better",
+
+"Fart in a Jar": "Fart in a Jar",
+"May annoy others": "May annoy hoomans",
+
+"Mammoth Steak": "Mammoth Spotty Meat",
+"Just picture a mammoth steak, fried, roasted or stewed!": "Juzt piktur a mamoth stake, fried, rOaStEd or stood!",
+
+"Mimic": "MImic",
+"You didn't think you could open that many chests": "U didnt think u culd open that many cat boxs",
+"and not come across one of these?": "and not come across 1 of these?",
+
+"Poglin": "POGlin",
+"So when I MLG water-bucket... Poglin!": "So when I MLG water-bucket... POGlin!",
+
+
+# New welcome message strings
+"Welcome!": "Welkum!",
+
+"If you enjoy, your presence on my": "If u enjoy, join me",
+# Discord
+"would be welcome!": "pritty please!",
+
+"Thank you for downloading": "Thank u fur downloding",
+"If you wish to change settings, use the following command:": "If u want to change settings, use da following commnd:",
+"Want to keep up with updates to the Advancements Pack? Join my": "Want to keip up with updaets 2 da adnvasmtnst pack? Join meh",
+# Discord
+"and give yourself the Advancement Pack Squad in #roles!": "and give urself da Advancement Pack Squad role in #roles!",
+
+"Note from the developer": "Note from dev",
+
+"This is an Alpha Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "This is an Alfa Bild ov BlaznCav's Advnsmtns Pak, designd 4 snapshots ov da nxt major MC udpate.",
+"All brand-new advancements included in this version are intended for trigger testing purposes and do not yet have reward functions.": "All brand-new advs inclded in this version are intended 4 tigger testing porpoises and dunt has r-ward functs.",
+"This means they currently do not have custom advancement completion messages, will not count towards the advancements scoreboard, and don't get shared in cooperative mode.": "Dis means dey dont has custom adv complshun msgs, dont count 2wards da scorebored, and don't get shared in coop mode.",
+"This functionality will be added in the first Beta Build, which will be released when Minecraft snapshots begin entering a largely bug-fixing period in preparation for the major Minecraft update's release.": "This functionanlty will come in da Beta Bild, which will be releesed when MC snapshots get more bug-fixing.",
+"Thank you for your patience and understanding.": "ty 4 ur patience.",
+
+"This is a Beta Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "This is a Beta Bild ov BlaznCav's Advnsmtns Pak, designd 4 snapshots ov da nxt major MC udpate.",
+"This version of the datapack should be fairly stable and playable, with every brand-new advancement working at full functionality, but there may be some unwanted bugs or other issues.": "This version of da datapack shuld B fairly stable & playble. All brand-new advs work at full functinoantly, butt there may be some bugz to squish.",
+"Thank you for your patience and understanding.": "ty 4 ur patience.",
+
+
+# New trigger command-related strings
+
+## Contained in description of advancements that have a trigger command
+"To view progress, run:": "To view pogress, run:",
+
+"Custom Statistics": "Custom Catistics:",
+
+"Days played:": "Days played:",
+"Food items eaten:": "Fuud items nommed:",
+"Loot chests opened:": "Luut cat boxes opened:",
+"Gold Bartered to Piglins:": "Gold given 2 piglins:",
+
+"You have eaten an apple every day for": "U has eats a mapple evri day for",
+# Number
+"days.": "daeys.",
+"You have eaten an apple today.": "U has eeten mapple 2day.",
+"You have not eaten an apple today.": "U has not eeten mapple 2day.",
+"If you have just slept, and it says you have eaten an apple when you actually haven't yet, try running this trigger again in 10 seconds.": "If u just slept, & it sayz u eaten mapple when u havnt yet, try running this tigger agen in 10 secs.",
+
+
+# Miscellaneous
+
+## Contained in description of the root in the BlazeandCave's Advancements tab
+"Thank you to all of my Patrons!": "ty to all my Patrons!",
+
+## Contained in the reward text of the 'Smithing With Style' advancement
+"of each kind of Smithing Template": "of each kind of smisinng thingy",
+
+## Contained in the description of 'Stack all the Items'
+"Pottery Sherd": "ancient containr thingy",
+"You only need a stack of one kind of Smithing Template": "U only need a stak ov 1 kind ov smissinng thingy",
+
+## Used in advancement message tooltips, where the %1$s bit is replaced with the name of the tab that advancement is contained in
+## For example 'Mining tab', 'Building tab', etc.
+"%1$s tab": "%1$s tab",
+
+## Global Install function in the Technical Settings
+"Global install": "Glubul instll",
+"Properly installs Hardcore, Terralith and other add-on versions of BlazeandCave's Advancements Pack that have been placed in your world's datapacks folder by reordering datapack priorities": "Poperly installs Hardcore, Terralith & other add-on vrsions ov Blazndcavs Advnsmtmsns Pak that have been put in ur wrld's datapacks foldr by reordering priorities"
+
+
+
+
+# All advancements, trophies and other text strings that get added in versions 1.17 or later will be added down here for easy locating by translators who wish to update their language file
 }

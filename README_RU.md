@@ -26,11 +26,11 @@
 
 :white_check_mark: `Minecraft 1.20`
 
-:white_check_mark: `BlazeandCaves 1.16 Beta Build 6` от _17.05.2023_
+:white_check_mark: `BlazeandCaves 1.16` от _07.06.2023_
 
-:white_check_mark: `BlazeandCaves Hardcore 1.15` от _16.09.2022_
+:white_check_mark: `BlazeandCaves Hardcore Pack 1.16` от _07.06.2023_
 
-:white_check_mark: `BlazeandCaves Language Pack` от _26.01.2023_
+:white_check_mark: `BlazeandCaves Language Pack 1.16` от _07.06.2023_
 
 ## Описание
 

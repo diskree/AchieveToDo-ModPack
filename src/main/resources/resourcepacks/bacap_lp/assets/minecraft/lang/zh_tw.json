@@ -193,7 +193,7 @@
 "Craft or collect all forms of prismarine blocks": "合成或收集所有類型的海磷方塊",
 
 "Fake stronghold": "終界要塞違建",
-"Craft or collect normal, cracked, mossy and chiseled stone bricks": "合成或收集石磚，裂石磚，青苔石磚和鏨製石磚",
+"Craft or collect normal, cracked, mossy and chiseled stone bricks": 合成或收集石磚，裂石磚，青苔石磚和鏨製石磚"",
 
 "Fluorescent!": "螢光棒!",
 "Light up the area with some end rods": "使用終界燭照明",
@@ -796,7 +796,7 @@
 "Craft a full suit of iron armor": "穿上一整套鐵裝",
 
 "Iron Miner": "鐵礦工",
-"Mine a stack of iron ore": "Mine a stack of iron ore",
+"Mine a stack of iron ore": "",
 
 "Isn't It Iron Pick": "莫非這是鐵鎬",
 "Upgrade your pickaxe": "升級你的鎬",
@@ -910,7 +910,7 @@
 "Kill a wither skeleton": "殺死一隻凋靈骷髏",
 
 "The Nether's Shield": "地獄護盾",
-"Block some blaze fireballs": "Block some blaze fireballs",
+"Block some blaze fireballs": "",
 
 "The Tribal Snouts": "部落衝突",
 "Kill a zombie pigman": "殺死一隻殭屍豬靈",
@@ -1065,7 +1065,7 @@
 "Get caught in a cave-in of gravel": "被坍塌的砂礫埋住",
 
 "Nananananananana...": "吱吱吱吱吱吱吱吱...",
-"Accidentally hit a bat underground": "Accidentally hit a bat underground",
+"Accidentally hit a bat underground": "",
 
 "Obsidian Miner": "黑曜石礦工",
 "Mine a stack of obsidian. (This might take a while...)": "挖掘一組黑曜石（這可能需要點時間）",
@@ -1376,7 +1376,7 @@
 
 
 "Blaze Extinguisher": "烈燄使者毀滅者",
-"Collect a stack of blaze rods": "Collect a stack of blaze rods",
+"Collect a stack of blaze rods": "",
 
 "Ghast Slayer": "惡魂殺戮者",
 "Collect a stack of ghast tears": "收集一組幽靈之淚",
@@ -1768,7 +1768,7 @@
 "Hit a mob with diamonds": "用鑽石打一個生物",
 
 "Expelliarmus!": "去去武器走!",
-"Hit a mob with a stick": "Hit a mob with a stick",
+"Hit a mob with a stick": "",
 
 "Explosive Fire": "爆破煙火",
 "Load your crossbow with a firework": "在弩上使用煙花火箭",
@@ -2749,7 +2749,7 @@
 "Not Quite 'Nine' Lives" : "非言「九」命",
 "Charge a Respawn Anchor to the maximum" : "將重生錨充滿能量",
 
-"We Got a Live One!" : "We Got a Live One!",
+"We Got a Live One!" : "",
 "Bring a Piglin into the Overworld then spare it from an eternity of zombification" : "把一隻豬靈安全地帶到主世界……然後解救它使其永遠不可能殭屍化AuA",
 
 "When Piglins Fly" : "當豬布林飛的時候",
@@ -4120,7 +4120,7 @@
 "Survive a fall of at least 10 blocks onto some Pointed Dripstone": "跌落在高度距離10格以上的鐘乳石上並存活",
 
 "Lucky Break": "極限倖存者",
-"Survive a long fall with just a sliver of health remaining": "Survive a long fall with just a sliver of health remaining",
+"Survive a long fall with just a sliver of health remaining": "",
 
 "Caves & Cliffs": "深淵與天際",
 "Free fall from the top of the world (build limit) to the bottom of the world and survive": "從世界高度限制掉落到積岩層並存活",
@@ -4876,7 +4876,7 @@
 
 
 ## All advancements added in version 1.15 are here
-"Nerds Never Die": "Nerds Never Die",
+"Nerds Never Die": "",
 "Name a Piglin Brute 'Technoblade'": "將一隻豬布林蠻兵命名為'Technoblade'",
 
 "And make it double!": "今年不是五倍嗎？",
@@ -5036,8 +5036,286 @@
 # # # What is the name of the mod that lets you see progress on advancements?
 "The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "您所詢問的模組叫做Advancement Info，它會顯示各個成就所達成的進度需求",
 "It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "在完成如'我全都要!'，那些有極多進度需求的超級成就上極為有用",
-"It can be downloaded here:": "連結如下"
+"It can be downloaded here:": "連結如下",
 # Link is not translatable
+
+
+
+
+## All advancements added in version 1.16 are here
+"Hanging Around": "掛機",
+"Put up a Hanging Sign": "放置懸掛式告示牌",
+
+"Sign Off": "簽署",
+"Use honeycomb to wax a sign, setting its ink for eternity": "使用蜂蠟為告示上蠟，使墨跡亙久永存",
+
+"Shelf Expression": "	立地書櫥",
+"Fill a Chiseled Bookshelf with books": "將雕紋書櫃塞滿書",
+
+"Bamboozled": "	竹苞松茂",
+"Craft every item made out of bamboo wood": "合成使用竹板製作的所有物品",
+
+"Cherry Bomb": "櫻桃炸彈",
+"Craft every item made out of cherry wood": "合成使用櫻花木製作的所有物品",
+
+
+"Desert Rider": "征砂者",
+"Find a Camel in a desert village and ride it": "在沙漠村莊裡找到並騎乘駱駝",
+
+"Hump Day": "峰駝之日",
+"Breed two Camels using cactus": "使用仙人掌繁殖駱駝",
+
+"The High Road": "急速獵殺",
+"Kill a hostile monster with a melee attack while riding a Camel": "在騎乘駱駝時以近戰攻擊殺死敵對怪物",
+
+
+"Pretty in Pink": "落櫻繽紛",
+"Find a Cherry Grove": "找到櫻花樹林",
+
+
+"Brushed Away": "掃除時光",
+"Craft a Brush using a feather, copper and a stick": "使用羽毛、銅錠、與木棍合成刷子",
+
+"Respecting the Remnants": "追尋追跡",
+"Using a Brush, carefully excavate a Pottery Sherd from a suspicious block": "使用刷子小心地從可疑的方塊中刷出陶片",
+
+"Careful Restoration": "謹慎復原",
+"Put together a Decorated Pot using four Pottery Sherds": "使用4個陶片合成飾紋陶罐",
+
+"Pottery Exhibition": "陶藝展覽",
+"Find one of each type of Pottery Sherd throughout your archaeology expeditions": "在考古探險中找出所有種類的陶片",
+
+"Life… uhh… finds a way": "生命…嗯…會找到出路",
+"Find a strange egg among the sand of an Ocean Ruin using a Brush. Smells interesting": "在海洋遺跡中使用刷子找到嗅探獸的蛋，聞起來挺有趣",
+
+"Truffle Worm": "松露蟲蟲",
+"Have a Sniffer dig up seeds": "使嗅探獸挖出種子",
+
+"Jurassic Sniff": "侏儸紀嗅嗅",
+"Breed two Sniffers together using Torchflower Seeds": "用火把花種子繁殖嗅探獸",
+
+"Little Sniffs": "嗅嗅",
+"Feed a Snifflet": "餵食小嗅探獸",
+
+"Planting the Past": "歷史之作",
+"Plant any Sniffer Seed": "種植瓶子草莢果",
+
+"Happy Trails!": "快樂小徑！",
+"Discover the Trail Ruins": "發現古蹟廢墟",
+
+"Raiders of the Lost Trim": "奪寶奇兵",
+"Carefully excavate a Smithing Template from the Trail Ruins": "在古蹟廢墟中挖掘出鍛造模板",
+
+"A Chiptune Relic": "晶片神器",
+"Excavate an ancient record from within the Trail Ruins": "在古蹟廢墟中挖掘出古老的唱片",
+
+"Good-Lookin’ Treasure": "綺麗寶藏",
+"Find a Smithing Template": "找到鍛造模板",
+
+"Crafting a New Look": "打造新面貌",
+"Use a Smithing Template to apply a trim to a piece of armor": "使用鍛造模板為裝備增添紋飾",
+
+"Mold Maker": "鑄模者",
+"Use seven diamonds to duplicate a Smithing Template": "使用7顆鑽石複製鍛造模板",
+
+"Coordinated Flair": "和諧天賦",
+"Wear a suit of armor with all four pieces trimmed with the same material": "穿著一套具有相同裝飾材料紋飾的裝備",
+
+"Chromatic Armory": "艷麗軍械",
+"Trim pieces of armor with all types of materials": "使用所有裝飾材料為裝備增添紋飾",
+
+"Genesis of the End": "終結之源",
+"Find the Eye Smithing Template in a Stronghold": "在地牢裡發現眼眸盔甲紋飾",
+
+"Vexingly Hard to Find": "惱人的追尋",
+"Find the Vex Smithing Template in a Woodland Mansion": "在森林大宅裡發現惱鬼盔甲紋飾",
+
+"The Sound of Silence": "寂靜之聲",
+"Find the Silence Smithing Template in an Ancient City": "在源古遺跡裡發現幽靜盔甲紋飾",
+
+"Smithing With Style": "鍛造風格",
+"Apply every type of armor trim at least once": "使用過所有種類的盔甲紋飾",
+
+"Stacked Smither": "堆砌鐵匠",
+"Obtain a stack of every Smithing Template": "或的所有類型鍛造模板各1組",
+
+
+"Maximum Resistance": "最大抗性",
+"Take a hit from the Warden with the maximum possible protection": "以最強保護承受伏守者的一擊",
+
+
+"The Power of Books": "典籍之力",
+"Read the power signal of a Chiseled Bookshelf using a comparator": "使用紅石比較器讀取雕紋書櫃的訊號",
+
+"Calibration Sensation": "感知校準",
+"Craft a Calibrated Sculk Sensor using Amethyst Shards": "使用紫水晶碎片合成校頻伏靈感測器",
+
+"Monstrous Music": "魔物之樂",
+"Play Note Blocks with each type of mob head above it": "在音階盒上放置所有種類的怪物頭顱並演奏",
+
+
+"Om Nom Nom": "嚼嚼",
+"Eat 200 food items": "吃下200個食物",
+
+"Yum Yum Yummo": "嘗嘗玖玖",
+"Eat 1000 food items": "吃下1000個食物",
+
+"Food, Glorious Food!": "噢、華耀的美食阿",
+"Eat 5000 food items": "吃下5000個食物",
+
+"Loot ‘Em!": "賺爛了賺爛了",
+"Open 10 loot chests": "開啟10個寶箱",
+
+"More For Me": "還要更多！",
+"Open 100 loot chests": "開啟100個寶箱",
+
+"I <3 Chests": "我愛寶藏！",
+"Open 500 loot chests": "開啟500個寶箱",
+
+"Giga XP Grinder": "經驗老道",
+"Reach 1000 experience levels": "達到1000等",
+
+
+"Time to Upgrade!": "升級時間！",
+"Find a Netherite Upgrade Smithing Template in a Bastion Remnant": "在堡壘遺跡中發現獄髓升級鍛造模板",
+
+"Piglin Peril": "豬布林危機",
+"Obtain a Piglin Head by blowing up a Piglin with a Charged Creeper": "在豬布林身旁引爆高壓苦力怕來獲得豬布林頭顱",
+
+
+"Poglin!": "支布林！",
+"Obtain a stack of Piglin Heads": "獲得豬布林頭顱1組",
+
+
+"You are a big cheater!": "你作弊！",
+"You don't want to have this advancement unlocked!": "你不會想要這個成就解鎖的",
+
+
+# Description additions and changes in 1.16
+
+## This is used to list blocks and items that are not required for certain advancements
+"The following are not required:": "不需要以下內容：",
+
+## New description for 'Stripper'
+"Strip the bark off every type of log, stem, and bamboo block": "為所有種類的樹幹、菌柄、與竹板剝皮",
+
+## New description for 'Master Logger'
+"Cut down a full stack of logs and stems of all types": "砍伐所有種類的樹幹與菌柄各一組",
+
+## New descriptions for Mining, Monsters and Adventure tab root advancements
+"Dig deep down, mine up ore": "深入挖掘，開採礦石",
+
+"Battle against the monsters of darkness": "與黑暗的怪物戰鬥",
+
+"Village, pillage and exploration": "村莊、掠奪和探索",
+
+
+# Trophies added in 1.16
+"Ch-ch-ch-ch-ch-ch-Cherry bomb!": "櫻-櫻-櫻-櫻-櫻-櫻-櫻桃炸彈！",
+"“I wanna explode,” says Cherry #1": "Cherry#1：“我想爆炸！”",
+"“No, let's detonate instead!” says his brother, Cherry #2": "Cherry#2，他的兄弟：“不，我們來引爆吧！”",
+"After intense consultation they agree to EXPLODONATE": "經過深入的協商過後，他們同意“業力引爆！”",
+
+"Nokia 3310": "Nokia 3310",
+"Awarded to players who prove themselves as unbreakable as this object": "授予證明自己像這東西一樣堅不可摧的玩家",
+
+"Body Pillow": "抱枕",
+"Large fandoms result in questionable merchandise such as": "龐大的粉絲群體會導致怪奇的商品，例如",
+"body pillows featuring your own likeness being produced": "製作以您自己的肖像為特色的抱枕",
+
+"Golden Idol": "黃金偶像",
+"Stealing this may result in a giant boulder rolling after you": "偷了這個可能會導致一塊巨石在你身後滾動",
+
+"Tron Suit": "電子戰甲",
+"The Grid. A digital frontier": "網格座標。數位前線",
+"I tried to picture clusters of information": "當他們在儀器中移動時",
+"as they moved through the computer": "我試圖描繪資訊",
+"What did they look like? Ships? Motorcycles?": "他們長什麼樣？像是輪船？還是摩托車？",
+"Were the circuits like freeways?": "那些電路像高速公路嗎？",
+"I kept dreaming of a world I thought I'd never see": "我一直夢想著一個我以為永遠看不到的世界",
+"And then, one day... I got in": "然後，有一天…我進去了",
+
+"The Midnight - Monsters": "午夜 - 怪物",
+"I was wrong, love's a con": "我錯了，愛是騙局",
+
+"Fart in a Jar": "罐裝屁",
+"May annoy others": "可能會惹惱別人",
+
+"Mammoth Steak": "猛獁象排",
+"Just picture a mammoth steak, fried, roasted or stewed!": "想像一下香煎、炭烤或燉煮的猛瑪象排！",
+
+"Mimic": "寶箱怪",
+"You didn't think you could open that many chests": "你不會以為你打開了那麼多箱子",
+"and not come across one of these?": "卻能從未遇到任何一隻吧？",
+
+"Poglin": "支布林",
+"So when I MLG water-bucket... Poglin!": "我就單純想要水桶MLG一下，但…支布林！",
+
+
+# New welcome message strings
+"Welcome!": "歡迎！",
+
+"If you enjoy, your presence on my": "如果你享受了一段美好時光，期待在我們官方",
+# Discord
+"would be welcome!": "看到您！",
+
+"Thank you for downloading": "感謝您的下載",
+"If you wish to change settings, use the following command:": "如果您希望改變設定，使用以下指令",
+"Want to keep up with updates to the Advancements Pack? Join my": "希望持續更新指令包？加入我們官方",
+# Discord
+"and give yourself the Advancement Pack Squad in #roles!": "並於 #roles 頻道中，加入 Advancement Pack Squad 吧！",
+
+"Note from the developer": "開發者的註記",
+
+"This is an Alpha Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "這是  BlazeandCave 成就包的 Alpha 版本，專為下次 Minecraft 更新的快照版本而設計。",
+"All brand-new advancements included in this version are intended for trigger testing purposes and do not yet have reward functions.": "此版本中的所有全新成就僅用於觸發測試目的，尚不具有獎勵功能。",
+"This means they currently do not have custom advancement completion messages, will not count towards the advancements scoreboard, and don't get shared in cooperative mode.": "這意味著他們目前沒有自定義成就完成消息，不會計入成就記分板，也不會在合作模式下共享。",
+"This functionality will be added in the first Beta Build, which will be released when Minecraft snapshots begin entering a largely bug-fixing period in preparation for the major Minecraft update's release.": "此功能將添加到第一個 Beta 版本中，為了在 Minecraft 更新發佈時做好充分準備，該版本將在 Minecraft 快照版進入錯誤修復期時發布。",
+"Thank you for your patience and understanding.": "感謝您的閱讀和理解。",
+
+"This is a Beta Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "這是 BlazeandCave 成就包的 Beta 版本，專為下次 Minecraft 更新的快照版本而設計。",
+"This version of the datapack should be fairly stable and playable, with every brand-new advancement working at full functionality, but there may be some unwanted bugs or other issues.": "這個版本的指令包應該相當穩定，每個全新成就都能完整運行，但可能會有一些錯誤或其他問題。",
+"Thank you for your patience and understanding.": "感謝您的閱讀和理解。",
+
+
+# New trigger command-related strings
+
+## Contained in description of advancements that have a trigger command
+"To view progress, run:": "執行此以查閱進度：",
+
+"Custom Statistics": "自定義統計數據",
+
+"Days played:": "遊玩天數",
+"Food items eaten:": "食物攝食統計",
+"Loot chests opened:": "寶箱開啟數",
+"Gold Bartered to Piglins:": "與豬布林交易次數",
+
+"You have eaten an apple every day for": "您已經連續",
+# Number
+"days.": "天每天吃一個蘋果",
+"You have eaten an apple today.": "您今天已經吃了蘋果",
+"You have not eaten an apple today.": "您今天還未吃蘋果",
+"If you have just slept, and it says you have eaten an apple when you actually haven't yet, try running this trigger again in 10 seconds.": "如果您剛睡過覺，並且它說您已經吃了蘋果，但您實際上還沒有吃，請嘗試在10秒後再次執行指令。",
+
+
+# Miscellaneous
+
+## Contained in description of the root in the BlazeandCave's Advancements tab
+"Thank you to all of my Patrons!": "感謝我所有的贊助者們！",
+
+## Contained in the reward text of the 'Smithing With Style' advancement
+"of each kind of Smithing Template": "所有種類的鍛造模板",
+
+## Contained in the description of 'Stack all the Items'
+"You only need a stack of one kind of Smithing Template": "你只需要某一種類的鍛造模板1組",
+
+## Used in advancement message tooltips, where the %1$s bit is replaced with the name of the tab that advancement is contained in
+## For example 'Mining tab', 'Building tab', etc.
+"%1$s tab": "%1$s面板",
+
+## Global Install function in the Technical Settings
+"Global install": "全面安裝",
+"Properly installs Hardcore, Terralith and other add-on versions of BlazeandCave's Advancements Pack that have been placed in your world's datapacks folder by reordering datapack priorities": "通過重新排序指令包優先級，正確安裝已放置在世界中的指令包檔案夾中的 Hardcore、Terralith 和 BlazeandCave成就包的其他附加版本"
 
 
 

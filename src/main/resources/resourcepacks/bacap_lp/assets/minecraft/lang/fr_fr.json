@@ -8,7 +8,7 @@
     # Currently the text that appears with reward functions are not translatable - support for translating the reward functions messages will come in a later update.
     
     # Language: Français (French)
-    # Author: Personnedu59 (1.8, 1.14), Zangdarss (1.8), Chucky2401 (1.10), TaeliaDideaux (1.13)
+    # Author: Personnedu59 (1.8, 1.9, 1.11, 1.12, 1.14, 1.15, 1.16), Zangdarss (1.8), Chucky2401 (1.10), TaeliaDideaux (1.13)
     # Pack version supported: 1.14
     
     # All language entries are organised in alphabetical order of file name as of 1.3
@@ -4796,11 +4796,460 @@
 "It's my fence post! Seriously, get out!": "C’est mon Poteau ! Alors maintenant, dehors !",
 
 "Stone of the Farlands": "Une pierre lointaine",
-"A preserved piece of stone from the lands that existed before Beta 1.8": "Une relique de pierre préservée d’un pays qui existait avant la Beta 1.8"
+"A preserved piece of stone from the lands that existed before Beta 1.8": "Une relique de pierre préservée d’un pays qui existait avant la Beta 1.8",
 
 
 
 
-# All advancements and trophies that get added in versions 1.15 or later will be added down here for easy locating by translators who wish to update their language file
+## All advancements added in version 1.15 are here
+"Nerds Never Die": "Les geeks ne meurent jamais",
+"Name a Piglin Brute 'Technoblade'": "Nommez une Piglin Barbare « Technoblade »",
+
+"And make it double!": "Deux c’est mieux !",
+"Play a jukebox near some Allays, then give one an Amethyst Shard and see what happens!": "Jouez un Jukebox proche d’un Allay, puis donnez-lui un cristal d’améthyste et observez le résultat !",
+
+"Living Dummy": "Abruti",
+"Get killed from hitting an Armor Stand": "Faites-vous tuer par un Porte-armure",
+
+# Used in hardcore version
+"Get hurt from hitting an Armor Stand": "Prenez des dégats d’un Porte-armure",
+
+"Built on Sand, Set in Stone": "Chateau de sable",
+"Craft or collect a stack of all forms of Sandstone and Red Sandstone": "Craftez ou collectez une pile de toutes les formes de grès et de grès rouge",
+
+"Hot Chocolate": "Choooo-cacao",
+"Plant some cocoa in the nice steamy Nether": "Plantez du cacao dans le Nether",
+
+"Silence of the Lambs": "Le silence des agneaux",
+"Bring a Sheep into an Ancient City and silence it": "Amenez un Mouton dans une Ancienne Cité et faites-le taire",
+
+"It's High Noon": "Duel au Soleil",
+"Snipe a Husk from 50 blocks away while riding a Horse": "Tirez un Zombie Momifié à 50 blocs de distance en étant à Cheval",
+
+"Spleaf": "Plop",
+"Kill a mob using a shovel while both of you are standing on a Big Dripleaf": "Tuez une Entité avec une pelle alors que vous vous trouvez tous les deux sur une grande foliogoutte",
+
+"There it goes…": "Allo la Terre ? Ici la Lune",
+"Kill a mob at the bottom of the world from the build limit using any kind of projectile": "Tuez une Entité à la limite basse du monde depuis la limite haute du monde avec n’importe quel projectile",
+
+"Unending Hell": "Un enfer sans fin",
+"Travel directly from the End to the Nether": "Voyagez instantanément de l’End vers le Nether",
+
+
+# Missing from previous versions
+"Undying Fandom": "Tes fans t’attendent",
+"Receive every type of gift from Villagers as a Hero of the Village": "Recevez tous les types de cadeau de Villageois en étant un Héros du Village",
+
+"Dig through some Rooted Dirt beneath an Azalea Tree so you can find a Lush Cave": "Creusez de la terre racineuse sous un Azalée pour tomber dans une caverne luxuriante",
+
+
+# Added to Terralith version
+"Totally Not Terraria": "Définitivement pas Terraria",
+"Find an Underground Cabin": "Trouvez un chalet sous-terrain",
+
+
+# Trophies added in 1.15
+"Crown of the Potato King": "La Couronne du Roi Patate",
+"A crown forged in the purest gold, made by the richest of Piglins": "Une couronne forgée dans l’or le plus pur, par les plus riches Piglins",
+"Worn only by Alex (aka Technoblade), the one and only Potato King": "Portée uniquement par Alex (alias Technoblade), le seul et l’unique Roi Patate",
+
+"Tinfoil Mining Helmet": "Casque de mineur d’Alu",
+"Baked by a chef and hermit known for": "Préparé par un chef et ermite connu pour",
+"extensive and exquisite branch mining": "faire de trop longues et interminables galleries de minage",
+
+"Calendar": "Calendrier",
+"I hate Mondays": "Je déteste les lundis",
+
+# Farlander trophy description fix
+"A preserved piece of stone from": " Une relique de pierre préservée",
+"the lands that existed before Beta 1.8": "d’un pays qui existait avant la Beta 1.8",
+
+
+# Miscellaneous strings from compatibility versions
+"Advancement added by Terralith version": "Progrès ajoutés par la version Terralith",
+
+"Modified by the Amplified Nether version": "Modifié par la version Amplified Nether",
+
+
+# Configuration menu additions in 1.15 (including the Help Menu)
+"Click to follow link": "Cliquez pour ouvrir le lien",
+
+"The Welcome Message appears when a player logs into the world for the first time. On servers that already have a custom welcome message, this should be turned off": "Le message de Bienvenue apparait quand un joueur se connecte pour la première fois. Sur les serveurs qui ont déjà un message customisé de Bienvenue, ceci devrait être désactivé",
+
+"Item Rewards are a small amount of bonus items awarded upon completing some advancements": "Les objets recompenses sont des petits objets bonus offerts pour avoir complété certains progrès",
+"Experience Rewards are awarded upon completing some advancements, adding directly to a player's XP count": "L’expérience bonus est offerte après avoir complété certains progrès, elle s’ajoute directement au compteur d’expérience du joueur",
+"Trophies are decorative items awarded upon completing some advancements, in particular challenges, super challenges and milestones": "Les trophies sont des objets décoratifs offerts pour avoir complété certains progrès, surtout des challenges, super challenges et les accomplissements d’onglet",
+
+"Cooperative Mode shares every advancement gained among every player": "Le mode coopératif partage tous les progrès gagnés entre tous les joueurs",
+"Team Cooperative Mode works similarly, but only shares among players of the same team": "Le mode équipes cooperatives marche de manière similaire, mais ne partage les progrès qu’entre les joueurs d’une même équipe",
+
+"Settings for what messages that appear upon completing each tier of advancement should appear": "Options pour personnaliser pour quels types de progrès les messages apparaissent",
+"Settings for what type of scoreboard to display and where": "Options pour définir quel type de tableau des scores apparait et où",
+"Functions for updating, resetting and revoking advancements": "Commandes pour mettre à jour, remettre à zero ou retirer des progrès",
+"Need help understanding how the datapack, this config menu, or anything else works?": "Besoin d’aide pour comprendre comment le datapack, le menu de configuration ou n’importe quoi d’autre marche ?",
+
+"Help": "Aide",
+
+# Help Menu
+"Help Menu": "Menu d’aide",
+
+"Full documentation on how to use the Config Menu": "Toute la documentation sur le Menu de Configuration",
+"How to update to new datapack versions": "Comment mettre à jour à une nouvelle version du datapack",
+"How to add players to teams": "Comment ajouter des joueurs dans une équipe",
+"Important Links": "Liens importants",
+"Troubleshooting": "Problèmes",
+"Frequently Asked Questions": "FAQ",
+
+# # How to update to new datapack versions
+"1) Make a backup of your world for safety if you mess anything up": "1) Faites une sauvegarde de votre monde au cas où vous fassiez une fausse manipulation",
+"2) Leave your world for more safety and don't go in during the process": "2) Déconnectez-vous pour plus de sécurité et ne vous connectez pas pendant la procédure",
+"3) Delete the old datapacks COMPLETELY from your world": "3) Supprimez COMPLETEMENT les vieux datapacks de votre monde",
+"4) Copy and paste in the new updated datapacks": "4) Copiez et collez les nouveaux datapacks (mis à jour) dans votre monde",
+"5) Go into your world. If the new datapacks are for a newer version of Minecraft make sure you are now using that version": "5) Connectez-vous. Si les nouvelles versions sont pour une nouvelle version de Minecraft, attention de vous connecter dans la version compatible",
+"6) If you messed up, go to your backup, make a backup of your backup, then repeat steps 2-6 on the backup": "6) Si vous ratez, utilisez votre sauvegarde, faites une sauvegarde de la sauvegarde et répétez les étapes 2 à 6",
+
+# # How to add players to teams
+"This datapack adds 16 teams, one of each colour, that this datapack can work with.": "Ce datapack ajoute 16 équipes compatibles avec lui, une de chaque couleur",
+"For Team Cooperative Mode and team-based scoreboards to work properly, players MUST be added to these teams using the following command:": "Pour le mode équipes cooperatives et les tableaux des scores basés sur les équipes, les joueurs DOIVENT être ajoutés aux équipes en utilisant la commande suivante :",
+# Command is not translatable
+"You may freely change the team's display name, prefix and suffix using their respective commands as well": "Vous pouvez modifier librement le nom de l’équipe, son préfixe et suffixe, en utilisant respectivement ces commandes",
+
+# # Important Links
+"Language Pack": "Pack de langages",
+"The Language Pack is a resource pack that translates all advancements and trophies into other languages.": "Le Pack de langages est un pack de ressources qui traduit tous les progrès et trophées dans d’autres langues",
+
+"Hardcore Version": "Version Hardcore",
+"The Hardcore Version is an add-on datapack that makes the datapack possible to complete in Hardcore Mode.": "La version Hardcore est un ajout du datapack qui lui permet d’être complété en mode Hardcore",
+
+"Terralith Version": "Version Terralith",
+"The Terralith Version is an add-on datapack that adds advancements for the Terralith datapack by Starmute.": "La version Terralith est un ajout du datapack qui amène des progrès pour le datapack Terralith de Starmute",
+
+"Advancements Docmentation": "Documentation",
+"The Advancements Docmentation is a spreadsheet detailing every advancement in the datapack.": "La Documentation est un tableur détaillant tous les progrès du datapack",
+
+"List of Trophies": "Liste des trophées",
+"A spreadsheet detailing every trophy in the datapack.": "Un tableur détaillant tous les trophées du datapack",
+
+"Discord": "Discord",
+
+"Patreon": "Patreon",
+
+# # Troubleshooting
+"If certain aspects of this datapack are not working properly (e.g. Advancements are granted automatically when they shouldn't), make sure you are using the correct version of the datapack for the Minecraft version you are running.": "Si certaines propriétés du datapack ne fonctionnent pas correctement (ex : des progrès obtenus automatiquement sans devoir l’être), verifies que vous utilisez une version du datapack compatible avec votre version de Minecraft",
+"In addition, some advancements may break on Spigot or Paper servers.": "De plus, quelques progrès peuvent être détraqués par les serveurs Spigot ou Paper",
+
+# # FAQ Menu
+"Why aren't all tabs visible at the start?": "Pourquoi tous les onglets ne sont-ils pas visibles dès le départ ?",
+"How do I install the Language Pack?": "Comment puis-je installer le pack de langages ?",
+"How can I translate the advancements into a new language?": "Comment puis-je traduire les progrès dans une nouvelle langue ?",
+"What is the name of the mod that lets you see progress on advancements?": "Quel est le nom du mode qui montre la progression dans les progrès ?",
+
+# # # Why aren't all tabs visible at the start?
+"A tab will not show up if you haven't gained any advancements in that tab yet.": "Un onglet n’est visible que si vous avez obtenu un progrès dedans",
+"Most root advancements are easy to obtain, but some are further along in progression.": "La plupart des progrès racine sont simples à obtenir, mais certains sont plus distants dans la progression",
+"Notably, the Super Challenges tab is not unlocked until after defeating the Ender Dragon.": "Notamment, les Missions impossibles ne se dévérouilles qu’après avoir battu le Dragon de l’End",
+
+# # # How do I install the Language Pack?
+"The Language Pack is NOT a datapack and is not installed in the same way.": "Le pack de langages n’est PAS un datapack et ne s’installe pas de la même manière",
+"Instead, it is a resource pack, and it is installed just like any other resource pack.": "En effet, c’est un pack de ressources, et cela s’installe comme n’importe quell pack de ressources",
+"Place it into your resourcepacks folder, then select it in the resource pack menu.": "Placez-le dans votre dossier “resourcepacks”, puis sélectionnez le dans le menu des packs de ressources",
+"Once you do this, the custom advancements will appear in whatever language you have selected if this language is supported.": "Une fois fait, les progrès du pack apparaitront dans la langue sélectionée si celle-ci est supportée",
+
+# # # How can I translate the advancements into a new language?
+"Download the Language Pack, unzip it, then locate the file named base_language_file.json": "Téléchargez le pack de langages, décompressez-le, puis trouvez le fichier nommé base_language_file.json",
+"Follow the instructions within in order to translate your language.": "Suivez les instructions s’y trouvant pour le traduire dans votre langue",
+"If you finish translating a new language, you can send it to the creator (Cavinator1) on Planet Minecraft or Discord and it may get added in a future update!": "Si vous avez fini de traduire une nouvelle langue, vous pouvez l’envoyer au créateur (Cavinator1) sur Planet Minecraft ou Discord et il pourra être ajouté dans une future mise à jour",
+"You will be credited for your contributions to translation.": "Vous serez crédité pour vos contributions aux traductions",
+
+# # # What is the name of the mod that lets you see progress on advancements?
+"The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "Le mode en question s’appelle Advancement Info, il montre la progression de chaque progrès.",
+"It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "Il est très utile, surtout pour les Missions Impossibles avec beaucoup de conditions comme “Tous les blocs”.",
+"It can be downloaded here:": "Il peut être téléchargé ici :",
+# Link is not translatable
+
+
+
+
+## All advancements added in version 1.16 are here
+"Hanging Around": "Pendu par une tortue",
+"Put up a Hanging Sign": "Placez une pancarte",
+
+"Sign Off": "PASnneau !",
+"Use honeycomb to wax a sign, setting its ink for eternity": "Utilisez un rayon de miel pour cirer une pancarte, imprégnant son encre pour l’éternité",
+
+"Shelf Expression": "DéLIVRE moi !",
+"Fill a Chiseled Bookshelf with books": "Emprisonnez un livre dans une bibliothèque sculptée",
+
+"Bamboozled": "Il tape sur des bambous et ça lui fait du bien",
+"Craft every item made out of bamboo wood": "Fabriquez tous les objets en bambou",
+
+"Cherry Bomb": "Salut moi c’est Cerise",
+"Craft every item made out of cherry wood": "Fabriquez tous les objets en cerisier",
+
+
+"Desert Rider": "La cavalrie du désert",
+"Find a Camel in a desert village and ride it": "Trouvez un Dromadaire dans un Village du désert et chevauchez-le",
+
+"Hump Day": "Ca pique sur la langue",
+"Breed two Camels using cactus": "Reproduisez ensemble deux Dromadaires à l’aide de cactus",
+
+"The High Road": "Tout là-haut, le monde est petit",
+"Kill a hostile monster with a melee attack while riding a Camel": "Tuez un Monstre hostile avec une attaque de mélée depuis le dos d’un Dromadaire",
+
+
+"Pretty in Pink": "Kawaii en rose",
+"Find a Cherry Grove": "Trouvez un biome rempli de cerisiers",
+
+
+"Brushed Away": "Dépoussiéré",
+"Craft a Brush using a feather, copper and a stick": "Fabriquez un pinceau avec une plume, du cuivre et un bâton",
+
+"Respecting the Remnants": "Sa place est dans un musée",
+"Using a Brush, carefully excavate a Pottery Sherd from a suspicious block": "Brossez un bloc suspect pour obtenir un tesson de poterie",
+
+"Careful Restoration": "Restauration minutieuse",
+"Put together a Decorated Pot using four Pottery Sherds": "Fabriquez un vase décoré à partir de 4 tessons de poterie",
+
+"Pottery Exhibition": "Exposition potière",
+"Find one of each type of Pottery Sherd throughout your archaeology expeditions": "Trouvez une variante de chaque de tesson de poterie dans vos expeditions archéologiques",
+
+"Life… uhh… finds a way": "La vie… euh… trouve un moyen",
+"Find a strange egg among the sand of an Ocean Ruin using a Brush. Smells interesting": "Trouvez un œuf étranger dans le sable suspect d’une ruine sous-marine chaude.",
+
+"Truffle Worm": "Il a eu du nez",
+"Have a Sniffer dig up seeds": "Récupérez des graines déterrées par un Renifleur",
+
+"Jurassic Sniff": "Jurassique sniff",
+"Breed two Sniffers together using Torchflower Seeds": "Reproduisez ensemble deux Renifleurs en utilisant des graines de torche-fleur",
+
+"Little Sniffs": "Petit case-graine",
+"Feed a Snifflet": "Nourrissez un Reniflet",
+
+"Planting the Past": "Paléobotaniste",
+"Plant any Sniffer Seed": "Plantez une graine déterrée par un Renifleur",
+
+"Happy Trails!": "Chemin enfoui",
+"Discover the Trail Ruins": "Trouvez un village enfoui en ruine",
+
+"Raiders of the Lost Trim": "Les pilleurs de forge",
+"Carefully excavate a Smithing Template from the Trail Ruins": "Extrayez méticuleusement un modèle de forge dans un village enfoui en ruine",
+
+"A Chiptune Relic": "Un CD terreux",
+"Excavate an ancient record from within the Trail Ruins": "Extrayez un disque ancient dans un village enfoui en ruine",
+
+"Good-Lookin’ Treasure": "C’est plutôt pas mal",
+"Find a Smithing Template": "Trouvez un modèle de forge",
+
+"Crafting a New Look": "Motivé par les motifs",
+"Use a Smithing Template to apply a trim to a piece of armor": "Fabriquez une pièce d’armure ornée en utilisant une table de forgeron",
+
+"Mold Maker": "Les diamants c’est plus à la mode",
+"Use seven diamonds to duplicate a Smithing Template": "Utilisez sept diamants pour dupliquer un modèle de forge",
+
+"Coordinated Flair": "Un look imparable",
+"Wear a suit of armor with all four pieces trimmed with the same material": "Revêtissez des pièces d’armure avec les quatres pièces possédant le même matériaux d’ornement",
+
+"Chromatic Armory": "Une armurerie colorée",
+"Trim pieces of armor with all types of materials": "Ornez des pièces d’armure de tous les types de matériaux possibles",
+
+"Genesis of the End": "Une vue sur la fin",
+"Find the Eye Smithing Template in a Stronghold": "Trouvez un modèle de forge ornement des yeux dans une forteresse",
+
+"Vexingly Hard to Find": "Vexé d’avoir été trouvé",
+"Find the Vex Smithing Template in a Woodland Mansion": "Trouvez un modèle de forge ornement des Vex dans un manoir",
+
+"The Sound of Silence": "Le bruit du silence",
+"Find the Silence Smithing Template in an Ancient City": "Trouvez un modèle de forge ornement du silence dans une cité ancienne",
+
+"Smithing With Style": "C’est en forgeant qu’on devient",
+"Apply every type of armor trim at least once": "Appliquez tous les modèles de forge au moins au fois",
+
+"Stacked Smither": "Un paquet de motifs",
+"Obtain a stack of every Smithing Template": "Obtenez une pile entière de chaque modèle de forge",
+
+
+"Maximum Resistance": "Aegis maxima",
+"Take a hit from the Warden with the maximum possible protection": "Prenez un coup de Warden avec le maximum de protection possible",
+
+
+"The Power of Books": "Le pouvoir des livres",
+"Read the power signal of a Chiseled Bookshelf using a comparator": "Captez le signal de puissance d’une bibliothèque sculptée en utilisant un comparateur",
+
+"Calibration Sensation": "Une sensation calibrée",
+"Craft a Calibrated Sculk Sensor using Amethyst Shards": "Fabriquez un capteur sculk calibré avec un éclat d’améthyste",
+
+"Monstrous Music": "Musique monstrueuse",
+"Play Note Blocks with each type of mob head above it": "Jouez un bloc musical avec chaque tête de créature dessus",
+
+
+"Om Nom Nom": "Crunch crunch crunch",
+"Eat 200 food items": "Mangez 200 de nourriture",
+
+"Yum Yum Yummo": "Miam miam miam",
+"Eat 1000 food items": "Mangez 1000 de nourriture",
+
+"Food, Glorious Food!": "Vive la nourriture !",
+"Eat 5000 food items": "Mangez 5000 de nourriture",
+
+"Loot ‘Em!": "Pillez-les !",
+"Open 10 loot chests": "Ouvrez 10 coffres à butin",
+
+"More For Me": "Ca en fera plus pour moi",
+"Open 100 loot chests": "Ouvrez 100 coffres à butin",
+
+"I <3 Chests": "J’<3 les coffres",
+"Open 500 loot chests": "Ouvrez 500 coffres à butin",
+
+"Giga XP Grinder": "Giga XP",
+"Reach 1000 experience levels": "Atteignez 1000 niveaux d’expérience",
+
+
+"Time to Upgrade!": "C’est l’heure de la mise à jour",
+"Find a Netherite Upgrade Smithing Template in a Bastion Remnant": "Trouvez une amelioration en netherite dans un bastion",
+
+"Piglin Peril": "Fais pas ta tête de cochon",
+"Obtain a Piglin Head by blowing up a Piglin with a Charged Creeper": "Obtenez une tête de Piglin en le faisant exploser par un Creeper chargé",
+
+
+"Poglin!": "Brochette",
+"Obtain a stack of Piglin Heads": "Obtenez une pile entière de têtes de Piglin",
+
+
+"You are a big cheater!": "Espèce de gros tricheur !",
+"You don't want to have this advancement unlocked!": "Tu n’as pas envie d’avoir débloqué ce progrès… Vraiment…",
+
+
+# Description additions and changes in 1.16
+
+## This is used to list blocks and items that are not required for certain advancements
+"The following are not required:": "Ceux-ci ne sont pas nécessaires :",
+
+## New description for 'Stripper'
+"Strip the bark off every type of log, stem, and bamboo block": "Mettez à nu tout type de bûche, bois, tige, hyphes ou bloc de bambou",
+
+## New description for 'Master Logger'
+"Cut down a full stack of logs and stems of all types": "Coupez une pile entière de chaque type de bûches et tiges",
+
+## New descriptions for Mining, Monsters and Adventure tab root advancements
+"Dig deep down, mine up ore": "Mine profonde, pas que du charbon",
+
+"Battle against the monsters of darkness": "Bats toi contre les forces du mal",
+
+"Village, pillage and exploration": "Village, pillage et exploration",
+
+
+# Trophies added in 1.16
+"Ch-ch-ch-ch-ch-ch-Cherry bomb!": "Bom-bom-bom-bom-bom-bom-bombe cerise !",
+"“I wanna explode,” says Cherry #1": "“Je veux exploser,” dit la cerise 1",
+"“No, let's detonate instead!” says his brother, Cherry #2": "“Non, détonons plutôt !” dit sa soeur, la cerise 2",
+"After intense consultation they agree to EXPLODONATE": "Finalement, les cerises coupent la poire en deux : elles explotoneront.",
+
+"Nokia 3310": "Nokia 3310",
+"Awarded to players who prove themselves as unbreakable as this object": "Remis aux joueurs aussi incassable que cette brique",
+
+"Body Pillow": "Oreiller corporel",
+"Large fandoms result in questionable merchandise such as": "Les grandes fandoms donnent résultat à des marchandises douteuses comme",
+"body pillows featuring your own likeness being produced": "les oreillers corporels à votre image en cours de production",
+
+"Golden Idol": "Statuette dorée",
+"Stealing this may result in a giant boulder rolling after you": "Voler ceci peut résulter en un immense rocher qui déboule sur vous",
+
+"Tron Suit": "Costume Tron",
+"The Grid. A digital frontier": "La Grille. Une frontière digitale",
+"I tried to picture clusters of information": "J’ai tenté d’obtenir des informations",
+"as they moved through the computer": "alors qu’elles avançaient dans mon ordinateur",
+"What did they look like? Ships? Motorcycles?": "A quoi ressemblaient-elles ? Des vaisseaux ? Des motos ?",
+"Were the circuits like freeways?": "Est-ce que les circuits sont comme des autoroutes ?",
+"I kept dreaming of a world I thought I'd never see": "Je rêve en vain d’un monde que je ne verrai jamais",
+"And then, one day... I got in": "Et puis un jour… j’y suis entré",
+
+"The Midnight - Monsters": "Les démons de minuit !",
+"I was wrong, love's a con": "M’entraînent, jusqu’à l’insomnie ! Les fantômes de l’ennui !",
+
+"Fart in a Jar": "Pet dans un pot",
+"May annoy others": "Peut incommoder les autres",
+
+"Mammoth Steak": "Steak de mammouth",
+"Just picture a mammoth steak, fried, roasted or stewed!": "Imagine un steak de mammouth… grillé… rôti… en ragout !",
+
+"Mimic": "Contrefaçon",
+"You didn't think you could open that many chests": "Tu ne pensais quand même pas pouvoir ouvrir autant de coffres",
+"and not come across one of these?": "sans tomber sur une contrefaçon ? Si ?",
+
+"Poglin": "Brochette",
+"So when I MLG water-bucket... Poglin!": "Tu as bien mérité de taper un croc",
+
+
+# New welcome message strings
+"Welcome!": "Bienvenue !",
+
+"If you enjoy, your presence on my": "Si vous aimez le contenu, vous êtes le bienvenue sur mon ",
+# Discord
+"would be welcome!": "Suivez le lien !",
+
+"Thank you for downloading": "Merci d’avoir téléchargé",
+"If you wish to change settings, use the following command:": "Si vous voulez changer les options, utilisez la commande suivante :",
+"Want to keep up with updates to the Advancements Pack? Join my": "Vous voulez vous tenir informé des mises à jour du Pack ? Rejoingez mon",
+# Discord
+"and give yourself the Advancement Pack Squad in #roles!": "et attribuez-vous le role “Advancement Pack Squad” dans #roles !",
+
+"Note from the developer": "Note du développeur",
+
+"This is an Alpha Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "Ceci est une version Alpha du Pack de Progrès BlazeandCave, designée pour des snapshots de la prochaine mise à jour majeure de Minecraft.",
+"All brand-new advancements included in this version are intended for trigger testing purposes and do not yet have reward functions.": "Tous les nouveaux progrès dans cette version sont ajoutés pour les tester, et ne possèdent pas encore de function de recompenses.",
+"This means they currently do not have custom advancement completion messages, will not count towards the advancements scoreboard, and don't get shared in cooperative mode.": "Cela signifie qu’ils n’ont pas de message customisé de complétion, ne comptent pas dans les tableaux des scores et ne sont pas partagés dans le mode coopératif.",
+"This functionality will be added in the first Beta Build, which will be released when Minecraft snapshots begin entering a largely bug-fixing period in preparation for the major Minecraft update's release.": " Cette fonctionnalité sera ajotuée dans la première version Beta, qui est rendue publique quand les snapshots de Minecraft commencent à être orientée vers uniquement de la résolution de bugs.",
+"Thank you for your patience and understanding.": "Merci pour votre patience et votre compréhension",
+
+"This is a Beta Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": " Ceci est une version Beta du Pack de Progrès BlazeandCave, designée pour des snapshots de la prochaine mise à jour majeure de Minecraft.",
+"This version of the datapack should be fairly stable and playable, with every brand-new advancement working at full functionality, but there may be some unwanted bugs or other issues.": "Cette version du Pack devrait être plutôt stable et jouable, avec chaque nouveau progrès fonctionnant entièrement, mais il peut toujours y avoir de nombreux bugs et problèmes.",
+"Thank you for your patience and understanding.": "Merci de votre patience et de votre compréhension",
+
+
+# New trigger command-related strings
+
+## Contained in description of advancements that have a trigger command
+"To view progress, run:": "Pour voir la progression, utilisez",
+
+"Custom Statistics": "Statistiques customisées",
+
+"Days played:": "Jours joués",
+"Food items eaten:": "Nourriture mangée",
+"Loot chests opened:": "Coffres de butin ouverts",
+"Gold Bartered to Piglins:": "Or troqué aux Piglins",
+
+"You have eaten an apple every day for": "Vous avez mangé une pomme chaque jour pendant",
+# Number
+"days.": "jours.",
+"You have eaten an apple today.": "Vous avez mangé une pomme aujourd’hui.",
+"You have not eaten an apple today.": "Vous n’avez pas mangé de pomme aujourd’hui.",
+"If you have just slept, and it says you have eaten an apple when you actually haven't yet, try running this trigger again in 10 seconds.": "Si vous venez de dormir et que la commande vous dit que vous avez mangé une pomme aujourd’hui alors que ça n’est pas encore le cas, essaiez de refaire la commande dans une dizaine de secondes.",
+
+
+# Miscellaneous
+
+## Contained in description of the root in the BlazeandCave's Advancements tab
+"Thank you to all of my Patrons!": "Merci à tous mes Patrons !",
+
+## Contained in the reward text of the 'Smithing With Style' advancement
+"of each kind of Smithing Template": "modèle de forge de chaque",
+
+## Contained in the description of 'Stack all the Items'
+"Pottery Sherd": "Tesson de poterie",
+"You only need a stack of one kind of Smithing Template": "Vous n’avez besoin que d’une pile entière d’un seul type de modèle de forge",
+
+## Used in advancement message tooltips, where the %1$s bit is replaced with the name of the tab that advancement is contained in
+## For example 'Mining tab', 'Building tab', etc.
+"%1$s tab": "Onglet %1$s",
+
+## Global Install function in the Technical Settings
+"Global install": "Installation générale",
+"Properly installs Hardcore, Terralith and other add-on versions of BlazeandCave's Advancements Pack that have been placed in your world's datapacks folder by reordering datapack priorities": "Installez mieux les versions Hardcore, Terralith ou autres versions complémentaires du Pack de Progrès BlazeandCave qui sont dans votre dossier de création du monde en réarrangeant l’ordre de priorité de vos datapacks"
+
+
+
+
+# All advancements, trophies and other text strings that get added in versions 1.17 or later will be added down here for easy locating by translators who wish to update their language file
 }
+
 

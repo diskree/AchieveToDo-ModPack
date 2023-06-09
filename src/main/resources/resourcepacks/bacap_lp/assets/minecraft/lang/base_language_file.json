@@ -5044,11 +5044,290 @@
 # # # What is the name of the mod that lets you see progress on advancements?
 "The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "",
 "It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "",
-"It can be downloaded here:": ""
+"It can be downloaded here:": "",
 # Link is not translatable
 
 
 
 
-# All advancements, trophies and other text strings that get added in versions 1.16 or later will be added down here for easy locating by translators who wish to update their language file
+## All advancements added in version 1.16 are here
+"Hanging Around": "",
+"Put up a Hanging Sign": "",
+
+"Sign Off": "",
+"Use honeycomb to wax a sign, setting its ink for eternity": "",
+
+"Shelf Expression": "",
+"Fill a Chiseled Bookshelf with books": "",
+
+"Bamboozled": "",
+"Craft every item made out of bamboo wood": "",
+
+"Cherry Bomb": "",
+"Craft every item made out of cherry wood": "",
+
+
+"Desert Rider": "",
+"Find a Camel in a desert village and ride it": "",
+
+"Hump Day": "",
+"Breed two Camels using cactus": "",
+
+"The High Road": "",
+"Kill a hostile monster with a melee attack while riding a Camel": "",
+
+
+"Pretty in Pink": "",
+"Find a Cherry Grove": "",
+
+
+"Brushed Away": "",
+"Craft a Brush using a feather, copper and a stick": "",
+
+"Respecting the Remnants": "",
+"Using a Brush, carefully excavate a Pottery Sherd from a suspicious block": "",
+
+"Careful Restoration": "",
+"Put together a Decorated Pot using four Pottery Sherds": "",
+
+"Pottery Exhibition": "",
+"Find one of each type of Pottery Sherd throughout your archaeology expeditions": "",
+
+"Life… uhh… finds a way": "",
+"Find a strange egg among the sand of an Ocean Ruin using a Brush. Smells interesting": "",
+
+"Truffle Worm": "",
+"Have a Sniffer dig up seeds": "",
+
+"Jurassic Sniff": "",
+"Breed two Sniffers together using Torchflower Seeds": "",
+
+"Little Sniffs": "",
+"Feed a Snifflet": "",
+
+"Planting the Past": "",
+"Plant any Sniffer Seed": "",
+
+"Happy Trails!": "",
+"Discover the Trail Ruins": "",
+
+"Raiders of the Lost Trim": "",
+"Carefully excavate a Smithing Template from the Trail Ruins": "",
+
+"A Chiptune Relic": "",
+"Excavate an ancient record from within the Trail Ruins": "",
+
+"Good-Lookin’ Treasure": "",
+"Find a Smithing Template": "",
+
+"Crafting a New Look": "",
+"Use a Smithing Template to apply a trim to a piece of armor": "",
+
+"Mold Maker": "",
+"Use seven diamonds to duplicate a Smithing Template": "",
+
+"Coordinated Flair": "",
+"Wear a suit of armor with all four pieces trimmed with the same material": "",
+
+"Chromatic Armory": "",
+"Trim pieces of armor with all types of materials": "",
+
+"Genesis of the End": "",
+"Find the Eye Smithing Template in a Stronghold": "",
+
+"Vexingly Hard to Find": "",
+"Find the Vex Smithing Template in a Woodland Mansion": "",
+
+"The Sound of Silence": "",
+"Find the Silence Smithing Template in an Ancient City": "",
+
+"Smithing With Style": "",
+"Apply every type of armor trim at least once": "",
+
+"Stacked Smither": "",
+"Obtain a stack of every Smithing Template": "",
+
+
+"Maximum Resistance": "",
+"Take a hit from the Warden with the maximum possible protection": "",
+
+
+"The Power of Books": "",
+"Read the power signal of a Chiseled Bookshelf using a comparator": "",
+
+"Calibration Sensation": "",
+"Craft a Calibrated Sculk Sensor using Amethyst Shards": "",
+
+"Monstrous Music": "",
+"Play Note Blocks with each type of mob head above it": "",
+
+
+"Om Nom Nom": "",
+"Eat 200 food items": "",
+
+"Yum Yum Yummo": "",
+"Eat 1000 food items": "",
+
+"Food, Glorious Food!": "",
+"Eat 5000 food items": "",
+
+"Loot ‘Em!": "",
+"Open 10 loot chests": "",
+
+"More For Me": "",
+"Open 100 loot chests": "",
+
+"I <3 Chests": "",
+"Open 500 loot chests": "",
+
+"Giga XP Grinder": "",
+"Reach 1000 experience levels": "",
+
+
+"Time to Upgrade!": "",
+"Find a Netherite Upgrade Smithing Template in a Bastion Remnant": "",
+
+"Piglin Peril": "",
+"Obtain a Piglin Head by blowing up a Piglin with a Charged Creeper": "",
+
+
+"Poglin!": "",
+"Obtain a stack of Piglin Heads": "",
+
+
+"You are a big cheater!": "",
+"You don't want to have this advancement unlocked!": "",
+
+
+# Description additions and changes in 1.16
+
+## This is used to list blocks and items that are not required for certain advancements
+"The following are not required:": "",
+
+## New description for 'Stripper'
+"Strip the bark off every type of log, stem, and bamboo block": "",
+
+## New description for 'Master Logger'
+"Cut down a full stack of logs and stems of all types": "",
+
+## New descriptions for Mining, Monsters and Adventure tab root advancements
+"Dig deep down, mine up ore": "",
+
+"Battle against the monsters of darkness": "",
+
+"Village, pillage and exploration": "",
+
+
+# Trophies added in 1.16
+"Ch-ch-ch-ch-ch-ch-Cherry bomb!": "",
+"“I wanna explode,” says Cherry #1": "",
+"“No, let's detonate instead!” says his brother, Cherry #2": "",
+"After intense consultation they agree to EXPLODONATE": "",
+
+"Nokia 3310": "",
+"Awarded to players who prove themselves as unbreakable as this object": "",
+
+"Body Pillow": "",
+"Large fandoms result in questionable merchandise such as": "",
+"body pillows featuring your own likeness being produced": "",
+
+"Golden Idol": "",
+"Stealing this may result in a giant boulder rolling after you": "",
+
+"Tron Suit": "",
+"The Grid. A digital frontier": "",
+"I tried to picture clusters of information": "",
+"as they moved through the computer": "",
+"What did they look like? Ships? Motorcycles?": "",
+"Were the circuits like freeways?": "",
+"I kept dreaming of a world I thought I'd never see": "",
+"And then, one day... I got in": "",
+
+"The Midnight - Monsters": "",
+"I was wrong, love's a con": "",
+
+"Fart in a Jar": "",
+"May annoy others": "",
+
+"Mammoth Steak": "",
+"Just picture a mammoth steak, fried, roasted or stewed!": "",
+
+"Mimic": "",
+"You didn't think you could open that many chests": "",
+"and not come across one of these?": "",
+
+"Poglin": "",
+"So when I MLG water-bucket... Poglin!": "",
+
+
+# New welcome message strings
+"Welcome!": "",
+
+"If you enjoy, your presence on my": "",
+# Discord
+"would be welcome!": "",
+
+"Thank you for downloading": "",
+"If you wish to change settings, use the following command:": "",
+"Want to keep up with updates to the Advancements Pack? Join my": "",
+# Discord
+"and give yourself the Advancement Pack Squad in #roles!": "",
+
+"Note from the developer": "",
+
+"This is an Alpha Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "",
+"All brand-new advancements included in this version are intended for trigger testing purposes and do not yet have reward functions.": "",
+"This means they currently do not have custom advancement completion messages, will not count towards the advancements scoreboard, and don't get shared in cooperative mode.": "",
+"This functionality will be added in the first Beta Build, which will be released when Minecraft snapshots begin entering a largely bug-fixing period in preparation for the major Minecraft update's release.": "",
+"Thank you for your patience and understanding.": "",
+
+"This is a Beta Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "",
+"This version of the datapack should be fairly stable and playable, with every brand-new advancement working at full functionality, but there may be some unwanted bugs or other issues.": "",
+"Thank you for your patience and understanding.": "",
+
+
+# New trigger command-related strings
+
+## Contained in description of advancements that have a trigger command
+"To view progress, run:": "",
+
+"Custom Statistics": "",
+
+"Days played:": "",
+"Food items eaten:": "",
+"Loot chests opened:": "",
+"Gold Bartered to Piglins:": "",
+
+"You have eaten an apple every day for": "",
+# Number
+"days.": "",
+"You have eaten an apple today.": "",
+"You have not eaten an apple today.": "",
+"If you have just slept, and it says you have eaten an apple when you actually haven't yet, try running this trigger again in 10 seconds.": "",
+
+
+# Miscellaneous
+
+## Contained in description of the root in the BlazeandCave's Advancements tab
+"Thank you to all of my Patrons!": "",
+
+## Contained in the reward text of the 'Smithing With Style' advancement
+"of each kind of Smithing Template": "",
+
+## Contained in the description of 'Stack all the Items'
+"Pottery Sherd": "",
+"You only need a stack of one kind of Smithing Template": "",
+
+## Used in advancement message tooltips, where the %1$s bit is replaced with the name of the tab that advancement is contained in
+## For example 'Mining tab', 'Building tab', etc.
+"%1$s tab": "",
+
+## Global Install function in the Technical Settings
+"Global install": "",
+"Properly installs Hardcore, Terralith and other add-on versions of BlazeandCave's Advancements Pack that have been placed in your world's datapacks folder by reordering datapack priorities": ""
+
+
+
+
+# All advancements, trophies and other text strings that get added in versions 1.17 or later will be added down here for easy locating by translators who wish to update their language file
 }

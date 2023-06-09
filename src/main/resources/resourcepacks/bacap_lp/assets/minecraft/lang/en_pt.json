@@ -5002,7 +5002,7 @@
 "List of Trophies": "Map o' Special Treasure",
 "A spreadsheet detailing every trophy in the datapack.": "A map markin' the spots o' all tha special treasure",
 
-"Discord": "Discord (talk to other pirates!)",
+"Discord": "Discord",
 
 "Patreon": "Patreon (give me booty!)",
 
@@ -5036,11 +5036,290 @@
 # # # What is the name of the mod that lets you see progress on advancements?
 "The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "The ship-mod in question be named Accomplishment Info, which lists all requirements o' each accomplishment.",
 "It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "It be useful, especially for ye True Pirate's Challenges like 'All Yer Construction Blocks!'",
-"It can be downloaded here:": "It can be brought aboard here:"
+"It can be downloaded here:": "It can be brought aboard here:",
 # Link is not translatable
 
 
 
 
-# All advancements, trophies and other text strings that get added in versions 1.16 or later will be added down here for easy locating by translators who wish to update their language file
+## All advancements added in version 1.16 are here
+"Hanging Around": "Hangin' on tha mast",
+"Put up a Hanging Sign": "Put up a Hanged Seal",
+
+"Sign Off": "Seal Off",
+"Use honeycomb to wax a sign, setting its ink for eternity": "Use bee's treasure to wax a seal",
+
+"Shelf Expression": "",
+"Fill a Chiseled Bookshelf with books": "Fill a carv'd stack o' knowledge wit' yer logbooks",
+
+"Bamboozled": "Bambarrr'zl'd",
+"Craft every item made out of bamboo wood": "Make all tha bambarrr items for ye ship!",
+
+"Cherry Bomb": "Cherry Cannon",
+"Craft every item made out of cherry wood": "Make all tha cherry items for ye ship!",
+
+
+"Desert Rider": "Desert Sailor",
+"Find a Camel in a desert village and ride it": "Find a Sand Horse in a desert town an' hop aboard!",
+
+"Hump Day": "Hump Day",
+"Breed two Camels using cactus": "Breed two Sand Horses wit' cactus",
+
+"The High Road": "Tha High Seas",
+"Kill a hostile monster with a melee attack while riding a Camel": "Sink a ship wit' a blow from ye cutlass whilst sailin' on a Sand Horse",
+
+
+"Pretty in Pink": "Pretty in Pink",
+"Find a Cherry Grove": "Sail into a cherry island",
+
+
+"Brushed Away": "Deckswabber",
+"Craft a Brush using a feather, copper and a stick": "Make a paintbrush wit' a feather, bullion o' copper, an' a piece o' timber",
+
+"Respecting the Remnants": "Ain't me type o' treasure",
+"Using a Brush, carefully excavate a Pottery Sherd from a suspicious block": "Usin' a paintbrush, dig up a fragment o' clay from a gruel block",
+
+"Careful Restoration": "Careful Festoonation",
+"Put together a Decorated Pot using four Pottery Sherds": "Put together a Festooned Vase usin' four Clay Fragments",
+
+"Pottery Exhibition": "Vasemaker",
+"Find one of each type of Pottery Sherd throughout your archaeology expeditions": "Find one o' each type o' Clay Fragment",
+
+"Life… uhh… finds a way": "Smells interesting, arr",
+"Find a strange egg among the sand of an Ocean Ruin using a Brush. Smells interesting": "Find a strange cackle fruit among tha sand o' ruin under tha sea",
+
+"Truffle Worm": "Truffle Worm",
+"Have a Sniffer dig up seeds": "Have a Sniffin' Beast dig up seeds",
+
+"Jurassic Sniff": "Jurassic Sniff",
+"Breed two Sniffers together using Torchflower Seeds": "Breed two Sniffin' Beasts together usin' seeds o' torchflower",
+
+"Little Sniffs": "Little Sniffs",
+"Feed a Snifflet": "Feed a little sniffin' beast",
+
+"Planting the Past": "Plantin' the past",
+"Plant any Sniffer Seed": "Plant any seed o' sniffin' beast",
+
+"Happy Trails!": "Happy Trails!",
+"Discover the Trail Ruins": "Land at a Trail Ruin",
+
+"Raiders of the Lost Trim": "Raiders o' the Lost Cut",
+"Carefully excavate a Smithing Template from the Trail Ruins": "Dig up a template o' smithin from tha Trail Ruins",
+
+"A Chiptune Relic": "A Chiptun'n Relic",
+"Excavate an ancient record from within the Trail Ruins": "Dig up an ancient shanty from tha Trail Ruins",
+
+"Good-Lookin’ Treasure": "Good-Lookin’ Treasure",
+"Find a Smithing Template": "Find a template o' smithin'",
+
+"Crafting a New Look": "Cuttin' a New Look",
+"Use a Smithing Template to apply a trim to a piece of armor": "Use a template o' smithin' to apply a cut on yer armor",
+
+"Mold Maker": "Treasure Maker",
+"Use seven diamonds to duplicate a Smithing Template": "Use seven diamonds to copy a template o' smithin'",
+
+"Coordinated Flair": "Colorful Piratin'",
+"Wear a suit of armor with all four pieces trimmed with the same material": "Wear a suit o' armour wit' all four pieces cut wit' tha same material",
+
+"Chromatic Armory": "Captain's Colors",
+"Trim pieces of armor with all types of materials": "Cut pieces o' armor wit' all kinds o' materials",
+
+"Genesis of the End": "Genesis o' tha End",
+"Find the Eye Smithing Template in a Stronghold": "Find an Eye template o' smithin' in a Stronghold",
+
+"Vexingly Hard to Find": "Naggingly Hard to Find",
+"Find the Vex Smithing Template in a Woodland Mansion": "Find a Nagger template o' smithin' in a Land Ship",
+
+"The Sound of Silence": "Tha Ship o' Silence",
+"Find the Silence Smithing Template in an Ancient City": "Find tha' Silence template o' smithin' aboard an Ancient Ship",
+
+"Smithing With Style": "Smithin' With Style",
+"Apply every type of armor trim at least once": "Apply every cut o' armor at least once",
+
+"Stacked Smither": "Stacked Smither",
+"Obtain a stack of every Smithing Template": "Collect a stack o' every template o' smithin'",
+
+
+"Maximum Resistance": "Maximum Protection",
+"Take a hit from the Warden with the maximum possible protection": "Take a hit from the Monstrous Beast wit' the best protection on yer ship!",
+
+
+"The Power of Books": "Tha Power o' Books",
+"Read the power signal of a Chiseled Bookshelf using a comparator": "Read tha power o' a carv'd stack o' knowledge wit' a compaaratorrr",
+
+"Calibration Sensation": "All ears",
+"Craft a Calibrated Sculk Sensor using Amethyst Shards": "Change a big ear o' sculker wit' purple shards o' gem",
+
+"Monstrous Music": "Monstrous Shanties",
+"Play Note Blocks with each type of mob head above it": "Play Hornpipes wit' each type o' skull above 'em",
+
+
+"Om Nom Nom": "Beginnin' o' yer eatin'",
+"Eat 200 food items": "Eat 200 pieces o' food",
+
+"Yum Yum Yummo": "Many meals make up a voyage",
+"Eat 1000 food items": "Eat 1000 pieces o' food",
+
+"Food, Glorious Food!": "Fantastical Feasts!",
+"Eat 5000 food items": "Eat 5000 pieces o' food",
+
+"Loot ‘Em!": "Plunder!",
+"Open 10 loot chests": "Plunder 10 treasure chests",
+
+"More For Me": "Treasure For Me!",
+"Open 100 loot chests": "Plunder 100 treasure chests",
+
+"I <3 Chests": "A Pirate's Life For Me",
+"Open 500 loot chests": "Plunder 500 treasure chests!",
+
+"Giga XP Grinder": "Glorious Ex Pee Grinder",
+"Reach 1000 experience levels": "Pee 1000 ex pee levels",
+
+
+"Time to Upgrade!": "Upgradin' to Cap'n",
+"Find a Netherite Upgrade Smithing Template in a Bastion Remnant": "Find a Captain's Upgrade template o' smithin' in the Devil's Ship",
+
+"Piglin Peril": "Porkin' Peril",
+"Obtain a Piglin Head by blowing up a Piglin with a Charged Creeper": "Obtain a Skull o' Pork wit' a charged cannon shot by yer Explodin' Mate!",
+
+
+"Poglin!": "Porklin!",
+"Obtain a stack of Piglin Heads": "Plunder a stack o' skulls o' pork!",
+
+
+"You are a big cheater!": "Ye a big cheater!",
+"You don't want to have this advancement unlocked!": "Ye don't want this accomplishment on tha high seas!",
+
+
+# Description additions and changes in 1.16
+
+## This is used to list blocks and items that are not required for certain advancements
+"The following are not required:": "These be not needed, arr:",
+
+## New description for 'Stripper'
+"Strip the bark off every type of log, stem, and bamboo block": "Strip the bark off all tha logs, stems and bambarrr blocks",
+
+## New description for 'Master Logger'
+"Cut down a full stack of logs and stems of all types": "What ye be doin' cuttin' timber, ye landlubber?",
+
+## New descriptions for Mining, Monsters and Adventure tab root advancements
+"Dig deep down, mine up ore": "Dig underwater fer metal for ye cannons!",
+
+"Battle against the monsters of darkness": "Swashbucklin' against the creatures o' the seven seas",
+
+"Village, pillage and exploration": "Landlubbers, Pirates an' Skull Forts!",
+
+
+# Trophies added in 1.16
+"Ch-ch-ch-ch-ch-ch-Cherry bomb!": "Ch-ch-ch-ch-ch-ch-Cherry Cannon!",
+"“I wanna explode,” says Cherry #1": "“Me wanna explode,” says Cherry Pirate #1",
+"“No, let's detonate instead!” says his brother, Cherry #2": "“Nay, let's detonate instead!” says his brother, Cherry Pirate #2",
+"After intense consultation they agree to EXPLODONATE": "After sum arguin', thar agree to EXPLODONATE!",
+
+"Nokia 3310": "Small Indesctructible Object",
+"Awarded to players who prove themselves as unbreakable as this object": "No idea what this be, but 'tis be a fit reward for pirates as unbreakable as 'tis!",
+
+"Body Pillow": "Slothin' Pillow",
+"Large fandoms result in questionable merchandise such as": "Can't help bein' as famous as meself,",
+"body pillows featuring your own likeness being produced": "But me fans have some weeeird ideas",
+
+"Golden Idol": "Idol o' Gold",
+"Stealing this may result in a giant boulder rolling after you": "Stealin' this may lead to a giant boulder rolling after thee",
+
+"Tron Suit": "Tron Pirate Suit",
+"The Grid. A digital frontier": "Thar Grid. A digital sea",
+"I tried to picture clusters of information": "Me tried to picture crews o' pirates",
+"as they moved through the computer": "as they moved through the sea",
+"What did they look like? Ships? Motorcycles?": "What did they sail on? Sloops? Galleons?",
+"Were the circuits like freeways?": "Were the currents just like the ocean?",
+"I kept dreaming of a world I thought I'd never see": "I kept dreaming o' a sea me thought me'd never lay me eyes on",
+"And then, one day... I got in": "And then, one day... me got in",
+
+"The Midnight - Monsters": "Monsters Shanty",
+"I was wrong, love's a con": "I be wrong, love be a con",
+
+"Fart in a Jar": "Fart in a Jar",
+"May annoy others": "May impress others",
+
+"Mammoth Steak": "Steak o' Old Elephant",
+"Just picture a mammoth steak, fried, roasted or stewed!": "Just picture a steak o' old elephant, fried, roasted an' stewed!",
+
+"Mimic": "Chest Monster",
+"You didn't think you could open that many chests": "Ye didn't think ye could plunder that many treasure chests",
+"and not come across one of these?": "an' never get attacked by the treasure chest itself?",
+
+"Poglin": "Porklin",
+"So when I MLG water-bucket... Poglin!": "So when I dive off tha crow's nest... Porklin!",
+
+
+# New welcome message strings
+"Welcome!": "Ahoy there!",
+
+"If you enjoy, your presence on my": "If ye enjoy, yer presence aboard my",
+# Discord
+"would be welcome!": "be welcome!",
+
+"Thank you for downloading": "Thank ye fer plunderin'!",
+"If you wish to change settings, use the following command:": "If ye wish to change scribble, use tha followin' fancy words:",
+"Want to keep up with updates to the Advancements Pack? Join my": "Want to know when new challenges get added? Join me",
+# Discord
+"and give yourself the Advancement Pack Squad in #roles!": "an' join tha Advancement Pack Squad in #roles!",
+
+"Note from the developer": "Note from Cap'n Cave",
+
+"This be an Alpha Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "Thar be an Alpha Build o' BlazeandCave's Accomplishments Pack, designed fer snapshots o' tha next major update to tha sea.",
+"All brand-new advancements included in this version are intended for trigger testing purposes and do not yet have reward functions.": "Each new accomplishment included here don't have reward fancy words yet.",
+"This means they currently do not have custom advancement completion messages, will not count towards the advancements scoreboard, and don't get shared in cooperative mode.": "No accomplishment messages, won't count on the score-list, and thar don't get shared in Crew Mode!",
+"This functionality will be added in the first Beta Build, which will be released when Minecraft snapshots begin entering a largely bug-fixing period in preparation for the major Minecraft update's release.": "This will be added in tha first Beta Build, which Cap'n Cave will make when snapshots o' tha sea begin more about bug squashin'.",
+"Thank you for your patience and understanding.": "Savvy?",
+
+"This is a Beta Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "This be a Beta Build o' BlazeandCave's Accomplishments Pack, designed fer snapshots o' tha next major update to tha sea.",
+"This version of the datapack should be fairly stable and playable, with every brand-new advancement working at full functionality, but there may be some unwanted bugs or other issues.": "This version o' tha pack should be sea-ready, wit' every new accomplishment workin' but thar may be some unwanted sea monsters.",
+"Thank you for your patience and understanding.": "Savvy?",
+
+
+# New trigger command-related strings
+
+## Contained in description of advancements that have a trigger command
+"To view progress, run:": "To view progress, use fancy words:",
+
+"Custom Statistics": "Ship's Manifest",
+
+"Days played:": "Days sailed:",
+"Food items eaten:": "Food eaten:",
+"Loot chests opened:": "Treasure chests plundered:",
+"Gold Bartered to Piglins:": "Gold Bartered to Piglins:",
+
+"You have eaten an apple every day for": "Ye have avoided scurvy every day for",
+# Number
+"days.": "days.",
+"You have eaten an apple today.": "Ye have eaten an apple today",
+"You have not eaten an apple today.": "Ye have not eaten an apple today",
+"If you have just slept, and it says you have eaten an apple when you actually haven't yet, try running this trigger again in 10 seconds.": "If ye just snored, and it says ye ate an apple when ye haven't yet, try usin' these fancy words again in 10 seconds.",
+
+
+# Miscellaneous
+
+## Contained in description of the root in the BlazeandCave's Advancements tab
+"Thank you to all of my Patrons!": "Lucrative Sailings to all me Patrons!",
+
+## Contained in the reward text of the 'Smithing With Style' advancement
+"of each kind of Smithing Template": "of each kind o' template o' smithin'",
+
+## Contained in the description of 'Stack all the Items'
+"Pottery Sherd": "Clay Fragment",
+"You only need a stack of one kind of Smithing Template": "Ye only need a stack o' one kind o' template o' smithin'",
+
+## Used in advancement message tooltips, where the %1$s bit is replaced with the name of the tab that advancement is contained in
+## For example 'Mining tab', 'Building tab', etc.
+"%1$s tab": "%1$s section",
+
+## Global Install function in the Technical Settings
+"Global install": "Seawide install",
+"Properly installs Hardcore, Terralith and other add-on versions of BlazeandCave's Advancements Pack that have been placed in your world's datapacks folder by reordering datapack priorities": "Properly installs Captain, Terralith an' other add-on versions o' BlazeandCave's Accomplishments Pack by reorderin' them in tha ship's hold"
+
+
+
+
+# All advancements, trophies and other text strings that get added in versions 1.17 or later will be added down here for easy locating by translators who wish to update their language file
 }

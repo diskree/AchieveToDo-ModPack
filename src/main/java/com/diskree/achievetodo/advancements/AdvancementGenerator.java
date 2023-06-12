@@ -67,23 +67,6 @@ public class AdvancementGenerator {
         Item hintItem = null;
         NbtCompound nbt = new NbtCompound();
         switch (advancement.getId().toString()) {
-            case "blazeandcave:adventure/businessman", "blazeandcave:adventure/master_trader" -> {
-                switch (criterion) {
-                    case "farmer" -> hintItem = Items.BARRIER;
-                    case "fisherman" -> hintItem = Items.BARRIER;
-                    case "shepherd" -> hintItem = Items.BARRIER;
-                    case "fletcher" -> hintItem = Items.BARRIER;
-                    case "librarian" -> hintItem = Items.BARRIER;
-                    case "cartographer" -> hintItem = Items.BARRIER;
-                    case "cleric" -> hintItem = Items.BARRIER;
-                    case "armorer" -> hintItem = Items.BARRIER;
-                    case "weapon_smith" -> hintItem = Items.BARRIER;
-                    case "tool_smith" -> hintItem = Items.BARRIER;
-                    case "butcher" -> hintItem = Items.BARRIER;
-                    case "leatherworker" -> hintItem = Items.BARRIER;
-                    case "mason" -> hintItem = Items.BARRIER;
-                }
-            }
             case "blazeandcave:adventure/chromatic_armory" -> {
                 switch (criterion) {
                     case "amethyst" -> hintItem = Items.AMETHYST_SHARD;
@@ -94,78 +77,11 @@ public class AdvancementGenerator {
                     case "netherite" -> hintItem = Items.NETHERITE_INGOT;
                 }
             }
-            case "blazeandcave:adventure/feeling_ill" -> {
-                switch (criterion) {
-                    case "vindicator" -> hintItem = Items.BARRIER;
-                    case "pillager" -> hintItem = Items.BARRIER;
-                    case "ravager" -> hintItem = Items.BARRIER;
-                    case "witch" -> hintItem = Items.BARRIER;
-                    case "evoker" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:adventure/raidin_master" -> {
-                switch (criterion) {
-                    case "dungeon" -> hintItem = Items.BARRIER;
-                    case "igloo" -> hintItem = Items.BARRIER;
-                    case "desert_pyramid" -> hintItem = Items.BARRIER;
-                    case "jungle_pyramid" -> hintItem = Items.BARRIER;
-                    case "swamp_hut" -> hintItem = Items.BARRIER;
-                    case "village_desert" -> hintItem = Items.BARRIER;
-                    case "village_plains" -> hintItem = Items.BARRIER;
-                    case "village_savanna" -> hintItem = Items.BARRIER;
-                    case "village_snowy" -> hintItem = Items.BARRIER;
-                    case "village_taiga" -> hintItem = Items.BARRIER;
-                    case "mineshaft" -> hintItem = Items.BARRIER;
-                    case "mineshaft_mesa" -> hintItem = Items.BARRIER;
-                    case "stronghold" -> hintItem = Items.BARRIER;
-                    case "fortress" -> hintItem = Items.BARRIER;
-                    case "end_city" -> hintItem = Items.BARRIER;
-                    case "monument" -> hintItem = Items.BARRIER;
-                    case "mansion" -> hintItem = Items.BARRIER;
-                    case "ocean_ruin_cold" -> hintItem = Items.BARRIER;
-                    case "ocean_ruin_warm" -> hintItem = Items.BARRIER;
-                    case "shipwreck" -> hintItem = Items.BARRIER;
-                    case "buried_treasure" -> hintItem = Items.BARRIER;
-                    case "pillager_outpost" -> hintItem = Items.BARRIER;
-                    case "ruined_portal" -> hintItem = Items.BARRIER;
-                    case "bastion_remnant" -> hintItem = Items.BARRIER;
-                    case "ancient_city" -> hintItem = Items.BARRIER;
-                    case "trail_ruins" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:adventure/traveller" -> {
-                switch (criterion) {
-                    case "plains" -> hintItem = Items.BARRIER;
-                    case "desert" -> hintItem = Items.BARRIER;
-                    case "savanna" -> hintItem = Items.BARRIER;
-                    case "taiga" -> hintItem = Items.BARRIER;
-                    case "snow" -> hintItem = Items.BARRIER;
-                }
-            }
             case "blazeandcave:adventure/undying_fandom" -> {
                 String tippedArrowPrefix = "tipped_arrow_";
                 if (criterion.startsWith(tippedArrowPrefix)) {
                     hintItem = Items.TIPPED_ARROW;
                     nbt.putString("Potion", new Identifier(criterion.replace(tippedArrowPrefix, "")).toString());
-                }
-            }
-            case "blazeandcave:adventure/you_are_the_pillager" -> {
-                switch (criterion) {
-                    case "farmer" -> hintItem = Items.BARRIER;
-                    case "fisherman" -> hintItem = Items.BARRIER;
-                    case "shepherd" -> hintItem = Items.BARRIER;
-                    case "fletcher" -> hintItem = Items.BARRIER;
-                    case "librarian" -> hintItem = Items.BARRIER;
-                    case "cartographer" -> hintItem = Items.BARRIER;
-                    case "cleric" -> hintItem = Items.BARRIER;
-                    case "armorer" -> hintItem = Items.BARRIER;
-                    case "weapon_smith" -> hintItem = Items.BARRIER;
-                    case "tool_smith" -> hintItem = Items.BARRIER;
-                    case "butcher" -> hintItem = Items.BARRIER;
-                    case "leatherworker" -> hintItem = Items.BARRIER;
-                    case "mason" -> hintItem = Items.BARRIER;
-                    case "nitwit" -> hintItem = Items.BARRIER;
-                    case "unemployed" -> hintItem = Items.BARRIER;
                 }
             }
             case "blazeandcave:animal/axolotl_of_them" -> {
@@ -178,24 +94,6 @@ public class AdvancementGenerator {
                     case "blue" -> 4;
                     default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 });
-            }
-            case "blazeandcave:animal/birdkeeper" -> {
-                switch (criterion) {
-                    case "red" -> hintItem = Items.BARRIER;
-                    case "blue" -> hintItem = Items.BARRIER;
-                    case "green" -> hintItem = Items.BARRIER;
-                    case "cyan" -> hintItem = Items.BARRIER;
-                    case "gray" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:animal/bunny_lover" -> {
-                switch (criterion) {
-                    case "brown" -> hintItem = Items.BARRIER;
-                    case "white" -> hintItem = Items.BARRIER;
-                    case "green" -> hintItem = Items.BARRIER;
-                    case "cyan" -> hintItem = Items.BARRIER;
-                    case "gray" -> hintItem = Items.BARRIER;
-                }
             }
             case "blazeandcave:animal/caprymphony" -> {
                 switch (criterion) {
@@ -232,90 +130,6 @@ public class AdvancementGenerator {
                     default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 });
                 nbt.put("display", color);
-            }
-            case "blazeandcave:animal/follow_the_leader" -> {
-                switch (criterion) {
-                    case "bee" -> hintItem = Items.BARRIER;
-                    case "cat" -> hintItem = Items.BARRIER;
-                    case "chicken" -> hintItem = Items.BARRIER;
-                    case "cow" -> hintItem = Items.BARRIER;
-                    case "dolphin" -> hintItem = Items.BARRIER;
-                    case "donkey" -> hintItem = Items.BARRIER;
-                    case "fox" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "horse" -> hintItem = Items.BARRIER;
-                    case "skeleton_horse" -> hintItem = Items.BARRIER;
-                    case "iron_golem" -> hintItem = Items.BARRIER;
-                    case "llama" -> hintItem = Items.BARRIER;
-                    case "trader_llama" -> hintItem = Items.BARRIER;
-                    case "mooshroom" -> hintItem = Items.BARRIER;
-                    case "mule" -> hintItem = Items.BARRIER;
-                    case "ocelot" -> hintItem = Items.BARRIER;
-                    case "parrot" -> hintItem = Items.BARRIER;
-                    case "pig" -> hintItem = Items.BARRIER;
-                    case "polar_bear" -> hintItem = Items.BARRIER;
-                    case "rabbit" -> hintItem = Items.BARRIER;
-                    case "sheep" -> hintItem = Items.BARRIER;
-                    case "snow_golem" -> hintItem = Items.BARRIER;
-                    case "strider" -> hintItem = Items.BARRIER;
-                    case "wolf" -> hintItem = Items.BARRIER;
-                    case "zoglin" -> hintItem = Items.BARRIER;
-                    case "axolotl" -> hintItem = Items.BARRIER;
-                    case "goat" -> hintItem = Items.BARRIER;
-                    case "squid" -> hintItem = Items.BARRIER;
-                    case "glow_squid" -> hintItem = Items.BARRIER;
-                    case "frog" -> hintItem = Items.BARRIER;
-                    case "allay" -> hintItem = Items.BARRIER;
-                    case "camel" -> hintItem = Items.BARRIER;
-                    case "sniffer" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:animal/llama_llama_duck_king" -> {
-                switch (criterion) {
-                    case "creamy" -> hintItem = Items.BARRIER;
-                    case "white" -> hintItem = Items.BARRIER;
-                    case "brown" -> hintItem = Items.BARRIER;
-                    case "gray" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:animal/master_farrier" -> {
-                switch (criterion) {
-                    case "white_none" -> hintItem = Items.BARRIER;
-                    case "creamy_none" -> hintItem = Items.BARRIER;
-                    case "chestnut_none" -> hintItem = Items.BARRIER;
-                    case "brown_none" -> hintItem = Items.BARRIER;
-                    case "black_none" -> hintItem = Items.BARRIER;
-                    case "gray_none" -> hintItem = Items.BARRIER;
-                    case "dark_brown_none" -> hintItem = Items.BARRIER;
-                    case "white_white" -> hintItem = Items.BARRIER;
-                    case "creamy_white" -> hintItem = Items.BARRIER;
-                    case "chestnut_white" -> hintItem = Items.BARRIER;
-                    case "brown_white" -> hintItem = Items.BARRIER;
-                    case "black_white" -> hintItem = Items.BARRIER;
-                    case "gray_white" -> hintItem = Items.BARRIER;
-                    case "dark_brown_white" -> hintItem = Items.BARRIER;
-                    case "white_white_field" -> hintItem = Items.BARRIER;
-                    case "creamy_white_field" -> hintItem = Items.BARRIER;
-                    case "chestnut_white_field" -> hintItem = Items.BARRIER;
-                    case "brown_white_field" -> hintItem = Items.BARRIER;
-                    case "black_white_field" -> hintItem = Items.BARRIER;
-                    case "gray_white_field" -> hintItem = Items.BARRIER;
-                    case "dark_brown_white_field" -> hintItem = Items.BARRIER;
-                    case "white_white_dots" -> hintItem = Items.BARRIER;
-                    case "creamy_white_dots" -> hintItem = Items.BARRIER;
-                    case "chestnut_white_dots" -> hintItem = Items.BARRIER;
-                    case "brown_white_dots" -> hintItem = Items.BARRIER;
-                    case "black_white_dots" -> hintItem = Items.BARRIER;
-                    case "gray_white_dots" -> hintItem = Items.BARRIER;
-                    case "dark_brown_white_dots" -> hintItem = Items.BARRIER;
-                    case "white_black_dots" -> hintItem = Items.BARRIER;
-                    case "creamy_black_dots" -> hintItem = Items.BARRIER;
-                    case "chestnut_black_dots" -> hintItem = Items.BARRIER;
-                    case "brown_black_dots" -> hintItem = Items.BARRIER;
-                    case "black_black_dots" -> hintItem = Items.BARRIER;
-                    case "gray_black_dots" -> hintItem = Items.BARRIER;
-                    case "dark_brown_black_dots" -> hintItem = Items.BARRIER;
-                }
             }
             case "blazeandcave:animal/shoe_shed" -> {
                 hintItem = Items.LEATHER_BOOTS;
@@ -369,93 +183,6 @@ public class AdvancementGenerator {
                     default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 });
             }
-            case "blazeandcave:biomes/cold_feet" -> {
-                switch (criterion) {
-                    case "snowy_taiga" -> hintItem = Items.BARRIER;
-                    case "snowy_plains" -> hintItem = Items.BARRIER;
-                    case "ice_spikes" -> hintItem = Items.BARRIER;
-                    case "frozen_river" -> hintItem = Items.BARRIER;
-                    case "snowy_beach" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:biomes/high_feet" -> {
-                switch (criterion) {
-                    case "stony_shore" -> hintItem = Items.BARRIER;
-                    case "windswept_hills" -> hintItem = Items.BARRIER;
-                    case "windswept_forest" -> hintItem = Items.BARRIER;
-                    case "windswept_gravelly_hills" -> hintItem = Items.BARRIER;
-                    case "meadow" -> hintItem = Items.BARRIER;
-                    case "grove" -> hintItem = Items.BARRIER;
-                    case "snowy_slopes" -> hintItem = Items.BARRIER;
-                    case "frozen_peaks" -> hintItem = Items.BARRIER;
-                    case "jagged_peaks" -> hintItem = Items.BARRIER;
-                    case "stony_peaks" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:biomes/one_with_the_forest" -> {
-                switch (criterion) {
-                    case "forest" -> hintItem = Items.BARRIER;
-                    case "flower_forest" -> hintItem = Items.BARRIER;
-                    case "plains" -> hintItem = Items.BARRIER;
-                    case "sunflower_plains" -> hintItem = Items.BARRIER;
-                    case "dark_forest" -> hintItem = Items.BARRIER;
-                    case "birch_forest" -> hintItem = Items.BARRIER;
-                    case "old_growth_birch_forest" -> hintItem = Items.BARRIER;
-                    case "old_growth_pine_taiga" -> hintItem = Items.BARRIER;
-                    case "old_growth_spruce_taiga" -> hintItem = Items.BARRIER;
-                    case "taiga" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:biomes/overgrown" -> {
-                switch (criterion) {
-                    case "swamp" -> hintItem = Items.BARRIER;
-                    case "mangrove_swamp" -> hintItem = Items.BARRIER;
-                    case "mushroom_fields" -> hintItem = Items.BARRIER;
-                    case "sparse_jungle" -> hintItem = Items.BARRIER;
-                    case "jungle" -> hintItem = Items.BARRIER;
-                    case "bamboo_jungle" -> hintItem = Items.BARRIER;
-                    case "cherry_grove" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:biomes/pandamonium" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
-                nbt.putInt("Damage", switch (criterion) {
-                    case "normal" -> 12;
-                    case "aggressive" -> 13;
-                    case "lazy" -> 14;
-                    case "worried" -> 15;
-                    case "playful" -> 16;
-                    case "weak" -> 17;
-                    case "brown" -> 18;
-                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                });
-            }
-            case "blazeandcave:biomes/warm_feet" -> {
-                switch (criterion) {
-                    case "desert" -> hintItem = Items.BARRIER;
-                    case "badlands" -> hintItem = Items.BARRIER;
-                    case "wooded_badlands" -> hintItem = Items.BARRIER;
-                    case "eroded_badlands" -> hintItem = Items.BARRIER;
-                    case "savanna" -> hintItem = Items.BARRIER;
-                    case "savanna_plateau" -> hintItem = Items.BARRIER;
-                    case "windswept_savanna" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:biomes/wet_feet" -> {
-                switch (criterion) {
-                    case "river" -> hintItem = Items.BARRIER;
-                    case "deep_ocean" -> hintItem = Items.BARRIER;
-                    case "ocean" -> hintItem = Items.BARRIER;
-                    case "beach" -> hintItem = Items.BARRIER;
-                    case "deep_frozen_ocean" -> hintItem = Items.BARRIER;
-                    case "frozen_ocean" -> hintItem = Items.BARRIER;
-                    case "cold_ocean" -> hintItem = Items.BARRIER;
-                    case "deep_cold_ocean" -> hintItem = Items.BARRIER;
-                    case "lukewarm_ocean" -> hintItem = Items.BARRIER;
-                    case "deep_lukewarm_ocean" -> hintItem = Items.BARRIER;
-                    case "warm_ocean" -> hintItem = Items.BARRIER;
-                }
-            }
             case "blazeandcave:building/ah_my_old_enemy" -> {
                 if (criterion.equals("prismarine_bricks_stairs")) {
                     hintItem = Items.PRISMARINE_BRICK_STAIRS;
@@ -500,510 +227,6 @@ public class AdvancementGenerator {
                     criterion += "_smithing_template";
                 }
             }
-            case "blazeandcave:challenges/biological_warfare", "blazeandcave:challenges/potion_master" -> {
-                switch (criterion) {
-                    case "bat" -> hintItem = Items.BARRIER;
-                    case "chicken" -> hintItem = Items.BARRIER;
-                    case "cod" -> hintItem = Items.BARRIER;
-                    case "cow" -> hintItem = Items.BARRIER;
-                    case "mooshroom" -> hintItem = Items.BARRIER;
-                    case "pig" -> hintItem = Items.BARRIER;
-                    case "rabbit" -> hintItem = Items.BARRIER;
-                    case "salmon" -> hintItem = Items.BARRIER;
-                    case "sheep" -> hintItem = Items.BARRIER;
-                    case "squid" -> hintItem = Items.BARRIER;
-                    case "tropical_fish" -> hintItem = Items.BARRIER;
-                    case "turtle" -> hintItem = Items.BARRIER;
-                    case "villager" -> hintItem = Items.BARRIER;
-                    case "wandering_trader" -> hintItem = Items.BARRIER;
-                    case "pufferfish" -> hintItem = Items.BARRIER;
-                    case "cave_spider" -> hintItem = Items.BARRIER;
-                    case "panda" -> hintItem = Items.BARRIER;
-                    case "polar_bear" -> hintItem = Items.BARRIER;
-                    case "spider" -> hintItem = Items.BARRIER;
-                    case "zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "blaze" -> hintItem = Items.BARRIER;
-                    case "creeper" -> hintItem = Items.BARRIER;
-                    case "drowned" -> hintItem = Items.BARRIER;
-                    case "endermite" -> hintItem = Items.BARRIER;
-                    case "evoker" -> hintItem = Items.BARRIER;
-                    case "ghast" -> hintItem = Items.BARRIER;
-                    case "guardian" -> hintItem = Items.BARRIER;
-                    case "husk" -> hintItem = Items.BARRIER;
-                    case "magma_cube" -> hintItem = Items.BARRIER;
-                    case "phantom" -> hintItem = Items.BARRIER;
-                    case "pillager" -> hintItem = Items.BARRIER;
-                    case "ravager" -> hintItem = Items.BARRIER;
-                    case "shulker" -> hintItem = Items.BARRIER;
-                    case "silverfish" -> hintItem = Items.BARRIER;
-                    case "skeleton" -> hintItem = Items.BARRIER;
-                    case "slime" -> hintItem = Items.BARRIER;
-                    case "stray" -> hintItem = Items.BARRIER;
-                    case "vex" -> hintItem = Items.BARRIER;
-                    case "vindicator" -> hintItem = Items.BARRIER;
-                    case "witch" -> hintItem = Items.BARRIER;
-                    case "wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "zombie_villager" -> hintItem = Items.BARRIER;
-                    case "zombie" -> hintItem = Items.BARRIER;
-                    case "cat" -> hintItem = Items.BARRIER;
-                    case "donkey" -> hintItem = Items.BARRIER;
-                    case "horse" -> hintItem = Items.BARRIER;
-                    case "llama" -> hintItem = Items.BARRIER;
-                    case "mule" -> hintItem = Items.BARRIER;
-                    case "parrot" -> hintItem = Items.BARRIER;
-                    case "skeleton_horse" -> hintItem = Items.BARRIER;
-                    case "trader_llama" -> hintItem = Items.BARRIER;
-                    case "wolf" -> hintItem = Items.BARRIER;
-                    case "dolphin" -> hintItem = Items.BARRIER;
-                    case "fox" -> hintItem = Items.BARRIER;
-                    case "ocelot" -> hintItem = Items.BARRIER;
-                    case "iron_golem" -> hintItem = Items.BARRIER;
-                    case "snow_golem" -> hintItem = Items.BARRIER;
-                    case "wither" -> hintItem = Items.BARRIER;
-                    case "bee" -> hintItem = Items.BARRIER;
-                    case "piglin" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "strider" -> hintItem = Items.BARRIER;
-                    case "zoglin" -> hintItem = Items.BARRIER;
-                    case "piglin_brute" -> hintItem = Items.BARRIER;
-                    case "axolotl" -> hintItem = Items.BARRIER;
-                    case "glow_squid" -> hintItem = Items.BARRIER;
-                    case "goat" -> hintItem = Items.BARRIER;
-                    case "frog" -> hintItem = Items.BARRIER;
-                    case "tadpole" -> hintItem = Items.BARRIER;
-                    case "allay" -> hintItem = Items.BARRIER;
-                    case "warden" -> hintItem = Items.BARRIER;
-                    case "camel" -> hintItem = Items.BARRIER;
-                    case "sniffer" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:challenges/death_from_all" -> {
-                switch (criterion) {
-                    case "pufferfish" -> hintItem = Items.BARRIER;
-                    case "cave_spider" -> hintItem = Items.BARRIER;
-                    case "enderman" -> hintItem = Items.BARRIER;
-                    case "panda" -> hintItem = Items.BARRIER;
-                    case "polar_bear" -> hintItem = Items.BARRIER;
-                    case "spider" -> hintItem = Items.BARRIER;
-                    case "zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "blaze" -> hintItem = Items.BARRIER;
-                    case "creeper" -> hintItem = Items.BARRIER;
-                    case "drowned" -> hintItem = Items.BARRIER;
-                    case "elder_guardian" -> hintItem = Items.BARRIER;
-                    case "endermite" -> hintItem = Items.BARRIER;
-                    case "evoker" -> hintItem = Items.BARRIER;
-                    case "ghast" -> hintItem = Items.BARRIER;
-                    case "guardian" -> hintItem = Items.BARRIER;
-                    case "husk" -> hintItem = Items.BARRIER;
-                    case "magma_cube" -> hintItem = Items.BARRIER;
-                    case "phantom" -> hintItem = Items.BARRIER;
-                    case "pillager" -> hintItem = Items.BARRIER;
-                    case "ravager" -> hintItem = Items.BARRIER;
-                    case "shulker" -> hintItem = Items.BARRIER;
-                    case "silverfish" -> hintItem = Items.BARRIER;
-                    case "skeleton" -> hintItem = Items.BARRIER;
-                    case "slime" -> hintItem = Items.BARRIER;
-                    case "stray" -> hintItem = Items.BARRIER;
-                    case "vex" -> hintItem = Items.BARRIER;
-                    case "vindicator" -> hintItem = Items.BARRIER;
-                    case "witch" -> hintItem = Items.BARRIER;
-                    case "wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "zombie_villager" -> hintItem = Items.BARRIER;
-                    case "zombie" -> hintItem = Items.BARRIER;
-                    case "llama" -> hintItem = Items.BARRIER;
-                    case "trader_llama" -> hintItem = Items.BARRIER;
-                    case "wolf" -> hintItem = Items.BARRIER;
-                    case "dolphin" -> hintItem = Items.BARRIER;
-                    case "iron_golem" -> hintItem = Items.BARRIER;
-                    case "ender_dragon" -> hintItem = Items.BARRIER;
-                    case "wither" -> hintItem = Items.BARRIER;
-                    case "bee" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "piglin" -> hintItem = Items.BARRIER;
-                    case "zoglin" -> hintItem = Items.BARRIER;
-                    case "piglin_brute" -> hintItem = Items.BARRIER;
-                    case "goat" -> hintItem = Items.BARRIER;
-                    case "warden" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:challenges/endergeddon" -> {
-                switch (criterion) {
-                    case "bat" -> hintItem = Items.BARRIER;
-                    case "chicken" -> hintItem = Items.BARRIER;
-                    case "cod" -> hintItem = Items.BARRIER;
-                    case "cow" -> hintItem = Items.BARRIER;
-                    case "mooshroom" -> hintItem = Items.BARRIER;
-                    case "pig" -> hintItem = Items.BARRIER;
-                    case "rabbit" -> hintItem = Items.BARRIER;
-                    case "salmon" -> hintItem = Items.BARRIER;
-                    case "sheep" -> hintItem = Items.BARRIER;
-                    case "squid" -> hintItem = Items.BARRIER;
-                    case "tropical_fish" -> hintItem = Items.BARRIER;
-                    case "turtle" -> hintItem = Items.BARRIER;
-                    case "villager" -> hintItem = Items.BARRIER;
-                    case "wandering_trader" -> hintItem = Items.BARRIER;
-                    case "pufferfish" -> hintItem = Items.BARRIER;
-                    case "cave_spider" -> hintItem = Items.BARRIER;
-                    case "enderman" -> hintItem = Items.BARRIER;
-                    case "panda" -> hintItem = Items.BARRIER;
-                    case "polar_bear" -> hintItem = Items.BARRIER;
-                    case "spider" -> hintItem = Items.BARRIER;
-                    case "zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "blaze" -> hintItem = Items.BARRIER;
-                    case "creeper" -> hintItem = Items.BARRIER;
-                    case "drowned" -> hintItem = Items.BARRIER;
-                    case "endermite" -> hintItem = Items.BARRIER;
-                    case "evoker" -> hintItem = Items.BARRIER;
-                    case "ghast" -> hintItem = Items.BARRIER;
-                    case "guardian" -> hintItem = Items.BARRIER;
-                    case "husk" -> hintItem = Items.BARRIER;
-                    case "magma_cube" -> hintItem = Items.BARRIER;
-                    case "phantom" -> hintItem = Items.BARRIER;
-                    case "pillager" -> hintItem = Items.BARRIER;
-                    case "ravager" -> hintItem = Items.BARRIER;
-                    case "shulker" -> hintItem = Items.BARRIER;
-                    case "silverfish" -> hintItem = Items.BARRIER;
-                    case "skeleton" -> hintItem = Items.BARRIER;
-                    case "slime" -> hintItem = Items.BARRIER;
-                    case "stray" -> hintItem = Items.BARRIER;
-                    case "vex" -> hintItem = Items.BARRIER;
-                    case "vindicator" -> hintItem = Items.BARRIER;
-                    case "witch" -> hintItem = Items.BARRIER;
-                    case "wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "zombie_villager" -> hintItem = Items.BARRIER;
-                    case "zombie" -> hintItem = Items.BARRIER;
-                    case "cat" -> hintItem = Items.BARRIER;
-                    case "donkey" -> hintItem = Items.BARRIER;
-                    case "horse" -> hintItem = Items.BARRIER;
-                    case "llama" -> hintItem = Items.BARRIER;
-                    case "mule" -> hintItem = Items.BARRIER;
-                    case "parrot" -> hintItem = Items.BARRIER;
-                    case "skeleton_horse" -> hintItem = Items.BARRIER;
-                    case "trader_llama" -> hintItem = Items.BARRIER;
-                    case "wolf" -> hintItem = Items.BARRIER;
-                    case "dolphin" -> hintItem = Items.BARRIER;
-                    case "fox" -> hintItem = Items.BARRIER;
-                    case "ocelot" -> hintItem = Items.BARRIER;
-                    case "iron_golem" -> hintItem = Items.BARRIER;
-                    case "snow_golem" -> hintItem = Items.BARRIER;
-                    case "wither" -> hintItem = Items.BARRIER;
-                    case "ender_dragon" -> hintItem = Items.BARRIER;
-                    case "bee" -> hintItem = Items.BARRIER;
-                    case "piglin" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "strider" -> hintItem = Items.BARRIER;
-                    case "zoglin" -> hintItem = Items.BARRIER;
-                    case "piglin_brute" -> hintItem = Items.BARRIER;
-                    case "axolotl" -> hintItem = Items.BARRIER;
-                    case "glow_squid" -> hintItem = Items.BARRIER;
-                    case "goat" -> hintItem = Items.BARRIER;
-                    case "frog" -> hintItem = Items.BARRIER;
-                    case "tadpole" -> hintItem = Items.BARRIER;
-                    case "allay" -> hintItem = Items.BARRIER;
-                    case "warden" -> hintItem = Items.BARRIER;
-                    case "camel" -> hintItem = Items.BARRIER;
-                    case "sniffer" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:challenges/explorer_of_worlds" -> {
-                switch (criterion) {
-                    case "river" -> hintItem = Items.BARRIER;
-                    case "swamp" -> hintItem = Items.BARRIER;
-                    case "desert" -> hintItem = Items.BARRIER;
-                    case "snowy_taiga" -> hintItem = Items.BARRIER;
-                    case "badlands" -> hintItem = Items.BARRIER;
-                    case "forest" -> hintItem = Items.BARRIER;
-                    case "stony_shore" -> hintItem = Items.BARRIER;
-                    case "snowy_plains" -> hintItem = Items.BARRIER;
-                    case "wooded_badlands" -> hintItem = Items.BARRIER;
-                    case "savanna" -> hintItem = Items.BARRIER;
-                    case "plains" -> hintItem = Items.BARRIER;
-                    case "frozen_river" -> hintItem = Items.BARRIER;
-                    case "old_growth_pine_taiga" -> hintItem = Items.BARRIER;
-                    case "snowy_beach" -> hintItem = Items.BARRIER;
-                    case "deep_ocean" -> hintItem = Items.BARRIER;
-                    case "sparse_jungle" -> hintItem = Items.BARRIER;
-                    case "ocean" -> hintItem = Items.BARRIER;
-                    case "windswept_hills" -> hintItem = Items.BARRIER;
-                    case "jungle" -> hintItem = Items.BARRIER;
-                    case "beach" -> hintItem = Items.BARRIER;
-                    case "savanna_plateau" -> hintItem = Items.BARRIER;
-                    case "dark_forest" -> hintItem = Items.BARRIER;
-                    case "taiga" -> hintItem = Items.BARRIER;
-                    case "birch_forest" -> hintItem = Items.BARRIER;
-                    case "mushroom_fields" -> hintItem = Items.BARRIER;
-                    case "windswept_forest" -> hintItem = Items.BARRIER;
-                    case "cold_ocean" -> hintItem = Items.BARRIER;
-                    case "warm_ocean" -> hintItem = Items.BARRIER;
-                    case "lukewarm_ocean" -> hintItem = Items.BARRIER;
-                    case "frozen_ocean" -> hintItem = Items.BARRIER;
-                    case "deep_frozen_ocean" -> hintItem = Items.BARRIER;
-                    case "deep_lukewarm_ocean" -> hintItem = Items.BARRIER;
-                    case "deep_cold_ocean" -> hintItem = Items.BARRIER;
-                    case "bamboo_jungle" -> hintItem = Items.BARRIER;
-                    case "sunflower_plains" -> hintItem = Items.BARRIER;
-                    case "windswept_gravelly_hills" -> hintItem = Items.BARRIER;
-                    case "flower_forest" -> hintItem = Items.BARRIER;
-                    case "ice_spikes" -> hintItem = Items.BARRIER;
-                    case "old_growth_birch_forest" -> hintItem = Items.BARRIER;
-                    case "old_growth_spruce_taiga" -> hintItem = Items.BARRIER;
-                    case "windswept_savanna" -> hintItem = Items.BARRIER;
-                    case "eroded_badlands" -> hintItem = Items.BARRIER;
-                    case "meadow" -> hintItem = Items.BARRIER;
-                    case "grove" -> hintItem = Items.BARRIER;
-                    case "snowy_slopes" -> hintItem = Items.BARRIER;
-                    case "frozen_peaks" -> hintItem = Items.BARRIER;
-                    case "jagged_peaks" -> hintItem = Items.BARRIER;
-                    case "stony_peaks" -> hintItem = Items.BARRIER;
-                    case "lush_caves" -> hintItem = Items.BARRIER;
-                    case "dripstone_caves" -> hintItem = Items.BARRIER;
-                    case "nether_wastes" -> hintItem = Items.BARRIER;
-                    case "crimson_forest" -> hintItem = Items.BARRIER;
-                    case "warped_forest" -> hintItem = Items.BARRIER;
-                    case "soul_sand_valley" -> hintItem = Items.BARRIER;
-                    case "basalt_deltas" -> hintItem = Items.BARRIER;
-                    case "the_end" -> hintItem = Items.BARRIER;
-                    case "small_end_islands" -> hintItem = Items.BARRIER;
-                    case "end_highlands" -> hintItem = Items.BARRIER;
-                    case "end_midlands" -> hintItem = Items.BARRIER;
-                    case "end_barrens" -> hintItem = Items.BARRIER;
-                    case "mangrove_swamp" -> hintItem = Items.BARRIER;
-                    case "deep_dark" -> hintItem = Items.BARRIER;
-                    case "cherry_grove" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:challenges/global_vaccination" -> {
-                switch (criterion) {
-                    case "farmer_plains" -> hintItem = Items.BARRIER;
-                    case "fisherman_plains" -> hintItem = Items.BARRIER;
-                    case "shepherd_plains" -> hintItem = Items.BARRIER;
-                    case "fletcher_plains" -> hintItem = Items.BARRIER;
-                    case "librarian_plains" -> hintItem = Items.BARRIER;
-                    case "cartographer_plains" -> hintItem = Items.BARRIER;
-                    case "cleric_plains" -> hintItem = Items.BARRIER;
-                    case "armorer_plains" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_plains" -> hintItem = Items.BARRIER;
-                    case "tool_smith_plains" -> hintItem = Items.BARRIER;
-                    case "butcher_plains" -> hintItem = Items.BARRIER;
-                    case "leatherworker_plains" -> hintItem = Items.BARRIER;
-                    case "mason_plains" -> hintItem = Items.BARRIER;
-                    case "nitwit_plains" -> hintItem = Items.BARRIER;
-                    case "none_plains" -> hintItem = Items.BARRIER;
-                    case "farmer_taiga" -> hintItem = Items.BARRIER;
-                    case "fisherman_taiga" -> hintItem = Items.BARRIER;
-                    case "shepherd_taiga" -> hintItem = Items.BARRIER;
-                    case "fletcher_taiga" -> hintItem = Items.BARRIER;
-                    case "librarian_taiga" -> hintItem = Items.BARRIER;
-                    case "cartographer_taiga" -> hintItem = Items.BARRIER;
-                    case "cleric_taiga" -> hintItem = Items.BARRIER;
-                    case "armorer_taiga" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_taiga" -> hintItem = Items.BARRIER;
-                    case "tool_smith_taiga" -> hintItem = Items.BARRIER;
-                    case "butcher_taiga" -> hintItem = Items.BARRIER;
-                    case "leatherworker_taiga" -> hintItem = Items.BARRIER;
-                    case "mason_taiga" -> hintItem = Items.BARRIER;
-                    case "nitwit_taiga" -> hintItem = Items.BARRIER;
-                    case "none_taiga" -> hintItem = Items.BARRIER;
-                    case "farmer_desert" -> hintItem = Items.BARRIER;
-                    case "fisherman_desert" -> hintItem = Items.BARRIER;
-                    case "shepherd_desert" -> hintItem = Items.BARRIER;
-                    case "fletcher_desert" -> hintItem = Items.BARRIER;
-                    case "librarian_desert" -> hintItem = Items.BARRIER;
-                    case "cartographer_desert" -> hintItem = Items.BARRIER;
-                    case "cleric_desert" -> hintItem = Items.BARRIER;
-                    case "armorer_desert" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_desert" -> hintItem = Items.BARRIER;
-                    case "tool_smith_desert" -> hintItem = Items.BARRIER;
-                    case "butcher_desert" -> hintItem = Items.BARRIER;
-                    case "leatherworker_desert" -> hintItem = Items.BARRIER;
-                    case "mason_desert" -> hintItem = Items.BARRIER;
-                    case "nitwit_desert" -> hintItem = Items.BARRIER;
-                    case "none_desert" -> hintItem = Items.BARRIER;
-                    case "farmer_savanna" -> hintItem = Items.BARRIER;
-                    case "fisherman_savanna" -> hintItem = Items.BARRIER;
-                    case "shepherd_savanna" -> hintItem = Items.BARRIER;
-                    case "fletcher_savanna" -> hintItem = Items.BARRIER;
-                    case "librarian_savanna" -> hintItem = Items.BARRIER;
-                    case "cartographer_savanna" -> hintItem = Items.BARRIER;
-                    case "cleric_savanna" -> hintItem = Items.BARRIER;
-                    case "armorer_savanna" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_savanna" -> hintItem = Items.BARRIER;
-                    case "tool_smith_savanna" -> hintItem = Items.BARRIER;
-                    case "butcher_savanna" -> hintItem = Items.BARRIER;
-                    case "leatherworker_savanna" -> hintItem = Items.BARRIER;
-                    case "mason_savanna" -> hintItem = Items.BARRIER;
-                    case "nitwit_savanna" -> hintItem = Items.BARRIER;
-                    case "none_savanna" -> hintItem = Items.BARRIER;
-                    case "farmer_snow" -> hintItem = Items.BARRIER;
-                    case "fisherman_snow" -> hintItem = Items.BARRIER;
-                    case "shepherd_snow" -> hintItem = Items.BARRIER;
-                    case "fletcher_snow" -> hintItem = Items.BARRIER;
-                    case "librarian_snow" -> hintItem = Items.BARRIER;
-                    case "cartographer_snow" -> hintItem = Items.BARRIER;
-                    case "cleric_snow" -> hintItem = Items.BARRIER;
-                    case "armorer_snow" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_snow" -> hintItem = Items.BARRIER;
-                    case "tool_smith_snow" -> hintItem = Items.BARRIER;
-                    case "butcher_snow" -> hintItem = Items.BARRIER;
-                    case "leatherworker_snow" -> hintItem = Items.BARRIER;
-                    case "mason_snow" -> hintItem = Items.BARRIER;
-                    case "nitwit_snow" -> hintItem = Items.BARRIER;
-                    case "none_snow" -> hintItem = Items.BARRIER;
-                    case "farmer_jungle" -> hintItem = Items.BARRIER;
-                    case "fisherman_jungle" -> hintItem = Items.BARRIER;
-                    case "shepherd_jungle" -> hintItem = Items.BARRIER;
-                    case "fletcher_jungle" -> hintItem = Items.BARRIER;
-                    case "librarian_jungle" -> hintItem = Items.BARRIER;
-                    case "cartographer_jungle" -> hintItem = Items.BARRIER;
-                    case "cleric_jungle" -> hintItem = Items.BARRIER;
-                    case "armorer_jungle" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_jungle" -> hintItem = Items.BARRIER;
-                    case "tool_smith_jungle" -> hintItem = Items.BARRIER;
-                    case "butcher_jungle" -> hintItem = Items.BARRIER;
-                    case "leatherworker_jungle" -> hintItem = Items.BARRIER;
-                    case "mason_jungle" -> hintItem = Items.BARRIER;
-                    case "nitwit_jungle" -> hintItem = Items.BARRIER;
-                    case "none_jungle" -> hintItem = Items.BARRIER;
-                    case "farmer_swamp" -> hintItem = Items.BARRIER;
-                    case "fisherman_swamp" -> hintItem = Items.BARRIER;
-                    case "shepherd_swamp" -> hintItem = Items.BARRIER;
-                    case "fletcher_swamp" -> hintItem = Items.BARRIER;
-                    case "librarian_swamp" -> hintItem = Items.BARRIER;
-                    case "cartographer_swamp" -> hintItem = Items.BARRIER;
-                    case "cleric_swamp" -> hintItem = Items.BARRIER;
-                    case "armorer_swamp" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_swamp" -> hintItem = Items.BARRIER;
-                    case "tool_smith_swamp" -> hintItem = Items.BARRIER;
-                    case "butcher_swamp" -> hintItem = Items.BARRIER;
-                    case "leatherworker_swamp" -> hintItem = Items.BARRIER;
-                    case "mason_swamp" -> hintItem = Items.BARRIER;
-                    case "nitwit_swamp" -> hintItem = Items.BARRIER;
-                    case "none_swamp" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:challenges/highway_to_hell" -> {
-                switch (criterion) {
-                    case "bat" -> hintItem = Items.BARRIER;
-                    case "chicken" -> hintItem = Items.BARRIER;
-                    case "cod" -> hintItem = Items.BARRIER;
-                    case "cow" -> hintItem = Items.BARRIER;
-                    case "mooshroom" -> hintItem = Items.BARRIER;
-                    case "pig" -> hintItem = Items.BARRIER;
-                    case "rabbit" -> hintItem = Items.BARRIER;
-                    case "salmon" -> hintItem = Items.BARRIER;
-                    case "sheep" -> hintItem = Items.BARRIER;
-                    case "squid" -> hintItem = Items.BARRIER;
-                    case "tropical_fish" -> hintItem = Items.BARRIER;
-                    case "turtle" -> hintItem = Items.BARRIER;
-                    case "villager" -> hintItem = Items.BARRIER;
-                    case "wandering_trader" -> hintItem = Items.BARRIER;
-                    case "pufferfish" -> hintItem = Items.BARRIER;
-                    case "cave_spider" -> hintItem = Items.BARRIER;
-                    case "enderman" -> hintItem = Items.BARRIER;
-                    case "panda" -> hintItem = Items.BARRIER;
-                    case "polar_bear" -> hintItem = Items.BARRIER;
-                    case "spider" -> hintItem = Items.BARRIER;
-                    case "zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "blaze" -> hintItem = Items.BARRIER;
-                    case "creeper" -> hintItem = Items.BARRIER;
-                    case "drowned" -> hintItem = Items.BARRIER;
-                    case "endermite" -> hintItem = Items.BARRIER;
-                    case "evoker" -> hintItem = Items.BARRIER;
-                    case "ghast" -> hintItem = Items.BARRIER;
-                    case "guardian" -> hintItem = Items.BARRIER;
-                    case "husk" -> hintItem = Items.BARRIER;
-                    case "magma_cube" -> hintItem = Items.BARRIER;
-                    case "phantom" -> hintItem = Items.BARRIER;
-                    case "pillager" -> hintItem = Items.BARRIER;
-                    case "ravager" -> hintItem = Items.BARRIER;
-                    case "shulker" -> hintItem = Items.BARRIER;
-                    case "silverfish" -> hintItem = Items.BARRIER;
-                    case "skeleton" -> hintItem = Items.BARRIER;
-                    case "slime" -> hintItem = Items.BARRIER;
-                    case "stray" -> hintItem = Items.BARRIER;
-                    case "vex" -> hintItem = Items.BARRIER;
-                    case "vindicator" -> hintItem = Items.BARRIER;
-                    case "witch" -> hintItem = Items.BARRIER;
-                    case "wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "zombie_villager" -> hintItem = Items.BARRIER;
-                    case "zombie" -> hintItem = Items.BARRIER;
-                    case "cat" -> hintItem = Items.BARRIER;
-                    case "donkey" -> hintItem = Items.BARRIER;
-                    case "horse" -> hintItem = Items.BARRIER;
-                    case "llama" -> hintItem = Items.BARRIER;
-                    case "mule" -> hintItem = Items.BARRIER;
-                    case "parrot" -> hintItem = Items.BARRIER;
-                    case "skeleton_horse" -> hintItem = Items.BARRIER;
-                    case "trader_llama" -> hintItem = Items.BARRIER;
-                    case "wolf" -> hintItem = Items.BARRIER;
-                    case "dolphin" -> hintItem = Items.BARRIER;
-                    case "fox" -> hintItem = Items.BARRIER;
-                    case "ocelot" -> hintItem = Items.BARRIER;
-                    case "iron_golem" -> hintItem = Items.BARRIER;
-                    case "snow_golem" -> hintItem = Items.BARRIER;
-                    case "wither" -> hintItem = Items.BARRIER;
-                    case "bee" -> hintItem = Items.BARRIER;
-                    case "piglin" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "strider" -> hintItem = Items.BARRIER;
-                    case "zoglin" -> hintItem = Items.BARRIER;
-                    case "piglin_brute" -> hintItem = Items.BARRIER;
-                    case "axolotl" -> hintItem = Items.BARRIER;
-                    case "glow_squid" -> hintItem = Items.BARRIER;
-                    case "goat" -> hintItem = Items.BARRIER;
-                    case "frog" -> hintItem = Items.BARRIER;
-                    case "tadpole" -> hintItem = Items.BARRIER;
-                    case "allay" -> hintItem = Items.BARRIER;
-                    case "warden" -> hintItem = Items.BARRIER;
-                    case "camel" -> hintItem = Items.BARRIER;
-                    case "sniffer" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:challenges/i_am_loot" -> {
-                switch (criterion) {
-                    case "abandoned_mineshaft" -> hintItem = Items.BARRIER;
-                    case "bastion_bridge" -> hintItem = Items.BARRIER;
-                    case "bastion_hoglin_stable" -> hintItem = Items.BARRIER;
-                    case "bastion_other" -> hintItem = Items.BARRIER;
-                    case "bastion_treasure" -> hintItem = Items.BARRIER;
-                    case "buried_treasure" -> hintItem = Items.BARRIER;
-                    case "desert_pyramid" -> hintItem = Items.BARRIER;
-                    case "end_city_treasure" -> hintItem = Items.BARRIER;
-                    case "igloo_chest" -> hintItem = Items.BARRIER;
-                    case "jungle_temple" -> hintItem = Items.BARRIER;
-                    case "jungle_temple_dispenser" -> hintItem = Items.BARRIER;
-                    case "nether_bridge" -> hintItem = Items.BARRIER;
-                    case "pillager_outpost" -> hintItem = Items.BARRIER;
-                    case "ruined_portal" -> hintItem = Items.BARRIER;
-                    case "shipwreck_map" -> hintItem = Items.BARRIER;
-                    case "shipwreck_supply" -> hintItem = Items.BARRIER;
-                    case "shipwreck_treasure" -> hintItem = Items.BARRIER;
-                    case "simple_dungeon" -> hintItem = Items.BARRIER;
-                    case "stronghold_corridor" -> hintItem = Items.BARRIER;
-                    case "stronghold_crossing" -> hintItem = Items.BARRIER;
-                    case "stronghold_library" -> hintItem = Items.BARRIER;
-                    case "underwater_ruin_big" -> hintItem = Items.BARRIER;
-                    case "underwater_ruin_small" -> hintItem = Items.BARRIER;
-                    case "woodland_mansion" -> hintItem = Items.BARRIER;
-                    case "village_armorer" -> hintItem = Items.BARRIER;
-                    case "village_butcher" -> hintItem = Items.BARRIER;
-                    case "village_cartographer" -> hintItem = Items.BARRIER;
-                    case "village_desert_house" -> hintItem = Items.BARRIER;
-                    case "village_fisher" -> hintItem = Items.BARRIER;
-                    case "village_fletcher" -> hintItem = Items.BARRIER;
-                    case "village_mason" -> hintItem = Items.BARRIER;
-                    case "village_plains_house" -> hintItem = Items.BARRIER;
-                    case "village_savanna_house" -> hintItem = Items.BARRIER;
-                    case "village_snowy_house" -> hintItem = Items.BARRIER;
-                    case "village_taiga_house" -> hintItem = Items.BARRIER;
-                    case "village_tannery" -> hintItem = Items.BARRIER;
-                    case "village_temple" -> hintItem = Items.BARRIER;
-                    case "village_toolsmith" -> hintItem = Items.BARRIER;
-                    case "village_weaponsmith" -> hintItem = Items.BARRIER;
-                    case "ancient_city" -> hintItem = Items.BARRIER;
-                    case "ancient_city_ice_box" -> hintItem = Items.BARRIER;
-                }
-            }
             case "blazeandcave:challenges/riddle_me_this" -> {
                 switch (criterion) {
                     case "first_line" -> hintItem = Items.BARRIER;
@@ -1023,390 +246,12 @@ public class AdvancementGenerator {
                     hintItem = Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE;
                 }
             }
-            case "blazeandcave:challenges/stockbroker" -> {
-                switch (criterion) {
-                    case "farmer_plains" -> hintItem = Items.BARRIER;
-                    case "fisherman_plains" -> hintItem = Items.BARRIER;
-                    case "shepherd_plains" -> hintItem = Items.BARRIER;
-                    case "fletcher_plains" -> hintItem = Items.BARRIER;
-                    case "librarian_plains" -> hintItem = Items.BARRIER;
-                    case "cartographer_plains" -> hintItem = Items.BARRIER;
-                    case "cleric_plains" -> hintItem = Items.BARRIER;
-                    case "armorer_plains" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_plains" -> hintItem = Items.BARRIER;
-                    case "tool_smith_plains" -> hintItem = Items.BARRIER;
-                    case "butcher_plains" -> hintItem = Items.BARRIER;
-                    case "leatherworker_plains" -> hintItem = Items.BARRIER;
-                    case "mason_plains" -> hintItem = Items.BARRIER;
-                    case "farmer_taiga" -> hintItem = Items.BARRIER;
-                    case "fisherman_taiga" -> hintItem = Items.BARRIER;
-                    case "shepherd_taiga" -> hintItem = Items.BARRIER;
-                    case "fletcher_taiga" -> hintItem = Items.BARRIER;
-                    case "librarian_taiga" -> hintItem = Items.BARRIER;
-                    case "cartographer_taiga" -> hintItem = Items.BARRIER;
-                    case "cleric_taiga" -> hintItem = Items.BARRIER;
-                    case "armorer_taiga" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_taiga" -> hintItem = Items.BARRIER;
-                    case "tool_smith_taiga" -> hintItem = Items.BARRIER;
-                    case "butcher_taiga" -> hintItem = Items.BARRIER;
-                    case "leatherworker_taiga" -> hintItem = Items.BARRIER;
-                    case "mason_taiga" -> hintItem = Items.BARRIER;
-                    case "farmer_desert" -> hintItem = Items.BARRIER;
-                    case "fisherman_desert" -> hintItem = Items.BARRIER;
-                    case "shepherd_desert" -> hintItem = Items.BARRIER;
-                    case "fletcher_desert" -> hintItem = Items.BARRIER;
-                    case "librarian_desert" -> hintItem = Items.BARRIER;
-                    case "cartographer_desert" -> hintItem = Items.BARRIER;
-                    case "cleric_desert" -> hintItem = Items.BARRIER;
-                    case "armorer_desert" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_desert" -> hintItem = Items.BARRIER;
-                    case "tool_smith_desert" -> hintItem = Items.BARRIER;
-                    case "butcher_desert" -> hintItem = Items.BARRIER;
-                    case "leatherworker_desert" -> hintItem = Items.BARRIER;
-                    case "mason_desert" -> hintItem = Items.BARRIER;
-                    case "farmer_savanna" -> hintItem = Items.BARRIER;
-                    case "fisherman_savanna" -> hintItem = Items.BARRIER;
-                    case "shepherd_savanna" -> hintItem = Items.BARRIER;
-                    case "fletcher_savanna" -> hintItem = Items.BARRIER;
-                    case "librarian_savanna" -> hintItem = Items.BARRIER;
-                    case "cartographer_savanna" -> hintItem = Items.BARRIER;
-                    case "cleric_savanna" -> hintItem = Items.BARRIER;
-                    case "armorer_savanna" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_savanna" -> hintItem = Items.BARRIER;
-                    case "tool_smith_savanna" -> hintItem = Items.BARRIER;
-                    case "butcher_savanna" -> hintItem = Items.BARRIER;
-                    case "leatherworker_savanna" -> hintItem = Items.BARRIER;
-                    case "mason_savanna" -> hintItem = Items.BARRIER;
-                    case "farmer_snow" -> hintItem = Items.BARRIER;
-                    case "fisherman_snow" -> hintItem = Items.BARRIER;
-                    case "shepherd_snow" -> hintItem = Items.BARRIER;
-                    case "fletcher_snow" -> hintItem = Items.BARRIER;
-                    case "librarian_snow" -> hintItem = Items.BARRIER;
-                    case "cartographer_snow" -> hintItem = Items.BARRIER;
-                    case "cleric_snow" -> hintItem = Items.BARRIER;
-                    case "armorer_snow" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_snow" -> hintItem = Items.BARRIER;
-                    case "tool_smith_snow" -> hintItem = Items.BARRIER;
-                    case "butcher_snow" -> hintItem = Items.BARRIER;
-                    case "leatherworker_snow" -> hintItem = Items.BARRIER;
-                    case "mason_snow" -> hintItem = Items.BARRIER;
-                    case "farmer_jungle" -> hintItem = Items.BARRIER;
-                    case "fisherman_jungle" -> hintItem = Items.BARRIER;
-                    case "shepherd_jungle" -> hintItem = Items.BARRIER;
-                    case "fletcher_jungle" -> hintItem = Items.BARRIER;
-                    case "librarian_jungle" -> hintItem = Items.BARRIER;
-                    case "cartographer_jungle" -> hintItem = Items.BARRIER;
-                    case "cleric_jungle" -> hintItem = Items.BARRIER;
-                    case "armorer_jungle" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_jungle" -> hintItem = Items.BARRIER;
-                    case "tool_smith_jungle" -> hintItem = Items.BARRIER;
-                    case "butcher_jungle" -> hintItem = Items.BARRIER;
-                    case "leatherworker_jungle" -> hintItem = Items.BARRIER;
-                    case "mason_jungle" -> hintItem = Items.BARRIER;
-                    case "farmer_swamp" -> hintItem = Items.BARRIER;
-                    case "fisherman_swamp" -> hintItem = Items.BARRIER;
-                    case "shepherd_swamp" -> hintItem = Items.BARRIER;
-                    case "fletcher_swamp" -> hintItem = Items.BARRIER;
-                    case "librarian_swamp" -> hintItem = Items.BARRIER;
-                    case "cartographer_swamp" -> hintItem = Items.BARRIER;
-                    case "cleric_swamp" -> hintItem = Items.BARRIER;
-                    case "armorer_swamp" -> hintItem = Items.BARRIER;
-                    case "weapon_smith_swamp" -> hintItem = Items.BARRIER;
-                    case "tool_smith_swamp" -> hintItem = Items.BARRIER;
-                    case "butcher_swamp" -> hintItem = Items.BARRIER;
-                    case "leatherworker_swamp" -> hintItem = Items.BARRIER;
-                    case "mason_swamp" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:challenges/telescopic" -> {
-                switch (criterion) {
-                    case "bat" -> hintItem = Items.BARRIER;
-                    case "chicken" -> hintItem = Items.BARRIER;
-                    case "cod" -> hintItem = Items.BARRIER;
-                    case "cow" -> hintItem = Items.BARRIER;
-                    case "mooshroom" -> hintItem = Items.BARRIER;
-                    case "pig" -> hintItem = Items.BARRIER;
-                    case "rabbit" -> hintItem = Items.BARRIER;
-                    case "salmon" -> hintItem = Items.BARRIER;
-                    case "sheep" -> hintItem = Items.BARRIER;
-                    case "squid" -> hintItem = Items.BARRIER;
-                    case "tropical_fish" -> hintItem = Items.BARRIER;
-                    case "turtle" -> hintItem = Items.BARRIER;
-                    case "villager" -> hintItem = Items.BARRIER;
-                    case "wandering_trader" -> hintItem = Items.BARRIER;
-                    case "pufferfish" -> hintItem = Items.BARRIER;
-                    case "cave_spider" -> hintItem = Items.BARRIER;
-                    case "enderman" -> hintItem = Items.BARRIER;
-                    case "panda" -> hintItem = Items.BARRIER;
-                    case "polar_bear" -> hintItem = Items.BARRIER;
-                    case "spider" -> hintItem = Items.BARRIER;
-                    case "zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "blaze" -> hintItem = Items.BARRIER;
-                    case "creeper" -> hintItem = Items.BARRIER;
-                    case "drowned" -> hintItem = Items.BARRIER;
-                    case "endermite" -> hintItem = Items.BARRIER;
-                    case "evoker" -> hintItem = Items.BARRIER;
-                    case "ghast" -> hintItem = Items.BARRIER;
-                    case "guardian" -> hintItem = Items.BARRIER;
-                    case "husk" -> hintItem = Items.BARRIER;
-                    case "magma_cube" -> hintItem = Items.BARRIER;
-                    case "phantom" -> hintItem = Items.BARRIER;
-                    case "pillager" -> hintItem = Items.BARRIER;
-                    case "ravager" -> hintItem = Items.BARRIER;
-                    case "shulker" -> hintItem = Items.BARRIER;
-                    case "silverfish" -> hintItem = Items.BARRIER;
-                    case "skeleton" -> hintItem = Items.BARRIER;
-                    case "slime" -> hintItem = Items.BARRIER;
-                    case "stray" -> hintItem = Items.BARRIER;
-                    case "vex" -> hintItem = Items.BARRIER;
-                    case "vindicator" -> hintItem = Items.BARRIER;
-                    case "witch" -> hintItem = Items.BARRIER;
-                    case "wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "zombie_villager" -> hintItem = Items.BARRIER;
-                    case "zombie" -> hintItem = Items.BARRIER;
-                    case "cat" -> hintItem = Items.BARRIER;
-                    case "donkey" -> hintItem = Items.BARRIER;
-                    case "horse" -> hintItem = Items.BARRIER;
-                    case "llama" -> hintItem = Items.BARRIER;
-                    case "mule" -> hintItem = Items.BARRIER;
-                    case "parrot" -> hintItem = Items.BARRIER;
-                    case "skeleton_horse" -> hintItem = Items.BARRIER;
-                    case "trader_llama" -> hintItem = Items.BARRIER;
-                    case "wolf" -> hintItem = Items.BARRIER;
-                    case "dolphin" -> hintItem = Items.BARRIER;
-                    case "fox" -> hintItem = Items.BARRIER;
-                    case "ocelot" -> hintItem = Items.BARRIER;
-                    case "iron_golem" -> hintItem = Items.BARRIER;
-                    case "snow_golem" -> hintItem = Items.BARRIER;
-                    case "wither" -> hintItem = Items.BARRIER;
-                    case "bee" -> hintItem = Items.BARRIER;
-                    case "piglin" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "strider" -> hintItem = Items.BARRIER;
-                    case "zoglin" -> hintItem = Items.BARRIER;
-                    case "piglin_brute" -> hintItem = Items.BARRIER;
-                    case "axolotl" -> hintItem = Items.BARRIER;
-                    case "glow_squid" -> hintItem = Items.BARRIER;
-                    case "goat" -> hintItem = Items.BARRIER;
-                    case "ender_dragon" -> hintItem = Items.BARRIER;
-                    case "elder_guardian" -> hintItem = Items.BARRIER;
-                    case "frog" -> hintItem = Items.BARRIER;
-                    case "tadpole" -> hintItem = Items.BARRIER;
-                    case "allay" -> hintItem = Items.BARRIER;
-                    case "warden" -> hintItem = Items.BARRIER;
-                    case "camel" -> hintItem = Items.BARRIER;
-                    case "sniffer" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:challenges/ultimate_enchanter" -> {
-                switch (criterion) {
-                    case "protection1" -> hintItem = Items.BARRIER;
-                    case "protection2" -> hintItem = Items.BARRIER;
-                    case "protection3" -> hintItem = Items.BARRIER;
-                    case "protection4" -> hintItem = Items.BARRIER;
-                    case "fire_protection1" -> hintItem = Items.BARRIER;
-                    case "fire_protection2" -> hintItem = Items.BARRIER;
-                    case "fire_protection3" -> hintItem = Items.BARRIER;
-                    case "fire_protection4" -> hintItem = Items.BARRIER;
-                    case "feather_falling1" -> hintItem = Items.BARRIER;
-                    case "feather_falling2" -> hintItem = Items.BARRIER;
-                    case "feather_falling3" -> hintItem = Items.BARRIER;
-                    case "feather_falling4" -> hintItem = Items.BARRIER;
-                    case "blast_protection1" -> hintItem = Items.BARRIER;
-                    case "blast_protection2" -> hintItem = Items.BARRIER;
-                    case "blast_protection3" -> hintItem = Items.BARRIER;
-                    case "blast_protection4" -> hintItem = Items.BARRIER;
-                    case "projectile_protection1" -> hintItem = Items.BARRIER;
-                    case "projectile_protection2" -> hintItem = Items.BARRIER;
-                    case "projectile_protection3" -> hintItem = Items.BARRIER;
-                    case "projectile_protection4" -> hintItem = Items.BARRIER;
-                    case "respiration1" -> hintItem = Items.BARRIER;
-                    case "respiration2" -> hintItem = Items.BARRIER;
-                    case "respiration3" -> hintItem = Items.BARRIER;
-                    case "aqua_affinity" -> hintItem = Items.BARRIER;
-                    case "thorns1" -> hintItem = Items.BARRIER;
-                    case "thorns2" -> hintItem = Items.BARRIER;
-                    case "thorns3" -> hintItem = Items.BARRIER;
-                    case "depth_strider1" -> hintItem = Items.BARRIER;
-                    case "depth_strider2" -> hintItem = Items.BARRIER;
-                    case "depth_strider3" -> hintItem = Items.BARRIER;
-                    case "frost_walker1" -> hintItem = Items.BARRIER;
-                    case "frost_walker2" -> hintItem = Items.BARRIER;
-                    case "binding_curse" -> hintItem = Items.BARRIER;
-                    case "sharpness1" -> hintItem = Items.BARRIER;
-                    case "sharpness2" -> hintItem = Items.BARRIER;
-                    case "sharpness3" -> hintItem = Items.BARRIER;
-                    case "sharpness4" -> hintItem = Items.BARRIER;
-                    case "sharpness5" -> hintItem = Items.BARRIER;
-                    case "smite1" -> hintItem = Items.BARRIER;
-                    case "smite2" -> hintItem = Items.BARRIER;
-                    case "smite3" -> hintItem = Items.BARRIER;
-                    case "smite4" -> hintItem = Items.BARRIER;
-                    case "smite5" -> hintItem = Items.BARRIER;
-                    case "bane_of_arthropods1" -> hintItem = Items.BARRIER;
-                    case "bane_of_arthropods2" -> hintItem = Items.BARRIER;
-                    case "bane_of_arthropods3" -> hintItem = Items.BARRIER;
-                    case "bane_of_arthropods4" -> hintItem = Items.BARRIER;
-                    case "bane_of_arthropods5" -> hintItem = Items.BARRIER;
-                    case "knockback1" -> hintItem = Items.BARRIER;
-                    case "knockback2" -> hintItem = Items.BARRIER;
-                    case "fire_aspect1" -> hintItem = Items.BARRIER;
-                    case "fire_aspect2" -> hintItem = Items.BARRIER;
-                    case "looting1" -> hintItem = Items.BARRIER;
-                    case "looting2" -> hintItem = Items.BARRIER;
-                    case "looting3" -> hintItem = Items.BARRIER;
-                    case "sweeping1" -> hintItem = Items.BARRIER;
-                    case "sweeping2" -> hintItem = Items.BARRIER;
-                    case "sweeping3" -> hintItem = Items.BARRIER;
-                    case "efficiency1" -> hintItem = Items.BARRIER;
-                    case "efficiency2" -> hintItem = Items.BARRIER;
-                    case "efficiency3" -> hintItem = Items.BARRIER;
-                    case "efficiency4" -> hintItem = Items.BARRIER;
-                    case "efficiency5" -> hintItem = Items.BARRIER;
-                    case "silk_touch" -> hintItem = Items.BARRIER;
-                    case "unbreaking1" -> hintItem = Items.BARRIER;
-                    case "unbreaking2" -> hintItem = Items.BARRIER;
-                    case "unbreaking3" -> hintItem = Items.BARRIER;
-                    case "fortune1" -> hintItem = Items.BARRIER;
-                    case "fortune2" -> hintItem = Items.BARRIER;
-                    case "fortune3" -> hintItem = Items.BARRIER;
-                    case "power1" -> hintItem = Items.BARRIER;
-                    case "power2" -> hintItem = Items.BARRIER;
-                    case "power3" -> hintItem = Items.BARRIER;
-                    case "power4" -> hintItem = Items.BARRIER;
-                    case "power5" -> hintItem = Items.BARRIER;
-                    case "punch1" -> hintItem = Items.BARRIER;
-                    case "punch2" -> hintItem = Items.BARRIER;
-                    case "flame" -> hintItem = Items.BARRIER;
-                    case "infinity" -> hintItem = Items.BARRIER;
-                    case "luck_of_the_sea1" -> hintItem = Items.BARRIER;
-                    case "luck_of_the_sea2" -> hintItem = Items.BARRIER;
-                    case "luck_of_the_sea3" -> hintItem = Items.BARRIER;
-                    case "lure1" -> hintItem = Items.BARRIER;
-                    case "lure2" -> hintItem = Items.BARRIER;
-                    case "lure3" -> hintItem = Items.BARRIER;
-                    case "mending" -> hintItem = Items.BARRIER;
-                    case "vanishing_curse" -> hintItem = Items.BARRIER;
-                    case "loyalty1" -> hintItem = Items.BARRIER;
-                    case "loyalty2" -> hintItem = Items.BARRIER;
-                    case "loyalty3" -> hintItem = Items.BARRIER;
-                    case "riptide1" -> hintItem = Items.BARRIER;
-                    case "riptide2" -> hintItem = Items.BARRIER;
-                    case "riptide3" -> hintItem = Items.BARRIER;
-                    case "impaling1" -> hintItem = Items.BARRIER;
-                    case "impaling2" -> hintItem = Items.BARRIER;
-                    case "impaling3" -> hintItem = Items.BARRIER;
-                    case "impaling4" -> hintItem = Items.BARRIER;
-                    case "impaling5" -> hintItem = Items.BARRIER;
-                    case "channeling" -> hintItem = Items.BARRIER;
-                    case "quick_charge1" -> hintItem = Items.BARRIER;
-                    case "quick_charge2" -> hintItem = Items.BARRIER;
-                    case "quick_charge3" -> hintItem = Items.BARRIER;
-                    case "piercing1" -> hintItem = Items.BARRIER;
-                    case "piercing2" -> hintItem = Items.BARRIER;
-                    case "piercing3" -> hintItem = Items.BARRIER;
-                    case "piercing4" -> hintItem = Items.BARRIER;
-                    case "multishot" -> hintItem = Items.BARRIER;
-                    case "soul_speed1" -> hintItem = Items.BARRIER;
-                    case "soul_speed2" -> hintItem = Items.BARRIER;
-                    case "soul_speed3" -> hintItem = Items.BARRIER;
-                    case "swift_sneak1" -> hintItem = Items.BARRIER;
-                    case "swift_sneak2" -> hintItem = Items.BARRIER;
-                    case "swift_sneak3" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:enchanting/armor_for_the_masses" -> {
-                switch (criterion) {
-                    case "protection" -> hintItem = Items.BARRIER;
-                    case "fire_protection" -> hintItem = Items.BARRIER;
-                    case "blast_protection" -> hintItem = Items.BARRIER;
-                    case "projectile_protection" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:enchanting/complete_enchanter", "blazeandcave:enchanting/master_enchanter" -> {
-                switch (criterion) {
-                    case "protection" -> hintItem = Items.BARRIER;
-                    case "fire_protection" -> hintItem = Items.BARRIER;
-                    case "feather_falling" -> hintItem = Items.BARRIER;
-                    case "blast_protection" -> hintItem = Items.BARRIER;
-                    case "projectile_protection" -> hintItem = Items.BARRIER;
-                    case "respiration" -> hintItem = Items.BARRIER;
-                    case "aqua_affinity" -> hintItem = Items.BARRIER;
-                    case "thorns" -> hintItem = Items.BARRIER;
-                    case "depth_strider" -> hintItem = Items.BARRIER;
-                    case "frost_walker" -> hintItem = Items.BARRIER;
-                    case "binding_curse" -> hintItem = Items.BARRIER;
-                    case "sharpness" -> hintItem = Items.BARRIER;
-                    case "smite" -> hintItem = Items.BARRIER;
-                    case "bane_of_arthropods" -> hintItem = Items.BARRIER;
-                    case "knockback" -> hintItem = Items.BARRIER;
-                    case "fire_aspect" -> hintItem = Items.BARRIER;
-                    case "looting" -> hintItem = Items.BARRIER;
-                    case "sweeping" -> hintItem = Items.BARRIER;
-                    case "efficiency" -> hintItem = Items.BARRIER;
-                    case "silk_touch" -> hintItem = Items.BARRIER;
-                    case "unbreaking" -> hintItem = Items.BARRIER;
-                    case "fortune" -> hintItem = Items.BARRIER;
-                    case "power" -> hintItem = Items.BARRIER;
-                    case "punch" -> hintItem = Items.BARRIER;
-                    case "flame" -> hintItem = Items.BARRIER;
-                    case "infinity" -> hintItem = Items.BARRIER;
-                    case "luck_of_the_sea" -> hintItem = Items.BARRIER;
-                    case "lure" -> hintItem = Items.BARRIER;
-                    case "mending" -> hintItem = Items.BARRIER;
-                    case "vanishing_curse" -> hintItem = Items.BARRIER;
-                    case "loyalty" -> hintItem = Items.BARRIER;
-                    case "riptide" -> hintItem = Items.BARRIER;
-                    case "impaling" -> hintItem = Items.BARRIER;
-                    case "channeling" -> hintItem = Items.BARRIER;
-                    case "quick_charge" -> hintItem = Items.BARRIER;
-                    case "piercing" -> hintItem = Items.BARRIER;
-                    case "multishot" -> hintItem = Items.BARRIER;
-                    case "soul_speed" -> hintItem = Items.BARRIER;
-                    case "swift_sneak" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:enchanting/curses" -> {
-                switch (criterion) {
-                    case "binding_curse" -> hintItem = Items.BARRIER;
-                    case "vanishing_curse" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:enchanting/fiery" -> {
-                switch (criterion) {
-                    case "fire_protection" -> hintItem = Items.BARRIER;
-                    case "fire_aspect" -> hintItem = Items.BARRIER;
-                    case "flame" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:enchanting/knocking_your_socks_off" -> {
-                switch (criterion) {
-                    case "knockback" -> hintItem = Items.BARRIER;
-                    case "punch" -> hintItem = Items.BARRIER;
-                }
-            }
             case "blazeandcave:enchanting/master_armorer" -> {
                 switch (criterion) {
-                    case "helmet_protection" -> hintItem = Items.BARRIER;
-                    case "chestplate_protection" -> hintItem = Items.BARRIER;
-                    case "leggings_protection" -> hintItem = Items.BARRIER;
-                    case "boots_protection_depth_strider" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:enchanting/scuba_gear" -> {
-                switch (criterion) {
-                    case "respiration" -> hintItem = Items.BARRIER;
-                    case "aqua_affinity" -> hintItem = Items.BARRIER;
-                    case "depth_strider" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:end/void_walker" -> {
-                switch (criterion) {
-                    case "the_end" -> hintItem = Items.BARRIER;
-                    case "small_end_islands" -> hintItem = Items.BARRIER;
-                    case "end_highlands" -> hintItem = Items.BARRIER;
-                    case "end_midlands" -> hintItem = Items.BARRIER;
-                    case "end_barrens" -> hintItem = Items.BARRIER;
+                    case "helmet_protection" -> hintItem = Items.DIAMOND_HELMET;
+                    case "chestplate_protection" -> hintItem = Items.DIAMOND_CHESTPLATE;
+                    case "leggings_protection" -> hintItem = Items.DIAMOND_LEGGINGS;
+                    case "boots_protection_depth_strider" -> hintItem = Items.DIAMOND_BOOTS;
                 }
             }
             case "blazeandcave:farming/a_gluttonous_diet", "blazeandcave:farming/meat_lovers", "minecraft:husbandry/balanced_diet" -> {
@@ -1468,83 +313,11 @@ public class AdvancementGenerator {
                     criterion = criterion.replace("gold_", "golden_");
                 }
             }
-            case "blazeandcave:mining/spelunker" -> {
-                switch (criterion) {
-                    case "lush_caves" -> hintItem = Items.BARRIER;
-                    case "dripstone_caves" -> hintItem = Items.BARRIER;
-                    case "deep_dark" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:monsters/baby_baby_baby_noo" -> {
-                switch (criterion) {
-                    case "zombie" -> hintItem = Items.BARRIER;
-                    case "zombie_villager" -> hintItem = Items.BARRIER;
-                    case "husk" -> hintItem = Items.BARRIER;
-                    case "zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "drowned" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:monsters/dungeon_crawler" -> {
-                switch (criterion) {
-                    case "cave_spider" -> hintItem = Items.BARRIER;
-                    case "silverfish" -> hintItem = Items.BARRIER;
-                    case "guardian" -> hintItem = Items.BARRIER;
-                    case "elder_guardian" -> hintItem = Items.BARRIER;
-                    case "pillager" -> hintItem = Items.BARRIER;
-                    case "vindicator" -> hintItem = Items.BARRIER;
-                    case "evoker" -> hintItem = Items.BARRIER;
-                    case "vex" -> hintItem = Items.BARRIER;
-                    case "blaze" -> hintItem = Items.BARRIER;
-                    case "wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "shulker" -> hintItem = Items.BARRIER;
-                    case "piglin_brute" -> hintItem = Items.BARRIER;
-                    case "warden" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:monsters/hell_hunter" -> {
-                switch (criterion) {
-                    case "zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "enderman" -> hintItem = Items.BARRIER;
-                    case "ghast" -> hintItem = Items.BARRIER;
-                    case "magma_cube" -> hintItem = Items.BARRIER;
-                    case "skeleton" -> hintItem = Items.BARRIER;
-                    case "wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "blaze" -> hintItem = Items.BARRIER;
-                    case "piglin" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "zoglin" -> hintItem = Items.BARRIER;
-                    case "piglin_brute" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:monsters/night_runner" -> {
-                switch (criterion) {
-                    case "spider" -> hintItem = Items.BARRIER;
-                    case "enderman" -> hintItem = Items.BARRIER;
-                    case "creeper" -> hintItem = Items.BARRIER;
-                    case "husk" -> hintItem = Items.BARRIER;
-                    case "skeleton" -> hintItem = Items.BARRIER;
-                    case "slime" -> hintItem = Items.BARRIER;
-                    case "stray" -> hintItem = Items.BARRIER;
-                    case "witch" -> hintItem = Items.BARRIER;
-                    case "zombie" -> hintItem = Items.BARRIER;
-                    case "zombie_villager" -> hintItem = Items.BARRIER;
-                    case "phantom" -> hintItem = Items.BARRIER;
-                    case "drowned" -> hintItem = Items.BARRIER;
-                }
-            }
             case "blazeandcave:monsters/plane_walker", "blazeandcave:nether/lodes_of_applications" -> {
                 switch (criterion) {
                     case "overworld" -> hintItem = Items.GRASS_BLOCK;
                     case "nether" -> hintItem = Items.NETHERRACK;
                     case "end" -> hintItem = Items.END_STONE;
-                }
-            }
-            case "blazeandcave:monsters/void_ender" -> {
-                switch (criterion) {
-                    case "enderman" -> hintItem = Items.BARRIER;
-                    case "endermite" -> hintItem = Items.BARRIER;
-                    case "shulker" -> hintItem = Items.BARRIER;
-                    case "ender_dragon" -> hintItem = Items.BARRIER;
                 }
             }
             case "blazeandcave:nether/hung_drawn_and_bartered" -> {
@@ -1565,89 +338,18 @@ public class AdvancementGenerator {
             }
             case "blazeandcave:nether/spreading_corruption", "blazeandcave:nether/the_struggle_nether_ends" -> {
                 if (criterion.equals("soul_fire")) {
-                    hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:potion/a_much_more_doable_challenge" -> {
-                switch (criterion) {
-                    case "speed" -> hintItem = Items.BARRIER;
-                    case "slowness" -> hintItem = Items.BARRIER;
-                    case "strength" -> hintItem = Items.BARRIER;
-                    case "jump_boost" -> hintItem = Items.BARRIER;
-                    case "regeneration" -> hintItem = Items.BARRIER;
-                    case "fire_resistance" -> hintItem = Items.BARRIER;
-                    case "water_breathing" -> hintItem = Items.BARRIER;
-                    case "invisibility" -> hintItem = Items.BARRIER;
-                    case "night_vision" -> hintItem = Items.BARRIER;
-                    case "weakness" -> hintItem = Items.BARRIER;
-                    case "poison" -> hintItem = Items.BARRIER;
-                    case "wither" -> hintItem = Items.BARRIER;
-                    case "haste" -> hintItem = Items.BARRIER;
-                    case "mining_fatigue" -> hintItem = Items.BARRIER;
-                    case "levitation" -> hintItem = Items.BARRIER;
-                    case "glowing" -> hintItem = Items.BARRIER;
-                    case "absorption" -> hintItem = Items.BARRIER;
-                    case "hunger" -> hintItem = Items.BARRIER;
-                    case "nausea" -> hintItem = Items.BARRIER;
-                    case "resistance" -> hintItem = Items.BARRIER;
-                    case "slow_falling" -> hintItem = Items.BARRIER;
-                    case "conduit_power" -> hintItem = Items.BARRIER;
-                    case "dolphins_grace" -> hintItem = Items.BARRIER;
-                    case "blindness" -> hintItem = Items.BARRIER;
-                    case "saturation" -> hintItem = Items.BARRIER;
-                    case "bad_omen" -> hintItem = Items.BARRIER;
-                    case "hero_of_the_village" -> hintItem = Items.BARRIER;
-                    case "darkness" -> hintItem = Items.BARRIER;
+                    hintItem = Items.SOUL_CAMPFIRE;
                 }
             }
             case "blazeandcave:potion/failed_concoctions" -> {
                 switch (criterion) {
-                    case "thick_potion" -> hintItem = Items.BARRIER;
-                    case "mundane_potion" -> hintItem = Items.BARRIER;
+                    case "thick_potion" -> hintItem = Items.POTION;
+                    case "mundane_potion" -> hintItem = Items.POTION;
                 }
             }
             case "blazeandcave:potion/furious_ammunition" -> {
                 hintItem = Items.TIPPED_ARROW;
                 nbt.putString("Potion", new Identifier(criterion).toString());
-            }
-            case "blazeandcave:potion/gas_bomb" -> {
-                switch (criterion) {
-                    case "speed" -> hintItem = Items.BARRIER;
-                    case "slowness" -> hintItem = Items.BARRIER;
-                    case "strength" -> hintItem = Items.BARRIER;
-                    case "weakness" -> hintItem = Items.BARRIER;
-                    case "jump_boost" -> hintItem = Items.BARRIER;
-                    case "regeneration" -> hintItem = Items.BARRIER;
-                    case "resistance" -> hintItem = Items.BARRIER;
-                    case "fire_resistance" -> hintItem = Items.BARRIER;
-                    case "water_breathing" -> hintItem = Items.BARRIER;
-                    case "invisibility" -> hintItem = Items.BARRIER;
-                    case "night_vision" -> hintItem = Items.BARRIER;
-                    case "poison" -> hintItem = Items.BARRIER;
-                    case "wither" -> hintItem = Items.BARRIER;
-                    case "glowing" -> hintItem = Items.BARRIER;
-                    case "levitation" -> hintItem = Items.BARRIER;
-                    case "slow_falling" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:potion/mad_scientist" -> {
-                switch (criterion) {
-                    case "farmer" -> hintItem = Items.BARRIER;
-                    case "fisherman" -> hintItem = Items.BARRIER;
-                    case "shepherd" -> hintItem = Items.BARRIER;
-                    case "fletcher" -> hintItem = Items.BARRIER;
-                    case "librarian" -> hintItem = Items.BARRIER;
-                    case "cartographer" -> hintItem = Items.BARRIER;
-                    case "cleric" -> hintItem = Items.BARRIER;
-                    case "armorer" -> hintItem = Items.BARRIER;
-                    case "weapon_smith" -> hintItem = Items.BARRIER;
-                    case "tool_smith" -> hintItem = Items.BARRIER;
-                    case "butcher" -> hintItem = Items.BARRIER;
-                    case "leatherworker" -> hintItem = Items.BARRIER;
-                    case "mason" -> hintItem = Items.BARRIER;
-                    case "nitwit" -> hintItem = Items.BARRIER;
-                    case "none" -> hintItem = Items.BARRIER;
-                }
             }
             case "blazeandcave:redstone/monstrous_music" -> {
                 switch (criterion) {
@@ -1657,43 +359,6 @@ public class AdvancementGenerator {
                     case "creeper" -> hintItem = Items.CREEPER_HEAD;
                     case "piglin" -> hintItem = Items.PIGLIN_HEAD;
                     case "dragon" -> hintItem = Items.DRAGON_HEAD;
-                }
-            }
-            case "blazeandcave:redstone/monstrous_sacrifices" -> {
-                switch (criterion) {
-                    case "minecraft:cave_spider" -> hintItem = Items.BARRIER;
-                    case "minecraft:spider" -> hintItem = Items.BARRIER;
-                    case "minecraft:zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "minecraft:enderman" -> hintItem = Items.BARRIER;
-                    case "minecraft:blaze" -> hintItem = Items.BARRIER;
-                    case "minecraft:creeper" -> hintItem = Items.BARRIER;
-                    case "minecraft:evoker" -> hintItem = Items.BARRIER;
-                    case "minecraft:ghast" -> hintItem = Items.BARRIER;
-                    case "minecraft:guardian" -> hintItem = Items.BARRIER;
-                    case "minecraft:husk" -> hintItem = Items.BARRIER;
-                    case "minecraft:magma_cube" -> hintItem = Items.BARRIER;
-                    case "minecraft:shulker" -> hintItem = Items.BARRIER;
-                    case "minecraft:silverfish" -> hintItem = Items.BARRIER;
-                    case "minecraft:skeleton" -> hintItem = Items.BARRIER;
-                    case "minecraft:slime" -> hintItem = Items.BARRIER;
-                    case "minecraft:stray" -> hintItem = Items.BARRIER;
-                    case "minecraft:vindicator" -> hintItem = Items.BARRIER;
-                    case "minecraft:witch" -> hintItem = Items.BARRIER;
-                    case "minecraft:wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "minecraft:zombie" -> hintItem = Items.BARRIER;
-                    case "minecraft:zombie_villager" -> hintItem = Items.BARRIER;
-                    case "minecraft:phantom" -> hintItem = Items.BARRIER;
-                    case "minecraft:drowned" -> hintItem = Items.BARRIER;
-                    case "minecraft:pillager" -> hintItem = Items.BARRIER;
-                    case "minecraft:ravager" -> hintItem = Items.BARRIER;
-                    case "minecraft:endermite" -> hintItem = Items.BARRIER;
-                    case "minecraft:vex" -> hintItem = Items.BARRIER;
-                    case "minecraft:piglin" -> hintItem = Items.BARRIER;
-                    case "minecraft:hoglin" -> hintItem = Items.BARRIER;
-                    case "minecraft:zoglin" -> hintItem = Items.BARRIER;
-                    case "minecraft:wither" -> hintItem = Items.BARRIER;
-                    case "minecraft:piglin_brute" -> hintItem = Items.BARRIER;
-                    case "minecraft:warden" -> hintItem = Items.BARRIER;
                 }
             }
             case "blazeandcave:redstone/noteworthy" -> {
@@ -1721,115 +386,6 @@ public class AdvancementGenerator {
                     hintItem = Items.FISHING_ROD;
                 }
             }
-            case "blazeandcave:redstone/travelling_bard" -> {
-                switch (criterion) {
-                    case "snowy_plains" -> hintItem = Items.BARRIER;
-                    case "snowy_taiga" -> hintItem = Items.BARRIER;
-                    case "windswept_hills" -> hintItem = Items.BARRIER;
-                    case "taiga" -> hintItem = Items.BARRIER;
-                    case "old_growth_taiga" -> hintItem = Items.BARRIER;
-                    case "plains" -> hintItem = Items.BARRIER;
-                    case "forest" -> hintItem = Items.BARRIER;
-                    case "birch_forest" -> hintItem = Items.BARRIER;
-                    case "dark_forest" -> hintItem = Items.BARRIER;
-                    case "swamp" -> hintItem = Items.BARRIER;
-                    case "jungle" -> hintItem = Items.BARRIER;
-                    case "river" -> hintItem = Items.BARRIER;
-                    case "beach" -> hintItem = Items.BARRIER;
-                    case "mushroom_fields" -> hintItem = Items.BARRIER;
-                    case "desert" -> hintItem = Items.BARRIER;
-                    case "savanna" -> hintItem = Items.BARRIER;
-                    case "badlands" -> hintItem = Items.BARRIER;
-                    case "warm_ocean" -> hintItem = Items.BARRIER;
-                    case "lukewarm_ocean" -> hintItem = Items.BARRIER;
-                    case "ocean" -> hintItem = Items.BARRIER;
-                    case "cold_ocean" -> hintItem = Items.BARRIER;
-                    case "frozen_ocean" -> hintItem = Items.BARRIER;
-                    case "meadow" -> hintItem = Items.BARRIER;
-                    case "snowy_slopes_or_grove" -> hintItem = Items.BARRIER;
-                    case "peaks" -> hintItem = Items.BARRIER;
-                    case "nether_wastes" -> hintItem = Items.BARRIER;
-                    case "soul_sand_valley" -> hintItem = Items.BARRIER;
-                    case "crimson_forest" -> hintItem = Items.BARRIER;
-                    case "warped_forest" -> hintItem = Items.BARRIER;
-                    case "basalt_deltas" -> hintItem = Items.BARRIER;
-                    case "the_end" -> hintItem = Items.BARRIER;
-                    case "lush_caves" -> hintItem = Items.BARRIER;
-                    case "dripstone_caves" -> hintItem = Items.BARRIER;
-                    case "deep_dark" -> hintItem = Items.BARRIER;
-                    case "cherry_grove" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:weaponry/demolitions_expert" -> {
-                switch (criterion) {
-                    case "cave_spider" -> hintItem = Items.BARRIER;
-                    case "spider" -> hintItem = Items.BARRIER;
-                    case "zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "enderman" -> hintItem = Items.BARRIER;
-                    case "blaze" -> hintItem = Items.BARRIER;
-                    case "creeper" -> hintItem = Items.BARRIER;
-                    case "ghast" -> hintItem = Items.BARRIER;
-                    case "guardian" -> hintItem = Items.BARRIER;
-                    case "husk" -> hintItem = Items.BARRIER;
-                    case "magma_cube" -> hintItem = Items.BARRIER;
-                    case "shulker" -> hintItem = Items.BARRIER;
-                    case "silverfish" -> hintItem = Items.BARRIER;
-                    case "skeleton" -> hintItem = Items.BARRIER;
-                    case "slime" -> hintItem = Items.BARRIER;
-                    case "stray" -> hintItem = Items.BARRIER;
-                    case "vindicator" -> hintItem = Items.BARRIER;
-                    case "witch" -> hintItem = Items.BARRIER;
-                    case "wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "zombie" -> hintItem = Items.BARRIER;
-                    case "zombie_villager" -> hintItem = Items.BARRIER;
-                    case "phantom" -> hintItem = Items.BARRIER;
-                    case "drowned" -> hintItem = Items.BARRIER;
-                    case "endermite" -> hintItem = Items.BARRIER;
-                    case "pillager" -> hintItem = Items.BARRIER;
-                    case "ravager" -> hintItem = Items.BARRIER;
-                    case "evoker" -> hintItem = Items.BARRIER;
-                    case "vex" -> hintItem = Items.BARRIER;
-                    case "piglin" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "zoglin" -> hintItem = Items.BARRIER;
-                    case "piglin_brute" -> hintItem = Items.BARRIER;
-                    case "warden" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:weaponry/master_shieldsman" -> {
-                switch (criterion) {
-                    case "cave_spider" -> hintItem = Items.BARRIER;
-                    case "spider" -> hintItem = Items.BARRIER;
-                    case "zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "enderman" -> hintItem = Items.BARRIER;
-                    case "blaze" -> hintItem = Items.BARRIER;
-                    case "creeper" -> hintItem = Items.BARRIER;
-                    case "ghast" -> hintItem = Items.BARRIER;
-                    case "husk" -> hintItem = Items.BARRIER;
-                    case "magma_cube" -> hintItem = Items.BARRIER;
-                    case "shulker" -> hintItem = Items.BARRIER;
-                    case "silverfish" -> hintItem = Items.BARRIER;
-                    case "skeleton" -> hintItem = Items.BARRIER;
-                    case "slime" -> hintItem = Items.BARRIER;
-                    case "stray" -> hintItem = Items.BARRIER;
-                    case "vindicator" -> hintItem = Items.BARRIER;
-                    case "wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "zombie" -> hintItem = Items.BARRIER;
-                    case "zombie_villager" -> hintItem = Items.BARRIER;
-                    case "phantom" -> hintItem = Items.BARRIER;
-                    case "drowned" -> hintItem = Items.BARRIER;
-                    case "pillager" -> hintItem = Items.BARRIER;
-                    case "ravager" -> hintItem = Items.BARRIER;
-                    case "endermite" -> hintItem = Items.BARRIER;
-                    case "vex" -> hintItem = Items.BARRIER;
-                    case "piglin" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "zoglin" -> hintItem = Items.BARRIER;
-                    case "piglin_brute" -> hintItem = Items.BARRIER;
-                    case "ender_dragon" -> hintItem = Items.BARRIER;
-                    case "warden" -> hintItem = Items.BARRIER;
-                }
-            }
             case "blazeandcave:weaponry/multiclassed" -> {
                 switch (criterion) {
                     case "axe" -> hintItem = Items.DIAMOND_AXE;
@@ -1838,21 +394,6 @@ public class AdvancementGenerator {
                     case "hoe" -> hintItem = Items.DIAMOND_HOE;
                     case "sword" -> hintItem = Items.DIAMOND_SWORD;
                     case "trident_melee" -> hintItem = Items.TRIDENT;
-                }
-            }
-            case "blazeandcave:weaponry/poseidon_vs_hades" -> {
-                switch (criterion) {
-                    case "zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "ghast" -> hintItem = Items.BARRIER;
-                    case "magma_cube" -> hintItem = Items.BARRIER;
-                    case "skeleton" -> hintItem = Items.BARRIER;
-                    case "wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "blaze" -> hintItem = Items.BARRIER;
-                    case "piglin" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "strider" -> hintItem = Items.BARRIER;
-                    case "zoglin" -> hintItem = Items.BARRIER;
-                    case "piglin_brute" -> hintItem = Items.BARRIER;
                 }
             }
             case "blazeandcave:weaponry/pyrotechnic" -> {
@@ -1866,152 +407,194 @@ public class AdvancementGenerator {
                     case "trail" -> hintItem = Items.DIAMOND;
                 }
             }
-            case "blazeandcave:weaponry/the_aquatic_hunter" -> {
-                switch (criterion) {
-                    case "guardian" -> hintItem = Items.BARRIER;
-                    case "squid" -> hintItem = Items.BARRIER;
-                    case "turtle" -> hintItem = Items.BARRIER;
-                    case "dolphin" -> hintItem = Items.BARRIER;
-                    case "cod_mob" -> hintItem = Items.BARRIER;
-                    case "salmon_mob" -> hintItem = Items.BARRIER;
-                    case "pufferfish" -> hintItem = Items.BARRIER;
-                    case "tropical_fish" -> hintItem = Items.BARRIER;
-                    case "drowned" -> hintItem = Items.BARRIER;
-                    case "axolotl" -> hintItem = Items.BARRIER;
-                    case "glow_squid" -> hintItem = Items.BARRIER;
-                    case "frog" -> hintItem = Items.BARRIER;
-                    case "tadpole" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "blazeandcave:weaponry/the_mighty_hunter" -> {
-                switch (criterion) {
-                    case "chicken" -> hintItem = Items.BARRIER;
-                    case "cow" -> hintItem = Items.BARRIER;
-                    case "pig" -> hintItem = Items.BARRIER;
-                    case "sheep" -> hintItem = Items.BARRIER;
-                    case "rabbit" -> hintItem = Items.BARRIER;
-                    case "mooshroom" -> hintItem = Items.BARRIER;
-                    case "polar_bear" -> hintItem = Items.BARRIER;
-                    case "horse" -> hintItem = Items.BARRIER;
-                    case "donkey" -> hintItem = Items.BARRIER;
-                    case "mule" -> hintItem = Items.BARRIER;
-                    case "llama" -> hintItem = Items.BARRIER;
-                    case "wolf" -> hintItem = Items.BARRIER;
-                    case "ocelot" -> hintItem = Items.BARRIER;
-                    case "parrot" -> hintItem = Items.BARRIER;
-                    case "cat" -> hintItem = Items.BARRIER;
-                    case "panda" -> hintItem = Items.BARRIER;
-                    case "fox" -> hintItem = Items.BARRIER;
-                    case "bee" -> hintItem = Items.BARRIER;
-                    case "hoglin" -> hintItem = Items.BARRIER;
-                    case "strider" -> hintItem = Items.BARRIER;
-                    case "bat" -> hintItem = Items.BARRIER;
-                    case "trader_llama" -> hintItem = Items.BARRIER;
-                    case "turtle" -> hintItem = Items.BARRIER;
-                    case "goat" -> hintItem = Items.BARRIER;
-                    case "frog" -> hintItem = Items.BARRIER;
-                    case "camel" -> hintItem = Items.BARRIER;
-                    case "sniffer" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "minecraft:adventure/adventuring_time" -> {
-                switch (criterion) {
-                    case "snowy_plains" -> hintItem = Items.BARRIER;
-                    case "snowy_taiga" -> hintItem = Items.BARRIER;
-                    case "windswept_hills" -> hintItem = Items.BARRIER;
-                    case "taiga" -> hintItem = Items.BARRIER;
-                    case "old_growth_taiga" -> hintItem = Items.BARRIER;
-                    case "plains" -> hintItem = Items.BARRIER;
-                    case "forest" -> hintItem = Items.BARRIER;
-                    case "birch_forest" -> hintItem = Items.BARRIER;
-                    case "dark_forest" -> hintItem = Items.BARRIER;
-                    case "swamp" -> hintItem = Items.BARRIER;
-                    case "jungle" -> hintItem = Items.BARRIER;
-                    case "river" -> hintItem = Items.BARRIER;
-                    case "beach" -> hintItem = Items.BARRIER;
-                    case "mushroom_fields" -> hintItem = Items.BARRIER;
-                    case "desert" -> hintItem = Items.BARRIER;
-                    case "savanna" -> hintItem = Items.BARRIER;
-                    case "badlands" -> hintItem = Items.BARRIER;
-                    case "warm_ocean" -> hintItem = Items.BARRIER;
-                    case "lukewarm_ocean" -> hintItem = Items.BARRIER;
-                    case "ocean" -> hintItem = Items.BARRIER;
-                    case "cold_ocean" -> hintItem = Items.BARRIER;
-                    case "frozen_ocean" -> hintItem = Items.BARRIER;
-                    case "meadow" -> hintItem = Items.BARRIER;
-                    case "snowy_slopes_or_grove" -> hintItem = Items.BARRIER;
-                    case "peaks" -> hintItem = Items.BARRIER;
-                    case "cherry_grove" -> hintItem = Items.BARRIER;
-                }
-            }
-            case "minecraft:adventure/kill_all_mobs" -> {
-                switch (criterion) {
-                    case "minecraft:cave_spider" -> hintItem = Items.BARRIER;
-                    case "minecraft:spider" -> hintItem = Items.BARRIER;
-                    case "minecraft:zombified_piglin" -> hintItem = Items.BARRIER;
-                    case "minecraft:enderman" -> hintItem = Items.BARRIER;
-                    case "minecraft:blaze" -> hintItem = Items.BARRIER;
-                    case "minecraft:creeper" -> hintItem = Items.BARRIER;
-                    case "minecraft:evoker" -> hintItem = Items.BARRIER;
-                    case "minecraft:ghast" -> hintItem = Items.BARRIER;
-                    case "minecraft:guardian" -> hintItem = Items.BARRIER;
-                    case "minecraft:husk" -> hintItem = Items.BARRIER;
-                    case "minecraft:magma_cube" -> hintItem = Items.BARRIER;
-                    case "minecraft:shulker" -> hintItem = Items.BARRIER;
-                    case "minecraft:silverfish" -> hintItem = Items.BARRIER;
-                    case "minecraft:skeleton" -> hintItem = Items.BARRIER;
-                    case "minecraft:slime" -> hintItem = Items.BARRIER;
-                    case "minecraft:stray" -> hintItem = Items.BARRIER;
-                    case "minecraft:vindicator" -> hintItem = Items.BARRIER;
-                    case "minecraft:witch" -> hintItem = Items.BARRIER;
-                    case "minecraft:wither_skeleton" -> hintItem = Items.BARRIER;
-                    case "minecraft:zombie" -> hintItem = Items.BARRIER;
-                    case "minecraft:zombie_villager" -> hintItem = Items.BARRIER;
-                    case "minecraft:phantom" -> hintItem = Items.BARRIER;
-                    case "minecraft:drowned" -> hintItem = Items.BARRIER;
-                    case "minecraft:pillager" -> hintItem = Items.BARRIER;
-                    case "minecraft:ravager" -> hintItem = Items.BARRIER;
-                    case "minecraft:endermite" -> hintItem = Items.BARRIER;
-                    case "minecraft:vex" -> hintItem = Items.BARRIER;
-                    case "minecraft:piglin" -> hintItem = Items.BARRIER;
-                    case "minecraft:hoglin" -> hintItem = Items.BARRIER;
-                    case "minecraft:zoglin" -> hintItem = Items.BARRIER;
-                    case "minecraft:elder_guardian" -> hintItem = Items.BARRIER;
-                    case "minecraft:ender_dragon" -> hintItem = Items.BARRIER;
-                    case "minecraft:wither" -> hintItem = Items.BARRIER;
-                    case "minecraft:piglin_brute" -> hintItem = Items.BARRIER;
-                    case "minecraft:warden" -> hintItem = Items.BARRIER;
-                }
-            }
             case "minecraft:adventure/trim_with_all_exclusive_armor_patterns" -> criterion += "_smithing_template";
-            case "minecraft:husbandry/bred_all_animals" -> {
-                switch (criterion) {
-                    case "minecraft:horse" -> hintItem = Items.BARRIER;
-                    case "minecraft:sheep" -> hintItem = Items.BARRIER;
-                    case "minecraft:cow" -> hintItem = Items.BARRIER;
-                    case "minecraft:mooshroom" -> hintItem = Items.BARRIER;
-                    case "minecraft:pig" -> hintItem = Items.BARRIER;
-                    case "minecraft:chicken" -> hintItem = Items.BARRIER;
-                    case "minecraft:wolf" -> hintItem = Items.BARRIER;
-                    case "minecraft:ocelot" -> hintItem = Items.BARRIER;
-                    case "minecraft:rabbit" -> hintItem = Items.BARRIER;
-                    case "minecraft:llama" -> hintItem = Items.BARRIER;
-                    case "minecraft:turtle" -> hintItem = Items.BARRIER;
-                    case "minecraft:cat" -> hintItem = Items.BARRIER;
-                    case "minecraft:panda" -> hintItem = Items.BARRIER;
-                    case "minecraft:fox" -> hintItem = Items.BARRIER;
-                    case "minecraft:bee" -> hintItem = Items.BARRIER;
-                    case "minecraft:hoglin" -> hintItem = Items.BARRIER;
-                    case "minecraft:strider" -> hintItem = Items.BARRIER;
-                    case "minecraft:axolotl" -> hintItem = Items.BARRIER;
-                    case "minecraft:goat" -> hintItem = Items.BARRIER;
-                    case "minecraft:trader_llama" -> hintItem = Items.BARRIER;
-                    case "minecraft:donkey" -> hintItem = Items.BARRIER;
-                    case "minecraft:mule" -> hintItem = Items.BARRIER;
-                    case "minecraft:frog" -> hintItem = Items.BARRIER;
-                    case "minecraft:camel" -> hintItem = Items.BARRIER;
-                    case "minecraft:sniffer" -> hintItem = Items.BARRIER;
-                }
+            case "blazeandcave:adventure/feeling_ill",
+                    "blazeandcave:animal/follow_the_leader",
+                    "blazeandcave:challenges/biological_warfare",
+                    "blazeandcave:challenges/death_from_all",
+                    "blazeandcave:challenges/endergeddon",
+                    "blazeandcave:challenges/highway_to_hell",
+                    "blazeandcave:challenges/potion_master",
+                    "blazeandcave:challenges/telescopic",
+                    "blazeandcave:monsters/baby_baby_baby_noo",
+                    "blazeandcave:monsters/dungeon_crawler",
+                    "blazeandcave:monsters/hell_hunter",
+                    "blazeandcave:monsters/night_runner",
+                    "blazeandcave:monsters/void_ender",
+                    "blazeandcave:redstone/monstrous_sacrifices",
+                    "blazeandcave:weaponry/demolitions_expert",
+                    "blazeandcave:weaponry/master_shieldsman",
+                    "blazeandcave:weaponry/poseidon_vs_hades",
+                    "blazeandcave:weaponry/the_aquatic_hunter",
+                    "blazeandcave:weaponry/the_mighty_hunter",
+                    "minecraft:adventure/kill_all_mobs",
+                    "minecraft:husbandry/bred_all_animals" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion.replace("_mob", "").replace("minecraft:", "")) {
+                    case "bat" -> 0;
+                    case "chicken" -> 0;
+                    case "cod" -> 0;
+                    case "cow" -> 0;
+                    case "mooshroom" -> 0;
+                    case "pig" -> 0;
+                    case "rabbit" -> 0;
+                    case "salmon" -> 0;
+                    case "sheep" -> 0;
+                    case "squid" -> 0;
+                    case "tropical_fish" -> 0;
+                    case "turtle" -> 0;
+                    case "villager" -> 0;
+                    case "wandering_trader" -> 0;
+                    case "pufferfish" -> 0;
+                    case "cave_spider" -> 0;
+                    case "enderman" -> 0;
+                    case "panda" -> 0;
+                    case "polar_bear" -> 0;
+                    case "spider" -> 0;
+                    case "zombified_piglin" -> 0;
+                    case "blaze" -> 0;
+                    case "creeper" -> 0;
+                    case "drowned" -> 0;
+                    case "endermite" -> 0;
+                    case "evoker" -> 0;
+                    case "ghast" -> 0;
+                    case "guardian" -> 0;
+                    case "elder_guardian" -> 0;
+                    case "husk" -> 0;
+                    case "magma_cube" -> 0;
+                    case "phantom" -> 0;
+                    case "pillager" -> 0;
+                    case "ravager" -> 0;
+                    case "shulker" -> 0;
+                    case "silverfish" -> 0;
+                    case "skeleton" -> 0;
+                    case "slime" -> 0;
+                    case "stray" -> 0;
+                    case "vex" -> 0;
+                    case "vindicator" -> 0;
+                    case "witch" -> 0;
+                    case "wither_skeleton" -> 0;
+                    case "zombie_villager" -> 0;
+                    case "zombie" -> 0;
+                    case "cat" -> 0;
+                    case "donkey" -> 0;
+                    case "horse" -> 0;
+                    case "llama" -> 0;
+                    case "mule" -> 0;
+                    case "parrot" -> 0;
+                    case "skeleton_horse" -> 0;
+                    case "trader_llama" -> 0;
+                    case "wolf" -> 0;
+                    case "dolphin" -> 0;
+                    case "fox" -> 0;
+                    case "ocelot" -> 19;
+                    case "iron_golem" -> 0;
+                    case "snow_golem" -> 0;
+                    case "wither" -> 0;
+                    case "ender_dragon" -> 0;
+                    case "bee" -> 0;
+                    case "piglin" -> 0;
+                    case "hoglin" -> 0;
+                    case "strider" -> 0;
+                    case "zoglin" -> 0;
+                    case "piglin_brute" -> 0;
+                    case "axolotl" -> 0;
+                    case "glow_squid" -> 0;
+                    case "goat" -> 0;
+                    case "frog" -> 0;
+                    case "tadpole" -> 0;
+                    case "allay" -> 0;
+                    case "warden" -> 0;
+                    case "camel" -> 0;
+                    case "sniffer" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:animal/birdkeeper" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "red" -> 0;
+                    case "blue" -> 0;
+                    case "green" -> 0;
+                    case "cyan" -> 0;
+                    case "gray" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:animal/bunny_lover" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "brown" -> 0;
+                    case "white" -> 0;
+                    case "green" -> 0;
+                    case "cyan" -> 0;
+                    case "gray" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:animal/llama_llama_duck_king" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "creamy" -> 0;
+                    case "white" -> 0;
+                    case "brown" -> 0;
+                    case "gray" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:animal/master_farrier" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "white_none" -> 0;
+                    case "creamy_none" -> 0;
+                    case "chestnut_none" -> 0;
+                    case "brown_none" -> 0;
+                    case "black_none" -> 0;
+                    case "gray_none" -> 0;
+                    case "dark_brown_none" -> 0;
+                    case "white_white" -> 0;
+                    case "creamy_white" -> 0;
+                    case "chestnut_white" -> 0;
+                    case "brown_white" -> 0;
+                    case "black_white" -> 0;
+                    case "gray_white" -> 0;
+                    case "dark_brown_white" -> 0;
+                    case "white_white_field" -> 0;
+                    case "creamy_white_field" -> 0;
+                    case "chestnut_white_field" -> 0;
+                    case "brown_white_field" -> 0;
+                    case "black_white_field" -> 0;
+                    case "gray_white_field" -> 0;
+                    case "dark_brown_white_field" -> 0;
+                    case "white_white_dots" -> 0;
+                    case "creamy_white_dots" -> 0;
+                    case "chestnut_white_dots" -> 0;
+                    case "brown_white_dots" -> 0;
+                    case "black_white_dots" -> 0;
+                    case "gray_white_dots" -> 0;
+                    case "dark_brown_white_dots" -> 0;
+                    case "white_black_dots" -> 0;
+                    case "creamy_black_dots" -> 0;
+                    case "chestnut_black_dots" -> 0;
+                    case "brown_black_dots" -> 0;
+                    case "black_black_dots" -> 0;
+                    case "gray_black_dots" -> 0;
+                    case "dark_brown_black_dots" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:biomes/pandamonium" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "normal" -> 12;
+                    case "aggressive" -> 13;
+                    case "lazy" -> 14;
+                    case "worried" -> 15;
+                    case "playful" -> 16;
+                    case "weak" -> 17;
+                    case "brown" -> 18;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
             }
             case "minecraft:husbandry/complete_catalogue" -> {
                 hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
@@ -2031,20 +614,480 @@ public class AdvancementGenerator {
                 });
             }
             case "minecraft:husbandry/leash_all_frog_variants" -> {
-                switch (criterion) {
-                    case "minecraft:temperate" -> hintItem = Items.BARRIER;
-                    case "minecraft:warm" -> hintItem = Items.BARRIER;
-                    case "minecraft:cold" -> hintItem = Items.BARRIER;
-                }
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "minecraft:temperate" -> 0;
+                    case "minecraft:warm" -> 0;
+                    case "minecraft:cold" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
             }
-            case "minecraft:nether/explore_nether" -> {
-                switch (criterion) {
-                    case "nether_wastes" -> hintItem = Items.BARRIER;
-                    case "crimson_forest" -> hintItem = Items.BARRIER;
-                    case "warped_forest" -> hintItem = Items.BARRIER;
-                    case "soul_sand_valley" -> hintItem = Items.BARRIER;
-                    case "basalt_deltas" -> hintItem = Items.BARRIER;
-                }
+            case "blazeandcave:adventure/businessman",
+                    "blazeandcave:adventure/master_trader",
+                    "blazeandcave:adventure/traveller",
+                    "blazeandcave:adventure/you_are_the_pillager",
+                    "blazeandcave:challenges/global_vaccination",
+                    "blazeandcave:challenges/stockbroker",
+                    "blazeandcave:potion/mad_scientist" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "farmer", "farmer_plains" -> 0;
+                    case "fisherman", "fisherman_plains" -> 0;
+                    case "shepherd", "shepherd_plains" -> 0;
+                    case "fletcher", "fletcher_plains" -> 0;
+                    case "librarian", "librarian_plains" -> 0;
+                    case "cartographer", "cartographer_plains" -> 0;
+                    case "cleric", "cleric_plains" -> 0;
+                    case "armorer", "armorer_plains" -> 0;
+                    case "weapon_smith", "weapon_smith_plains" -> 0;
+                    case "tool_smith", "tool_smith_plains" -> 0;
+                    case "butcher", "butcher_plains" -> 0;
+                    case "leatherworker", "leatherworker_plains" -> 0;
+                    case "mason", "mason_plains" -> 0;
+                    case "nitwit", "nitwit_plains" -> 0;
+                    case "none", "unemployed", "plains", "none_plains" -> 0;
+                    case "farmer_taiga" -> 0;
+                    case "fisherman_taiga" -> 0;
+                    case "shepherd_taiga" -> 0;
+                    case "fletcher_taiga" -> 0;
+                    case "librarian_taiga" -> 0;
+                    case "cartographer_taiga" -> 0;
+                    case "cleric_taiga" -> 0;
+                    case "armorer_taiga" -> 0;
+                    case "weapon_smith_taiga" -> 0;
+                    case "tool_smith_taiga" -> 0;
+                    case "butcher_taiga" -> 0;
+                    case "leatherworker_taiga" -> 0;
+                    case "mason_taiga" -> 0;
+                    case "nitwit_taiga" -> 0;
+                    case "taiga", "none_taiga" -> 0;
+                    case "farmer_desert" -> 0;
+                    case "fisherman_desert" -> 0;
+                    case "shepherd_desert" -> 0;
+                    case "fletcher_desert" -> 0;
+                    case "librarian_desert" -> 0;
+                    case "cartographer_desert" -> 0;
+                    case "cleric_desert" -> 0;
+                    case "armorer_desert" -> 0;
+                    case "weapon_smith_desert" -> 0;
+                    case "tool_smith_desert" -> 0;
+                    case "butcher_desert" -> 0;
+                    case "leatherworker_desert" -> 0;
+                    case "mason_desert" -> 0;
+                    case "nitwit_desert" -> 0;
+                    case "desert", "none_desert" -> 0;
+                    case "farmer_savanna" -> 0;
+                    case "fisherman_savanna" -> 0;
+                    case "shepherd_savanna" -> 0;
+                    case "fletcher_savanna" -> 0;
+                    case "librarian_savanna" -> 0;
+                    case "cartographer_savanna" -> 0;
+                    case "cleric_savanna" -> 0;
+                    case "armorer_savanna" -> 0;
+                    case "weapon_smith_savanna" -> 0;
+                    case "tool_smith_savanna" -> 0;
+                    case "butcher_savanna" -> 0;
+                    case "leatherworker_savanna" -> 0;
+                    case "mason_savanna" -> 0;
+                    case "nitwit_savanna" -> 0;
+                    case "savanna", "none_savanna" -> 0;
+                    case "farmer_snow" -> 0;
+                    case "fisherman_snow" -> 0;
+                    case "shepherd_snow" -> 0;
+                    case "fletcher_snow" -> 0;
+                    case "librarian_snow" -> 0;
+                    case "cartographer_snow" -> 0;
+                    case "cleric_snow" -> 0;
+                    case "armorer_snow" -> 0;
+                    case "weapon_smith_snow" -> 0;
+                    case "tool_smith_snow" -> 0;
+                    case "butcher_snow" -> 0;
+                    case "leatherworker_snow" -> 0;
+                    case "mason_snow" -> 0;
+                    case "nitwit_snow" -> 0;
+                    case "snow", "none_snow" -> 0;
+                    case "farmer_jungle" -> 0;
+                    case "fisherman_jungle" -> 0;
+                    case "shepherd_jungle" -> 0;
+                    case "fletcher_jungle" -> 0;
+                    case "librarian_jungle" -> 0;
+                    case "cartographer_jungle" -> 0;
+                    case "cleric_jungle" -> 0;
+                    case "armorer_jungle" -> 0;
+                    case "weapon_smith_jungle" -> 0;
+                    case "tool_smith_jungle" -> 0;
+                    case "butcher_jungle" -> 0;
+                    case "leatherworker_jungle" -> 0;
+                    case "mason_jungle" -> 0;
+                    case "nitwit_jungle" -> 0;
+                    case "none_jungle" -> 0;
+                    case "farmer_swamp" -> 0;
+                    case "fisherman_swamp" -> 0;
+                    case "shepherd_swamp" -> 0;
+                    case "fletcher_swamp" -> 0;
+                    case "librarian_swamp" -> 0;
+                    case "cartographer_swamp" -> 0;
+                    case "cleric_swamp" -> 0;
+                    case "armorer_swamp" -> 0;
+                    case "weapon_smith_swamp" -> 0;
+                    case "tool_smith_swamp" -> 0;
+                    case "butcher_swamp" -> 0;
+                    case "leatherworker_swamp" -> 0;
+                    case "mason_swamp" -> 0;
+                    case "nitwit_swamp" -> 0;
+                    case "none_swamp" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:challenges/ultimate_enchanter",
+                    "blazeandcave:enchanting/armor_for_the_masses",
+                    "blazeandcave:enchanting/complete_enchanter",
+                    "blazeandcave:enchanting/curses",
+                    "blazeandcave:enchanting/fiery",
+                    "blazeandcave:enchanting/knocking_your_socks_off",
+                    "blazeandcave:enchanting/master_enchanter",
+                    "blazeandcave:enchanting/scuba_gear" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "protection" -> 0;
+                    case "protection1" -> 0;
+                    case "protection2" -> 0;
+                    case "protection3" -> 0;
+                    case "protection4" -> 0;
+                    case "fire_protection" -> 0;
+                    case "fire_protection1" -> 0;
+                    case "fire_protection2" -> 0;
+                    case "fire_protection3" -> 0;
+                    case "fire_protection4" -> 0;
+                    case "feather_falling" -> 0;
+                    case "feather_falling1" -> 0;
+                    case "feather_falling2" -> 0;
+                    case "feather_falling3" -> 0;
+                    case "feather_falling4" -> 0;
+                    case "blast_protection" -> 0;
+                    case "blast_protection1" -> 0;
+                    case "blast_protection2" -> 0;
+                    case "blast_protection3" -> 0;
+                    case "blast_protection4" -> 0;
+                    case "projectile_protection" -> 0;
+                    case "projectile_protection1" -> 0;
+                    case "projectile_protection2" -> 0;
+                    case "projectile_protection3" -> 0;
+                    case "projectile_protection4" -> 0;
+                    case "respiration" -> 0;
+                    case "respiration1" -> 0;
+                    case "respiration2" -> 0;
+                    case "respiration3" -> 0;
+                    case "aqua_affinity" -> 0;
+                    case "thorns" -> 0;
+                    case "thorns1" -> 0;
+                    case "thorns2" -> 0;
+                    case "thorns3" -> 0;
+                    case "depth_strider" -> 0;
+                    case "depth_strider1" -> 0;
+                    case "depth_strider2" -> 0;
+                    case "depth_strider3" -> 0;
+                    case "frost_walker" -> 0;
+                    case "frost_walker1" -> 0;
+                    case "frost_walker2" -> 0;
+                    case "binding_curse" -> 0;
+                    case "sharpness" -> 0;
+                    case "sharpness1" -> 0;
+                    case "sharpness2" -> 0;
+                    case "sharpness3" -> 0;
+                    case "sharpness4" -> 0;
+                    case "sharpness5" -> 0;
+                    case "smite" -> 0;
+                    case "smite1" -> 0;
+                    case "smite2" -> 0;
+                    case "smite3" -> 0;
+                    case "smite4" -> 0;
+                    case "smite5" -> 0;
+                    case "bane_of_arthropods" -> 0;
+                    case "bane_of_arthropods1" -> 0;
+                    case "bane_of_arthropods2" -> 0;
+                    case "bane_of_arthropods3" -> 0;
+                    case "bane_of_arthropods4" -> 0;
+                    case "bane_of_arthropods5" -> 0;
+                    case "knockback" -> 0;
+                    case "knockback1" -> 0;
+                    case "knockback2" -> 0;
+                    case "fire_aspect" -> 0;
+                    case "fire_aspect1" -> 0;
+                    case "fire_aspect2" -> 0;
+                    case "looting" -> 0;
+                    case "looting1" -> 0;
+                    case "looting2" -> 0;
+                    case "looting3" -> 0;
+                    case "sweeping" -> 0;
+                    case "sweeping1" -> 0;
+                    case "sweeping2" -> 0;
+                    case "sweeping3" -> 0;
+                    case "efficiency" -> 0;
+                    case "efficiency1" -> 0;
+                    case "efficiency2" -> 0;
+                    case "efficiency3" -> 0;
+                    case "efficiency4" -> 0;
+                    case "efficiency5" -> 0;
+                    case "silk_touch" -> 0;
+                    case "unbreaking" -> 0;
+                    case "unbreaking1" -> 0;
+                    case "unbreaking2" -> 0;
+                    case "unbreaking3" -> 0;
+                    case "fortune" -> 0;
+                    case "fortune1" -> 0;
+                    case "fortune2" -> 0;
+                    case "fortune3" -> 0;
+                    case "power" -> 0;
+                    case "power1" -> 0;
+                    case "power2" -> 0;
+                    case "power3" -> 0;
+                    case "power4" -> 0;
+                    case "power5" -> 0;
+                    case "punch" -> 0;
+                    case "punch1" -> 0;
+                    case "punch2" -> 0;
+                    case "flame" -> 0;
+                    case "infinity" -> 0;
+                    case "luck_of_the_sea" -> 0;
+                    case "luck_of_the_sea1" -> 0;
+                    case "luck_of_the_sea2" -> 0;
+                    case "luck_of_the_sea3" -> 0;
+                    case "lure" -> 0;
+                    case "lure1" -> 0;
+                    case "lure2" -> 0;
+                    case "lure3" -> 0;
+                    case "mending" -> 0;
+                    case "vanishing_curse" -> 0;
+                    case "loyalty" -> 0;
+                    case "loyalty1" -> 0;
+                    case "loyalty2" -> 0;
+                    case "loyalty3" -> 0;
+                    case "riptide" -> 0;
+                    case "riptide1" -> 0;
+                    case "riptide2" -> 0;
+                    case "riptide3" -> 0;
+                    case "impaling" -> 0;
+                    case "impaling1" -> 0;
+                    case "impaling2" -> 0;
+                    case "impaling3" -> 0;
+                    case "impaling4" -> 0;
+                    case "impaling5" -> 0;
+                    case "channeling" -> 0;
+                    case "quick_charge" -> 0;
+                    case "quick_charge1" -> 0;
+                    case "quick_charge2" -> 0;
+                    case "quick_charge3" -> 0;
+                    case "piercing" -> 0;
+                    case "piercing1" -> 0;
+                    case "piercing2" -> 0;
+                    case "piercing3" -> 0;
+                    case "piercing4" -> 0;
+                    case "multishot" -> 0;
+                    case "soul_speed" -> 0;
+                    case "soul_speed1" -> 0;
+                    case "soul_speed2" -> 0;
+                    case "soul_speed3" -> 0;
+                    case "swift_sneak" -> 0;
+                    case "swift_sneak1" -> 0;
+                    case "swift_sneak2" -> 0;
+                    case "swift_sneak3" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:potion/a_much_more_doable_challenge",
+                    "blazeandcave:potion/gas_bomb" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "speed" -> 0;
+                    case "slowness" -> 0;
+                    case "strength" -> 0;
+                    case "jump_boost" -> 0;
+                    case "regeneration" -> 0;
+                    case "fire_resistance" -> 0;
+                    case "water_breathing" -> 0;
+                    case "invisibility" -> 0;
+                    case "night_vision" -> 0;
+                    case "weakness" -> 0;
+                    case "poison" -> 0;
+                    case "wither" -> 0;
+                    case "haste" -> 0;
+                    case "mining_fatigue" -> 0;
+                    case "levitation" -> 0;
+                    case "glowing" -> 0;
+                    case "absorption" -> 0;
+                    case "hunger" -> 0;
+                    case "nausea" -> 0;
+                    case "resistance" -> 0;
+                    case "slow_falling" -> 0;
+                    case "conduit_power" -> 0;
+                    case "dolphins_grace" -> 0;
+                    case "blindness" -> 0;
+                    case "saturation" -> 0;
+                    case "bad_omen" -> 0;
+                    case "hero_of_the_village" -> 0;
+                    case "darkness" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:biomes/cold_feet",
+                    "blazeandcave:biomes/high_feet",
+                    "blazeandcave:biomes/one_with_the_forest",
+                    "blazeandcave:biomes/overgrown",
+                    "blazeandcave:biomes/warm_feet",
+                    "blazeandcave:biomes/wet_feet",
+                    "blazeandcave:challenges/explorer_of_worlds",
+                    "blazeandcave:end/void_walker",
+                    "blazeandcave:mining/spelunker",
+                    "blazeandcave:redstone/travelling_bard",
+                    "minecraft:adventure/adventuring_time",
+                    "minecraft:nether/explore_nether" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "river" -> 0;
+                    case "swamp" -> 0;
+                    case "desert" -> 0;
+                    case "snowy_taiga" -> 0;
+                    case "badlands" -> 0;
+                    case "forest" -> 0;
+                    case "stony_shore" -> 0;
+                    case "snowy_plains" -> 0;
+                    case "wooded_badlands" -> 0;
+                    case "savanna" -> 0;
+                    case "plains" -> 0;
+                    case "frozen_river" -> 0;
+                    case "old_growth_pine_taiga" -> 0;
+                    case "snowy_beach" -> 0;
+                    case "deep_ocean" -> 0;
+                    case "sparse_jungle" -> 0;
+                    case "ocean" -> 0;
+                    case "windswept_hills" -> 0;
+                    case "jungle" -> 0;
+                    case "beach" -> 0;
+                    case "savanna_plateau" -> 0;
+                    case "dark_forest" -> 0;
+                    case "taiga" -> 0;
+                    case "birch_forest" -> 0;
+                    case "mushroom_fields" -> 0;
+                    case "windswept_forest" -> 0;
+                    case "cold_ocean" -> 0;
+                    case "warm_ocean" -> 0;
+                    case "lukewarm_ocean" -> 0;
+                    case "frozen_ocean" -> 0;
+                    case "deep_frozen_ocean" -> 0;
+                    case "deep_lukewarm_ocean" -> 0;
+                    case "deep_cold_ocean" -> 0;
+                    case "bamboo_jungle" -> 0;
+                    case "sunflower_plains" -> 0;
+                    case "windswept_gravelly_hills" -> 0;
+                    case "flower_forest" -> 0;
+                    case "ice_spikes" -> 0;
+                    case "old_growth_birch_forest" -> 0;
+                    case "old_growth_taiga", "old_growth_spruce_taiga" -> 0;
+                    case "windswept_savanna" -> 0;
+                    case "eroded_badlands" -> 0;
+                    case "meadow" -> 0;
+                    case "snowy_slopes_or_grove", "grove" -> 0;
+                    case "snowy_slopes" -> 0;
+                    case "peaks", "frozen_peaks" -> 0;
+                    case "jagged_peaks" -> 0;
+                    case "stony_peaks" -> 0;
+                    case "lush_caves" -> 0;
+                    case "dripstone_caves" -> 0;
+                    case "nether_wastes" -> 0;
+                    case "crimson_forest" -> 0;
+                    case "warped_forest" -> 0;
+                    case "soul_sand_valley" -> 0;
+                    case "basalt_deltas" -> 0;
+                    case "the_end" -> 0;
+                    case "small_end_islands" -> 0;
+                    case "end_highlands" -> 0;
+                    case "end_midlands" -> 0;
+                    case "end_barrens" -> 0;
+                    case "mangrove_swamp" -> 0;
+                    case "deep_dark" -> 0;
+                    case "cherry_grove" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:adventure/raidin_master" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "dungeon" -> 0;
+                    case "igloo" -> 0;
+                    case "desert_pyramid" -> 0;
+                    case "jungle_pyramid" -> 0;
+                    case "swamp_hut" -> 0;
+                    case "village_desert" -> 0;
+                    case "village_plains" -> 0;
+                    case "village_savanna" -> 0;
+                    case "village_snowy" -> 0;
+                    case "village_taiga" -> 0;
+                    case "mineshaft" -> 0;
+                    case "mineshaft_mesa" -> 0;
+                    case "stronghold" -> 0;
+                    case "fortress" -> 0;
+                    case "end_city" -> 0;
+                    case "monument" -> 0;
+                    case "mansion" -> 0;
+                    case "ocean_ruin_cold" -> 0;
+                    case "ocean_ruin_warm" -> 0;
+                    case "shipwreck" -> 0;
+                    case "buried_treasure" -> 0;
+                    case "pillager_outpost" -> 0;
+                    case "ruined_portal" -> 0;
+                    case "bastion_remnant" -> 0;
+                    case "ancient_city" -> 0;
+                    case "trail_ruins" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
+            }
+            case "blazeandcave:challenges/i_am_loot" -> {
+                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                nbt.putInt("Damage", switch (criterion) {
+                    case "abandoned_mineshaft" -> 0;
+                    case "bastion_bridge" -> 0;
+                    case "bastion_hoglin_stable" -> 0;
+                    case "bastion_other" -> 0;
+                    case "bastion_treasure" -> 0;
+                    case "buried_treasure" -> 0;
+                    case "desert_pyramid" -> 0;
+                    case "end_city_treasure" -> 0;
+                    case "igloo_chest" -> 0;
+                    case "jungle_temple" -> 0;
+                    case "jungle_temple_dispenser" -> 0;
+                    case "nether_bridge" -> 0;
+                    case "pillager_outpost" -> 0;
+                    case "ruined_portal" -> 0;
+                    case "shipwreck_map" -> 0;
+                    case "shipwreck_supply" -> 0;
+                    case "shipwreck_treasure" -> 0;
+                    case "simple_dungeon" -> 0;
+                    case "stronghold_corridor" -> 0;
+                    case "stronghold_crossing" -> 0;
+                    case "stronghold_library" -> 0;
+                    case "underwater_ruin_big" -> 0;
+                    case "underwater_ruin_small" -> 0;
+                    case "woodland_mansion" -> 0;
+                    case "village_armorer" -> 0;
+                    case "village_butcher" -> 0;
+                    case "village_cartographer" -> 0;
+                    case "village_desert_house" -> 0;
+                    case "village_fisher" -> 0;
+                    case "village_fletcher" -> 0;
+                    case "village_mason" -> 0;
+                    case "village_plains_house" -> 0;
+                    case "village_savanna_house" -> 0;
+                    case "village_snowy_house" -> 0;
+                    case "village_taiga_house" -> 0;
+                    case "village_tannery" -> 0;
+                    case "village_temple" -> 0;
+                    case "village_toolsmith" -> 0;
+                    case "village_weaponsmith" -> 0;
+                    case "ancient_city" -> 0;
+                    case "ancient_city_ice_box" -> 0;
+                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                });
             }
         }
         if (hintItem == null) {

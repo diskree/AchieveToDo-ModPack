@@ -96,16 +96,8 @@ public class AdvancementGenerator {
                 });
             }
             case "blazeandcave:animal/caprymphony" -> {
-                switch (criterion) {
-                    case "ponder" -> hintItem = Items.BARRIER;
-                    case "sing" -> hintItem = Items.BARRIER;
-                    case "seek" -> hintItem = Items.BARRIER;
-                    case "feel" -> hintItem = Items.BARRIER;
-                    case "admire" -> hintItem = Items.BARRIER;
-                    case "call" -> hintItem = Items.BARRIER;
-                    case "yearn" -> hintItem = Items.BARRIER;
-                    case "dream" -> hintItem = Items.BARRIER;
-                }
+                hintItem = Items.GOAT_HORN;
+                nbt.putString("instrument", new Identifier(criterion + "_goat_horn").toString());
             }
             case "blazeandcave:animal/colorful_cavalry" -> {
                 hintItem = Items.LEATHER_HORSE_ARMOR;

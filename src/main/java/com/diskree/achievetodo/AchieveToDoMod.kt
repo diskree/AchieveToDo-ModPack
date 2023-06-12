@@ -187,6 +187,12 @@ class AchieveToDoMod : ModInitializer {
                     Text.of("Tropical Fish & Axolotl Buckets"),
                     ResourcePackActivationType.ALWAYS_ENABLED
             )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                GOAT_HORNS_RESOURCE_PACK_ID,
+                modContainer,
+                Text.of("Goat Horns"),
+                ResourcePackActivationType.ALWAYS_ENABLED
+            )
         }
     }
 
@@ -259,6 +265,7 @@ class AchieveToDoMod : ModInitializer {
 
         private val BACAP_LANGUAGE_RESOURCE_PACK_ID = Identifier(ID, "bacap_lp")
         private val VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID = Identifier(ID, "visual_fish_buckets")
+        private val GOAT_HORNS_RESOURCE_PACK_ID = Identifier(ID, "goat_horns")
 
         @JvmField
         val ANCIENT_CITY_PORTAL_BLOCK = AncientCityPortalBlock(

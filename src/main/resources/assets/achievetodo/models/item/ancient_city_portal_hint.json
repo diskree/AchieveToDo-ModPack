@@ -122,7 +122,85 @@
       "predicate": {
         "damage": 0.019
       },
-      "model": "achievetodo:item/ocelot"
+      "model": "achievetodo:item/cat/ocelot"
+    },
+    {
+      "predicate": {
+        "damage": 0.020
+      },
+      "model": "achievetodo:item/frog/cold_frog"
+    },
+    {
+      "predicate": {
+        "damage": 0.021
+      },
+      "model": "achievetodo:item/frog/temperate_frog"
+    },
+    {
+      "predicate": {
+        "damage": 0.022
+      },
+      "model": "achievetodo:item/frog/warm_frog"
+    },
+    {
+      "predicate": {
+        "damage": 0.023
+      },
+      "model": "achievetodo:item/llama/brown"
+    },
+    {
+      "predicate": {
+        "damage": 0.024
+      },
+      "model": "achievetodo:item/llama/creamy"
+    },
+    {
+      "predicate": {
+        "damage": 0.025
+      },
+      "model": "achievetodo:item/llama/gray"
+    },
+    {
+      "predicate": {
+        "damage": 0.026
+      },
+      "model": "achievetodo:item/llama/white"
+    },
+    {
+      "predicate": {
+        "damage": 0.027
+      },
+      "model": "achievetodo:item/rabbit/black"
+    },
+    {
+      "predicate": {
+        "damage": 0.028
+      },
+      "model": "achievetodo:item/rabbit/brown"
+    },
+    {
+      "predicate": {
+        "damage": 0.029
+      },
+      "model": "achievetodo:item/rabbit/gold"
+    },
+    {
+      "predicate": {
+        "damage": 0.030
+      },
+      "model": "achievetodo:item/rabbit/salt"
+    },
+    {
+      "predicate": {
+        "damage": 0.031
+      },
+      "model": "achievetodo:item/rabbit/white"
+    },
+    {
+      "predicate": {
+        "damage": 0.032
+      },
+      "model": "achievetodo:item/rabbit/white_splotched"
     }
   ]
 }

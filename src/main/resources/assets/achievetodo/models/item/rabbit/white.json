@@ -1,0 +1,31 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 32],
+	"textures": {
+		"0": "achievetodo:item/rabbit/white"
+	},
+	"elements": [
+		{
+			"from": [3, 4, 7],
+			"to": [13, 12, 9],
+			"faces": {
+				"east": {"uv": [10.5, 2.5, 10.75, 4.5], "texture": "#0"},
+				"south": {"uv": [9.25, 2.5, 10.5, 4.5], "texture": "#0"},
+				"west": {"uv": [9, 2.5, 9.25, 4.5], "texture": "#0"},
+				"up": {"uv": [9.25, 2, 10.5, 2.5], "texture": "#0"},
+				"down": {"uv": [10.5, 2, 11.75, 2.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 7, 9],
+			"to": [9, 9, 10],
+			"faces": {
+				"east": {"uv": [8.5, 5, 8.625, 5.5], "texture": "#0"},
+				"south": {"uv": [8.25, 5, 8.5, 5.5], "texture": "#0"},
+				"west": {"uv": [8.125, 5, 8.25, 5.5], "texture": "#0"},
+				"up": {"uv": [8.25, 4.75, 8.5, 5], "texture": "#0"},
+				"down": {"uv": [8.5, 4.75, 8.75, 5], "texture": "#0"}
+			}
+		}
+	]
+}

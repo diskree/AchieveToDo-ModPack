@@ -514,21 +514,22 @@ public class AdvancementGenerator {
             case "blazeandcave:animal/bunny_lover" -> {
                 hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
-                    case "brown" -> 0;
-                    case "white" -> 0;
-                    case "green" -> 0;
-                    case "cyan" -> 0;
-                    case "gray" -> 0;
+                    case "brown" -> 28;
+                    case "white" -> 31;
+                    case "black" -> 27;
+                    case "black_and_white" -> 32;
+                    case "gold" -> 29;
+                    case "salt_and_pepper" -> 30;
                     default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 });
             }
             case "blazeandcave:animal/llama_llama_duck_king" -> {
                 hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
-                    case "creamy" -> 0;
-                    case "white" -> 0;
-                    case "brown" -> 0;
-                    case "gray" -> 0;
+                    case "creamy" -> 24;
+                    case "white" -> 26;
+                    case "brown" -> 23;
+                    case "gray" -> 25;
                     default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 });
             }
@@ -606,9 +607,9 @@ public class AdvancementGenerator {
             case "minecraft:husbandry/leash_all_frog_variants" -> {
                 hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
-                    case "minecraft:temperate" -> 0;
-                    case "minecraft:warm" -> 0;
-                    case "minecraft:cold" -> 0;
+                    case "minecraft:temperate" -> 21;
+                    case "minecraft:warm" -> 22;
+                    case "minecraft:cold" -> 20;
                     default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 });
             }

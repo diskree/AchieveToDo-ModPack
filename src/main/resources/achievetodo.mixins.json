@@ -37,6 +37,7 @@
     "MinecraftServerMixin",
     "PlayerEntityMixin",
     "PlayerScreenHandlerMixin",
+    "PotionUtilMixin",
     "RaiderEntityMixin",
     "ReinforcedDeepslateMixin",
     "SavePropertiesMixin",

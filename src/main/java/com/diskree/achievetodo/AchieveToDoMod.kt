@@ -27,12 +27,11 @@ import net.minecraft.advancement.Advancement
 import net.minecraft.block.AbstractBlock
 import net.minecraft.block.piston.PistonBehavior
 import net.minecraft.client.MinecraftClient
+import net.minecraft.client.item.ClampedModelPredicateProvider
 import net.minecraft.client.item.ModelPredicateProviderRegistry
 import net.minecraft.client.render.RenderLayer
-import net.minecraft.entity.Entity
-import net.minecraft.entity.EntityDimensions
-import net.minecraft.entity.EntityType
-import net.minecraft.entity.SpawnGroup
+import net.minecraft.client.world.ClientWorld
+import net.minecraft.entity.*
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.*
 import net.minecraft.particle.DefaultParticleType
@@ -188,10 +187,10 @@ class AchieveToDoMod : ModInitializer {
                     ResourcePackActivationType.ALWAYS_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
-                GOAT_HORNS_RESOURCE_PACK_ID,
-                modContainer,
-                Text.of("Goat Horns"),
-                ResourcePackActivationType.ALWAYS_ENABLED
+                    GOAT_HORNS_RESOURCE_PACK_ID,
+                    modContainer,
+                    Text.of("Goat Horns"),
+                    ResourcePackActivationType.ALWAYS_ENABLED
             )
         }
     }
@@ -205,6 +204,24 @@ class AchieveToDoMod : ModInitializer {
         Registry.register(Registries.ITEM, Identifier(ID, "locked_action"), LOCKED_ACTION_ITEM)
         Registry.register(Registries.ITEM, Identifier(ID, "ancient_city_portal_hint"), ANCIENT_CITY_PORTAL_HINT_ITEM)
         ModelPredicateProviderRegistry.register(ANCIENT_CITY_PORTAL_HINT_ITEM, ModelPredicateProviderRegistry.DAMAGE_ID, ModelPredicateProviderRegistry.DAMAGE_PROVIDER)
+
+        val potionsPredicateProvider = ClampedModelPredicateProvider { stack: ItemStack, _: ClientWorld?, _: LivingEntity?, _: Int ->
+            val potion = stack.nbt?.getString("Potion")
+            if (potion != null) {
+                val potionId = Identifier(potion)
+                if (potionId.path.startsWith("long_")) {
+                    return@ClampedModelPredicateProvider 0.5f
+                }
+                if (potionId.path.startsWith("strong_")) {
+                    return@ClampedModelPredicateProvider 1.0f
+                }
+            }
+            return@ClampedModelPredicateProvider 0.0f
+        }
+        ModelPredicateProviderRegistry.register(Items.POTION, Identifier("long_or_strong"), potionsPredicateProvider)
+        ModelPredicateProviderRegistry.register(Items.SPLASH_POTION, Identifier("long_or_strong"), potionsPredicateProvider)
+        ModelPredicateProviderRegistry.register(Items.LINGERING_POTION, Identifier("long_or_strong"), potionsPredicateProvider)
+        ModelPredicateProviderRegistry.register(Items.TIPPED_ARROW, Identifier("long_or_strong"), potionsPredicateProvider)
     }
 
     private fun registerParticles() {

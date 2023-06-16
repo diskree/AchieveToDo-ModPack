@@ -1,0 +1,21 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/tipped_arrow_head",
+        "layer1": "item/tipped_arrow_base"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "long_or_strong": 0.5
+            },
+            "model": "achievetodo:item/potion/long_tipped_arrow"
+        },
+        {
+            "predicate": {
+                "long_or_strong": 1.0
+            },
+            "model": "achievetodo:item/potion/strong_tipped_arrow"
+        }
+    ]
+}

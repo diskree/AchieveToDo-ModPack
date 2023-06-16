@@ -334,10 +334,8 @@ public class AdvancementGenerator {
                 }
             }
             case "blazeandcave:potion/failed_concoctions" -> {
-                switch (criterion) {
-                    case "thick_potion" -> hintItem = Items.POTION;
-                    case "mundane_potion" -> hintItem = Items.POTION;
-                }
+                hintItem = Items.POTION;
+                nbt.putString("Potion", new Identifier(criterion.replace("_potion", "")).toString());
             }
             case "blazeandcave:potion/furious_ammunition" -> {
                 hintItem = Items.TIPPED_ARROW;

@@ -1,0 +1,21 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/potion_overlay",
+    "layer1": "item/potion"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "long_or_strong": 0.5
+      },
+      "model": "achievetodo:item/potion/long_potion"
+    },
+    {
+      "predicate": {
+        "long_or_strong": 1.0
+      },
+      "model": "achievetodo:item/potion/strong_potion"
+    }
+  ]
+}

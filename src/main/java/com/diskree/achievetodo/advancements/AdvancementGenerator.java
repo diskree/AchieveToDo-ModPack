@@ -220,17 +220,27 @@ public class AdvancementGenerator {
                 }
             }
             case "blazeandcave:challenges/riddle_me_this" -> {
-                switch (criterion) {
-                    case "first_line" -> hintItem = Items.BARRIER;
-                    case "second_line" -> hintItem = Items.BARRIER;
-                    case "third_line" -> hintItem = Items.BARRIER;
-                    case "fourth_line" -> hintItem = Items.BARRIER;
-                    case "fifth_line" -> hintItem = Items.BARRIER;
-                    case "sixth_line" -> hintItem = Items.BARRIER;
-                    case "seventh_line" -> hintItem = Items.BARRIER;
-                    case "eighth_line" -> hintItem = Items.BARRIER;
-                    case "ninth_line" -> hintItem = Items.BARRIER;
-                    case "tenth_line" -> hintItem = Items.BARRIER;
+                if (incompleteCriteria.contains("first_line")) {
+                    hintItem = Items.ENCHANTED_BOOK;
+                } else if (incompleteCriteria.contains("second_line")) {
+                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                    nbt.putInt("Damage", 0);
+                } else if (incompleteCriteria.contains("third_line")) {
+                    hintItem = Items.NAME_TAG;
+                } else if (incompleteCriteria.contains("fourth_line")) {
+                    hintItem = Items.SHEARS;
+                } else if (incompleteCriteria.contains("fifth_line")) {
+                    hintItem = Items.SPECTRAL_ARROW;
+                } else if (incompleteCriteria.contains("sixth_line")) {
+                    hintItem = Items.EGG;
+                } else if (incompleteCriteria.contains("seventh_line")) {
+                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                    nbt.putInt("Damage", 0);
+                } else if (incompleteCriteria.contains("eighth_line")) {
+                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                    nbt.putInt("Damage", 0);
+                } else if (incompleteCriteria.contains("ninth_line")) {
+                    hintItem = Items.OAK_BOAT;
                 }
             }
             case "blazeandcave:challenges/stack_all_the_items" -> {

@@ -503,11 +503,11 @@ public class AdvancementGenerator {
             case "blazeandcave:animal/birdkeeper" -> {
                 hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
-                    case "red" -> 0;
-                    case "blue" -> 0;
-                    case "green" -> 0;
-                    case "cyan" -> 0;
-                    case "gray" -> 0;
+                    case "red" -> 33;
+                    case "blue" -> 34;
+                    case "green" -> 35;
+                    case "cyan" -> 36;
+                    case "gray" -> 37;
                     default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 });
             }

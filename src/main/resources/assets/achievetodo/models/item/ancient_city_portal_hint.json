@@ -201,6 +201,36 @@
         "damage": 0.032
       },
       "model": "achievetodo:item/rabbit/white_splotched"
+    },
+    {
+      "predicate": {
+        "damage": 0.033
+      },
+      "model": "achievetodo:item/parrot/parrot_red_blue"
+    },
+    {
+      "predicate": {
+        "damage": 0.034
+      },
+      "model": "achievetodo:item/parrot/parrot_blue"
+    },
+    {
+      "predicate": {
+        "damage": 0.035
+      },
+      "model": "achievetodo:item/parrot/parrot_green"
+    },
+    {
+      "predicate": {
+        "damage": 0.036
+      },
+      "model": "achievetodo:item/parrot/parrot_yellow_blue"
+    },
+    {
+      "predicate": {
+        "damage": 0.037
+      },
+      "model": "achievetodo:item/parrot/parrot_grey"
     }
   ]
 }

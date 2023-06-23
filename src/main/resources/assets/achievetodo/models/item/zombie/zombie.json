@@ -1,0 +1,20 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "achievetodo:item/zombie/zombie"
+	},
+	"elements": [
+		{
+			"from": [4, 4, 7.5],
+			"to": [12, 12, 8.5],
+			"faces": {
+				"east": {"uv": [4, 2, 4.25, 4], "texture": "#0"},
+				"south": {"uv": [2, 2, 4, 4], "texture": "#0"},
+				"west": {"uv": [1.75, 2, 2, 4], "texture": "#0"},
+				"up": {"uv": [2, 1.75, 4, 2], "texture": "#0"},
+				"down": {"uv": [4, 1.75, 6, 2], "texture": "#0"}
+			}
+		}
+	]
+}

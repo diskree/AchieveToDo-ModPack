@@ -340,7 +340,7 @@ public class AdvancementGenerator {
             }
             case "blazeandcave:nether/spreading_corruption", "blazeandcave:nether/the_struggle_nether_ends" -> {
                 if (criterion.equals("soul_fire")) {
-                    hintItem = Items.SOUL_CAMPFIRE;
+                    hintItem = Items.FLINT_AND_STEEL;
                 }
             }
             case "blazeandcave:potion/failed_concoctions" -> {
@@ -429,88 +429,87 @@ public class AdvancementGenerator {
                     "blazeandcave:weaponry/the_mighty_hunter",
                     "minecraft:adventure/kill_all_mobs",
                     "minecraft:husbandry/bred_all_animals" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
-                nbt.putInt("Damage", switch (criterion.replace("_mob", "").replace("minecraft:", "")) {
-                    case "bat" -> 0;
-                    case "chicken" -> 0;
-                    case "cod" -> 0;
-                    case "cow" -> 0;
-                    case "mooshroom" -> 0;
-                    case "pig" -> 0;
-                    case "rabbit" -> 0;
-                    case "salmon" -> 0;
-                    case "sheep" -> 0;
-                    case "squid" -> 0;
-                    case "tropical_fish" -> 0;
-                    case "turtle" -> 0;
-                    case "villager" -> 0;
-                    case "wandering_trader" -> 0;
-                    case "pufferfish" -> 0;
-                    case "cave_spider" -> 0;
-                    case "enderman" -> 0;
-                    case "panda" -> 0;
-                    case "polar_bear" -> 0;
-                    case "spider" -> 0;
-                    case "zombified_piglin" -> 0;
-                    case "blaze" -> 0;
-                    case "creeper" -> 0;
-                    case "drowned" -> 0;
-                    case "endermite" -> 0;
-                    case "evoker" -> 0;
-                    case "ghast" -> 0;
-                    case "guardian" -> 0;
-                    case "elder_guardian" -> 0;
-                    case "husk" -> 0;
-                    case "magma_cube" -> 0;
-                    case "phantom" -> 0;
-                    case "pillager" -> 0;
-                    case "ravager" -> 0;
-                    case "shulker" -> 0;
-                    case "silverfish" -> 0;
-                    case "skeleton" -> 0;
-                    case "slime" -> 0;
-                    case "stray" -> 0;
-                    case "vex" -> 0;
-                    case "vindicator" -> 0;
-                    case "witch" -> 0;
-                    case "wither_skeleton" -> 0;
-                    case "zombie_villager" -> 0;
-                    case "zombie" -> 0;
-                    case "cat" -> 0;
-                    case "donkey" -> 0;
-                    case "horse" -> 0;
-                    case "llama" -> 0;
-                    case "mule" -> 0;
-                    case "parrot" -> 0;
-                    case "skeleton_horse" -> 0;
-                    case "trader_llama" -> 0;
-                    case "wolf" -> 0;
-                    case "dolphin" -> 0;
-                    case "fox" -> 0;
-                    case "ocelot" -> 19;
-                    case "iron_golem" -> 0;
-                    case "snow_golem" -> 0;
-                    case "wither" -> 0;
-                    case "ender_dragon" -> 0;
-                    case "bee" -> 0;
-                    case "piglin" -> 0;
-                    case "hoglin" -> 0;
-                    case "strider" -> 0;
-                    case "zoglin" -> 0;
-                    case "piglin_brute" -> 0;
-                    case "axolotl" -> 0;
-                    case "glow_squid" -> 0;
-                    case "goat" -> 0;
-                    case "frog" -> 0;
-                    case "tadpole" -> 0;
-                    case "allay" -> 0;
-                    case "warden" -> 0;
-                    case "camel" -> 0;
-                    case "sniffer" -> 0;
-                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                });
+                criterion = criterion.replace("_mob", "").replace("minecraft:", "");
+                if (criterion.equals("cod") || criterion.equals("salmon") || criterion.equals("tropical_fish") || criterion.equals("pufferfish") || criterion.equals("axolotl") || criterion.equals("tadpole")) {
+                    criterion += "_bucket";
+                } else {
+                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                    nbt.putInt("Damage", switch (criterion) {
+                        case "bat" -> 39;
+                        case "chicken" -> 40;
+                        case "cow" -> 41;
+                        case "mooshroom" -> 42;
+                        case "pig" -> 38;
+                        case "rabbit" -> 28;
+                        case "sheep" -> 43;
+                        case "squid" -> 44;
+                        case "turtle" -> 46;
+                        case "villager" -> 47;
+                        case "wandering_trader" -> 48;
+                        case "cave_spider" -> 50;
+                        case "enderman" -> 51;
+                        case "panda" -> 12;
+                        case "polar_bear" -> 52;
+                        case "spider" -> 49;
+                        case "zombified_piglin" -> 55;
+                        case "blaze" -> 56;
+                        case "creeper" -> 57;
+                        case "drowned" -> 60;
+                        case "endermite" -> 61;
+                        case "evoker" -> 64;
+                        case "ghast" -> 65;
+                        case "guardian" -> 66;
+                        case "elder_guardian" -> 67;
+                        case "husk" -> 59;
+                        case "magma_cube" -> 69;
+                        case "phantom" -> 70;
+                        case "pillager" -> 62;
+                        case "ravager" -> 71;
+                        case "shulker" -> 72;
+                        case "silverfish" -> 73;
+                        case "skeleton" -> 74;
+                        case "slime" -> 68;
+                        case "stray" -> 75;
+                        case "vex" -> 78;
+                        case "vindicator" -> 63;
+                        case "witch" -> 79;
+                        case "wither_skeleton" -> 76;
+                        case "zombie_villager" -> 80;
+                        case "zombie" -> 58;
+                        case "cat" -> 11;
+                        case "donkey" -> 81;
+                        case "horse" -> 82;
+                        case "llama" -> 23;
+                        case "mule" -> 84;
+                        case "parrot" -> 33;
+                        case "skeleton_horse" -> 85;
+                        case "trader_llama" -> 83;
+                        case "wolf" -> 86;
+                        case "dolphin" -> 87;
+                        case "fox" -> 88;
+                        case "ocelot" -> 19;
+                        case "iron_golem" -> 90;
+                        case "snow_golem" -> 91;
+                        case "wither" -> 92;
+                        case "ender_dragon" -> 93;
+                        case "bee" -> 94;
+                        case "piglin" -> 53;
+                        case "hoglin" -> 95;
+                        case "strider" -> 97;
+                        case "zoglin" -> 96;
+                        case "piglin_brute" -> 54;
+                        case "glow_squid" -> 45;
+                        case "goat" -> 98;
+                        case "frog" -> 21;
+                        case "allay" -> 77;
+                        case "warden" -> 99;
+                        case "camel" -> 100;
+                        case "sniffer" -> 101;
+                        default -> throw new IllegalStateException("Unexpected value: " + criterion);
+                    });
+                }
             }
-            case "blazeandcave:animal/birdkeeper" -> {
+            case "blazeandcave:animal/bird/keeper" -> {
                 hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "red" -> 33;
@@ -1116,7 +1115,7 @@ public class AdvancementGenerator {
             return null;
         }
         ArrayList<Advancement> advancements = new ArrayList<>();
-        for (Advancement advancement : player.networkHandler.getAdvancementHandler().getManager().getAdvancements()) {
+        for (Advancement advancement : new ArrayList<>(player.networkHandler.getAdvancementHandler().getManager().getAdvancements())) {
             Identifier identifier = advancement.getId();
             String namespace = identifier.getNamespace();
             String tab = identifier.getPath().split("/")[0];

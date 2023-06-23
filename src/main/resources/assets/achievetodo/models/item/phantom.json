@@ -1,0 +1,33 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "achievetodo:item/phantom",
+		"1": "achievetodo:item/phantom_eyes",
+		"particle": "achievetodo:item/phantom"
+	},
+	"elements": [
+		{
+			"from": [4.5, 6.5, 7.5],
+			"to": [11.5, 9.5, 8.5],
+			"faces": {
+				"east": {"uv": [3, 1.25, 3.25, 2], "texture": "#0"},
+				"south": {"uv": [1.25, 1.25, 3, 2], "texture": "#0"},
+				"west": {"uv": [1, 1.25, 1.25, 2], "texture": "#0"},
+				"up": {"uv": [1.25, 1, 3, 1.25], "texture": "#0"},
+				"down": {"uv": [3, 1, 4.75, 1.25], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4.5, 6.5, 8.5],
+			"to": [11.5, 9.5, 8.5],
+			"faces": {
+				"east": {"uv": [0, 0, 0, 0.75], "texture": "#missing"},
+				"south": {"uv": [1.25, 1.25, 3, 2], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 0.75], "texture": "#missing"},
+				"up": {"uv": [0, 0, 1.75, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 1.75, 0], "texture": "#missing"}
+			}
+		}
+	]
+}

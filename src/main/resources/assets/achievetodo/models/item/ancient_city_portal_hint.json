@@ -231,6 +231,384 @@
         "damage": 0.037
       },
       "model": "achievetodo:item/parrot/parrot_grey"
+    },
+    {
+      "predicate": {
+        "damage": 0.038
+      },
+      "model": "achievetodo:item/pig/pig"
+    },
+    {
+      "predicate": {
+        "damage": 0.039
+      },
+      "model": "achievetodo:item/bat"
+    },
+    {
+      "predicate": {
+        "damage": 0.040
+      },
+      "model": "achievetodo:item/chicken"
+    },
+    {
+      "predicate": {
+        "damage": 0.041
+      },
+      "model": "achievetodo:item/cow/cow"
+    },
+    {
+      "predicate": {
+        "damage": 0.042
+      },
+      "model": "achievetodo:item/cow/red_mooshroom"
+    },
+    {
+      "predicate": {
+        "damage": 0.043
+      },
+      "model": "achievetodo:item/sheep/sheep"
+    },
+    {
+      "predicate": {
+        "damage": 0.044
+      },
+      "model": "achievetodo:item/squid/squid"
+    },
+    {
+      "predicate": {
+        "damage": 0.045
+      },
+      "model": "achievetodo:item/squid/glow_squid"
+    },
+    {
+      "predicate": {
+        "damage": 0.046
+      },
+      "model": "achievetodo:item/turtle/big_sea_turtle"
+    },
+    {
+      "predicate": {
+        "damage": 0.047
+      },
+      "model": "achievetodo:item/villager/villager"
+    },
+    {
+      "predicate": {
+        "damage": 0.048
+      },
+      "model": "achievetodo:item/wandering_trader"
+    },
+    {
+      "predicate": {
+        "damage": 0.049
+      },
+      "model": "achievetodo:item/spider/spider"
+    },
+    {
+      "predicate": {
+        "damage": 0.050
+      },
+      "model": "achievetodo:item/spider/cave_spider"
+    },
+    {
+      "predicate": {
+        "damage": 0.051
+      },
+      "model": "achievetodo:item/enderman/enderman"
+    },
+    {
+      "predicate": {
+        "damage": 0.052
+      },
+      "model": "achievetodo:item/bear/polarbear"
+    },
+    {
+      "predicate": {
+        "damage": 0.053
+      },
+      "model": "achievetodo:item/piglin/piglin"
+    },
+    {
+      "predicate": {
+        "damage": 0.054
+      },
+      "model": "achievetodo:item/piglin/piglin_brute"
+    },
+    {
+      "predicate": {
+        "damage": 0.055
+      },
+      "model": "achievetodo:item/piglin/zombified_piglin"
+    },
+    {
+      "predicate": {
+        "damage": 0.056
+      },
+      "model": "achievetodo:item/blaze"
+    },
+    {
+      "predicate": {
+        "damage": 0.057
+      },
+      "model": "achievetodo:item/creeper/creeper"
+    },
+    {
+      "predicate": {
+        "damage": 0.058
+      },
+      "model": "achievetodo:item/zombie/zombie"
+    },
+    {
+      "predicate": {
+        "damage": 0.059
+      },
+      "model": "achievetodo:item/zombie/husk"
+    },
+    {
+      "predicate": {
+        "damage": 0.060
+      },
+      "model": "achievetodo:item/zombie/drowned"
+    },
+    {
+      "predicate": {
+        "damage": 0.061
+      },
+      "model": "achievetodo:item/endermite"
+    },
+    {
+      "predicate": {
+        "damage": 0.062
+      },
+      "model": "achievetodo:item/illager/pillager"
+    },
+    {
+      "predicate": {
+        "damage": 0.063
+      },
+      "model": "achievetodo:item/illager/vindicator"
+    },
+    {
+      "predicate": {
+        "damage": 0.064
+      },
+      "model": "achievetodo:item/illager/evoker"
+    },
+    {
+      "predicate": {
+        "damage": 0.065
+      },
+      "model": "achievetodo:item/ghast/ghast"
+    },
+    {
+      "predicate": {
+        "damage": 0.066
+      },
+      "model": "achievetodo:item/guardian"
+    },
+    {
+      "predicate": {
+        "damage": 0.067
+      },
+      "model": "achievetodo:item/guardian_elder"
+    },
+    {
+      "predicate": {
+        "damage": 0.068
+      },
+      "model": "achievetodo:item/slime/slime"
+    },
+    {
+      "predicate": {
+        "damage": 0.069
+      },
+      "model": "achievetodo:item/slime/magmacube"
+    },
+    {
+      "predicate": {
+        "damage": 0.070
+      },
+      "model": "achievetodo:item/phantom"
+    },
+    {
+      "predicate": {
+        "damage": 0.071
+      },
+      "model": "achievetodo:item/illager/ravager"
+    },
+    {
+      "predicate": {
+        "damage": 0.072
+      },
+      "model": "achievetodo:item/shulker/shulker"
+    },
+    {
+      "predicate": {
+        "damage": 0.073
+      },
+      "model": "achievetodo:item/silverfish"
+    },
+    {
+      "predicate": {
+        "damage": 0.074
+      },
+      "model": "achievetodo:item/skeleton/skeleton"
+    },
+    {
+      "predicate": {
+        "damage": 0.075
+      },
+      "model": "achievetodo:item/skeleton/stray"
+    },
+    {
+      "predicate": {
+        "damage": 0.076
+      },
+      "model": "achievetodo:item/skeleton/wither_skeleton"
+    },
+    {
+      "predicate": {
+        "damage": 0.077
+      },
+      "model": "achievetodo:item/allay/allay"
+    },
+    {
+      "predicate": {
+        "damage": 0.078
+      },
+      "model": "achievetodo:item/illager/vex"
+    },
+    {
+      "predicate": {
+        "damage": 0.079
+      },
+      "model": "achievetodo:item/witch"
+    },
+    {
+      "predicate": {
+        "damage": 0.080
+      },
+      "model": "achievetodo:item/zombie_villager/zombie_villager"
+    },
+    {
+      "predicate": {
+        "damage": 0.081
+      },
+      "model": "achievetodo:item/horse/donkey"
+    },
+    {
+      "predicate": {
+        "damage": 0.082
+      },
+      "model": "achievetodo:item/horse/horse_brown"
+    },
+    {
+      "predicate": {
+        "damage": 0.083
+      },
+      "model": "achievetodo:item/llama/trader_llama"
+    },
+    {
+      "predicate": {
+        "damage": 0.084
+      },
+      "model": "achievetodo:item/horse/mule"
+    },
+    {
+      "predicate": {
+        "damage": 0.085
+      },
+      "model": "achievetodo:item/horse/horse_skeleton"
+    },
+    {
+      "predicate": {
+        "damage": 0.086
+      },
+      "model": "achievetodo:item/wolf/wolf"
+    },
+    {
+      "predicate": {
+        "damage": 0.087
+      },
+      "model": "achievetodo:item/dolphin"
+    },
+    {
+      "predicate": {
+        "damage": 0.088
+      },
+      "model": "achievetodo:item/fox/fox"
+    },
+    {
+      "predicate": {
+        "damage": 0.090
+      },
+      "model": "achievetodo:item/iron_golem/iron_golem"
+    },
+    {
+      "predicate": {
+        "damage": 0.091
+      },
+      "model": "achievetodo:item/snow_golem"
+    },
+    {
+      "predicate": {
+        "damage": 0.092
+      },
+      "model": "achievetodo:item/wither/wither"
+    },
+    {
+      "predicate": {
+        "damage": 0.093
+      },
+      "model": "achievetodo:item/enderdragon/dragon"
+    },
+    {
+      "predicate": {
+        "damage": 0.094
+      },
+      "model": "achievetodo:item/bee/bee"
+    },
+    {
+      "predicate": {
+        "damage": 0.095
+      },
+      "model": "achievetodo:item/hoglin/hoglin"
+    },
+    {
+      "predicate": {
+        "damage": 0.096
+      },
+      "model": "achievetodo:item/hoglin/zoglin"
+    },
+    {
+      "predicate": {
+        "damage": 0.097
+      },
+      "model": "achievetodo:item/strider/strider"
+    },
+    {
+      "predicate": {
+        "damage": 0.098
+      },
+      "model": "achievetodo:item/goat/goat"
+    },
+    {
+      "predicate": {
+        "damage": 0.099
+      },
+      "model": "achievetodo:item/warden/warden"
+    },
+    {
+      "predicate": {
+        "damage": 0.100
+      },
+      "model": "achievetodo:item/camel/camel"
+    },
+    {
+      "predicate": {
+        "damage": 0.101
+      },
+      "model": "achievetodo:item/sniffer/sniffer"
     }
   ]
 }

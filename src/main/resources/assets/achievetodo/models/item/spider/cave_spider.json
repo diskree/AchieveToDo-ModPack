@@ -1,0 +1,30 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 32],
+	"textures": {
+		"0": "achievetodo:item/spider/cave_spider",
+		"1": "achievetodo:item/spider_eyes"
+	},
+	"elements": [
+		{
+			"from": [4, 4, 7.5],
+			"to": [12, 12, 8.5],
+			"faces": {
+				"east": {"uv": [12, 6, 12.25, 10], "texture": "#0"},
+				"south": {"uv": [10, 6, 12, 10], "texture": "#0"},
+				"west": {"uv": [9.75, 6, 10, 10], "texture": "#0"},
+				"up": {"uv": [10, 5.5, 12, 6], "texture": "#0"},
+				"down": {"uv": [12, 5.5, 14, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4, 4, 7.5],
+			"to": [12, 12, 8.5],
+			"faces": {
+				"east": {"uv": [12.25, 6, 12, 10], "texture": "#1"},
+				"south": {"uv": [10, 6, 12, 10], "texture": "#1"},
+				"west": {"uv": [9.75, 6, 10, 10], "texture": "#1"}
+			}
+		}
+	]
+}

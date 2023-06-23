@@ -500,7 +500,7 @@
       "predicate": {
         "damage": 0.082
       },
-      "model": "achievetodo:item/horse/horse_brown"
+      "model": "achievetodo:item/horse/white_none"
     },
     {
       "predicate": {
@@ -609,6 +609,210 @@
         "damage": 0.101
       },
       "model": "achievetodo:item/sniffer/sniffer"
+    },
+    {
+      "predicate": {
+        "damage": 0.102
+      },
+      "model": "achievetodo:item/horse/creamy_none"
+    },
+    {
+      "predicate": {
+        "damage": 0.103
+      },
+      "model": "achievetodo:item/horse/chestnut_none"
+    },
+    {
+      "predicate": {
+        "damage": 0.104
+      },
+      "model": "achievetodo:item/horse/brown_none"
+    },
+    {
+      "predicate": {
+        "damage": 0.105
+      },
+      "model": "achievetodo:item/horse/black_none"
+    },
+    {
+      "predicate": {
+        "damage": 0.106
+      },
+      "model": "achievetodo:item/horse/gray_none"
+    },
+    {
+      "predicate": {
+        "damage": 0.107
+      },
+      "model": "achievetodo:item/horse/dark_brown_none"
+    },
+    {
+      "predicate": {
+        "damage": 0.108
+      },
+      "model": "achievetodo:item/horse/white_white"
+    },
+    {
+      "predicate": {
+        "damage": 0.109
+      },
+      "model": "achievetodo:item/horse/creamy_white"
+    },
+    {
+      "predicate": {
+        "damage": 0.110
+      },
+      "model": "achievetodo:item/horse/chestnut_white"
+    },
+    {
+      "predicate": {
+        "damage": 0.111
+      },
+      "model": "achievetodo:item/horse/brown_white"
+    },
+    {
+      "predicate": {
+        "damage": 0.112
+      },
+      "model": "achievetodo:item/horse/black_white"
+    },
+    {
+      "predicate": {
+        "damage": 0.113
+      },
+      "model": "achievetodo:item/horse/gray_white"
+    },
+    {
+      "predicate": {
+        "damage": 0.114
+      },
+      "model": "achievetodo:item/horse/dark_brown_white"
+    },
+    {
+      "predicate": {
+        "damage": 0.115
+      },
+      "model": "achievetodo:item/horse/white_white_field"
+    },
+    {
+      "predicate": {
+        "damage": 0.116
+      },
+      "model": "achievetodo:item/horse/creamy_white_field"
+    },
+    {
+      "predicate": {
+        "damage": 0.117
+      },
+      "model": "achievetodo:item/horse/chestnut_white_field"
+    },
+    {
+      "predicate": {
+        "damage": 0.118
+      },
+      "model": "achievetodo:item/horse/brown_white_field"
+    },
+    {
+      "predicate": {
+        "damage": 0.119
+      },
+      "model": "achievetodo:item/horse/black_white_field"
+    },
+    {
+      "predicate": {
+        "damage": 0.120
+      },
+      "model": "achievetodo:item/horse/gray_white_field"
+    },
+    {
+      "predicate": {
+        "damage": 0.121
+      },
+      "model": "achievetodo:item/horse/dark_brown_white_field"
+    },
+    {
+      "predicate": {
+        "damage": 0.122
+      },
+      "model": "achievetodo:item/horse/white_white_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.123
+      },
+      "model": "achievetodo:item/horse/creamy_white_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.124
+      },
+      "model": "achievetodo:item/horse/chestnut_white_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.125
+      },
+      "model": "achievetodo:item/horse/brown_white_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.126
+      },
+      "model": "achievetodo:item/horse/black_white_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.127
+      },
+      "model": "achievetodo:item/horse/gray_white_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.128
+      },
+      "model": "achievetodo:item/horse/dark_brown_white_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.129
+      },
+      "model": "achievetodo:item/horse/white_black_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.130
+      },
+      "model": "achievetodo:item/horse/creamy_black_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.131
+      },
+      "model": "achievetodo:item/horse/chestnut_black_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.132
+      },
+      "model": "achievetodo:item/horse/brown_black_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.133
+      },
+      "model": "achievetodo:item/horse/black_black_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.134
+      },
+      "model": "achievetodo:item/horse/gray_black_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.135
+      },
+      "model": "achievetodo:item/horse/dark_brown_black_dots"
     }
   ]
 }

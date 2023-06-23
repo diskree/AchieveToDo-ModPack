@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "achievetodo:item/horse/donkey"
+		"0": "achievetodo:item/horse/horse_white"
 	},
 	"elements": [
 		{

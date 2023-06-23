@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "achievetodo:item/horse/donkey"
+		"0": "achievetodo:item/horse/horse_darkbrown",
+		"1": "achievetodo:item/horse/horse_markings_white"
 	},
 	"elements": [
 		{
@@ -28,6 +29,30 @@
 			}
 		},
 		{
+			"from": [1.5, 10.5, 5],
+			"to": [8.5, 10.5, 11],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1.75, 0], "texture": "#missing"},
+				"east": {"uv": [0, 0, 1.5, 0], "texture": "#missing"},
+				"south": {"uv": [0, 0, 1.75, 0], "texture": "#missing"},
+				"west": {"uv": [0, 0, 1.5, 0], "texture": "#missing"},
+				"up": {"uv": [1.75, 3.25, 3.5, 4.75], "texture": "#1"}
+			}
+		},
+		{
+			"from": [1.5, 5.5, 11],
+			"to": [8.5, 10.5, 11],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 8, 8]},
+			"faces": {
+				"east": {"uv": [0, 0, 0, 1.25], "texture": "#missing"},
+				"south": {"uv": [3.25, 5, 5, 6.25], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 1.25], "texture": "#missing"},
+				"up": {"uv": [0, 0, 1.75, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 1.75, 0], "texture": "#missing"}
+			}
+		},
+		{
 			"from": [10, -3, 7.5],
 			"to": [20, 19, 8.5],
 			"faces": {
@@ -36,6 +61,17 @@
 				"west": {"uv": [0, 13.5, 5.5, 13.75], "rotation": 90, "texture": "#0"},
 				"up": {"uv": [5.5, 13.5, 8, 13.75], "texture": "#0"},
 				"down": {"uv": [5.5, 15.75, 8, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [10, -3, 8.5],
+			"to": [20, 19, 8.5],
+			"faces": {
+				"east": {"uv": [0, 0, 0, 5.5], "texture": "#missing"},
+				"south": {"uv": [5.5, 8, 8, 13.5], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 5.5], "texture": "#missing"},
+				"up": {"uv": [0, 0, 2.5, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 2.5, 0], "texture": "#missing"}
 			}
 		}
 	],

@@ -545,41 +545,41 @@ public class AdvancementGenerator {
             case "blazeandcave:animal/master_farrier" -> {
                 hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
-                    case "white_none" -> 0;
-                    case "creamy_none" -> 0;
-                    case "chestnut_none" -> 0;
-                    case "brown_none" -> 0;
-                    case "black_none" -> 0;
-                    case "gray_none" -> 0;
-                    case "dark_brown_none" -> 0;
-                    case "white_white" -> 0;
-                    case "creamy_white" -> 0;
-                    case "chestnut_white" -> 0;
-                    case "brown_white" -> 0;
-                    case "black_white" -> 0;
-                    case "gray_white" -> 0;
-                    case "dark_brown_white" -> 0;
-                    case "white_white_field" -> 0;
-                    case "creamy_white_field" -> 0;
-                    case "chestnut_white_field" -> 0;
-                    case "brown_white_field" -> 0;
-                    case "black_white_field" -> 0;
-                    case "gray_white_field" -> 0;
-                    case "dark_brown_white_field" -> 0;
-                    case "white_white_dots" -> 0;
-                    case "creamy_white_dots" -> 0;
-                    case "chestnut_white_dots" -> 0;
-                    case "brown_white_dots" -> 0;
-                    case "black_white_dots" -> 0;
-                    case "gray_white_dots" -> 0;
-                    case "dark_brown_white_dots" -> 0;
-                    case "white_black_dots" -> 0;
-                    case "creamy_black_dots" -> 0;
-                    case "chestnut_black_dots" -> 0;
-                    case "brown_black_dots" -> 0;
-                    case "black_black_dots" -> 0;
-                    case "gray_black_dots" -> 0;
-                    case "dark_brown_black_dots" -> 0;
+                    case "white_none" -> 82;
+                    case "creamy_none" -> 102;
+                    case "chestnut_none" -> 103;
+                    case "brown_none" -> 104;
+                    case "black_none" -> 105;
+                    case "gray_none" -> 106;
+                    case "dark_brown_none" -> 107;
+                    case "white_white" -> 108;
+                    case "creamy_white" -> 109;
+                    case "chestnut_white" -> 110;
+                    case "brown_white" -> 111;
+                    case "black_white" -> 112;
+                    case "gray_white" -> 113;
+                    case "dark_brown_white" -> 114;
+                    case "white_white_field" -> 115;
+                    case "creamy_white_field" -> 116;
+                    case "chestnut_white_field" -> 117;
+                    case "brown_white_field" -> 118;
+                    case "black_white_field" -> 119;
+                    case "gray_white_field" -> 120;
+                    case "dark_brown_white_field" -> 121;
+                    case "white_white_dots" -> 122;
+                    case "creamy_white_dots" -> 123;
+                    case "chestnut_white_dots" -> 124;
+                    case "brown_white_dots" -> 125;
+                    case "black_white_dots" -> 126;
+                    case "gray_white_dots" -> 127;
+                    case "dark_brown_white_dots" -> 128;
+                    case "white_black_dots" -> 129;
+                    case "creamy_black_dots" -> 130;
+                    case "chestnut_black_dots" -> 131;
+                    case "brown_black_dots" -> 132;
+                    case "black_black_dots" -> 133;
+                    case "gray_black_dots" -> 134;
+                    case "dark_brown_black_dots" -> 135;
                     default -> throw new IllegalStateException("Unexpected value: " + criterion);
                 });
             }
@@ -1114,8 +1114,9 @@ public class AdvancementGenerator {
         if (serverPlayer == null) {
             return null;
         }
-        ArrayList<Advancement> advancements = new ArrayList<>();
-        for (Advancement advancement : new ArrayList<>(player.networkHandler.getAdvancementHandler().getManager().getAdvancements())) {
+        ArrayList<Advancement> allAdvancement = new ArrayList<>(player.networkHandler.getAdvancementHandler().getManager().getAdvancements());
+        ArrayList<Advancement> filteredAdvancements = new ArrayList<>();
+        for (Advancement advancement : allAdvancement) {
             Identifier identifier = advancement.getId();
             String namespace = identifier.getNamespace();
             String tab = identifier.getPath().split("/")[0];
@@ -1155,11 +1156,11 @@ public class AdvancementGenerator {
             if (progress != null && progress.isDone()) {
                 continue;
             }
-            advancements.add(advancement);
+            filteredAdvancements.add(advancement);
         }
-        if (advancements.isEmpty()) {
+        if (filteredAdvancements.isEmpty()) {
             return null;
         }
-        return advancements.get(player.getRandom().nextBetween(0, advancements.size() - 1));
+        return filteredAdvancements.get(player.getRandom().nextBetween(0, filteredAdvancements.size() - 1));
     }
 }

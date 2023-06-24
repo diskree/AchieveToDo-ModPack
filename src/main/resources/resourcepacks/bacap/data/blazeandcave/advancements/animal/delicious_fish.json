@@ -35,8 +35,8 @@
 	},
 	"requirements": [
 		[
-		"cooked_cod",
-		"cooked_salmon"
+			"cooked_cod",
+			"cooked_salmon"
 		]
 	]
 }

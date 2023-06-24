@@ -321,6 +321,18 @@
 				"loot_table": "terralith:village/fortified/smith"
 			}
 		},
+		"fortified_village_tavern_downstairs": {
+			"trigger": "minecraft:player_generates_container_loot",
+			"conditions": {
+				"loot_table": "terralith:village/fortified/tavern_downstairs"
+			}
+		},
+		"fortified_village_tavern_upstairs": {
+			"trigger": "minecraft:player_generates_container_loot",
+			"conditions": {
+				"loot_table": "terralith:village/fortified/tavern_upstairs"
+			}
+		},
 		"fortified_village_treasure": {
 			"trigger": "minecraft:player_generates_container_loot",
 			"conditions": {
@@ -497,6 +509,8 @@
 			"fortified_village_library",
 			"fortified_village_mason",
 			"fortified_village_smith",
+			"fortified_village_tavern_downstairs",
+			"fortified_village_tavern_upstairs",
 			"fortified_village_treasure",
 			"fortified_desert_village_archer",
 			"fortified_desert_village_attic",

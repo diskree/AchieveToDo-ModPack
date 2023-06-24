@@ -25,16 +25,14 @@
 									"minecraft:campfire"
 								]
 							},
-							"location": {
-								"position": {
-									"x": {
+							"position": {
+								"x": {
+									"max": 10,
+									"min": -10
+								},
+								"z": {
 										"max": 10,
-										"min": -10
-									},
-									"z": {
-										"max": 10,
-										"min": -10
-									}
+									"min": -10
 								}
 							}
 						}

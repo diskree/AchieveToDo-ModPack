@@ -1,7 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "achievetodo:item/illager/vindicator"
+		"0": "achievetodo:item/villager/villager",
+		"1": "achievetodo:item/villager/type/snow"
 	},
 	"elements": [
 		{
@@ -11,7 +12,7 @@
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 3, 6.75]},
 			"faces": {
 				"east": {"uv": [0, 0, 1, 9], "texture": "#missing"},
-				"south": {"uv": [5.5, 6.5, 7.5, 7.75], "texture": "#missing"},
+				"south": {"uv": [5.5, 6.5, 7.5, 7.75], "texture": "#0"},
 				"west": {"uv": [0, 0, 1, 9], "texture": "#missing"},
 				"up": {"uv": [0, 0, 11.5, 1], "texture": "#missing"},
 				"down": {"uv": [0, 0, 11.5, 1], "texture": "#missing"}
@@ -36,11 +37,22 @@
 			"to": [12, 15.5, 7.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10.5, 7]},
 			"faces": {
-				"east": {"uv": [4, 2, 4.25, 4.5], "texture": "#1"},
-				"south": {"uv": [2, 2, 4, 4.5], "texture": "#1"},
-				"west": {"uv": [1.75, 2, 2, 4.5], "texture": "#1"},
-				"up": {"uv": [2, 1.75, 4, 2], "texture": "#1"},
-				"down": {"uv": [4, 1.75, 6, 2], "texture": "#1"}
+				"east": {"uv": [4, 2, 4.25, 4.5], "texture": "#0"},
+				"south": {"uv": [2, 2, 4, 4.5], "texture": "#0"},
+				"west": {"uv": [1.75, 2, 2, 4.5], "texture": "#0"},
+				"up": {"uv": [2, 1.75, 4, 2], "texture": "#0"},
+				"down": {"uv": [4, 1.75, 6, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "biome",
+			"from": [3.51, 5.01, 6.01],
+			"to": [12.49, 15.99, 7.99],
+			"faces": {
+				"east": {"uv": [12, 2, 12.25, 4.5], "texture": "#1"},
+				"south": {"uv": [10, 2, 12, 4.5], "texture": "#1"},
+				"west": {"uv": [9.75, 2, 10, 4.5], "texture": "#1"},
+				"up": {"uv": [10, 1.75, 12, 2], "texture": "#1"}
 			}
 		},
 		{
@@ -49,11 +61,11 @@
 			"to": [9, 8.5, 9.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [0, -7, 0]},
 			"faces": {
-				"east": {"uv": [7, 0.5, 7.5, 1.5], "texture": "#1"},
-				"south": {"uv": [6.5, 0.5, 7, 1.5], "texture": "#1"},
-				"west": {"uv": [6, 0.5, 6.5, 1.5], "texture": "#1"},
-				"up": {"uv": [6.5, 0, 7, 0.5], "texture": "#1"},
-				"down": {"uv": [7, 0, 7.5, 0.5], "texture": "#1"}
+				"east": {"uv": [7, 0.5, 7.5, 1.5], "texture": "#0"},
+				"south": {"uv": [6.5, 0.5, 7, 1.5], "texture": "#0"},
+				"west": {"uv": [6, 0.5, 6.5, 1.5], "texture": "#0"},
+				"up": {"uv": [6.5, 0, 7, 0.5], "texture": "#0"},
+				"down": {"uv": [7, 0, 7.5, 0.5], "texture": "#0"}
 			}
 		},
 		{
@@ -105,7 +117,7 @@
 					"name": "face",
 					"origin": [0, -7, 0],
 					"color": 0,
-					"children": [2, 3]
+					"children": [2, 3, 4]
 				},
 				{
 					"name": "group",
@@ -116,19 +128,19 @@
 							"name": "left_forearm",
 							"origin": [12.5, 1.5, 4],
 							"color": 0,
-							"children": [4]
+							"children": [5]
 						},
 						{
 							"name": "hands",
 							"origin": [8, 1, 9],
 							"color": 0,
-							"children": [5]
+							"children": [6]
 						},
 						{
 							"name": "right_forearm",
 							"origin": [12.5, 1.5, 4],
 							"color": 0,
-							"children": [6]
+							"children": [7]
 						}
 					]
 				}

@@ -813,6 +813,636 @@
         "damage": 0.135
       },
       "model": "achievetodo:item/horse/dark_brown_black_dots"
+    },
+    {
+      "predicate": {
+        "damage": 0.136
+      },
+      "model": "achievetodo:item/villager/farmer_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.137
+      },
+      "model": "achievetodo:item/villager/fisherman_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.138
+      },
+      "model": "achievetodo:item/villager/shepherd_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.139
+      },
+      "model": "achievetodo:item/villager/fletcher_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.140
+      },
+      "model": "achievetodo:item/villager/librarian_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.141
+      },
+      "model": "achievetodo:item/villager/cartographer_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.142
+      },
+      "model": "achievetodo:item/villager/cleric_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.143
+      },
+      "model": "achievetodo:item/villager/armorer_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.144
+      },
+      "model": "achievetodo:item/villager/weapon_smith_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.145
+      },
+      "model": "achievetodo:item/villager/tool_smith_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.146
+      },
+      "model": "achievetodo:item/villager/butcher_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.147
+      },
+      "model": "achievetodo:item/villager/leatherworker_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.148
+      },
+      "model": "achievetodo:item/villager/mason_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.149
+      },
+      "model": "achievetodo:item/villager/nitwit_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.150
+      },
+      "model": "achievetodo:item/villager/none_plains"
+    },
+    {
+      "predicate": {
+        "damage": 0.151
+      },
+      "model": "achievetodo:item/villager/farmer_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.152
+      },
+      "model": "achievetodo:item/villager/fisherman_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.153
+      },
+      "model": "achievetodo:item/villager/shepherd_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.154
+      },
+      "model": "achievetodo:item/villager/fletcher_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.155
+      },
+      "model": "achievetodo:item/villager/librarian_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.156
+      },
+      "model": "achievetodo:item/villager/cartographer_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.157
+      },
+      "model": "achievetodo:item/villager/cleric_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.158
+      },
+      "model": "achievetodo:item/villager/armorer_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.159
+      },
+      "model": "achievetodo:item/villager/weapon_smith_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.160
+      },
+      "model": "achievetodo:item/villager/tool_smith_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.161
+      },
+      "model": "achievetodo:item/villager/butcher_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.162
+      },
+      "model": "achievetodo:item/villager/leatherworker_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.163
+      },
+      "model": "achievetodo:item/villager/mason_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.164
+      },
+      "model": "achievetodo:item/villager/nitwit_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.165
+      },
+      "model": "achievetodo:item/villager/none_taiga"
+    },
+    {
+      "predicate": {
+        "damage": 0.166
+      },
+      "model": "achievetodo:item/villager/farmer_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.167
+      },
+      "model": "achievetodo:item/villager/fisherman_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.168
+      },
+      "model": "achievetodo:item/villager/shepherd_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.169
+      },
+      "model": "achievetodo:item/villager/fletcher_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.170
+      },
+      "model": "achievetodo:item/villager/librarian_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.171
+      },
+      "model": "achievetodo:item/villager/cartographer_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.172
+      },
+      "model": "achievetodo:item/villager/cleric_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.173
+      },
+      "model": "achievetodo:item/villager/armorer_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.174
+      },
+      "model": "achievetodo:item/villager/weapon_smith_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.175
+      },
+      "model": "achievetodo:item/villager/tool_smith_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.176
+      },
+      "model": "achievetodo:item/villager/butcher_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.177
+      },
+      "model": "achievetodo:item/villager/leatherworker_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.178
+      },
+      "model": "achievetodo:item/villager/mason_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.179
+      },
+      "model": "achievetodo:item/villager/nitwit_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.180
+      },
+      "model": "achievetodo:item/villager/none_desert"
+    },
+    {
+      "predicate": {
+        "damage": 0.181
+      },
+      "model": "achievetodo:item/villager/farmer_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.182
+      },
+      "model": "achievetodo:item/villager/fisherman_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.183
+      },
+      "model": "achievetodo:item/villager/shepherd_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.184
+      },
+      "model": "achievetodo:item/villager/fletcher_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.185
+      },
+      "model": "achievetodo:item/villager/librarian_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.186
+      },
+      "model": "achievetodo:item/villager/cartographer_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.187
+      },
+      "model": "achievetodo:item/villager/cleric_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.188
+      },
+      "model": "achievetodo:item/villager/armorer_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.189
+      },
+      "model": "achievetodo:item/villager/weapon_smith_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.190
+      },
+      "model": "achievetodo:item/villager/tool_smith_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.191
+      },
+      "model": "achievetodo:item/villager/butcher_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.192
+      },
+      "model": "achievetodo:item/villager/leatherworker_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.193
+      },
+      "model": "achievetodo:item/villager/mason_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.194
+      },
+      "model": "achievetodo:item/villager/nitwit_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.195
+      },
+      "model": "achievetodo:item/villager/none_savanna"
+    },
+    {
+      "predicate": {
+        "damage": 0.196
+      },
+      "model": "achievetodo:item/villager/farmer_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.197
+      },
+      "model": "achievetodo:item/villager/fisherman_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.198
+      },
+      "model": "achievetodo:item/villager/shepherd_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.199
+      },
+      "model": "achievetodo:item/villager/fletcher_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.200
+      },
+      "model": "achievetodo:item/villager/librarian_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.201
+      },
+      "model": "achievetodo:item/villager/cartographer_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.202
+      },
+      "model": "achievetodo:item/villager/cleric_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.203
+      },
+      "model": "achievetodo:item/villager/armorer_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.204
+      },
+      "model": "achievetodo:item/villager/weapon_smith_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.205
+      },
+      "model": "achievetodo:item/villager/tool_smith_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.206
+      },
+      "model": "achievetodo:item/villager/butcher_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.207
+      },
+      "model": "achievetodo:item/villager/leatherworker_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.208
+      },
+      "model": "achievetodo:item/villager/mason_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.209
+      },
+      "model": "achievetodo:item/villager/nitwit_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.210
+      },
+      "model": "achievetodo:item/villager/none_snow"
+    },
+    {
+      "predicate": {
+        "damage": 0.211
+      },
+      "model": "achievetodo:item/villager/farmer_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.212
+      },
+      "model": "achievetodo:item/villager/fisherman_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.213
+      },
+      "model": "achievetodo:item/villager/shepherd_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.214
+      },
+      "model": "achievetodo:item/villager/fletcher_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.215
+      },
+      "model": "achievetodo:item/villager/librarian_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.216
+      },
+      "model": "achievetodo:item/villager/cartographer_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.217
+      },
+      "model": "achievetodo:item/villager/cleric_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.218
+      },
+      "model": "achievetodo:item/villager/armorer_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.219
+      },
+      "model": "achievetodo:item/villager/weapon_smith_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.220
+      },
+      "model": "achievetodo:item/villager/tool_smith_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.221
+      },
+      "model": "achievetodo:item/villager/butcher_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.222
+      },
+      "model": "achievetodo:item/villager/leatherworker_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.223
+      },
+      "model": "achievetodo:item/villager/mason_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.224
+      },
+      "model": "achievetodo:item/villager/nitwit_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.225
+      },
+      "model": "achievetodo:item/villager/none_jungle"
+    },
+    {
+      "predicate": {
+        "damage": 0.226
+      },
+      "model": "achievetodo:item/villager/farmer_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.227
+      },
+      "model": "achievetodo:item/villager/fisherman_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.228
+      },
+      "model": "achievetodo:item/villager/shepherd_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.229
+      },
+      "model": "achievetodo:item/villager/fletcher_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.230
+      },
+      "model": "achievetodo:item/villager/librarian_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.231
+      },
+      "model": "achievetodo:item/villager/cartographer_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.232
+      },
+      "model": "achievetodo:item/villager/cleric_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.233
+      },
+      "model": "achievetodo:item/villager/armorer_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.234
+      },
+      "model": "achievetodo:item/villager/weapon_smith_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.235
+      },
+      "model": "achievetodo:item/villager/tool_smith_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.236
+      },
+      "model": "achievetodo:item/villager/butcher_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.237
+      },
+      "model": "achievetodo:item/villager/leatherworker_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.238
+      },
+      "model": "achievetodo:item/villager/mason_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.239
+      },
+      "model": "achievetodo:item/villager/nitwit_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.240
+      },
+      "model": "achievetodo:item/villager/none_swamp"
     }
   ]
 }

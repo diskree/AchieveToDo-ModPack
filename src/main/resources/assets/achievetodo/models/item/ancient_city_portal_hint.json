@@ -1437,6 +1437,174 @@
         "damage": 0.240
       },
       "model": "achievetodo:item/villager/none_swamp"
+    },
+    {
+      "predicate": {
+        "damage": 0.241
+      },
+      "model": "achievetodo:item/mob_effect/speed"
+    },
+    {
+      "predicate": {
+        "damage": 0.242
+      },
+      "model": "achievetodo:item/mob_effect/slowness"
+    },
+    {
+      "predicate": {
+        "damage": 0.243
+      },
+      "model": "achievetodo:item/mob_effect/strength"
+    },
+    {
+      "predicate": {
+        "damage": 0.244
+      },
+      "model": "achievetodo:item/mob_effect/jump_boost"
+    },
+    {
+      "predicate": {
+        "damage": 0.245
+      },
+      "model": "achievetodo:item/mob_effect/regeneration"
+    },
+    {
+      "predicate": {
+        "damage": 0.246
+      },
+      "model": "achievetodo:item/mob_effect/fire_resistance"
+    },
+    {
+      "predicate": {
+        "damage": 0.247
+      },
+      "model": "achievetodo:item/mob_effect/water_breathing"
+    },
+    {
+      "predicate": {
+        "damage": 0.248
+      },
+      "model": "achievetodo:item/mob_effect/invisibility"
+    },
+    {
+      "predicate": {
+        "damage": 0.249
+      },
+      "model": "achievetodo:item/mob_effect/night_vision"
+    },
+    {
+      "predicate": {
+        "damage": 0.250
+      },
+      "model": "achievetodo:item/mob_effect/weakness"
+    },
+    {
+      "predicate": {
+        "damage": 0.251
+      },
+      "model": "achievetodo:item/mob_effect/poison"
+    },
+    {
+      "predicate": {
+        "damage": 0.252
+      },
+      "model": "achievetodo:item/mob_effect/wither"
+    },
+    {
+      "predicate": {
+        "damage": 0.253
+      },
+      "model": "achievetodo:item/mob_effect/haste"
+    },
+    {
+      "predicate": {
+        "damage": 0.254
+      },
+      "model": "achievetodo:item/mob_effect/mining_fatigue"
+    },
+    {
+      "predicate": {
+        "damage": 0.255
+      },
+      "model": "achievetodo:item/mob_effect/levitation"
+    },
+    {
+      "predicate": {
+        "damage": 0.256
+      },
+      "model": "achievetodo:item/mob_effect/glowing"
+    },
+    {
+      "predicate": {
+        "damage": 0.257
+      },
+      "model": "achievetodo:item/mob_effect/absorption"
+    },
+    {
+      "predicate": {
+        "damage": 0.258
+      },
+      "model": "achievetodo:item/mob_effect/hunger"
+    },
+    {
+      "predicate": {
+        "damage": 0.259
+      },
+      "model": "achievetodo:item/mob_effect/nausea"
+    },
+    {
+      "predicate": {
+        "damage": 0.260
+      },
+      "model": "achievetodo:item/mob_effect/resistance"
+    },
+    {
+      "predicate": {
+        "damage": 0.261
+      },
+      "model": "achievetodo:item/mob_effect/slow_falling"
+    },
+    {
+      "predicate": {
+        "damage": 0.262
+      },
+      "model": "achievetodo:item/mob_effect/conduit_power"
+    },
+    {
+      "predicate": {
+        "damage": 0.263
+      },
+      "model": "achievetodo:item/mob_effect/dolphins_grace"
+    },
+    {
+      "predicate": {
+        "damage": 0.264
+      },
+      "model": "achievetodo:item/mob_effect/blindness"
+    },
+    {
+      "predicate": {
+        "damage": 0.265
+      },
+      "model": "achievetodo:item/mob_effect/saturation"
+    },
+    {
+      "predicate": {
+        "damage": 0.266
+      },
+      "model": "achievetodo:item/mob_effect/bad_omen"
+    },
+    {
+      "predicate": {
+        "damage": 0.267
+      },
+      "model": "achievetodo:item/mob_effect/hero_of_the_village"
+    },
+    {
+      "predicate": {
+        "damage": 0.268
+      },
+      "model": "achievetodo:item/mob_effect/darkness"
     }
   ]
 }

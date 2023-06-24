@@ -1,0 +1,20 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [18, 18],
+	"textures": {
+		"0": "achievetodo:item/mob_effect/hero_of_the_village"
+	},
+	"elements": [
+		{
+			"from": [-1, -1, 7.5],
+			"to": [17, 17, 7.5],
+			"faces": {
+				"east": {"uv": [0, 0, 0, 14.22222], "texture": "#missing"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 14.22222], "texture": "#missing"},
+				"up": {"uv": [0, 0, 14.22222, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 14.22222, 0], "texture": "#missing"}
+			}
+		}
+	]
+}

@@ -224,7 +224,7 @@ public class AdvancementGenerator {
                     hintItem = Items.ENCHANTED_BOOK;
                 } else if (incompleteCriteria.contains("second_line")) {
                     hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
-                    nbt.putInt("Damage", 0);
+                    nbt.putInt("Damage", 60);
                 } else if (incompleteCriteria.contains("third_line")) {
                     hintItem = Items.NAME_TAG;
                 } else if (incompleteCriteria.contains("fourth_line")) {
@@ -235,10 +235,10 @@ public class AdvancementGenerator {
                     hintItem = Items.EGG;
                 } else if (incompleteCriteria.contains("seventh_line")) {
                     hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
-                    nbt.putInt("Damage", 0);
+                    nbt.putInt("Damage", 53);
                 } else if (incompleteCriteria.contains("eighth_line")) {
                     hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
-                    nbt.putInt("Damage", 0);
+                    nbt.putInt("Damage", 92);
                 } else if (incompleteCriteria.contains("ninth_line")) {
                     hintItem = Items.OAK_BOAT;
                 }
@@ -444,7 +444,7 @@ public class AdvancementGenerator {
                         case "sheep" -> 43;
                         case "squid" -> 44;
                         case "turtle" -> 46;
-                        case "villager" -> 47;
+                        case "villager" -> 150;
                         case "wandering_trader" -> 48;
                         case "cave_spider" -> 50;
                         case "enderman" -> 51;

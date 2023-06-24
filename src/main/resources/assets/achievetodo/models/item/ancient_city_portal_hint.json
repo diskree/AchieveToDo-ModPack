@@ -288,12 +288,6 @@
     },
     {
       "predicate": {
-        "damage": 0.047
-      },
-      "model": "achievetodo:item/villager/villager"
-    },
-    {
-      "predicate": {
         "damage": 0.048
       },
       "model": "achievetodo:item/wandering_trader"

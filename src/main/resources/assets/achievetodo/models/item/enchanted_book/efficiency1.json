@@ -1,0 +1,41 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "achievetodo:item/enchanted_book/efficiency",
+		"1": "achievetodo:item/enchanted_book/level/1"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 7.5],
+			"to": [16, 16, 7.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9.25, 3, 7.5]},
+			"faces": {
+				"east": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"up": {"uv": [0, 0, 16, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 16, 0], "texture": "#missing"}
+			}
+		},
+		{
+			"from": [18, 4.5, 7.5],
+			"to": [29, 11.5, 7.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9.25, 3, 7.5]},
+			"faces": {
+				"east": {"uv": [0, 0, 0, 7], "texture": "#missing"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 7], "texture": "#missing"},
+				"up": {"uv": [0, 0, 11, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 11, 0], "texture": "#missing"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

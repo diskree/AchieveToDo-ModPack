@@ -1605,6 +1605,630 @@
         "damage": 0.268
       },
       "model": "achievetodo:item/mob_effect/darkness"
+    },
+    {
+      "predicate": {
+        "damage": 0.269
+      },
+      "model": "achievetodo:item/enchanted_book/protection1"
+    },
+    {
+      "predicate": {
+        "damage": 0.270
+      },
+      "model": "achievetodo:item/enchanted_book/protection2"
+    },
+    {
+      "predicate": {
+        "damage": 0.271
+      },
+      "model": "achievetodo:item/enchanted_book/protection3"
+    },
+    {
+      "predicate": {
+        "damage": 0.272
+      },
+      "model": "achievetodo:item/enchanted_book/protection4"
+    },
+    {
+      "predicate": {
+        "damage": 0.273
+      },
+      "model": "achievetodo:item/enchanted_book/fire_protection1"
+    },
+    {
+      "predicate": {
+        "damage": 0.274
+      },
+      "model": "achievetodo:item/enchanted_book/fire_protection2"
+    },
+    {
+      "predicate": {
+        "damage": 0.275
+      },
+      "model": "achievetodo:item/enchanted_book/fire_protection3"
+    },
+    {
+      "predicate": {
+        "damage": 0.276
+      },
+      "model": "achievetodo:item/enchanted_book/fire_protection4"
+    },
+    {
+      "predicate": {
+        "damage": 0.277
+      },
+      "model": "achievetodo:item/enchanted_book/feather_falling1"
+    },
+    {
+      "predicate": {
+        "damage": 0.278
+      },
+      "model": "achievetodo:item/enchanted_book/feather_falling2"
+    },
+    {
+      "predicate": {
+        "damage": 0.279
+      },
+      "model": "achievetodo:item/enchanted_book/feather_falling3"
+    },
+    {
+      "predicate": {
+        "damage": 0.280
+      },
+      "model": "achievetodo:item/enchanted_book/feather_falling4"
+    },
+    {
+      "predicate": {
+        "damage": 0.281
+      },
+      "model": "achievetodo:item/enchanted_book/blast_protection1"
+    },
+    {
+      "predicate": {
+        "damage": 0.282
+      },
+      "model": "achievetodo:item/enchanted_book/blast_protection2"
+    },
+    {
+      "predicate": {
+        "damage": 0.283
+      },
+      "model": "achievetodo:item/enchanted_book/blast_protection3"
+    },
+    {
+      "predicate": {
+        "damage": 0.284
+      },
+      "model": "achievetodo:item/enchanted_book/blast_protection4"
+    },
+    {
+      "predicate": {
+        "damage": 0.285
+      },
+      "model": "achievetodo:item/enchanted_book/projectile_protection1"
+    },
+    {
+      "predicate": {
+        "damage": 0.286
+      },
+      "model": "achievetodo:item/enchanted_book/projectile_protection2"
+    },
+    {
+      "predicate": {
+        "damage": 0.287
+      },
+      "model": "achievetodo:item/enchanted_book/projectile_protection3"
+    },
+    {
+      "predicate": {
+        "damage": 0.288
+      },
+      "model": "achievetodo:item/enchanted_book/projectile_protection4"
+    },
+    {
+      "predicate": {
+        "damage": 0.289
+      },
+      "model": "achievetodo:item/enchanted_book/respiration1"
+    },
+    {
+      "predicate": {
+        "damage": 0.290
+      },
+      "model": "achievetodo:item/enchanted_book/respiration2"
+    },
+    {
+      "predicate": {
+        "damage": 0.291
+      },
+      "model": "achievetodo:item/enchanted_book/respiration3"
+    },
+    {
+      "predicate": {
+        "damage": 0.292
+      },
+      "model": "achievetodo:item/enchanted_book/thorns1"
+    },
+    {
+      "predicate": {
+        "damage": 0.293
+      },
+      "model": "achievetodo:item/enchanted_book/thorns2"
+    },
+    {
+      "predicate": {
+        "damage": 0.294
+      },
+      "model": "achievetodo:item/enchanted_book/thorns3"
+    },
+    {
+      "predicate": {
+        "damage": 0.295
+      },
+      "model": "achievetodo:item/enchanted_book/depth_strider1"
+    },
+    {
+      "predicate": {
+        "damage": 0.296
+      },
+      "model": "achievetodo:item/enchanted_book/depth_strider2"
+    },
+    {
+      "predicate": {
+        "damage": 0.297
+      },
+      "model": "achievetodo:item/enchanted_book/depth_strider3"
+    },
+    {
+      "predicate": {
+        "damage": 0.298
+      },
+      "model": "achievetodo:item/enchanted_book/frost_walker1"
+    },
+    {
+      "predicate": {
+        "damage": 0.299
+      },
+      "model": "achievetodo:item/enchanted_book/frost_walker2"
+    },
+    {
+      "predicate": {
+        "damage": 0.300
+      },
+      "model": "achievetodo:item/enchanted_book/sharpness1"
+    },
+    {
+      "predicate": {
+        "damage": 0.301
+      },
+      "model": "achievetodo:item/enchanted_book/sharpness2"
+    },
+    {
+      "predicate": {
+        "damage": 0.302
+      },
+      "model": "achievetodo:item/enchanted_book/sharpness3"
+    },
+    {
+      "predicate": {
+        "damage": 0.303
+      },
+      "model": "achievetodo:item/enchanted_book/sharpness4"
+    },
+    {
+      "predicate": {
+        "damage": 0.304
+      },
+      "model": "achievetodo:item/enchanted_book/sharpness5"
+    },
+    {
+      "predicate": {
+        "damage": 0.305
+      },
+      "model": "achievetodo:item/enchanted_book/smite1"
+    },
+    {
+      "predicate": {
+        "damage": 0.306
+      },
+      "model": "achievetodo:item/enchanted_book/smite2"
+    },
+    {
+      "predicate": {
+        "damage": 0.307
+      },
+      "model": "achievetodo:item/enchanted_book/smite3"
+    },
+    {
+      "predicate": {
+        "damage": 0.308
+      },
+      "model": "achievetodo:item/enchanted_book/smite4"
+    },
+    {
+      "predicate": {
+        "damage": 0.309
+      },
+      "model": "achievetodo:item/enchanted_book/smite5"
+    },
+    {
+      "predicate": {
+        "damage": 0.310
+      },
+      "model": "achievetodo:item/enchanted_book/bane_of_arthropods1"
+    },
+    {
+      "predicate": {
+        "damage": 0.311
+      },
+      "model": "achievetodo:item/enchanted_book/bane_of_arthropods2"
+    },
+    {
+      "predicate": {
+        "damage": 0.312
+      },
+      "model": "achievetodo:item/enchanted_book/bane_of_arthropods3"
+    },
+    {
+      "predicate": {
+        "damage": 0.313
+      },
+      "model": "achievetodo:item/enchanted_book/bane_of_arthropods4"
+    },
+    {
+      "predicate": {
+        "damage": 0.314
+      },
+      "model": "achievetodo:item/enchanted_book/bane_of_arthropods5"
+    },
+    {
+      "predicate": {
+        "damage": 0.315
+      },
+      "model": "achievetodo:item/enchanted_book/knockback1"
+    },
+    {
+      "predicate": {
+        "damage": 0.316
+      },
+      "model": "achievetodo:item/enchanted_book/knockback2"
+    },
+    {
+      "predicate": {
+        "damage": 0.317
+      },
+      "model": "achievetodo:item/enchanted_book/fire_aspect1"
+    },
+    {
+      "predicate": {
+        "damage": 0.318
+      },
+      "model": "achievetodo:item/enchanted_book/fire_aspect2"
+    },
+    {
+      "predicate": {
+        "damage": 0.319
+      },
+      "model": "achievetodo:item/enchanted_book/looting1"
+    },
+    {
+      "predicate": {
+        "damage": 0.320
+      },
+      "model": "achievetodo:item/enchanted_book/looting2"
+    },
+    {
+      "predicate": {
+        "damage": 0.321
+      },
+      "model": "achievetodo:item/enchanted_book/looting3"
+    },
+    {
+      "predicate": {
+        "damage": 0.322
+      },
+      "model": "achievetodo:item/enchanted_book/sweeping1"
+    },
+    {
+      "predicate": {
+        "damage": 0.323
+      },
+      "model": "achievetodo:item/enchanted_book/sweeping2"
+    },
+    {
+      "predicate": {
+        "damage": 0.324
+      },
+      "model": "achievetodo:item/enchanted_book/sweeping3"
+    },
+    {
+      "predicate": {
+        "damage": 0.325
+      },
+      "model": "achievetodo:item/enchanted_book/efficiency1"
+    },
+    {
+      "predicate": {
+        "damage": 0.326
+      },
+      "model": "achievetodo:item/enchanted_book/efficiency2"
+    },
+    {
+      "predicate": {
+        "damage": 0.327
+      },
+      "model": "achievetodo:item/enchanted_book/efficiency3"
+    },
+    {
+      "predicate": {
+        "damage": 0.328
+      },
+      "model": "achievetodo:item/enchanted_book/efficiency4"
+    },
+    {
+      "predicate": {
+        "damage": 0.329
+      },
+      "model": "achievetodo:item/enchanted_book/efficiency5"
+    },
+    {
+      "predicate": {
+        "damage": 0.330
+      },
+      "model": "achievetodo:item/enchanted_book/unbreaking1"
+    },
+    {
+      "predicate": {
+        "damage": 0.331
+      },
+      "model": "achievetodo:item/enchanted_book/unbreaking2"
+    },
+    {
+      "predicate": {
+        "damage": 0.332
+      },
+      "model": "achievetodo:item/enchanted_book/unbreaking3"
+    },
+    {
+      "predicate": {
+        "damage": 0.333
+      },
+      "model": "achievetodo:item/enchanted_book/fortune1"
+    },
+    {
+      "predicate": {
+        "damage": 0.334
+      },
+      "model": "achievetodo:item/enchanted_book/fortune2"
+    },
+    {
+      "predicate": {
+        "damage": 0.335
+      },
+      "model": "achievetodo:item/enchanted_book/fortune3"
+    },
+    {
+      "predicate": {
+        "damage": 0.336
+      },
+      "model": "achievetodo:item/enchanted_book/power1"
+    },
+    {
+      "predicate": {
+        "damage": 0.337
+      },
+      "model": "achievetodo:item/enchanted_book/power2"
+    },
+    {
+      "predicate": {
+        "damage": 0.338
+      },
+      "model": "achievetodo:item/enchanted_book/power3"
+    },
+    {
+      "predicate": {
+        "damage": 0.339
+      },
+      "model": "achievetodo:item/enchanted_book/power4"
+    },
+    {
+      "predicate": {
+        "damage": 0.340
+      },
+      "model": "achievetodo:item/enchanted_book/power5"
+    },
+    {
+      "predicate": {
+        "damage": 0.341
+      },
+      "model": "achievetodo:item/enchanted_book/punch1"
+    },
+    {
+      "predicate": {
+        "damage": 0.342
+      },
+      "model": "achievetodo:item/enchanted_book/punch2"
+    },
+    {
+      "predicate": {
+        "damage": 0.343
+      },
+      "model": "achievetodo:item/enchanted_book/luck_of_the_sea1"
+    },
+    {
+      "predicate": {
+        "damage": 0.344
+      },
+      "model": "achievetodo:item/enchanted_book/luck_of_the_sea2"
+    },
+    {
+      "predicate": {
+        "damage": 0.345
+      },
+      "model": "achievetodo:item/enchanted_book/luck_of_the_sea3"
+    },
+    {
+      "predicate": {
+        "damage": 0.346
+      },
+      "model": "achievetodo:item/enchanted_book/lure1"
+    },
+    {
+      "predicate": {
+        "damage": 0.347
+      },
+      "model": "achievetodo:item/enchanted_book/lure2"
+    },
+    {
+      "predicate": {
+        "damage": 0.348
+      },
+      "model": "achievetodo:item/enchanted_book/lure3"
+    },
+    {
+      "predicate": {
+        "damage": 0.349
+      },
+      "model": "achievetodo:item/enchanted_book/loyalty1"
+    },
+    {
+      "predicate": {
+        "damage": 0.350
+      },
+      "model": "achievetodo:item/enchanted_book/loyalty2"
+    },
+    {
+      "predicate": {
+        "damage": 0.351
+      },
+      "model": "achievetodo:item/enchanted_book/loyalty3"
+    },
+    {
+      "predicate": {
+        "damage": 0.352
+      },
+      "model": "achievetodo:item/enchanted_book/riptide1"
+    },
+    {
+      "predicate": {
+        "damage": 0.353
+      },
+      "model": "achievetodo:item/enchanted_book/riptide2"
+    },
+    {
+      "predicate": {
+        "damage": 0.354
+      },
+      "model": "achievetodo:item/enchanted_book/riptide3"
+    },
+    {
+      "predicate": {
+        "damage": 0.355
+      },
+      "model": "achievetodo:item/enchanted_book/impaling1"
+    },
+    {
+      "predicate": {
+        "damage": 0.356
+      },
+      "model": "achievetodo:item/enchanted_book/impaling2"
+    },
+    {
+      "predicate": {
+        "damage": 0.357
+      },
+      "model": "achievetodo:item/enchanted_book/impaling3"
+    },
+    {
+      "predicate": {
+        "damage": 0.358
+      },
+      "model": "achievetodo:item/enchanted_book/impaling4"
+    },
+    {
+      "predicate": {
+        "damage": 0.359
+      },
+      "model": "achievetodo:item/enchanted_book/impaling5"
+    },
+    {
+      "predicate": {
+        "damage": 0.360
+      },
+      "model": "achievetodo:item/enchanted_book/quick_charge1"
+    },
+    {
+      "predicate": {
+        "damage": 0.361
+      },
+      "model": "achievetodo:item/enchanted_book/quick_charge2"
+    },
+    {
+      "predicate": {
+        "damage": 0.362
+      },
+      "model": "achievetodo:item/enchanted_book/quick_charge3"
+    },
+    {
+      "predicate": {
+        "damage": 0.363
+      },
+      "model": "achievetodo:item/enchanted_book/piercing1"
+    },
+    {
+      "predicate": {
+        "damage": 0.364
+      },
+      "model": "achievetodo:item/enchanted_book/piercing2"
+    },
+    {
+      "predicate": {
+        "damage": 0.365
+      },
+      "model": "achievetodo:item/enchanted_book/piercing3"
+    },
+    {
+      "predicate": {
+        "damage": 0.366
+      },
+      "model": "achievetodo:item/enchanted_book/piercing4"
+    },
+    {
+      "predicate": {
+        "damage": 0.367
+      },
+      "model": "achievetodo:item/enchanted_book/soul_speed1"
+    },
+    {
+      "predicate": {
+        "damage": 0.368
+      },
+      "model": "achievetodo:item/enchanted_book/soul_speed2"
+    },
+    {
+      "predicate": {
+        "damage": 0.369
+      },
+      "model": "achievetodo:item/enchanted_book/soul_speed3"
+    },
+    {
+      "predicate": {
+        "damage": 0.370
+      },
+      "model": "achievetodo:item/enchanted_book/swift_sneak1"
+    },
+    {
+      "predicate": {
+        "damage": 0.371
+      },
+      "model": "achievetodo:item/enchanted_book/swift_sneak2"
+    },
+    {
+      "predicate": {
+        "damage": 0.372
+      },
+      "model": "achievetodo:item/enchanted_book/swift_sneak3"
     }
   ]
 }

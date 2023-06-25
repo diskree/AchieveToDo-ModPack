@@ -192,6 +192,12 @@ class AchieveToDoMod : ModInitializer {
                     Text.of("Goat Horns"),
                     ResourcePackActivationType.ALWAYS_ENABLED
             )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    ENCHANTED_BOOKS_RESOURCE_PACK_ID,
+                    modContainer,
+                    Text.of("Enchanted Books"),
+                    ResourcePackActivationType.ALWAYS_ENABLED
+            )
         }
     }
 
@@ -283,6 +289,7 @@ class AchieveToDoMod : ModInitializer {
         private val BACAP_LANGUAGE_RESOURCE_PACK_ID = Identifier(ID, "bacap_lp")
         private val VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID = Identifier(ID, "visual_fish_buckets")
         private val GOAT_HORNS_RESOURCE_PACK_ID = Identifier(ID, "goat_horns")
+        private val ENCHANTED_BOOKS_RESOURCE_PACK_ID = Identifier(ID, "enchanted_books")
 
         @JvmField
         val ANCIENT_CITY_PORTAL_BLOCK = AncientCityPortalBlock(

@@ -69,6 +69,7 @@ public class AdvancementGenerator {
         String criterion = incompleteCriteria.get(serverPlayer.getRandom().nextBetween(0, incompleteCriteria.size() - 1));
         Item hintItem = null;
         NbtCompound nbt = new NbtCompound();
+        boolean dropHint = false;
         switch (advancement.getId().toString()) {
             case "blazeandcave:adventure/chromatic_armory" -> {
                 switch (criterion) {
@@ -913,152 +914,22 @@ public class AdvancementGenerator {
                     "blazeandcave:redstone/travelling_bard",
                     "minecraft:adventure/adventuring_time",
                     "minecraft:nether/explore_nether" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
-                nbt.putInt("Damage", switch (criterion) {
-                    case "river" -> 0;
-                    case "swamp" -> 0;
-                    case "desert" -> 0;
-                    case "snowy_taiga" -> 0;
-                    case "badlands" -> 0;
-                    case "forest" -> 0;
-                    case "stony_shore" -> 0;
-                    case "snowy_plains" -> 0;
-                    case "wooded_badlands" -> 0;
-                    case "savanna" -> 0;
-                    case "plains" -> 0;
-                    case "frozen_river" -> 0;
-                    case "old_growth_pine_taiga" -> 0;
-                    case "snowy_beach" -> 0;
-                    case "deep_ocean" -> 0;
-                    case "sparse_jungle" -> 0;
-                    case "ocean" -> 0;
-                    case "windswept_hills" -> 0;
-                    case "jungle" -> 0;
-                    case "beach" -> 0;
-                    case "savanna_plateau" -> 0;
-                    case "dark_forest" -> 0;
-                    case "taiga" -> 0;
-                    case "birch_forest" -> 0;
-                    case "mushroom_fields" -> 0;
-                    case "windswept_forest" -> 0;
-                    case "cold_ocean" -> 0;
-                    case "warm_ocean" -> 0;
-                    case "lukewarm_ocean" -> 0;
-                    case "frozen_ocean" -> 0;
-                    case "deep_frozen_ocean" -> 0;
-                    case "deep_lukewarm_ocean" -> 0;
-                    case "deep_cold_ocean" -> 0;
-                    case "bamboo_jungle" -> 0;
-                    case "sunflower_plains" -> 0;
-                    case "windswept_gravelly_hills" -> 0;
-                    case "flower_forest" -> 0;
-                    case "ice_spikes" -> 0;
-                    case "old_growth_birch_forest" -> 0;
-                    case "old_growth_taiga", "old_growth_spruce_taiga" -> 0;
-                    case "windswept_savanna" -> 0;
-                    case "eroded_badlands" -> 0;
-                    case "meadow" -> 0;
-                    case "snowy_slopes_or_grove", "grove" -> 0;
-                    case "snowy_slopes" -> 0;
-                    case "peaks", "frozen_peaks" -> 0;
-                    case "jagged_peaks" -> 0;
-                    case "stony_peaks" -> 0;
-                    case "lush_caves" -> 0;
-                    case "dripstone_caves" -> 0;
-                    case "nether_wastes" -> 0;
-                    case "crimson_forest" -> 0;
-                    case "warped_forest" -> 0;
-                    case "soul_sand_valley" -> 0;
-                    case "basalt_deltas" -> 0;
-                    case "the_end" -> 0;
-                    case "small_end_islands" -> 0;
-                    case "end_highlands" -> 0;
-                    case "end_midlands" -> 0;
-                    case "end_barrens" -> 0;
-                    case "mangrove_swamp" -> 0;
-                    case "deep_dark" -> 0;
-                    case "cherry_grove" -> 0;
-                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                });
+                hintItem = Items.SPYGLASS;
+                nbt.putInt("CustomModelData", 1);
+                nbt.putString("Panorama", "achievetodo:textures/panorama/biome_" + criterion);
+                dropHint = true;
             }
             case "blazeandcave:adventure/raidin_master" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
-                nbt.putInt("Damage", switch (criterion) {
-                    case "dungeon" -> 0;
-                    case "igloo" -> 0;
-                    case "desert_pyramid" -> 0;
-                    case "jungle_pyramid" -> 0;
-                    case "swamp_hut" -> 0;
-                    case "village_desert" -> 0;
-                    case "village_plains" -> 0;
-                    case "village_savanna" -> 0;
-                    case "village_snowy" -> 0;
-                    case "village_taiga" -> 0;
-                    case "mineshaft" -> 0;
-                    case "mineshaft_mesa" -> 0;
-                    case "stronghold" -> 0;
-                    case "fortress" -> 0;
-                    case "end_city" -> 0;
-                    case "monument" -> 0;
-                    case "mansion" -> 0;
-                    case "ocean_ruin_cold" -> 0;
-                    case "ocean_ruin_warm" -> 0;
-                    case "shipwreck" -> 0;
-                    case "buried_treasure" -> 0;
-                    case "pillager_outpost" -> 0;
-                    case "ruined_portal" -> 0;
-                    case "bastion_remnant" -> 0;
-                    case "ancient_city" -> 0;
-                    case "trail_ruins" -> 0;
-                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                });
+                hintItem = Items.SPYGLASS;
+                nbt.putInt("CustomModelData", 2);
+                nbt.putString("Panorama", "achievetodo:textures/panorama/structure_" + criterion);
+                dropHint = true;
             }
             case "blazeandcave:challenges/i_am_loot" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
-                nbt.putInt("Damage", switch (criterion) {
-                    case "abandoned_mineshaft" -> 0;
-                    case "bastion_bridge" -> 0;
-                    case "bastion_hoglin_stable" -> 0;
-                    case "bastion_other" -> 0;
-                    case "bastion_treasure" -> 0;
-                    case "buried_treasure" -> 0;
-                    case "desert_pyramid" -> 0;
-                    case "end_city_treasure" -> 0;
-                    case "igloo_chest" -> 0;
-                    case "jungle_temple" -> 0;
-                    case "jungle_temple_dispenser" -> 0;
-                    case "nether_bridge" -> 0;
-                    case "pillager_outpost" -> 0;
-                    case "ruined_portal" -> 0;
-                    case "shipwreck_map" -> 0;
-                    case "shipwreck_supply" -> 0;
-                    case "shipwreck_treasure" -> 0;
-                    case "simple_dungeon" -> 0;
-                    case "stronghold_corridor" -> 0;
-                    case "stronghold_crossing" -> 0;
-                    case "stronghold_library" -> 0;
-                    case "underwater_ruin_big" -> 0;
-                    case "underwater_ruin_small" -> 0;
-                    case "woodland_mansion" -> 0;
-                    case "village_armorer" -> 0;
-                    case "village_butcher" -> 0;
-                    case "village_cartographer" -> 0;
-                    case "village_desert_house" -> 0;
-                    case "village_fisher" -> 0;
-                    case "village_fletcher" -> 0;
-                    case "village_mason" -> 0;
-                    case "village_plains_house" -> 0;
-                    case "village_savanna_house" -> 0;
-                    case "village_snowy_house" -> 0;
-                    case "village_taiga_house" -> 0;
-                    case "village_tannery" -> 0;
-                    case "village_temple" -> 0;
-                    case "village_toolsmith" -> 0;
-                    case "village_weaponsmith" -> 0;
-                    case "ancient_city" -> 0;
-                    case "ancient_city_ice_box" -> 0;
-                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                });
+                hintItem = Items.SPYGLASS;
+                nbt.putInt("CustomModelData", 3);
+                nbt.putString("Panorama", "achievetodo:textures/panorama/chest_" + criterion);
+                dropHint = true;
             }
         }
         if (hintItem == null) {
@@ -1069,7 +940,7 @@ public class AdvancementGenerator {
         }
         ItemStack hint = new ItemStack(hintItem);
         hint.setNbt(nbt);
-        return new AdvancementHint(tabDisplay.getIcon(), advancementDisplay.getIcon(), hint);
+        return new AdvancementHint(tabDisplay.getIcon(), advancementDisplay.getIcon(), hint, dropHint);
     }
 
     private static Advancement generateRandomAdvancement(boolean withSingleRequirement) {

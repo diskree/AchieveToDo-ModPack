@@ -5,12 +5,12 @@ import com.diskree.achievetodo.ItemDisplayEntityImpl;
 import com.diskree.achievetodo.JukeboxBlockEntityImpl;
 import com.diskree.achievetodo.advancements.AdvancementGenerator;
 import com.diskree.achievetodo.advancements.AdvancementHint;
-import net.minecraft.advancement.Advancement;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.JukeboxBlockEntity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.decoration.DisplayEntity;
 import net.minecraft.entity.effect.StatusEffects;
@@ -270,7 +270,16 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                 List<AncientCityPortalPromptEntity> hintEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT, Box.of(hintEntityPos.toCenterPos(), 1, 1, 1), (entity) -> true);
                 if (hintEntities != null && hintEntities.size() == 1) {
                     AncientCityPortalPromptEntity hintEntity = hintEntities.get(0);
-                    ((ItemDisplayEntityImpl) hintEntity).publicSetItemStack(advancementHint.hint());
+                    if (advancementHint.dropHint()) {
+                        ItemStack arrow = new ItemStack(AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM);
+                        NbtCompound nbt = new NbtCompound();
+                        nbt.putInt("Damage", 47);
+                        arrow.setNbt(nbt);
+                        ((ItemDisplayEntityImpl) hintEntity).publicSetItemStack(arrow);
+                        getWorld().spawnEntity(new ItemEntity(getWorld(), hintEntity.getX(), hintEntity.getY() - 1, hintEntity.getZ(), advancementHint.hint(), 0, 0, 0));
+                    } else {
+                        ((ItemDisplayEntityImpl) hintEntity).publicSetItemStack(advancementHint.hint());
+                    }
                 }
             }
             return;

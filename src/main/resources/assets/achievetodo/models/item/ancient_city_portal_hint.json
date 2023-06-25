@@ -288,6 +288,12 @@
     },
     {
       "predicate": {
+        "damage": 0.047
+      },
+      "model": "achievetodo:item/arrow"
+    },
+    {
+      "predicate": {
         "damage": 0.048
       },
       "model": "achievetodo:item/wandering_trader"

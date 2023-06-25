@@ -60,9 +60,11 @@
     "ClientPlayNetworkHandlerMixin",
     "CyclingButtonWidgetMixin",
     "GameMenuScreenMixin",
+    "GameRendererMixin",
     "GameTabMixin",
     "LockButtonWidgetMixin",
     "LogoDrawerMixin",
+    "MouseMixin",
     "ResourcePackOrganizerMixin",
     "WorldCreatorMixin"
   ]

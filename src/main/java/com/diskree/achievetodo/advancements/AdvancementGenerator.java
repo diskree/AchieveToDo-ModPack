@@ -910,25 +910,31 @@ public class AdvancementGenerator {
                     "blazeandcave:biomes/wet_feet",
                     "blazeandcave:challenges/explorer_of_worlds",
                     "blazeandcave:end/void_walker",
-                    "blazeandcave:mining/spelunker",
+                    "blazeandcave:mining/spelunkert",
                     "blazeandcave:redstone/travelling_bard",
                     "minecraft:adventure/adventuring_time",
                     "minecraft:nether/explore_nether" -> {
+                criterion = switch (criterion) {
+                    case "old_growth_taiga" -> "old_growth_spruce_taiga";
+                    case "snowy_slopes_or_grove" -> "grove";
+                    case "peaks" -> "frozen_peaks";
+                    default -> criterion;
+                };
                 hintItem = Items.SPYGLASS;
                 nbt.putInt("CustomModelData", 1);
-                nbt.putString("Panorama", "achievetodo:textures/panorama/biome_" + criterion);
+                nbt.putString("Panorama", "textures/panorama/biome/" + criterion + "/panorama");
                 dropHint = true;
             }
             case "blazeandcave:adventure/raidin_master" -> {
                 hintItem = Items.SPYGLASS;
                 nbt.putInt("CustomModelData", 2);
-                nbt.putString("Panorama", "achievetodo:textures/panorama/structure_" + criterion);
+                nbt.putString("Panorama", "textures/panorama/structure/" + criterion + "/panorama");
                 dropHint = true;
             }
             case "blazeandcave:challenges/i_am_loot" -> {
                 hintItem = Items.SPYGLASS;
                 nbt.putInt("CustomModelData", 3);
-                nbt.putString("Panorama", "achievetodo:textures/panorama/chest_" + criterion);
+                nbt.putString("Panorama", "textures/panorama/chest/" + criterion + "/panorama");
                 dropHint = true;
             }
         }

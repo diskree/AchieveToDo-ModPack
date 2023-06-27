@@ -910,7 +910,7 @@ public class AdvancementGenerator {
                     "blazeandcave:biomes/wet_feet",
                     "blazeandcave:challenges/explorer_of_worlds",
                     "blazeandcave:end/void_walker",
-                    "blazeandcave:mining/spelunkert",
+                    "blazeandcave:mining/spelunker",
                     "blazeandcave:redstone/travelling_bard",
                     "minecraft:adventure/adventuring_time",
                     "minecraft:nether/explore_nether" -> {

@@ -49,5 +49,10 @@
   "createWorld.rewards.experience.info": "Вы будете получать игровой опыт за выполнение достижений. Особенно сильно поощряются самые сложные достижения.",
   "createWorld.rewards.trophy.info": "Вы будете получать коллекционные предметы за выполнение достижений. Например, бесконечный железный топор за сбор стака брёвен каждого типа дерева.",
 
-  "menu.shareToLan.info": "Миры в AchieveToDo не поддерживают мультиплеер и читы. Играйте честно!"
+  "menu.shareToLan.info": "Миры в AchieveToDo не поддерживают мультиплеер и читы. Играйте честно!",
+
+  "spyglass.tooltip.panorama.header": "Взгляни в меня, чтобы узнать",
+  "spyglass.tooltip.panorama.biome": "какой биом ты ещё не посещал",
+  "spyglass.tooltip.panorama.structure": "какую структуру ты ещё не посещал",
+  "spyglass.tooltip.panorama.chest": "в какой сундук ты ещё не заглядывал"
 }

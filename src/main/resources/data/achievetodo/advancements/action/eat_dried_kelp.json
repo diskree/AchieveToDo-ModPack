@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:dried_kelp"
     },
-    "title": {"translate": "Dried kelp"},
+    "title": {
+      "translate": "blocked.eat_dried_kelp.title"
+    },
     "description": {
-      "translate":"Ability to eat dried kelp"
+      "translate": "blocked.eat_dried_kelp.description"
     },
     "show_toast": false,
     "announce_to_chat": false

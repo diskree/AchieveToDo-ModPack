@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:smoker"
     },
-    "title": {"translate": "Smoker"},
+    "title": {
+      "translate": "blocked.using_smoker.title"
+    },
     "description": {
-      "translate":"Ability to use a smoker"
+      "translate": "blocked.using_smoker.description"
     },
     "show_toast": false,
     "announce_to_chat": false

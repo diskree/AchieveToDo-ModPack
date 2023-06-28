@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:grindstone"
     },
-    "title": {"translate": "Weaponsmith"},
+    "title": {
+      "translate": "blocked.villager_weaponsmith.title"
+    },
     "description": {
-      "translate":"Ability to trade with a weaponsmith"
+      "translate": "blocked.villager_weaponsmith.description"
     },
     "show_toast": false,
     "announce_to_chat": false

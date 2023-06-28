@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:stone_pickaxe"
     },
-    "title": {"translate": "Stone tools"},
+    "title": {
+      "translate": "blocked.using_stone_tools.title"
+    },
     "description": {
-      "translate":"Ability to use stone tools"
+      "translate": "blocked.using_stone_tools.description"
     },
     "show_toast": false,
     "announce_to_chat": false

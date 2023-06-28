@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:obsidian"
     },
-    "title": {"translate": "The Nether"},
+    "title": {
+      "translate": "blocked.nether.title"
+    },
     "description": {
-      "translate":"Ability to enter The Nether"
+      "translate": "blocked.nether.description"
     },
     "show_toast": false,
     "announce_to_chat": false

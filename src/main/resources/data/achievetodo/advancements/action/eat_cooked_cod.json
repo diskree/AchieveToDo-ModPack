@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cooked_cod"
     },
-    "title": {"translate": "Cooked cod"},
+    "title": {
+      "translate": "blocked.eat_cooked_cod.title"
+    },
     "description": {
-      "translate": "Ability to eat cooked cod"
+      "translate": "blocked.eat_cooked_cod.description"
     },
     "show_toast": false,
     "announce_to_chat": false

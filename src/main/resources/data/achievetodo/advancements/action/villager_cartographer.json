@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cartography_table"
     },
-    "title": {"translate": "Cartographer"},
+    "title": {
+      "translate": "blocked.villager_cartographer.title"
+    },
     "description": {
-      "translate":"Ability to trade with a cartographer"
+      "translate": "blocked.villager_cartographer.description"
     },
     "show_toast": false,
     "announce_to_chat": false

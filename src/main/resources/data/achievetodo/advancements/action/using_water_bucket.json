@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:water_bucket"
     },
-    "title": {"translate": "Water bucket"},
+    "title": {
+      "translate": "blocked.using_water_bucket.title"
+    },
     "description": {
-      "translate":"Ability to use a water bucket"
+      "translate": "blocked.using_water_bucket.description"
     },
     "show_toast": false,
     "announce_to_chat": false

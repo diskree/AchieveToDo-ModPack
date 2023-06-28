@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:end_stone_bricks"
     },
-    "title": {"translate": "End gateway"},
+    "title": {
+      "translate": "blocked.end_gate.title"
+    },
     "description": {
-      "translate":"Ability to use end gateways"
+      "translate": "blocked.end_gate.description"
     },
     "show_toast": false,
     "announce_to_chat": false

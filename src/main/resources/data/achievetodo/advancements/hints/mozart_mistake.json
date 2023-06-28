@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:jukebox"
+    },
+    "title": {
+      "translate": "hints.mozart_mistake.title"
+    },
+    "description": {
+      "translate": "hints.mozart_mistake.description"
+    },
+    "frame": "goal"
+  },
+  "parent": "achievetodo:hints/soul_energizer",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:golden_apple"
     },
-    "title": {"translate": "Golden apple"},
+    "title": {
+      "translate": "blocked.eat_golden_apple.title"
+    },
     "description": {
-      "translate":"Ability to eat golden apple"
+      "translate": "blocked.eat_golden_apple.description"
     },
     "show_toast": false,
     "announce_to_chat": false

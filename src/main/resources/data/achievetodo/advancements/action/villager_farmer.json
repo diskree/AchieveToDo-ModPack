@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:composter"
     },
-    "title": {"translate": "Farmer"},
+    "title": {
+      "translate": "blocked.villager_farmer.title"
+    },
     "description": {
-      "translate":"Ability to trade with a farmer"
+      "translate": "blocked.villager_farmer.description"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:sweet_berries"
     },
-    "title": {"translate": "Sweet berries"},
+    "title": {
+      "translate": "blocked.eat_sweet_berries.title"
+    },
     "description": {
-      "translate":"Ability to eat sweet berries"
+      "translate": "blocked.eat_sweet_berries.description"
     },
     "show_toast": false,
     "announce_to_chat": false

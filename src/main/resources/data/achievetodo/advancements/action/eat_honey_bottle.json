@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:honey_bottle"
     },
-    "title": {"translate": "Honey bottle"},
+    "title": {
+      "translate": "blocked.eat_honey_bottle.title"
+    },
     "description": {
-      "translate":"Ability to drink honey"
+      "translate": "blocked.eat_honey_bottle.description"
     },
     "show_toast": false,
     "announce_to_chat": false

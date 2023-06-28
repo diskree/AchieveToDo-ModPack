@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:iron_chestplate"
     },
-    "title": {"translate": "Iron armor"},
+    "title": {
+      "translate": "blocked.equip_iron_armor.title"
+    },
     "description": {
-      "translate":"Ability to equip iron armor"
+      "translate": "blocked.equip_iron_armor.description"
     },
     "show_toast": false,
     "announce_to_chat": false

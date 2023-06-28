@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:stone_pickaxe"
     },
-    "title": {"translate": "Breaking blocks below zero"},
+    "title": {
+      "translate": "blocked.break_blocks_in_negative_y.title"
+    },
     "description": {
-      "translate": "Ability to break blocks below zero"
+      "translate": "blocked.break_blocks_in_negative_y.description"
     },
     "show_toast": false,
     "announce_to_chat": false

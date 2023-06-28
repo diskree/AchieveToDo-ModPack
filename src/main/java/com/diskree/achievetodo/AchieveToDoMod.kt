@@ -17,6 +17,7 @@ import net.fabricmc.fabric.api.event.player.AttackBlockCallback
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback
 import net.fabricmc.fabric.api.event.player.UseBlockCallback
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
+import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricEntityTypeBuilder
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper
@@ -25,6 +26,7 @@ import net.fabricmc.loader.api.FabricLoader
 import net.fabricmc.loader.api.ModContainer
 import net.minecraft.advancement.Advancement
 import net.minecraft.block.AbstractBlock
+import net.minecraft.block.Block
 import net.minecraft.block.piston.PistonBehavior
 import net.minecraft.client.MinecraftClient
 import net.minecraft.client.item.ClampedModelPredicateProvider
@@ -55,6 +57,7 @@ import net.minecraft.village.VillagerProfession
 import net.minecraft.world.World
 import net.minecraft.world.event.GameEvent
 import java.util.stream.Collectors
+
 
 class AchieveToDoMod : ModInitializer {
 
@@ -203,6 +206,8 @@ class AchieveToDoMod : ModInitializer {
 
     private fun registerBlocks() {
         Registry.register(Registries.BLOCK, Identifier(ID, "ancient_city_portal"), ANCIENT_CITY_PORTAL_BLOCK)
+        Registry.register(Registries.BLOCK, Identifier(ID, "reinforced_deepslate_charged"), REINFORCED_DEEPSLATE_CHARGED)
+        Registry.register(Registries.BLOCK, Identifier(ID, "reinforced_deepslate_broken"), REINFORCED_DEEPSLATE_BROKEN)
         BlockRenderLayerMap.INSTANCE.putBlock(ANCIENT_CITY_PORTAL_BLOCK, RenderLayer.getTranslucent())
     }
 
@@ -228,6 +233,9 @@ class AchieveToDoMod : ModInitializer {
         ModelPredicateProviderRegistry.register(Items.SPLASH_POTION, Identifier("long_or_strong"), potionsPredicateProvider)
         ModelPredicateProviderRegistry.register(Items.LINGERING_POTION, Identifier("long_or_strong"), potionsPredicateProvider)
         ModelPredicateProviderRegistry.register(Items.TIPPED_ARROW, Identifier("long_or_strong"), potionsPredicateProvider)
+
+        Registry.register(Registries.ITEM, Identifier(ID, "reinforced_deepslate_charged"), BlockItem(REINFORCED_DEEPSLATE_CHARGED, FabricItemSettings()))
+        Registry.register(Registries.ITEM, Identifier(ID, "reinforced_deepslate_broken"), BlockItem(REINFORCED_DEEPSLATE_BROKEN, FabricItemSettings()))
     }
 
     private fun registerParticles() {
@@ -363,6 +371,9 @@ class AchieveToDoMod : ModInitializer {
                         .trackedUpdateRate(20)
                         .build()
 
+        val REINFORCED_DEEPSLATE_CHARGED = Block(FabricBlockSettings.create())
+        val REINFORCED_DEEPSLATE_BROKEN = Block(FabricBlockSettings.create())
+
         const val ADVANCEMENTS_SCREEN_MARGIN = 30
 
         @JvmField
@@ -462,13 +473,25 @@ class AchieveToDoMod : ModInitializer {
                     resourceId == REWARDS_TROPHY_DATA_PACK_ID.toString()
         }
 
+        @JvmStatic
+        fun grantHintsAdvancement(pathName: String) {
+            val server = MinecraftClient.getInstance().server ?: return
+            val player = server.playerManager.playerList[0] ?: return
+            val advancement = server.advancementLoader[Identifier(ID, "hints/$pathName")]
+            val advancementProgress = player.advancementTracker.getProgress(advancement)
+            advancementProgress.unobtainedCriteria.forEach { criteria ->
+                player.advancementTracker.grantCriterion(advancement, criteria)
+            }
+        }
+
         private fun grantActionAdvancement(action: BlockedAction) {
             val server = MinecraftClient.getInstance().server ?: return
-            val tab = server.advancementLoader[action.buildAdvancementId()]
-            server.playerManager.playerList[0]?.advancementTracker?.grantCriterion(
-                    tab,
-                    AdvancementRoot.ACTION.name.lowercase() + "_" + action.name.lowercase()
-            )
+            val player = server.playerManager.playerList[0] ?: return
+            val advancement = server.advancementLoader[action.buildAdvancementId()]
+            val advancementProgress = player.advancementTracker.getProgress(advancement)
+            advancementProgress.unobtainedCriteria.forEach { criteria ->
+                player.advancementTracker.grantCriterion(advancement, criteria)
+            }
         }
     }
 }

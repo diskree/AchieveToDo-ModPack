@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cooked_mutton"
     },
-    "title": {"translate": "Cooked mutton"},
+    "title": {
+      "translate": "blocked.eat_cooked_mutton.title"
+    },
     "description": {
-      "translate": "Ability to eat cooked mutton"
+      "translate": "blocked.eat_cooked_mutton.description"
     },
     "show_toast": false,
     "announce_to_chat": false

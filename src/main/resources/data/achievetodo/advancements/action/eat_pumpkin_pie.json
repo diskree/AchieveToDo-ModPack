@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:pumpkin_pie"
     },
-    "title": {"translate": "Pumpkin pie"},
+    "title": {
+      "translate": "blocked.eat_pumpkin_pie.title"
+    },
     "description": {
-      "translate":"Ability to eat pumpkin pie"
+      "translate": "blocked.eat_pumpkin_pie.description"
     },
     "show_toast": false,
     "announce_to_chat": false

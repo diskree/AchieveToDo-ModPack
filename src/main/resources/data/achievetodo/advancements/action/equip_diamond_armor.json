@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:diamond_chestplate"
     },
-    "title": {"translate": "Diamond armor"},
+    "title": {
+      "translate": "blocked.equip_diamond_armor.title"
+    },
     "description": {
-      "translate":"Ability to equip diamond armor"
+      "translate": "blocked.equip_diamond_armor.description"
     },
     "show_toast": false,
     "announce_to_chat": false

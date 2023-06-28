@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "achievetodo:block/reinforced_deepslate_broken_bottom",
+    "side": "achievetodo:block/reinforced_deepslate_broken_side",
+    "top": "achievetodo:block/reinforced_deepslate_broken_top"
+  }
+}

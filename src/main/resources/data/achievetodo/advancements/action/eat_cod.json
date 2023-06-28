@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cod"
     },
-    "title": {"translate": "Raw cod"},
+    "title": {
+      "translate": "blocked.eat_cod.title"
+    },
     "description": {
-      "translate":"Ability to eat raw cod"
+      "translate": "blocked.eat_cod.description"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:wooden_pickaxe"
     },
-    "title": {"translate": "Breaking blocks"},
+    "title": {
+      "translate": "blocked.break_blocks_in_positive_y.title"
+    },
     "description": {
-      "translate": "Ability to break blocks"
+      "translate": "blocked.break_blocks_in_positive_y.description"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:elytra"
     },
-    "title": {"translate": "Elytra"},
+    "title": {
+      "translate": "blocked.equip_elytra.title"
+    },
     "description": {
-      "translate":"Ability to use elytra"
+      "translate": "blocked.equip_elytra.description"
     },
     "show_toast": false,
     "announce_to_chat": false

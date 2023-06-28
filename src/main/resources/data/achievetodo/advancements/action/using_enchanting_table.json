@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:enchanting_table"
     },
-    "title": {"translate": "Enchanting table"},
+    "title": {
+      "translate": "blocked.using_enchanting_table.title"
+    },
     "description": {
-      "translate":"Ability to use an enchanting table"
+      "translate": "blocked.using_enchanting_table.description"
     },
     "show_toast": false,
     "announce_to_chat": false

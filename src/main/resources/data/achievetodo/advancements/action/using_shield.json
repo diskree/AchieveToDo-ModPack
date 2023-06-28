@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:shield"
     },
-    "title": {"translate": "Shield"},
+    "title": {
+      "translate": "blocked.using_shield.title"
+    },
     "description": {
-      "translate":"Ability to use a shield"
+      "translate": "blocked.using_shield.description"
     },
     "show_toast": false,
     "announce_to_chat": false

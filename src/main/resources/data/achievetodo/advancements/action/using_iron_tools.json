@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:iron_pickaxe"
     },
-    "title": {"translate": "Iron tools"},
+    "title": {
+      "translate": "blocked.using_iron_tools.title"
+    },
     "description": {
-      "translate":"Ability to use iron tools"
+      "translate": "blocked.using_iron_tools.description"
     },
     "show_toast": false,
     "announce_to_chat": false

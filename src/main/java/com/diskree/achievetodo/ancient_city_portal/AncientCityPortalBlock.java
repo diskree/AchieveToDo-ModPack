@@ -69,6 +69,7 @@ public class AncientCityPortalBlock extends Block {
             return;
         }
         if (entity instanceof AncientCityPortalExperienceOrbEntity || entity instanceof ItemEntity && ((ItemEntity) entity).getStack().isOf(Items.DRAGON_EGG)) {
+            AchieveToDoMod.grantHintsAdvancement("three_pointer");
             AncientCityPortalEntity portalEntity = AncientCityPortalEntity.findForBlock(world, pos);
             if (portalEntity != null && portalEntity.charge(entity instanceof AncientCityPortalExperienceOrbEntity)) {
                 entity.kill();

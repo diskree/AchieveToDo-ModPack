@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:netherite_chestplate"
     },
-    "title": {"translate": "Netherite armor"},
+    "title": {
+      "translate": "blocked.equip_netherite_armor.title"
+    },
     "description": {
-      "translate":"Ability to equip netherite armor"
+      "translate": "blocked.equip_netherite_armor.description"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:beetroot"
     },
-    "title": {"translate": "Beetroot"},
+    "title": {
+      "translate": "blocked.eat_beetroot.title"
+    },
     "description": {
-      "translate": "Ability to eat beetroot"
+      "translate": "blocked.eat_beetroot.description"
     },
     "show_toast": false,
     "announce_to_chat": false

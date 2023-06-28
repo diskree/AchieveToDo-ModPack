@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:oak_boat"
     },
-    "title": {"translate": "Boat"},
+    "title": {
+      "translate": "blocked.using_boat.title"
+    },
     "description": {
-      "translate":"Ability to ride a boat"
+      "translate": "blocked.using_boat.description"
     },
     "show_toast": false,
     "announce_to_chat": false

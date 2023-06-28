@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:lectern"
     },
-    "title": {"translate": "Librarian"},
+    "title": {
+      "translate": "blocked.villager_librarian.title"
+    },
     "description": {
-      "translate":"Ability to trade with a librarian"
+      "translate": "blocked.villager_librarian.description"
     },
     "show_toast": false,
     "announce_to_chat": false

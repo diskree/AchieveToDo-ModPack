@@ -1,0 +1,174 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "title": {
+      "translate": "hints.hintly_hallows.title",
+      "extra": [
+        {
+          "italic": "true",
+          "text": "           "
+        }
+      ]
+    },
+    "description": {
+      "color": "#FF2A2A",
+      "translate": "",
+      "extra": [
+        {
+          "color": "#276AC9",
+          "translate": "hints.hintly_hallows.description.line01"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#276AC9",
+          "translate": "hints.hintly_hallows.description.line02"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#276AC9",
+          "translate": "hints.hintly_hallows.description.line03"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#276AC9",
+          "translate": "hints.hintly_hallows.description.line04"
+        },
+        {
+          "text": "\n\n"
+        },
+        {
+          "color": "#5B9529",
+          "translate": "hints.hintly_hallows.description.line05"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#5B9529",
+          "translate": "hints.hintly_hallows.description.line06"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#5B9529",
+          "translate": "hints.hintly_hallows.description.line07"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#5B9529",
+          "translate": "hints.hintly_hallows.description.line08"
+        },
+        {
+          "text": "\n\n"
+        },
+        {
+          "color": "#0F8995",
+          "translate": "hints.hintly_hallows.description.line09"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#0F8995",
+          "translate": "hints.hintly_hallows.description.line10"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#0F8995",
+          "translate": "hints.hintly_hallows.description.line11"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#0F8995",
+          "translate": "hints.hintly_hallows.description.line12"
+        },
+        {
+          "text": "\n\n"
+        },
+        {
+          "color": "#CA7626",
+          "translate": "hints.hintly_hallows.description.line13"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#CA7626",
+          "translate": "hints.hintly_hallows.description.line14"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#CA7626",
+          "translate": "hints.hintly_hallows.description.line15"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "color": "#CA7626",
+          "translate": "hints.hintly_hallows.description.line16"
+        }
+      ]
+    },
+    "frame": "challenge"
+  },
+  "parent": "achievetodo:action/root",
+  "criteria": {
+    "9_to_5": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "blazeandcave:mining/9_to_5": "true"
+            }
+          }
+        }
+      }
+    },
+    "the_invisible_player": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "blazeandcave:potion/the_invisible_player": "true"
+            }
+          }
+        }
+      }
+    },
+    "dragon_egg": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "minecraft:end/dragon_egg": "true"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cooked_chicken"
     },
-    "title": {"translate": "Cooked chicken"},
+    "title": {
+      "translate": "blocked.eat_cooked_chicken.title"
+    },
     "description": {
-      "translate":"Ability to eat cooked chicken"
+      "translate": "blocked.eat_cooked_chicken.description"
     },
     "show_toast": false,
     "announce_to_chat": false

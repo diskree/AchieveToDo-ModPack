@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:spider_eye"
     },
-    "title": {"translate": "Spider eye"},
+    "title": {
+      "translate": "blocked.eat_spider_eye.title"
+    },
     "description": {
-      "translate":"Ability to eat spider eyes"
+      "translate": "blocked.eat_spider_eye.description"
     },
     "show_toast": false,
     "announce_to_chat": false

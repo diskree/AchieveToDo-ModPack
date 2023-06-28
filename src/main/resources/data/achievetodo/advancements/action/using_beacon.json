@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:beacon"
     },
-    "title": {"translate": "Beacon"},
+    "title": {
+      "translate": "blocked.using_beacon.title"
+    },
     "description": {
-      "translate":"Ability to use a beacon"
+      "translate": "blocked.using_beacon.description"
     },
     "show_toast": false,
     "announce_to_chat": false

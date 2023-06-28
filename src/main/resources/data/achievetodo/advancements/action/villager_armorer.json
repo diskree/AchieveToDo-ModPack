@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:blast_furnace"
     },
-    "title": {"translate": "Armorer"},
+    "title": {
+      "translate": "blocked.villager_armorer.title"
+    },
     "description": {
-      "translate":"Ability to trade with an armorer"
+      "translate": "blocked.villager_armorer.description"
     },
     "show_toast": false,
     "announce_to_chat": false

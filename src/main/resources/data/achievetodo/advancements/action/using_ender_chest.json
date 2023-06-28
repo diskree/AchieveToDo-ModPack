@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:ender_chest"
     },
-    "title": {"translate": "Ender chest"},
+    "title": {
+      "translate": "blocked.using_ender_chest.title"
+    },
     "description": {
-      "translate":"Ability to use an ender chest"
+      "translate": "blocked.using_ender_chest.description"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cauldron"
     },
-    "title": {"translate": "Leatherworker"},
+    "title": {
+      "translate": "blocked.villager_leatherworker.title"
+    },
     "description": {
-      "translate":"Ability to trade with a leatherworker"
+      "translate": "blocked.villager_leatherworker.description"
     },
     "show_toast": false,
     "announce_to_chat": false

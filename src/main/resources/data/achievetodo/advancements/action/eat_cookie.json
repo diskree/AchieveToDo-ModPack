@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cookie"
     },
-    "title": {"translate": "Cookie"},
+    "title": {
+      "translate": "blocked.eat_cookie.title"
+    },
     "description": {
-      "translate":"Ability to eat cookie"
+      "translate": "blocked.eat_cookie.description"
     },
     "show_toast": false,
     "announce_to_chat": false

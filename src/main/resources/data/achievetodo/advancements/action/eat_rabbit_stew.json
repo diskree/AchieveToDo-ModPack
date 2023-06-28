@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:rabbit_stew"
     },
-    "title": {"translate": "Rabbit stew"},
+    "title": {
+      "translate": "blocked.eat_rabbit_stew.title"
+    },
     "description": {
-      "translate":"Ability to eat rabbit stew"
+      "translate": "blocked.eat_rabbit_stew.description"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:melon_slice"
     },
-    "title": {"translate": "Melon slice"},
+    "title": {
+      "translate": "blocked.eat_melon_slice.title"
+    },
     "description": {
-      "translate":"Ability to eat melon slices"
+      "translate": "blocked.eat_melon_slice.description"
     },
     "show_toast": false,
     "announce_to_chat": false

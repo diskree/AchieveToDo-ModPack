@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:potato"
     },
-    "title": {"translate": "Potato"},
+    "title": {
+      "translate": "blocked.eat_potato.title"
+    },
     "description": {
-      "translate":"Ability to eat potato"
+      "translate": "blocked.eat_potato.description"
     },
     "show_toast": false,
     "announce_to_chat": false

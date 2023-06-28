@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:smoker"
     },
-    "title": {"translate": "Butcher"},
+    "title": {
+      "translate": "blocked.villager_butcher.title"
+    },
     "description": {
-      "translate":"Ability to trade with a butcher"
+      "translate": "blocked.villager_butcher.description"
     },
     "show_toast": false,
     "announce_to_chat": false

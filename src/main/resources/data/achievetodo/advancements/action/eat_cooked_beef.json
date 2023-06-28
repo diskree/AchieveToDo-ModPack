@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cooked_beef"
     },
-    "title": {"translate": "Steak"},
+    "title": {
+      "translate": "blocked.eat_cooked_beef.title"
+    },
     "description": {
-      "translate":"Ability to eat steak"
+      "translate": "blocked.eat_cooked_beef.description"
     },
     "show_toast": false,
     "announce_to_chat": false

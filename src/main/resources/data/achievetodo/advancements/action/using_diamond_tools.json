@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:diamond_pickaxe"
     },
-    "title": {"translate": "Diamond tools"},
+    "title": {
+      "translate": "blocked.using_diamond_tools.title"
+    },
     "description": {
-      "translate":"Ability to use diamond tools"
+      "translate": "blocked.using_diamond_tools.description"
     },
     "show_toast": false,
     "announce_to_chat": false

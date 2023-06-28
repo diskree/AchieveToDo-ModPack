@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:stonecutter"
     },
-    "title": {"translate":  "Mason"},
+    "title": {
+      "translate": "blocked.villager_mason.title"
+    },
     "description": {
-      "translate":"Ability to trade with a mason"
+      "translate": "blocked.villager_mason.description"
     },
     "show_toast": false,
     "announce_to_chat": false

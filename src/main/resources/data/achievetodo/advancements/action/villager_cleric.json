@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:brewing_stand"
     },
-    "title": {"translate": "Cleric"},
+    "title": {
+      "translate": "blocked.villager_cleric.title"
+    },
     "description": {
-      "translate":"Ability to trade with a cleric"
+      "translate": "blocked.villager_cleric.description"
     },
     "show_toast": false,
     "announce_to_chat": false

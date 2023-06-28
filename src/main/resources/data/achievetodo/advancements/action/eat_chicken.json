@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:chicken"
     },
-    "title": {"translate": "Raw chicken"},
+    "title": {
+      "translate": "blocked.eat_chicken.title"
+    },
     "description": {
-      "translate":"Ability to eat raw chicken"
+      "translate": "blocked.eat_chicken.description"
     },
     "show_toast": false,
     "announce_to_chat": false

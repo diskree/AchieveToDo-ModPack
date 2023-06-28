@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:firework_rocket"
     },
-    "title": {"translate": "Fireworks"},
+    "title": {
+      "translate": "blocked.using_fireworks_while_fly.title"
+    },
     "description": {
-      "translate":"Ability to use fireworks for flying"
+      "translate": "blocked.using_fireworks_while_fly.description"
     },
     "show_toast": false,
     "announce_to_chat": false

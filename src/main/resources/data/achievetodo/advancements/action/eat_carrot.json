@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:carrot"
     },
-    "title": {"translate": "Carrot"},
+    "title": {
+      "translate": "blocked.eat_carrot.title"
+    },
     "description": {
-      "translate":"Ability to eat carrot"
+      "translate": "blocked.eat_carrot.description"
     },
     "show_toast": false,
     "announce_to_chat": false

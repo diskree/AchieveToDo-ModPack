@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:fletching_table"
     },
-    "title": {"translate": "Fletcher"},
+    "title": {
+      "translate": "blocked.villager_fletcher.title"
+    },
     "description": {
-      "translate":"Ability to trade with a fletcher"
+      "translate": "blocked.villager_fletcher.description"
     },
     "show_toast": false,
     "announce_to_chat": false

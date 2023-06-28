@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:slime_block"
     },
-    "title": {"translate": "Jumping"},
+    "title": {
+      "translate": "blocked.jump.title"
+    },
     "description": {
-      "translate":"Ability to jump"
+      "translate": "blocked.jump.description"
     },
     "show_toast": false,
     "announce_to_chat": false

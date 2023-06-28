@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {
+      "item": "achievetodo:reinforced_deepslate_charged"
+    },
+    "title": {
+      "translate": "hints.soul_energizer.title"
+    },
+    "description": {
+      "translate": "hints.soul_energizer.description"
+    },
+    "frame": "goal"
+  },
+  "parent": "achievetodo:hints/three_pointer",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:mushroom_stew"
     },
-    "title": {"translate": "Mushroom stew"},
+    "title": {
+      "translate": "blocked.eat_mushroom_stew.title"
+    },
     "description": {
-      "translate":"Ability to eat mushroom stew"
+      "translate": "blocked.eat_mushroom_stew.description"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:pufferfish"
     },
-    "title": {"translate": "Pufferfish"},
+    "title": {
+      "translate": "blocked.eat_pufferfish.title"
+    },
     "description": {
-      "translate":"Ability to eat pufferfish"
+      "translate": "blocked.eat_pufferfish.description"
     },
     "show_toast": false,
     "announce_to_chat": false

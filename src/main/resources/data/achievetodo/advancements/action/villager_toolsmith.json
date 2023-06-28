@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:smithing_table"
     },
-    "title": {"translate": "Toolsmith"},
+    "title": {
+      "translate": "blocked.villager_toolsmith.title"
+    },
     "description": {
-      "translate":"Ability to trade with a toolsmith"
+      "translate": "blocked.villager_toolsmith.description"
     },
     "show_toast": false,
     "announce_to_chat": false

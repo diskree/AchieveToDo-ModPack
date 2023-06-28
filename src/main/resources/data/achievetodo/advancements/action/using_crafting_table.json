@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:crafting_table"
     },
-    "title": {"translate": "Crafting table"},
+    "title": {
+      "translate": "blocked.using_crafting_table.title"
+    },
     "description": {
-      "translate":"Ability to use a crafting table"
+      "translate": "blocked.using_crafting_table.description"
     },
     "show_toast": false,
     "announce_to_chat": false

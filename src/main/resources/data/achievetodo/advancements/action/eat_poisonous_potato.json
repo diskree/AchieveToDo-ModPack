@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:poisonous_potato"
     },
-    "title": {"translate": "Poisonous potato"},
+    "title": {
+      "translate": "blocked.eat_poisonous_potato.title"
+    },
     "description": {
-      "translate":"Ability to eat poisonous potato"
+      "translate": "blocked.eat_poisonous_potato.description"
     },
     "show_toast": false,
     "announce_to_chat": false

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:barrel"
     },
-    "title": {"translate": "Fisherman"},
+    "title": {
+      "translate": "blocked.villager_fisherman.title"
+    },
     "description": {
-      "translate":"Ability to trade with a fisherman"
+      "translate": "blocked.villager_fisherman.description"
     },
     "show_toast": false,
     "announce_to_chat": false

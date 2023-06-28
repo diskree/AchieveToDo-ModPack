@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:glow_berries"
     },
-    "title": {"translate": "Glow berries"},
+    "title": {
+      "translate": "blocked.eat_glow_berries.title"
+    },
     "description": {
-      "translate":"Ability to eat glow berries"
+      "translate": "blocked.eat_glow_berries.description"
     },
     "show_toast": false,
     "announce_to_chat": false

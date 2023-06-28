@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cooked_porkchop"
     },
-    "title": {"translate": "Cooked porkchop"},
+    "title": {
+      "translate": "blocked.eat_cooked_porkchop.title"
+    },
     "description": {
-      "translate": "Ability to eat cooked porkchop"
+      "translate": "blocked.eat_cooked_porkchop.description"
     },
     "show_toast": false,
     "announce_to_chat": false

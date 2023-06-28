@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:suspicious_stew"
     },
-    "title": {"translate": "Suspicious stew"},
+    "title": {
+      "translate": "blocked.eat_suspicious_stew.title"
+    },
     "description": {
-      "translate":"Ability to eat suspicious stew"
+      "translate": "blocked.eat_suspicious_stew.description"
     },
     "show_toast": false,
     "announce_to_chat": false

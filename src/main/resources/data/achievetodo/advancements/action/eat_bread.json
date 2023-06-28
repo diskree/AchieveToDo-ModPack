@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:bread"
     },
-    "title": {"translate": "Bread"},
+    "title": {
+      "translate": "blocked.eat_bread.title"
+    },
     "description": {
-      "translate": "Ability to eat bread"
+      "translate": "blocked.eat_bread.description"
     },
     "show_toast": false,
     "announce_to_chat": false

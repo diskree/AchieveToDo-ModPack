@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:anvil"
     },
-    "title": {"translate": "Anvil"},
+    "title": {
+      "translate": "blocked.using_anvil.title"
+    },
     "description": {
-      "translate":"Ability to use an anvil"
+      "translate": "blocked.using_anvil.description"
     },
     "show_toast": false,
     "announce_to_chat": false

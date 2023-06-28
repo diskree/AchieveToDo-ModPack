@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:rabbit"
     },
-    "title": {"translate": "Raw rabbit"},
+    "title": {
+      "translate": "blocked.eat_rabbit.title"
+    },
     "description": {
-      "translate":"Ability to eat raw rabbit"
+      "translate": "blocked.eat_rabbit.description"
     },
     "show_toast": false,
     "announce_to_chat": false

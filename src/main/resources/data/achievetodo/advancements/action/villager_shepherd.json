@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:loom"
     },
-    "title": {"translate": "Shepherd"},
+    "title": {
+      "translate": "blocked.villager_shepherd.title"
+    },
     "description": {
-      "translate":"Ability to trade with a shepherd"
+      "translate": "blocked.villager_shepherd.description"
     },
     "show_toast": false,
     "announce_to_chat": false

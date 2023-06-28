@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:furnace"
     },
-    "title": {"translate": "Furnace"},
+    "title": {
+      "translate": "blocked.using_furnace.title"
+    },
     "description": {
-      "translate":"Ability to use a furnace"
+      "translate": "blocked.using_furnace.description"
     },
     "show_toast": false,
     "announce_to_chat": false

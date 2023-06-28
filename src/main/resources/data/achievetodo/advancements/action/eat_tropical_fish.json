@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:tropical_fish"
     },
-    "title": {"translate": "Tropical fish"},
+    "title": {
+      "translate": "blocked.eat_tropical_fish.title"
+    },
     "description": {
-      "translate":"Ability to eat tropical fish"
+      "translate": "blocked.eat_tropical_fish.description"
     },
     "show_toast": false,
     "announce_to_chat": false

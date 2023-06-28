@@ -23,7 +23,10 @@ public abstract class ReinforcedDeepslateMixin {
     @Inject(method = "<init>", at = @At("RETURN"))
     public void initReturnInject(AbstractBlock.Settings settings, CallbackInfo ci) {
         if (isReinforcedDeepslate()) {
-            setDefaultState(getDefaultState().with(AncientCityPortalEntity.REINFORCED_DEEPSLATE_CHARGED_PROPERTY, false));
+            setDefaultState(getDefaultState()
+                    .with(AncientCityPortalEntity.REINFORCED_DEEPSLATE_CHARGED_PROPERTY, false)
+                    .with(AncientCityPortalEntity.REINFORCED_DEEPSLATE_BROKEN_PROPERTY, false)
+            );
         }
     }
 
@@ -31,6 +34,7 @@ public abstract class ReinforcedDeepslateMixin {
     protected void appendPropertiesInject(StateManager.Builder<Block, BlockState> builder, CallbackInfo ci) {
         if (isReinforcedDeepslate()) {
             builder.add(AncientCityPortalEntity.REINFORCED_DEEPSLATE_CHARGED_PROPERTY);
+            builder.add(AncientCityPortalEntity.REINFORCED_DEEPSLATE_BROKEN_PROPERTY);
         }
     }
 

@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:shulker_box"
     },
-    "title": {"translate": "Shulker box"},
+    "title": {
+      "translate": "blocked.using_shulker_box.title"
+    },
     "description": {
-      "translate":"Ability to use shulker boxes"
+      "translate": "blocked.using_shulker_box.description"
     },
     "show_toast": false,
     "announce_to_chat": false

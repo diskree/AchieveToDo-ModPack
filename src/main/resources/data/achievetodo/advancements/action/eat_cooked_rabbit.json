@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cooked_rabbit"
     },
-    "title": {"translate": "Cooked rabbit"},
+    "title": {
+      "translate": "blocked.eat_cooked_rabbit.title"
+    },
     "description": {
-      "translate": "Ability to eat cooked rabbit"
+      "translate": "blocked.eat_cooked_rabbit.description"
     },
     "show_toast": false,
     "announce_to_chat": false

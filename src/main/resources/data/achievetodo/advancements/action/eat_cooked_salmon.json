@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:cooked_salmon"
     },
-    "title": {"translate": "Cooked salmon"},
+    "title": {
+      "translate": "blocked.eat_cooked_salmon.title"
+    },
     "description": {
-      "translate": "Ability to eat cooked salmon"
+      "translate": "blocked.eat_cooked_salmon.description"
     },
     "show_toast": false,
     "announce_to_chat": false

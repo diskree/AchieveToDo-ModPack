@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:brewing_stand"
     },
-    "title": {"translate": "Brewing stand"},
+    "title": {
+      "translate": "blocked.using_brewing_stand.title"
+    },
     "description": {
-      "translate":"Ability to use a brewing stand\""
+      "translate": "blocked.using_brewing_stand.description"
     },
     "show_toast": false,
     "announce_to_chat": false

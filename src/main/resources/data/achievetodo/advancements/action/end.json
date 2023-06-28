@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:end_portal_frame"
     },
-    "title": {"translate": "The End"},
+    "title": {
+      "translate": "blocked.end.title"
+    },
     "description": {
-      "translate":"Ability to enter The End"
+      "translate": "blocked.end.description"
     },
     "show_toast": false,
     "announce_to_chat": false

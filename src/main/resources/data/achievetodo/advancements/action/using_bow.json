@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:bow"
     },
-    "title": {"translate": "Bow"},
+    "title": {
+      "translate": "blocked.using_bow.title"
+    },
     "description": {
-      "translate":"Ability to use a bow"
+      "translate": "blocked.using_bow.description"
     },
     "show_toast": false,
     "announce_to_chat": false

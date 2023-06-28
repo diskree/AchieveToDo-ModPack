@@ -3,9 +3,11 @@
     "icon": {
       "item": "minecraft:chorus_fruit"
     },
-    "title": {"translate": "Chorus fruit"},
+    "title": {
+      "translate": "blocked.eat_chorus_fruit.title"
+    },
     "description": {
-      "translate":"Ability to eat chorus fruit"
+      "translate": "blocked.eat_chorus_fruit.description"
     },
     "show_toast": false,
     "announce_to_chat": false

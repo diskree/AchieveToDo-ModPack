@@ -154,7 +154,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                         AchieveToDoMod.grantHintsAdvancement("nothing_lasts_forever");
                     }
                 } else {
-                    ItemStack barrierItem = new ItemStack(AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM);
+                    ItemStack barrierItem = new ItemStack(Items.BARRIER);
                     showAdvancementTab(barrierItem);
                     showAdvancementHint(barrierItem, false);
                     showAdvancement(barrierItem);

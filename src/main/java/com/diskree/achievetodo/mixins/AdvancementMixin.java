@@ -11,10 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Mixin(Advancement.class)
 public class AdvancementMixin {
@@ -34,24 +31,21 @@ public class AdvancementMixin {
     @Inject(method = "getChildren", at = @At("HEAD"), cancellable = true)
     public void getChildrenInject(CallbackInfoReturnable<Iterable<Advancement>> cir) {
         if (id.getNamespace().equals(AchieveToDoMod.ID) && id.getPath().endsWith("/root")) {
-            HashMap<String, Integer> order = new HashMap<>();
-            order.put("action/eat_salmon", 0);
-            order.put("action/eat_rabbit", 1);
-            order.put("action/eat_melon_slice", 2);
-            order.put("action/eat_cooked_cod", 3);
-            order.put("action/jump", 4);
-            order.put("action/using_crafting_table", 5);
-            order.put("action/using_stone_tools", 6);
-            order.put("action/villager_mason", 7);
-            order.put("hints/hintly_hallows", 8);
-
+            List<String> order = new ArrayList<>(Arrays.asList(
+                    "action/eat_salmon",
+                    "action/eat_rabbit",
+                    "action/eat_melon_slice",
+                    "action/eat_cooked_cod",
+                    "action/jump",
+                    "action/using_crafting_table",
+                    "action/using_stone_tools",
+                    "action/villager_mason",
+                    "hints/hintly_hallows"
+            ));
             List<Advancement> childrenList = new ArrayList<>(children);
             childrenList.sort((a1, a2) -> {
-                Integer order1 = order.get(a1.getId().getPath());
-                Integer order2 = order.get(a2.getId().getPath());
-                if (order1 == null || order2 == null) {
-                    return 0;
-                }
+                Integer order1 = order.indexOf(a1.getId().getPath());
+                Integer order2 = order.indexOf(a2.getId().getPath());
                 return order1.compareTo(order2);
             });
             cir.setReturnValue(childrenList);

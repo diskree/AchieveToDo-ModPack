@@ -27,7 +27,7 @@ public class ClientPlayNetworkHandlerMixin implements ClientPlayNetworkHandlerIm
         double x = packet.getX();
         double y = packet.getY();
         double z = packet.getZ();
-        AncientCityPortalExperienceOrbEntity entity = new AncientCityPortalExperienceOrbEntity(world, x, y, z, packet.getTarget(), packet.getSize());
+        AncientCityPortalExperienceOrbEntity entity = new AncientCityPortalExperienceOrbEntity(world, x, y, z, packet.getPortalTarget(), packet.getInclineTarget(), packet.getSize());
         entity.updateTrackedPosition(x, y, z);
         entity.setYaw(0.0f);
         entity.setPitch(0.0f);

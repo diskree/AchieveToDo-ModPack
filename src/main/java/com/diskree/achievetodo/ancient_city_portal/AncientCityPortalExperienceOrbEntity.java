@@ -16,13 +16,16 @@ import net.minecraft.world.World;
 
 public class AncientCityPortalExperienceOrbEntity extends Entity {
 
-    private BlockPos target;
+    private BlockPos portalTarget;
+    private BlockPos inclineTarget;
     private int size;
+    private int inclineTicksCount;
 
-    public AncientCityPortalExperienceOrbEntity(World world, double x, double y, double z, BlockPos pos, int size) {
+    public AncientCityPortalExperienceOrbEntity(World world, double x, double y, double z, BlockPos portalTarget, BlockPos inclineTarget, int size) {
         this(AchieveToDoMod.EXPERIENCE_ORB, world);
         this.size = size;
-        target = pos;
+        this.portalTarget = portalTarget;
+        this.inclineTarget = inclineTarget;
         noClip = true;
         setPosition(x, y, z);
         setNoGravity(true);
@@ -41,15 +44,25 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
     @Override
     public void tick() {
         super.tick();
-        if (this.target != null) {
+        if (portalTarget != null) {
+            double targetX = inclineTarget != null ? inclineTarget.getX() : portalTarget.getX() + 0.5f;
+            double targetY = inclineTarget != null ? inclineTarget.getY() : portalTarget.getY() + 0.5f;
+            double targetZ = inclineTarget != null ? inclineTarget.getZ() : portalTarget.getZ() + 0.5f;
             Vec3d vec3d = new Vec3d(
-                    this.target.getX() + 0.5f - this.getX(),
-                    this.target.getY() + 0.5f - this.getY(),
-                    this.target.getZ() + 0.5f - this.getZ()
+                    targetX - getX(),
+                    targetY - getY(),
+                    targetZ - getZ()
             );
-            this.setVelocity(this.getVelocity().add(vec3d.normalize().multiply(0.2)));
-            this.move(MovementType.SELF, this.getVelocity());
-            this.setVelocity(this.getVelocity().multiply(0.98, 0.98, 0.98));
+            setVelocity(getVelocity().add(vec3d.normalize().multiply(inclineTarget != null ? 0.2 : 0.2)));
+            move(MovementType.SELF, getVelocity());
+            double velocityMultiplier = inclineTarget != null ? 0.98d : 0.98d;
+            setVelocity(getVelocity().multiply(velocityMultiplier, velocityMultiplier, velocityMultiplier));
+        }
+        if (inclineTarget != null) {
+            inclineTicksCount++;
+            if (inclineTicksCount >= 5) {
+                inclineTarget = null;
+            }
         }
     }
 
@@ -64,16 +77,22 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
 
     @Override
     protected void readCustomDataFromNbt(NbtCompound nbt) {
-        if (nbt.contains("Target", NbtElement.COMPOUND_TYPE)) {
-            target = NbtHelper.toBlockPos(nbt.getCompound("Target"));
+        if (nbt.contains("PortalTarget", NbtElement.COMPOUND_TYPE)) {
+            portalTarget = NbtHelper.toBlockPos(nbt.getCompound("PortalTarget"));
+        }
+        if (nbt.contains("InclineTarget", NbtElement.COMPOUND_TYPE)) {
+            inclineTarget = NbtHelper.toBlockPos(nbt.getCompound("InclineTarget"));
         }
         size = nbt.getInt("OrbSize");
     }
 
     @Override
     protected void writeCustomDataToNbt(NbtCompound nbt) {
-        if (target != null) {
-            nbt.put("Target", NbtHelper.fromBlockPos(target));
+        if (portalTarget != null) {
+            nbt.put("PortalTarget", NbtHelper.fromBlockPos(portalTarget));
+        }
+        if (inclineTarget != null) {
+            nbt.put("InclineTarget", NbtHelper.fromBlockPos(inclineTarget));
         }
         nbt.putInt("OrbSize", size);
     }
@@ -92,8 +111,12 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
         return size;
     }
 
-    public BlockPos getTarget() {
-        return target;
+    public BlockPos getPortalTarget() {
+        return portalTarget;
+    }
+
+    public BlockPos getInclineTarget() {
+        return inclineTarget;
     }
 
     @Override

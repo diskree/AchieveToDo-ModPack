@@ -227,7 +227,11 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                     }
                     ArrayList<BlockPos> portalBlocks = getPortalBlocks(false);
                     Collections.shuffle(portalBlocks);
-                    getWorld().spawnEntity(new AncientCityPortalExperienceOrbEntity(getWorld(), playerPos.getX(), playerPos.getY(), playerPos.getZ(), portalBlocks.get(0), random.nextBetween(1, 10)));
+                    double playerX = playerPos.getX();
+                    double playerY = playerPos.getY();
+                    double playerZ = playerPos.getZ();
+                    BlockPos inclinePos = new BlockPos((int) playerX + random.nextBetween(-1, 1), (int) playerY + random.nextBetween(-1, 1), (int) playerZ + random.nextBetween(-1, 1));
+                    getWorld().spawnEntity(new AncientCityPortalExperienceOrbEntity(getWorld(), playerX, playerY, playerZ, portalBlocks.get(0), inclinePos, random.nextBetween(1, 10)));
                 }
             }
         }

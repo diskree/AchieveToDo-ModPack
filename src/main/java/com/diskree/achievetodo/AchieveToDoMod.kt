@@ -4,7 +4,6 @@ import com.diskree.achievetodo.advancements.AdvancementGenerator
 import com.diskree.achievetodo.advancements.AdvancementRoot
 import com.diskree.achievetodo.advancements.UnblockActionToast
 import com.diskree.achievetodo.ancient_city_portal.*
-import com.google.common.collect.Lists
 import com.mojang.brigadier.Command
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
@@ -27,6 +26,7 @@ import net.fabricmc.loader.api.ModContainer
 import net.minecraft.advancement.Advancement
 import net.minecraft.block.AbstractBlock
 import net.minecraft.block.Block
+import net.minecraft.block.enums.Instrument
 import net.minecraft.block.piston.PistonBehavior
 import net.minecraft.client.MinecraftClient
 import net.minecraft.client.item.ClampedModelPredicateProvider
@@ -99,7 +99,7 @@ class AchieveToDoMod : ModInitializer {
             currentAdvancementsCount = 0
 
             val resourcePackManager = server.dataPackManager
-            val list = Lists.newArrayList(resourcePackManager.enabledProfiles)
+            val list = resourcePackManager.enabledProfiles.toMutableList()
 
             list.remove(resourcePackManager.getProfile(BACAP_DATA_PACK_ID.toString()))
             list.remove(resourcePackManager.getProfile(BACAP_HARDCORE_DATA_PACK_ID.toString()))
@@ -305,7 +305,9 @@ class AchieveToDoMod : ModInitializer {
                 AbstractBlock.Settings.create()
                         .noCollision()
                         .ticksRandomly()
-                        .strength(-1.0f)
+                        .instrument(Instrument.BASEDRUM)
+                        .strength(-1.0f, 3600000.0f)
+                        .dropsNothing()
                         .sounds(BlockSoundGroup.GLASS)
                         .luminance { 11 }
                         .pistonBehavior(PistonBehavior.BLOCK)

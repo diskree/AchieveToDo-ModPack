@@ -28,6 +28,7 @@
     "EndGatewayFeatureMixin",
     "FireworkRocketItemMixin",
     "HoneyBottleItemMixin",
+    "HugeRedMushroomFeatureMixin",
     "ItemDisplayEntityMixin",
     "ItemMixin",
     "JukeboxBlockEntityMixin",
@@ -48,6 +49,7 @@
     "SlotMixin",
     "StewItemMixin",
     "SuspiciousStewItemMixin",
+    "VanillaBlockTagProviderMixin",
     "VillagerEntityMixin",
     "WorldAccessMixin"
   ],

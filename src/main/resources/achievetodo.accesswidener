@@ -9,3 +9,5 @@ accessible class net/minecraft/client/gui/screen/world/WorldScreenOptionGrid
 accessible field net/minecraft/client/gui/screen/Screen client Lnet/minecraft/client/MinecraftClient;
 accessible field net/minecraft/client/item/ModelPredicateProviderRegistry DAMAGE_ID Lnet/minecraft/util/Identifier;
 accessible field net/minecraft/client/item/ModelPredicateProviderRegistry DAMAGE_PROVIDER Lnet/minecraft/client/item/ClampedModelPredicateProvider;
+accessible method net/minecraft/data/server/tag/ValueLookupTagProvider getOrCreateTagBuilder (Lnet/minecraft/registry/tag/TagKey;)Lnet/minecraft/data/server/tag/ValueLookupTagProvider$ObjectBuilder;
+accessible class net/minecraft/data/server/tag/ValueLookupTagProvider$ObjectBuilder

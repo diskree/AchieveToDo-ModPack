@@ -2,7 +2,6 @@ package com.diskree.achievetodo.ancient_city_portal;
 
 import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.ItemDisplayEntityImpl;
-import com.diskree.achievetodo.JukeboxBlockEntityImpl;
 import com.diskree.achievetodo.advancements.AdvancementGenerator;
 import com.diskree.achievetodo.advancements.AdvancementHint;
 import net.minecraft.block.BlockState;
@@ -26,6 +25,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.util.Pair;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
@@ -39,6 +39,7 @@ import net.minecraft.world.event.listener.EntityGameEventHandler;
 import net.minecraft.world.event.listener.GameEventListener;
 import org.jetbrains.annotations.Nullable;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -99,6 +100,24 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             if (portalBlock.equals(pos)) {
                 return true;
             }
+        }
+        return false;
+    }
+
+    public static boolean isJukebox(WorldAccess world, BlockPos pos) {
+        Box box = new Box(
+                pos
+                        .offset(Direction.Axis.X, -AncientCityPortalEntity.RITUAL_RADIUS)
+                        .offset(Direction.Axis.Z, -AncientCityPortalEntity.RITUAL_RADIUS)
+                        .down(AncientCityPortalEntity.RITUAL_RADIUS),
+                pos
+                        .offset(Direction.Axis.X, AncientCityPortalEntity.RITUAL_RADIUS)
+                        .offset(Direction.Axis.Z, AncientCityPortalEntity.RITUAL_RADIUS)
+                        .up(AncientCityPortalEntity.RITUAL_RADIUS)
+        );
+        if (world != null) {
+            List<AncientCityPortalEntity> portalEntities = world.getEntitiesByClass(AncientCityPortalEntity.class, box, (portalEntity) -> true);
+            return portalEntities.size() == 1;
         }
         return false;
     }
@@ -327,12 +346,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             return;
         }
         boolean isPortalActivated = isPortalActivated();
-        boolean isDiskRelaxPartPlaying = isDiskRelaxPartPlaying(jukeboxPos);
-        if (isPortalActivated || isDiskRelaxPartPlaying) {
-            if (!isPortalActivated || !isDiskRelaxPartPlaying) {
-                stopJukebox(jukeboxPos);
-                this.jukeboxPos = null;
-            }
+        if (isPortalActivated) {
             return;
         }
         if (playing && checkPlayerInvisibility() && checkPlayerRadius() && checkDisk(jukeboxPos) && checkPortal()) {
@@ -342,14 +356,12 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             showAdvancement(airItem);
 
             this.jukeboxPos = jukeboxPos;
-            ArrayList<BlockPos> portalAirBlocks = getPortalAirBlocks();
-            Collections.shuffle(portalAirBlocks);
-            for (int i = 0; i < (portalAirBlocks.size() % 10 == 0 ? 4 : 3); i++) {
-                if (portalAirBlocks.isEmpty()) {
-                    break;
-                }
-                getWorld().setBlockState(portalAirBlocks.get(0), AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK.getDefaultState().with(AncientCityPortalBlock.AXIS, getHorizontalFacing().rotateYClockwise().getAxis()));
-                portalAirBlocks.remove(0);
+
+            Pair<BlockPos, BlockPos> blocks = getNextActivationSpiralBlocks();
+            if (blocks != null) {
+                BlockState state = AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK.getDefaultState().with(AncientCityPortalBlock.AXIS, getHorizontalFacing().rotateYClockwise().getAxis());
+                getWorld().setBlockState(blocks.getLeft(), state);
+                getWorld().setBlockState(blocks.getRight(), state);
             }
             isPortalActivated = isPortalActivated();
             for (BlockPos pos : getPortalBlocks(false)) {
@@ -423,25 +435,6 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         return true;
     }
 
-    private ArrayList<BlockPos> getPortalAirBlocks() {
-        ArrayList<BlockPos> blocks = new ArrayList<>();
-        for (BlockPos pos : getPortalBlocks(false)) {
-            if (!isAirOrVein(pos)) {
-                continue;
-            }
-            blocks.add(pos);
-        }
-        return blocks;
-    }
-
-    private boolean isDiskRelaxPartPlaying(BlockPos jukeboxPos) {
-        BlockEntity blockEntity = getWorld().getBlockEntity(jukeboxPos);
-        if (blockEntity instanceof JukeboxBlockEntityImpl jukebox) {
-            return jukebox.isDiskRelaxPartPlaying();
-        }
-        return true;
-    }
-
     private void stopJukebox(BlockPos jukeboxPos) {
         if (!checkDisk(jukeboxPos)) {
             return;
@@ -481,10 +474,8 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
     private ArrayList<BlockPos> getPortalBlocks(boolean frame, boolean includeCorners) {
         int axisWidth = PORTAL_WIDTH - 1;
         int axisHeight = PORTAL_HEIGHT - 1;
-        Direction facingDirection = getHorizontalFacing();
-        Direction toOriginDirection = facingDirection.rotateYCounterclockwise();
-        Direction fromOriginDirection = facingDirection.rotateYClockwise();
-        BlockPos origin = getBlockPos().offset(toOriginDirection, 11).up(3);
+        Direction fromOriginDirection = getFromOriginDirection();
+        BlockPos origin = getPortalFrameOrigin();
         ArrayList<BlockPos> blocks = new ArrayList<>();
         for (int x = 0; x <= axisWidth; x++) {
             for (int y = 0; y <= axisHeight; y++) {
@@ -504,6 +495,104 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             }
         }
         return blocks;
+    }
+
+    private Pair<BlockPos, BlockPos> getNextActivationSpiralBlocks() {
+        BlockPos origin = getPortalFrameOrigin().offset(getFromOriginDirection()).down();
+        ArrayList<Pair<Point, Point>> spiralPoints = new ArrayList<>();
+
+        spiralPoints.add(new Pair<>(new Point(0, 0), new Point(19, 5)));
+        spiralPoints.add(new Pair<>(new Point(0, 1), new Point(19, 4)));
+        spiralPoints.add(new Pair<>(new Point(0, 2), new Point(19, 3)));
+        spiralPoints.add(new Pair<>(new Point(0, 3), new Point(19, 2)));
+        spiralPoints.add(new Pair<>(new Point(0, 4), new Point(19, 1)));
+        spiralPoints.add(new Pair<>(new Point(0, 5), new Point(19, 0)));
+
+        spiralPoints.add(new Pair<>(new Point(1, 5), new Point(18, 0)));
+        spiralPoints.add(new Pair<>(new Point(1, 4), new Point(18, 1)));
+        spiralPoints.add(new Pair<>(new Point(1, 3), new Point(18, 2)));
+        spiralPoints.add(new Pair<>(new Point(1, 2), new Point(18, 3)));
+        spiralPoints.add(new Pair<>(new Point(1, 1), new Point(18, 4)));
+        spiralPoints.add(new Pair<>(new Point(1, 0), new Point(18, 5)));
+
+        spiralPoints.add(new Pair<>(new Point(2, 0), new Point(17, 5)));
+        spiralPoints.add(new Pair<>(new Point(2, 1), new Point(17, 4)));
+        spiralPoints.add(new Pair<>(new Point(2, 2), new Point(17, 3)));
+        spiralPoints.add(new Pair<>(new Point(2, 3), new Point(17, 2)));
+        spiralPoints.add(new Pair<>(new Point(2, 4), new Point(17, 1)));
+        spiralPoints.add(new Pair<>(new Point(2, 5), new Point(17, 0)));
+
+        spiralPoints.add(new Pair<>(new Point(3, 5), new Point(16, 0)));
+        spiralPoints.add(new Pair<>(new Point(3, 4), new Point(16, 1)));
+        spiralPoints.add(new Pair<>(new Point(3, 3), new Point(16, 2)));
+        spiralPoints.add(new Pair<>(new Point(3, 2), new Point(16, 3)));
+        spiralPoints.add(new Pair<>(new Point(3, 1), new Point(16, 4)));
+        spiralPoints.add(new Pair<>(new Point(3, 0), new Point(16, 5)));
+
+        spiralPoints.add(new Pair<>(new Point(4, 0), new Point(15, 5)));
+        spiralPoints.add(new Pair<>(new Point(4, 1), new Point(15, 4)));
+        spiralPoints.add(new Pair<>(new Point(4, 2), new Point(15, 3)));
+        spiralPoints.add(new Pair<>(new Point(4, 3), new Point(15, 2)));
+        spiralPoints.add(new Pair<>(new Point(4, 4), new Point(15, 1)));
+        spiralPoints.add(new Pair<>(new Point(4, 5), new Point(15, 0)));
+
+        spiralPoints.add(new Pair<>(new Point(5, 5), new Point(14, 0)));
+        spiralPoints.add(new Pair<>(new Point(5, 4), new Point(14, 1)));
+        spiralPoints.add(new Pair<>(new Point(5, 3), new Point(14, 2)));
+        spiralPoints.add(new Pair<>(new Point(5, 2), new Point(14, 3)));
+        spiralPoints.add(new Pair<>(new Point(5, 1), new Point(14, 4)));
+        spiralPoints.add(new Pair<>(new Point(5, 0), new Point(14, 5)));
+
+        spiralPoints.add(new Pair<>(new Point(6, 0), new Point(13, 5)));
+        spiralPoints.add(new Pair<>(new Point(6, 1), new Point(13, 4)));
+        spiralPoints.add(new Pair<>(new Point(6, 2), new Point(13, 3)));
+        spiralPoints.add(new Pair<>(new Point(6, 3), new Point(13, 2)));
+        spiralPoints.add(new Pair<>(new Point(6, 4), new Point(13, 1)));
+        spiralPoints.add(new Pair<>(new Point(6, 5), new Point(13, 0)));
+
+        spiralPoints.add(new Pair<>(new Point(7, 5), new Point(12, 0)));
+        spiralPoints.add(new Pair<>(new Point(8, 5), new Point(11, 0)));
+        spiralPoints.add(new Pair<>(new Point(9, 5), new Point(10, 0)));
+        spiralPoints.add(new Pair<>(new Point(10, 5), new Point(9, 0)));
+        spiralPoints.add(new Pair<>(new Point(11, 5), new Point(8, 0)));
+        spiralPoints.add(new Pair<>(new Point(12, 5), new Point(7, 0)));
+
+        spiralPoints.add(new Pair<>(new Point(12, 4), new Point(7, 1)));
+        spiralPoints.add(new Pair<>(new Point(12, 3), new Point(7, 2)));
+        spiralPoints.add(new Pair<>(new Point(12, 2), new Point(7, 3)));
+        spiralPoints.add(new Pair<>(new Point(12, 1), new Point(7, 4)));
+
+        spiralPoints.add(new Pair<>(new Point(11, 1), new Point(8, 4)));
+        spiralPoints.add(new Pair<>(new Point(10, 1), new Point(9, 4)));
+        spiralPoints.add(new Pair<>(new Point(9, 1), new Point(10, 4)));
+        spiralPoints.add(new Pair<>(new Point(8, 1), new Point(11, 4)));
+
+        spiralPoints.add(new Pair<>(new Point(8, 2), new Point(11, 3)));
+        spiralPoints.add(new Pair<>(new Point(8, 3), new Point(11, 2)));
+
+        spiralPoints.add(new Pair<>(new Point(9, 3), new Point(10, 2)));
+        spiralPoints.add(new Pair<>(new Point(10, 3), new Point(9, 2)));
+
+        for (Pair<Point, Point> spiralPoint : spiralPoints) {
+            Point leftSpiralPoint = spiralPoint.getLeft();
+            Point rightSpiralPoint = spiralPoint.getRight();
+            BlockPos leftPos = origin.offset(getFromOriginDirection(), leftSpiralPoint.x).down(leftSpiralPoint.y);
+            BlockPos rightPos = origin.offset(getFromOriginDirection(), rightSpiralPoint.x).down(rightSpiralPoint.y);
+            if (isAirOrVein(leftPos) && isAirOrVein(rightPos)) {
+                return new Pair<>(leftPos, rightPos);
+            }
+        }
+        return null;
+    }
+
+    private BlockPos getPortalFrameOrigin() {
+        Direction facingDirection = getHorizontalFacing();
+        Direction toOriginDirection = facingDirection.rotateYCounterclockwise();
+        return getBlockPos().offset(toOriginDirection, 11).up(3);
+    }
+
+    private Direction getFromOriginDirection() {
+        return getHorizontalFacing().rotateYClockwise();
     }
 
     class JukeboxEventListener implements GameEventListener {

@@ -44,6 +44,7 @@ import net.minecraft.server.MinecraftServer
 import net.minecraft.server.command.CommandManager.literal
 import net.minecraft.server.world.ServerWorld
 import net.minecraft.sound.BlockSoundGroup
+import net.minecraft.sound.SoundEvent
 import net.minecraft.text.Text
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Formatting
@@ -373,6 +374,9 @@ class AchieveToDoMod : ModInitializer {
 
         val REINFORCED_DEEPSLATE_CHARGED = Block(FabricBlockSettings.create())
         val REINFORCED_DEEPSLATE_BROKEN = Block(FabricBlockSettings.create())
+
+        @JvmField
+        val MUSIC_DISC_5_ACTIVATOR: SoundEvent = SoundEvent.of(Identifier(ID, "music_disc_5_activator"))
 
         const val ADVANCEMENTS_SCREEN_MARGIN = 30
 

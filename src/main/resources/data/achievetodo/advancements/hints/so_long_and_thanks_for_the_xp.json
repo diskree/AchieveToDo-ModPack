@@ -11,7 +11,7 @@
     },
     "frame": "goal"
   },
-  "parent": "achievetodo:hints/mozart_mistake",
+  "parent": "achievetodo:hints/beethoven_mistake",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

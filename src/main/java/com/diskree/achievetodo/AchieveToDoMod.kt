@@ -181,26 +181,26 @@ class AchieveToDoMod : ModInitializer {
             ResourceManagerHelper.registerBuiltinResourcePack(
                     BACAP_LANGUAGE_RESOURCE_PACK_ID,
                     modContainer,
-                    Text.of("BACAP Language Resource Pack"),
+                    Text.of("BACAP Translator"),
                     ResourcePackActivationType.DEFAULT_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
                     VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID,
                     modContainer,
-                    Text.of("Tropical Fish & Axolotl Buckets"),
-                    ResourcePackActivationType.ALWAYS_ENABLED
+                    Text.of("Tropical Fish"),
+                    ResourcePackActivationType.DEFAULT_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
                     GOAT_HORNS_RESOURCE_PACK_ID,
                     modContainer,
                     Text.of("Goat Horns"),
-                    ResourcePackActivationType.ALWAYS_ENABLED
+                    ResourcePackActivationType.DEFAULT_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
                     ENCHANTED_BOOKS_RESOURCE_PACK_ID,
                     modContainer,
                     Text.of("Enchanted Books"),
-                    ResourcePackActivationType.ALWAYS_ENABLED
+                    ResourcePackActivationType.DEFAULT_ENABLED
             )
         }
     }

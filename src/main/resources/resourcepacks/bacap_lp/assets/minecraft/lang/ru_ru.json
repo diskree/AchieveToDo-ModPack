@@ -4849,7 +4849,7 @@
 "The Cataclyst": "Катаклизм",
 "When detonated, it kills every single avatar and NPC in the sector": "При взрыве, убить всех сущностей рядом",
 
-"Железяка": "",
+"Claptrap": "Железяка",
 "No, I said “Aaaaaand OPEN!”,": "Нет, Я сказал “Aaaaaa ОТКРОЙТЕ”",
 "not “Aaaaand close a secondary set of doors!С": "Неееет! “ЗАКРОЙТЕ ЗАДНЮЮ ДВЕРЬ!”",
 
@@ -5065,11 +5065,292 @@
 # # # What is the name of the mod that lets you see progress on advancements?
 "The mod in question is named Advancement Info, which displays the requirements that have been completed on each advancement.": "Мод, о котором идет речь, называется Advancement Info, он отображает требования, которые были выполнены для каждого достижения.",
 "It is extremely useful, especially for Super Challenges with many requirements such as 'All the Blocks'.": "Это очень полезно, особенно для сверхзадач с большим количеством требований, таких как 'Все блоки'.",
-"It can be downloaded here:": "Его можно скачать здесь:"
+"It can be downloaded here:": "Его можно скачать здесь:",
 # Link is not translatable
 
 
 
 
-# All advancements, trophies and other text strings that get added in versions 1.16 or later will be added down here for easy locating by translators who wish to update their language file
+## All advancements added in version 1.16 are here
+"Hanging Around": "Налево пойдешь...",
+"Put up a Hanging Sign": "Повесьте подвесную табличку",
+
+"Sign Off": "Вечные чернила",
+"Use honeycomb to wax a sign, setting its ink for eternity": "Нанесите воск на табличку, сделав её текст неизменяемым",
+
+"Shelf Expression": "Резная библиотека",
+"Fill a Chiseled Bookshelf with books": "Заполните резную книжную полку книгами",
+
+"Bamboozled": "Бам-бук-бум-бак!",
+"Craft every item made out of bamboo wood": "Создайте все возможные предметы из бамбука",
+
+"Cherry Bomb": "Вишнёвая бомба!",
+"Craft every item made out of cherry wood": "Создайте все возможные предметы из вишнёвого дерева",
+
+
+"Desert Rider": "Пустынный всадник",
+"Find a Camel in a desert village and ride it": "Найдите верблюда в пустынной деревне и оседлайте его",
+
+"Hump Day": "А теперь горбатый!",
+"Breed two Camels using cactus": "Размножьте двух верблюдов, используя кактус",
+
+"The High Road": "Дальняя дорога",
+"Kill a hostile monster with a melee attack while riding a Camel": "Убейте враждебного монстра врукопашную, сидя на верблюде",
+
+
+"Pretty in Pink": "Милашка в розовом",
+"Find a Cherry Grove": "Найдите вишнёвую рощу",
+
+
+
+"Brushed Away": "Это веник?",
+"Craft a Brush using a feather, copper and a stick": "Создайте кисть, используя перо, медь и палку",
+
+"Respecting the Remnants": "Крупицы истории",
+"Using a Brush, carefully excavate a Pottery Sherd from a suspicious block": "Получите глиняный черепок, очистив подозрительный блок",
+
+"Careful Restoration": "Эпоха возрождения",
+"Put together a Decorated Pot using four Pottery Sherds": "Создайте узорчатую вазу из четырёх глиняных черепков",
+
+"Pottery Exhibition": "Керамическая выставка",
+"Find one of each type of Pottery Sherd throughout your archaeology expeditions": "Получите каждый тип глиняного черепка во время археологических экспедиций",
+
+"Life… uhh… finds a way": "Пахнет интересно",
+"Find a strange egg among the sand of an Ocean Ruin using a Brush. Smells interesting": "Найдите странное яйцо в песках подводных руин",
+
+"Truffle Worm": "Трюфельный червь",
+"Have a Sniffer dig up seeds": "Попросите нюхача выкопать семена",
+
+"Jurassic Sniff": "Юрский период",
+"Breed two Sniffers together using Torchflower Seeds": "Размножьте двух нюхачей, используя факельник",
+
+"Little Sniffs": "Привет, Нюхля!",
+"Feed a Snifflet": "Покормите маленького нюхача",
+
+"Planting the Past": "Цветок из прошлого",
+"Plant any Sniffer Seed": "Посадите любое семя от нюхача",
+
+"Happy Trails!": "Счастливая тропа!",
+"Discover the Trail Ruins": "Посетите древние руины",
+
+"Raiders of the Lost Trim": "В поисках утраченной отделки",
+"Carefully excavate a Smithing Template from the Trail Ruins": "Получите кузнечный шаблон, очистив подозрительный блок",
+
+"A Chiptune Relic": "Чиптунская реликвия",
+"Excavate an ancient record from within the Trail Ruins": "Откопайте древнюю музыку в руинах",
+
+"Good-Lookin’ Treasure": "Красивое сокровище",
+"Find a Smithing Template": "Найдите кузнечный шаблон",
+
+"Crafting a New Look": "С чистого литья",
+"Use a Smithing Template to apply a trim to a piece of armor": "Нанесите отделку на броню на столе кузнеца",
+
+"Mold Maker": "Фабрика кузнечных шаблонов",
+"Use seven diamonds to duplicate a Smithing Template": "Используйте семь алмазов, чтобы дублировать кузнечный шаблон",
+
+"Coordinated Flair": "Снимите это немедленно!",
+"Wear a suit of armor with all four pieces trimmed with the same material": "Носите броню, каждая часть которой отделана одним и тем же материалом",
+
+"Chromatic Armory": "Хроматическая оружейная",
+"Trim pieces of armor with all types of materials": "Примените отделку к броне, используя каждый вид материала",
+
+"Genesis of the End": "Энд-Генезис",
+"Find the Eye Smithing Template in a Stronghold": "Найдите кузнечный шаблон «Око» в подземной крепости",
+
+"Vexingly Hard to Find": "Досадно и трудно найти",
+"Find the Vex Smithing Template in a Woodland Mansion": "Найдите кузнечный шаблон «Вредина» в лесном особняке",
+
+"The Sound of Silence": "Звук тишины",
+"Find the Silence Smithing Template in an Ancient City": "Найдите кузнечный шаблон «Тишина» в древнем городе",
+
+"Smithing With Style": "Кузнец своего стиля",
+"Apply every type of armor trim at least once": "Хотя бы раз используйте каждый тип кузнечного шаблона",
+
+"Stacked Smither": "Мастер кузнечного дела",
+"Obtain a stack of every Smithing Template": "Заполучите по стаку всех кузнечных шаблонов",
+
+
+"Maximum Resistance": "Максимальное сопротивление",
+"Take a hit from the Warden with the maximum possible protection": "Будучи с максимально возможной защитой, примите удар от Хранителя",
+
+
+"The Power of Books": "Знание - сила",
+"Read the power signal of a Chiseled Bookshelf using a comparator": "Считайте силу сигнала резной книжной полки с помощью компаратора",
+
+"Calibration Sensation": "Калибровка скалка",
+"Craft a Calibrated Sculk Sensor using Amethyst Shards": "Создайте откалиброванный скалк-сенсор используя осколок аметиста",
+
+"Monstrous Music": "Чудовищная музыка",
+"Play Note Blocks with each type of mob head above it": "Сыграйте в нотный блок с головами мобов каждого типа на нём",
+
+
+"Om Nom Nom": "Ом-Ном-Ном",
+"Eat 200 food items": "Съешьте 200 продуктов питания",
+
+"Yum Yum Yummo": "Ням-Ням-Ням",
+"Eat 1000 food items": "Съешьте 1000 продуктов питания",
+
+"Food, Glorious Food!": "Кушать вечно!",
+"Eat 5000 food items": "Съешьте 5000 продуктов питания",
+
+"Loot ‘Em!": "Начинающий добытчик",
+"Open 10 loot chests": "Откройте 10 сундуков с добычей",
+
+"More For Me": "Нам нужно больше лута",
+"Open 100 loot chests": "Откройте 100 сундуков с добычей",
+
+"I <3 Chests": "Лутаться вечно!",
+"Open 500 loot chests": "Откройте 500 сундуков с добычей",
+
+"Giga XP Grinder": "Опыто-одержимость",
+"Reach 1000 experience levels": "Заполучите 1000 уровень опыта",
+
+
+"Time to Upgrade!": "Время обновить броню!",
+"Find a Netherite Upgrade Smithing Template in a Bastion Remnant": "Найдите кузнечный шаблон для незеритового улучшения в развалинах бастиона",
+
+"Piglin Peril": "Дохрюкался!",
+"Obtain a Piglin Head by blowing up a Piglin with a Charged Creeper": "Получите голову пиглина, взорвав его заряженным крипером",
+
+
+"Poglin!": "Поглин!",
+"Obtain a stack of Piglin Heads": "Заполучите стак голов пиглина",
+
+
+"You are a big cheater!": "Ты - читер! Фу таким быть",
+"You don't want to have this advancement unlocked!": "Ты никак не мог получить это достижение, играя честно!",
+
+
+# Description additions and changes in 1.16
+
+## This is used to list blocks and items that are not required for certain advancements
+"The following are not required:": "Следующее не требуется:",
+
+## New description for 'Stripper'
+"Strip the bark off every type of log, stem, and bamboo block": "Снимите кору со всех типов брёвен, стволов и бамбуковых блоков",
+
+## New description for 'Master Logger'
+"Cut down a full stack of logs and stems of all types": "Срубите по стаку каждого вида брёвен и стволов",
+
+## New descriptions for Mining, Monsters and Adventure tab root advancements
+"Dig deep down, mine up ore": "Копай глубоко, добывай руду",
+
+"Battle against the monsters of darkness": "Свергните монстров из тьмы",
+
+"Village, pillage and exploration": "Деревни, грабёж и путешествие",
+
+
+# Trophies added in 1.16
+"Ch-ch-ch-ch-ch-ch-Cherry bomb!": "в-в-в-в-в-в-в-Вишнёвая бомба!",
+"“I wanna explode,” says Cherry #1": "“Я хочу взорваться”, - говорит Вишня #1.",
+"“No, let's detonate instead!” says his brother, Cherry #2": "“Нет, давай лучше сдетонируем!”, - говорит его брат, Вишня #2",
+"After intense consultation they agree to EXPLODONATE": "После интенсивных консультаций они согласны ВЗРЫВАТЬСЯ.",
+
+"Nokia 3310": "Nokia 3310",
+"Awarded to players who prove themselves as unbreakable as this object": "Выдаётся игрокам, доказавшим свою непробиваемость, как этот предмет",
+
+"Body Pillow": "Дакимакура",
+"Large fandoms result in questionable merchandise such as": "Большие сообщества поклонников приводят к производству сомнительных товаров, таких как",
+"body pillows featuring your own likeness being produced": "подушки-обнимашки с изображением вашего лица",
+
+"Golden Idol": "Золотой Идол",
+"Stealing this may result in a giant boulder rolling after you": "Если украдёте этот идол, за вами может погнаться гигантский валун",
+
+"Tron Suit": "Костюм Трона",
+"The Grid. A digital frontier": "Система. Цифровая Вселенная",
+"I tried to picture clusters of information": "Я пытался представить пакеты данных",
+"as they moved through the computer": "проносящиеся в компьютере",
+"What did they look like? Ships? Motorcycles?": "Что они напоминают? Катера? Мотоциклы?",
+"Were the circuits like freeways?": "По каким они мчатся дорогам?",
+"I kept dreaming of a world I thought I'd never see": "Я думал никогда не увижу этот мир моей мечты",
+"And then, one day... I got in": "Но в один прекрасный день... Увидел изнутри",
+
+"The Midnight - Monsters": "The Midnight - Монстры",
+"I was wrong, love's a con": "Я ошибался, любовь - это обман",
+
+"Fart in a Jar": "Пук в банке",
+"May annoy others": "Может раздражать других",
+
+"Mammoth Steak": "Стейк из мамонта",
+"Just picture a mammoth steak, fried, roasted or stewed!": "Представьте себе стейк из мамонта, жареный, запечёный или тушёный!",
+
+"Mimic": "Мимик",
+"You didn't think you could open that many chests": "Ты же не думал, что можешь открыть столько сундуков",
+"and not come across one of these?": "и не столкнуться с одним из этих?",
+
+"Poglin": "Поглин",
+"So when I MLG water-bucket... Poglin!": "Итак, сейчас я сделаю вотердроп... ПОГ!",
+
+# New welcome message strings
+"Welcome!": "",
+
+"If you enjoy, your presence on my": "",
+# Discord
+"would be welcome!": "",
+
+"Thank you for downloading": "",
+"If you wish to change settings, use the following command:": "",
+"Want to keep up with updates to the Advancements Pack? Join my": "",
+# Discord
+"and give yourself the Advancement Pack Squad in #roles!": "",
+
+"Note from the developer": "",
+
+"This is an Alpha Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "",
+"All brand-new advancements included in this version are intended for trigger testing purposes and do not yet have reward functions.": "",
+"This means they currently do not have custom advancement completion messages, will not count towards the advancements scoreboard, and don't get shared in cooperative mode.": "",
+"This functionality will be added in the first Beta Build, which will be released when Minecraft snapshots begin entering a largely bug-fixing period in preparation for the major Minecraft update's release.": "",
+"Thank you for your patience and understanding.": "",
+
+"This is a Beta Build of BlazeandCave's Advancements Pack, designed for snapshots of the next major Minecraft update.": "",
+"This version of the datapack should be fairly stable and playable, with every brand-new advancement working at full functionality, but there may be some unwanted bugs or other issues.": "",
+"Thank you for your patience and understanding.": "",
+
+# New trigger command-related strings
+
+## Contained in description of advancements that have a trigger command
+"To view progress, run:": "Чтобы посмотреть прогресс, выполните команду",
+
+"Custom Statistics": "Статистика достижений",
+
+"Days played:": "Дней в игре:",
+"Food items eaten:": "Съедено продуктов питания:",
+"Loot chests opened:": "Открыто сундуков с добычей:",
+"Gold Bartered to Piglins:": "Сделок с пиглинами:",
+
+"You have eaten an apple every day for": "Дней, в которые было съедено яблоко:",
+
+# Number
+"days.": "",
+"You have eaten an apple today.": "Сегодня яблоко было съедено",
+"You have not eaten an apple today.": "Сегодня яблоко НЕ было съедено",
+"If you have just slept, and it says you have eaten an apple when you actually haven't yet, try running this trigger again in 10 seconds.": "Подождите 10 секунд если вы только что поспали, а команда вывела неправильные результаты",
+
+
+# Miscellaneous
+
+## Contained in description of the root in the BlazeandCave's Advancements tab
+"Thank you to all of my Patrons!": "",
+
+## Contained in the reward text of the 'Smithing With Style' advancement
+"of each kind of Smithing Template": "",
+
+## Contained in the description of 'Stack all the Items'
+"Pottery Sherd": "Глиняный черепок",
+"You only need a stack of one kind of Smithing Template": "Также вам нужно собрать стак кузнечных шаблонов, но только одного типа",
+
+## Used in advancement message tooltips, where the %1$s bit is replaced with the name of the tab that advancement is contained in
+## For example 'Mining tab', 'Building tab', etc.
+"%1$s tab": "Вкладка «%1$s»",
+
+## Global Install function in the Technical Settings
+"Global install": "",
+"Properly installs Hardcore, Terralith and other add-on versions of BlazeandCave's Advancements Pack that have been placed in your world's datapacks folder by reordering datapack priorities": ""
+
+
+
+
+# All advancements, trophies and other text strings that get added in versions 1.17 or later will be added down here for easy locating by translators who wish to update their language file
 }
+
+

@@ -4,10 +4,10 @@
       "item": "minecraft:jukebox"
     },
     "title": {
-      "translate": "hints.mozart_mistake.title"
+      "translate": "hints.beethoven_mistake.title"
     },
     "description": {
-      "translate": "hints.mozart_mistake.description"
+      "translate": "hints.beethoven_mistake.description"
     },
     "frame": "goal"
   },

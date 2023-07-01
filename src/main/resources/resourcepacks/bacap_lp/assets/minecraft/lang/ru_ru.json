@@ -535,7 +535,7 @@
 "Use dragon's breath to brew a lingering potion": "Используйте драконье дыхание для приготовления туманного зелья",
 
 "Off With His Head!": "Заслуженный трофей",
-"Collect a dragon's head from the bow of an end ship": "Соберите голову дракона с носовой части эндер-корабля",
+"Collect a dragon's head from the bow of an end ship": "Соберите голову дракона с носовой части корабля",
 
 "Poison Dart": "Ядовитый дротик",
 "Craft tipped arrows of poison": "Создайте отравленную стрелу",
@@ -568,7 +568,7 @@
 "Go on in, what could happen?": "Зайдите в город Энда, что тут может случиться?",
 
 "The End... Again": "Дежавю",
-"Respawn the Ender Dragon": "Возродите эндер-дракона",
+"Respawn the Ender Dragon": "Возродите Эндер-дракона",
 
 "The Next Generation": "Новое поколение",
 "Hold the Dragon Egg": "Подберите яйцо дракона",
@@ -708,7 +708,7 @@
 "Souperman": "СУПермен",
 "Beetroot soup gives you souperpowers!": "Свекольный суп придаст вам СУПерсил!",
 
-"Sugar, Sugar": "Сахар, сахар",
+"Sugar, Sugar": "Оптимизировано Sugar (c)",
 "Harvest some sugar cane from a river or ocean": "Соберите немного тростника около водоёма",
 
 "Sushi": "Суши",
@@ -1121,17 +1121,17 @@
 "Aquarium": "Аквариум",
 "Catch all four types of fish and set them free in an aquarium": "Поймайте все четыре вида рыб, а затем выпустите их",
 
-"Are we there yet?": "Мы всё ещё здесь?",
+"Are we there yet?": "Мы уже приехали?",
 "Tame a donkey": "Приручите осла",
 
 "Bacon!": "Бекон!",
-"Gotta kill this pig pig pig pig": "Нужно убить эту свинью-нью-нью",
+"Gotta kill this pig pig pig pig": "Нужно убить эту свинью, хрю-хрю-хрю",
 
 "Chicken Cooper": "Куриный бульон",
 "Collect a stack of raw chicken and feathers": "Соберите стак курятины и перьев",
 
 "Farrier": "Коновал",
-"Breed a horse in an effort to get a better one": "Размножьте двух лошадей яблоками",
+"Breed a horse in an effort to get a better one": "Размножьте двух лошадей золотыми яблоками",
 
 "Feeding the §mDucks§r Chickens": "Размножаем §mуток§r куриц",
 "Breed chickens by feeding them seeds": "Размножьте двух куриц семенами пшеницы",
@@ -1140,13 +1140,13 @@
 "Use sea grass to make a turtle lay some eggs": "Используйте морскую траву, чтобы помочь черепахе снести яйца",
 
 "If only cats grew into kittens": "Котятки",
-"Breed two cats together to get a kitty!": "Размножьте двух котов рыбой, чтобы получить котика!",
+"Breed two cats together to get a kitty!": "Размножьте двух кошек сырым лососем",
 
 "In a hole there lived a Rabbit": "Дыра, в которой жил кролик",
 "Collect a stack of raw rabbit and rabbit hide": "Соберите стак сырой крольчатины и кроличьей шкурки",
 
 "Mary Had a Little Lamb...": "У Мэри был ягнёночек…",
-"Breed two sheep to get a lamb": "Размножьте двух овец пшеницей, чтобы получить ягнёнка",
+"Breed two sheep to get a lamb": "Размножьте двух овец пшеницей",
 
 "Mooshroom Kingdom": "Грибное королевство",
 "Find mooshrooms on a mushroom island": "Найдите грибных коров на грибном острове",
@@ -1158,7 +1158,7 @@
 "Kill a turtle for their shells only to find they don't actually drop any when killed": "Убейте черепаху, чтобы узнать, что с неё не падает её панцирь",
 
 "Puppies! Yipe!": "Щеночки! Ура!",
-"Breed two wolves together to get a puppy!": "Размножьте двух волков мясом, чтобы получить щенка!",
+"Breed two wolves together to get a puppy!": "Размножьте двух волков мясом",
 
 "Scuttler": "Черепаший покровитель",
 "Get a scute from a baby turtle when it grows up": "Получите щиток после взросления маленькой черепашки",
@@ -1167,7 +1167,7 @@
 "Collect a stack of white wool": "Соберите стак белой шерсти",
 
 "So I got that going for me": "Полученное будет моим",
-"Breed two llamas with hay": "Размножьте двух лам сеном",
+"Breed two llamas with hay": "Размножьте двух лам снопами сена",
 
 "Someone's been here before...": "Кто-то был здесь раньше…",
 "Fish out a ratty old pair of boots": "Выловите во время рыбалки старую пару сапог",
@@ -1234,7 +1234,7 @@
 "Collect a stack of gunpowder": "Соберите стак пороха",
 
 "Enderman Destroyer": "Убийца эндерменов",
-"Collect a stack of ender pearls": "Соберите стак эндер-жемчужин",
+"Collect a stack of ender pearls": "Соберите стак эндер-жемчуга",
 
 "Freezing": "Замёрзший",
 "Bring a husk to a tundra biome and then kill it": "Приведите кадавра в тундру и убейте его",
@@ -1421,13 +1421,13 @@
 "Living Like Kings": "Королевская жизнь",
 "Make yourself shiny with golden armor": "Заставьте себя сиять в золотом наряде",
 
-"Master Coal Miner": "Угольный бизнес",
+"Master Coal Miner": "MoDDyChat",
 "Mine enough coal to make a stack of coal blocks": "Добудьте достаточно угля и создайте стак угольных блоков",
 
 "Master Diamond Miner": "Мечта шахтёра",
 "Mine enough diamond to make a stack of diamond blocks": "Добудьте достаточно алмазов и создайте стак алмазных блоков",
 
-"Master Gold Miner": "Начало золотого века",
+"Master Gold Miner": "BarsiGold",
 "Mine enough gold to make a stack of gold blocks": "Добудьте достаточно золота и создайте стак золотых блоков",
 
 "Master Iron Miner": "Железная выдержка",
@@ -1712,10 +1712,10 @@
 "Dye 16 pairs of leather boots each with one of the individual colors": "Покрасьте кожаные ботинки в каждый из 16 цветов",
 
 "Snow Fox 64": "Увеличение популяции",
-"Breed two snow foxes with sweet berries": "Размножьте двух снежных лис при помощи сладких ягод",
+"Breed two snow foxes with sweet berries": "Размножьте двух снежных лис сладкими ягодами",
 
 "What Does The Fox Say?": "Что же говорит лиса?",
-"Breed two red foxes with sweet berries": "Размножьте двух лис при помощи сладких ягод",
+"Breed two red foxes with sweet berries": "Размножьте двух лис сладкими ягодами",
 
 "Which came first?": "Что же было первым?",
 "The chicken... or the egg??": "Яйцо… или курица?",
@@ -1845,7 +1845,7 @@
 "Get beaten up by an angry panda": "Пусть вас изобьёт злая панда",
 
 "Simba": "Симба",
-"Breed a baby ocelot": "Размножьте двух оцелотов",
+"Breed a baby ocelot": "Размножьте двух оцелотов сырым лососем",
 
 "The Mighty Jungle": "Могучие джунгли",
 "Go for a safari in the jungle": "Охотничья экспедиция в джунгли",
@@ -1854,7 +1854,7 @@
 "Place scaffolding to the world limit": "Разместите подмосток на самой верхней точке мира",
 
 "Zoologist": "Зоолог",
-"Breed two pandas to get a baby panda": "Размножьте двух панд",
+"Breed two pandas to get a baby panda": "Размножьте двух панд бамбуком",
 
 
 
@@ -1996,7 +1996,7 @@
 "Get killed by an Enderman in The End": "Дайте эндермену убить себя в Энде",
 
 "The Beginning": "Начало конца",
-"Say goodbye to the Wither...": "Прощание с Визером…",
+"Say goodbye to the Wither...": "Прощание с визером…",
 
 
 
@@ -2086,10 +2086,10 @@
 
 
 "Ancient Kung Fu Master": "Мастер древнего кунг-фу",
-"Sneak 10km": "Прокрадитесь 10км",
+"Sneak 10km": "Прокрадитесь 10 км",
 
 "Black Belt Ninja": "Ниндзя с чёрным поясом",
-"Sneak 1km": "Прокрадитесь 1км",
+"Sneak 1km": "Прокрадитесь 1 км",
 
 "Boing, Boing": "Прыг-прыг!",
 "Jump 10,000 times": "Пропрыгайте 10,000 раз",
@@ -2188,7 +2188,7 @@
 "Ride 1km on a pig": "Преодолейте 1 км верхом на свинье",
 
 "Spring in your step": "Пружинистая походка",
-"Jump 1000 times": "Пропрыгайте 1000 раз",
+"Jump 1000 times": "Пропрыгайте 1,000 раз",
 
 "Supersonic": "Сверхзвуковой",
 "Fly 10km with elytra": "Пролетите 10 км при помощи элитр",
@@ -2315,7 +2315,7 @@
 
 # All advancements added in version 1.8 are here
 "Ya like jazz?": "Цветочные чары",
-"Breed two bees using flowers": "Размножьте двух пчёл при помощи цветов",
+"Breed two bees using flowers": "Размножьте двух пчёл цветочками",
 
 "Winnie the Pooh": "Винни-Пух",
 "Drink some honey": "Выпейте бутыль мёда",
@@ -2323,7 +2323,7 @@
 "Sticky Situation": "Замёдленное падение",
 "Jump into a honey block to slide down it": "Прыгните в блок мёда, чтобы замедлить своё падение",
 
-"WHERE'S THE HONEY LEBOWSKI": "Мёдозависимый",
+"WHERE'S THE HONEY LEBOWSKI": "Medovuj",
 "Drink 100 bottles of honey": "Выпейте 100 бутылей мёда",
 
 "Hive Mind": "Пчеловод",
@@ -2398,7 +2398,7 @@
 "Animal Milestone" : "Животноводческое достижение",
 "Complete every advancement in the Animal tab" : "Завершите вкладку «Животные»",
 
-"Monsters Milestone" : "Монстрозное достижение",
+"Monsters Milestone" : "Монстровое достижение",
 "Complete every advancement in the Monsters tab" : "Завершите вкладку «Монстры»",
 
 "Weaponry Milestone" : "Оружейное достижение",
@@ -2729,7 +2729,7 @@
 "Ride a Strider with a Warped Fungus on a Stick" : "Прокатитесь на лавомерке, управляя ею с помощью удочки с искажённым грибом",
 
 "Bobbleheads" : "Болванчик",
-"Breed two Striders using Warped Fungus" : "Размножьте двух лавомерок при помощи искажённого гриба",
+"Breed two Striders using Warped Fungus" : "Размножьте двух лавомерок искажёнными грибами",
 
 "This One’s Mine!" : "Это мой!",
 "Kill a Zombified Piglin that is riding a Strider and take its steed" : "Отберите лавомерку у зомбифицированного пинглина, убив его",
@@ -2869,8 +2869,8 @@
 "Ad Astra" : "К звёздам",
 "Reach an altitude of 10,000 blocks above the world" : "Достигните высоты в 10,000 блоков над миром",
 
-"Dragon vs Wither: Pre-Sequel" : "Дракон на Визера: Сиквел",
-"Defeat the Wither while wearing a Dragon head... without touching the ground" : "Победите Визера, надев при этом голову Эндер-дракона… и не касаясь земли",
+"Dragon vs Wither: Pre-Sequel" : "Дракон VS визер: Сиквел",
+"Defeat the Wither while wearing a Dragon head... without touching the ground" : "Победите визера, надев при этом голову Эндер-дракона… и не касаясь земли",
 
 
 
@@ -3189,7 +3189,7 @@
 "Should have spoken to the Keaton Mask Soldier" : "Надо было поговорить с солдатом в маске китона,",
 "to get a discount at the Bazaar" : "чтобы получить скидку на базаре",
 
-"1000-degree knife" : "1000-градусный нож",
+"1000-degree knife" : "1,000-градусный нож",
 "(GONE WRONG) (NOT CLICKBAIT)" : "(ЧТО-ТО ПОШЛО НЕ ТАК) (НЕ КЛИКБЕЙТ)",
 
 
@@ -3259,7 +3259,7 @@
 "So anyway I started blasting..." : "Так или иначе, я начал взрываться…",
 
 "Chaos Emerald" : "Изумруд Хаоса",
-"Just gotta find six more" : "Просто нужно найти еще шесть",
+"Just gotta find six more" : "Просто нужно найти ещё шесть",
 
 
 
@@ -3625,7 +3625,7 @@
 "Slaughter a Goat": "Убить козу",
 
 "Billy the Kid": "Малыш Билли",
-"Breed two Goats together using Wheat": "Размножьте двух коз, используя пшеницу",
+"Breed two Goats together using Wheat": "Размножьте двух коз пшеницей",
 
 "Goat Simulator": "Симулятор козы",
 "Get killed by a Goat that rammed into you.": "Умереть от козы, которая врезалась в вас",
@@ -3659,7 +3659,7 @@
 "Team up with an Axolotl in an Ocean Monument to help clear the curse of the Elders": "Объединитесь с аксолотлем в подводной крепости, чтобы помочь снять проклятие древних стражей",
 
 "Axolittle": "Аксолитл",
-"Breed two Axolotls together using Tropical Fish": "Размножьте двух аксолотлей, используя тропическую рыбу",
+"Breed two Axolotls together using Tropical Fish": "Размножьте двух аксолотлей тропической рыбой из ведра",
 
 "Axolotl of them": "Какой-то из них",
 "Catch all variants of Axolotls inside a Bucket": "Поймайте все разновидности аксолотлей в ведро",
@@ -3691,7 +3691,7 @@
 "Smooth Operator": "Гладкий оператор",
 "Slip and slide on some ice": "Проскользните и скользите по льду",
 
-"This Snow is Snowier": "Этот снег еще снежнее",
+"This Snow is Snowier": "Этот снег ещё снежнее",
 "Fall into some Powder Snow": "Упадите в рыхлый снег",
 
 "Light as a Rabbit": "Прыткий, как заяц",
@@ -3712,7 +3712,7 @@
 
 
 
-"This Dirt is Dirtier": "Эта грязь еще грязнее",
+"This Dirt is Dirtier": "Эта грязь ещё грязнее",
 "Trade for some Rooted Dirt from a Wandering Trader": "Выторгуйте немного корнистой земли у странствующего торговца",
 
 "Leaflet Drop": "Естественное падение",
@@ -4403,7 +4403,7 @@
 "it can see to infinity and beyond": "он может видеть до бесконечности и за её пределами",
 
 "Golden Advancement Plaque": "Золотая мемориальная доска",
-"Awarded to this datapack for reaching 1000 advancements": "Выдается этому пакету данных за достижения 1000 достижений",
+"Awarded to this datapack for reaching 1000 advancements": "Выдается этому пакету данных за достижения 1,000 достижений",
 
 # # The Toilet trophy for 'WHERE'S THE HONEY LEBOWSKI' received a description change
 
@@ -4514,7 +4514,7 @@
 "Discover every biome with trees of purple leaves": "Исследуйте каждый биом с фиолетовыми листьями",
 
 "Skylanders": "Исследователи неба",
-"Discover some mysterious lands floating high above the ground": "Исследуйте таинственные земли, парящие высоко над землей",
+"Discover some mysterious lands floating high above the ground": "Исследуйте таинственные земли, парящие высоко над землёй",
 
 "Smarter than the Average Bear": "О, жёлтые камни!",
 "Discover the Yellowstone biome": "Исследуйте биом Жёлтокамня",
@@ -4535,7 +4535,7 @@
 "Stardust": "Звёздная пыль",
 
 "You have explored everything this world has to offer": "Вы исследовали все, что может предложить этот мир",
-"But at the end of it all, it is all still made from stardust": "Но, в конце концов, все это все еще сделано из звездной пыли.",
+"But at the end of it all, it is all still made from stardust": "Но, в конце концов, всё это всё ещё сделано из звездной пыли.",
 
 
 
@@ -4557,10 +4557,10 @@
 
 
 
-"Advancement Scoreboard Display Settings": "Настройки счетчика достижений",
+"Advancement Scoreboard Display Settings": "Настройки счётчика достижений",
 
-"Advancements Scoreboard": "Счетчик достижений",
-"First Advancements Scoreboard": "Счетчик первых достижений",
+"Advancements Scoreboard": "Счётчик достижений",
+"First Advancements Scoreboard": "Счётчик первых достижений",
 
 "Team Advancements": "Общее количество достижений команд",
 "The Team Advancements Scoreboard lists every team, and adds up the Advancements score of every member in each team": "Этот счётчик отображает суммарное количество достижений в каждой команде.",
@@ -4585,7 +4585,7 @@
 "Not recommended for Cooperative Mode": "Не рекомендуется для кооперативного режима",
 "Recommended for Cooperative or Team Cooperative Mode": "Рекомендуется для кооперативного режима или кооперативного режима по командам",
 
-"How would you like this scoreboard to be displayed?": "Где бы вы хотели отображать счетчик достижений? ",
+"How would you like this scoreboard to be displayed?": "Где бы вы хотели отображать счётчик достижений? ",
 "On tab list": "В списке игроков",
 "On sidebar": "На боковой панели",
 "Below each player's name": "Под никнеймами игроков",
@@ -4618,7 +4618,7 @@
 "This function should only be used on worlds created before the Trophy Update (BACAP 1.11) or if you really want an easy way of getting them back": "Эту функцию следует использовать только в мирах, в которых использовался датапак перед трофейным обновлением (1.11), или при очень сильном желании получить потерянные трофеи назад. :)",
 
 "Revoke all advancements": "Отозвать все достижения",
-"Revokes every advancement, including resetting scoreboards": "Отзывает каждое достижение у выбранных игроков, сбрасывая счетчик достижений.",
+"Revokes every advancement, including resetting scoreboards": "Отзывает каждое достижение у выбранных игроков, сбрасывая счётчик достижений.",
 "You may choose to revoke from either yourself, the closest player to you, or from everyone currently online": "Вы можете сбросить достижения себе, ближайшему игроку к вам или всем игрокам в сети.",
 
 "Once advancements are revoked, they cannot be recovered.": "Вы не сможете восстановить прогресс достижений после отзыва.",
@@ -4696,7 +4696,7 @@
 "Using Echo Shards found in Ancient Cities, craft a Recovery Compass": "Используя осколки эха, найденные в древних городах, для создания компаса восстановления",
 
 "9 to 5": "5 из 9",
-"Collect enough Disc Fragments to craft another producer of mysterious sounds": "Соберите достаточное количество осколков диска, чтобы создать еще одного производителя таинственных звуков",
+"Collect enough Disc Fragments to craft another producer of mysterious sounds": "Соберите достаточное количество осколков диска, чтобы создать ещё одного производителя таинственных звуков",
 
 "Echonomy": "Эхономика",
 "Collect a stack of Echo Shards": "Соберите стак осколков эха",
@@ -4785,7 +4785,7 @@
 "Stealth is Optional": "Скрытность необязательна",
 "Overcome a Warden in the deepest and darkest of caves": "Победите хранителя в самой глубокой и темной пещере",
 
-"Warden Frostbite": "Обморожение надзирателя",
+"Warden Frostbite": "Обморожение хранителя",
 "Bring a Warden to the surface of a snowy plains biome and kill it": "Выведите хранителя на поверхность биома снежных равнин и убейте его",
 
 "Not Afraid of Heights": "Не боится высоты",
@@ -4871,7 +4871,7 @@
 "FrogChamp": "ЛягушачийЧемпион",
 "It’s Wednesday, my dudes!": "Сегодня среда, чуваки!",
 
-"Warden Head": "Хранитель ГЛАВНЫЙ!",
+"Warden Head": "Голова хранителя",
 "Players: How are you meant to kill the Warden?": "Игроки: Как мы должны убить хранителя?",
 "Mojang: That's the neat part - you don't!": "Mojang: В том-то и дело, что ни как!",
 "You: Hold my golden carrots": "Ты: Держи мою золотую морковку",
@@ -4987,7 +4987,7 @@
 "Settings for what messages that appear upon completing each tier of advancement should appear": "Настройки того, какие сообщения должны появляться после завершения каждого уровня достижения",
 "Settings for what type of scoreboard to display and where": "Настройки для выбора типа и места отображения табло",
 "Functions for updating, resetting and revoking advancements": "Функции для обновления, сброса и отзыва достижений",
-"Need help understanding how the datapack, this config menu, or anything else works?": "Нужна помощь в понимании того, как работает датапак, это меню конфигурации или что-либо еще?",
+"Need help understanding how the datapack, this config menu, or anything else works?": "Нужна помощь в понимании того, как работает датапак, это меню конфигурации или что-либо ещё?",
 
 "Help": "Помощь",
 
@@ -5046,7 +5046,7 @@
 "What is the name of the mod that lets you see progress on advancements?": "Как называется мод, позволяющий видеть прогресс в достижениях?",
 
 # # # Why aren't all tabs visible at the start?
-"A tab will not show up if you haven't gained any advancements in that tab yet.": "Вкладка не будет отображаться, если вы еще не получили никаких достижений в этой вкладке.",
+"A tab will not show up if you haven't gained any advancements in that tab yet.": "Вкладка не будет отображаться, если вы ещё не получили никаких достижений в этой вкладке.",
 "Most root advancements are easy to obtain, but some are further along in progression.": "Большинство начальных достижений легко получить, но некоторые получаются дольше.",
 "Notably, the Super Challenges tab is not unlocked until after defeating the Ender Dragon.": "Примечательно, что вкладка Сверхвызовы открывается только после победы над драконом Эндера.",
 
@@ -5092,7 +5092,7 @@
 "Find a Camel in a desert village and ride it": "Найдите верблюда в пустынной деревне и оседлайте его",
 
 "Hump Day": "А теперь горбатый!",
-"Breed two Camels using cactus": "Размножьте двух верблюдов, используя кактус",
+"Breed two Camels using cactus": "Размножьте двух верблюдов кактусами",
 
 "The High Road": "Дальняя дорога",
 "Kill a hostile monster with a melee attack while riding a Camel": "Убейте враждебного монстра врукопашную, сидя на верблюде",
@@ -5122,7 +5122,7 @@
 "Have a Sniffer dig up seeds": "Попросите нюхача выкопать семена",
 
 "Jurassic Sniff": "Юрский период",
-"Breed two Sniffers together using Torchflower Seeds": "Размножьте двух нюхачей, используя факельник",
+"Breed two Sniffers together using Torchflower Seeds": "Размножьте двух нюхачей факельниками",
 
 "Little Sniffs": "Шмыгунчик",
 "Feed a Snifflet": "Покормите нюхачонка",
@@ -5154,7 +5154,7 @@
 "Chromatic Armory": "Хроматическая оружейная",
 "Trim pieces of armor with all types of materials": "Примените отделку к броне, используя каждый вид материала",
 
-"Genesis of the End": "Энд-Генезис",
+"Genesis of the End": "Энд-генезис",
 "Find the Eye Smithing Template in a Stronghold": "Найдите кузнечный шаблон «Око» в подземной крепости",
 
 "Vexingly Hard to Find": "Досадно и трудно найти",

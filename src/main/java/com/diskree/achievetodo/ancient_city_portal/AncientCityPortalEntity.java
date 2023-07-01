@@ -221,7 +221,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                     int experienceCount = player.totalExperience;
                     if (experienceCount < 10) {
                         player.damage(getWorld().getDamageSources().badRespawnPoint(playerPos), 1);
-                        AchieveToDoMod.grantHintsAdvancement("mozart_mistake");
+                        AchieveToDoMod.grantHintsAdvancement("beethoven_mistake");
                     } else {
                         player.addExperience(-10);
                     }

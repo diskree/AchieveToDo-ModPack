@@ -1,6 +1,5 @@
 {
 	"credit": "Made with Blockbench",
-	"texture_size": [15, 15],
 	"textures": {
 		"0": "achievetodo:item/arrow"
 	},
@@ -10,7 +9,7 @@
 			"to": [15.5, 15.5, 7.5],
 			"faces": {
 				"east": {"uv": [0, 0, 0, 15], "texture": "#missing"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 15, 15], "texture": "#0"},
 				"west": {"uv": [0, 0, 0, 15], "texture": "#missing"},
 				"up": {"uv": [0, 0, 15, 0], "texture": "#missing"},
 				"down": {"uv": [0, 0, 15, 0], "texture": "#missing"}

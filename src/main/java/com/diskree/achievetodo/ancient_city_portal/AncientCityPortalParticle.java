@@ -3,6 +3,7 @@ package com.diskree.achievetodo.ancient_city_portal;
 import net.minecraft.client.particle.ParticleTextureSheet;
 import net.minecraft.client.particle.SpriteBillboardParticle;
 import net.minecraft.client.world.ClientWorld;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.ColorHelper;
 
 public class AncientCityPortalParticle extends SpriteBillboardParticle {
@@ -23,13 +24,12 @@ public class AncientCityPortalParticle extends SpriteBillboardParticle {
         this.startY = this.y;
         this.startZ = this.z;
         this.scale = 0.1f * (this.random.nextFloat() * 0.2f + 0.5f);
-        float j = this.random.nextFloat() * 0.6f + 0.4f;
-        this.red = j * 0.2f;
-        this.green = j * 0.1f;
-        this.blue = j;
-        int color = ColorHelper.Argb.getArgb(255, 204, 31, 102);
-        this.setColor(ColorHelper.Argb.getRed(color), ColorHelper.Argb.getGreen(color), ColorHelper.Argb.getBlue(color));
-
+        float min = 0.05f;
+        float max = 0.09f;
+        float rc = min + this.random.nextFloat() * (max - min);
+        this.red = 0f + rc + 0.09f;
+        this.green = 0.67f + rc + 0.03f;
+        this.blue = 0.73f + rc;
         this.maxAge = (int) (Math.random() * 10.0) + 40;
     }
 

@@ -4331,24 +4331,23 @@
 
 # # Has the syntax <Player> has made the advancement <Advancement's name>
 
-"has made the advancement": "получил достижение",
-"has reached the goal": "выполнил цель",
-"has completed the challenge": "выполнил испытание",
-"has completed the super challenge": "выполнил сверх вызов",
-"has found the hidden advancement": "получил скрытое достижение",
+"%1$s has made the advancement %2$s%3$s%4$s": "%1$s получил достижение %2$s%3$s%4$s",
+"%1$s has reached the goal %2$s%3$s%4$s": "%1$s достиг цели %2$s%3$s%4$s",
+"%1$s has completed the challenge %2$s%3$s%4$s": "%1$s завершил испытание %2$s%3$s%4$s",
+"%1$s has completed the super challenge %2$s%3$s%4$s": "%1$s завершил супер вызов %2$s%3$s%4$s",
+"%1$s has found the hidden advancement %2$s%3$s%4$s": "%1$s получил скрытое достижение %2$s%3$s%4$s",
 
 # # For milestones, it goes <Player> has completed every advancement in the <Tab name> tab, earning them the advancement <Milestone's name>
 
-"has completed every advancement in the": "завершил все достижения в",
-"tab, earning them the advancement": ", зарабатывая достижения",
+"%1$s has completed every advancement in the %2$s tab, earning them the advancement %3$s%4$s%5$s": "%1$s завершил вкладку «%2$s», выполнив достижение %3$s%4$s%5$s",
 
 # # Note: Because The End already has a 'the' in it, this line is exclusively used in 'End Milestone'
 
-"has completed every advancement in": "завершил каждое продвижение в",
+"%1$s has completed every advancement in %2$s tab, earning them the advancement %3$s%4$s%5$s": "%1$s завершил вкладку «%2$s», выполнив достижение %3$s%4$s%5$s",
 
 # # Advancement Legend
 
-"has completed every advancement in BlazeandCave's Advancements Pack, earning them the coveted title of": "завершил(ла) все улучшения в BlazeandCave's Advancements Pack, что принесло ему(ей) желанный титул",
+"%1$s has completed every advancement in BlazeandCave's Advancements Pack, earning them the coveted title of %2$s%3$s%4$s": "%1$s выполнил все достижения в BlazeandCave's. Теперь он - легенда этого мира",
 
 
 

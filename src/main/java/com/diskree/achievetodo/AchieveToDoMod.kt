@@ -196,7 +196,7 @@ class AchieveToDoMod : ModInitializer {
             ResourceManagerHelper.registerBuiltinResourcePack(
                     VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID,
                     modContainer,
-                    Text.of("Tropical Fish"),
+                    Text.of("Visual Fish Buckets"),
                     ResourcePackActivationType.DEFAULT_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(

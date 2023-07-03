@@ -2717,7 +2717,7 @@
 "Breed a baby Hoglin using Crimson Fungi" : "Размножьте маленького хоглина при помощи багрового гриба",
 
 "Whole Hog" : "Полный хог",
-"Get mauled by a Hoglin" : "Получите урон от хоглина",
+"Get mauled by a Hoglin" : "Умрите от хоглина, позволив ему растерзать вас на куски",
 
 "Giddy Up!" : "Расти большим и здоровым",
 "Punch a baby Hoglin that is being ridden by a baby Piglin" : "Ударьте маленького хоглина, на котором сидит маленький пиглин",
@@ -2926,6 +2926,9 @@
 
 "Get attacked by Piglin Brutes" : "Получите урон от брутального пиглина",
 
+"Damage From All": "Мальчик для битья"
+
+"Get attacked by a Hoglin": "Получите урон от хоглина"
 
 # All advancements added in version 1.11 are here
 "Time to Dig!" : "Время копать!",

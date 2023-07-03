@@ -38,10 +38,10 @@
 "Dry a sponge in a furnace": "Высушите губку при помощи печи",
 
 "Filthy Rich": "Неприлично богатый человек",
-"Make 64 emeralds": "Добудьте 64 изумруда",
+"Make 64 emeralds": "Добудьте стак изумрудов",
 
 "Filthy Stinkin' Rich": "Повелитель крестьян",
-"Make 64 emerald blocks": "Создайте 64 изумрудных блока",
+"Make 64 emerald blocks": "Добудьте стак изумрудных блоков",
 
 "Flower Power": "Цветочная сила",
 "Collect all types of flowers": "Соберите все виды цветков",
@@ -286,7 +286,7 @@
 
 # Combat tab as of 1.3
 "Blast Shield": "Надёжная защита",
-"Survive a creeper's blast with your shield": "Переживите взрыв крипера, прикрывшись щитом",
+"Survive a creeper's blast with your shield": "Защитите себя от взрыва крипера, прикрывшись щитом",
 
 "Bombs Away!": "Взрывной привет",
 "Use gunpowder and sand to craft TNT": "Используйте порох и песок для создания динамита",
@@ -502,13 +502,13 @@
 
 # End tab as of 1.3
 "Anti-Gravity Generator": "Антигравитационный прибор",
-"Bring a shulker into the overworld and let it give you anti-gravity": "Перенесите шалкера в обычный мир и получите эффект «Левитации»",
+"Bring a shulker into the overworld and let it give you anti-gravity": "Перенесите шалкера в обычный мир и получите от него эффект «Левитация»",
 
 "Cow Jumped Over The Moon": "Лунная корова",
 "Bring a cow from the Overworld to the End and then kill it": "Переместите корову в Энд и убейте её там",
 
 "Dragon Shield": "Дракон нам не страшен",
-"Attempt to block the dragon's attacks": "Попытайтесь отразить атаку дракона, прикрывшись щитом",
+"Attempt to block the dragon's attacks": "Защитите себя от атаки дракона, прикрывшись щитом",
 
 "End Bricks!": "Эндерняковые кирпичи!",
 "Craft end bricks from end stone": "Создайте кирпичи из эндерняка",
@@ -553,7 +553,7 @@
 "Or the beginning?": "Конец… или начало?",
 
 "Shouldn't my shield levitate too?": "Разве щит не должен парить?",
-"Block a Shulker's bullet with your shield": "Отразите снаряд шалкера, прикрывшись щитом",
+"Block a Shulker's bullet with your shield": "Защитите себя от снаряда шалкера, прикрывшись щитом",
 
 "Sky High": "К небесам",
 "Fly up beyond the world height limit": "Преодолейте максимальную высоту мира",
@@ -604,10 +604,10 @@
 "Grow wheat and use it to bake bread": "Вырастите пшеницу и приготовьте хлеб",
 
 "Bapple!": "Яблоко!",
-"Crunch into an apple": "Просто съешьте яблоко…",
+"Crunch into an apple": "Съешьте яблоко",
 
 "Blistering Barnacles!": "Неудачный день",
-"Get spat at by a llama": "Пусть вас оплюёт лама",
+"Get spat at by a llama": "Пусть в вас плюнет лама",
 
 "Breaking the Law of Conservation of Matter": "Закон сохранения материи",
 "Craft 9 melon slices back into a block that, when broken, will probably not give you all 9 slices back": "Создайте из девяти ломтиков арбуза блок, который, будучи сломанным, не вернёт вам все девять ломтиков арбуза назад",
@@ -652,7 +652,7 @@
 "The steaks are high for this advancement!": "Стейки очень нужны для этого достижения!",
 
 "Hot Topic": "Горячая штучка",
-"Construct a furnace out of eight stone blocks": "Создайте печку из восьми булыжника",
+"Construct a furnace out of eight stone blocks": "Создайте печку из булыжника",
 
 "Lion Tamer": "Дрессировщик львов",
 "Tame an Ocelot using fish": "Приручите оцелота при помощи рыбы",
@@ -682,13 +682,13 @@
 "You know kung fu, how about pork chop?": "Ты знаешь кунг-фу, но как насчёт свиной отбивной?",
 
 "Rabbit Season": "Сезон охоты на кроликов",
-"Killing bunnies is cruel. Period.": "Убивать кроликов — это жестоко. Временами",
+"Killing bunnies is cruel. Period.": "Убивать кроликов — это жестоко. Но, увы...",
 
 "Rainbow Collection": "Радужная коллекция",
 "Gather all 16 colors of wool": "Соберите все 16 цветов шерсти",
 
 "Renewable Energy": "Возобновляемая энергия",
-"Smelt wood trunks using charcoal to make more charcoal": "Переплавить древесину при помощи древесного угля, чтобы получить ещё больше древесного угля",
+"Smelt wood trunks using charcoal to make more charcoal": "Переплавьте древесину при помощи древесного угля, чтобы получить ещё больше древесного угля",
 
 "Repopulation": "Репопуляция",
 "Breed two cows with wheat": "Размножьте двух коров пшеницей",
@@ -696,14 +696,14 @@
 "Farming": "Сельское хозяйство",
 "The world is full of friends and food": "Мир друзей, добра и еды",
 
-"Salmonella Poisoning": "Вера в лучшее",
-"Eat some raw salmon... and not get poisoned after all": "Съешьте сырого лосося и не отравитесь при этом",
+"Salmonella Poisoning": "Сашими",
+"Eat some raw salmon... and not get poisoned after all": "Съешьте сырого лосося",
 
 "Serious Dedication": "Терпение и труд",
 "Completely use up a diamond hoe, and then reevaluate your life choices": "Используйте алмазную мотыгу, пока она не сломается, а потом попробуйте переосмыслить свою жизнь",
 
 "So Good": "Вкуснятина!",
-"Can't beat it, can't beat it": "Съешьте это! Что? Вкусняшку",
+"Can't beat it, can't beat it": "Съешьте жареную курицу",
 
 "Souperman": "СУПермен",
 "Beetroot soup gives you souperpowers!": "Свекольный суп придаст вам СУПерсил!",
@@ -712,7 +712,7 @@
 "Harvest some sugar cane from a river or ocean": "Соберите немного тростника около водоёма",
 
 "Sushi": "Суши",
-"Eat some raw fish": "Съешьте сырую рыбу",
+"Eat some raw fish": "Съешьте сырую треску",
 
 "The Lie": "Это ложь",
 "Wheat, sugar, milk and eggs!": "Пшеница, сахар, молоко и яйца!",
@@ -727,7 +727,7 @@
 "Use shears to obtain leaf blocks": "Используйте ножницы, чтобы получить блоки листвы",
 
 "Ultra Hardcore": "Ультрасложность",
-"Craft and eat a normal golden apple": "Создайте и съешьте золотое яблоко",
+"Craft and eat a normal golden apple": "Съешьте золотое яблоко",
 
 "Vegetarian": "Вегетарианство",
 "Eat every type of fruit, vegetables, and any sort of plant matter": "Съешьте каждый фрукт, овощ и растение, доступные в игре",
@@ -802,10 +802,10 @@
 "Upgrade your pickaxe": "Обновите свою кирку",
 
 "Lapis Lazuli Miner": "Помешанность на чарах",
-"Mine enough lapis lazuli to craft a stack of lapis lazuli blocks": "Добудьте достаточно лазурита и создайте стак лазуритовых блоков",
+"Mine enough lapis lazuli to craft a stack of lapis lazuli blocks": "Добудьте стак лазуритовых блоков",
 
 "Mineral Collection": "Коллекция минералов",
-"Craft every type of mineral block": "Создайте блок из каждого типа руд",
+"Craft every type of mineral block": "Создайте блок из каждого вида руды",
 
 "MOAR Tools": "БОЛЬШЕ инструментов",
 "Craft a stone pickaxe, axe, shovel and hoe": "Создайте каменную кирку, топор, лопату и мотыгу",
@@ -817,7 +817,7 @@
 "Craft a minecart using five iron ingots": "Создайте вагонетку из пяти железных слитков",
 
 "Redstone Miner": "Сила редстоуна",
-"Mine enough redstone to craft a stack of redstone blocks": "Добудьте достаточно редстоуна и создайте стак блоков редстоуна",
+"Mine enough redstone to craft a stack of redstone blocks": "Добудьте стак блоков редстоуна",
 
 "Mining": "Шахтёрское ремесло",
 "Dig underground, gather resources": "Копайте шахты, добывайте ресурсы",
@@ -868,7 +868,7 @@
 "Follow an Ender Eye": "Следуйте за оком Эндера",
 
 "Fire Blast Shield": "Не в этот раз, не в этом мире!",
-"Block the explosion of a ghast's fireball": "Защититесь от огненного шара гаста, прикрывшись щитом",
+"Block the explosion of a ghast's fireball": "Защитите себя от огненного шара гаста, прикрывшись щитом",
 
 "Giant Floating Jellyfish": "Гигантская летающая медуза",
 "Shoot down a ghast": "Убейте гаста",
@@ -910,7 +910,7 @@
 "Kill a wither skeleton": "Убейте визер-скелета",
 
 "The Nether's Shield": "Особая защита",
-"Block some blaze fireballs": "Отразите огненные снаряды всполоха, прикрывшись щитом",
+"Block some blaze fireballs": "Защитите себя от огненного снаряда всполоха, прикрывшись щитом",
 
 "The Tribal Snouts": "Отвратительные твари",
 "Kill a zombie pigman": "Убейте зомби-пигмена",
@@ -1000,7 +1000,7 @@
 "Use a pressure plate to craft a detector rail": "Создайте рельсы с датчиком",
 
 "Quartz Miner": "Кварцевый бум",
-"Mine enough nether quartz to craft a stack of quartz blocks": "Добудьте достаточно кварца и создайте стак кварцевых блоков",
+"Mine enough nether quartz to craft a stack of quartz blocks": "Добудьте стак кварцевых блоков",
 
 "Quirky Quartz": "Причудливый кварц",
 "Mine Nether Quartz from the Nether": "Добудьте кварц в Незере",
@@ -1054,21 +1054,21 @@
 
 
 "Stripper": "Короненавистник",
-"Strip the bark off of all six types of logs then pick them up": "Удалите кору со всех шести типов брёвен, а затем поднимите их",
+"Strip the bark off of all six types of logs then pick them up": "Снимите кору со всех видов брёвен",
 
 
 
 "Flint Miner": "Кремневая прелесть",
-"Mine a stack of flint": "Добудьте стак кремня",
+"Mine a stack of flint": "Добудьте стак кремния",
 
 "My work here is done": "Моя работа здесь завершена",
-"Get caught in a cave-in of gravel": "Встаньте на обрушившийся гравий",
+"Get caught in a cave-in of gravel": "Пусть на вас упадёт гравий",
 
 "Nananananananana...": "На-на-на-на-на-на-на…",
 "Accidentally hit a bat underground": "Случайно ударьте летучую мышь",
 
 "Obsidian Miner": "Грандиозные планы",
-"Mine a stack of obsidian. (This might take a while...)": "Добудьте стак обсидиана. (это займёт некоторое время…)",
+"Mine a stack of obsidian. (This might take a while...)": "Добудьте стак обсидиана (это займёт некоторое время…)",
 
 "Rock Bottom": "Нижний предел",
 "Dig down to the bottom of the world": "Прокопайтесь ко дну мира",
@@ -1089,7 +1089,7 @@
 "Craft a dried kelp block for use as a great fuel source": "Создайте блок сушёной ламинарии, чтобы использовать в качестве топлива",
 
 "Hay there!": "Сено здесь!",
-"Craft a stack of hay blocks": "Создайте стак блоков сена",
+"Craft a stack of hay blocks": "Добудьте стак снопов сена",
 
 "It's full of ink": "Они полны чернил",
 "Obtain some ink from hunting a squid": "Получите немного чернильных мешков, охотясь на спрутов",
@@ -1101,13 +1101,13 @@
 "Collect some kelp from an ocean": "Соберите немного ламинарий с морского дна",
 
 "Pumpa kungen!": "Король тыкв!",
-"Carve a stack of pumpkins": "Соберите стак вырезанных тыкв",
+"Carve a stack of pumpkins": "Добудьте стак вырезанных тыкв",
 
 "The Meloncholy Dane": "Арбуз обыкновенный",
-"Craft a stack of melon blocks": "Создайте стак блоков из ломтиков арбуза",
+"Craft a stack of melon blocks": "Добудьте стак блоков арбуза",
 
 "Undersea Gardener": "Подводный огородник",
-"Craft a stack of dried kelp blocks": "Создайте стак блоков сушёной ламинарии",
+"Craft a stack of dried kelp blocks": "Добудьте стак блоков сушёной ламинарии",
 
 "Write your thoughts": "Живые мысли",
 "Use a book, ink and a feather to craft a book and quill": "Используйте книгу, чернильный мешок и перо для создания книги и пера",
@@ -1128,7 +1128,7 @@
 "Gotta kill this pig pig pig pig": "Нужно убить эту свинью, хрю-хрю-хрю",
 
 "Chicken Cooper": "Куриный бульон",
-"Collect a stack of raw chicken and feathers": "Соберите стак курятины и перьев",
+"Collect a stack of raw chicken and feathers": "Добудьте по стаку курятины и перьев",
 
 "Farrier": "Коновал",
 "Breed a horse in an effort to get a better one": "Размножьте двух лошадей золотыми яблоками",
@@ -1143,7 +1143,7 @@
 "Breed two cats together to get a kitty!": "Размножьте двух кошек сырым лососем",
 
 "In a hole there lived a Rabbit": "Дыра, в которой жил кролик",
-"Collect a stack of raw rabbit and rabbit hide": "Соберите стак сырой крольчатины и кроличьей шкурки",
+"Collect a stack of raw rabbit and rabbit hide": "Добудьте по стаку сырой крольчатины и кроличьей шкурки",
 
 "Mary Had a Little Lamb...": "У Мэри был ягнёночек…",
 "Breed two sheep to get a lamb": "Размножьте двух овец пшеницей",
@@ -1152,7 +1152,7 @@
 "Find mooshrooms on a mushroom island": "Найдите грибных коров на грибном острове",
 
 "Pig Slaughterer": "Свинобойщик",
-"Collect a stack of raw porkchops": "Соберите стак сырой свинины",
+"Collect a stack of raw porkchops": "Добудьте стак сырой свинины",
 
 "Poacher": "Браконьер",
 "Kill a turtle for their shells only to find they don't actually drop any when killed": "Убейте черепаху, чтобы узнать, что с неё не падает её панцирь",
@@ -1164,7 +1164,7 @@
 "Get a scute from a baby turtle when it grows up": "Получите щиток после взросления маленькой черепашки",
 
 "Sheariously?": "Шерстьёзно?",
-"Collect a stack of white wool": "Соберите стак белой шерсти",
+"Collect a stack of white wool": "Добудьте стак белой шерсти",
 
 "So I got that going for me": "Полученное будет моим",
 "Breed two llamas with hay": "Размножьте двух лам снопами сена",
@@ -1194,10 +1194,10 @@
 "Fish out a piece of treasure": "Выловите во время рыбалки сокровище",
 
 "True Cow Tipper": "Настоящий коровник",
-"Collect a stack of raw beef and leather": "Соберите стак сырой говядины и кожи",
+"Collect a stack of raw beef and leather": "Добудьте по стаку сырой говядины и кожи",
 
 "Turtle Army": "Черепашья армия",
-"Collect a stack of scutes": "Соберите стак щитков",
+"Collect a stack of scutes": "Добудьте стак щитков",
 
 "Turtle Soldier": "Черепашка-ниндзя",
 "Craft a full turtle shell": "Создайте черепаший панцирь",
@@ -1206,7 +1206,7 @@
 "Fish out a junk item": "Выловите во время рыбалки мусор",
 
 "Wooly!": "Шерстяной покров",
-"Obtain wool from a sheep by killing it": "Убейте овечку, чтобы получить её шерсть",
+"Obtain wool from a sheep by killing it": "Убейте овцу, чтобы получить её шерсть",
 
 "Yay! Deadbush!": "Ура! Мёртвый куст!",
 "Get a deadbush cause you're a noob": "Заполучите мёртвый куст, потому что вы — нуб",
@@ -1231,10 +1231,10 @@
 "Grind up some bones into bonemeal": "Измельчите кости в костную муку",
 
 "Creeper Killer": "Убийца криперов",
-"Collect a stack of gunpowder": "Соберите стак пороха",
+"Collect a stack of gunpowder": "Добудьте стак пороха",
 
 "Enderman Destroyer": "Убийца эндерменов",
-"Collect a stack of ender pearls": "Соберите стак эндер-жемчуга",
+"Collect a stack of ender pearls": "Добудьте стак эндер-жемчуга",
 
 "Freezing": "Замёрзший",
 "Bring a husk to a tundra biome and then kill it": "Приведите кадавра в тундру и убейте его",
@@ -1243,31 +1243,31 @@
 "Bring a stray to a desert biome and then kill it": "Приведите зимогора в пустынный биом и убейте его",
 
 "Phantom Slayer": "Убийца фантомов",
-"Collect a stack of phantom membranes": "Соберите стак мембран фантома",
+"Collect a stack of phantom membranes": "Добудьте стак мембран фантома",
 
 "Poseidon vs Hades": "Посейдон против Аида",
 "Hunt all types of nether creatures with your trident": "Убейте всех незерских существ при помощи трезубца",
 
 "Ricochet Swoop": "Сон мне не помеха",
-"Deflect a Phantom's swoop with your shield": "Отразите налёт фантома, прикрывшись щитом",
+"Deflect a Phantom's swoop with your shield": "Защитите себя от налёта фантома, прикрывшись щитом",
 
 "Skeleton Smiter": "Убийца скелетов",
-"Collect a stack of bones": "Соберите стак костей",
+"Collect a stack of bones": "Добудьте стак костей",
 
 "Slime Squisher": "Убийца слизней",
-"Collect a stack of slimeballs": "Соберите стак сгустков слизи",
+"Collect a stack of slimeballs": "Добудьте стак сгустков слизи",
 
 "Spider Smasher": "Убийца пауков",
-"Collect a stack of string from spiders or cobwebs": "Соберите стак нитей из пауков или паутины",
+"Collect a stack of string from spiders or cobwebs": "Добудьте стак нитей",
 
 "The Aquatic Hunter": "Морской охотник",
 "Hunt all types of aquatic creatures with your trident": "Поймайте все виды водных существ при помощи трезубца",
 
 "The Phantom Menace": "Призрачная угроза",
-"Get attacked by phantoms": "Будьте атакованы фантомами",
+"Get attacked by phantoms": "Получите урон от фантома",
 
 "Tridented Shield": "И даже тут он меня спас",
-"Block a trident thrown by a Drowned": "Отразите трезубец, брошенный утопленником",
+"Block a trident thrown by a Drowned": "Отразите попадание трезубца щитом",
 
 "Underwater Duel": "Подводная дуэль",
 "Kill a drowned using a trident from at least 30 metres": "Убейте утопленника с помощью трезубца с расстояния более 30 блоков",
@@ -1276,7 +1276,7 @@
 "Lure a Phantom into the Nether and then kill it": "Заманите фантома в Незер и убейте его",
 
 "Zombie Slayer": "Убийца зомби",
-"Collect a stack of rotten flesh": "Соберите стак гнилой плоти",
+"Collect a stack of rotten flesh": "Добудьте стак гнилой плоти",
 
 
 
@@ -1303,10 +1303,10 @@
 "Gold Mine!": "Золотая шахта!",
 "Find a mineshaft on the surface of a mesa biome": "Найдите заброшенную шахту на поверхности пустоши",
 
-"Guardian Destroyer": "Уничтожитель стражей",
-"Collect a stack of prismarine shards and crystals": "Соберите стак осколков и кристаллов призмарина",
+"Guardian Destroyer": "Убийца стражей",
+"Collect a stack of prismarine shards and crystals": "Добудьте по стаку осколков призмарина и кристаллов призмарина",
 
-"In a Pickle": "Солёный огуречик",
+"In a Pickle": "Солёный огурчик",
 "Collect some sea pickles from a coral reef": "Соберите морской огурец в коралловом рифе",
 
 "Just a sample": "Образец на память",
@@ -1325,10 +1325,10 @@
 "Break down an ice spike using a silk touch pickaxe": "Разбейте ледяной шип при помощи кирки с шёлковым касанием",
 
 "Spikey!": "Колючка!",
-"Run into a cactus": "Побегите прямо в кактус",
+"Run into a cactus": "Ударьтесь об кактус",
 
 "Sponge Miner": "План по иссушению мира",
-"Collect a stack of sponges from ocean monuments": "Соберите стак губок из подводных крепостей",
+"Collect a stack of sponges from ocean monuments": "Добудьте стак губок",
 
 "The Great Blocky Reef": "Большой блоковый риф",
 "Come across a coral reef in the ocean": "Найдите коралловый риф в океане",
@@ -1355,7 +1355,7 @@
 "Craft all types of redstone component": "Создайте всё, что связано с редстоуном",
 
 "Master Engineer": "Мастер знает своё дело",
-"Craft a stack of all types of redstone component": "Создайте по стаку всего, что связано с редстоуном",
+"Craft a stack of all types of redstone component": "Добудьте по стаку всего, что связано с редстоуном",
 
 
 
@@ -1376,16 +1376,16 @@
 
 
 "Blaze Extinguisher": "Убийца всполохов",
-"Collect a stack of blaze rods": "Соберите стак огненных стержней",
+"Collect a stack of blaze rods": "Добудьте стак огненных стержней",
 
 "Ghast Slayer": "Убийца гастов",
-"Collect a stack of ghast tears": "Соберите стак слёз гаста",
+"Collect a stack of ghast tears": "Добудьте стак слёз гаста",
 
 "Glowstone Miner": "Нужно больше света",
-"Mine or craft a stack of glowstone blocks": "Заполучите стак светокаменных блоков",
+"Mine or craft a stack of glowstone blocks": "Добудьте стак светокамня",
 
 "Magma Cube Squisher": "Убийца магмовых кубов",
-"Collect a stack of magma cream": "Соберите стак сгустков магмы",
+"Collect a stack of magma cream": "Добудьте стак сгустков магмы",
 
 "Seeing Stars": "Звёздная пыль",
 "Mine some glowstone dust from the nether": "Добудьте светокаменную пыль в Незере",
@@ -1403,10 +1403,10 @@
 
 
 "Extrabiologist": "Биолог",
-"Plant a chorus plant in the overworld for study": "Посадите плод коруса в обычном мире ради науки",
+"Plant a chorus plant in the overworld for study": "Посадите цветок хоруса в обычном мире",
 
 "Shulker Breaker": "Разрушитель шалкеров",
-"Collect a stack of shulker shells": "Соберите стак панцирей шалкера",
+"Collect a stack of shulker shells": "Добудьте стак панцирей шалкера",
 
 "Void Walker": "Исследователь пустоши",
 "Explore every end biome": "Исследуйте каждый биом измерения Энд",
@@ -1419,19 +1419,19 @@
 "Create a pickaxe of the highest calibre": "Создайте кирку наивысшего разряда",
 
 "Living Like Kings": "Королевская жизнь",
-"Make yourself shiny with golden armor": "Заставьте себя сиять в золотом наряде",
+"Make yourself shiny with golden armor": "Облачитесь в сияющие золотые доспехи",
 
 "Master Coal Miner": "MoDDyChat",
-"Mine enough coal to make a stack of coal blocks": "Добудьте достаточно угля и создайте стак угольных блоков",
+"Mine enough coal to make a stack of coal blocks": "Добудьте стак угольных блоков",
 
 "Master Diamond Miner": "Мечта шахтёра",
-"Mine enough diamond to make a stack of diamond blocks": "Добудьте достаточно алмазов и создайте стак алмазных блоков",
+"Mine enough diamond to make a stack of diamond blocks": "Добудьте стак алмазных блоков",
 
 "Master Gold Miner": "BarsiGold",
-"Mine enough gold to make a stack of gold blocks": "Добудьте достаточно золота и создайте стак золотых блоков",
+"Mine enough gold to make a stack of gold blocks": "Добудьте стак золотых блоков",
 
 "Master Iron Miner": "Железная выдержка",
-"Mine enough iron to make a stack of iron blocks": "Добудьте достаточно железа и создайте стак железных блоков",
+"Mine enough iron to make a stack of iron blocks": "Добудьте стак железных блоков",
 
 "Meet The Flintstones": "Один из Флинтстоунов",
 "Dig up some flint from a patch of gravel": "Получите кремень из гравия",
@@ -1503,7 +1503,7 @@
 "Get a rabbit's foot": "Получите кроличью лапку",
 
 "Master Angler": "Гроза всех рыб",
-"Collect a stack of all four types of fish": "Соберите по стаку всех четырёх типов рыб",
+"Collect a stack of all four types of fish": "Добудьте по стаку всех видов рыб",
 
 "Tropical Collection": "Тропическая коллекция",
 "Collect all 22 of the common types of tropical fish": "Соберите все 22 возможных вида тропической рыбы",
@@ -1518,7 +1518,7 @@
 
 
 "Businessman": "Бизнесмен",
-"Trade with every type of villager career": "Совершите торговую сделку со всеми типами крестьян",
+"Trade with every type of villager career": "Поторгуйтесь со всеми типами крестьян",
 
 "MURDERER!": "УБИЙЦА!",
 "Kill a villager": "Убейте крестьянина",
@@ -1554,7 +1554,7 @@
 "Craft and place a redstone torch": "Создайте и разместите редстоуновый факел",
 
 "Railwayman": "Железнодорожник",
-"Craft a stack of all the different types of rails": "Создайте по стаку всех видов рельс",
+"Craft a stack of all the different types of rails": "Добудьте по стаку рельс каждого вида",
 
 
 
@@ -1670,10 +1670,10 @@
 "Get stuck in a sweet berry bush. Oh, icky yucky goo!": "Пораньтесь об куст сладких ягод",
 
 "I'm gonna be sick!": "Только бы не отравиться",
-"Slurp every kind of suspicious stew": "Съешьте каждый вид подозрительного супа",
+"Slurp every kind of suspicious stew": "Съешьте каждый вид загадочного рагу",
 
-"Suspicious Looking Stew": "Какой-то подозрительный суп",
-"Slurp some suspicious stew and pray you don't suddenly see giant flying eyeballs in the sky": "Испробуйте подозрительный суп на вкус, надеясь, что не увидите гигантские летающие глаза в небе",
+"Suspicious Looking Stew": "Рагу с приколом",
+"Slurp some suspicious stew and pray you don't suddenly see giant flying eyeballs in the sky": "Попробуйте загадочное рагу на вкус",
 
 "The garbage will do!": "Переработка мусора",
 "Craft a composter using planks and wooden fences then place it": "Создайте компостницу, используя доски и деревянный забор",
@@ -1756,15 +1756,15 @@
 
 
 "A snowball's chance in hell": "Морозная сила",
-"Defeat a Blaze using snowballs": "Победите всполоха при помощи снежков",
+"Defeat a Blaze using snowballs": "Победите всполоха, играя с ним в снежки",
 
 "Axeman": "Озлобенный лесник",
-"Attack a mob using all five types of axes": "Атакуйте моба, используя все пять видов топора",
+"Attack a mob using all five types of axes": "Атакуйте моба, используя каждый вид топора",
 
 "Demolitions Expert": "Взрывотехник",
 "Blow up every hostile mob with TNT": "Взорвите каждого враждебного моба при помощи динамита",
 
-"Diamonds to you!": "Алмазов тебе",
+"Diamonds to you!": "Раздача на спавне",
 "Hit a mob with diamonds": "Ударьте моба алмазом",
 
 "Expelliarmus!": "Экспеллиармус!",
@@ -1780,7 +1780,7 @@
 "Pull a monster using a fishing rod": "Притяните монстра, используя удочку",
 
 "Master Shieldsman": "Мастер уклонений",
-"Deflect an attack from every hostile monster": "Отразите атаку каждого враждебного моба",
+"Deflect an attack from every hostile monster": "Защитите себя от атаки каждого враждебного моба, прикрывшись щитом",
 
 "Ol' Betsy": "Самострел",
 "Shoot a crossbow": "Выстрелите из арбалета",
@@ -1791,8 +1791,8 @@
 "Revenge!": "Месть!",
 "Blow up a creeper with TNT": "Взорвите крипера при помощи динамита",
 
-"Shield Luck": "Удача на Вашей стороне",
-"Protect yourself from an enemy's attack with your shield": "Защитите себя от атаки врага, прикрывшись щитом",
+"Shield Luck": "Удача на вашей стороне",
+"Protect yourself from an enemy's attack with your shield": "Защитите себя от атаки, прикрывшись щитом",
 
 "Shovel Knight": "Лопатный воин",
 "Hit a mob using all five types of shovels": "Ударьте моба, используя все пять видов лопат",
@@ -1886,7 +1886,7 @@
 "Triumph over a full raid for the first time": "Успешно отразите нападение на деревню",
 
 "How to stop a rhino from charging": "Как остановить зверя",
-"Have a Ravager slam into your shield": "Дайте разорителю удариться об ваш щит",
+"Have a Ravager slam into your shield": "Позвольте разорителю удариться об ваш щит",
 
 "Illagers on Patrol": "Разбойничий патруль",
 "Defeat the leader of an Illager Patrol": "Убейте главаря разбойничьего патруля",
@@ -1993,7 +1993,7 @@
 
 
 "The Actual End": "Настоящий конец",
-"Get killed by an Enderman in The End": "Дайте эндермену убить себя в Энде",
+"Get killed by an Enderman in The End": "Позвольте эндермену убить вас в Энде",
 
 "The Beginning": "Начало конца",
 "Say goodbye to the Wither...": "Прощание с визером…",
@@ -2052,7 +2052,7 @@
 "Trigger a Pillager Raid": "Спровоцируйте рейд",
 
 "Superhero of the Village": "Деревенский супергерой",
-"Defeat enough raid captains to obtain a stack of Ominous Banners": "Свергните достаточно предводителей рейдов, чтобы заполучить стак зловещих флагов",
+"Defeat enough raid captains to obtain a stack of Ominous Banners": "Добудьте стак зловещих флагов",
 
 "I've got a bad feeling about this": "Это добром не кончится",
 
@@ -2063,7 +2063,7 @@
 "That was a nice life you had. Shame it had to end at this time time time": "Вы прожили достойную жизнь. Жаль, что она должна закончиться именно так",
 
 "Iskallium Collector": "Слизистая ситуация",
-"Collect enough slimeballs to craft a stack of slime blocks": "Соберите достаточно сгустков слизи и создайте стак блоков слизи",
+"Collect enough slimeballs to craft a stack of slime blocks": "Добудьте стак блоков слизи",
 
 "Spider-skeleton": "Скелет-наездник",
 "Does whatever a spider can": "Две головы лучше одной!",
@@ -2080,7 +2080,7 @@
 
 
 "Magical Stockpile": "Магический запас",
-"Obtain a full stack of bottles of enchanting": "Заполучите стак пузырьков опыта",
+"Obtain a full stack of bottles of enchanting": "Добудьте стак пузырьков опыта",
 
 
 
@@ -2107,7 +2107,7 @@
 "Fly 100km with elytra": "Пролетите 100 км при помощи элитр",
 
 "Global Railway Network": "Железнодорожная сеть",
-"Ride 100km in a minecart": "Преодолейте 100 км на вагонетке",
+"Ride 100km in a minecart": "Преодолейте 100 км в вагонетке",
 
 "Happy Birthday!": "С днём рождения!",
 "Play for a whole year!": "Играйте на протяжении целого года!",
@@ -2119,7 +2119,7 @@
 "Walk 1000km": "Пройдите 1000 км",
 
 "I Like Trains": "Любитель поездов",
-"Ride 10km in a minecart": "Преодолейте 10 км на вагонетке",
+"Ride 10km in a minecart": "Преодолейте 10 км в вагонетке",
 
 "Journeyman Enchanter": "Подмастерье зачарований",
 "Enchant 50 items": "Зачаруйте 50 предметов",
@@ -2143,7 +2143,7 @@
 "Sprint 42km": "Пробегите 42 км",
 
 "Minecart Rider": "Вагонетчик",
-"Ride 1km in a minecart": "Преодолейте 1 км на вагонетке",
+"Ride 1km in a minecart": "Преодолейте 1 км в вагонетке",
 
 "Novice Enchanter": "Исследователь зачарований",
 "Enchant 10 items": "Зачаруйте 10 предметов",
@@ -2221,7 +2221,7 @@
 "Cure a zombie villager of every profession": "Излечите зомби-крестьянина каждой профессии",
 
 "A Furious Test Subject": "Яростный подопытный",
-"Get attacked by a mob with every potion effect": "Будьте атакованы мобом со всеми эффектами зелий",
+"Get attacked by a mob with every potion effect": "Получите урон от моба, находящегося под всеми эффектами зелий",
 
 
 
@@ -2242,7 +2242,7 @@
 "Travel a million blocks away from spawn": "Пропутешествуйте миллион блоков от спавна",
 
 "Abyss Lord": "Лорд Бездны",
-"Obtain a stack of Conduits": "Заполучите стак морских источников",
+"Obtain a stack of Conduits": "Добудьте стак морских источников",
 
 "All the Blocks!": "Абсолютно все блоки!",
 "Obtain all the blocks!": "Заполучите все возможные блоки!",
@@ -2254,13 +2254,13 @@
 "Kill every mob in the game with lingering potions": "Убейте каждого моба в игре при помощи туманного зелья",
 
 "Creepergeddon": "Криперогеддон",
-"Obtain a stack of Creeper Heads": "Заполучите стак голов крипера",
+"Obtain a stack of Creeper Heads": "Добудьте стак голов крипера",
 
 "Death From All": "Смерть от всех",
 "Get killed by every mob that can kill you. (Ignore in hardcore mode)": "Будьте убиты каждым мобом в игре, который может навредить вам",
 
 "Dragon Army": "Драконья армия",
-"Obtain a stack of Ender Dragon Heads": "Заполучите стак голов дракона",
+"Obtain a stack of Ender Dragon Heads": "Добудьте стак голов дракона",
 
 "Dragon vs Dragon II: Electric Boogaloo": "Дракон на Дракона II: Реванш",
 "Defeat the Ender Dragon while wearing a dragon head... without touching the ground": "Победите Эндер-дракона, надев при этом голову дракона… и не касаясь земли",
@@ -2281,34 +2281,34 @@
 "Fill your entire inventory with Totems of Undying": "Заполните весь ваш инвентарь тотемами бессмертия",
 
 "Nuclear Fusion": "Термоядерная реакция",
-"Strike every mob that can transform with lightning at once": "Запустите молнией в каждого моба, что может трансформироваться",
+"Strike every mob that can transform with lightning at once": "Запустите молнией во всех мобов, которые могут трансформироваться... одновременно",
 
 "Potion Master": "Зельемастер",
 "Kill every mob in the game with splash potions": "Убейте каждого моба в игре при помощи взрывных зелий",
 
 "Rise of the Skeletons": "Восстание скелетов",
-"Obtain a stack of Skeleton Skulls": "Заполучите стак черепов",
+"Obtain a stack of Skeleton Skulls": "Добудьте стак черепов скелета",
 
 "Super Challenges": "Сверхвызовы",
 "Good luck completing... any of these ;)": "Удачи в завершении… любого из испытаний ;)",
 
 "Stack All the Blocks!": "Простаковать все блоки!",
-"Obtain a stack of all the blocks!": "Заполучите по стаку каждого из блоков!",
+"Obtain a stack of all the blocks!": "Добудьте по стаку каждого из блоков!",
 
 "Stack All the Items!": "Простаковать все предметы!",
-"Obtain a stack of all the items!": "Заполучите по стаку каждого из предметов!",
+"Obtain a stack of all the items!": "Добудьте по стаку каждого из предметов!",
 
 "The World Is Ending": "Конец света",
 "Summon ten withers at once": "Вызовите десять визеров за раз",
 
 "Warlock": "Чернокнижник",
-"Obtain a stack of Beacons": "Заполучите стак маяков",
+"Obtain a stack of Beacons": "Добудьте стак маяков",
 
 "We're in the endgame now": "Финальное сражение",
 "Construct a village in the End and defend it from a raid": "Возведите деревню в измерении Энд, а затем защитите её от рейда",
 
 "Zombie Apocalypse": "Зомби-апокалипсис",
-"Obtain a stack of Zombie Heads": "Заполучите стак голов зомби",
+"Obtain a stack of Zombie Heads": "Добудьте стак голов зомби",
 
 
 
@@ -2333,7 +2333,7 @@
 "Get stung to death by bees": "Будьте закусаны пчёлами до смерти",
 
 "Honey, I'm Home!": "Я дома, сладкий!",
-"Craft a stack of honeycomb blocks for building a home out of": "Создайте стак блоков пчелиных сот, чтобы хватило на постройку дома",
+"Craft a stack of honeycomb blocks for building a home out of": "Добудьте стак блоков мёда",
 
 
 
@@ -2351,7 +2351,7 @@
 
 
 "Everybody Loves Ice!": "Все же любят лёд!",
-"Obtain a stack of every type of ice in your inventory": "Соберите в инвентаре по стаку каждого вида льда",
+"Obtain a stack of every type of ice in your inventory": "Добудьте по стаку каждого вида льда",
 
 
 
@@ -2474,7 +2474,7 @@
 "Place every type of cookable food on a campfire" : "Поместите каждый приготовляемый предмет на костёр",
 
 "Oresome!" : "Рудное дело",
-"Mine a stack of every ore block" : "Добудьте по стаку каждой руды",
+"Mine a stack of every ore block" : "Добудьте по стаку каждого вида руды",
 
 
 
@@ -2489,7 +2489,7 @@
 "Light up the area with soul fire torches and soul fire lanterns!" : "Осветите местность факелами и фонарями душ",
 
 "Let There Be Light!" : "Да будет свет!",
-"Hold a stack of every light-emitting block and item" : "Заполучите по стаку каждого блока и предмета, излучающего свет",
+"Hold a stack of every light-emitting block and item" : "Добудьте по стаку каждого блока и предмета, излучающего свет",
 
 "No Chain, No Gain" : "Нет цепи, нет выгоды",
 "Craft a chain using an iron ingot and iron nuggets" : "Создайте цепь из железного слитка и самородков",
@@ -2513,7 +2513,7 @@
 "Compost every type of compostable item in a Composter" : "Прокомпостируйте все возможные предметы в компостнице",
 
 "A Gluttonous Diet" : "Прожорливая диета",
-"Obtain a full stack of all the foods" : "Заполучите по стаку каждого вида еды",
+"Obtain a full stack of all the foods" : "Добудьте по стаку каждого вида еды",
 
 
 
@@ -2528,19 +2528,19 @@
 "Eat Rabbit Stew, then avoid eating for the next 3 in-game days" : "Съешьте тушёного кролика, а затем не питайтесь в течение трёх игровых дней",
 
 "Nest, Quick!" : "Гнездо, быстро!",
-"Collect a stack of empty bee nests" : "Соберите стак пустых пчелиных гнёзд",
+"Collect a stack of empty bee nests" : "Добудьте стак пустых пчелиных гнёзд",
 
 "Heavy Duty Caravan" : "Тяжёлый караван",
 "Tame a llama with a strength of 5" : "Приручите ламу с силой 5",
 
 "Save the Turtles!" : "Спасти черепашек!",
-"Collect a stack of turtle eggs" : "Соберите стак черепаховых яиц",
+"Collect a stack of turtle eggs" : "Добудьте стак черепашьих яиц",
 
 
 
 
 "So Long & Thanks For The Fish" : "Удачи, и спасибо за рыбу!",
-"Get murdered by dolphins" : "Будьте убиты дельфинами",
+"Get murdered by dolphins" : "Будьте убиты дельфином",
 
 
 
@@ -2573,16 +2573,16 @@
 "Trade with a villager at height limit" : "Поторгуйтесь с крестьянином на максимальной высоте мира",
 
 "Workaholic" : "Трудоголик",
-"Craft a stack of all the villager job site blocks" : "Создайте по стаку всех рабочих блоков крестьян",
+"Craft a stack of all the villager job site blocks" : "Добудьте по стаку всех рабочих блоков крестьян",
 
 "I am Loot!" : "Я есть Лут!",
-"Open up every type of loot chest" : "Откройте все типы сундуков с добычей",
+"Open up every type of loot chest" : "Откройте все существующие сундуки с добычей",
 
 
 
 
 "Paleontologist" : "Палеонтолог",
-"Craft or mine a stack of bone blocks" : "Заполучите стак костных блоков",
+"Craft or mine a stack of bone blocks" : "Добудьте стак костных блоков",
 
 "Impossible..." : "Невозможно…",
 "Kill an Enderman with an arrow" : "Убейте эндермена при помощи стрелы",
@@ -2702,7 +2702,7 @@
 "Explore every Nether biome" : "Исследуйте все биомы Незера",
 
 "Hell Botanist" : "Незерский ботаник",
-"Gather a stack of every Nether plant" : "Соберите по стаку каждого незерского растения",
+"Gather a stack of every Nether plant" : "Добудьте по стаку каждого растения из Незера",
 
 "Spreading Corruption" : "Распространение заражения",
 "Place one of every nether block in the overworld" : "Установите каждый вариант незерского блока в обычном мире",
@@ -2711,7 +2711,7 @@
 "Place one of every nether block in The End" : "Установите каждый вариант незерского блока в измерении Энд",
 
 "Roadhog" : "Лихач",
-"Hunt a Hoglin for food" : "Поохоттесь на хоглина ради еды",
+"Hunt a Hoglin for food" : "Поохоттесь на хоглина",
 
 "When Hoglins Breed" : "Когда хоглины размножаются",
 "Breed a baby Hoglin using Crimson Fungi" : "Размножьте маленького хоглина при помощи багрового гриба",
@@ -2723,7 +2723,7 @@
 "Punch a baby Hoglin that is being ridden by a baby Piglin" : "Ударьте маленького хоглина, на котором сидит маленький пиглин",
 
 "Zork Chop" : "Зомбекон",
-"Bring a Hoglin into the Overworld to zombify it, then kill it for zorkchops" : "Приведите хоглина в обычный мир, чтобы зомбифицировать, а затем убейте его ради еды",
+"Bring a Hoglin into the Overworld to zombify it, then kill it for zorkchops" : "Приведите хоглина в обычный мир, чтобы зомбифицировать, а затем убить его",
 
 "This Boat Has Legs" : "Ты неси по лаве меня",
 "Ride a Strider with a Warped Fungus on a Stick" : "Прокатитесь на лавомерке, управляя ею с помощью удочки с искажённым грибом",
@@ -2759,7 +2759,7 @@
 "Smite a ghast with lightning from the Overworld’s heavens" : "Поразите гаста молнией из небес обычного мира",
 
 "Time to Fire Back" : "Ответный удар",
-"Craft a stack of fire charges" : "Создайте стак огненных зарядов",
+"Craft a stack of fire charges" : "Добудьте стак огненных зарядов",
 
 "From Whence It Came!" : "Откуда это здесь?",
 "Find a broken Nether Portal in the Nether" : "Найдите сломанный портал в Незере",
@@ -2777,7 +2777,7 @@
 "Obtain the Pigstep music disc from a Bastion Remnant" : "Заполучите пластинку «Pigstep» в развалинах бастиона",
 
 "Nugget in a Biscuit" : "Происхождение золота",
-"Mine Nether Gold Ore for a pile of gold nuggets" : "Добудьте незерскую золотую руду ради получения золотых самородков",
+"Mine Nether Gold Ore for a pile of gold nuggets" : "Добудьте незерскую золотую руду",
 
 "Dark Ages" : "Тёмные века",
 "Mine Blackstone from a Basalt Deltas biome" : "Добудьте чернит в биоме базальтовых дельт",
@@ -2858,10 +2858,10 @@
 
 
 "Constellation" : "Созвездие",
-"Collect 64 nether stars" : "Соберите стак звёзд Незера",
+"Collect 64 nether stars" : "Добудьте стак звёзд Незера",
 
 "Hearts of the Stack" : "Сердечный стак",
-"Collect 64 Hearts of the Sea" : "Соберите стак сердец моря",
+"Collect 64 Hearts of the Sea" : "Добудьте стак сердец моря",
 
 "The Devil's Distance" : "Расстояние дьявола",
 "Use the Nether to travel 666km in the Overworld" : "Используйте Незер, чтобы переместиться на 666 км в обычном мире",
@@ -2901,7 +2901,7 @@
 
 "Defeat a Drowned that is holding both a nautilus shell and a trident" : "Победите утопленника, держащего раковину наутилуса и трезубец одновременно",
 
-"Strip the bark off of all six types of logs" : "Снимите кору из всех шести типов брёвен",
+"Strip the bark off of all six types of logs" : "Снимите кору из всех шести видов брёвен",
 
 "Sprint 42.195km" : "Пробегите 42,195 км",
 
@@ -2914,17 +2914,17 @@
 
 
 # Hardcore-Friendly Version description changes
-"Get attacked by a natural iron golem defending its village" : "Подвергнитесь нападению естественно-сгенерировавшегося железного голема, защищающего свою деревню",
+"Get attacked by a natural iron golem defending its village" : "Получите урон от железного голема",
 
-"Get attacked by dolphins" : "Подвергнуться нападению дельфинов",
+"Get attacked by dolphins" : "Получите урон от дельфина",
 
 "Get hurt by every mob that can kill you" : "Получите урон от каждого моба, который может вас убить",
 
-"Get attacked by an Enderman in The End" : "Подвергнитесь нападению Эндермена в Энде",
+"Get attacked by an Enderman in The End" : "Получите урон от эндермена в Энде",
 
 "Take damage twice within ten seconds" : "Получите урон дважды в течение десяти секунд",
 
-"Get attacked by Piglin Brutes" : "Подвергнуться нападению брутального пиглина",
+"Get attacked by Piglin Brutes" : "Получите урон от брутального пиглина",
 
 
 # All advancements added in version 1.11 are here
@@ -2932,7 +2932,7 @@
 "Use planks and sticks to make a shovel" : "Используйте доски и палки, чтобы сделать лопату",
 
 
-"Throw diamonds at another player or mob" : "Киньте алмазы в другого игрока или моба",
+"Throw diamonds at another player or mob" : "Дайте алмаз мобу",
 
 
 "One Pickle, Two Pickle, Sea Pickle, Four" : "Четыре солёных огурца",
@@ -2950,10 +2950,10 @@
 
 
 "Delicious Fish" : "Вкусная рыба",
-"Cook and eat a fish!" : "Приготовьте и съешьте рыбу!",
+"Cook and eat a fish!" : "Съешьте жареную рыбу",
 
 "Milkshroom" : "Молочный гриб",
-"Milk a mooshroom with a bowl to get mushroom stew" : "Подоить грибную корову миской, чтобы получить загадочное рагу",
+"Milk a mooshroom with a bowl to get mushroom stew" : "Подоите грибную корову миской, чтобы получить загадочное рагу",
 
 "Live and Let Dye" : "Живи и дай умереть",
 "Dye Sheep with all 16 colors of wool" : "Покрасьте овцу всеми 16 цветами",
@@ -2986,13 +2986,13 @@
 
 
 "Controlled Detonation" : "Контролируемая детонация",
-"Persuade a Creeper to blow up using Flint and Steel" : "Уговорите крипера взорваться с помощью кремня и стали",
+"Persuade a Creeper to blow up using Flint and Steel" : "Уговорите крипера взорваться с помощью огнива",
 
 "Miracle Drink" : "Чудо-напиток",
 "Drink milk or honey to cure poison when on half a heart" : "Выпейте молоко или мёд, чтобы вылечить яд, когда у вас осталась половина сердца",
 
 "Dead Really Don’t Die" : "Мёртвые действительно не умирают",
-"Give a zombie a Totem... so that you have to kill it twice" : "Дайте зомби тотем… чтобы вам пришлось убить его дважды",
+"Give a zombie a Totem... so that you have to kill it twice" : "Дайте зомби тотем бессмертия… чтобы вам пришлось убить его дважды",
 
 
 "Half Heart Life" : "На краю гибели",
@@ -3009,7 +3009,7 @@
 "Reel in a Strider using a Fishing Rod" : "Притяните лавомерку при помощи удочки",
 
 "Nether Rock Collection" : "Коллекция незерских камней",
-"Mine a stack of Netherrack, Basalt, Blackstone and Glowstone in the Nether" : "Добудьте стак незерака, базальта, тёмного и светлого камня в Незере",
+"Mine a stack of Netherrack, Basalt, Blackstone and Glowstone in the Nether" : "Добудьте по стаку блоков незерака, базальта, чернита и светокамня",
 
 
 # Name and description changes in version 1.11
@@ -3505,10 +3505,10 @@
 "Craft some Cut Copper": "Сделайте немного резных блоков меди",
 
 "Copper Miner": "Любитель меди",
-"Mine a stack of Raw Copper": "Добудьте стак необработанной меди",
+"Mine a stack of Raw Copper": "Добудьте стак рудной меди",
 
 "Master Copper Miner": "Помешанный на меди",
-"Mine enough copper to make a stack of Copper Blocks": "Добудьте достаточно меди, чтобы сделать стак медных блоков",
+"Mine enough copper to make a stack of Copper Blocks": "Добудьте стак медных блоков",
 
 "Wax On": "Навести воск",
 "Use Honeycombs to wax a Copper Block, preventing it from oxidising": "Нанесите воск на медный блок с помощью пчелиных сот",
@@ -3520,13 +3520,13 @@
 "Obtain a fully oxidized Block of Copper": "Заполучите полностью окисленный блок меди",
 
 "Sly Copper: The Copper Heist": "Хитрая медь: Ограбление меди",
-"Collect a stack of every oxidizing stage of Copper Block, Cut Copper, Cut Copper Slabs and Stairs, and the waxed variants of them all": "Соберите по стаку все этапы окисления: медный блок, резной медный блок, резные медные плиты и ступеньки, а также их все вощёные варианты",
+"Collect a stack of every oxidizing stage of Copper Block, Cut Copper, Cut Copper Slabs and Stairs, and the waxed variants of them all": "Добудьте по стаку всех блоков из меди, включая каждый этап окисления, а также их вощёные варианты",
 
 "G.I. Geode": "Жеода",
-"Find an Amethyst Geode and mine an Amethyst Cluster": "Найдите аметистовую жеоду и добудьте кластер аметиста",
+"Find an Amethyst Geode and mine an Amethyst Cluster": "Найдите аметистовую жеоду и добудьте осколок аметиста",
 
 "Good For Your Bones": "Хорошо для ваших костей",
-"Mine some Calcite encasing an Amethyst Geode": "Добудьте немного кальцита в оболочке аметистовой жеоды",
+"Mine some Calcite encasing an Amethyst Geode": "Добудьте немного кальцита в аметистовой жеоде",
 
 "Galileo Figaro": "Галилей Фигаро",
 "Zoom in on something using a Spyglass": "Посмотрите в подзорную трубу",
@@ -3538,10 +3538,10 @@
 "Craft Tinted Glass using Glass and Amethyst Shards and use it to block out light": "Сделайте стекло тонированным, добавив осколки аметиста",
 
 "Amethyst Miner": "Аметистовый охотник",
-"Mine a stack of Amethyst Blocks, Amethyst Clusters, and every size of Amethyst Bud": "Соберите по стаку блоков аметиста, кластеров аметиста и бутоны аметиста любого размера",
+"Mine a stack of Amethyst Blocks, Amethyst Clusters, and every size of Amethyst Bud": "Добудьте по стаку аметистовых блоков, аметистовой друзы и аметистовых бутонов каждого размера",
 
 "Mr. Bean": "Мистор Бин",
-"Mine and craft a stack of Raw Iron, Copper and Gold Blocks": "Добудьте или создайте стак необработанных железных, медных и золотых блоков",
+"Mine and craft a stack of Raw Iron, Copper and Gold Blocks": "Добудьте по стаку блоков рудного железа, меди и золота",
 
 "Filthy Lich": "Мерзкий Лич",
 "Use shears to obtain Glow Lichen from an underground cave": "Используйте ножницы для получения светящегося лишайника в подземной пещере",
@@ -3565,13 +3565,13 @@
 "Obtain a Spore Blossom": "Заполучите спороцвет",
 
 "Lush Hour": "Пышный час",
-"Obtain a stack of all lush-related blocks": "Соберите стак из всех блоков, связанных с пышностью",
+"Obtain a stack of all lush-related blocks": "Добудьте по стаку всех блоков, связанных с пышностью",
 
 "A Shiny Treat": "Блестящее угощение",
 "Eat some Glow Berries": "Съешьте немного светящихся ягод",
 
 "Bulldozer": "Бульдозер",
-"Destroy a total of 10,000 blocks of stone": "Уничтожить в общей сложности 10,000 блоков камня",
+"Destroy a total of 10,000 blocks of stone": "Уничтожьте в общей сложности 10,000 блоков камня",
 
 "Strike a Light": "Зажги свет",
 "Craft Flint and Steel and use it to light the ground on fire": "Создайте зажигалку и используйте её, чтобы поджечь землю",
@@ -3586,13 +3586,13 @@
 "Place a candle and light it using Flint and Steel": "Поставьте свечу и зажгите её, используя зажигалку",
 
 "The Ritual Begins": "Ритуал начинается",
-"Get one stack of Black Candles": "Заполучите стак чёрных свечей",
+"Get one stack of Black Candles": "Добудьте стак чёрных свечей",
 
 # Happy Birthday!
 "Place a candle on a cake": "Поставьте свечу на торт",
 
 "Pane in the Glass": "Стекло в стекле",
-"Craft a stack of all 16 colors of stained glass panes": "Создайте по стаку все стеклянные панели всех 16 цветов",
+"Craft a stack of all 16 colors of stained glass panes": "Добудьте по стаку стеклянных панелей каждого цвета",
 
 "Hot Tub": "Джакузи",
 "Sit in a cauldron filled with lava": "Сядьте в котел, наполненный лавой",
@@ -3622,20 +3622,20 @@
 
 
 "Goat out of here!": "Сама напросилась!",
-"Slaughter a Goat": "Убить козу",
+"Slaughter a Goat": "Убейте козу",
 
 "Billy the Kid": "Малыш Билли",
 "Breed two Goats together using Wheat": "Размножьте двух коз пшеницей",
 
 "Goat Simulator": "Симулятор козы",
-"Get killed by a Goat that rammed into you.": "Умереть от козы, которая врезалась в вас",
+"Get killed by a Goat that rammed into you.": "Умрите от козы, позволив ей протаранить вас",
 "You have Goat to be kidding me!": "Ты, должно быть, издеваешься надо мной!",
 
 "Whatever Floats Your Goat!": "Волк, коза и капуста",
 "Get in a Boat and float with a Goat": "Залезьте в лодку и плывите вместе с козой",
 
 "Screaming Milk": "Кричащее молоко",
-"Milk a screaming Goat": "Подоить кричащую козу",
+"Milk a screaming Goat": "Подоите кричащую козу",
 
 "Cephalight": "Нечто светящееся",
 "Kill a Glow Squid": "Убейте светящегося спрута",
@@ -3665,7 +3665,7 @@
 "Catch all variants of Axolotls inside a Bucket": "Поймайте все разновидности аксолотлей в ведро",
 
 "Axeolotl": "Грустное прощание",
-"Kill an Axolotl with an axe": "Убить аксолотля топором",
+"Kill an Axolotl with an axe": "Убейте аксолотля топором",
 
 "Humble Bundle": "Скромный комплект",
 "Craft a Bundle using Rabbit Hide and String": "Создайте мешок, используя кроличьи шкурки и нитки",
@@ -3674,7 +3674,7 @@
 "Put a Bundle in a Bundle in a Bundle in a Bundle in a Bundle… 16 layers deep": "Поместите мешок в мешок в мешок в мешок в мешок… до 16 раз",
 
 "Swine Sailing": "Свиной спорт",
-"Ride a saddled pig in a boat in a minecart": "Оседлать свинью, находящуюся в лодке, которая находится на вагонетке",
+"Ride a saddled pig in a boat in a minecart": "Оседлайте свинью, находящуюся в лодке, которая находится в вагонетке",
 
 "Llama Festival": "Фестиваль ламы",
 "Sit on Llamas with all 16 colors of carpet. Getting off will reset your progress": "Сядьте на лам с ковром всех 16 цветов. Если вы слезите, то прогресс будет сброшен",
@@ -3683,7 +3683,7 @@
 "Look at a Parrot through a Spyglass": "Взгляните на попугая через подзорную трубу",
 
 "So Hungry I Could Eat a Horse!": "Я так голоден, что могу съесть лошадь!",
-"Feed a Horse every type of food that it can eat": "Кормите лошадь всеми типами еды, которую она может съесть",
+"Feed a Horse every type of food that it can eat": "Кормите лошадь всеми видами еды, которую она может съесть",
 
 
 
@@ -3701,10 +3701,10 @@
 "Pick up some Powder Snow in a Bucket": "Соберите немного рыхлого снега в ведро",
 
 "Boatception": "Новый Титаник",
-"Get in a boat within a shipwreck": "Сядьте в лодку при кораблекрушении",
+"Get in a boat within a shipwreck": "Сядьте в лодку, находясь в затонувшем корабле",
 
 "Pandamonium": "Пандамоний",
-"Feed cake to every type of panda": "Покормите тортом панд всех типов",
+"Feed cake to every type of panda": "Покормите тортом панду каждого вида",
 
 "Edge of the Jungle": "Окраина джунглей",
 "Enter a Modified Jungle Edge - the rarest biome in Minecraft": "Войдите в рельефную окраину джунглей - самый редкий биом в игре",
@@ -3724,11 +3724,11 @@
 "Rare Candy Shop": "Магазин редких конфет",
 "Trade for a Bottle o’ Enchanting from a Cleric": "Выторгуйте бутылёк с опытом у священника",
 
-"Buy Low, Sell High": "Купить по низкой цене, продать по высокой",
-"Trade with a villager while under the Hero of the Village effect": "Торгуйте с крестьянином, находясь под действием эффекта «Герой деревни»",
+"Buy Low, Sell High": "Пользуясь выгодой",
+"Trade with a villager while under the Hero of the Village effect": "Поторгуйтесь с крестьянином, находясь под действием эффекта «Герой деревни»",
 
 "Justice": "Справедливость",
-"Kill each type of Illager with a single crossbow arrow": "Убейте одним выстрелом из арбалета разбойников каждого типа",
+"Kill each type of Illager with a single crossbow arrow": "Убейте разбойников каждого типа... одним выстрелом из арбалета",
 
 
 
@@ -3746,13 +3746,13 @@
 
 
 "It's time consuming": "Это требует времени",
-"Kill something using a clock": "Убить что-нибудь или кого-нибудь с помощью часов",
+"Kill something using a clock": "Убейте кого-нибудь с помощью часов",
 
 "Inspector Gadget": "Инспектор Гаджет",
-"Kill a zombie while holding a spyglass": "Убить зомби, держа в руках подзорную трубу",
+"Kill a zombie while holding a spyglass": "Убейте зомби, держа в руках подзорную трубу",
 
 "Rock, Paper, Shears!": "Камень, ножницы, бумага",
-"Beat a zombie at rock, paper, shears": "Сыграйте с зомби в камень-ножницы-бумага. Ваш ход - в ваших руках!",
+"Beat a zombie at rock, paper, shears": "Победите зомби в камень-ножницы-бумага. Ваш ход - в ваших руках!",
 
 "Backfire": "Обратный огонь",
 "Kill a Blaze using a Blaze Rod while both you and it are on fire": "Убейте всполоха с помощью огненного жезла, пока вы оба в огне",
@@ -3767,7 +3767,7 @@
 "Play every possible instrument on a Note Block": "Играйте на всех возможных инструментах на нотном блоке",
 
 "Travelling Bard": "Путешествующий Бард",
-"Play a Note Block in every type of biome": "Сыграйте на нотном блоке во всех типах биомов",
+"Play a Note Block in every type of biome": "Сыграйте на нотном блоке во всех биомах",
 
 "Vibe Check": "Проверка вибрации",
 "Obtain a Sculk Sensor": "Заполучите скалк-сенсор",
@@ -3782,13 +3782,13 @@
 
 
 # The Haggler
-"Trade with villagers 100 times": "Поторгавать с крестьянами 100 раз",
+"Trade with villagers 100 times": "Поторгуйтесь с крестьянами 100 раз",
 
 "Big Spender": "Транжира",
-"Trade with villagers 500 times": "Поторгавать с крестьянами 500 раз",
+"Trade with villagers 500 times": "Поторгуйтесь с крестьянами 500 раз",
 
 "STONKS!": "СТОНКС!",
-"Trade with villagers 2500 times": "Поторгавать с крестьянами 2,500 раз",
+"Trade with villagers 2500 times": "Поторгуйтесь с крестьянами 2,500 раз",
 
 
 
@@ -3809,7 +3809,7 @@
 "Look at a Ghast through a Spyglass": "Взгляните на гаста через подзорную трубу",
 
 "A Piglin's Best Friend": "Лучший друг пиглина",
-"Give a total of 500 gold to Piglins during your nether adventures": "Дайте в общей сложности 500 золотых пиглинам во время ваших приключений в Незере",
+"Give a total of 500 gold to Piglins during your nether adventures": "Дайте в общей сложности 500 золотых слитков пиглинам во время ваших приключений в Незере",
 
 "Instant Mining": "Мгновенный шахтёр",
 "Hold a Diamond or Netherite Pickaxe enchanted with Efficiency V while under the Haste II effect": "Держите алмазную или незеритовую кирку, зачарованную на «Эффективность V», когда на вас действует эффект «Спешка II»",
@@ -3818,10 +3818,10 @@
 "Acquire every beacon-induced effect at once": "Приобретите все эффекты, полученные маяком, сразу",
 
 "Master Netherite Miner": "Шахтёр, не уважающий своё время",
-"Mine enough Ancient Debris to make a stack of Netherite Ingots (don’t worry, mining a stack of Netherite Blocks is optional in this datapack, I’m not that evil…)": "Добудьте достаточно древних обломков, чтобы сделать стак слитков незерита",
+"Mine enough Ancient Debris to make a stack of Netherite Ingots (don’t worry, mining a stack of Netherite Blocks is optional in this datapack, I’m not that evil…)": "Добудьте стак незеритовых слитков",
 
 "Netherite Mad Lad": "Незеритовый безумец",
-"Be an absolute madlad and grind enough Ancient Debris to make a stack of Netherite Blocks (this is hidden and not required for Advancement Legend btw…)": "Будьте абсолютным безумцем и переплавьте достаточно древних обломков, чтобы собрать стак блоков незерита",
+"Be an absolute madlad and grind enough Ancient Debris to make a stack of Netherite Blocks (this is hidden and not required for Advancement Legend btw…)": "Добудьте стак незеритовых блоков",
 
 
 
@@ -3860,13 +3860,13 @@
 "Stepping on Legos": "Наступая на Лего",
 "Walk on some hot Magma Blocks in the Nether": "Прогуляйтесь по горячим блокам магмы в Незере",
 
-"Mine a stack of Raw Iron": "Добудьте стак необработанной железной руды",
+"Mine a stack of Raw Iron": "Добудьте стак рудного железа",
 
-"Mine a stack of Raw Gold": "Добудьте стак необработанной золотой руды",
+"Mine a stack of Raw Gold": "Добудьте стак рудного золота",
 
 "Craft and ride a boat to sail on the high seas": "Создайте и управляйте лодкой, чтобы плыть в открытом море",
 
-"Mine a stack of Netherrack, Basalt, Blackstone and Magma in the Nether": "Добудьте стак адского камня, базальта, чернита и магма блоков в Незере",
+"Mine a stack of Netherrack, Basalt, Blackstone and Magma in the Nether": "Добудьте по стаку блоков незерака, базальта, чернита и магмы",
 
 "Use a shovel to create dirt paths": "Используйте лопату для создания земляной трапинки",
 
@@ -3876,9 +3876,9 @@
 
 
 # Hardcore-Friendly Version for 1.12 description changes
-"Get stung by a bee": "Дайте себя ужалить пчеле",
+"Get stung by a bee": "Позвольте пчеле ужалить вас",
 
-"Get rammed into by a Goat.": "Дать козе возможность протаранить вас",
+"Get rammed into by a Goat.": "Позвольте козе протаранить вас",
 
 "Obtain a carved pumpkin enchanted with Curse of Binding. Be careful not to put it on!": "Заполучите резную тыкву, зачарованную на «Проклятие несъёмности». Будьте осторожны, чтобы не надеть её!",
 
@@ -3941,9 +3941,9 @@
 "In memoriam of the Great Spitting Massacre of 2021": "В память о Великой кровавой бойне 2021 года",
 
 "Matryoshka Doll": "Матрёшка",
-"And they don't stop coming,": "И они не перестают приходить,",
-"and they don't stop coming,": "и они не перестают приходить,",
-"and they don't stop coming…": "и они не перестают приходить…",
+"And they don't stop coming,": "В большой - средняя,",
+"and they don't stop coming,": "в средней - маленькая,",
+"and they don't stop coming…": "в маленькой - ещё меньше…",
 
 "Basketblock": "Баскетбольный блок",
 "That's right Number 7, it's a cube!": "Правильно, номер 7, это куб!",
@@ -4136,12 +4136,12 @@
 
 
 "A Good Start": "Хорошое начало",
-"Chop down enough trees to collect a full stack of one log type": "Срубите достаточно деревьев, чтобы собрать стак брёвен одного типа",
+"Chop down enough trees to collect a full stack of one log type": "Добудьте стак брёвен",
 
 
 
 "Squid Game": "Игра в кальмара",
-"Hunt enough Squids to collect a stack of Ink Sacs": "Получите стак чернильных мешков",
+"Hunt enough Squids to collect a stack of Ink Sacs": "Добудьте стак чернильных мешков",
 
 
 
@@ -4154,7 +4154,7 @@
 "Get hunted by a Polar Bear": "Будьте убиты белым медведем",
 
 "Dive Bomb": "Пушечное ядро!",
-"Dive into water from a cliff at least 50 blocks tall": "Нырнуть в воду со скалы, высотой не менее 50 блоков",
+"Dive into water from a cliff at least 50 blocks tall": "Нырните в воду со скалы, высотой не менее 50 блоков",
 
 "Captain America": "Капитан Америка",
 "Get completely frozen inside two blocks of Powder Snow for a loooong time.": "Полностью замёрзните в двух блоках рыхлого снега на дооолгое время",
@@ -4180,12 +4180,12 @@
 "Flick a lever": "Щёлкните рычагом",
 
 "On A Rail": "На рельсах!",
-"Travel by Minecart in a straight line to at least 1 km from where you started": "Пропутешествуйте на вагонетке по прямой, не менее чем на 1 км",
+"Travel by Minecart in a straight line to at least 1 km from where you started": "Пропутешествуйте в вагонетке по прямой, не менее чем на 1 км",
 
 
 
 "Baron of Blacksmiths": "Барон кузнецов",
-"Get a stack of regular, chipped and damaged Anvils": "Получите по стаку обычных, повреждённых и разбитых наковален",
+"Get a stack of regular, chipped and damaged Anvils": "Добудьте по стаку обычной, повреждённой и разбитой наковальни",
 
 
 
@@ -4216,16 +4216,16 @@
 "Kill a Skeleton or Stray while both you and it have levitation": "Убейте скелета или зимогора, пока у вас и у него левитация",
 
 "Riddle Me This": "Загадка:",
-"The first is to smith a compass that vanishes": "Первое - выковать исчезающий компас",
-"The second is to slay a corpse that fishes": "Второе - убить труп, ловящий рыбу",
-"The third is to travel on an upside-down mount": "Третье - путешествовать на перевернутом коне",
+"The first is to smith a compass that vanishes": "Первое - создай исчезающий компас",
+"The second is to slay a corpse that fishes": "Второе - убейте труп, ловящий рыбу",
+"The third is to travel on an upside-down mount": "Третье - путешествуйте на перевёрнутом коне",
 "The fourth is to take a temple tripwire into account": "Четвёртое - принять во внимание растяжку в храме",
 "The fifth is to be invisible yet be visible everywhere": "Пятое - быть невидимым, но быть видимым повсюду",
-"The sixth is to return the product of a fowl in mid-air": "Шестое - вернуть в воздухе курице её же продукт",
-"The seventh is to allow a child to commit the act of stealing": "Седьмое - позволить ребёнку совершить воровство",
-"The eighth is to smite a Wither with splash healing": "Восьмой - поразить иссушителя исцелением",
+"The sixth is to return the product of a fowl in mid-air": "Шестое - верните парящей курице её же продукт",
+"The seventh is to allow a child to commit the act of stealing": "Седьмое - позвольте ребёнку совершить воровство",
+"The eighth is to smite a Wither with splash healing": "Восьмой - поразите иссушителя исцелением",
 "The ninth is to be a pirate; parrot, spyglass, map, and boat": "Девятое - быть пиратом: попугай, подзорная труба, карта и лодка",
-"The tenth, if you can achieve it, you will be the G.O.A.T.": "Десятое, если вы сможете его достичь, вы станете мудрейшим игроком",
+"The tenth, if you can achieve it, you will be the G.O.A.T.": "Если вы сможете достичь это, вы станете мудрейшим игроком",
 
 # Riddle Me This messages and hints
 
@@ -4288,7 +4288,7 @@
 "Dye some leather pants with one color, then put them on": "Покрасьте кожаные штаны и наденьте их",
 
 ## Fuel Engine
-"Craft a Minecart with Furnace and use coal or charcoal to send it chugging": "Создайте вагонетку с печью и используйте уголь, чтобы заставить её пыхтеть",
+"Craft a Minecart with Furnace and use coal or charcoal to send it chugging": "Создайте самоходную вагонетку и активируйте её с помощью угля",
 
 ## Troll Chest
 "Trigger a trapped chest. Good for trolling your friends!": "Активируйте сундук-ловушку. Неплохо для троллинга друзей!",
@@ -4533,8 +4533,8 @@
 
 "Stardust": "Звёздная пыль",
 
-"You have explored everything this world has to offer": "Вы исследовали все, что может предложить этот мир",
-"But at the end of it all, it is all still made from stardust": "Но, в конце концов, всё это всё ещё сделано из звездной пыли.",
+"You have explored everything this world has to offer": "Вы исследовали всё, что может предложить этот мир",
+"But at the end of it all, it is all still made from stardust": "Но, в конце концов, всё это всё ещё состоит из звёздной пыли.",
 
 
 
@@ -4680,7 +4680,7 @@
 "Kill every hostile monster near a Sculk Catalyst": "Убейте каждого враждебного монстра рядом со скалк катализатором",
 
 "The Incredible Sculk": "Невероятный скалк",
-"Collect a stack of all sculk-related blocks": "Соберите стак из всех блоков, связанных со скалком",
+"Collect a stack of all sculk-related blocks": "Добудьте по стаку всех блоков, связанных со скалком",
 
 "Sculker Box": "Шалкер",
 "Hold a Shulker Box that is completely filled with Sculk": "Возьмите в руку шалкеровый ящик, который полностью заполнен скалком",
@@ -4692,20 +4692,20 @@
 "Loot a chest inside an ice box in an Ancient City": "Ограбьте сундук со льдом в древнем городе",
 
 "Death Pointer": "Указатель смерти",
-"Using Echo Shards found in Ancient Cities, craft a Recovery Compass": "Используя осколки эха, найденные в древних городах, для создания компаса восстановления",
+"Using Echo Shards found in Ancient Cities, craft a Recovery Compass": "Создайте возвратный компас, используя осколки эха, найденные в древних городах",
 
 "9 to 5": "5 из 9",
-"Collect enough Disc Fragments to craft another producer of mysterious sounds": "Соберите достаточное количество осколков диска, чтобы создать ещё одного производителя таинственных звуков",
+"Collect enough Disc Fragments to craft another producer of mysterious sounds": "Соберите достаточное количество осколков пластинки, чтобы получить ещё одну таинственную аудиозапись",
 
 "Echonomy": "Эхономика",
-"Collect a stack of Echo Shards": "Соберите стак осколков эха",
+"Collect a stack of Echo Shards": "Добудьте стак осколков эха",
 
 "Blind as a Bat": "Слепой как летучая мышь",
 "Kill a Bat while under the blindness or darkness effect": "Убейте летучую мышь, находясь под действием эффекта слепоты или тьмы",
 
 
 "Stuck in the Mud": "Застрял в грязи",
-"Use a Water Bottle on some Dirt to turn it into Mud": "Используйте бутылку с водой на земле, чтобы превратить её в грязь",
+"Use a Water Bottle on some Dirt to turn it into Mud": "Используйте бутылочку воды на блоке земли, чтобы превратить его в блок грязи",
 
 "Elmer Mudd": "Элмер Мадд",
 "Craft or obtain all forms of Mud and Mud Brick": "Заполучите все формы грязи и грязевого кирпича",
@@ -4722,10 +4722,10 @@
 
 
 "Frog Family": "Семья лягушек",
-"Breed two Frogs together using slimeballs": "Скрестить двух лягушек вместе, используя слизь",
+"Breed two Frogs together using slimeballs": "Размножьте двух лягушек слизью",
 
 "Bukkit bukkit": "Почётный пассажир",
-"Catch a Tadpole in a Bucket": "Поймать головастика в ведро",
+"Catch a Tadpole in a Bucket": "Поймайте головастика в ведро",
 
 "When the Squad Hops into Town": "Кто шагает дружно в ряд?",
 "Attach a lead to each variant of Frog": "Привяжите все виды лягушек на поводок",
@@ -4740,7 +4740,7 @@
 "Blow into a Goat Horn during a raid": "Дуньте в козий рог во время рейда",
 
 "Caprymphony": "Капримфония",
-"Blow every type of Goat Horn": "Дуньте в козий рог любого типа",
+"Blow every type of Goat Horn": "Дуньте в козий рог",
 
 "Animal Kingdom": "Царство животных",
 "Bring one of every type of animal to one place (have them all within 32 blocks of you)": "Приведите по одному животному каждого вида в одно место (пусть все они будут в пределах 32 блоков от вас)",
@@ -4754,29 +4754,29 @@
 
 
 "Allayance": "Аллаянс",
-"Rescue an Allay from a Pillager Outpost or Woodland Mansion and give it something to play with": "Спасите тихоню от разбойников и дайте ему что-нибудь",
+"Rescue an Allay from a Pillager Outpost or Woodland Mansion and give it something to play with": "Спасите тихоню от разбойников и дайте во что-нибудь поиграть",
 
 "You’ve Got a Friend in Me": "Просто так!",
 "Have an Allay deliver items to you": "Заставьте тихоню доставлять вам предметы",
 
 "Evelyn Evergreen": "Эвелин Эвергрин",
-"Have an Allay deliver Spruce Saplings to you while chopping down trees": "Попросите тихоню доставить вам еловые саженцы во время рубки деревьев",
+"Have an Allay deliver Spruce Saplings to you while chopping down trees": "Заставьте тихоню доставить вам еловые саженцы во время рубки деревьев",
 
 "Budget Vex": "Бюджетный векс",
 "Give an Allay an Iron Sword": "Дайте тихоне железный меч",
 
 "Diagon Allay": "Косой переулок",
-"Have an Allay deliver a potion to you in the Deep Dark": "Попросите тихоню доставить вам зелье в глубокой тьме",
+"Have an Allay deliver a potion to you in the Deep Dark": "Заставьте тихоню доставить вам зелье в глубокой тьме",
 
 "Birthday Song": "Только раз в году!",
 "Have an Allay drop a cake at a note block": "Заставьте тихоню бросить торт на нотный блок",
 
 "Awards Ceremony": "Церемония награждения",
-"Have an Allay present to you a trophy awarded from completing one of the advancements": "Пусть тихоня вручит вам трофей, полученный за выполнение одного из достижений",
+"Have an Allay present to you a trophy awarded from completing one of the advancements": "Заставьте тихоню вручить вам трофей, полученный за выполнение одного из достижений",
 
 
-"Now that's a lot of damage": "Это большой риск",
-"Succumb to the Warden": "Поддаться хранителю",
+"Now that's a lot of damage": "Больно, блин!",
+"Succumb to the Warden": "Погибните от рук хранителя",
 
 "Blind Stare": "Это Шрэк?",
 "Look at a Warden with a Spyglass": "Взгляните на хранителя через подзорную трубу",
@@ -4915,13 +4915,13 @@
 "Get hurt from hitting an Armor Stand": "Получите урон от стойки для брони",
 
 "Built on Sand, Set in Stone": "Построен на песке, установлен в камне",
-"Craft or collect a stack of all forms of Sandstone and Red Sandstone": "Заполучите по стаку всех форм песчаника и красного песчаника",
+"Craft or collect a stack of all forms of Sandstone and Red Sandstone": "Добудьте по стаку всех блоков из песчаника и красного песчаника",
 
 "Hot Chocolate": "Горячий шоколад",
 "Plant some cocoa in the nice steamy Nether": "Посадите немного какао-бобов в приятном парном Незере",
 
 "Silence of the Lambs": "Молчание ягнят",
-"Bring a Sheep into an Ancient City and silence it": "Приведите овцу в древний город и заставьте её замолчать",
+"Bring a Sheep into an Ancient City and silence it": "Приведите овцу в древний город и заставьте её замолчать навсегда",
 
 "It's High Noon": "Сейчас полдень",
 "Snipe a Husk from 50 blocks away while riding a Horse": "Подстрелите кадавра с расстояния 50 блоков, сидя верхом на лошади",
@@ -5112,7 +5112,7 @@
 "Put together a Decorated Pot using four Pottery Sherds": "Создайте узорчатую вазу из четырёх глиняных черепков",
 
 "Pottery Exhibition": "Керамическая выставка",
-"Find one of each type of Pottery Sherd throughout your archaeology expeditions": "Получите каждый тип глиняного черепка во время археологических экспедиций",
+"Find one of each type of Pottery Sherd throughout your archaeology expeditions": "Получите каждый тип глиняного черепка во время археологических раскопок",
 
 "Life… uhh… finds a way": "Легенда о нюхозавре",
 "Find a strange egg among the sand of an Ocean Ruin using a Brush. Smells interesting": "Получите яйцо нюхача",
@@ -5166,7 +5166,7 @@
 "Apply every type of armor trim at least once": "Хотя бы раз используйте каждый тип кузнечного шаблона",
 
 "Stacked Smither": "Мастер кузнечного дела",
-"Obtain a stack of every Smithing Template": "Заполучите по стаку всех кузнечных шаблонов",
+"Obtain a stack of every Smithing Template": "Добудьте по стаку всех кузнечных шаблонов",
 
 
 "Maximum Resistance": "Максимальное сопротивление",
@@ -5213,7 +5213,7 @@
 
 
 "Poglin!": "Поглин!",
-"Obtain a stack of Piglin Heads": "Заполучите стак голов пиглина",
+"Obtain a stack of Piglin Heads": "Добудьте стак голов пиглина",
 
 
 "You are a big cheater!": "Ты - читер! Фу таким быть",
@@ -5226,10 +5226,10 @@
 "The following are not required:": "Следующее не требуется:",
 
 ## New description for 'Stripper'
-"Strip the bark off every type of log, stem, and bamboo block": "Снимите кору со всех типов брёвен, стволов и бамбуковых блоков",
+"Strip the bark off every type of log, stem, and bamboo block": "Снимите кору со всех видов брёвен, стволов и бамбуковых блоков",
 
 ## New description for 'Master Logger'
-"Cut down a full stack of logs and stems of all types": "Срубите по стаку каждого вида брёвен и стволов",
+"Cut down a full stack of logs and stems of all types": "Добудьте по стаку всех видов брёвен и стволов",
 
 ## New descriptions for Mining, Monsters and Adventure tab root advancements
 "Dig deep down, mine up ore": "Копай глубоко, добывай руду",
@@ -5238,6 +5238,13 @@
 
 "Village, pillage and exploration": "Деревни, грабёж и путешествие",
 
+"Get attacked by an angry panda": "Получите урон от злой пандоы",
+
+"Get attacked by a Polar Bear": "Получите урон от белого медведя",
+
+"Take damage from a Creeper explosion": "Получите урон от взрыва крипера",
+
+"Get attacked by a Warden": "Получите урон от хранителя",
 
 # Trophies added in 1.16
 "Ch-ch-ch-ch-ch-ch-Cherry bomb!": "в-в-в-в-в-в-в-Вишнёвая бомба!",
@@ -5336,7 +5343,7 @@
 
 ## Contained in the description of 'Stack all the Items'
 "Pottery Sherd": "Глиняный черепок",
-"You only need a stack of one kind of Smithing Template": "Также вам нужно собрать стак кузнечных шаблонов, но только одного типа",
+"You only need a stack of one kind of Smithing Template": "Также вам нужно добыть стак кузнечных шаблонов, но только одного типа",
 
 ## Used in advancement message tooltips, where the %1$s bit is replaced with the name of the tab that advancement is contained in
 ## For example 'Mining tab', 'Building tab', etc.

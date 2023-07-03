@@ -59,7 +59,6 @@ import net.minecraft.world.World
 import net.minecraft.world.event.GameEvent
 import java.util.stream.Collectors
 
-
 class AchieveToDoMod : ModInitializer {
 
     override fun onInitialize() {
@@ -104,6 +103,7 @@ class AchieveToDoMod : ModInitializer {
             list.remove(resourcePackManager.getProfile(BACAP_DATA_PACK_ID.toString()))
             list.remove(resourcePackManager.getProfile(BACAP_HARDCORE_DATA_PACK_ID.toString()))
             list.remove(resourcePackManager.getProfile(CORE_DATA_PACK_ID.toString()))
+            list.remove(resourcePackManager.getProfile(HARDCORE_CORE_DATA_PACK_ID.toString()))
             list.remove(resourcePackManager.getProfile(REWARDS_ITEM_DATA_PACK_ID.toString()))
             list.remove(resourcePackManager.getProfile(REWARDS_EXPERIENCE_DATA_PACK_ID.toString()))
             list.remove(resourcePackManager.getProfile(REWARDS_TROPHY_DATA_PACK_ID.toString()))
@@ -113,6 +113,9 @@ class AchieveToDoMod : ModInitializer {
                 list.add(resourcePackManager.getProfile(BACAP_HARDCORE_DATA_PACK_ID.toString()))
             }
             list.add(resourcePackManager.getProfile(CORE_DATA_PACK_ID.toString()))
+            if (server.isHardcore) {
+                list.add(resourcePackManager.getProfile(HARDCORE_CORE_DATA_PACK_ID.toString()))
+            }
             (server as? MinecraftServerImpl)?.let {
                 if (it.isItemRewardsEnabled) {
                     list.add(resourcePackManager.getProfile(REWARDS_ITEM_DATA_PACK_ID.toString()))
@@ -161,21 +164,27 @@ class AchieveToDoMod : ModInitializer {
                     ResourcePackActivationType.ALWAYS_ENABLED
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
+                    HARDCORE_CORE_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("AchieveToDo Hardcore Core"),
+                    ResourcePackActivationType.NORMAL
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
                     REWARDS_ITEM_DATA_PACK_ID,
                     modContainer,
-                    Text.of("BACAP item rewards"),
+                    Text.of("BACAP Item Rewards"),
                     ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
                     REWARDS_EXPERIENCE_DATA_PACK_ID,
                     modContainer,
-                    Text.of("BACAP experience rewards"),
+                    Text.of("BACAP Experience Rewards"),
                     ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
                     REWARDS_TROPHY_DATA_PACK_ID,
                     modContainer,
-                    Text.of("BACAP trophy rewards"),
+                    Text.of("BACAP Trophy Rewards"),
                     ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
@@ -200,6 +209,12 @@ class AchieveToDoMod : ModInitializer {
                     ENCHANTED_BOOKS_RESOURCE_PACK_ID,
                     modContainer,
                     Text.of("Enchanted Books"),
+                    ResourcePackActivationType.DEFAULT_ENABLED
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    WAXED_COPPER_RESOURCE_PACK_ID,
+                    modContainer,
+                    Text.of("Waxed Copper"),
                     ResourcePackActivationType.DEFAULT_ENABLED
             )
         }
@@ -291,6 +306,7 @@ class AchieveToDoMod : ModInitializer {
         private val BACAP_DATA_PACK_ID = Identifier(ID, "bacap")
         private val BACAP_HARDCORE_DATA_PACK_ID = Identifier(ID, "bacap_hc")
         private val CORE_DATA_PACK_ID = Identifier(ID, "bacap_achievetodo-core")
+        private val HARDCORE_CORE_DATA_PACK_ID = Identifier(ID, "bacap_hc_achievetodo-core")
         private val REWARDS_ITEM_DATA_PACK_ID = Identifier(ID, "rewards_item")
         private val REWARDS_EXPERIENCE_DATA_PACK_ID = Identifier(ID, "rewards_experience")
         private val REWARDS_TROPHY_DATA_PACK_ID = Identifier(ID, "rewards_trophy")
@@ -299,6 +315,7 @@ class AchieveToDoMod : ModInitializer {
         private val VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID = Identifier(ID, "visual_fish_buckets")
         private val GOAT_HORNS_RESOURCE_PACK_ID = Identifier(ID, "goat_horns")
         private val ENCHANTED_BOOKS_RESOURCE_PACK_ID = Identifier(ID, "enchanted_books")
+        private val WAXED_COPPER_RESOURCE_PACK_ID = Identifier(ID, "waxed_copper")
 
         @JvmField
         val ANCIENT_CITY_PORTAL_BLOCK = AncientCityPortalBlock(
@@ -474,6 +491,7 @@ class AchieveToDoMod : ModInitializer {
             return resourceId == BACAP_DATA_PACK_ID.toString() ||
                     resourceId == BACAP_HARDCORE_DATA_PACK_ID.toString() ||
                     resourceId == CORE_DATA_PACK_ID.toString() ||
+                    resourceId == HARDCORE_CORE_DATA_PACK_ID.toString() ||
                     resourceId == REWARDS_ITEM_DATA_PACK_ID.toString() ||
                     resourceId == REWARDS_EXPERIENCE_DATA_PACK_ID.toString() ||
                     resourceId == REWARDS_TROPHY_DATA_PACK_ID.toString()

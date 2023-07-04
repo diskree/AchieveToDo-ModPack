@@ -1,0 +1,3 @@
+# This scoreboard setting makes it so that the advancements scoreboard counts Terralith advancements. It can be set to 0 (or any other value) to make Terralith advancements not count towards the scoreboard
+# (Note: They will still count towards the First Advancements scoreboard)
+execute unless score terralith_score bac_settings matches ..1000 run scoreboard players set terralith_score bac_settings 1

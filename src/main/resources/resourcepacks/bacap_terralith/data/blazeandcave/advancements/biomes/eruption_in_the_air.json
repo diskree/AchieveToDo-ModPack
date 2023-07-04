@@ -1,0 +1,81 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:magma_block"
+		},
+		"title": {"translate":"Eruption in the Air"},
+		"description": {"color":"#75E1FF","translate":"Enter a volcano biome"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:biomes/the_world_is_your_canvas",	
+	"rewards": {
+		"function": "bc_rewards:biomes/eruption_in_the_air"
+	},	
+	"criteria": {
+		"volcanic_crater": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:volcanic_crater"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"volcanic_peaks": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:volcanic_peaks"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"volcanic_crater",
+			"volcanic_peaks"
+		]
+	]
+}

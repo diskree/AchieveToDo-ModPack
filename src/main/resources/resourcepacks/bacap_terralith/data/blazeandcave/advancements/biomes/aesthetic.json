@@ -1,0 +1,46 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:stripped_warped_stem"
+		},
+		"title": {"translate":"A E S T H E T I C"},
+		"description": {"color":"#75E1FF","translate":"Discover the Mirage Isles. No, they’re not not real"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:biomes/skylanders",	
+	"rewards": {
+		"function": "bc_rewards:biomes/aesthetic"
+	},	
+	"criteria": {
+		"mirage_isles": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:mirage_isles"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

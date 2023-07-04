@@ -42,12 +42,16 @@
 
   "commands.random.no_advancements": "No advancements found",
 
+  "createWorld.rewards.title": "Advancement rewards",
   "createWorld.rewards.item": "Items",
-  "createWorld.rewards.experience": "Experience",
-  "createWorld.rewards.trophy": "Trophies",
   "createWorld.rewards.item.info": "You will receive items for completing advancements. For example, several logs for the first felling of a tree.",
+  "createWorld.rewards.experience": "Experience",
   "createWorld.rewards.experience.info": "You will receive experience for completing advancements. The most difficult advancements are especially well rewarded.",
+  "createWorld.rewards.trophy": "Trophies",
   "createWorld.rewards.trophy.info": "You will receive exclusive collectibles for completing advancements. For example, an unbreakable iron axe for collecting a stack of each type of wood log.",
+  "createWorld.generation.title": "Custom generation",
+  "createWorld.generation.overworld": "Overworld",
+  "createWorld.generation.overworld.info": "Terralith - 85+ new biomes, original structures, and endless features.",
 
   "menu.shareToLan.info": "AchieveToDo worlds do not support multiplayer and cheats. Play fair!",
 

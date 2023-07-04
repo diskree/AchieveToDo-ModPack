@@ -1,0 +1,80 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:cornflower"
+		},
+		"title": {"translate":"Over the Moon"},
+		"description": {"translate":"Discover a moonlight biome"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:biomes/o_land_o_bloom",	
+	"rewards": {
+		"function": "bc_rewards:biomes/over_the_moon"
+	},	
+	"criteria": {
+		"moonlight_grove": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:moonlight_grove"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"moonlight_valley": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:moonlight_valley"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"moonlight_grove",
+			"moonlight_valley"
+		]
+	]
+}

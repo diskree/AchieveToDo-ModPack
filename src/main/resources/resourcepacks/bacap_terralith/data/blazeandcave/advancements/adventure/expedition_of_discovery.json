@@ -1,0 +1,1015 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:filled_map",
+			"nbt": "{display:{MapColor:1134688}}"
+		},
+		"title": {"translate":"Expedition of Discovery"},
+		"description": {"color":"light_purple","translate":"Find a Traveller’s Map that leads to a rare biome, then enter that biome with the map in your hand"},
+		"announce_to_chat": "true",
+		"frame": "challenge",
+		"hidden": "true"
+	},
+	"parent": "blazeandcave:adventure/a_journey_begins",
+	"rewards": {
+		"function": "bc_rewards:adventure/expedition_of_discovery"
+	},		
+	"criteria": {
+		"alpha_islands_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:alpha_islands"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Alpha Islands\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"alpha_islands_winter_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:alpha_islands_winter"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Alpha Islands (Winter)\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"mirage_isles_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:mirage_isles"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Mirage Isles\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"painted_mountains_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:painted_mountains"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Painted Mountains\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"skylands_autumn_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:skylands_autumn"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Skylands (Autumn)\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"skylands_spring_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:skylands_spring"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Skylands (Spring)\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"skylands_summer_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:skylands_summer"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Skylands (Summer)\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"skylands_winter_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:skylands_winter"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Skylands (Winter)\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"warped_mesa_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:warped_mesa"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Warped Mesa\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"emerald_peaks_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:emerald_peaks"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Emerald Peaks\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"cloud_forest_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:cloud_forest"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Cloud Forest\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"desert_spires_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:desert_spires"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Desert Spires\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"scarlet_mountains_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:scarlet_mountains"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Scarlet Mountains\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"haze_mountain_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:haze_mountain"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Haze Mountain\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"volcanic_crater_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:volcanic_crater"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Volcanic Crater\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"volcanic_peaks_mainhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:volcanic_peaks"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"mainhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Volcanic Peaks\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"alpha_islands_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:alpha_islands"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Alpha Islands\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"alpha_islands_winter_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:alpha_islands_winter"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Alpha Islands (Winter)\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"mirage_isles_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:mirage_isles"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Mirage Isles\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"painted_mountains_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:painted_mountains"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Painted Mountains\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"skylands_autumn_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:skylands_autumn"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Skylands (Autumn)\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"skylands_spring_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:skylands_spring"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Skylands (Spring)\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"skylands_summer_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:skylands_summer"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Skylands (Summer)\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"skylands_winter_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:skylands_winter"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Skylands (Winter)\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"warped_mesa_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:warped_mesa"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Warped Mesa\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"emerald_peaks_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:emerald_peaks"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Emerald Peaks\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"cloud_forest_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:cloud_forest"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Cloud Forest\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"desert_spires_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:desert_spires"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Desert Spires\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"scarlet_mountains_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:scarlet_mountains"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Scarlet Mountains\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"haze_mountain_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:haze_mountain"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Haze Mountain\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"volcanic_crater_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:volcanic_crater"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Volcanic Crater\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"volcanic_peaks_offhand": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:volcanic_peaks"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"equipment": {
+								"offhand": {
+									"items": [
+										"minecraft:filled_map"
+									],
+									"nbt": "{display:{Name:\"{\\\"bold\\\":false,\\\"italic\\\":false,\\\"underlined\\\":false,\\\"color\\\":\\\"#77CCFF\\\",\\\"text\\\":\\\"Traveler\'s Map - Volcanic Peaks\\\"}\"}}"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"alpha_islands_mainhand",
+			"alpha_islands_winter_mainhand",
+			"mirage_isles_mainhand",
+			"painted_mountains_mainhand",
+			"skylands_autumn_mainhand",
+			"skylands_spring_mainhand",
+			"skylands_summer_mainhand",
+			"skylands_winter_mainhand",
+			"warped_mesa_mainhand",
+			"emerald_peaks_mainhand",
+			"cloud_forest_mainhand",
+			"desert_spires_mainhand",
+			"scarlet_mountains_mainhand",
+			"haze_mountain_mainhand",
+			"volcanic_crater_mainhand",
+			"volcanic_peaks_mainhand",
+			"alpha_islands_offhand",
+			"alpha_islands_winter_offhand",
+			"mirage_isles_offhand",
+			"painted_mountains_offhand",
+			"skylands_autumn_offhand",
+			"skylands_spring_offhand",
+			"skylands_summer_offhand",
+			"skylands_winter_offhand",
+			"warped_mesa_offhand",
+			"emerald_peaks_offhand",
+			"cloud_forest_offhand",
+			"desert_spires_offhand",
+			"scarlet_mountains_offhand",
+			"haze_mountain_offhand",
+			"volcanic_crater_offhand",
+			"volcanic_peaks_offhand"
+		]
+	]
+}

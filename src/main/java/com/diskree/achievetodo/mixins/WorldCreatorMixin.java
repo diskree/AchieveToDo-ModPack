@@ -10,6 +10,7 @@ public class WorldCreatorMixin implements WorldCreatorImpl {
     private boolean isItemRewardsEnabled;
     private boolean isExperienceRewardsEnabled;
     private boolean isTrophyRewardsEnabled = true;
+    private boolean isTerralithEnabled;
 
     @Override
     public boolean isItemRewardsEnabled() {
@@ -27,6 +28,11 @@ public class WorldCreatorMixin implements WorldCreatorImpl {
     }
 
     @Override
+    public boolean isTerralithEnabled() {
+        return isTerralithEnabled;
+    }
+
+    @Override
     public void setItemRewardsEnabled(boolean itemRewardsEnabled) {
         isItemRewardsEnabled = itemRewardsEnabled;
     }
@@ -39,5 +45,10 @@ public class WorldCreatorMixin implements WorldCreatorImpl {
     @Override
     public void setTrophyRewardsEnabled(boolean trophyRewardsEnabled) {
         isTrophyRewardsEnabled = trophyRewardsEnabled;
+    }
+
+    @Override
+    public void setTerralithEnabled(boolean terralithEnabled) {
+        isTerralithEnabled = terralithEnabled;
     }
 }

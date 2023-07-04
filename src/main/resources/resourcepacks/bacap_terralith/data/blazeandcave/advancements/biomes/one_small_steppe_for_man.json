@@ -1,0 +1,45 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:large_fern"
+		},
+		"title": {"translate":"One Small Steppe For Man"},
+		"description": {"translate":"Discover a steppe biome"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:biomes/kilometre_walk",	
+	"rewards": {
+		"function": "bc_rewards:biomes/one_small_steppe_for_man"
+	},	
+	"criteria": {
+		"steppe": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:steppe"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -45,6 +45,7 @@ public class AncientCityPortalBlock extends Block {
         hideParticles = true;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         if (Objects.requireNonNull(state.get(AXIS)) == Direction.Axis.Z) {
@@ -53,6 +54,7 @@ public class AncientCityPortalBlock extends Block {
         return X_SHAPE;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         Direction.Axis axis = direction.getAxis();
@@ -63,6 +65,7 @@ public class AncientCityPortalBlock extends Block {
         return Blocks.AIR.getDefaultState();
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (world.isClient || entity == null || entity.isRemoved()) {
@@ -109,20 +112,18 @@ public class AncientCityPortalBlock extends Block {
         return ItemStack.EMPTY;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public BlockState rotate(BlockState state, BlockRotation rotation) {
-        switch (rotation) {
-            case COUNTERCLOCKWISE_90:
-            case CLOCKWISE_90: {
-                Direction.Axis axis = state.get(AXIS);
-                if (Objects.requireNonNull(axis) == Direction.Axis.X) {
-                    return state.with(AXIS, Direction.Axis.Z);
-                }
-                if (axis == Direction.Axis.Z) {
-                    return state.with(AXIS, Direction.Axis.X);
-                }
-                return state;
+        if (Objects.requireNonNull(rotation) == BlockRotation.COUNTERCLOCKWISE_90 || rotation == BlockRotation.CLOCKWISE_90) {
+            Direction.Axis axis = state.get(AXIS);
+            if (Objects.requireNonNull(axis) == Direction.Axis.X) {
+                return state.with(AXIS, Direction.Axis.Z);
             }
+            if (axis == Direction.Axis.Z) {
+                return state.with(AXIS, Direction.Axis.X);
+            }
+            return state;
         }
         return state;
     }

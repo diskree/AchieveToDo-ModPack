@@ -1,0 +1,17 @@
+{
+	"parent": "minecraft:adventure/adventuring_time",	
+	"criteria": {
+		"kilometre_walk": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"player": {
+						"advancements": {
+							"blazeandcave:biomes/kilometre_walk": "true"
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:light_blue_terracotta"
+		},
+		"title": {"translate":"The World Is Your Canvas"},
+		"description": {"translate":"Discover the Painted Mountains"},
+		"announce_to_chat": "true"
+	},
+	"parent": "blazeandcave:biomes/choco_mountain",	
+	"rewards": {
+		"function": "bc_rewards:biomes/the_world_is_your_canvas"
+	},	
+	"criteria": {
+		"painted_mountains": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biome": "terralith:painted_mountains"
+							}
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

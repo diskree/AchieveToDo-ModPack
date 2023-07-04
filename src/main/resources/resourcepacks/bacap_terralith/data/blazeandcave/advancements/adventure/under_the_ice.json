@@ -1,0 +1,49 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:soul_lantern"
+		},
+		"title": {"translate":"Under the Ice"},
+		"description": {"color":"#75E1FF","translate":"Delve deep beneath the Spire and open up a loot chest"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:adventure/spire_of_ice",
+	"rewards": {
+		"function": "bc_rewards:adventure/under_the_ice"
+	},		
+	"criteria": {
+		"spire_junk": {
+			"trigger": "minecraft:player_generates_container_loot",
+			"conditions": {
+				"loot_table": "terralith:spire/junk"
+			}
+		},
+		"spire_common": {
+			"trigger": "minecraft:player_generates_container_loot",
+			"conditions": {
+				"loot_table": "terralith:spire/common"
+			}
+		},
+		"spire_rare": {
+			"trigger": "minecraft:player_generates_container_loot",
+			"conditions": {
+				"loot_table": "terralith:spire/rare"
+			}
+		},
+		"spire_treasure": {
+			"trigger": "minecraft:player_generates_container_loot",
+			"conditions": {
+				"loot_table": "terralith:spire/treasure"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"spire_junk",
+			"spire_common",
+			"spire_rare",
+			"spire_treasure"
+		]
+	]
+}

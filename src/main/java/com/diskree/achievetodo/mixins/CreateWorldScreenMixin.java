@@ -1,32 +1,61 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.LevelInfoImpl;
+import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.CreateWorldScreenImpl;
 import com.diskree.achievetodo.WorldCreatorImpl;
 import com.diskree.achievetodo.advancements.CreateWorldAdvancementsTab;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.Screen;
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 import net.minecraft.client.gui.screen.world.WorldCreator;
 import net.minecraft.client.gui.tab.Tab;
-import net.minecraft.client.world.GeneratorOptionsHolder;
-import net.minecraft.world.level.LevelInfo;
+import net.minecraft.resource.DataConfiguration;
+import net.minecraft.resource.ResourcePackManager;
+import org.jetbrains.annotations.Nullable;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArgs;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 import java.nio.file.Path;
+import java.util.function.Consumer;
 
 @Mixin(CreateWorldScreen.class)
-public abstract class CreateWorldScreenMixin {
+public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
+
+    @Unique
+    private boolean isWaitingDatapacks;
+
+    @Override
+    public boolean achieveToDo$datapacksLoaded() {
+        if (isWaitingDatapacks) {
+            createLevel();
+            isWaitingDatapacks = false;
+            return true;
+        }
+        return false;
+    }
 
     @Shadow
-    public abstract WorldCreator getWorldCreator();
+    private @Nullable ResourcePackManager packManager;
 
-    @SuppressWarnings({"MixinAnnotationTarget", "UnresolvedMixinReference"})
+    @Shadow
+    @Final
+    WorldCreator worldCreator;
+
+    @Shadow
+    protected abstract void applyDataPacks(ResourcePackManager dataPackManager, boolean fromPackScreen, Consumer<DataConfiguration> configurationSetter);
+
+    @Shadow
+    @Nullable
+    protected abstract Pair<Path, ResourcePackManager> getScannedPack(DataConfiguration dataConfiguration);
+
+    @Shadow protected abstract void createLevel();
+
     @ModifyArgs(method = "init", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/TabNavigationWidget$Builder;tabs([Lnet/minecraft/client/gui/tab/Tab;)Lnet/minecraft/client/gui/widget/TabNavigationWidget$Builder;"))
     private void initInject(Args args) {
         CreateWorldScreen self = (CreateWorldScreen) (Object) this;
@@ -38,29 +67,54 @@ public abstract class CreateWorldScreenMixin {
         args.set(0, newTabs);
     }
 
-    @SuppressWarnings("DataFlowIssue")
-    @Inject(method = "createLevelInfo", at = @At("RETURN"), cancellable = true)
-    private void createLevelInfoInject(boolean debugWorld, CallbackInfoReturnable<LevelInfo> cir) {
-        if (!debugWorld) {
-            LevelInfo levelInfo = cir.getReturnValue();
-            LevelInfoImpl levelInfoImpl = (LevelInfoImpl) (Object) levelInfo;
-            WorldCreatorImpl worldCreatorImpl = (WorldCreatorImpl) getWorldCreator();
-            levelInfoImpl.setItemRewardsEnabled(worldCreatorImpl.isItemRewardsEnabled());
-            levelInfoImpl.setExperienceRewardsEnabled(worldCreatorImpl.isExperienceRewardsEnabled());
-            levelInfoImpl.setTrophyRewardsEnabled(worldCreatorImpl.isTrophyRewardsEnabled());
-            cir.setReturnValue(levelInfo);
-        }
-    }
+    @Inject(method = "createLevel", at = @At("HEAD"), cancellable = true)
+    private void createLevelInject(CallbackInfo ci) {
+        if (!isWaitingDatapacks) {
+            CreateWorldScreen self = (CreateWorldScreen) (Object) this;
+            WorldCreatorImpl worldCreatorImpl = (WorldCreatorImpl) worldCreator;
+            if (packManager == null) {
+                getScannedPack(worldCreator.getGeneratorOptionsHolder().dataConfiguration());
+            }
+            if (packManager != null) {
+                packManager.disable(AchieveToDoMod.BACAP_DATA_PACK_ID.toString());
+                packManager.disable(AchieveToDoMod.BACAP_HARDCORE_DATA_PACK_ID.toString());
+                packManager.disable(AchieveToDoMod.CORE_DATA_PACK_ID.toString());
+                packManager.disable(AchieveToDoMod.HARDCORE_CORE_DATA_PACK_ID.toString());
+                packManager.disable(AchieveToDoMod.REWARDS_ITEM_DATA_PACK_ID.toString());
+                packManager.disable(AchieveToDoMod.REWARDS_EXPERIENCE_DATA_PACK_ID.toString());
+                packManager.disable(AchieveToDoMod.REWARDS_TROPHY_DATA_PACK_ID.toString());
+                packManager.disable(AchieveToDoMod.TERRALITH_DATA_PACK_ID.toString());
+                packManager.disable(AchieveToDoMod.BACAP_TERRALITH_DATA_PACK_ID.toString());
 
-    @SuppressWarnings("DataFlowIssue")
-    @Inject(method = "create(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/world/level/LevelInfo;Lnet/minecraft/client/world/GeneratorOptionsHolder;Ljava/nio/file/Path;)Lnet/minecraft/client/gui/screen/world/CreateWorldScreen;", at = @At("RETURN"), cancellable = true)
-    private static void createInject(MinecraftClient client, Screen parent, LevelInfo levelInfo, GeneratorOptionsHolder generatorOptionsHolder, Path dataPackTempDir, CallbackInfoReturnable<CreateWorldScreen> cir) {
-        CreateWorldScreen createWorldScreen = cir.getReturnValue();
-        WorldCreatorImpl worldCreator = (WorldCreatorImpl) createWorldScreen.getWorldCreator();
-        LevelInfoImpl levelInfoImpl = (LevelInfoImpl) (Object) levelInfo;
-        worldCreator.setItemRewardsEnabled(levelInfoImpl.isItemRewardsEnabled());
-        worldCreator.setExperienceRewardsEnabled(levelInfoImpl.isExperienceRewardsEnabled());
-        worldCreator.setTrophyRewardsEnabled(levelInfoImpl.isTrophyRewardsEnabled());
-        cir.setReturnValue(createWorldScreen);
+                packManager.enable(AchieveToDoMod.BACAP_DATA_PACK_ID.toString());
+                packManager.enable(AchieveToDoMod.CORE_DATA_PACK_ID.toString());
+                if (worldCreator.isHardcore()) {
+                    packManager.enable(AchieveToDoMod.BACAP_HARDCORE_DATA_PACK_ID.toString());
+                    packManager.enable(AchieveToDoMod.HARDCORE_CORE_DATA_PACK_ID.toString());
+                }
+                if (worldCreatorImpl.isTerralithEnabled()) {
+                    packManager.enable(AchieveToDoMod.TERRALITH_DATA_PACK_ID.toString());
+                    packManager.enable(AchieveToDoMod.BACAP_TERRALITH_DATA_PACK_ID.toString());
+                }
+                if (worldCreatorImpl.isItemRewardsEnabled()) {
+                    packManager.enable(AchieveToDoMod.REWARDS_ITEM_DATA_PACK_ID.toString());
+                }
+                if (worldCreatorImpl.isExperienceRewardsEnabled()) {
+                    packManager.enable(AchieveToDoMod.REWARDS_EXPERIENCE_DATA_PACK_ID.toString());
+                }
+                if (worldCreatorImpl.isTrophyRewardsEnabled()) {
+                    packManager.enable(AchieveToDoMod.REWARDS_TROPHY_DATA_PACK_ID.toString());
+                }
+
+                isWaitingDatapacks = true;
+                applyDataPacks(packManager, true, (dataConfiguration) -> {
+                    if (self.client != null) {
+                        self.client.setScreen(self);
+                    }
+                });
+
+                ci.cancel();
+            }
+        }
     }
 }

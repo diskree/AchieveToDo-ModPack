@@ -39,7 +39,6 @@ import net.minecraft.item.*
 import net.minecraft.particle.DefaultParticleType
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
-import net.minecraft.resource.ResourcePackProfile
 import net.minecraft.server.MinecraftServer
 import net.minecraft.server.command.CommandManager.literal
 import net.minecraft.server.world.ServerWorld
@@ -57,7 +56,6 @@ import net.minecraft.util.math.Direction
 import net.minecraft.village.VillagerProfession
 import net.minecraft.world.World
 import net.minecraft.world.event.GameEvent
-import java.util.stream.Collectors
 
 class AchieveToDoMod : ModInitializer {
 
@@ -94,40 +92,8 @@ class AchieveToDoMod : ModInitializer {
             }
             ActionResult.PASS
         })
-        ServerWorldEvents.LOAD.register(ServerWorldEvents.Load { server: MinecraftServer, _: ServerWorld? ->
+        ServerWorldEvents.LOAD.register(ServerWorldEvents.Load { _: MinecraftServer, _: ServerWorld? ->
             currentAdvancementsCount = 0
-
-            val resourcePackManager = server.dataPackManager
-            val list = resourcePackManager.enabledProfiles.toMutableList()
-
-            list.remove(resourcePackManager.getProfile(BACAP_DATA_PACK_ID.toString()))
-            list.remove(resourcePackManager.getProfile(BACAP_HARDCORE_DATA_PACK_ID.toString()))
-            list.remove(resourcePackManager.getProfile(CORE_DATA_PACK_ID.toString()))
-            list.remove(resourcePackManager.getProfile(HARDCORE_CORE_DATA_PACK_ID.toString()))
-            list.remove(resourcePackManager.getProfile(REWARDS_ITEM_DATA_PACK_ID.toString()))
-            list.remove(resourcePackManager.getProfile(REWARDS_EXPERIENCE_DATA_PACK_ID.toString()))
-            list.remove(resourcePackManager.getProfile(REWARDS_TROPHY_DATA_PACK_ID.toString()))
-
-            list.add(resourcePackManager.getProfile(BACAP_DATA_PACK_ID.toString()))
-            if (server.isHardcore) {
-                list.add(resourcePackManager.getProfile(BACAP_HARDCORE_DATA_PACK_ID.toString()))
-            }
-            list.add(resourcePackManager.getProfile(CORE_DATA_PACK_ID.toString()))
-            if (server.isHardcore) {
-                list.add(resourcePackManager.getProfile(HARDCORE_CORE_DATA_PACK_ID.toString()))
-            }
-            (server as? MinecraftServerImpl)?.let {
-                if (it.isItemRewardsEnabled) {
-                    list.add(resourcePackManager.getProfile(REWARDS_ITEM_DATA_PACK_ID.toString()))
-                }
-                if (it.isExperienceRewardsEnabled) {
-                    list.add(resourcePackManager.getProfile(REWARDS_EXPERIENCE_DATA_PACK_ID.toString()))
-                }
-                if (it.isTrophyRewardsEnabled) {
-                    list.add(resourcePackManager.getProfile(REWARDS_TROPHY_DATA_PACK_ID.toString()))
-                }
-            }
-            server.reloadResources(list.stream().map { obj: ResourcePackProfile? -> obj!!.name }.collect(Collectors.toList()))
         })
         CommandRegistrationCallback.EVENT.register(CommandRegistrationCallback { dispatcher, _, _ ->
             dispatcher.register(literal("random").executes { context ->
@@ -149,7 +115,7 @@ class AchieveToDoMod : ModInitializer {
                     BACAP_DATA_PACK_ID,
                     modContainer,
                     Text.of("BACAP"),
-                    ResourcePackActivationType.ALWAYS_ENABLED
+                    ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
                     BACAP_HARDCORE_DATA_PACK_ID,
@@ -161,7 +127,7 @@ class AchieveToDoMod : ModInitializer {
                     CORE_DATA_PACK_ID,
                     modContainer,
                     Text.of("AchieveToDo Core"),
-                    ResourcePackActivationType.ALWAYS_ENABLED
+                    ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
                     HARDCORE_CORE_DATA_PACK_ID,
@@ -185,6 +151,18 @@ class AchieveToDoMod : ModInitializer {
                     REWARDS_TROPHY_DATA_PACK_ID,
                     modContainer,
                     Text.of("BACAP Trophy Rewards"),
+                    ResourcePackActivationType.NORMAL
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    TERRALITH_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("Terralith"),
+                    ResourcePackActivationType.NORMAL
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    BACAP_TERRALITH_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("BACAP Terralith"),
                     ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
@@ -300,16 +278,35 @@ class AchieveToDoMod : ModInitializer {
     }
 
     companion object {
-        const val DEBUG = false
+        const val DEBUG = true
         const val ID = "achievetodo"
 
-        private val BACAP_DATA_PACK_ID = Identifier(ID, "bacap")
-        private val BACAP_HARDCORE_DATA_PACK_ID = Identifier(ID, "bacap_hc")
-        private val CORE_DATA_PACK_ID = Identifier(ID, "bacap_achievetodo-core")
-        private val HARDCORE_CORE_DATA_PACK_ID = Identifier(ID, "bacap_hc_achievetodo-core")
-        private val REWARDS_ITEM_DATA_PACK_ID = Identifier(ID, "rewards_item")
-        private val REWARDS_EXPERIENCE_DATA_PACK_ID = Identifier(ID, "rewards_experience")
-        private val REWARDS_TROPHY_DATA_PACK_ID = Identifier(ID, "rewards_trophy")
+        @JvmField
+        val BACAP_DATA_PACK_ID = Identifier(ID, "bacap")
+
+        @JvmField
+        val BACAP_HARDCORE_DATA_PACK_ID = Identifier(ID, "bacap_hc")
+
+        @JvmField
+        val CORE_DATA_PACK_ID = Identifier(ID, "bacap_achievetodo-core")
+
+        @JvmField
+        val HARDCORE_CORE_DATA_PACK_ID = Identifier(ID, "bacap_hc_achievetodo-core")
+
+        @JvmField
+        val REWARDS_ITEM_DATA_PACK_ID = Identifier(ID, "rewards_item")
+
+        @JvmField
+        val REWARDS_EXPERIENCE_DATA_PACK_ID = Identifier(ID, "rewards_experience")
+
+        @JvmField
+        val REWARDS_TROPHY_DATA_PACK_ID = Identifier(ID, "rewards_trophy")
+
+        @JvmField
+        val TERRALITH_DATA_PACK_ID = Identifier(ID, "terralith")
+
+        @JvmField
+        val BACAP_TERRALITH_DATA_PACK_ID = Identifier(ID, "bacap_terralith")
 
         private val BACAP_LANGUAGE_RESOURCE_PACK_ID = Identifier(ID, "bacap_lp")
         private val VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID = Identifier(ID, "visual_fish_buckets")
@@ -488,13 +485,16 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmStatic
         fun isInternalDatapack(resourceId: String?): Boolean {
-            return resourceId == BACAP_DATA_PACK_ID.toString() ||
-                    resourceId == BACAP_HARDCORE_DATA_PACK_ID.toString() ||
-                    resourceId == CORE_DATA_PACK_ID.toString() ||
-                    resourceId == HARDCORE_CORE_DATA_PACK_ID.toString() ||
-                    resourceId == REWARDS_ITEM_DATA_PACK_ID.toString() ||
-                    resourceId == REWARDS_EXPERIENCE_DATA_PACK_ID.toString() ||
-                    resourceId == REWARDS_TROPHY_DATA_PACK_ID.toString()
+            return false
+//            return resourceId == BACAP_DATA_PACK_ID.toString() ||
+//                    resourceId == BACAP_HARDCORE_DATA_PACK_ID.toString() ||
+//                    resourceId == CORE_DATA_PACK_ID.toString() ||
+//                    resourceId == HARDCORE_CORE_DATA_PACK_ID.toString() ||
+//                    resourceId == REWARDS_ITEM_DATA_PACK_ID.toString() ||
+//                    resourceId == REWARDS_EXPERIENCE_DATA_PACK_ID.toString() ||
+//                    resourceId == REWARDS_TROPHY_DATA_PACK_ID.toString() ||
+//                    resourceId == TERRALITH_DATA_PACK_ID.toString() ||
+//                    resourceId == BACAP_TERRALITH_DATA_PACK_ID.toString()
         }
 
         @JvmStatic

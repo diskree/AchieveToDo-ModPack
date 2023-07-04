@@ -1,0 +1,60 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:deepslate_tiles"
+		},
+		"title": {"translate":"Castle of Hrrms"},
+		"description": {"color":"#75E1FF","translate":"Enter a Fortified Village"},
+		"announce_to_chat": "true",
+		"frame": "goal"
+	},
+	"parent": "blazeandcave:adventure/do_you_want_to_trade",
+	"rewards": {
+		"function": "bc_rewards:adventure/castle_of_hrrms"
+	},		
+	"criteria": {
+		"village": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:any_of",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"structure": "terralith:fortified_village"
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"location": {
+										"structure": "terralith:fortified_desert_village"
+									}
+								}
+							}
+						]
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"type_specific": {
+									"type": "player",
+									"gamemode": "spectator"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

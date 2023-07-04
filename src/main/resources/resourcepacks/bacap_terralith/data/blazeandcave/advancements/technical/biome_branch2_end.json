@@ -1,0 +1,17 @@
+{
+	"parent": "blazeandcave:biomes/terralithic",	
+	"criteria": {
+		"kilometre_walk": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player":  {
+					"player": {
+						"advancements": {
+							"blazeandcave:biomes/kilometre_walk": "true"
+						}
+					}
+				}
+			}
+		}
+	}
+}

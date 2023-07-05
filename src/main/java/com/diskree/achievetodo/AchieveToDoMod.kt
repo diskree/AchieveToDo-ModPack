@@ -278,7 +278,7 @@ class AchieveToDoMod : ModInitializer {
     }
 
     companion object {
-        const val DEBUG = true
+        const val DEBUG = false
         const val ID = "achievetodo"
 
         @JvmField
@@ -485,16 +485,15 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmStatic
         fun isInternalDatapack(resourceId: String?): Boolean {
-            return false
-//            return resourceId == BACAP_DATA_PACK_ID.toString() ||
-//                    resourceId == BACAP_HARDCORE_DATA_PACK_ID.toString() ||
-//                    resourceId == CORE_DATA_PACK_ID.toString() ||
-//                    resourceId == HARDCORE_CORE_DATA_PACK_ID.toString() ||
-//                    resourceId == REWARDS_ITEM_DATA_PACK_ID.toString() ||
-//                    resourceId == REWARDS_EXPERIENCE_DATA_PACK_ID.toString() ||
-//                    resourceId == REWARDS_TROPHY_DATA_PACK_ID.toString() ||
-//                    resourceId == TERRALITH_DATA_PACK_ID.toString() ||
-//                    resourceId == BACAP_TERRALITH_DATA_PACK_ID.toString()
+            return resourceId == BACAP_DATA_PACK_ID.toString() ||
+                    resourceId == BACAP_HARDCORE_DATA_PACK_ID.toString() ||
+                    resourceId == CORE_DATA_PACK_ID.toString() ||
+                    resourceId == HARDCORE_CORE_DATA_PACK_ID.toString() ||
+                    resourceId == REWARDS_ITEM_DATA_PACK_ID.toString() ||
+                    resourceId == REWARDS_EXPERIENCE_DATA_PACK_ID.toString() ||
+                    resourceId == REWARDS_TROPHY_DATA_PACK_ID.toString() ||
+                    resourceId == TERRALITH_DATA_PACK_ID.toString() ||
+                    resourceId == BACAP_TERRALITH_DATA_PACK_ID.toString()
         }
 
         @JvmStatic

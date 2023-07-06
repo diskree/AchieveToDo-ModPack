@@ -3,52 +3,69 @@ package com.diskree.achievetodo.mixins;
 import com.diskree.achievetodo.WorldCreatorImpl;
 import net.minecraft.client.gui.screen.world.WorldCreator;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 
 @Mixin(WorldCreator.class)
 public class WorldCreatorMixin implements WorldCreatorImpl {
 
+    @Unique
     private boolean isItemRewardsEnabled;
+    @Unique
     private boolean isExperienceRewardsEnabled;
+    @Unique
     private boolean isTrophyRewardsEnabled = true;
+    @Unique
     private boolean isTerralithEnabled;
+    @Unique
+    private boolean isAmplifiedNetherEnabled;
 
     @Override
-    public boolean isItemRewardsEnabled() {
+    public boolean achieveToDo$isItemRewardsEnabled() {
         return isItemRewardsEnabled;
     }
 
     @Override
-    public boolean isExperienceRewardsEnabled() {
+    public boolean achieveToDo$isExperienceRewardsEnabled() {
         return isExperienceRewardsEnabled;
     }
 
     @Override
-    public boolean isTrophyRewardsEnabled() {
+    public boolean achieveToDo$isTrophyRewardsEnabled() {
         return isTrophyRewardsEnabled;
     }
 
     @Override
-    public boolean isTerralithEnabled() {
+    public boolean achieveToDo$isTerralithEnabled() {
         return isTerralithEnabled;
     }
 
     @Override
-    public void setItemRewardsEnabled(boolean itemRewardsEnabled) {
+    public boolean achieveToDo$isAmplifiedNetherEnabled() {
+        return isAmplifiedNetherEnabled;
+    }
+
+    @Override
+    public void achieveToDo$setItemRewardsEnabled(boolean itemRewardsEnabled) {
         isItemRewardsEnabled = itemRewardsEnabled;
     }
 
     @Override
-    public void setExperienceRewardsEnabled(boolean experienceRewardsEnabled) {
+    public void achieveToDo$setExperienceRewardsEnabled(boolean experienceRewardsEnabled) {
         isExperienceRewardsEnabled = experienceRewardsEnabled;
     }
 
     @Override
-    public void setTrophyRewardsEnabled(boolean trophyRewardsEnabled) {
+    public void achieveToDo$setTrophyRewardsEnabled(boolean trophyRewardsEnabled) {
         isTrophyRewardsEnabled = trophyRewardsEnabled;
     }
 
     @Override
-    public void setTerralithEnabled(boolean terralithEnabled) {
+    public void achieveToDo$setTerralithEnabled(boolean terralithEnabled) {
         isTerralithEnabled = terralithEnabled;
+    }
+
+    @Override
+    public void achieveToDo$setAmplifiedNetherEnabled(boolean amplifiedNetherEnabled) {
+        isAmplifiedNetherEnabled = amplifiedNetherEnabled;
     }
 }

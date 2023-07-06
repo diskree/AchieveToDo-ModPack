@@ -166,6 +166,18 @@ class AchieveToDoMod : ModInitializer {
                     ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
+                    AMPLIFIED_NETHER_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("Amplified Nether"),
+                    ResourcePackActivationType.NORMAL
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    BACAP_AMPLIFIED_NETHER_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("BACAP Amplified Nether"),
+                    ResourcePackActivationType.NORMAL
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
                     BACAP_LANGUAGE_RESOURCE_PACK_ID,
                     modContainer,
                     Text.of("BACAP Translator"),
@@ -307,6 +319,12 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmField
         val BACAP_TERRALITH_DATA_PACK_ID = Identifier(ID, "bacap_terralith")
+
+        @JvmField
+        val AMPLIFIED_NETHER_DATA_PACK_ID = Identifier(ID, "amplified_nether")
+
+        @JvmField
+        val BACAP_AMPLIFIED_NETHER_DATA_PACK_ID = Identifier(ID, "bacap_amplified_nether")
 
         private val BACAP_LANGUAGE_RESOURCE_PACK_ID = Identifier(ID, "bacap_lp")
         private val VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID = Identifier(ID, "visual_fish_buckets")
@@ -493,7 +511,9 @@ class AchieveToDoMod : ModInitializer {
                     resourceId == REWARDS_EXPERIENCE_DATA_PACK_ID.toString() ||
                     resourceId == REWARDS_TROPHY_DATA_PACK_ID.toString() ||
                     resourceId == TERRALITH_DATA_PACK_ID.toString() ||
-                    resourceId == BACAP_TERRALITH_DATA_PACK_ID.toString()
+                    resourceId == BACAP_TERRALITH_DATA_PACK_ID.toString() ||
+                    resourceId == AMPLIFIED_NETHER_DATA_PACK_ID.toString() ||
+                    resourceId == BACAP_AMPLIFIED_NETHER_DATA_PACK_ID.toString()
         }
 
         @JvmStatic

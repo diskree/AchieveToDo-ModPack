@@ -52,6 +52,8 @@
   "createWorld.generation.title": "Кастомная генерация",
   "createWorld.generation.overworld": "Верхний мир",
   "createWorld.generation.overworld.info": "Terralith - более 85 новых биомов, оригинальные структуры и бесконечные возможности.",
+  "createWorld.generation.nether": "Нижний мир",
+  "createWorld.generation.nether.info": "Amplified Nether - значительно расширяет нижний мир, увеличивая его высоту до 256 блоков.",
 
   "menu.shareToLan.info": "Миры в AchieveToDo не поддерживают мультиплеер и читы. Играйте честно!",
 

@@ -1,0 +1,43 @@
+{
+  "argument1": {
+    "type": "minecraft:clamp",
+    "input": {
+      "type": "minecraft:add",
+      "argument1": {
+        "type": "minecraft:blend_density",
+        "argument": {
+          "type": "add",
+          "argument1": {
+            "type": "abs",
+            "argument": {
+              "type": "abs",
+              "argument": {
+                "type": "minecraft:noise",
+                "noise": "amplified_nether:math/cave/barb2/barb",
+                "xz_scale": 3,
+                "y_scale": 3
+              }
+            }
+          },
+          "argument2": {
+            "type": "abs",
+            "argument": {
+              "type": "interpolated",
+              "argument": {
+                "type": "minecraft:noise",
+                "noise": "amplified_nether:math/cave/barb2/barb2",
+                "xz_scale": 3,
+                "y_scale": 3
+              }
+            }
+          }
+        }
+      },
+      "argument2": -0.125
+    },
+    "min": -0.125,
+    "max": 0
+  },
+  "type": "mul",
+  "argument2": 2
+}

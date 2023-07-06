@@ -22,6 +22,8 @@ public class CreateWorldAdvancementsTab extends GridScreenTab {
     private static final Text GENERATION_TITLE = Text.translatable("createWorld.generation.title");
     private static final Text OVERWORLD_GENERATION = Text.translatable("createWorld.generation.overworld");
     private static final Text OVERWORLD_GENERATION_INFO = Text.translatable("createWorld.generation.overworld.info");
+    private static final Text NETHER_GENERATION = Text.translatable("createWorld.generation.nether");
+    private static final Text NETHER_GENERATION_INFO = Text.translatable("createWorld.generation.nether.info");
 
     public CreateWorldAdvancementsTab(CreateWorldScreen screen) {
         super(Text.of("AchieveToDo"));
@@ -40,9 +42,9 @@ public class CreateWorldAdvancementsTab extends GridScreenTab {
         adder.add(rewardsTitleAdder.getGridWidget(), 2);
 
         WorldScreenOptionGrid.Builder rewardsOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-        rewardsOptionsBuilder.add(ITEM_REWARDS, worldSettings::isItemRewardsEnabled, worldSettings::setItemRewardsEnabled).tooltip(ITEM_REWARDS_INFO);
-        rewardsOptionsBuilder.add(EXPERIENCE_REWARDS, worldSettings::isExperienceRewardsEnabled, worldSettings::setExperienceRewardsEnabled).tooltip(EXPERIENCE_REWARDS_INFO);
-        rewardsOptionsBuilder.add(TROPHY_REWARDS, worldSettings::isTrophyRewardsEnabled, worldSettings::setTrophyRewardsEnabled).tooltip(TROPHY_REWARDS_INFO);
+        rewardsOptionsBuilder.add(ITEM_REWARDS, worldSettings::achieveToDo$isItemRewardsEnabled, worldSettings::achieveToDo$setItemRewardsEnabled).tooltip(ITEM_REWARDS_INFO);
+        rewardsOptionsBuilder.add(EXPERIENCE_REWARDS, worldSettings::achieveToDo$isExperienceRewardsEnabled, worldSettings::achieveToDo$setExperienceRewardsEnabled).tooltip(EXPERIENCE_REWARDS_INFO);
+        rewardsOptionsBuilder.add(TROPHY_REWARDS, worldSettings::achieveToDo$isTrophyRewardsEnabled, worldSettings::achieveToDo$setTrophyRewardsEnabled).tooltip(TROPHY_REWARDS_INFO);
         WorldScreenOptionGrid rewardsOptionsGrid = rewardsOptionsBuilder.build(widget -> adder.add(widget, 2));
 
         GridWidget.Adder generationTitleAdder = new GridWidget().setRowSpacing(4).createAdder(1);
@@ -50,7 +52,8 @@ public class CreateWorldAdvancementsTab extends GridScreenTab {
         adder.add(generationTitleAdder.getGridWidget(), 2);
 
         WorldScreenOptionGrid.Builder generationOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-        generationOptionsBuilder.add(OVERWORLD_GENERATION, worldSettings::isTerralithEnabled, worldSettings::setTerralithEnabled).tooltip(OVERWORLD_GENERATION_INFO);
+        generationOptionsBuilder.add(OVERWORLD_GENERATION, worldSettings::achieveToDo$isTerralithEnabled, worldSettings::achieveToDo$setTerralithEnabled).tooltip(OVERWORLD_GENERATION_INFO);
+        generationOptionsBuilder.add(NETHER_GENERATION, worldSettings::achieveToDo$isAmplifiedNetherEnabled, worldSettings::achieveToDo$setAmplifiedNetherEnabled).tooltip(NETHER_GENERATION_INFO);
         WorldScreenOptionGrid generationOptionGrid = generationOptionsBuilder.build(widget -> adder.add(widget, 2));
 
         worldCreator.addListener(creator -> {

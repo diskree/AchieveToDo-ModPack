@@ -1,0 +1,15 @@
+{
+  "name": "nullscape:phantom/main_hive",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "nullscape:phantom/main_hive",
+        "processors": "nullscape:phantom_nest",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

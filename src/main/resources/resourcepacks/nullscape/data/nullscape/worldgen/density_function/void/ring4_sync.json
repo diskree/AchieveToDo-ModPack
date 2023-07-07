@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:spline",
+  "spline": {
+    "coordinate": "nullscape:void/ring4_offset",
+    "points": [
+      {
+        "location": -0.025,
+        "derivative": 0,
+        "value": 64
+      },
+      {
+        "location": -0.0125,
+        "derivative": 0,
+        "value": 1
+      },
+      {
+        "location": -0.01,
+        "derivative": 0,
+        "value": 0
+      },
+      {
+        "location": 0,
+        "derivative": 0,
+        "value": -1
+      },
+      {
+        "location": 0.01,
+        "derivative": 0,
+        "value": 0
+      },
+      {
+        "location": 0.0125,
+        "derivative": 0,
+        "value": 1
+      },
+      {
+        "location": 0.025,
+        "derivative": 0,
+        "value": 64
+      }
+    ]
+  }
+}

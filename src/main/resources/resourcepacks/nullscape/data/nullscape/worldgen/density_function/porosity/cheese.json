@@ -1,0 +1,12 @@
+{
+  "type": "interpolated",
+  "argument": {
+    "type": "min",
+    "argument1": {
+      "type": "min",
+      "argument1": "nullscape:porosity/bubble_small",
+      "argument2": "nullscape:porosity/bubble_medium"
+    },
+    "argument2": "nullscape:porosity/bubble_large"
+  }
+}

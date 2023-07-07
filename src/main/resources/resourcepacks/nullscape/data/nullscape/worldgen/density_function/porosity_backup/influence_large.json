@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:cache_once",
+  "argument": {
+    "type": "minecraft:min",
+    "argument1": -0.15,
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": {
+        "type": "add",
+        "argument1": -1,
+        "argument2": "nullscape:porosity/influence_add"
+      },
+      "argument2": {
+        "type": "minecraft:mul",
+        "argument1": "nullscape:porosity/influence",
+        "argument2": {
+          "type": "minecraft:noise",
+          "noise": "nullscape:material/sub_property/porosity/influence_large",
+          "xz_scale": 1,
+          "y_scale": 1
+        }
+      }
+    }
+  }
+}

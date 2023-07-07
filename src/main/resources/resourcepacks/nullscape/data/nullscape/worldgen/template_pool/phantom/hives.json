@@ -1,0 +1,33 @@
+{
+  "name": "nullscape:phantom/hives",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "nullscape:phantom/hive1",
+        "processors": "nullscape:phantom_nest",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "nullscape:phantom/hive2",
+        "processors": "nullscape:phantom_nest",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "nullscape:phantom/hive3",
+        "processors": "nullscape:phantom_nest",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

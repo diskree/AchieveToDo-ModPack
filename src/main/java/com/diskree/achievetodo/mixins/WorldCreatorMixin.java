@@ -18,6 +18,8 @@ public class WorldCreatorMixin implements WorldCreatorImpl {
     private boolean isTerralithEnabled;
     @Unique
     private boolean isAmplifiedNetherEnabled;
+    @Unique
+    private boolean isNullscapeEnabled;
 
     @Override
     public boolean achieveToDo$isItemRewardsEnabled() {
@@ -45,6 +47,11 @@ public class WorldCreatorMixin implements WorldCreatorImpl {
     }
 
     @Override
+    public boolean achieveToDo$isNullscapeEnabled() {
+        return isNullscapeEnabled;
+    }
+
+    @Override
     public void achieveToDo$setItemRewardsEnabled(boolean itemRewardsEnabled) {
         isItemRewardsEnabled = itemRewardsEnabled;
     }
@@ -67,5 +74,10 @@ public class WorldCreatorMixin implements WorldCreatorImpl {
     @Override
     public void achieveToDo$setAmplifiedNetherEnabled(boolean amplifiedNetherEnabled) {
         isAmplifiedNetherEnabled = amplifiedNetherEnabled;
+    }
+
+    @Override
+    public void achieveToDo$setNullscapeEnabled(boolean nullscapeEnabled) {
+        isNullscapeEnabled = nullscapeEnabled;
     }
 }

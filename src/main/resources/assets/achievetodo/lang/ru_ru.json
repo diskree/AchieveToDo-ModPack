@@ -50,10 +50,12 @@
   "createWorld.rewards.trophy": "Трофеи",
   "createWorld.rewards.trophy.info": "Вы будете получать коллекционные предметы за выполнение достижений. Например, бесконечный железный топор за сбор стака брёвен каждого типа дерева.",
   "createWorld.generation.title": "Кастомная генерация",
-  "createWorld.generation.overworld": "Верхний мир",
-  "createWorld.generation.overworld.info": "Terralith - более 85 новых биомов, оригинальные структуры и бесконечные возможности.",
-  "createWorld.generation.nether": "Нижний мир",
-  "createWorld.generation.nether.info": "Amplified Nether - значительно расширяет нижний мир, увеличивая его высоту до 256 блоков.",
+  "createWorld.generation.overworld": "Верхний Мир",
+  "createWorld.generation.overworld.info": "Terralith - добавляет более 85 новых биомов и оригинальных структур в Верхний Мир.",
+  "createWorld.generation.nether": "Нижний Мир",
+  "createWorld.generation.nether.info": "Amplified Nether - значительно расширяет рельеф Нижнего Мира и увеличивает его высоту в 2 раза.",
+  "createWorld.generation.end": "Край",
+  "createWorld.generation.end.info": "Nullscape - разрушенные острова, парящие глыбы и завораживающий рельеф.",
 
   "menu.shareToLan.info": "Миры в AchieveToDo не поддерживают мультиплеер и читы. Играйте честно!",
 

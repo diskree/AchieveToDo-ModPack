@@ -1,0 +1,9 @@
+{
+        "type": "minecraft:shifted_noise",
+        "noise": "nullscape:material/sub_property/elasticity/z_strength",
+        "xz_scale": 2.5,
+        "y_scale": 2.5,
+        "shift_x": 0,
+        "shift_y": 0,
+        "shift_z": 0
+}

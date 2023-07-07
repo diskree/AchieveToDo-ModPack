@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:mul",
+  "argument1": -1,
+  "argument2": {
+    "type": "minecraft:add",
+    "argument1": "nullscape:porosity/influence_large",
+    "argument2": {
+      "type": "minecraft:abs",
+      "argument": {
+        "type": "minecraft:shifted_noise",
+        "noise": "nullscape:material/effect/porosity/bubble_large",
+        "xz_scale": 1,
+        "y_scale": 1,
+        "shift_x": 0,
+        "shift_y": 0,
+        "shift_z": 0
+      }
+    }
+  }
+}

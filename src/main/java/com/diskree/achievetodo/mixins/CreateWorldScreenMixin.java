@@ -87,6 +87,8 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 packManager.disable(AchieveToDoMod.BACAP_TERRALITH_DATA_PACK_ID.toString());
                 packManager.disable(AchieveToDoMod.AMPLIFIED_NETHER_DATA_PACK_ID.toString());
                 packManager.disable(AchieveToDoMod.BACAP_AMPLIFIED_NETHER_DATA_PACK_ID.toString());
+                packManager.disable(AchieveToDoMod.NULLSCAPE_DATA_PACK_ID.toString());
+                packManager.disable(AchieveToDoMod.BACAP_NULLSCAPE_DATA_PACK_ID.toString());
 
                 packManager.enable(AchieveToDoMod.BACAP_DATA_PACK_ID.toString());
                 packManager.enable(AchieveToDoMod.CORE_DATA_PACK_ID.toString());
@@ -101,6 +103,10 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 if (worldCreatorImpl.achieveToDo$isAmplifiedNetherEnabled()) {
                     packManager.enable(AchieveToDoMod.AMPLIFIED_NETHER_DATA_PACK_ID.toString());
                     packManager.enable(AchieveToDoMod.BACAP_AMPLIFIED_NETHER_DATA_PACK_ID.toString());
+                }
+                if (worldCreatorImpl.achieveToDo$isNullscapeEnabled()) {
+                    packManager.enable(AchieveToDoMod.NULLSCAPE_DATA_PACK_ID.toString());
+                    packManager.enable(AchieveToDoMod.BACAP_NULLSCAPE_DATA_PACK_ID.toString());
                 }
                 if (worldCreatorImpl.achieveToDo$isItemRewardsEnabled()) {
                     packManager.enable(AchieveToDoMod.REWARDS_ITEM_DATA_PACK_ID.toString());

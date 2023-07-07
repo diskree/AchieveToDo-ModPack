@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:spline",
+  "spline": {
+    "coordinate": "nullscape:island/island",
+    "points": [
+      {
+        "location": -1,
+        "derivative": 0,
+        "value": 80
+      },
+      {
+        "location": -0.1,
+        "derivative": 0,
+        "value": 1
+      },
+      {
+        "location": -0.025,
+        "derivative": 0,
+        "value": 0
+      },
+      {
+        "location": 0,
+        "derivative": 0,
+        "value": -1
+      },
+      {
+        "location": 0.025,
+        "derivative": 0,
+        "value": -100
+      }
+    ]
+  }
+}

@@ -54,6 +54,8 @@
   "createWorld.generation.overworld.info": "Terralith - 85+ new biomes, original structures, and endless features.",
   "createWorld.generation.nether": "Nether",
   "createWorld.generation.nether.info": "Amplified Nether - make the Nether 256 blocks tall while also bringing in the \"Amplified\" feel.",
+  "createWorld.generation.end": "End",
+  "createWorld.generation.end.info": "Nullscape - a better ending. Shattered islands, floating valleys, and infinite variation.",
 
   "menu.shareToLan.info": "AchieveToDo worlds do not support multiplayer and cheats. Play fair!",
 

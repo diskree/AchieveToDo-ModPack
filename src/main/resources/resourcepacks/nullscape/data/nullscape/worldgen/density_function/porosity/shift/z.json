@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:cache_once",
+  "argument": {
+    "type": "minecraft:clamp",
+    "input": {
+      "type": "minecraft:mul",
+      "argument1": {
+        "type": "minecraft:spline",
+        "spline": {
+          "coordinate": "nullscape:porosity/shift/z_noise",
+          "points": [
+            {
+              "location": -1,
+              "derivative": 30,
+              "value": 0
+            },
+            {
+              "location": -0.5,
+              "derivative": 50,
+              "value": 15
+            },
+            {
+              "location": 0,
+              "derivative": 120,
+              "value": 40
+            },
+            {
+              "location": 0.25,
+              "derivative": 160,
+              "value": 80
+            },
+            {
+              "location": 1,
+              "derivative": 0,
+              "value": 200
+            }
+          ]
+        }
+      },
+      "argument2": 1.5
+    },
+    "min": 0,
+    "max": 325
+  }
+}

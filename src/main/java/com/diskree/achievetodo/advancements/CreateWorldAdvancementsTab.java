@@ -24,6 +24,8 @@ public class CreateWorldAdvancementsTab extends GridScreenTab {
     private static final Text OVERWORLD_GENERATION_INFO = Text.translatable("createWorld.generation.overworld.info");
     private static final Text NETHER_GENERATION = Text.translatable("createWorld.generation.nether");
     private static final Text NETHER_GENERATION_INFO = Text.translatable("createWorld.generation.nether.info");
+    private static final Text END_GENERATION = Text.translatable("createWorld.generation.end");
+    private static final Text END_GENERATION_INFO = Text.translatable("createWorld.generation.end.info");
 
     public CreateWorldAdvancementsTab(CreateWorldScreen screen) {
         super(Text.of("AchieveToDo"));
@@ -54,6 +56,7 @@ public class CreateWorldAdvancementsTab extends GridScreenTab {
         WorldScreenOptionGrid.Builder generationOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
         generationOptionsBuilder.add(OVERWORLD_GENERATION, worldSettings::achieveToDo$isTerralithEnabled, worldSettings::achieveToDo$setTerralithEnabled).tooltip(OVERWORLD_GENERATION_INFO);
         generationOptionsBuilder.add(NETHER_GENERATION, worldSettings::achieveToDo$isAmplifiedNetherEnabled, worldSettings::achieveToDo$setAmplifiedNetherEnabled).tooltip(NETHER_GENERATION_INFO);
+        generationOptionsBuilder.add(END_GENERATION, worldSettings::achieveToDo$isNullscapeEnabled, worldSettings::achieveToDo$setNullscapeEnabled).tooltip(END_GENERATION_INFO);
         WorldScreenOptionGrid generationOptionGrid = generationOptionsBuilder.build(widget -> adder.add(widget, 2));
 
         worldCreator.addListener(creator -> {

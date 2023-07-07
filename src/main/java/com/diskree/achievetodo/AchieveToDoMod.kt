@@ -178,6 +178,18 @@ class AchieveToDoMod : ModInitializer {
                     ResourcePackActivationType.NORMAL
             )
             ResourceManagerHelper.registerBuiltinResourcePack(
+                    NULLSCAPE_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("Nullscape"),
+                    ResourcePackActivationType.NORMAL
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    BACAP_NULLSCAPE_DATA_PACK_ID,
+                    modContainer,
+                    Text.of("BACAP Nullscape"),
+                    ResourcePackActivationType.NORMAL
+            )
+            ResourceManagerHelper.registerBuiltinResourcePack(
                     BACAP_LANGUAGE_RESOURCE_PACK_ID,
                     modContainer,
                     Text.of("BACAP Translator"),
@@ -325,6 +337,12 @@ class AchieveToDoMod : ModInitializer {
 
         @JvmField
         val BACAP_AMPLIFIED_NETHER_DATA_PACK_ID = Identifier(ID, "bacap_amplified_nether")
+
+        @JvmField
+        val NULLSCAPE_DATA_PACK_ID = Identifier(ID, "nullscape")
+
+        @JvmField
+        val BACAP_NULLSCAPE_DATA_PACK_ID = Identifier(ID, "bacap_nullscape")
 
         private val BACAP_LANGUAGE_RESOURCE_PACK_ID = Identifier(ID, "bacap_lp")
         private val VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID = Identifier(ID, "visual_fish_buckets")
@@ -513,7 +531,9 @@ class AchieveToDoMod : ModInitializer {
                     resourceId == TERRALITH_DATA_PACK_ID.toString() ||
                     resourceId == BACAP_TERRALITH_DATA_PACK_ID.toString() ||
                     resourceId == AMPLIFIED_NETHER_DATA_PACK_ID.toString() ||
-                    resourceId == BACAP_AMPLIFIED_NETHER_DATA_PACK_ID.toString()
+                    resourceId == BACAP_AMPLIFIED_NETHER_DATA_PACK_ID.toString() ||
+                    resourceId == NULLSCAPE_DATA_PACK_ID.toString() ||
+                    resourceId == BACAP_NULLSCAPE_DATA_PACK_ID.toString()
         }
 
         @JvmStatic

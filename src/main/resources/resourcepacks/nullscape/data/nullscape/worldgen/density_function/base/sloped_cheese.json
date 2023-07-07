@@ -1,0 +1,208 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:mul",
+    "argument1": 4,
+    "argument2": {
+      "type": "minecraft:quarter_negative",
+      "argument": {
+        "type": "minecraft:mul",
+        "argument1": {
+          "type": "minecraft:add",
+          "argument1": "nullscape:base/depth",
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": {
+              "type": "minecraft:add",
+              "argument1": {
+                "type": "minecraft:mul",
+                "argument1": 0,
+                "argument2": {
+                  "type": "minecraft:add",
+                  "argument1": 1,
+                  "argument2": {
+                    "type": "minecraft:mul",
+                    "argument1": -1,
+                    "argument2": {
+                      "type": "minecraft:cache_once",
+                      "argument": {
+                        "type": "minecraft:blend_alpha"
+                      }
+                    }
+                  }
+                }
+              },
+              "argument2": {
+                "type": "minecraft:mul",
+                "argument1": {
+                  "type": "minecraft:clamp",
+                  "input": {
+                    "type": "minecraft:spline",
+                    "spline": {
+                      "coordinate": "nullscape:base/continents",
+                      "points": [
+                        {
+                          "location": 0,
+                          "derivative": 0,
+                          "value": {
+                            "coordinate": "minecraft:overworld/erosion",
+                            "points": [
+                              {
+                                "location": 0.3,
+                                "derivative": 0,
+                                "value": 0
+                              },
+                              {
+                                "location": 0.4,
+                                "derivative": 0,
+                                "value": {
+                                  "coordinate": "minecraft:overworld/ridges",
+                                  "points": [
+                                    {
+                                      "location": 0,
+                                      "derivative": 1.75,
+                                      "value": 0
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "location": 0.15,
+                          "derivative": 0,
+                          "value": 0
+                        },
+                        {
+                          "location": 0.3,
+                          "derivative": 0,
+                          "value": {
+                            "coordinate": "minecraft:overworld/erosion",
+                            "points": [
+                              {
+                                "location": -0.3,
+                                "derivative": 0,
+                                "value": {
+                                  "coordinate": "minecraft:overworld/ridges",
+                                  "points": [
+                                    {
+                                      "location": -0.5,
+                                      "derivative": 0,
+                                      "value": 0.65
+                                    },
+                                    {
+                                      "location": -0.3,
+                                      "derivative": -3,
+                                      "value": 0
+                                    },
+                                    {
+                                      "location": 0,
+                                      "derivative": 0,
+                                      "value": 0
+                                    },
+                                    {
+                                      "location": 0.3,
+                                      "derivative": 4,
+                                      "value": 0
+                                    },
+                                    {
+                                      "location": 0.5,
+                                      "derivative": 0,
+                                      "value": 0.85
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "location": 0,
+                                "derivative": 0,
+                                "value": {
+                                  "coordinate": "minecraft:overworld/ridges",
+                                  "points": [
+                                    {
+                                      "location": -0.5,
+                                      "derivative": 0,
+                                      "value": 0.15
+                                    },
+                                    {
+                                      "location": -0.3,
+                                      "derivative": 1.5,
+                                      "value": 0
+                                    },
+                                    {
+                                      "location": 0,
+                                      "derivative": 0,
+                                      "value": 0
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "location": 0.3,
+                                "derivative": 0,
+                                "value": {
+                                  "coordinate": "minecraft:overworld/ridges",
+                                  "points": [
+                                    {
+                                      "location": -0.5,
+                                      "derivative": 0,
+                                      "value": 0
+                                    },
+                                    {
+                                      "location": -0.3,
+                                      "derivative": 0,
+                                      "value": 0
+                                    },
+                                    {
+                                      "location": 0,
+                                      "derivative": 0,
+                                      "value": 0
+                                    },
+                                    {
+                                      "location": 0.3,
+                                      "derivative": 0,
+                                      "value": 0
+                                    },
+                                    {
+                                      "location": 0.5,
+                                      "derivative": 0,
+                                      "value": 0
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "min": 0,
+                  "max": 1.28
+                },
+                "argument2": {
+                  "type": "minecraft:cache_once",
+                  "argument": {
+                    "type": "minecraft:blend_alpha"
+                  }
+                }
+              }
+            },
+            "argument2": {
+              "type": "minecraft:half_negative",
+              "argument": {
+                "type": "minecraft:noise",
+                "noise": "minecraft:jagged",
+                "xz_scale": 1500,
+                "y_scale": 0
+              }
+            }
+          }
+        },
+        "argument2": "nullscape:base/factor"
+      }
+    }
+  },
+  "argument2": "nullscape:base/base_3d_noise"
+}

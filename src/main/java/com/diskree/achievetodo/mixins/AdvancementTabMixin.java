@@ -65,12 +65,12 @@ public class AdvancementTabMixin {
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 117), require = 1)
     private int renderModifyOriginX(int orig) {
-        return screen.width / 2 - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN;
+        return screen.width / 2 - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN - 2 * 9 / 2;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 56), require = 1)
     private int renderModifyOriginY(int orig) {
-        return screen.height / 2 - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN;
+        return screen.height / 2 - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN - 3 * 9 / 2;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 15), require = 1)

@@ -2,16 +2,11 @@ package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementDisplay;
-import net.minecraft.advancement.AdvancementFrame;
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.sound.PositionedSoundInstance;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.toast.Toast;
 import net.minecraft.client.toast.ToastManager;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.OrderedText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -19,52 +14,44 @@ import net.minecraft.util.math.MathHelper;
 
 import java.util.List;
 
-@Environment(value = EnvType.CLIENT)
 public class UnblockActionToast implements Toast {
 
     public final BlockedAction blockedAction;
     private final Identifier TEXTURE;
 
     private final Advancement advancement;
-    private boolean soundPlayed;
 
     public UnblockActionToast(Advancement advancement, BlockedAction blockedAction) {
         this.advancement = advancement;
         this.blockedAction = blockedAction;
-        TEXTURE = new Identifier(AchieveToDoMod.ID, "textures/gui/toasts_" + blockedAction.actionType.name().toLowerCase() + ".png");
+        TEXTURE = new Identifier(AchieveToDoMod.MOD_ID, "textures/gui/toasts_" + blockedAction.getActionType().name().toLowerCase() + ".png");
     }
 
     @Override
-    public Toast.Visibility draw(DrawContext context, ToastManager manager, long startTime) {
+    public Visibility draw(GuiGraphics graphics, ToastManager manager, long startTime) {
         AdvancementDisplay advancementDisplay = this.advancement.getDisplay();
-        context.drawTexture(TEXTURE, 0, 0, 0, 0, this.getWidth(), this.getHeight());
+        graphics.drawTexture(TEXTURE, 0, 0, 0, 0, this.getWidth(), this.getHeight());
         if (advancementDisplay != null) {
-            int i = advancementDisplay.getFrame() == AdvancementFrame.CHALLENGE ? 0xFF88FF : 0xFFFF00;
-            List<OrderedText> list = manager.getClient().textRenderer.wrapLines(advancementDisplay.getTitle(), 125);
+            int i = 0xFFFF00;
+            List<OrderedText> list = manager.getGame().textRenderer.wrapLines(advancementDisplay.getTitle(), 125);
             if (list.size() == 1) {
-                context.drawText(manager.getClient().textRenderer, Text.of(blockedAction.actionType.getUnblockPopupTitle()), 30, 7, i | 0xFF000000, false);
-                context.drawText(manager.getClient().textRenderer, list.get(0), 30, 18, -1, false);
+                graphics.drawText(manager.getGame().textRenderer, Text.translatable(blockedAction.getActionType().getUnblockPopupTitle()), 30, 7, i | 0xFF000000, false);
+                graphics.drawText(manager.getGame().textRenderer, list.get(0), 30, 18, -1, false);
             } else {
                 if (startTime < 1500L) {
                     int k = MathHelper.floor(MathHelper.clamp((float) (1500L - startTime) / 300.0f, 0.0f, 1.0f) * 255.0f) << 24 | 0x4000000;
-                    context.drawText(manager.getClient().textRenderer, Text.of(blockedAction.actionType.getUnblockPopupTitle()), 30, 11, i | k, false);
+                    graphics.drawText(manager.getGame().textRenderer, Text.translatable(blockedAction.getActionType().getUnblockPopupTitle()), 30, 11, i | k, false);
                 } else {
                     int k = MathHelper.floor(MathHelper.clamp((float) (startTime - 1500L) / 300.0f, 0.0f, 1.0f) * 252.0f) << 24 | 0x4000000;
-                    int l = this.getHeight() / 2 - list.size() * manager.getClient().textRenderer.fontHeight / 2;
+                    int l = this.getHeight() / 2 - list.size() * manager.getGame().textRenderer.fontHeight / 2;
                     for (OrderedText orderedText : list) {
-                        context.drawText(manager.getClient().textRenderer, orderedText, 30, l, 0xFFFFFF | k, false);
-                        l += manager.getClient().textRenderer.fontHeight;
+                        graphics.drawText(manager.getGame().textRenderer, orderedText, 30, l, 0xFFFFFF | k, false);
+                        l += manager.getGame().textRenderer.fontHeight;
                     }
                 }
             }
-            if (!this.soundPlayed && startTime > 0L) {
-                this.soundPlayed = true;
-                if (advancementDisplay.getFrame() == AdvancementFrame.CHALLENGE) {
-                    manager.getClient().getSoundManager().play(PositionedSoundInstance.master(SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, 1.0f, 1.0f));
-                }
-            }
-            context.drawItemWithoutEntity(advancementDisplay.getIcon(), 8, 8);
-            return (double) startTime >= 5000.0 * manager.getNotificationDisplayTimeMultiplier() ? Toast.Visibility.HIDE : Toast.Visibility.SHOW;
+            graphics.drawItemWithoutEntity(advancementDisplay.getIcon(), 8, 8);
+            return (double) startTime >= 5000.0 * manager.method_48221() ? Toast.Visibility.HIDE : Toast.Visibility.SHOW;
         }
         return Toast.Visibility.HIDE;
     }

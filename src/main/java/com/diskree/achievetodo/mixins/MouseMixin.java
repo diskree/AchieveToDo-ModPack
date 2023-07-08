@@ -13,9 +13,11 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(Mouse.class)
 public class MouseMixin {
 
-    @Shadow @Final private MinecraftClient client;
+    @Shadow
+    @Final
+    private MinecraftClient client;
 
-    @Redirect(method = "updateMouse", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingSpyglass()Z"))
+    @Redirect(method = "updateLookDirection", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingSpyglass()Z"))
     private boolean updateMouseRedirect(ClientPlayerEntity instance) {
         if (client.player != null && client.player.isUsingSpyglass()) {
             NbtCompound nbt = client.player.getActiveItem().getNbt();

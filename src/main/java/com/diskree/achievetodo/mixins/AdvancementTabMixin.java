@@ -22,6 +22,17 @@ public class AdvancementTabMixin {
     @Final
     private AdvancementsScreen screen;
 
+    @Inject(method = "create", at = @At("HEAD"), cancellable = true)
+    private static void createInject(MinecraftClient client, AdvancementsScreen screen, int index, Advancement root, CallbackInfoReturnable<AdvancementTab> cir) {
+        if (root == null || root.getDisplay() == null) {
+            cir.setReturnValue(null);
+            return;
+        }
+        String rootName = root.getId().getPath().split("/")[0];
+        AdvancementRoot advancementRoot = AdvancementRoot.valueOf(rootName.toUpperCase());
+        cir.setReturnValue(new AdvancementTab(client, screen, advancementRoot.getTabType(), advancementRoot.getOrder(), root, root.getDisplay()));
+    }
+
     @ModifyConstant(method = "move", constant = @Constant(intValue = 234), require = 2)
     private int moveModifyWidth(int orig) {
         return screen.width - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
@@ -70,16 +81,5 @@ public class AdvancementTabMixin {
     @ModifyConstant(method = "render", constant = @Constant(intValue = 8), require = 1)
     private int renderModifyTextureY(int orig) {
         return (screen.height - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2) / 16 + 1;
-    }
-
-    @Inject(method = "create", at = @At("HEAD"), cancellable = true)
-    private static void createInject(MinecraftClient client, AdvancementsScreen screen, int index, Advancement root, CallbackInfoReturnable<AdvancementTab> cir) {
-        if (root == null || root.getDisplay() == null) {
-            cir.setReturnValue(null);
-            return;
-        }
-        String rootName = root.getId().getPath().split("/")[0];
-        AdvancementRoot advancementRoot = AdvancementRoot.valueOf(rootName.toUpperCase());
-        cir.setReturnValue(new AdvancementTab(client, screen, advancementRoot.getTabType(), advancementRoot.getOrder(), root, root.getDisplay()));
     }
 }

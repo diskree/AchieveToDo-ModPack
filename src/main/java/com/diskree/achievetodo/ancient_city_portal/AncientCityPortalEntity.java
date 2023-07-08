@@ -8,12 +8,13 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.JukeboxBlockEntity;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.decoration.DisplayEntity;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -35,7 +36,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.event.EntityPositionSource;
 import net.minecraft.world.event.GameEvent;
 import net.minecraft.world.event.PositionSource;
-import net.minecraft.world.event.listener.EntityGameEventHandler;
+import net.minecraft.world.event.listener.DynamicGameEventListener;
 import net.minecraft.world.event.listener.GameEventListener;
 import org.jetbrains.annotations.Nullable;
 
@@ -54,17 +55,16 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public static final BooleanProperty REINFORCED_DEEPSLATE_CHARGED_PROPERTY = BooleanProperty.of("charged");
     public static final BooleanProperty REINFORCED_DEEPSLATE_BROKEN_PROPERTY = BooleanProperty.of("broken");
-
+    private final DynamicGameEventListener<JukeboxEventListener> jukeboxEventHandler;
     @Nullable
     private BlockPos jukeboxPos;
     private boolean isDragonEggGranted;
-    private final EntityGameEventHandler<JukeboxEventListener> jukeboxEventHandler;
     private int spawnExperienceTick;
     private int receivedHints;
 
     public AncientCityPortalEntity(EntityType<?> entityType, World world) {
         super(entityType, world);
-        this.jukeboxEventHandler = new EntityGameEventHandler<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalEntity.this, 0), AchieveToDoMod.JUKEBOX_PLAY.getRange()));
+        this.jukeboxEventHandler = new DynamicGameEventListener<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalEntity.this, 0), AchieveToDoMod.JUKEBOX_PLAY.getRange()));
     }
 
     @Nullable
@@ -90,20 +90,6 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         return hardness == 55.0f && resistance == 1200.0f;
     }
 
-    public boolean isPortalBlock(BlockPos pos) {
-        for (BlockPos portalBlock : getPortalBlocks(false)) {
-            if (portalBlock.equals(pos)) {
-                return true;
-            }
-        }
-        for (BlockPos portalBlock : getPortalBlocks(true, true)) {
-            if (portalBlock.equals(pos)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public static boolean isJukebox(WorldAccess world, BlockPos pos) {
         Box box = new Box(
                 pos
@@ -118,6 +104,24 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         if (world != null) {
             List<AncientCityPortalEntity> portalEntities = world.getEntitiesByClass(AncientCityPortalEntity.class, box, (portalEntity) -> true);
             return portalEntities.size() == 1;
+        }
+        return false;
+    }
+
+    public static int getPortalFrameLightLevel(BlockState state) {
+        return state.get(REINFORCED_DEEPSLATE_CHARGED_PROPERTY) ? 15 : 0;
+    }
+
+    public boolean isPortalBlock(BlockPos pos) {
+        for (BlockPos portalBlock : getPortalBlocks(false)) {
+            if (portalBlock.equals(pos)) {
+                return true;
+            }
+        }
+        for (BlockPos portalBlock : getPortalBlocks(true, true)) {
+            if (portalBlock.equals(pos)) {
+                return true;
+            }
         }
         return false;
     }
@@ -217,7 +221,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                 MinecraftServer server = getWorld().getServer();
                 if (server != null) {
                     ServerPlayerEntity player = server.getPlayerManager().getPlayerList().get(0);
-                    Vec3d playerPos = player.getPos().offset(Direction.UP, 0.6);
+                    Vec3d playerPos = player.getPos().add(0, 0.6, 0);
                     int experienceCount = player.totalExperience;
                     if (experienceCount < 10) {
                         player.damage(getWorld().getDamageSources().badRespawnPoint(playerPos), 1);
@@ -230,8 +234,8 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                     double playerX = playerPos.getX();
                     double playerY = playerPos.getY();
                     double playerZ = playerPos.getZ();
-                    BlockPos inclinePos = new BlockPos((int) playerX + random.nextBetween(-1, 1), (int) playerY + random.nextBetween(-1, 1), (int) playerZ + random.nextBetween(-1, 1));
-                    getWorld().spawnEntity(new AncientCityPortalExperienceOrbEntity(getWorld(), playerX, playerY, playerZ, portalBlocks.get(0), inclinePos, random.nextBetween(1, 10)));
+                    BlockPos inclinePos = new BlockPos((int) playerX + random.rangeClosed(-1, 1), (int) playerY + random.rangeClosed(-1, 1), (int) playerZ + random.rangeClosed(-1, 1));
+                    getWorld().spawnEntity(new AncientCityPortalExperienceOrbEntity(getWorld(), playerX, playerY, playerZ, portalBlocks.get(0), inclinePos, random.rangeClosed(1, 10)));
                 }
             }
         }
@@ -244,16 +248,16 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public void showAdvancementTab(ItemStack tabItem) {
         BlockPos tabEntityPos = getBlockPos().offset(getHorizontalFacing().rotateYCounterclockwise(), 5);
-        List<AncientCityPortalTabEntity> tabEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_TAB, Box.of(tabEntityPos.toCenterPos(), 1, 1, 1), (entity) -> true);
+        List<AncientCityPortalTabEntity> tabEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_TAB, Box.of(tabEntityPos.ofCenter(), 1, 1, 1), (entity) -> true);
         if (tabEntities != null && tabEntities.size() == 1) {
             AncientCityPortalTabEntity tabEntity = tabEntities.get(0);
-            ((ItemDisplayEntityImpl) tabEntity).publicSetItemStack(tabItem);
+            ((ItemDisplayEntityImpl) tabEntity).achieveToDo$publicSetStack(tabItem);
         }
     }
 
     public void showAdvancementHint(ItemStack hintItem, boolean drop) {
         BlockPos hintEntityPos = getBlockPos().offset(getHorizontalFacing().rotateYClockwise(), 5);
-        List<AncientCityPortalPromptEntity> hintEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT, Box.of(hintEntityPos.toCenterPos(), 1, 1, 1), (entity) -> true);
+        List<AncientCityPortalPromptEntity> hintEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT, Box.of(hintEntityPos.ofCenter(), 1, 1, 1), (entity) -> true);
         if (hintEntities != null && hintEntities.size() == 1) {
             AncientCityPortalPromptEntity hintEntity = hintEntities.get(0);
             if (drop) {
@@ -261,16 +265,16 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                 NbtCompound nbt = new NbtCompound();
                 nbt.putInt("Damage", 47);
                 arrow.setNbt(nbt);
-                ((ItemDisplayEntityImpl) hintEntity).publicSetItemStack(arrow);
+                ((ItemDisplayEntityImpl) hintEntity).achieveToDo$publicSetStack(arrow);
                 getWorld().spawnEntity(new ItemEntity(getWorld(), hintEntity.getX(), hintEntity.getY() - 1, hintEntity.getZ(), hintItem, 0, 0, 0));
             } else {
-                ((ItemDisplayEntityImpl) hintEntity).publicSetItemStack(hintItem);
+                ((ItemDisplayEntityImpl) hintEntity).achieveToDo$publicSetStack(hintItem);
             }
         }
     }
 
     public void showAdvancement(ItemStack advancementItem) {
-        ((ItemDisplayEntityImpl) this).publicSetItemStack(advancementItem);
+        ((ItemDisplayEntityImpl) this).achieveToDo$publicSetStack(advancementItem);
     }
 
     public void checkCharging(BlockState state) {
@@ -311,14 +315,11 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         return false;
     }
 
-    public static int getPortalFrameLightLevel(BlockState state) {
-        return state.get(REINFORCED_DEEPSLATE_CHARGED_PROPERTY) ? 15 : 0;
-    }
-
     @Override
-    public void updateEventHandler(BiConsumer<EntityGameEventHandler<?>, ServerWorld> callback) {
-        if (getWorld() instanceof ServerWorld serverWorld) {
-            callback.accept(this.jukeboxEventHandler, serverWorld);
+    public void updateDynamicGameEventListener(BiConsumer<DynamicGameEventListener<?>, ServerWorld> updater) {
+        World var3 = this.getWorld();
+        if (var3 instanceof ServerWorld serverWorld) {
+            updater.accept(jukeboxEventHandler, serverWorld);
         }
     }
 
@@ -395,16 +396,16 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
     }
 
     private boolean checkPlayerInvisibility() {
-        PlayerEntity player = AchieveToDoMod.getPlayer();
+        ClientPlayerEntity player = MinecraftClient.getInstance().player;
         return player != null && player.hasStatusEffect(StatusEffects.INVISIBILITY);
     }
 
     private boolean checkPlayerRadius() {
-        PlayerEntity player = AchieveToDoMod.getPlayer();
+        ClientPlayerEntity player = MinecraftClient.getInstance().player;
         if (player == null || !player.isAlive()) {
             return false;
         }
-        return player.getWorld().getRegistryKey() == getWorld().getRegistryKey() && player.getPos().distanceTo(getBlockPos().toCenterPos()) <= RITUAL_RADIUS;
+        return player.getWorld().getRegistryKey() == getWorld().getRegistryKey() && player.getPos().distanceTo(getBlockPos().ofCenter()) <= RITUAL_RADIUS;
     }
 
     private boolean checkDisk(BlockPos jukeboxPos) {
@@ -419,7 +420,8 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         if (!(blockEntity instanceof JukeboxBlockEntity jukebox)) {
             return false;
         }
-        return jukebox.getStack() != null && Items.MUSIC_DISC_5.equals(jukebox.getStack().getItem());
+        ItemStack stack = jukebox.getStack(0);
+        return stack != null && Items.MUSIC_DISC_5.equals(stack.getItem());
     }
 
     private boolean checkPortal() {
@@ -427,7 +429,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             return false;
         }
         for (BlockPos pos : getPortalBlocks(false)) {
-            if (!isAirOrVein(pos) && !isPortal(pos)) {
+            if (!isPortalReplaceable(pos) && !isPortal(pos)) {
                 return false;
             }
         }
@@ -445,7 +447,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         }
         BlockEntity blockEntity = getWorld().getBlockEntity(jukeboxPos);
         if (blockEntity instanceof JukeboxBlockEntity jukebox) {
-            jukebox.dropRecord();
+            jukebox.dropDisc();
         }
     }
 
@@ -455,14 +457,14 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         return world != null && world.getBlockState(pos).isOf(Blocks.REINFORCED_DEEPSLATE);
     }
 
-    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
-    private boolean isAirOrVein(BlockPos pos) {
+    @SuppressWarnings({"BooleanMethodIsAlwaysInverted", "deprecation"})
+    private boolean isPortalReplaceable(BlockPos pos) {
         World world = getWorld();
         if (world == null) {
             return false;
         }
         BlockState state = world.getBlockState(pos);
-        return state.isAir() || state.isOf(Blocks.SCULK_VEIN);
+        return state.isAir() || state.isOf(Blocks.SCULK_VEIN) || state.isLiquid();
     }
 
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
@@ -582,7 +584,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             Point rightSpiralPoint = spiralPoint.getRight();
             BlockPos leftPos = origin.offset(getFromOriginDirection(), leftSpiralPoint.x).down(leftSpiralPoint.y);
             BlockPos rightPos = origin.offset(getFromOriginDirection(), rightSpiralPoint.x).down(rightSpiralPoint.y);
-            if (isAirOrVein(leftPos) && isAirOrVein(rightPos)) {
+            if (isPortalReplaceable(leftPos) && isPortalReplaceable(rightPos)) {
                 return new Pair<>(leftPos, rightPos);
             }
         }
@@ -619,13 +621,13 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         }
 
         @Override
-        public boolean listen(ServerWorld world, GameEvent event, GameEvent.Emitter emitter, Vec3d emitterPos) {
+        public boolean listen(ServerWorld world, GameEvent event, GameEvent.Context context, Vec3d pos) {
             if (event == AchieveToDoMod.JUKEBOX_PLAY) {
-                AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.ofFloored(emitterPos), true);
+                AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.fromPosition(pos), true);
                 return true;
             }
             if (event == AchieveToDoMod.JUKEBOX_STOP_PLAY) {
-                AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.ofFloored(emitterPos), false);
+                AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.fromPosition(pos), false);
                 return true;
             }
             return false;

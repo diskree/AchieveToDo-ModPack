@@ -20,7 +20,8 @@ import java.util.Objects;
 @Mixin(WorldRenderer.class)
 public class WorldRendererMixin {
 
-    @Shadow private @Nullable ClientWorld world;
+    @Shadow
+    private @Nullable ClientWorld world;
 
     @Redirect(method = "playSong", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/sound/PositionedSoundInstance;record(Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/client/sound/PositionedSoundInstance;"))
     private PositionedSoundInstance processWorldEventRedirect(SoundEvent sound, Vec3d pos) {

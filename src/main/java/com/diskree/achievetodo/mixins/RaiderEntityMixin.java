@@ -8,6 +8,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -16,10 +17,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(RaiderEntity.class)
 public class RaiderEntityMixin implements RaiderEntityImpl {
 
+    @Unique
     private boolean isSpawnedAsRaider;
 
     @Override
-    public boolean isSpawnedAsRaider() {
+    public boolean achieveToDo$isSpawnedAsRaider() {
         return isSpawnedAsRaider;
     }
 

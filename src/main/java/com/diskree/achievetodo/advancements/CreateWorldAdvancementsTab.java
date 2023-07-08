@@ -2,15 +2,15 @@ package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.WorldCreatorImpl;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
-import net.minecraft.client.gui.screen.world.WorldCreator;
-import net.minecraft.client.gui.screen.world.WorldScreenOptionGrid;
-import net.minecraft.client.gui.tab.GridScreenTab;
+import net.minecraft.client.gui.screen.world.SwitchGrid;
+import net.minecraft.client.gui.tab.GridWidgetTab;
 import net.minecraft.client.gui.widget.GridWidget;
 import net.minecraft.client.gui.widget.TextWidget;
+import net.minecraft.client.world.WorldCreator;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
-public class CreateWorldAdvancementsTab extends GridScreenTab {
+public class CreateWorldAdvancementsTab extends GridWidgetTab {
 
     private static final Text REWARDS_TITLE = Text.translatable("createWorld.rewards.title");
     private static final Text ITEM_REWARDS = Text.translatable("createWorld.rewards.item");
@@ -29,39 +29,39 @@ public class CreateWorldAdvancementsTab extends GridScreenTab {
 
     public CreateWorldAdvancementsTab(CreateWorldScreen screen) {
         super(Text.of("AchieveToDo"));
-        if (screen == null || screen.client == null) {
+        if (screen == null || screen.getClient() == null) {
             return;
         }
         WorldCreator worldCreator = screen.getWorldCreator();
         WorldCreatorImpl worldSettings = (WorldCreatorImpl) worldCreator;
 
-        this.grid.getMainPositioner().alignHorizontalCenter();
+        this.grid.getDefaultSettings().alignHorizontallyCenter();
 
-        GridWidget.Adder adder = this.grid.setColumnSpacing(10).setRowSpacing(8).createAdder(2);
+        GridWidget.AdditionHelper adder = this.grid.setColumnSpacing(10).setRowSpacing(8).createAdditionHelper(2);
 
-        GridWidget.Adder rewardsTitleAdder = new GridWidget().setRowSpacing(4).createAdder(1);
-        rewardsTitleAdder.add(new TextWidget(REWARDS_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
-        adder.add(rewardsTitleAdder.getGridWidget(), 2);
+        GridWidget.AdditionHelper rewardsTitleAdder = new GridWidget().setRowSpacing(4).createAdditionHelper(1);
+        rewardsTitleAdder.add(new TextWidget(REWARDS_TITLE.copy().formatted(Formatting.YELLOW), screen.getClient().textRenderer));
+        adder.add(rewardsTitleAdder.getWidget(), 2);
 
-        WorldScreenOptionGrid.Builder rewardsOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-        rewardsOptionsBuilder.add(ITEM_REWARDS, worldSettings::achieveToDo$isItemRewardsEnabled, worldSettings::achieveToDo$setItemRewardsEnabled).tooltip(ITEM_REWARDS_INFO);
-        rewardsOptionsBuilder.add(EXPERIENCE_REWARDS, worldSettings::achieveToDo$isExperienceRewardsEnabled, worldSettings::achieveToDo$setExperienceRewardsEnabled).tooltip(EXPERIENCE_REWARDS_INFO);
-        rewardsOptionsBuilder.add(TROPHY_REWARDS, worldSettings::achieveToDo$isTrophyRewardsEnabled, worldSettings::achieveToDo$setTrophyRewardsEnabled).tooltip(TROPHY_REWARDS_INFO);
-        WorldScreenOptionGrid rewardsOptionsGrid = rewardsOptionsBuilder.build(widget -> adder.add(widget, 2));
+        SwitchGrid.Builder rewardsOptionsBuilder = SwitchGrid.builder(170).leftPadding(1);
+        rewardsOptionsBuilder.button(ITEM_REWARDS, worldSettings::achieveToDo$isItemRewardsEnabled, worldSettings::achieveToDo$setItemRewardsEnabled).info(ITEM_REWARDS_INFO);
+        rewardsOptionsBuilder.button(EXPERIENCE_REWARDS, worldSettings::achieveToDo$isExperienceRewardsEnabled, worldSettings::achieveToDo$setExperienceRewardsEnabled).info(EXPERIENCE_REWARDS_INFO);
+        rewardsOptionsBuilder.button(TROPHY_REWARDS, worldSettings::achieveToDo$isTrophyRewardsEnabled, worldSettings::achieveToDo$setTrophyRewardsEnabled).info(TROPHY_REWARDS_INFO);
+        SwitchGrid rewardsOptionsGrid = rewardsOptionsBuilder.build(widget -> adder.add(widget, 2));
 
-        GridWidget.Adder generationTitleAdder = new GridWidget().setRowSpacing(4).createAdder(1);
-        generationTitleAdder.add(new TextWidget(GENERATION_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
-        adder.add(generationTitleAdder.getGridWidget(), 2);
+        GridWidget.AdditionHelper generationTitleAdder = new GridWidget().setRowSpacing(4).createAdditionHelper(1);
+        generationTitleAdder.add(new TextWidget(GENERATION_TITLE.copy().formatted(Formatting.YELLOW), screen.getClient().textRenderer));
+        adder.add(generationTitleAdder.getWidget(), 2);
 
-        WorldScreenOptionGrid.Builder generationOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-        generationOptionsBuilder.add(OVERWORLD_GENERATION, worldSettings::achieveToDo$isTerralithEnabled, worldSettings::achieveToDo$setTerralithEnabled).tooltip(OVERWORLD_GENERATION_INFO);
-        generationOptionsBuilder.add(NETHER_GENERATION, worldSettings::achieveToDo$isAmplifiedNetherEnabled, worldSettings::achieveToDo$setAmplifiedNetherEnabled).tooltip(NETHER_GENERATION_INFO);
-        generationOptionsBuilder.add(END_GENERATION, worldSettings::achieveToDo$isNullscapeEnabled, worldSettings::achieveToDo$setNullscapeEnabled).tooltip(END_GENERATION_INFO);
-        WorldScreenOptionGrid generationOptionGrid = generationOptionsBuilder.build(widget -> adder.add(widget, 2));
+        SwitchGrid.Builder generationOptionsBuilder = SwitchGrid.builder(170).leftPadding(1);
+        generationOptionsBuilder.button(OVERWORLD_GENERATION, worldSettings::achieveToDo$isTerralithEnabled, worldSettings::achieveToDo$setTerralithEnabled).info(OVERWORLD_GENERATION_INFO);
+        generationOptionsBuilder.button(NETHER_GENERATION, worldSettings::achieveToDo$isAmplifiedNetherEnabled, worldSettings::achieveToDo$setAmplifiedNetherEnabled).info(NETHER_GENERATION_INFO);
+        generationOptionsBuilder.button(END_GENERATION, worldSettings::achieveToDo$isNullscapeEnabled, worldSettings::achieveToDo$setNullscapeEnabled).info(END_GENERATION_INFO);
+        SwitchGrid generationOptionGrid = generationOptionsBuilder.build(widget -> adder.add(widget, 2));
 
-        worldCreator.addListener(creator -> {
-            rewardsOptionsGrid.refresh();
-            generationOptionGrid.refresh();
+        worldCreator.method_48712(worldCreator1 -> {
+            rewardsOptionsGrid.updateStates();
+            generationOptionGrid.updateStates();
         });
     }
 }

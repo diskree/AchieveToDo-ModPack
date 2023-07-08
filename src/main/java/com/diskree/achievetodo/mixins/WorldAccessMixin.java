@@ -14,14 +14,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public interface WorldAccessMixin {
 
     @Shadow
-    void emitGameEvent(GameEvent event, BlockPos pos, GameEvent.Emitter emitter);
+    void emitGameEvent(GameEvent event, BlockPos sourcePos, GameEvent.Context context);
 
-    @Inject(method = "emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/event/GameEvent$Emitter;)V", at = @At("RETURN"))
-    default void emitGameEventInject(GameEvent event, BlockPos pos, GameEvent.Emitter emitter, CallbackInfo ci) {
+    @Inject(method = "emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/event/GameEvent$Context;)V", at = @At("RETURN"))
+    default void emitGameEventInject(GameEvent event, BlockPos sourcePos, GameEvent.Context context, CallbackInfo ci) {
         if (event == GameEvent.JUKEBOX_PLAY) {
-            emitGameEvent(AchieveToDoMod.JUKEBOX_PLAY, pos, emitter);
+            emitGameEvent(AchieveToDoMod.JUKEBOX_PLAY, sourcePos, context);
         } else if (event == GameEvent.JUKEBOX_STOP_PLAY) {
-            emitGameEvent(AchieveToDoMod.JUKEBOX_STOP_PLAY, pos, emitter);
+            emitGameEvent(AchieveToDoMod.JUKEBOX_STOP_PLAY, sourcePos, context);
         }
     }
 }

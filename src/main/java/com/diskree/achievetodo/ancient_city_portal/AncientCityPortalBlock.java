@@ -4,6 +4,7 @@ import com.diskree.achievetodo.AchieveToDoMod;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.state.StateManager;
@@ -12,7 +13,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
+import net.minecraft.util.random.RandomGenerator;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -81,7 +82,7 @@ public class AncientCityPortalBlock extends Block {
     }
 
     @Override
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, RandomGenerator random) {
         if (hideParticles) {
             return;
         }
@@ -133,4 +134,9 @@ public class AncientCityPortalBlock extends Block {
         builder.add(AXIS);
     }
 
+    @SuppressWarnings("deprecation")
+    @Override
+    public boolean canBucketPlace(BlockState state, Fluid fluid) {
+        return false;
+    }
 }

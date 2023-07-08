@@ -22,7 +22,7 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
     private int inclineTicksCount;
 
     public AncientCityPortalExperienceOrbEntity(World world, double x, double y, double z, BlockPos portalTarget, BlockPos inclineTarget, int size) {
-        this(AchieveToDoMod.EXPERIENCE_ORB, world);
+        this(AchieveToDoMod.ANCIENT_CITY_PORTAL_EXPERIENCE_ORB, world);
         this.size = size;
         this.portalTarget = portalTarget;
         this.inclineTarget = inclineTarget;
@@ -53,10 +53,9 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
                     targetY - getY(),
                     targetZ - getZ()
             );
-            setVelocity(getVelocity().add(vec3d.normalize().multiply(inclineTarget != null ? 0.2 : 0.2)));
+            setVelocity(getVelocity().add(vec3d.normalize().multiply(0.2)));
             move(MovementType.SELF, getVelocity());
-            double velocityMultiplier = inclineTarget != null ? 0.98d : 0.98d;
-            setVelocity(getVelocity().multiply(velocityMultiplier, velocityMultiplier, velocityMultiplier));
+            setVelocity(getVelocity().multiply(0.98d, 0.98d, 0.98d));
         }
         if (inclineTarget != null) {
             inclineTicksCount++;

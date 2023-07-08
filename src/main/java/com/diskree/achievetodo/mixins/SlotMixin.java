@@ -2,6 +2,7 @@ package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDoMod;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -34,8 +35,9 @@ public class SlotMixin {
     @Inject(method = "canTakeItems", at = @At("HEAD"), cancellable = true)
     public void canTakeItemsInject(PlayerEntity playerEntity, CallbackInfoReturnable<Boolean> cir) {
         if (inventory instanceof PlayerInventory && id >= 5 && id <= 8) {
-            if (AchieveToDoMod.getPlayer() != null) {
-                ItemStack stack = AchieveToDoMod.getPlayer().playerScreenHandler.getCursorStack();
+            ClientPlayerEntity player = MinecraftClient.getInstance().player;
+            if (player != null) {
+                ItemStack stack = player.playerScreenHandler.getCursorStack();
                 if (stack != null && AchieveToDoMod.isEquipmentBlocked(stack.getItem())) {
                     cir.setReturnValue(false);
                 }

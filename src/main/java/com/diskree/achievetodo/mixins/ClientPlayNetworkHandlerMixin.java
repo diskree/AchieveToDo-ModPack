@@ -22,13 +22,13 @@ public class ClientPlayNetworkHandlerMixin implements ClientPlayNetworkHandlerIm
     private ClientWorld world;
 
     @Override
-    public void onAncientCityPortalExperienceOrbSpawn(AncientCityPortalExperienceOrbSpawnS2CPacket packet) {
+    public void achieveToDo$onAncientCityPortalExperienceOrbSpawn(AncientCityPortalExperienceOrbSpawnS2CPacket packet) {
         NetworkThreadUtils.forceMainThread(packet, (ClientPlayNetworkHandler) (Object) this, client);
         double x = packet.getX();
         double y = packet.getY();
         double z = packet.getZ();
         AncientCityPortalExperienceOrbEntity entity = new AncientCityPortalExperienceOrbEntity(world, x, y, z, packet.getPortalTarget(), packet.getInclineTarget(), packet.getSize());
-        entity.updateTrackedPosition(x, y, z);
+        entity.syncPacketPositionCodec(x, y, z);
         entity.setYaw(0.0f);
         entity.setPitch(0.0f);
         entity.setId(packet.getId());

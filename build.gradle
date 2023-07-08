@@ -1,0 +1,57 @@
+plugins {
+    id 'maven-publish'
+    alias libs.plugins.quilt.loom
+}
+
+group = project.maven_group
+base.archivesName = project.mod_id
+version = "$project.version+${libs.versions.minecraft.get()}"
+
+dependencies {
+    minecraft libs.minecraft
+    mappings variantOf(libs.quilt.mappings) { classifier 'intermediary-v2' }
+    modImplementation libs.quilt.loader
+    modImplementation libs.quilted.fabric.api
+}
+
+processResources {
+    inputs.property 'version', version
+    filesMatching('quilt.mod.json') {
+        expand 'version': version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = 'UTF-8'
+    it.options.release.set(17)
+}
+tasks.register('generateBuildConfig', DefaultTask) {
+    doLast {
+        def isDebug = project.properties['debug'] ?: 'false'
+        new File("$projectDir/src/main/java/com/diskree/achievetodo/BuildConfig.java").text = """
+package com.diskree.achievetodo;
+
+public class BuildConfig {
+    public static final boolean DEBUG = ${isDebug};
+}""".trim()
+    }
+}
+tasks.register('buildRelease', GradleBuild) {
+    tasks = ['build']
+    startParameter.projectProperties = ['debug': 'false']
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+    withSourcesJar()
+}
+
+jar {
+    from('LICENSE') {
+        rename { "${it}_${base.archivesName.get()}" }
+    }
+    compileJava.dependsOn(generateBuildConfig)
+}
+loom {
+    accessWidenerPath.set(file("src/main/resources/achievetodo.accesswidener"))
+}

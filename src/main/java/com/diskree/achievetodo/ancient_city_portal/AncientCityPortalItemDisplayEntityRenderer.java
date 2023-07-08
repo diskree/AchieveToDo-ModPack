@@ -7,12 +7,10 @@ import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.decoration.DisplayEntity;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.RotationAxis;
+import net.minecraft.util.math.Axis;
 import org.jetbrains.annotations.Nullable;
 
-public class AncientCityPortalItemDisplayEntityRenderer extends DisplayEntityRenderer<DisplayEntity.ItemDisplayEntity, DisplayEntity.ItemDisplayEntity.Data> {
-
+public class AncientCityPortalItemDisplayEntityRenderer extends DisplayEntityRenderer<DisplayEntity.ItemDisplayEntity, DisplayEntity.ItemDisplayEntity.RenderData> {
     private final ItemRenderer itemRenderer;
 
     public AncientCityPortalItemDisplayEntityRenderer(EntityRendererFactory.Context context) {
@@ -20,14 +18,29 @@ public class AncientCityPortalItemDisplayEntityRenderer extends DisplayEntityRen
         this.itemRenderer = context.getItemRenderer();
     }
 
-    @Override
     @Nullable
-    protected DisplayEntity.ItemDisplayEntity.Data getData(DisplayEntity.ItemDisplayEntity itemDisplayEntity) {
-        return itemDisplayEntity.getData();
+    protected DisplayEntity.ItemDisplayEntity.RenderData getRenderData(DisplayEntity.ItemDisplayEntity itemDisplayEntity) {
+        return itemDisplayEntity.getRenderData();
     }
 
-    @Override
-    public void render(DisplayEntity.ItemDisplayEntity itemDisplayEntity, DisplayEntity.ItemDisplayEntity.Data data, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, float f) {
-        this.itemRenderer.renderItem(data.itemStack(), data.itemTransform(), i, OverlayTexture.DEFAULT_UV, matrixStack, vertexConsumerProvider, itemDisplayEntity.getWorld(), itemDisplayEntity.getId());
+    public void renderInner(
+            DisplayEntity.ItemDisplayEntity itemDisplayEntity,
+            DisplayEntity.ItemDisplayEntity.RenderData renderData,
+            MatrixStack matrices,
+            VertexConsumerProvider vertexConsumers,
+            int i,
+            float f
+    ) {
+        matrices.multiply(Axis.Y_POSITIVE.rotation((float) Math.PI));
+        this.itemRenderer.renderItem(
+                renderData.itemStack(),
+                renderData.itemTransform(),
+                i,
+                OverlayTexture.DEFAULT_UV,
+                matrices,
+                vertexConsumers,
+                itemDisplayEntity.getWorld(),
+                itemDisplayEntity.getId()
+        );
     }
 }

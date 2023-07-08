@@ -11,14 +11,21 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 
 @Mixin(Advancement.class)
 public class AdvancementMixin {
 
-    @Shadow @Final private Identifier id;
+    @Shadow
+    @Final
+    private Identifier id;
 
-    @Shadow @Final private Set<Advancement> children;
+    @Shadow
+    @Final
+    private Set<Advancement> children;
 
     @Inject(method = "getRequirementCount", at = @At("HEAD"), cancellable = true)
     public void getRequirementCountInject(CallbackInfoReturnable<Integer> cir) {
@@ -30,7 +37,7 @@ public class AdvancementMixin {
 
     @Inject(method = "getChildren", at = @At("HEAD"), cancellable = true)
     public void getChildrenInject(CallbackInfoReturnable<Iterable<Advancement>> cir) {
-        if (id.getNamespace().equals(AchieveToDoMod.ID) && id.getPath().endsWith("/root")) {
+        if (id.getNamespace().equals(AchieveToDoMod.MOD_ID) && id.getPath().endsWith("/root")) {
             List<String> order = new ArrayList<>(Arrays.asList(
                     "action/eat_salmon",
                     "action/eat_rabbit",

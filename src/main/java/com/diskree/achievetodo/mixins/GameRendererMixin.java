@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -20,7 +21,7 @@ public class GameRendererMixin {
     @Shadow
     @Final
     MinecraftClient client;
-
+    @Unique
     private CubeMapRenderer cubeMap;
 
     @Inject(method = "renderWorld", at = @At("RETURN"))
@@ -39,7 +40,7 @@ public class GameRendererMixin {
                 return;
             }
             if (cubeMap == null) {
-                cubeMap = new CubeMapRenderer(new Identifier(AchieveToDoMod.ID, panoramaId));
+                cubeMap = new CubeMapRenderer(new Identifier(AchieveToDoMod.MOD_ID, panoramaId));
             }
             float pitch = client.player.prevPitch;
             if (pitch > 180.0f) {

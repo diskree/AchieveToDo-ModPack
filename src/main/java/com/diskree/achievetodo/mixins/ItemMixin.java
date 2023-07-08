@@ -35,14 +35,13 @@ public class ItemMixin {
     private void finishUsingInject(ItemStack stack, World world, LivingEntity user, CallbackInfoReturnable<ItemStack> cir) {
         if (stack != null && stack.getItem() != null && stack.getItem().isFood() && user instanceof PlayerEntity && AchieveToDoMod.isFoodBlocked(stack.getItem().getFoodComponent())) {
             MinecraftClient.getInstance().options.useKey.setPressed(false);
-            AchieveToDoMod.showFoodBlockedDescription(stack.getItem().getFoodComponent());
             cir.setReturnValue(stack);
         }
     }
 
     @Inject(method = "appendTooltip", at = @At("HEAD"))
     private void appendTooltipInject(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context, CallbackInfo ci) {
-        if (stack != null && stack.isOf(Items.SPYGLASS) && stack.hasNbt()) {
+        if (stack != null && stack.isOf(Items.SPYGLASS)) {
             NbtCompound nbt = stack.getNbt();
             if (nbt != null) {
                 int panoramaType = nbt.getInt("CustomModelData");

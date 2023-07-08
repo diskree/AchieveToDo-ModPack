@@ -1,10 +1,10 @@
 package com.diskree.achievetodo.mixins;
 
+import com.diskree.achievetodo.BuildConfig;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
-import net.minecraft.client.gui.screen.world.WorldCreator;
 import net.minecraft.client.gui.tooltip.Tooltip;
 import net.minecraft.client.gui.widget.CyclingButtonWidget;
-import net.minecraft.client.gui.widget.Widget;
+import net.minecraft.client.world.WorldCreator;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -17,19 +17,20 @@ import java.util.function.Consumer;
 @Mixin(CreateWorldScreen.GameTab.class)
 public class GameTabMixin {
 
-    @SuppressWarnings({"MixinAnnotationTarget", "UnresolvedMixinReference", "rawtypes", "unchecked"})
-    @ModifyArgs(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/GridWidget$Adder;add(Lnet/minecraft/client/gui/widget/Widget;)Lnet/minecraft/client/gui/widget/Widget;"))
+    @ModifyArgs(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/GridWidget$AdditionHelper;add(Lnet/minecraft/client/gui/widget/Widget;)Lnet/minecraft/client/gui/widget/Widget;", ordinal = 0))
     private void initInject(Args args) {
-        Widget widget = args.get(0);
-        if (widget instanceof CyclingButtonWidget button && button.getValue() instanceof Boolean) {
-            button.active = false;
-            button.setValue(false);
-            button.setTooltip(Tooltip.of(Text.translatable("menu.shareToLan.info")));
+        if (!BuildConfig.DEBUG) {
+            CyclingButtonWidget<Boolean> buttonWidget = args.get(0);
+            buttonWidget.active = false;
+            buttonWidget.setValue(false);
+            buttonWidget.setTooltip(Tooltip.create(Text.translatable("menu.shareToLan.info")));
         }
     }
 
-    @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/world/WorldCreator;addListener(Ljava/util/function/Consumer;)V", ordinal = 3))
-    public void initRedirect(WorldCreator instance, Consumer<WorldCreator> listener) {
+    @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/world/WorldCreator;method_48712(Ljava/util/function/Consumer;)V", ordinal = 3))
+    public void initRedirect(WorldCreator instance, Consumer<WorldCreator> consumer) {
+        if (BuildConfig.DEBUG) {
+            instance.method_48712(consumer);
+        }
     }
-
 }

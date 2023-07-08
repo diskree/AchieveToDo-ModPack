@@ -1,13 +1,14 @@
 package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDoMod;
-import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.advancement.AdvancementsScreen;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
@@ -22,6 +23,24 @@ public abstract class AdvancementsScreenMixin extends Screen {
 
     public AdvancementsScreenMixin() {
         super(null);
+    }
+
+    @Unique
+    private void iterate(int start, int end, int maxStep, BiConsumer<Integer, Integer> func) {
+        if (start >= end) {
+            return;
+        }
+        int size;
+        for (int i = start; i < end; i += maxStep) {
+            size = maxStep;
+            if (i + size > end) {
+                size = end - i;
+                if (size <= 0) {
+                    return;
+                }
+            }
+            func.accept(i, size);
+        }
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 252), require = 1)
@@ -54,12 +73,12 @@ public abstract class AdvancementsScreenMixin extends Screen {
         return height - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
-    @Redirect(method = "drawWindow", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
-    public void drawWindowVanilla(DrawContext instance, Identifier texture, int x, int y, int u, int v, int width, int height) {
+    @Redirect(method = "drawWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
+    public void drawWindowVanilla(GuiGraphics instance, Identifier texture, int x, int y, int u, int v, int width, int height) {
     }
 
-    @Inject(method = "drawWindow", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
-    public void drawWindowCustom(DrawContext context, int x, int y, CallbackInfo ci) {
+    @Inject(method = "drawWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
+    public void drawWindowCustom(GuiGraphics graphics, int x, int y, CallbackInfo ci) {
         int screenWidth = 252;
         int screenHeight = 140;
         int actualWidth = width - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN - x;
@@ -74,35 +93,18 @@ public abstract class AdvancementsScreenMixin extends Screen {
         int rightX = width - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN - halfOfWidth + clipTopX;
         int bottomY = height - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN - halfOfHeight + clipTopY;
 
-        context.drawTexture(WINDOW_TEXTURE, x, y, 0, 0, halfOfWidth - clipLeftX, halfOfHeight - clipLeftY);
-        context.drawTexture(WINDOW_TEXTURE, rightX, y, halfOfWidth + clipTopX, 0, halfOfWidth - clipTopX, halfOfHeight - clipLeftY);
-        context.drawTexture(WINDOW_TEXTURE, x, bottomY, 0, halfOfHeight + clipTopY, halfOfWidth - clipLeftX, halfOfHeight - clipTopY);
-        context.drawTexture(WINDOW_TEXTURE, rightX, bottomY, halfOfWidth + clipTopX, halfOfHeight + clipTopY, halfOfWidth - clipTopX, halfOfHeight - clipTopY);
+        graphics.drawTexture(WINDOW_TEXTURE, x, y, 0, 0, halfOfWidth - clipLeftX, halfOfHeight - clipLeftY);
+        graphics.drawTexture(WINDOW_TEXTURE, rightX, y, halfOfWidth + clipTopX, 0, halfOfWidth - clipTopX, halfOfHeight - clipLeftY);
+        graphics.drawTexture(WINDOW_TEXTURE, x, bottomY, 0, halfOfHeight + clipTopY, halfOfWidth - clipLeftX, halfOfHeight - clipTopY);
+        graphics.drawTexture(WINDOW_TEXTURE, rightX, bottomY, halfOfWidth + clipTopX, halfOfHeight + clipTopY, halfOfWidth - clipTopX, halfOfHeight - clipTopY);
 
         iterate(x + halfOfWidth - clipLeftX, rightX, 200, (pos, len) -> {
-            context.drawTexture(WINDOW_TEXTURE, pos, y, 15, 0, len, halfOfHeight);
-            context.drawTexture(WINDOW_TEXTURE, pos, bottomY, 15, halfOfHeight + clipTopY, len, halfOfHeight - clipTopY);
+            graphics.drawTexture(WINDOW_TEXTURE, pos, y, 15, 0, len, halfOfHeight);
+            graphics.drawTexture(WINDOW_TEXTURE, pos, bottomY, 15, halfOfHeight + clipTopY, len, halfOfHeight - clipTopY);
         });
         iterate(y + halfOfHeight - clipLeftY, bottomY, 100, (pos, len) -> {
-            context.drawTexture(WINDOW_TEXTURE, x, pos, 0, 25, halfOfWidth, len);
-            context.drawTexture(WINDOW_TEXTURE, rightX, pos, halfOfWidth + clipTopX, 25, halfOfWidth - clipTopX, len);
+            graphics.drawTexture(WINDOW_TEXTURE, x, pos, 0, 25, halfOfWidth, len);
+            graphics.drawTexture(WINDOW_TEXTURE, rightX, pos, halfOfWidth + clipTopX, 25, halfOfWidth - clipTopX, len);
         });
-    }
-
-    private void iterate(int start, int end, int maxStep, BiConsumer<Integer, Integer> func) {
-        if (start >= end) {
-            return;
-        }
-        int size;
-        for (int i = start; i < end; i += maxStep) {
-            size = maxStep;
-            if (i + size > end) {
-                size = end - i;
-                if (size <= 0) {
-                    return;
-                }
-            }
-            func.accept(i, size);
-        }
     }
 }

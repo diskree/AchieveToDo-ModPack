@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(PlayerScreenHandler.class)
 public abstract class PlayerScreenHandlerMixin {
 
-    @Inject(method = "quickMove", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "quickTransfer", at = @At("HEAD"), cancellable = true)
     public void quickMoveInject(PlayerEntity player, int slot, CallbackInfoReturnable<ItemStack> cir) {
         Slot slot2 = ((ScreenHandler) (Object) this).slots.get(slot);
         if (slot2.hasStack()) {

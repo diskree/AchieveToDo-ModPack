@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.WorldCreatorImpl;
-import net.minecraft.client.gui.screen.world.WorldCreator;
+import net.minecraft.client.world.WorldCreator;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 
@@ -10,14 +10,19 @@ public class WorldCreatorMixin implements WorldCreatorImpl {
 
     @Unique
     private boolean isItemRewardsEnabled;
+
     @Unique
     private boolean isExperienceRewardsEnabled;
+
     @Unique
     private boolean isTrophyRewardsEnabled = true;
+
     @Unique
     private boolean isTerralithEnabled;
+
     @Unique
     private boolean isAmplifiedNetherEnabled;
+
     @Unique
     private boolean isNullscapeEnabled;
 

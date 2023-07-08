@@ -29,6 +29,7 @@ public class AdvancementGenerator {
         return generateRandomAdvancement(true);
     }
 
+    @SuppressWarnings("DataFlowIssue")
     @Nullable
     public static AdvancementHint generateForHint() {
         IntegratedServer server = MinecraftClient.getInstance().getServer();
@@ -66,7 +67,7 @@ public class AdvancementGenerator {
         if (incompleteCriteria.isEmpty()) {
             return null;
         }
-        String criterion = incompleteCriteria.get(serverPlayer.getRandom().nextBetween(0, incompleteCriteria.size() - 1));
+        String criterion = incompleteCriteria.get(serverPlayer.getRandom().nextInt(incompleteCriteria.size()));
         Item hintItem = null;
         NbtCompound nbt = new NbtCompound();
         boolean dropHint = false;
@@ -974,7 +975,7 @@ public class AdvancementGenerator {
             if (display == null || display.isHidden()) {
                 continue;
             }
-            if (namespace.equals(AchieveToDoMod.ID)) {
+            if (namespace.equals(AchieveToDoMod.MOD_ID)) {
                 continue;
             }
             if (name.equals("root")) {
@@ -1009,6 +1010,6 @@ public class AdvancementGenerator {
         if (filteredAdvancements.isEmpty()) {
             return null;
         }
-        return filteredAdvancements.get(player.getRandom().nextBetween(0, filteredAdvancements.size() - 1));
+        return filteredAdvancements.get(player.getRandom().nextInt(filteredAdvancements.size()));
     }
 }

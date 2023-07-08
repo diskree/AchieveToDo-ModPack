@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "com.diskree",
+    "id": "achievetodo",
+    "version": "${version}",
+    "metadata": {
+      "name": "AchieveToDo",
+      "description": "Minecraft modpack that makes advancements a part of the gameplay.",
+      "contributors": {
+        "diskree": "Owner"
+      },
+      "contact": {
+        "issues": "https://github.com/diskree/AchieveToDo/issues",
+        "sources": "https://github.com/diskree/AchieveToDo"
+      }
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "init": "com.diskree.achievetodo.AchieveToDoMod"
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "versions": ">=0.19.0"
+      },
+      {
+        "id": "quilted_fabric_api",
+        "versions": ">=7.0.2"
+      },
+      {
+        "id": "minecraft",
+        "versions": "=1.20.1"
+      }
+    ]
+  },
+  "mixin": "achievetodo.mixins.json",
+  "access_widener": "achievetodo.accesswidener"
+}

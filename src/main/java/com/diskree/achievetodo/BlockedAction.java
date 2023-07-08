@@ -1,20 +1,14 @@
-package com.diskree.achievetodo
+package com.diskree.achievetodo;
 
-import com.diskree.achievetodo.advancements.AdvancementRoot
-import net.minecraft.item.FoodComponent
-import net.minecraft.item.FoodComponents
-import net.minecraft.text.Text
-import net.minecraft.util.Formatting
-import net.minecraft.util.Identifier
-import net.minecraft.village.VillagerProfession
+import com.diskree.achievetodo.advancements.AdvancementRoot;
+import net.minecraft.item.FoodComponent;
+import net.minecraft.item.FoodComponents;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
+import net.minecraft.village.VillagerProfession;
 
-enum class BlockedAction(
-    private val description: String,
-    @JvmField val actionType: BlockedActionType,
-    val foodComponent: FoodComponent?,
-    val villagerProfession: VillagerProfession?,
-    val unblockAdvancementsCount: Int
-) {
+public enum BlockedAction {
     EAT_SALMON("blocked.food", BlockedActionType.FOOD, FoodComponents.SALMON, null, 2),
     EAT_COD("blocked.food", BlockedActionType.FOOD, FoodComponents.COD, null, 3),
     EAT_TROPICAL_FISH("blocked.food", BlockedActionType.FOOD, FoodComponents.TROPICAL_FISH, null, 4),
@@ -88,13 +82,7 @@ enum class BlockedAction(
     VILLAGER_WEAPONSMITH("blocked.trading", BlockedActionType.VILLAGER, null, VillagerProfession.WEAPONSMITH, 590),
     END("blocked.end", BlockedActionType.PORTAL, null, null, 600),
     EQUIP_ELYTRA("blocked.elytra", BlockedActionType.ARMOR, null, null, 650),
-    EAT_ENCHANTED_GOLDEN_APPLE(
-        "blocked.food",
-        BlockedActionType.FOOD,
-        FoodComponents.ENCHANTED_GOLDEN_APPLE,
-        null,
-        680
-    ),
+    EAT_ENCHANTED_GOLDEN_APPLE("blocked.food", BlockedActionType.FOOD, FoodComponents.ENCHANTED_GOLDEN_APPLE, null, 680),
     EAT_CHORUS_FRUIT("blocked.food", BlockedActionType.FOOD, FoodComponents.CHORUS_FRUIT, null, 700),
     END_GATE("blocked.gateway", BlockedActionType.PORTAL, null, null, 800),
     USING_SHULKER_BOX("blocked.shulker_box", BlockedActionType.BLOCK, null, null, 825),
@@ -104,20 +92,61 @@ enum class BlockedAction(
     VILLAGER_LIBRARIAN("blocked.trading", BlockedActionType.VILLAGER, null, VillagerProfession.LIBRARIAN, 900),
     USING_ENCHANTING_TABLE("blocked.enchanting_table", BlockedActionType.BLOCK, null, null, 950);
 
-    fun isUnblocked(): Boolean = AchieveToDoMod.currentAdvancementsCount >= unblockAdvancementsCount
+    final String description;
+    final BlockedActionType actionType;
+    final FoodComponent foodComponent;
+    final VillagerProfession villagerProfession;
+    final int unblockAdvancementsCount;
 
-    fun buildAdvancementId(): Identifier =
-        Identifier(AchieveToDoMod.ID, AdvancementRoot.ACTION.name.lowercase() + "/" + name.lowercase())
-
-    fun buildBlockedDescription(): Text {
-        val leftAdvancementsCount = unblockAdvancementsCount - AchieveToDoMod.currentAdvancementsCount
-        return Text.of(Text.translatable(description).string + Text.translatable("unblock.amount").string + leftAdvancementsCount)
-            .copy()
-            .formatted(Formatting.YELLOW)
+    BlockedAction(String description, BlockedActionType actionType, FoodComponent foodComponent, VillagerProfession villagerProfession, int unblockAdvancementsCount) {
+        this.description = description;
+        this.actionType = actionType;
+        this.foodComponent = foodComponent;
+        this.villagerProfession = villagerProfession;
+        this.unblockAdvancementsCount = unblockAdvancementsCount;
     }
 
-    companion object {
-        @JvmStatic
-        fun map(name: String?): BlockedAction? = values().find { it.name.equals(name, ignoreCase = true) }
+    public static BlockedAction map(String name) {
+        for (BlockedAction action : values()) {
+            if (action.name().equalsIgnoreCase(name)) {
+                return action;
+            }
+        }
+        return null;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public BlockedActionType getActionType() {
+        return actionType;
+    }
+
+    public FoodComponent getFoodComponent() {
+        return foodComponent;
+    }
+
+    public VillagerProfession getVillagerProfession() {
+        return villagerProfession;
+    }
+
+    public int getUnblockAdvancementsCount() {
+        return unblockAdvancementsCount;
+    }
+
+    public boolean isUnblocked() {
+        return AchieveToDoMod.currentAdvancementsCount >= unblockAdvancementsCount;
+    }
+
+    public Identifier buildAdvancementId() {
+        return new Identifier(AchieveToDoMod.MOD_ID, AdvancementRoot.ACTION.name().toLowerCase() + "/" + name().toLowerCase());
+    }
+
+    public Text buildBlockedDescription() {
+        int leftAdvancementsCount = unblockAdvancementsCount - AchieveToDoMod.currentAdvancementsCount;
+        return Text.of(Text.translatable(description).getString() + Text.translatable("unblock.amount").getString() + leftAdvancementsCount)
+                .copy()
+                .formatted(Formatting.YELLOW);
     }
 }

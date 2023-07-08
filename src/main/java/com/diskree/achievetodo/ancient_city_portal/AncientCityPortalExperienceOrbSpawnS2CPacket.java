@@ -49,7 +49,7 @@ public class AncientCityPortalExperienceOrbSpawnS2CPacket implements Packet<Clie
 
     @Override
     public void apply(ClientPlayPacketListener clientPlayPacketListener) {
-        ((ClientPlayNetworkHandlerImpl) clientPlayPacketListener).onAncientCityPortalExperienceOrbSpawn(this);
+        ((ClientPlayNetworkHandlerImpl) clientPlayPacketListener).achieveToDo$onAncientCityPortalExperienceOrbSpawn(this);
     }
 
     public int getId() {

@@ -2,7 +2,8 @@ package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDoMod;
 import com.diskree.achievetodo.BlockedAction;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.EnderChestBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;

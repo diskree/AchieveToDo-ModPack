@@ -16,8 +16,8 @@ public abstract class ServerPlayerEntityMixin {
 
     @Inject(method = "moveToWorld", at = @At("HEAD"), cancellable = true)
     public void moveToWorldInject(ServerWorld destination, CallbackInfoReturnable<Entity> cir) {
-        if (destination != null && destination.getRegistryKey() == World.NETHER && AchieveToDoMod.isActionBlocked(BlockedAction.NETHER) ||
-                destination != null && destination.getRegistryKey() == World.END && AchieveToDoMod.isActionBlocked(BlockedAction.END)) {
+        if (destination.getRegistryKey() == World.NETHER && AchieveToDoMod.isActionBlocked(BlockedAction.NETHER) ||
+                destination.getRegistryKey() == World.END && AchieveToDoMod.isActionBlocked(BlockedAction.END)) {
             cir.setReturnValue((Entity) (Object) this);
         }
     }

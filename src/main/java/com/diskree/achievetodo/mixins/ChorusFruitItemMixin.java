@@ -19,7 +19,6 @@ public class ChorusFruitItemMixin {
     private void finishUsingInject(ItemStack stack, World world, LivingEntity user, CallbackInfoReturnable<ItemStack> cir) {
         if (stack != null && stack.getItem() != null && stack.getItem().isFood() && user instanceof PlayerEntity && AchieveToDoMod.isFoodBlocked(stack.getItem().getFoodComponent())) {
             MinecraftClient.getInstance().options.useKey.setPressed(false);
-            AchieveToDoMod.showFoodBlockedDescription(stack.getItem().getFoodComponent());
             cir.setReturnValue(stack);
         }
     }

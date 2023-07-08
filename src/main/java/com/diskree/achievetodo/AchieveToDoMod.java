@@ -73,12 +73,6 @@ public class AchieveToDoMod implements ModInitializer {
     public static final String NULLSCAPE_DATA_PACK_NAME = "nullscape";
     public static final String BACAP_NULLSCAPE_DATA_PACK_NAME = "bacap_nullscape";
 
-    public static final Identifier BACAP_LANGUAGE_RESOURCE_PACK_ID = new Identifier(MOD_ID, "bacap_lp");
-    public static final Identifier VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID = new Identifier(MOD_ID, "visual_fish_buckets");
-    public static final Identifier GOAT_HORNS_RESOURCE_PACK_ID = new Identifier(MOD_ID, "goat_horns");
-    public static final Identifier ENCHANTED_BOOKS_RESOURCE_PACK_ID = new Identifier(MOD_ID, "enchanted_books");
-    public static final Identifier WAXED_COPPER_RESOURCE_PACK_ID = new Identifier(MOD_ID, "waxed_copper");
-
     public static final Identifier ANCIENT_CITY_PORTAL_BLOCK_ID = new Identifier(MOD_ID, "ancient_city_portal");
     public static final AncientCityPortalBlock ANCIENT_CITY_PORTAL_BLOCK = new AncientCityPortalBlock(AbstractBlock.Settings.create()
             .noCollision()
@@ -106,14 +100,10 @@ public class AchieveToDoMod implements ModInitializer {
 
     public static final Identifier JUKEBOX_PLAY_EVENT_ID = new Identifier(MOD_ID, "jukebox_play");
     public static final GameEvent JUKEBOX_PLAY = new GameEvent(JUKEBOX_PLAY_EVENT_ID.toString(), AncientCityPortalEntity.RITUAL_RADIUS);
-    public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
-            .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
-            .maxChunkTrackingRange(10)
-            .trackingTickInterval(1)
-            .build();
 
     public static final Identifier JUKEBOX_STOP_PLAY_EVENT_ID = new Identifier(MOD_ID, "jukebox_stop_play");
     public static final GameEvent JUKEBOX_STOP_PLAY = new GameEvent(JUKEBOX_STOP_PLAY_EVENT_ID.toString(), AncientCityPortalEntity.RITUAL_RADIUS);
+
     public static final Identifier ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = new Identifier(MOD_ID, "ancient_city_portal_tab_entity");
     public static final EntityType<AncientCityPortalTabEntity> ANCIENT_CITY_PORTAL_TAB = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalTabEntity::new)
             .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
@@ -122,6 +112,12 @@ public class AchieveToDoMod implements ModInitializer {
             .build();
 
     public static final Identifier ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID = new Identifier(MOD_ID, "ancient_city_portal_advancement_entity");
+    public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
+            .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
+            .maxChunkTrackingRange(10)
+            .trackingTickInterval(1)
+            .build();
+
     public static final Identifier ANCIENT_CITY_PORTAL_HINT_ENTITY_ID = new Identifier(MOD_ID, "ancient_city_portal_prompt_entity");
     public static final EntityType<AncientCityPortalPromptEntity> ANCIENT_CITY_PORTAL_HINT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalPromptEntity::new)
             .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
@@ -323,12 +319,6 @@ public class AchieveToDoMod implements ModInitializer {
             ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, BACAP_AMPLIFIED_NETHER_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, NULLSCAPE_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, BACAP_NULLSCAPE_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-
-            ResourceLoader.registerBuiltinResourcePack(BACAP_LANGUAGE_RESOURCE_PACK_ID, modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
-            ResourceLoader.registerBuiltinResourcePack(VISUAL_FISH_BUCKETS_RESOURCE_PACK_ID, modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
-            ResourceLoader.registerBuiltinResourcePack(GOAT_HORNS_RESOURCE_PACK_ID, modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
-            ResourceLoader.registerBuiltinResourcePack(ENCHANTED_BOOKS_RESOURCE_PACK_ID, modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
-            ResourceLoader.registerBuiltinResourcePack(WAXED_COPPER_RESOURCE_PACK_ID, modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
         });
     }
 

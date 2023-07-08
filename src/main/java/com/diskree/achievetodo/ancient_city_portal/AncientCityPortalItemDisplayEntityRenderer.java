@@ -7,10 +7,10 @@ import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.decoration.DisplayEntity;
-import net.minecraft.util.math.Axis;
 import org.jetbrains.annotations.Nullable;
 
 public class AncientCityPortalItemDisplayEntityRenderer extends DisplayEntityRenderer<DisplayEntity.ItemDisplayEntity, DisplayEntity.ItemDisplayEntity.RenderData> {
+
     private final ItemRenderer itemRenderer;
 
     public AncientCityPortalItemDisplayEntityRenderer(EntityRendererFactory.Context context) {
@@ -31,7 +31,6 @@ public class AncientCityPortalItemDisplayEntityRenderer extends DisplayEntityRen
             int i,
             float f
     ) {
-        matrices.multiply(Axis.Y_POSITIVE.rotation((float) Math.PI));
         this.itemRenderer.renderItem(
                 renderData.itemStack(),
                 renderData.itemTransform(),

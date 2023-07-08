@@ -514,7 +514,7 @@ public class AdvancementGenerator {
                     });
                 }
             }
-            case "blazeandcave:animal/bird/keeper" -> {
+            case "blazeandcave:animal/birdkeeper" -> {
                 hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "red" -> 33;

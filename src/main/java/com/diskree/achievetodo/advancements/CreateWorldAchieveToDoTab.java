@@ -10,7 +10,7 @@ import net.minecraft.client.world.WorldCreator;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
-public class CreateWorldAdvancementsTab extends GridWidgetTab {
+public class CreateWorldAchieveToDoTab extends GridWidgetTab {
 
     private static final Text REWARDS_TITLE = Text.translatable("createWorld.rewards.title");
     private static final Text ITEM_REWARDS = Text.translatable("createWorld.rewards.item");
@@ -27,7 +27,7 @@ public class CreateWorldAdvancementsTab extends GridWidgetTab {
     private static final Text END_GENERATION = Text.translatable("createWorld.generation.end");
     private static final Text END_GENERATION_INFO = Text.translatable("createWorld.generation.end.info");
 
-    public CreateWorldAdvancementsTab(CreateWorldScreen screen) {
+    public CreateWorldAchieveToDoTab(CreateWorldScreen screen) {
         super(Text.of("AchieveToDo"));
         if (screen == null || screen.getClient() == null) {
             return;

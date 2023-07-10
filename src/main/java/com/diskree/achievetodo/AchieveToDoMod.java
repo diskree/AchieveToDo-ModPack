@@ -175,7 +175,8 @@ public class AchieveToDoMod implements ModInitializer {
     }
 
     public static BlockedAction getBlockedActionFromAdvancement(Advancement advancement) {
-        return BlockedAction.map(advancement.getId().getPath().split("/")[1]);
+        String[] pathPieces = advancement.getId().getPath().split("/");
+        return pathPieces.length == 2 ? BlockedAction.map(pathPieces[1]) : null;
     }
 
     public static boolean isActionBlocked(BlockedAction action) {

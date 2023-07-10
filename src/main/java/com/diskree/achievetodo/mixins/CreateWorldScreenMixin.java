@@ -5,6 +5,7 @@ import com.diskree.achievetodo.CreateWorldScreenImpl;
 import com.diskree.achievetodo.WorldCreatorImpl;
 import com.diskree.achievetodo.advancements.CreateWorldAdvancementsTab;
 import com.mojang.datafixers.util.Pair;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 import net.minecraft.client.gui.tab.Tab;
 import net.minecraft.client.world.WorldCreator;
@@ -21,7 +22,12 @@ import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.function.Consumer;
 
 @Mixin(CreateWorldScreen.class)
@@ -57,6 +63,10 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
     @Shadow
     protected abstract void applyDataPacks(ResourcePackManager dataPackManager, boolean warnForExperimentsIfApplicable, Consumer<FeatureAndDataSettings> consumer);
 
+    @Shadow
+    @Nullable
+    protected abstract Path getDataPackTempDir();
+
     @ModifyArgs(method = "init", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/HeaderBar$Builder;tabs([Lnet/minecraft/client/gui/tab/Tab;)Lnet/minecraft/client/gui/widget/HeaderBar$Builder;"))
     private void initInject(Args args) {
         CreateWorldScreen self = (CreateWorldScreen) (Object) this;
@@ -73,61 +83,89 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
         if (!isWaitingDatapacks) {
             CreateWorldScreen self = (CreateWorldScreen) (Object) this;
             WorldCreatorImpl worldCreatorImpl = (WorldCreatorImpl) worldCreator;
+            MinecraftClient client = self.client;
+            Path worldPacksDir = getDataPackTempDir();
+
+            if (client == null || worldPacksDir == null) {
+                return;
+            }
+
+            boolean isHardcoreEnabled = worldCreator.isHardcore();
+            boolean isTerralithEnabled = worldCreatorImpl.achieveToDo$isTerralithEnabled();
+            boolean isAmplifiedNetherEnabled = worldCreatorImpl.achieveToDo$isAmplifiedNetherEnabled();
+            boolean isNullscapeEnabled = worldCreatorImpl.achieveToDo$isNullscapeEnabled();
+
+            Path globalPacksDir = new File(client.runDirectory, "datapacks").toPath();
+
+            try (DirectoryStream<Path> stream = Files.newDirectoryStream(globalPacksDir)) {
+                for (Path path : stream) {
+                    if (!Files.isDirectory(path)) {
+                        Files.copy(path, worldPacksDir.resolve(path.getFileName()), StandardCopyOption.REPLACE_EXISTING);
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
             if (packManager == null) {
                 getScannedPack(worldCreator.getContext().dataConfiguration());
             }
             if (packManager != null) {
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.BACAP_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.BACAP_HARDCORE_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.ACHIEVETODO_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.ACHIEVETODO_HARDCORE_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.REWARDS_ITEM_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.REWARDS_EXPERIENCE_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.REWARDS_TROPHY_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.TERRALITH_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.BACAP_TERRALITH_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.AMPLIFIED_NETHER_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.BACAP_AMPLIFIED_NETHER_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.NULLSCAPE_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.BACAP_NULLSCAPE_DATA_PACK_NAME);
+                packManager.disablePackProfile(AchieveToDoMod.BACAP_DATA_PACK);
+                packManager.disablePackProfile(AchieveToDoMod.BACAP_HARDCORE_DATA_PACK);
+                packManager.disablePackProfile(AchieveToDoMod.BACAP_TERRALITH_DATA_PACK);
+                packManager.disablePackProfile(AchieveToDoMod.BACAP_AMPLIFIED_NETHER_DATA_PACK);
+                packManager.disablePackProfile(AchieveToDoMod.BACAP_NULLSCAPE_DATA_PACK);
+                packManager.disablePackProfile(AchieveToDoMod.TERRALITH_DATA_PACK);
+                packManager.disablePackProfile(AchieveToDoMod.AMPLIFIED_NETHER_DATA_PACK);
+                packManager.disablePackProfile(AchieveToDoMod.NULLSCAPE_DATA_PACK);
 
-                packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.BACAP_DATA_PACK_NAME);
-                if (worldCreator.isHardcore()) {
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.BACAP_HARDCORE_DATA_PACK_NAME);
+                packManager.disablePackProfile(AchieveToDoMod.BACAP_OVERRIDE_DATA_PACK);
+                packManager.disablePackProfile(AchieveToDoMod.BACAP_HARDCORE_OVERRIDE_DATA_PACK);
+                packManager.disablePackProfile(AchieveToDoMod.BACAP_REWARDS_ITEM_DATA_PACK_NAME);
+                packManager.disablePackProfile(AchieveToDoMod.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME);
+                packManager.disablePackProfile(AchieveToDoMod.BACAP_REWARDS_TROPHY_DATA_PACK_NAME);
+
+                packManager.enablePackProfile(AchieveToDoMod.BACAP_DATA_PACK);
+                if (isHardcoreEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_HARDCORE_DATA_PACK);
                 }
-                packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.ACHIEVETODO_DATA_PACK_NAME);
-                if (worldCreator.isHardcore()) {
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.ACHIEVETODO_HARDCORE_DATA_PACK_NAME);
+                if (isTerralithEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_TERRALITH_DATA_PACK);
+                }
+                if (isAmplifiedNetherEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_AMPLIFIED_NETHER_DATA_PACK);
+                }
+                if (isNullscapeEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_NULLSCAPE_DATA_PACK);
                 }
 
+                if (isTerralithEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.TERRALITH_DATA_PACK);
+                }
+                if (isAmplifiedNetherEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.AMPLIFIED_NETHER_DATA_PACK);
+                }
+                if (isNullscapeEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.NULLSCAPE_DATA_PACK);
+                }
+
+                packManager.enablePackProfile(AchieveToDoMod.BACAP_OVERRIDE_DATA_PACK);
+                if (isHardcoreEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_HARDCORE_OVERRIDE_DATA_PACK);
+                }
                 if (worldCreatorImpl.achieveToDo$isItemRewardsEnabled()) {
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.REWARDS_ITEM_DATA_PACK_NAME);
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_REWARDS_ITEM_DATA_PACK_NAME);
                 }
                 if (worldCreatorImpl.achieveToDo$isExperienceRewardsEnabled()) {
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.REWARDS_EXPERIENCE_DATA_PACK_NAME);
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME);
                 }
                 if (worldCreatorImpl.achieveToDo$isTrophyRewardsEnabled()) {
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.REWARDS_TROPHY_DATA_PACK_NAME);
-                }
-                if (worldCreatorImpl.achieveToDo$isTerralithEnabled()) {
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.TERRALITH_DATA_PACK_NAME);
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.BACAP_TERRALITH_DATA_PACK_NAME);
-                }
-                if (worldCreatorImpl.achieveToDo$isAmplifiedNetherEnabled()) {
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.AMPLIFIED_NETHER_DATA_PACK_NAME);
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.BACAP_AMPLIFIED_NETHER_DATA_PACK_NAME);
-                }
-                if (worldCreatorImpl.achieveToDo$isNullscapeEnabled()) {
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.NULLSCAPE_DATA_PACK_NAME);
-                    packManager.enablePackProfile(AchieveToDoMod.MOD_ID + "/" + AchieveToDoMod.BACAP_NULLSCAPE_DATA_PACK_NAME);
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_REWARDS_TROPHY_DATA_PACK_NAME);
                 }
 
                 isWaitingDatapacks = true;
-                applyDataPacks(packManager, true, (dataConfiguration) -> {
-                    if (self.client != null) {
-                        self.client.setScreen(self);
-                    }
-                });
+                applyDataPacks(packManager, true, (dataConfiguration) -> client.setScreen(self));
 
                 ci.cancel();
             }

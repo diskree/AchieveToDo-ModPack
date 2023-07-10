@@ -23,7 +23,7 @@ public class GameTabMixin {
             CyclingButtonWidget<Boolean> buttonWidget = args.get(0);
             buttonWidget.active = false;
             buttonWidget.setValue(false);
-            buttonWidget.setTooltip(Tooltip.create(Text.translatable("menu.shareToLan.info")));
+            buttonWidget.setTooltip(Tooltip.create(Text.translatable("feature.not_supported")));
         }
     }
 

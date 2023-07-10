@@ -59,19 +59,21 @@ public class AchieveToDoMod implements ModInitializer {
 
     public static final String MOD_ID = "achievetodo";
 
-    public static final String BACAP_DATA_PACK_NAME = "bacap";
-    public static final String BACAP_HARDCORE_DATA_PACK_NAME = "bacap_hardcore";
-    public static final String ACHIEVETODO_DATA_PACK_NAME = "achievetodo";
-    public static final String ACHIEVETODO_HARDCORE_DATA_PACK_NAME = "achievetodo_hardcore";
-    public static final String REWARDS_ITEM_DATA_PACK_NAME = "rewards_item";
-    public static final String REWARDS_EXPERIENCE_DATA_PACK_NAME = "rewards_experience";
-    public static final String REWARDS_TROPHY_DATA_PACK_NAME = "rewards_trophy";
-    public static final String TERRALITH_DATA_PACK_NAME = "terralith";
-    public static final String BACAP_TERRALITH_DATA_PACK_NAME = "bacap_terralith";
-    public static final String AMPLIFIED_NETHER_DATA_PACK_NAME = "amplified_nether";
-    public static final String BACAP_AMPLIFIED_NETHER_DATA_PACK_NAME = "bacap_amplified_nether";
-    public static final String NULLSCAPE_DATA_PACK_NAME = "nullscape";
-    public static final String BACAP_NULLSCAPE_DATA_PACK_NAME = "bacap_nullscape";
+    public static final String BACAP_DATA_PACK = "file/bacap.zip";
+    public static final String BACAP_HARDCORE_DATA_PACK = "file/bacap_hardcore.zip";
+    public static final String BACAP_TERRALITH_DATA_PACK = "file/bacap_terralith.zip";
+    public static final String BACAP_AMPLIFIED_NETHER_DATA_PACK = "file/bacap_amplified_nether.zip";
+    public static final String BACAP_NULLSCAPE_DATA_PACK = "file/bacap_nullscape.zip";
+
+    public static final String TERRALITH_DATA_PACK = "file/terralith.zip";
+    public static final String AMPLIFIED_NETHER_DATA_PACK = "file/amplified_nether.zip";
+    public static final String NULLSCAPE_DATA_PACK = "file/nullscape.zip";
+
+    public static final String BACAP_OVERRIDE_DATA_PACK = MOD_ID + "/" + "bacap_override";
+    public static final String BACAP_HARDCORE_OVERRIDE_DATA_PACK = MOD_ID + "/" + "bacap_hardcore_override";
+    public static final String BACAP_REWARDS_ITEM_DATA_PACK_NAME = MOD_ID + "/" + "bacap_rewards_item";
+    public static final String BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME = MOD_ID + "/" + "bacap_rewards_experience";
+    public static final String BACAP_REWARDS_TROPHY_DATA_PACK_NAME = MOD_ID + "/" + "bacap_rewards_trophy";
 
     public static final Identifier ANCIENT_CITY_PORTAL_BLOCK_ID = new Identifier(MOD_ID, "ancient_city_portal");
     public static final AncientCityPortalBlock ANCIENT_CITY_PORTAL_BLOCK = new AncientCityPortalBlock(AbstractBlock.Settings.create()
@@ -306,19 +308,11 @@ public class AchieveToDoMod implements ModInitializer {
 
     private void registerPacks() {
         QuiltLoader.getModContainer(MOD_ID).ifPresent((modContainer) -> {
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, BACAP_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, BACAP_HARDCORE_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, ACHIEVETODO_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, ACHIEVETODO_HARDCORE_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, REWARDS_ITEM_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, REWARDS_EXPERIENCE_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, REWARDS_TROPHY_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, TERRALITH_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, BACAP_TERRALITH_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, AMPLIFIED_NETHER_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, BACAP_AMPLIFIED_NETHER_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, NULLSCAPE_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(MOD_ID, BACAP_NULLSCAPE_DATA_PACK_NAME), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_HARDCORE_OVERRIDE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_ITEM_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_TROPHY_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
         });
     }
 

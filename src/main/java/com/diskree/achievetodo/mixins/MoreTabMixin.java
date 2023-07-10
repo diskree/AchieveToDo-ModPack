@@ -18,7 +18,7 @@ public class MoreTabMixin {
         if (!BuildConfig.DEBUG) {
             ButtonWidget buttonWidget = args.get(0);
             buttonWidget.active = false;
-            buttonWidget.setTooltip(Tooltip.create(Text.translatable("menu.shareToLan.info")));
+            buttonWidget.setTooltip(Tooltip.create(Text.translatable("feature.not_supported")));
         }
     }
 }

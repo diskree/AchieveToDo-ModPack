@@ -1,2 +1,0 @@
-give @s minecraft:feather{Enchantments:[{id:"minecraft:unbreaking",lvl:1}],Trophy:1,CustomModelData:132,HideFlags:33,display:{Name:"{\"italic\":\"false\",\"bold\":\"true\",\"color\":\"#F28F8A\",\"translate\":\"Magic Paintbrush\"}",Lore:["{\"color\":\"#F28F8A\",\"translate\":\"For painting with all the colors of the wind\"}","{\"text\":\" \"}","{\"color\":\"gray\",\"translate\":\"Awarded for achieving\"}","{\"italic\":\"false\",\"color\":\"#75E1FF\",\"translate\":\"Colors of the Wind\"}"]}} 1
-tellraw @s {"color":"gold","text":" +1 ","extra":[{"translate":"Magic Paintbrush"}]}

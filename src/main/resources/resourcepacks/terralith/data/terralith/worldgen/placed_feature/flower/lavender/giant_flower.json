@@ -1,9 +1,0 @@
-{
-	"feature": "terralith:flower/lavender/giant_flower",
-	"placement": [
-		{
-			"type": "minecraft:count",
-			"count": 128
-		}
-	]
-}

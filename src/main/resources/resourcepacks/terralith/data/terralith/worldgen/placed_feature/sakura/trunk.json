@@ -1,9 +1,0 @@
-{
-	"feature": "terralith:sakura/trunk",
-	"placement": [
-		{
-			"type": "minecraft:heightmap",
-			"heightmap": "WORLD_SURFACE_WG"
-		}
-	]
-}

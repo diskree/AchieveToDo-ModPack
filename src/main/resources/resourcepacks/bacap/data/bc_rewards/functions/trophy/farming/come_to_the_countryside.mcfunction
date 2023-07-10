@@ -1,2 +1,0 @@
-give @s minecraft:iron_hoe{Enchantments:[{id:"minecraft:unbreaking",lvl:1}],Trophy:1,CustomModelData:131,HideFlags:35,display:{Name:"{\"italic\":\"false\",\"bold\":\"true\",\"color\":\"#6A573D\",\"translate\":\"Mr Finch's Hoe\"}",Lore:["{\"color\":\"#6A573D\",\"translate\":\"Did you at least harvest the sugar cane?\"}","{\"text\":\" \"}","{\"color\":\"gray\",\"translate\":\"Awarded for achieving\"}","{\"italic\":\"false\",\"color\":\"#75E1FF\",\"translate\":\"Come to the countryside!\"}"]}} 1
-tellraw @s {"color":"gold","text":" +1 ","extra":[{"translate":"Mr Finch's Hoe"}]}

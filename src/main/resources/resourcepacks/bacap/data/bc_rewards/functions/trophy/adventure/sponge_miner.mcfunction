@@ -1,2 +1,0 @@
-give @s minecraft:sponge{Enchantments:[{id:"minecraft:unbreaking",lvl:1}],Trophy:1,CustomModelData:132,HideFlags:33,display:{Name:"{\"italic\":\"false\",\"bold\":\"true\",\"color\":\"#FFF463\",\"translate\":\"Spongebob Squarepants\"}",Lore:["{\"color\":\"#FFF463\",\"translate\":\"Who lives in a pineapple under the sea?\"}","{\"text\":\" \"}","{\"color\":\"gray\",\"translate\":\"Awarded for achieving\"}","{\"italic\":\"false\",\"color\":\"#75E1FF\",\"translate\":\"Sponge Miner\"}"]}} 1
-tellraw @s {"color":"gold","text":" +1 ","extra":[{"translate":"Spongebob Squarepants"}]}

@@ -1,1 +1,0 @@
-scoreboard objectives setdisplay sidebar bac_advancements_team

@@ -53,7 +53,7 @@
   "createWorld.generation.nether.info": "Amplified Nether - значительно расширяет рельеф Нижнего Мира и увеличивает его высоту в 2 раза.",
   "createWorld.generation.end": "Край",
   "createWorld.generation.end.info": "Nullscape - разрушенные острова, парящие глыбы и завораживающий рельеф.",
-  "menu.shareToLan.info": "Миры в AchieveToDo не поддерживают это. Играйте честно!",
+  "feature.not_supported": "Миры в AchieveToDo не поддерживают это.",
   "spyglass.tooltip.panorama.header": "Взгляни в меня, чтобы узнать",
   "spyglass.tooltip.panorama.biome": "какой биом ты ещё не посещал",
   "spyglass.tooltip.panorama.structure": "какую структуру ты ещё не посещал",

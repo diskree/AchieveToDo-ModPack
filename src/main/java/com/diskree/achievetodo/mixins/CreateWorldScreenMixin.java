@@ -111,21 +111,6 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 getScannedPack(worldCreator.getContext().dataConfiguration());
             }
             if (packManager != null) {
-                packManager.disablePackProfile(AchieveToDoMod.BACAP_DATA_PACK);
-                packManager.disablePackProfile(AchieveToDoMod.BACAP_HARDCORE_DATA_PACK);
-                packManager.disablePackProfile(AchieveToDoMod.BACAP_TERRALITH_DATA_PACK);
-                packManager.disablePackProfile(AchieveToDoMod.BACAP_AMPLIFIED_NETHER_DATA_PACK);
-                packManager.disablePackProfile(AchieveToDoMod.BACAP_NULLSCAPE_DATA_PACK);
-                packManager.disablePackProfile(AchieveToDoMod.TERRALITH_DATA_PACK);
-                packManager.disablePackProfile(AchieveToDoMod.AMPLIFIED_NETHER_DATA_PACK);
-                packManager.disablePackProfile(AchieveToDoMod.NULLSCAPE_DATA_PACK);
-
-                packManager.disablePackProfile(AchieveToDoMod.BACAP_OVERRIDE_DATA_PACK);
-                packManager.disablePackProfile(AchieveToDoMod.BACAP_HARDCORE_OVERRIDE_DATA_PACK);
-                packManager.disablePackProfile(AchieveToDoMod.BACAP_REWARDS_ITEM_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME);
-                packManager.disablePackProfile(AchieveToDoMod.BACAP_REWARDS_TROPHY_DATA_PACK_NAME);
-
                 packManager.enablePackProfile(AchieveToDoMod.BACAP_DATA_PACK);
                 if (isHardcoreEnabled) {
                     packManager.enablePackProfile(AchieveToDoMod.BACAP_HARDCORE_DATA_PACK);

@@ -71,13 +71,13 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
             if (fileName.toString().endsWith(".zip")) {
                 Path globalPacksDir = new File(client.runDirectory, "datapacks").toPath();
                 try {
+                    if (!Files.exists(globalPacksDir)) {
+                        Files.createDirectory(globalPacksDir);
+                    }
                     if (fileName.toString().startsWith("[UNZIP ME]")) {
                         unzip(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
                         Files.delete(downloadedFile);
                     } else {
-                        if (!Files.exists(globalPacksDir)) {
-                            Files.createDirectory(globalPacksDir);
-                        }
                         Files.move(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
                     }
                 } catch (IOException e) {

@@ -154,24 +154,24 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 if (isHardcoreEnabled) {
                     packManager.enablePackProfile(AchieveToDoMod.BACAP_HARDCORE_DATA_PACK);
                 }
-                if (isTerralithEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_TERRALITH_DATA_PACK);
+                if (isNullscapeEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_NULLSCAPE_DATA_PACK);
                 }
                 if (isAmplifiedNetherEnabled) {
                     packManager.enablePackProfile(AchieveToDoMod.BACAP_AMPLIFIED_NETHER_DATA_PACK);
                 }
-                if (isNullscapeEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_NULLSCAPE_DATA_PACK);
+                if (isTerralithEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_TERRALITH_DATA_PACK);
                 }
 
-                if (isTerralithEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.TERRALITH_DATA_PACK);
+                if (isNullscapeEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.NULLSCAPE_DATA_PACK);
                 }
                 if (isAmplifiedNetherEnabled) {
                     packManager.enablePackProfile(AchieveToDoMod.AMPLIFIED_NETHER_DATA_PACK);
                 }
-                if (isNullscapeEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.NULLSCAPE_DATA_PACK);
+                if (isTerralithEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.TERRALITH_DATA_PACK);
                 }
 
                 packManager.enablePackProfile(AchieveToDoMod.BACAP_OVERRIDE_DATA_PACK);

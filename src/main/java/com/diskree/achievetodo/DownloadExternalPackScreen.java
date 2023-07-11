@@ -11,9 +11,14 @@ import net.minecraft.util.Util;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Enumeration;
 import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
 public class DownloadExternalPackScreen extends ConfirmScreen {
 
@@ -25,7 +30,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
     public DownloadExternalPackScreen(Screen parent, ExternalPack externalPack, BooleanConsumer exitCallback) {
         super(
                 (download) -> Util.getOperatingSystem().open(download ? externalPack.getDownloadUrl() : externalPack.getPageUrl()),
-                Text.translatable("external.pack.required_prefix").append(Text.of(externalPack.getName()).copy().formatted(Formatting.BLUE, Formatting.ITALIC)),
+                Text.translatable("external.pack.required_prefix").append(Text.of(externalPack.getName()).copy().formatted(externalPack.getColor(), Formatting.ITALIC)),
                 Text.translatable("external.pack.help").copy().formatted(Formatting.YELLOW)
         );
         this.parent = parent;
@@ -63,19 +68,44 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
         if (client != null && paths != null && paths.size() == 1) {
             Path downloadedFile = paths.get(0);
             Path fileName = downloadedFile.getFileName();
-            if (fileName.toString().endsWith(".zip") && !fileName.toString().startsWith("[UNZIP ME]")) {
+            if (fileName.toString().endsWith(".zip")) {
+                Path globalPacksDir = new File(client.runDirectory, "datapacks").toPath();
                 try {
-                    Path globalPacksDir = new File(client.runDirectory, "datapacks").toPath();
-                    if (!Files.exists(globalPacksDir)) {
-                        Files.createDirectory(globalPacksDir);
+                    if (fileName.toString().startsWith("[UNZIP ME]")) {
+                        unzip(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
+                        Files.delete(downloadedFile);
+                    } else {
+                        if (!Files.exists(globalPacksDir)) {
+                            Files.createDirectory(globalPacksDir);
+                        }
+                        Files.move(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
                     }
-                    Files.move(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             }
             exitWithCreateLevel = true;
             closeScreen();
+        }
+    }
+
+    private void unzip(Path source, Path destination) throws IOException {
+        try (ZipFile zipFile = new ZipFile(source.toFile())) {
+            Enumeration<? extends ZipEntry> entries = zipFile.entries();
+            while (entries.hasMoreElements()) {
+                ZipEntry entry = entries.nextElement();
+                if (entry.getName().endsWith(".zip")) {
+                    Files.createDirectories(destination.getParent());
+                    try (InputStream in = zipFile.getInputStream(entry);
+                         OutputStream out = Files.newOutputStream(destination)) {
+                        byte[] buffer = new byte[1024];
+                        int len;
+                        while ((len = in.read(buffer)) != -1) {
+                            out.write(buffer, 0, len);
+                        }
+                    }
+                }
+            }
         }
     }
 }

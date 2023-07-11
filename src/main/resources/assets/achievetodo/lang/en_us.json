@@ -264,6 +264,6 @@
   "hints.no_new_updates.description": "Try to get hint if there are no advancements that have hints",
   "external.pack.open_page": "Open Page",
   "external.pack.download": "Download",
-  "external.pack.required_prefix": "To play you need to download: ",
-  "external.pack.help": "Drag and drop file into this window. If the archive name contains '[UNZIP ME]', unzip and move the compressed archive."
+  "external.pack.required_prefix": "To play you need to download ",
+  "external.pack.help": "Drag and drop file into this window."
 }

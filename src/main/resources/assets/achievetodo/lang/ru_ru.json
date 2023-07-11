@@ -257,8 +257,8 @@
   "hints.no_new_updates.description": "Попытайтесь получить подсказку при отсутствии достижений, по которым есть что подсказать",
   "external.pack.open_page": "Открыть страницу",
   "external.pack.download": "Загрузить",
-  "external.pack.required_prefix": "Для игры необходимо загрузить: ",
-  "external.pack.help": "Переместите загруженный файл в это окно. Если в названии файла есть '[UNZIP ME]', распакуйте и переместите архив из загруженного.",
+  "external.pack.required_prefix": "Для игры необходимо загрузить ",
+  "external.pack.help": "Переместите загруженный файл в это окно.",
 
   "Kill a Guardian with arrows": "Застрелите стража",
   "The Shielding": "Есть пробитие!",

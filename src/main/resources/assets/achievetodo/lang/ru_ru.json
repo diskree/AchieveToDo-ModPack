@@ -919,4 +919,11 @@
   "Loot chests opened:": "Открыто сундуков с добычей:",
   "Gold Bartered to Piglins:": "Сделок с пиглинами:",
   "%1$s tab": "Вкладка «%1$s»",
+
+  "Damage From All": "Мальчик для битья",
+  "Get attacked by a Hoglin": "Получите урон от хоглина",
+  "Get attacked by an angry panda": "Получите урон от злой панды",
+  "Get attacked by a Polar Bear": "Получите урон от белого медведя",
+  "Take damage from a Creeper explosion": "Получите урон от взрыва крипера",
+  "Get attacked by a Warden": "Получите урон от хранителя"
 }

@@ -70,7 +70,8 @@ public class AchieveToDoMod implements ModInitializer {
     public static final String NULLSCAPE_DATA_PACK = "file/nullscape.zip";
 
     public static final String BACAP_OVERRIDE_DATA_PACK = MOD_ID + "/" + "bacap_override";
-    public static final String BACAP_HARDCORE_OVERRIDE_DATA_PACK = MOD_ID + "/" + "bacap_hardcore_override";
+    public static final String BACAP_OVERRIDE_HARDCORE_DATA_PACK = MOD_ID + "/" + "bacap_override_hardcore";
+    public static final String BACAP_OVERRIDE_TERRALITH_DATA_PACK = MOD_ID + "/" + "bacap_override_terralith";
     public static final String BACAP_REWARDS_ITEM_DATA_PACK_NAME = MOD_ID + "/" + "bacap_rewards_item";
     public static final String BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME = MOD_ID + "/" + "bacap_rewards_experience";
     public static final String BACAP_REWARDS_TROPHY_DATA_PACK_NAME = MOD_ID + "/" + "bacap_rewards_trophy";
@@ -310,7 +311,8 @@ public class AchieveToDoMod implements ModInitializer {
     private void registerPacks() {
         QuiltLoader.getModContainer(MOD_ID).ifPresent((modContainer) -> {
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_HARDCORE_OVERRIDE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_HARDCORE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_TERRALITH_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_ITEM_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_TROPHY_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);

@@ -176,7 +176,10 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
 
                 packManager.enablePackProfile(AchieveToDoMod.BACAP_OVERRIDE_DATA_PACK);
                 if (isHardcoreEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_HARDCORE_OVERRIDE_DATA_PACK);
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_OVERRIDE_HARDCORE_DATA_PACK);
+                }
+                if (isTerralithEnabled) {
+                    packManager.enablePackProfile(AchieveToDoMod.BACAP_OVERRIDE_TERRALITH_DATA_PACK);
                 }
                 if (worldCreatorImpl.achieveToDo$isItemRewardsEnabled()) {
                     packManager.enablePackProfile(AchieveToDoMod.BACAP_REWARDS_ITEM_DATA_PACK_NAME);

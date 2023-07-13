@@ -38,7 +38,7 @@ This will diversify your gameplay at the stage of initial and medium progression
 
 It's hard to remember everything you've done in the world: places you've visited, things you've crafted, or mobs you've killed. However, there are more than 100 advancements that will make you remember something like this, or, in desperation, do everything all over again. To help find out what's left to do for such advancements, hints have been developed. I've left you a "Hintly Hallows" riddle and a branch of advancements in the AchieveToDo tab at the very bottom. A game mechanic awaits you inside, giving out holograms as a hint for a random advancement. The first image symbolizes the tab from which the advancement was chosen, the second - symbolizes the advancement itself, and the third - the hint itself. For those advancements where you need to visit a certain place, a special spyglass has been invented that will be given to you instead of a hologram. I'm sure this will dilute the grind at the end that many are afraid of.
 
-## Commands
+### Commands
 
 The `/random` command outputs one of the uncompleted advancements in the chat. You can use it instead of viewing the advancement window, or to set a goal for yourself. Advancements with progress, as well as particularly difficult advancements, will not be offered.
 
@@ -54,13 +54,13 @@ The `/random` command outputs one of the uncompleted advancements in the chat. Y
 - The game difficulty is automatically locked, so remember to choose the right one when creating the world.
 - Cheats, creative mode, data packs, and world re-creation - all of this is either removed from the game or locked.
 
-## Installation
-
-1. Download AchieveToDo.zip from [here](https://github.com/diskree/AchieveToDo/releases/latest)
-2. Drag and drop the archive into the MultiMC launcher window.
-
 ### Acknowledgments
 
 - This is my first major Minecraft modding project. Moreover, it wouldn't have existed if Cavinator1 hadn't created the [BlazeandCave's advancement pack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/), which greatly inspired me.
 - Thank you, HarvelsX, for [Sugar](https://modrinth.com/modpack/sugar) 💜 and the great work on optimizing and enhancing the quality of gameplay in Minecraft.
 - Thanks to the [StardustLabs](https://www.stardustlabs.net/) team for their superb generation for all three dimensions.
+
+## Installation
+
+1. Download AchieveToDo.zip from [here](https://github.com/diskree/AchieveToDo/releases/latest)
+2. Drag and drop the archive into the MultiMC launcher window.

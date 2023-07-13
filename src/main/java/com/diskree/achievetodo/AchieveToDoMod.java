@@ -302,7 +302,7 @@ public class AchieveToDoMod implements ModInitializer {
                 context.getSource().sendSystemMessage(display.getDescription().copy().formatted(Formatting.YELLOW));
                 context.getSource().sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
             } else {
-                context.getSource().sendSystemMessage(Text.of(Text.translatable("commands.random.no_advancements").toString()));
+                context.getSource().sendSystemMessage(Text.translatable("commands.random.no_advancements"));
             }
             return Command.SINGLE_SUCCESS;
         }))));

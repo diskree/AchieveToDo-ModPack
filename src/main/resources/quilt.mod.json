@@ -13,7 +13,8 @@
       "contact": {
         "issues": "https://github.com/diskree/AchieveToDo/issues",
         "sources": "https://github.com/diskree/AchieveToDo"
-      }
+      },
+      "icon": "assets/achievetodo/icon.png"
     },
     "intermediate_mappings": "net.fabricmc:intermediary",
     "entrypoints": {

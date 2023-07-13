@@ -57,7 +57,7 @@ The `/random` command outputs one of the uncompleted advancements in the chat. Y
 ### Acknowledgments
 
 - This is my first major Minecraft modding project. Moreover, it wouldn't have existed if Cavinator1 hadn't created the [BlazeandCave's advancement pack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/), which greatly inspired me.
-- Thanks to the [StardustLabs](https://www.stardustlabs.net/) team for their superb generation for all three dimensions.
+- Thanks to the [StardustLabs](https://www.stardustlabs.net/) team for their generation for all three dimensions.
 
 ## Installation
 

@@ -1,24 +1,66 @@
-# AchieveToDo
+## AchieveToDo
 
-Forget about regular Minecraft. Welcome to a world where gameplay mechanics, food, items, and blocks require more from you! Created for crazy explorers of the cubic world, tired of monotony in progression and survival. Maximally close to the vanilla game.
+Welcome to a world where game mechanics, food, items, and blocks will demand more from you! This is designed for those cube world explorers who are tired of the monotony in progression and survival. Here there are no new mobs, structures, or items - everything is based on vanilla mechanics.
 
-This modpack is designed for single-player use only and is based on Minecraft 1.19.3 + 💜 [Sugar modpack](https://modrinth.com/modpack/sugar). Thank you for the great work on optimizing and enhancing the Minecraft experience!
+Each world you create includes [BlazeandCave's](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/) with more than 1000 advancements.
 
-Every world you create includes [BlazeandCave's datapack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/) with over 1000 achievements. Your possibilities open up as your achievement counter grows. At the very beginning, you can't eat or even jump.
+### World Creation
 
-The pack adds an "AchieveToDo" tab to the achievements window. You won't know that a specific action is locked until you try to do it. When you attempt to do a locked action, a message will appear indicating the remaining number of achievements, and when you reach the required number of achievements, a notification will appear. So, from the very beginning, this tab looks like this:
+A tab for AchieveToDo has been added to the world creation screen with settings:
 
-![image](https://user-images.githubusercontent.com/96978370/200839325-67781720-c128-49e4-b855-dfdf1d92e93c.png)
+![java_fv3uKVONsa](https://github.com/diskree/AchieveToDo/assets/96978370/ea1ac4cb-c082-46bb-8f27-b5368b32e5a3)
 
-BlazeandCave's is already configured to work with the pack, so you DO NOT need to access its settings through cheats. The default configuration has items and experience disabled and trophies enabled (this can be customized when creating a world in an upcoming update). The pack also includes a scoreboard on the right displaying the current number of achievements completed, which is necessary for the pack to function.
+By default, you will only receive trophies for advancements. You can enable various items and increased experience, as well as custom generation from [StardustLabs](https://www.stardustlabs.net/). Settings can't be changed after creating the world.
 
-You can also create a hardcore world with BlazeandCave's datapack already included, which will be activated automatically.
+Before creating the world, you will be asked to download the necessary datapacks, which depend on the settings of the world being created. This is, at the very least, the basic datapack BlazeandCave's for Survival mode. You need to download the file and drag and drop it to the Minecraft window, after which it will be processed and placed in cache. Subsequent worlds will be created without this requirement.
 
-# Installation
+### Gameplay
+
+Your capabilities in the game open up as you complete advancements. You can learn about available actions by opening the AchieveToDo tab in the advancement window:
+
+![javaw_YjF99qBPO7](https://github.com/diskree/AchieveToDo/assets/96978370/641bfdd6-fa1f-4d0c-b9d3-c6442c05a0bd)
+
+You cannot know that a specific action is blocked until you try to perform it. For example, if you want to jump immediately after appearing in the world, you will see this:
+
+![gygNGyeqmk](https://github.com/diskree/AchieveToDo/assets/96978370/1ef24d12-7c6b-48be-895f-16faa6436bb5)
+
+After that, you can watch the progress of unlocking the action in the advancement window:
+
+![java_zGJlJzVvQK](https://github.com/diskree/AchieveToDo/assets/96978370/0bf08fbb-59ed-4f3f-ac3d-68f6025c884c)
+
+And when you get 7 advancements, jumps will open up and a message about it will appear:
+
+![java_sUcsDl9pBD](https://github.com/diskree/AchieveToDo/assets/96978370/70848bab-d72b-4341-b9c1-1e236d817de6)
+
+This will diversify your gameplay at the stage of initial and medium progression.
+
+### Hints
+
+It's hard to remember everything you've done in the world: places you've visited, things you've crafted, or mobs you've killed. However, there are more than 100 advancements that will make you remember something like this, or, in desperation, do everything all over again. To help find out what's left to do for such advancements, hints have been developed. I've left you a "Hintly Hallows" riddle and a branch of advancements in the AchieveToDo tab at the very bottom. A game mechanic awaits you inside, giving out holograms as a hint for a random advancement. The first image symbolizes the tab from which the advancement was chosen, the second - symbolizes the advancement itself, and the third - the hint itself. For those advancements where you need to visit a certain place, a special spyglass has been invented that will be given to you instead of a hologram. I'm sure this will dilute the grind at the end that many are afraid of.
+
+## Commands
+
+The `/random` command outputs one of the uncompleted advancements in the chat. You can use it instead of viewing the advancement window, or to set a goal for yourself. Advancements with progress, as well as particularly difficult advancements, will not be offered.
+
+### Advancement Window
+
+- The window sizes have been increased for convenience.
+- Tabs are grouped by meaning and are located on each of the 4 sides of the window with a fixed indent.
+
+### Non-Vanilla Mechanics
+
+- The Totem of Undying now only drops from the Evoker residing in the Woodland Mansion. I've decided to restore this mechanic by removing the totems from raiders to make gameplay more interesting.
+- One of the vanilla blocks will appear in a place where you're not used to seeing it. This is part of a riddle, so I can't go into more detail.
+- The game difficulty is automatically locked, so remember to choose the right one when creating the world.
+- Cheats, creative mode, data packs, and world re-creation - all of this is either removed from the game or locked.
+
+## Installation
+
 1. Download AchieveToDo.zip from [here](https://github.com/diskree/AchieveToDo/releases/latest)
-2. Move the downloaded archive into the [MultiMC](https://multimc.org/#Download) launcher window
+2. Drag and drop the archive into the MultiMC launcher window.
 
-# Update
-1. Download AchieveToDo.zip from [here](https://github.com/diskree/AchieveToDo/releases/latest)
-2. Create a new instance by moving the downloaded archive into the [MultiMC](https://multimc.org/#Download) launcher window
-3. Copy over your worlds and necessary settings from the old instance to the new one.
+### Acknowledgments
+
+- This is my first major Minecraft modding project. Moreover, it wouldn't have existed if Cavinator1 hadn't created the [BlazeandCave's advancement pack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/), which greatly inspired me.
+- Thank you, HarvelsX, for [Sugar](https://modrinth.com/modpack/sugar) 💜 and the great work on optimizing and enhancing the quality of gameplay in Minecraft.
+- Thanks to the [StardustLabs](https://www.stardustlabs.net/) team for their superb generation for all three dimensions.

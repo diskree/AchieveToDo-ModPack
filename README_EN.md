@@ -63,4 +63,4 @@ The `/random` command outputs one of the uncompleted advancements in the chat. Y
 ## Installation
 
 1. Download AchieveToDo.zip from [here](https://github.com/diskree/AchieveToDo/releases/latest)
-2. Drag and drop the archive into the MultiMC launcher window.
+2. Drag and drop the archive into the [MultiMC](https://multimc.org/#Download) launcher window.

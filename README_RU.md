@@ -58,7 +58,3 @@
 
 - Это мой первый крупный проект в области моддинга для Minecraft. А ещё, его бы вовсе не существовало, если бы Cavinator1 не создал [пакет достижений BlazeandCave's](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/), который меня очень сильно вдохновил.
 - Спасибо команде [StardustLabs](https://www.stardustlabs.net/) за их шикарную генерацию для всех трёх измерений.
-
-# Установка
-1. Загрузите AchieveToDo.zip [отсюда](https://github.com/diskree/AchieveToDo/releases/latest)
-2. Переместите архив в окно лаунчера [MultiMC](https://multimc.org/#Download)

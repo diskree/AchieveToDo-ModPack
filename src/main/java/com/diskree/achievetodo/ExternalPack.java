@@ -7,7 +7,7 @@ public enum ExternalPack {
             "BlazeandCave's Advancements Pack",
             Formatting.LIGHT_PURPLE,
             "https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/",
-            "https://www.mediafire.com/file/9fpg9fh6xl1i8hh/BlazeandCave%2527s_Advancements_Pack_1.16.1.zip/file"
+            "https://www.mediafire.com/file/6mj2x3v6jtikdet/BlazeandCave%2527s_Advancements_Pack_1.16.2.zip/file"
     ),
     BACAP_HARDCORE(
             "BlazeandCave's Advancements Pack (Hardcore version)",
@@ -19,7 +19,7 @@ public enum ExternalPack {
             "BlazeandCave's Advancements Pack (Terralith version)",
             Formatting.GREEN,
             "https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-terralith-version/",
-            "https://www.mediafire.com/file/nw72t4a0028mugy/%255BUNZIP_ME%255D_BlazeandCave%2527s_Advancements_Pack_Terralith_1.16.zip/file"
+            "https://www.mediafire.com/file/xl0h8rm7u7e0pk1/%255BUNZIP_ME%255D_BlazeandCave%2527s_Advancements_Pack_Terralith_1.16.0.1.zip/file"
     ),
     BACAP_AMPLIFIED_NETHER(
             "BlazeandCave's Advancements Pack (Amplified Nether version)",

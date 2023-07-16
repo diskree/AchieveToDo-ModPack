@@ -48,11 +48,6 @@ public abstract class AdvancementWidgetMixin {
         cir.setReturnValue(cir.getReturnValue() && !isActionLocked());
     }
 
-    @ModifyConstant(method = "drawTooltip", constant = @Constant(intValue = 200), require = 3)
-    public int drawTooltipModifyTextureWidth(int constant) {
-        return 256;
-    }
-
     @ModifyConstant(method = "drawTooltip", constant = @Constant(intValue = 113), require = 1)
     public int drawTooltipModifyHeight(int constant) {
         return tab.getScreen().height - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;

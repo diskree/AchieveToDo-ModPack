@@ -1,7 +1,7 @@
 [versions]
 minecraft = "1.20.1"
-quilt_mappings = "1.20.1+build.13"
-quilt_loader = "0.20.0-beta.2"
+quilt_mappings = "1.20.1+build.20"
+quilt_loader = "0.19.3-beta.1"
 
 quilted_fabric_api = "7.0.6+0.85.0-1.20.1"
 
@@ -13,4 +13,4 @@ quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "quilt_loade
 quilted_fabric_api = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api", version.ref = "quilted_fabric_api" }
 
 [plugins]
-quilt_loom = { id = "org.quiltmc.loom", version = "1.2.+" }
+quilt_loom = { id = "org.quiltmc.loom", version = "1.+" }

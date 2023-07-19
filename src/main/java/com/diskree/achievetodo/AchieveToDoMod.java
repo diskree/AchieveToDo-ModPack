@@ -74,6 +74,7 @@ public class AchieveToDoMod implements ModInitializer {
     public static final String BACAP_REWARDS_ITEM_DATA_PACK_NAME = MOD_ID + "/" + "bacap_rewards_item";
     public static final String BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME = MOD_ID + "/" + "bacap_rewards_experience";
     public static final String BACAP_REWARDS_TROPHY_DATA_PACK_NAME = MOD_ID + "/" + "bacap_rewards_trophy";
+    public static final String BACAP_LANGUAGE_PACK = MOD_ID + "/" + "bacap_lp";
 
     public static final Identifier ANCIENT_CITY_PORTAL_BLOCK_ID = new Identifier(MOD_ID, "ancient_city_portal");
     public static final AncientCityPortalBlock ANCIENT_CITY_PORTAL_BLOCK = new AncientCityPortalBlock(AbstractBlock.Settings.create()
@@ -314,6 +315,8 @@ public class AchieveToDoMod implements ModInitializer {
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_ITEM_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_TROPHY_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+
+            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_LANGUAGE_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.DEFAULT_ENABLED, Text.of("BACAP Language Pack"));
         });
     }
 

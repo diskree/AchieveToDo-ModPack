@@ -146,9 +146,10 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 e.printStackTrace();
             }
 
-            if (packManager == null) {
-                getScannedPack(worldCreator.getContext().dataConfiguration());
+            if (packManager != null) {
+                packManager.scanPacks();
             }
+            getScannedPack(worldCreator.getContext().dataConfiguration());
             if (packManager != null) {
                 packManager.enablePackProfile(AchieveToDoMod.BACAP_DATA_PACK);
                 if (isHardcoreEnabled) {
@@ -189,7 +190,7 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 }
 
                 isWaitingDatapacks = true;
-                applyDataPacks(packManager, true, (dataConfiguration) -> client.setScreen(self));
+                applyDataPacks(packManager, false, (dataConfiguration) -> client.setScreen(self));
 
                 ci.cancel();
             }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "achievetodo",
-  "version": "1.20.1",
+  "version": "1.0",
   "name": "AchieveToDo",
   "description": "Minecraft mod that makes advancements a part of the gameplay.",
   "authors": [

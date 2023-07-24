@@ -36,7 +36,11 @@ This will diversify your gameplay at the stage of initial and medium progression
 
 ### Hints
 
-It's hard to remember everything you've done in the world: places you've visited, things you've crafted, or mobs you've killed. However, there are more than 100 advancements that will make you remember something like this, or, in desperation, do everything all over again. To help find out what's left to do for such advancements, hints have been developed. I've left you a "Hintly Hallows" riddle and a branch of advancements in the AchieveToDo tab at the very bottom. A game mechanic awaits you inside, giving out holograms as a hint for a random advancement. The first image symbolizes the tab from which the advancement was chosen, the second - symbolizes the advancement itself, and the third - the hint itself. For those advancements where you need to visit a certain place, a special spyglass has been invented that will be given to you instead of a hologram. I'm sure this will dilute the grind at the end that many are afraid of.
+It's hard to remember everything you've done in the world: places you've visited, things you've crafted, or mobs you've killed. However, there are more than 100 advancements that will make you remember something like this, or, in desperation, do everything all over again. To help find out what's left to do for such advancements, hints have been developed. I've left you a "Hintly Hallows" riddle and a branch of advancements in the AchieveToDo tab at the very bottom. A game mechanic awaits you inside, giving out holograms as a hint for a random advancement. 
+
+![image](https://github.com/diskree/AchieveToDo-core/assets/96978370/7ad53c31-da53-4e30-b930-076c8db1d0fc)
+
+The first image symbolizes the tab from which the advancement was chosen, the second - symbolizes the advancement itself, and the third - the hint itself. For those advancements where you need to visit a certain place, a special spyglass has been invented that will be given to you instead of a hologram. I'm sure this will dilute the grind at the end that many are afraid of.
 
 ### Commands
 

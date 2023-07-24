@@ -40,7 +40,7 @@ It's hard to remember everything you've done in the world: places you've visited
 
 ![image](https://github.com/diskree/AchieveToDo-core/assets/96978370/2c419f00-8fe9-484b-b1e2-13f1f453639c)
 
-![image](https://github.com/diskree/AchieveToDo-core/assets/96978370/9e9608c3-7bfa-4e5d-86e9-e079a07b16aa)
+![image](https://github.com/diskree/AchieveToDo-core/assets/96978370/6b0cc981-e600-4aa2-b851-72836bb340a0)
 
 
 The first image symbolizes the tab from which the advancement was chosen, the second - symbolizes the advancement itself, and the third - the hint itself. For those advancements where you need to visit a certain place, a special spyglass has been invented that will be given to you instead of a hologram. I'm sure this will dilute the grind at the end that many are afraid of.

@@ -1,6 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.CubeMapRenderer;
 import net.minecraft.client.render.GameRenderer;
@@ -40,7 +41,7 @@ public class GameRendererMixin {
                 return;
             }
             if (cubeMap == null) {
-                cubeMap = new CubeMapRenderer(new Identifier(AchieveToDoMod.MOD_ID, panoramaId));
+                cubeMap = new CubeMapRenderer(new Identifier(AchieveToDo.ID, panoramaId));
             }
             float pitch = client.player.prevPitch;
             if (pitch > 180.0f) {

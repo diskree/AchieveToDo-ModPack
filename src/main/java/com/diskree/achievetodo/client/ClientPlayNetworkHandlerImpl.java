@@ -1,6 +1,6 @@
-package com.diskree.achievetodo;
+package com.diskree.achievetodo.client;
 
-import com.diskree.achievetodo.ancient_city_portal.AncientCityPortalExperienceOrbSpawnS2CPacket;
+import com.diskree.achievetodo.advancements.hints.AncientCityPortalExperienceOrbSpawnS2CPacket;
 
 public interface ClientPlayNetworkHandlerImpl {
     void achieveToDo$onAncientCityPortalExperienceOrbSpawn(AncientCityPortalExperienceOrbSpawnS2CPacket packet);

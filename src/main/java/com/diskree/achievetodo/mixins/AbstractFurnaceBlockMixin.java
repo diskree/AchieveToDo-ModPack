@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
@@ -20,9 +20,9 @@ public class AbstractFurnaceBlockMixin {
     @Inject(method = "onUse", at = @At("HEAD"), cancellable = true)
     public void onUseInject(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         AbstractFurnaceBlock clazz = ((AbstractFurnaceBlock) (Object) this);
-        if (clazz instanceof FurnaceBlock && AchieveToDoMod.isActionBlocked(BlockedAction.USING_FURNACE) ||
-                clazz instanceof SmokerBlock && AchieveToDoMod.isActionBlocked(BlockedAction.USING_SMOKER) ||
-                clazz instanceof BlastFurnaceBlock && AchieveToDoMod.isActionBlocked(BlockedAction.USING_BLAST_FURNACE)) {
+        if (clazz instanceof FurnaceBlock && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_FURNACE) ||
+                clazz instanceof SmokerBlock && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_SMOKER) ||
+                clazz instanceof BlastFurnaceBlock && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_BLAST_FURNACE)) {
             cir.setReturnValue(ActionResult.FAIL);
         }
     }

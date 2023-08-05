@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.advancement.AdvancementTabType;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,7 +16,7 @@ public class AdvancementTabTypeMixin {
         if (client == null || client.currentScreen == null) {
             return 0;
         }
-        return client.currentScreen.width - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2 - 4;
+        return client.currentScreen.width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 4;
     }
 
     @ModifyConstant(method = "getTabY", constant = @Constant(intValue = 136), require = 1)
@@ -25,6 +25,6 @@ public class AdvancementTabTypeMixin {
         if (client == null || client.currentScreen == null) {
             return 0;
         }
-        return client.currentScreen.height - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2 - 4;
+        return client.currentScreen.height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 4;
     }
 }

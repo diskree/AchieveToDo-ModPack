@@ -1,9 +1,10 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.BlockedAction;
 import com.diskree.achievetodo.advancements.AdvancementRoot;
 import net.minecraft.advancement.AdvancementProgress;
+import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -39,7 +40,7 @@ public abstract class AdvancementProgressMixin {
     public void getProgressBarPercentageInject(CallbackInfoReturnable<Float> cir) {
         float actionUnblockAdvancementsCount = getActionUnblockAdvancementsCount();
         if (actionUnblockAdvancementsCount != -1) {
-            cir.setReturnValue(Math.min(actionUnblockAdvancementsCount, AchieveToDoMod.currentAdvancementsCount) / actionUnblockAdvancementsCount);
+            cir.setReturnValue(Math.min(actionUnblockAdvancementsCount, AchieveToDo.getScore(MinecraftClient.getInstance().player)) / actionUnblockAdvancementsCount);
         }
     }
 
@@ -47,7 +48,7 @@ public abstract class AdvancementProgressMixin {
     public void getProgressBarFractionInject(CallbackInfoReturnable<String> cir) {
         int actionUnblockAdvancementsCount = getActionUnblockAdvancementsCount();
         if (actionUnblockAdvancementsCount != -1) {
-            cir.setReturnValue(Math.min(actionUnblockAdvancementsCount, AchieveToDoMod.currentAdvancementsCount) + "/" + actionUnblockAdvancementsCount);
+            cir.setReturnValue(Math.min(actionUnblockAdvancementsCount, AchieveToDo.getScore(MinecraftClient.getInstance().player)) + "/" + actionUnblockAdvancementsCount);
         }
     }
 }

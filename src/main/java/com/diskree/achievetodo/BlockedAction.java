@@ -1,6 +1,8 @@
 package com.diskree.achievetodo;
 
 import com.diskree.achievetodo.advancements.AdvancementRoot;
+import com.diskree.achievetodo.server.AchieveToDoServer;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.FoodComponents;
 import net.minecraft.text.Text;
@@ -135,16 +137,16 @@ public enum BlockedAction {
         return unblockAdvancementsCount;
     }
 
-    public boolean isUnblocked() {
-        return AchieveToDoMod.currentAdvancementsCount >= unblockAdvancementsCount;
+    public boolean isUnblocked(PlayerEntity player) {
+        return AchieveToDo.getScore(player) >= unblockAdvancementsCount;
     }
 
     public Identifier buildAdvancementId() {
-        return new Identifier(AchieveToDoMod.MOD_ID, AdvancementRoot.ACTION.name().toLowerCase() + "/" + name().toLowerCase());
+        return new Identifier(AchieveToDo.ID, AdvancementRoot.ACTION.name().toLowerCase() + "/" + name().toLowerCase());
     }
 
-    public Text buildBlockedDescription() {
-        int leftAdvancementsCount = unblockAdvancementsCount - AchieveToDoMod.currentAdvancementsCount;
+    public Text buildBlockedDescription(PlayerEntity player) {
+        int leftAdvancementsCount = unblockAdvancementsCount - AchieveToDo.getScore(player);
         return Text.of(Text.translatable(description).getString() + Text.translatable("unblock.amount").getString() + leftAdvancementsCount)
                 .copy()
                 .formatted(Formatting.YELLOW);

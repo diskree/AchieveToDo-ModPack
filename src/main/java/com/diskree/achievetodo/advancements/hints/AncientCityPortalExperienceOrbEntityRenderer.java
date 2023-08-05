@@ -1,6 +1,7 @@
-package com.diskree.achievetodo.ancient_city_portal;
+package com.diskree.achievetodo.advancements.hints;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
@@ -16,7 +17,7 @@ import org.joml.Matrix4f;
 
 public class AncientCityPortalExperienceOrbEntityRenderer extends EntityRenderer<AncientCityPortalExperienceOrbEntity> {
 
-    private static final Identifier TEXTURE = new Identifier(AchieveToDoMod.MOD_ID, "textures/entity/ancient_city_portal_experience_orb.png");
+    private static final Identifier TEXTURE = new Identifier(AchieveToDo.ID, "textures/entity/ancient_city_portal_experience_orb.png");
     private static final RenderLayer LAYER = RenderLayer.getItemEntityTranslucentCull(TEXTURE);
 
     public AncientCityPortalExperienceOrbEntityRenderer(EntityRendererFactory.Context context) {

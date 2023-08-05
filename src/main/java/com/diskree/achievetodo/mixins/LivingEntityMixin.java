@@ -1,6 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.RaiderEntityImpl;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -17,7 +18,7 @@ public class LivingEntityMixin {
     private void getLootTableInject(CallbackInfoReturnable<Identifier> cir) {
         LivingEntity self = (LivingEntity) (Object) this;
         if (self.getType() == EntityType.EVOKER && self instanceof RaiderEntityImpl && ((RaiderEntityImpl) self).achieveToDo$isSpawnedAsRaider()) {
-            cir.setReturnValue(AchieveToDoMod.EVOKER_NO_TOTEM_OF_UNDYING_LOOT_TABLE_ID);
+            cir.setReturnValue(AchieveToDo.EVOKER_NO_TOTEM_OF_UNDYING_LOOT_TABLE_ID);
         }
     }
 }

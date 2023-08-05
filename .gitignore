@@ -3,3 +3,4 @@
 build/
 run/
 src/main/java/com/diskree/achievetodo/BuildConfig.java
+/server/

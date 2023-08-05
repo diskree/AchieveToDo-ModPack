@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.ancient_city_portal.AncientCityPortalEntity;
+import com.diskree.achievetodo.advancements.hints.AncientCityPortalEntity;
 import net.minecraft.block.entity.JukeboxBlockEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;

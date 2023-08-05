@@ -1,6 +1,6 @@
-package com.diskree.achievetodo.ancient_city_portal;
+package com.diskree.achievetodo.advancements.hints;
 
-import com.diskree.achievetodo.ClientPlayNetworkHandlerImpl;
+import com.diskree.achievetodo.client.ClientPlayNetworkHandlerImpl;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;

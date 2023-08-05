@@ -1,8 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -27,20 +25,17 @@ public class SlotMixin {
 
     @Inject(method = "insertStack(Lnet/minecraft/item/ItemStack;I)Lnet/minecraft/item/ItemStack;", at = @At("HEAD"), cancellable = true)
     public void insertStackInject(ItemStack stack, int count, CallbackInfoReturnable<ItemStack> cir) {
-        if (inventory instanceof PlayerInventory && id >= 5 && id <= 8 && stack != null && AchieveToDoMod.isEquipmentBlocked(stack.getItem())) {
+        if (inventory instanceof PlayerInventory playerInventory && id >= 5 && id <= 8 && stack != null && AchieveToDoServer.isEquipmentBlocked(playerInventory.player, stack.getItem())) {
             cir.setReturnValue(stack);
         }
     }
 
     @Inject(method = "canTakeItems", at = @At("HEAD"), cancellable = true)
     public void canTakeItemsInject(PlayerEntity playerEntity, CallbackInfoReturnable<Boolean> cir) {
-        if (inventory instanceof PlayerInventory && id >= 5 && id <= 8) {
-            ClientPlayerEntity player = MinecraftClient.getInstance().player;
-            if (player != null) {
-                ItemStack stack = player.playerScreenHandler.getCursorStack();
-                if (stack != null && AchieveToDoMod.isEquipmentBlocked(stack.getItem())) {
-                    cir.setReturnValue(false);
-                }
+        if (playerEntity != null && inventory instanceof PlayerInventory && id >= 5 && id <= 8) {
+            ItemStack stack = playerEntity.playerScreenHandler.getCursorStack();
+            if (stack != null && AchieveToDoServer.isEquipmentBlocked(playerEntity, stack.getItem())) {
+                cir.setReturnValue(false);
             }
         }
     }

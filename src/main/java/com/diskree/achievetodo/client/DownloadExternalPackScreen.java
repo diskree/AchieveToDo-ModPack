@@ -1,4 +1,4 @@
-package com.diskree.achievetodo;
+package com.diskree.achievetodo.client;
 
 import it.unimi.dsi.fastutil.booleans.BooleanConsumer;
 import net.minecraft.client.gui.screen.ConfirmScreen;
@@ -8,6 +8,7 @@ import net.minecraft.text.CommonTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Util;
+import org.quiltmc.loader.api.minecraft.ClientOnly;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+@ClientOnly
 public class DownloadExternalPackScreen extends ConfirmScreen {
 
     private final Screen parent;

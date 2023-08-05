@@ -1,6 +1,7 @@
-package com.diskree.achievetodo.ancient_city_portal;
+package com.diskree.achievetodo.advancements.hints;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MovementType;
@@ -22,7 +23,7 @@ public class AncientCityPortalExperienceOrbEntity extends Entity {
     private int inclineTicksCount;
 
     public AncientCityPortalExperienceOrbEntity(World world, double x, double y, double z, BlockPos portalTarget, BlockPos inclineTarget, int size) {
-        this(AchieveToDoMod.ANCIENT_CITY_PORTAL_EXPERIENCE_ORB, world);
+        this(AchieveToDo.ANCIENT_CITY_PORTAL_EXPERIENCE_ORB, world);
         this.size = size;
         this.portalTarget = portalTarget;
         this.inclineTarget = inclineTarget;

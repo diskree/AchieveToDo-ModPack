@@ -1,6 +1,7 @@
 package com.diskree.achievetodo.advancements;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementDisplay;
@@ -11,9 +12,11 @@ import net.minecraft.text.OrderedText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
+import org.quiltmc.loader.api.minecraft.ClientOnly;
 
 import java.util.List;
 
+@ClientOnly
 public class UnblockActionToast implements Toast {
 
     public final BlockedAction blockedAction;
@@ -24,7 +27,7 @@ public class UnblockActionToast implements Toast {
     public UnblockActionToast(Advancement advancement, BlockedAction blockedAction) {
         this.advancement = advancement;
         this.blockedAction = blockedAction;
-        TEXTURE = new Identifier(AchieveToDoMod.MOD_ID, "textures/gui/toasts_" + blockedAction.getActionType().name().toLowerCase() + ".png");
+        TEXTURE = new Identifier(AchieveToDo.ID, "textures/gui/toasts_" + blockedAction.getActionType().name().toLowerCase() + ".png");
     }
 
     @Override

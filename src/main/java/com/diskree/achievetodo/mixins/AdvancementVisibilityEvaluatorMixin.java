@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import it.unimi.dsi.fastutil.Stack;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementVisibilityEvaluator;
@@ -22,7 +22,7 @@ public abstract class AdvancementVisibilityEvaluatorMixin {
 
     @Inject(method = "method_48030", at = @At("HEAD"), cancellable = true)
     private static void calculateDisplayInject(Advancement advancement, Stack<AdvancementVisibilityEvaluator.C_bfuhkkvt> stack, Predicate<Advancement> predicate, AdvancementVisibilityEvaluator.C_laxhphom c_laxhphom, CallbackInfoReturnable<Boolean> cir) {
-        if (AchieveToDoMod.getBlockedActionFromAdvancement(advancement) != null) {
+        if (AchieveToDoServer.getBlockedActionFromAdvancement(advancement) != null) {
             stack.push(AdvancementVisibilityEvaluator.C_bfuhkkvt.SHOW);
             for (Advancement child : advancement.getChildren()) {
                 //noinspection ResultOfMethodCallIgnored

@@ -14,7 +14,7 @@
   },
   "parent": "achievetodo:action/root",
   "criteria": {
-    "action_using_iron_tools": {
+    "action_using_stone_tools": {
       "trigger": "minecraft:impossible"
     }
   }

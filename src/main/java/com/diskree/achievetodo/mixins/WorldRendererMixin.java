@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
-import com.diskree.achievetodo.ancient_city_portal.AncientCityPortalEntity;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.advancements.hints.AncientCityPortalEntity;
 import net.minecraft.client.render.WorldRenderer;
 import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.world.ClientWorld;
@@ -26,7 +26,7 @@ public class WorldRendererMixin {
     @Redirect(method = "playSong", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/sound/PositionedSoundInstance;record(Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/client/sound/PositionedSoundInstance;"))
     private PositionedSoundInstance processWorldEventRedirect(SoundEvent sound, Vec3d pos) {
         if (sound == SoundEvents.MUSIC_DISC_5 && pos != null && AncientCityPortalEntity.isJukebox(world, new BlockPos((int) pos.getX(), (int) pos.getY(), (int) pos.getZ()))) {
-            sound = AchieveToDoMod.MUSIC_DISC_5_ACTIVATOR;
+            sound = AchieveToDo.MUSIC_DISC_5_ACTIVATOR;
         }
         return PositionedSoundInstance.record(sound, Objects.requireNonNull(pos));
     }

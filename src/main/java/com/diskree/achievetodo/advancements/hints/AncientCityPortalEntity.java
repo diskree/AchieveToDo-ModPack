@@ -1,6 +1,7 @@
-package com.diskree.achievetodo.ancient_city_portal;
+package com.diskree.achievetodo.advancements.hints;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.ItemDisplayEntityImpl;
 import com.diskree.achievetodo.advancements.AdvancementGenerator;
 import com.diskree.achievetodo.advancements.AdvancementHint;
@@ -64,7 +65,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public AncientCityPortalEntity(EntityType<?> entityType, World world) {
         super(entityType, world);
-        this.jukeboxEventHandler = new DynamicGameEventListener<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalEntity.this, 0), AchieveToDoMod.JUKEBOX_PLAY.getRange()));
+        this.jukeboxEventHandler = new DynamicGameEventListener<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalEntity.this, 0), AchieveToDo.JUKEBOX_PLAY.getRange()));
     }
 
     @Nullable
@@ -132,7 +133,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         }
         if (!checkPlayerRadius()) {
             discharge();
-            AchieveToDoMod.grantHintsAdvancement("so_long_and_thanks_for_the_xp");
+            AchieveToDoServer.grantHintsAdvancement("so_long_and_thanks_for_the_xp");
             return isExperience;
         }
         if (isExperience) {
@@ -165,7 +166,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                     showAdvancementTab(advancementHint.tab());
                     showAdvancementHint(advancementHint.hint(), advancementHint.dropHint());
                     showAdvancement(advancementHint.advancement());
-                    AchieveToDoMod.grantHintsAdvancement("soul_energizer");
+                    AchieveToDoServer.grantHintsAdvancement("soul_energizer");
                     receivedHints++;
                     if (receivedHints >= HINTS_LIMIT) {
                         for (BlockPos pos : getPortalBlocks(true, true)) {
@@ -174,14 +175,14 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                             }
                             getWorld().setBlockState(pos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_BROKEN_PROPERTY, true));
                         }
-                        AchieveToDoMod.grantHintsAdvancement("nothing_lasts_forever");
+                        AchieveToDoServer.grantHintsAdvancement("nothing_lasts_forever");
                     }
                 } else {
                     ItemStack barrierItem = new ItemStack(Items.BARRIER);
                     showAdvancementTab(barrierItem);
                     showAdvancementHint(barrierItem, false);
                     showAdvancement(barrierItem);
-                    AchieveToDoMod.grantHintsAdvancement("no_new_updates");
+                    AchieveToDoServer.grantHintsAdvancement("no_new_updates");
                 }
             } else {
                 spawnExperienceTick = 3;
@@ -225,7 +226,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                     int experienceCount = player.totalExperience;
                     if (experienceCount < 10) {
                         player.damage(getWorld().getDamageSources().badRespawnPoint(playerPos), 1);
-                        AchieveToDoMod.grantHintsAdvancement("beethoven_mistake");
+                        AchieveToDoServer.grantHintsAdvancement("beethoven_mistake");
                     } else {
                         player.addExperience(-10);
                     }
@@ -248,7 +249,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public void showAdvancementTab(ItemStack tabItem) {
         BlockPos tabEntityPos = getBlockPos().offset(getHorizontalFacing().rotateYCounterclockwise(), 5);
-        List<AncientCityPortalTabEntity> tabEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_TAB, Box.of(tabEntityPos.ofCenter(), 1, 1, 1), (entity) -> true);
+        List<AncientCityPortalTabEntity> tabEntities = getWorld().getEntitiesByType(AchieveToDo.ANCIENT_CITY_PORTAL_TAB, Box.of(tabEntityPos.ofCenter(), 1, 1, 1), (entity) -> true);
         if (tabEntities != null && tabEntities.size() == 1) {
             AncientCityPortalTabEntity tabEntity = tabEntities.get(0);
             ((ItemDisplayEntityImpl) tabEntity).achieveToDo$publicSetStack(tabItem);
@@ -257,11 +258,11 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public void showAdvancementHint(ItemStack hintItem, boolean drop) {
         BlockPos hintEntityPos = getBlockPos().offset(getHorizontalFacing().rotateYClockwise(), 5);
-        List<AncientCityPortalPromptEntity> hintEntities = getWorld().getEntitiesByType(AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT, Box.of(hintEntityPos.ofCenter(), 1, 1, 1), (entity) -> true);
+        List<AncientCityPortalPromptEntity> hintEntities = getWorld().getEntitiesByType(AchieveToDo.ANCIENT_CITY_PORTAL_HINT, Box.of(hintEntityPos.ofCenter(), 1, 1, 1), (entity) -> true);
         if (hintEntities != null && hintEntities.size() == 1) {
             AncientCityPortalPromptEntity hintEntity = hintEntities.get(0);
             if (drop) {
-                ItemStack arrow = new ItemStack(AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM);
+                ItemStack arrow = new ItemStack(AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM);
                 NbtCompound nbt = new NbtCompound();
                 nbt.putInt("Damage", 47);
                 arrow.setNbt(nbt);
@@ -364,7 +365,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
             Pair<BlockPos, BlockPos> blocks = getNextActivationSpiralBlocks();
             if (blocks != null) {
-                BlockState state = AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK.getDefaultState().with(AncientCityPortalBlock.AXIS, getHorizontalFacing().rotateYClockwise().getAxis());
+                BlockState state = AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK.getDefaultState().with(AncientCityPortalBlock.AXIS, getHorizontalFacing().rotateYClockwise().getAxis());
                 getWorld().setBlockState(blocks.getLeft(), state);
                 getWorld().setBlockState(blocks.getRight(), state);
             }
@@ -381,7 +382,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                 }
             }
             if (isPortalActivated) {
-                AchieveToDoMod.grantHintsAdvancement("ancient_light");
+                AchieveToDoServer.grantHintsAdvancement("ancient_light");
             }
         } else {
             stopJukebox(jukeboxPos);
@@ -470,7 +471,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private boolean isPortal(BlockPos pos) {
         World world = getWorld();
-        return world != null && world.getBlockState(pos).isOf(AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK);
+        return world != null && world.getBlockState(pos).isOf(AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK);
     }
 
     private ArrayList<BlockPos> getPortalBlocks(boolean perimeter) {
@@ -622,11 +623,11 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
         @Override
         public boolean listen(ServerWorld world, GameEvent event, GameEvent.Context context, Vec3d pos) {
-            if (event == AchieveToDoMod.JUKEBOX_PLAY) {
+            if (event == AchieveToDo.JUKEBOX_PLAY) {
                 AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.fromPosition(pos), true);
                 return true;
             }
-            if (event == AchieveToDoMod.JUKEBOX_STOP_PLAY) {
+            if (event == AchieveToDo.JUKEBOX_STOP_PLAY) {
                 AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.fromPosition(pos), false);
                 return true;
             }

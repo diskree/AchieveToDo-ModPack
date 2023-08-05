@@ -1,6 +1,7 @@
-package com.diskree.achievetodo.ancient_city_portal;
+package com.diskree.achievetodo.advancements.hints;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
@@ -73,7 +74,7 @@ public class AncientCityPortalBlock extends Block {
             return;
         }
         if (entity instanceof AncientCityPortalExperienceOrbEntity || entity instanceof ItemEntity && ((ItemEntity) entity).getStack().isOf(Items.DRAGON_EGG)) {
-            AchieveToDoMod.grantHintsAdvancement("three_pointer");
+            AchieveToDoServer.grantHintsAdvancement("three_pointer");
             AncientCityPortalEntity portalEntity = AncientCityPortalEntity.findForBlock(world, pos);
             if (portalEntity != null && portalEntity.charge(entity instanceof AncientCityPortalExperienceOrbEntity)) {
                 entity.kill();
@@ -104,7 +105,7 @@ public class AncientCityPortalBlock extends Block {
                 d = (double) pos.getX() + 0.5 + 0.25 * (double) k;
                 g = random.nextFloat() * 2.0f * (float) k;
             }
-            world.addParticle(AchieveToDoMod.ANCIENT_CITY_PORTAL_PARTICLES, d, e, f, g, h, j);
+            world.addParticle(AchieveToDo.ANCIENT_CITY_PORTAL_PARTICLES, d, e, f, g, h, j);
         }
     }
 

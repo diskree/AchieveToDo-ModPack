@@ -1,6 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.data.server.tag.BlockTagsProvider;
 import net.minecraft.registry.HolderLookup;
 import net.minecraft.registry.tag.BlockTags;
@@ -15,6 +16,6 @@ public class VanillaBlockTagProviderMixin {
     @Inject(method = "configure", at = @At("HEAD"))
     public void configureInject(HolderLookup.Provider lookup, CallbackInfo ci) {
         BlockTagsProvider self = (BlockTagsProvider) (Object) this;
-        self.getOrCreateTagBuilder(BlockTags.DRAGON_IMMUNE).add(AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK, AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK);
+        self.getOrCreateTagBuilder(BlockTags.DRAGON_IMMUNE).add(AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK, AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK);
     }
 }

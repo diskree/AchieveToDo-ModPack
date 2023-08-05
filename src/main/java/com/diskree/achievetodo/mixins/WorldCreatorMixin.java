@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.WorldCreatorImpl;
+import com.diskree.achievetodo.client.WorldCreatorImpl;
 import net.minecraft.client.world.WorldCreator;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;

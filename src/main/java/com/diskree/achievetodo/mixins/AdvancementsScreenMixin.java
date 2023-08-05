@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.advancement.AdvancementsScreen;
@@ -45,32 +45,32 @@ public abstract class AdvancementsScreenMixin extends Screen {
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 252), require = 1)
     private int renderModifyWidth(int constant) {
-        return width - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2;
+        return width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 140), require = 1)
     private int renderModifyHeight(int constant) {
-        return height - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2;
+        return height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2;
     }
 
     @ModifyConstant(method = "mouseClicked", constant = @Constant(intValue = 252), require = 1)
     private int mouseClickedModifyWidth(int constant) {
-        return width - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2;
+        return width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2;
     }
 
     @ModifyConstant(method = "mouseClicked", constant = @Constant(intValue = 140), require = 1)
     private int mouseClickedModifyHeight(int constant) {
-        return height - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2;
+        return height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2;
     }
 
     @ModifyConstant(method = "drawAdvancementTree", constant = @Constant(intValue = 234), require = 1)
     private int drawAdvancementTreeModifyWidth(int constant) {
-        return width - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2;
+        return width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2;
     }
 
     @ModifyConstant(method = "drawAdvancementTree", constant = @Constant(intValue = 113), require = 1)
     private int drawAdvancementTreeModifyHeight(int constant) {
-        return height - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
     @Redirect(method = "drawWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
@@ -81,8 +81,8 @@ public abstract class AdvancementsScreenMixin extends Screen {
     public void drawWindowCustom(GuiGraphics graphics, int x, int y, CallbackInfo ci) {
         int screenWidth = 252;
         int screenHeight = 140;
-        int actualWidth = width - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN - x;
-        int actualHeight = width - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN - y;
+        int actualWidth = width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN - x;
+        int actualHeight = width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN - y;
         int halfOfWidth = screenWidth / 2;
         int halfOfHeight = screenHeight / 2;
         int clipTopX = (int) (Math.max(0, screenWidth - actualWidth) / 2. + 0.5);
@@ -90,8 +90,8 @@ public abstract class AdvancementsScreenMixin extends Screen {
         int clipTopY = (int) (Math.max(0, screenHeight - actualHeight) / 2. + 0.5);
         int clipLeftY = (int) (Math.max(0, screenHeight - actualHeight) / 2.);
 
-        int rightX = width - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN - halfOfWidth + clipTopX;
-        int bottomY = height - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN - halfOfHeight + clipTopY;
+        int rightX = width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN - halfOfWidth + clipTopX;
+        int bottomY = height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN - halfOfHeight + clipTopY;
 
         graphics.drawTexture(WINDOW_TEXTURE, x, y, 0, 0, halfOfWidth - clipLeftX, halfOfHeight - clipLeftY);
         graphics.drawTexture(WINDOW_TEXTURE, rightX, y, halfOfWidth + clipTopX, 0, halfOfWidth - clipTopX, halfOfHeight - clipLeftY);

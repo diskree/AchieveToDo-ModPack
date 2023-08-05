@@ -1,6 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
@@ -16,7 +17,7 @@ public class FlowableFluidMixin {
 
     @Inject(method = "canFill", at = @At("HEAD"), cancellable = true)
     public void canFillInject(BlockView world, BlockPos pos, BlockState state, Fluid fluid, CallbackInfoReturnable<Boolean> cir) {
-        if (state.isOf(AchieveToDoMod.ANCIENT_CITY_PORTAL_BLOCK)) {
+        if (state.isOf(AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK)) {
             cir.setReturnValue(false);
         }
     }

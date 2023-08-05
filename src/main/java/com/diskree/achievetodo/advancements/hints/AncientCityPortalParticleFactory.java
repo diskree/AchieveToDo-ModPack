@@ -1,4 +1,4 @@
-package com.diskree.achievetodo.ancient_city_portal;
+package com.diskree.achievetodo.advancements.hints;
 
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleFactory;

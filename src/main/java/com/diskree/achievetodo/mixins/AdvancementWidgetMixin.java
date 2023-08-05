@@ -1,9 +1,11 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementProgress;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.advancement.AdvancementTab;
 import net.minecraft.client.gui.screen.advancement.AdvancementWidget;
 import net.minecraft.item.ItemStack;
@@ -29,16 +31,18 @@ public abstract class AdvancementWidgetMixin {
     @Final
     private AdvancementTab tab;
 
+    @Shadow @Final private MinecraftClient client;
+
     @Unique
     private boolean isActionLocked() {
-        BlockedAction action = AchieveToDoMod.getBlockedActionFromAdvancement(advancement);
-        return action != null && !action.isUnblocked() && (progress == null || !progress.isDone());
+        BlockedAction action = AchieveToDoServer.getBlockedActionFromAdvancement(advancement);
+        return action != null && !action.isUnblocked(client.player) && (progress == null || !progress.isDone());
     }
 
     @ModifyArg(method = "renderWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawItemWithoutEntity(Lnet/minecraft/item/ItemStack;II)V"), index = 0)
     private ItemStack renderWidgetsModifyIcon(ItemStack stack) {
         if (isActionLocked()) {
-            return new ItemStack(AchieveToDoMod.LOCKED_ACTION_ITEM);
+            return new ItemStack(AchieveToDo.LOCKED_ACTION_ITEM);
         }
         return stack;
     }
@@ -50,6 +54,6 @@ public abstract class AdvancementWidgetMixin {
 
     @ModifyConstant(method = "drawTooltip", constant = @Constant(intValue = 113), require = 1)
     public int drawTooltipModifyHeight(int constant) {
-        return tab.getScreen().height - AchieveToDoMod.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return tab.getScreen().height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 }

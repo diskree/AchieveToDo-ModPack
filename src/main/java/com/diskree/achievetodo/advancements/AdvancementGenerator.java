@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.advancements;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementDisplay;
 import net.minecraft.advancement.AdvancementProgress;
@@ -228,7 +228,7 @@ public class AdvancementGenerator {
                 if (incompleteCriteria.contains("first_line")) {
                     hintItem = Items.ENCHANTED_BOOK;
                 } else if (incompleteCriteria.contains("second_line")) {
-                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                    hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                     nbt.putInt("Damage", 60);
                 } else if (incompleteCriteria.contains("third_line")) {
                     hintItem = Items.NAME_TAG;
@@ -239,10 +239,10 @@ public class AdvancementGenerator {
                 } else if (incompleteCriteria.contains("sixth_line")) {
                     hintItem = Items.EGG;
                 } else if (incompleteCriteria.contains("seventh_line")) {
-                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                    hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                     nbt.putInt("Damage", 53);
                 } else if (incompleteCriteria.contains("eighth_line")) {
-                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                    hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                     nbt.putInt("Damage", 92);
                 } else if (incompleteCriteria.contains("ninth_line")) {
                     hintItem = Items.OAK_BOAT;
@@ -438,7 +438,7 @@ public class AdvancementGenerator {
                 if (criterion.equals("cod") || criterion.equals("salmon") || criterion.equals("tropical_fish") || criterion.equals("pufferfish") || criterion.equals("axolotl") || criterion.equals("tadpole")) {
                     criterion += "_bucket";
                 } else {
-                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                    hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                     nbt.putInt("Damage", switch (criterion) {
                         case "bat" -> 39;
                         case "chicken" -> 40;
@@ -515,7 +515,7 @@ public class AdvancementGenerator {
                 }
             }
             case "blazeandcave:animal/birdkeeper" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "red" -> 33;
                     case "blue" -> 34;
@@ -526,7 +526,7 @@ public class AdvancementGenerator {
                 });
             }
             case "blazeandcave:animal/bunny_lover" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "brown" -> 28;
                     case "white" -> 31;
@@ -538,7 +538,7 @@ public class AdvancementGenerator {
                 });
             }
             case "blazeandcave:animal/llama_llama_duck_king" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "creamy" -> 24;
                     case "white" -> 26;
@@ -548,7 +548,7 @@ public class AdvancementGenerator {
                 });
             }
             case "blazeandcave:animal/master_farrier" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "white_none" -> 82;
                     case "creamy_none" -> 102;
@@ -589,7 +589,7 @@ public class AdvancementGenerator {
                 });
             }
             case "blazeandcave:biomes/pandamonium" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "normal" -> 12;
                     case "aggressive" -> 13;
@@ -602,7 +602,7 @@ public class AdvancementGenerator {
                 });
             }
             case "minecraft:husbandry/complete_catalogue" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "minecraft:black" -> 1;
                     case "minecraft:tabby" -> 2;
@@ -619,7 +619,7 @@ public class AdvancementGenerator {
                 });
             }
             case "minecraft:husbandry/leash_all_frog_variants" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "minecraft:temperate" -> 21;
                     case "minecraft:warm" -> 22;
@@ -634,7 +634,7 @@ public class AdvancementGenerator {
                     "blazeandcave:challenges/global_vaccination",
                     "blazeandcave:challenges/stockbroker",
                     "blazeandcave:potion/mad_scientist" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "farmer", "farmer_plains" -> 136;
                     case "fisherman", "fisherman_plains" -> 137;
@@ -758,7 +758,7 @@ public class AdvancementGenerator {
                     nbtList.add(EnchantmentHelper.createNbt(new Identifier(criterion), 1));
                     nbt.put(EnchantedBookItem.STORED_ENCHANTMENTS_KEY, nbtList);
                 } else {
-                    hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                    hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                     nbt.putInt("Damage", switch (criterion) {
                         case "protection1" -> 269;
                         case "protection2" -> 270;
@@ -870,7 +870,7 @@ public class AdvancementGenerator {
             }
             case "blazeandcave:potion/a_much_more_doable_challenge",
                     "blazeandcave:potion/gas_bomb" -> {
-                hintItem = AchieveToDoMod.ANCIENT_CITY_PORTAL_HINT_ITEM;
+                hintItem = AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM;
                 nbt.putInt("Damage", switch (criterion) {
                     case "speed" -> 241;
                     case "slowness" -> 242;
@@ -982,7 +982,7 @@ public class AdvancementGenerator {
             if (display == null || display.isHidden()) {
                 continue;
             }
-            if (namespace.equals(AchieveToDoMod.MOD_ID)) {
+            if (namespace.equals(AchieveToDo.ID)) {
                 continue;
             }
             if (name.equals("root")) {

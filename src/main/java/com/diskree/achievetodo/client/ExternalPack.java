@@ -1,7 +1,9 @@
-package com.diskree.achievetodo;
+package com.diskree.achievetodo.client;
 
 import net.minecraft.util.Formatting;
+import org.quiltmc.loader.api.minecraft.ClientOnly;
 
+@ClientOnly
 public enum ExternalPack {
     BACAP(
             "BlazeandCave's Advancements Pack",

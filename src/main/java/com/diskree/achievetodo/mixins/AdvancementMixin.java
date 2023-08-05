@@ -1,6 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.util.Identifier;
@@ -29,7 +30,7 @@ public class AdvancementMixin {
 
     @Inject(method = "getRequirementCount", at = @At("HEAD"), cancellable = true)
     public void getRequirementCountInject(CallbackInfoReturnable<Integer> cir) {
-        BlockedAction action = AchieveToDoMod.getBlockedActionFromAdvancement((Advancement) (Object) this);
+        BlockedAction action = AchieveToDoServer.getBlockedActionFromAdvancement((Advancement) (Object) this);
         if (action != null) {
             cir.setReturnValue(action.getUnblockAdvancementsCount());
         }
@@ -37,7 +38,7 @@ public class AdvancementMixin {
 
     @Inject(method = "getChildren", at = @At("HEAD"), cancellable = true)
     public void getChildrenInject(CallbackInfoReturnable<Iterable<Advancement>> cir) {
-        if (id.getNamespace().equals(AchieveToDoMod.MOD_ID) && id.getPath().endsWith("/root")) {
+        if (id.getNamespace().equals(AchieveToDo.ID) && id.getPath().endsWith("/root")) {
             List<String> order = new ArrayList<>(Arrays.asList(
                     "action/eat_salmon",
                     "action/eat_rabbit",

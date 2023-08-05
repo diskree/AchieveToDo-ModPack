@@ -1,7 +1,12 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.*;
+import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.advancements.CreateWorldAchieveToDoTab;
+import com.diskree.achievetodo.client.CreateWorldScreenImpl;
+import com.diskree.achievetodo.client.DownloadExternalPackScreen;
+import com.diskree.achievetodo.client.ExternalPack;
+import com.diskree.achievetodo.client.WorldCreatorImpl;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
@@ -151,42 +156,42 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
             }
             getScannedPack(worldCreator.getContext().dataConfiguration());
             if (packManager != null) {
-                packManager.enablePackProfile(AchieveToDoMod.BACAP_DATA_PACK);
+                packManager.enablePackProfile(AchieveToDo.BACAP_DATA_PACK);
                 if (isHardcoreEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_HARDCORE_DATA_PACK);
+                    packManager.enablePackProfile(AchieveToDo.BACAP_HARDCORE_DATA_PACK);
                 }
                 if (isNullscapeEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_NULLSCAPE_DATA_PACK);
+                    packManager.enablePackProfile(AchieveToDo.BACAP_NULLSCAPE_DATA_PACK);
                 }
                 if (isAmplifiedNetherEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_AMPLIFIED_NETHER_DATA_PACK);
+                    packManager.enablePackProfile(AchieveToDo.BACAP_AMPLIFIED_NETHER_DATA_PACK);
                 }
                 if (isTerralithEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_TERRALITH_DATA_PACK);
+                    packManager.enablePackProfile(AchieveToDo.BACAP_TERRALITH_DATA_PACK);
                 }
 
                 if (isNullscapeEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.NULLSCAPE_DATA_PACK);
+                    packManager.enablePackProfile(AchieveToDo.NULLSCAPE_DATA_PACK);
                 }
                 if (isAmplifiedNetherEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.AMPLIFIED_NETHER_DATA_PACK);
+                    packManager.enablePackProfile(AchieveToDo.AMPLIFIED_NETHER_DATA_PACK);
                 }
                 if (isTerralithEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.TERRALITH_DATA_PACK);
+                    packManager.enablePackProfile(AchieveToDo.TERRALITH_DATA_PACK);
                 }
 
-                packManager.enablePackProfile(AchieveToDoMod.BACAP_OVERRIDE_DATA_PACK);
+                packManager.enablePackProfile(AchieveToDo.BACAP_OVERRIDE_DATA_PACK);
                 if (isHardcoreEnabled) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_OVERRIDE_HARDCORE_DATA_PACK);
+                    packManager.enablePackProfile(AchieveToDo.BACAP_OVERRIDE_HARDCORE_DATA_PACK);
                 }
                 if (worldCreatorImpl.achieveToDo$isItemRewardsEnabled()) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_REWARDS_ITEM_DATA_PACK_NAME);
+                    packManager.enablePackProfile(AchieveToDo.BACAP_REWARDS_ITEM_DATA_PACK_NAME);
                 }
                 if (worldCreatorImpl.achieveToDo$isExperienceRewardsEnabled()) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME);
+                    packManager.enablePackProfile(AchieveToDo.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME);
                 }
                 if (worldCreatorImpl.achieveToDo$isTrophyRewardsEnabled()) {
-                    packManager.enablePackProfile(AchieveToDoMod.BACAP_REWARDS_TROPHY_DATA_PACK_NAME);
+                    packManager.enablePackProfile(AchieveToDo.BACAP_REWARDS_TROPHY_DATA_PACK_NAME);
                 }
 
                 isWaitingDatapacks = true;

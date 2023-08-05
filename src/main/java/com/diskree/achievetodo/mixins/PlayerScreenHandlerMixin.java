@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDoMod;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.PlayerScreenHandler;
@@ -19,7 +19,7 @@ public abstract class PlayerScreenHandlerMixin {
         Slot slot2 = ((ScreenHandler) (Object) this).slots.get(slot);
         if (slot2.hasStack()) {
             ItemStack stack = slot2.getStack();
-            if (stack != null && AchieveToDoMod.isEquipmentBlocked(stack.getItem())) {
+            if (stack != null && AchieveToDoServer.isEquipmentBlocked(player, stack.getItem())) {
                 cir.setReturnValue(ItemStack.EMPTY);
             }
         }

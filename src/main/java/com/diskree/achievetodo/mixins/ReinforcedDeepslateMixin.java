@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.ancient_city_portal.AncientCityPortalEntity;
+import com.diskree.achievetodo.advancements.hints.AncientCityPortalEntity;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

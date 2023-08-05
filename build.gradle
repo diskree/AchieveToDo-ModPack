@@ -1,21 +1,29 @@
 plugins {
     id 'maven-publish'
     alias libs.plugins.quilt.loom
+    alias libs.plugins.quilt.flower
 }
 
-group = project.maven_group
-base.archivesName = project.mod_id
+base.archivesName = project.archives_base_name
 version = "$project.version+${libs.versions.minecraft.get()}"
+group = project.maven_group
+
+repositories {
+    mavenCentral()
+}
 
 dependencies {
     minecraft libs.minecraft
+
     mappings variantOf(libs.quilt.mappings) { classifier 'intermediary-v2' }
+
     modImplementation libs.quilt.loader
     modImplementation libs.quilted.fabric.api
 }
 
 processResources {
     inputs.property 'version', version
+
     filesMatching('quilt.mod.json') {
         expand 'version': version
     }
@@ -40,9 +48,11 @@ tasks.register('buildRelease', GradleBuild) {
     tasks = ['build']
     startParameter.projectProperties = ['debug': 'false']
 }
+
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
+
     withSourcesJar()
 }
 
@@ -52,6 +62,7 @@ jar {
     }
     compileJava.dependsOn(generateBuildConfig)
 }
+
 loom {
     accessWidenerPath.set(file("src/main/resources/achievetodo.accesswidener"))
 }

@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.advancements;
 
-import com.diskree.achievetodo.WorldCreatorImpl;
+import com.diskree.achievetodo.client.WorldCreatorImpl;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 import net.minecraft.client.gui.screen.world.SwitchGrid;
 import net.minecraft.client.gui.tab.GridWidgetTab;

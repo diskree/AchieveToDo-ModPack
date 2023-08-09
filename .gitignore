@@ -1,6 +1,6 @@
 .gradle/
 .idea/
 build/
-run/
-src/main/java/com/diskree/achievetodo/BuildConfig.java
 /server/
+/client/
+src/main/java/com/diskree/achievetodo/BuildConfig.java

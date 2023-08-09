@@ -1,4 +1,4 @@
-package com.diskree.achievetodo.mixins;
+package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.advancements.AdvancementRoot;

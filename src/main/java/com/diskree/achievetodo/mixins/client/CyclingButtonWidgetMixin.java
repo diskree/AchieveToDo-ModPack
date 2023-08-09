@@ -1,4 +1,4 @@
-package com.diskree.achievetodo.mixins;
+package com.diskree.achievetodo.mixins.client;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.gui.widget.CyclingButtonWidget;

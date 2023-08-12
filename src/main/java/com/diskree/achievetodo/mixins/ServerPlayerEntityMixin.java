@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.BlockedAction;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.entity.Entity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;

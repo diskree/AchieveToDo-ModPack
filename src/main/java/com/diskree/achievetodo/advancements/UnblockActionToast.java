@@ -1,7 +1,6 @@
 package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.BlockedAction;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementDisplay;

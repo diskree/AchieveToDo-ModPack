@@ -1,10 +1,10 @@
 package com.diskree.achievetodo.advancements.hints;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.ItemDisplayEntityImpl;
 import com.diskree.achievetodo.advancements.AdvancementGenerator;
 import com.diskree.achievetodo.advancements.AdvancementHint;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;

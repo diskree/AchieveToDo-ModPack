@@ -1,7 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.RaiderEntityImpl;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;

@@ -1,7 +1,6 @@
 package com.diskree.achievetodo;
 
 import com.diskree.achievetodo.advancements.AdvancementRoot;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.FoodComponents;

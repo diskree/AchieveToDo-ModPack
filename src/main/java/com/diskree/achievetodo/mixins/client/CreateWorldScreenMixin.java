@@ -6,7 +6,6 @@ import com.diskree.achievetodo.client.CreateWorldScreenImpl;
 import com.diskree.achievetodo.client.DownloadExternalPackScreen;
 import com.diskree.achievetodo.client.ExternalPack;
 import com.diskree.achievetodo.client.WorldCreatorImpl;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
@@ -38,6 +37,14 @@ import java.util.function.Consumer;
 @Mixin(CreateWorldScreen.class)
 public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
 
+    @Shadow
+    @Final
+    WorldCreator worldCreator;
+    @Unique
+    private boolean isWaitingDatapacks;
+    @Shadow
+    private @Nullable ResourcePackManager packManager;
+
     @Override
     public boolean achieveToDo$datapacksLoaded() {
         if (isWaitingDatapacks) {
@@ -47,16 +54,6 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
         }
         return false;
     }
-
-    @Shadow
-    @Final
-    WorldCreator worldCreator;
-
-    @Unique
-    private boolean isWaitingDatapacks;
-
-    @Shadow
-    private @Nullable ResourcePackManager packManager;
 
     @Shadow
     protected abstract void createLevel();

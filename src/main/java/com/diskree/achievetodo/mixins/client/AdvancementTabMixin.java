@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins.client;
 
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.advancements.AdvancementRoot;
+import com.diskree.achievetodo.client.AchieveToDoClient;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.advancement.AdvancementTab;
@@ -25,7 +25,7 @@ import java.util.Map;
 public class AdvancementTabMixin {
 
     @Unique
-    private static Map<AdvancementTabType, List<AdvancementRoot>> tabLocations  = new HashMap<>() {{
+    private static Map<AdvancementTabType, List<AdvancementRoot>> tabLocations = new HashMap<>() {{
         put(AdvancementTabType.LEFT, List.of(AdvancementRoot.BIOMES, AdvancementRoot.ADVENTURE, AdvancementRoot.WEAPONRY, AdvancementRoot.HUSBANDRY, AdvancementRoot.MONSTERS));
         put(AdvancementTabType.ABOVE, List.of(AdvancementRoot.MINING, AdvancementRoot.BUILDING, AdvancementRoot.FARMING, AdvancementRoot.NETHER, AdvancementRoot.END));
         put(AdvancementTabType.RIGHT, List.of(AdvancementRoot.ACTION, AdvancementRoot.STATISTICS, AdvancementRoot.BACAP));
@@ -68,51 +68,51 @@ public class AdvancementTabMixin {
 
     @ModifyConstant(method = "move", constant = @Constant(intValue = 234), require = 2)
     private int moveModifyWidth(int orig) {
-        return screen.width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
+        return screen.width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
     }
 
     @ModifyConstant(method = "move", constant = @Constant(intValue = 113), require = 2)
     private int moveModifyHeight(int orig) {
-        return screen.height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return screen.height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
     @ModifyConstant(method = "drawWidgetTooltip", constant = @Constant(intValue = 234), require = 2)
     private int drawWidgetTooltipModifyWidth(int orig) {
-        return screen.width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
+        return screen.width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
     }
 
     @ModifyConstant(method = "drawWidgetTooltip", constant = @Constant(intValue = 113), require = 2)
     private int drawWidgetTooltipModifyHeight(int orig) {
-        return screen.height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return screen.height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 234), require = 1)
     private int renderModifyWidth(int orig) {
-        return screen.width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
+        return screen.width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 113), require = 1)
     private int renderModifyHeight(int orig) {
-        return screen.height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return screen.height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 117), require = 1)
     private int renderModifyOriginX(int orig) {
-        return screen.width / 2 - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN - 2 * 9 / 2;
+        return screen.width / 2 - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - 2 * 9 / 2;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 56), require = 1)
     private int renderModifyOriginY(int orig) {
-        return screen.height / 2 - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN - 3 * 9 / 2;
+        return screen.height / 2 - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - 3 * 9 / 2;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 15), require = 1)
     private int renderModifyTextureX(int orig) {
-        return (screen.width - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2) / 16 + 1;
+        return (screen.width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2) / 16 + 1;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 8), require = 1)
     private int renderModifyTextureY(int orig) {
-        return (screen.height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2) / 16 + 1;
+        return (screen.height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2) / 16 + 1;
     }
 }

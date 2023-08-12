@@ -1,7 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.data.server.tag.BlockTagsProvider;
 import net.minecraft.registry.HolderLookup;
 import net.minecraft.registry.tag.BlockTags;

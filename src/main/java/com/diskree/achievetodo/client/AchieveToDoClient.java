@@ -22,6 +22,8 @@ import org.quiltmc.qsl.networking.api.client.ClientPlayNetworking;
 @ClientOnly
 public class AchieveToDoClient implements ClientModInitializer {
 
+    public static final int ADVANCEMENTS_SCREEN_MARGIN = 30;
+
     @Override
     public void onInitializeClient(ModContainer mod) {
         BlockRenderLayerMap.put(RenderLayer.getTranslucent(), AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK);

@@ -91,24 +91,20 @@ public class AchieveToDo implements ModInitializer {
 
     public static final Identifier JUKEBOX_PLAY_EVENT_ID = new Identifier(ID, "jukebox_play");
     public static final GameEvent JUKEBOX_PLAY = new GameEvent(JUKEBOX_PLAY_EVENT_ID.toString(), AncientCityPortalEntity.RITUAL_RADIUS);
-
+    public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
+            .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
+            .maxChunkTrackingRange(10)
+            .trackingTickInterval(1)
+            .build();
     public static final Identifier JUKEBOX_STOP_PLAY_EVENT_ID = new Identifier(ID, "jukebox_stop_play");
     public static final GameEvent JUKEBOX_STOP_PLAY = new GameEvent(JUKEBOX_STOP_PLAY_EVENT_ID.toString(), AncientCityPortalEntity.RITUAL_RADIUS);
-
     public static final Identifier ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = new Identifier(ID, "ancient_city_portal_tab_entity");
     public static final EntityType<AncientCityPortalTabEntity> ANCIENT_CITY_PORTAL_TAB = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalTabEntity::new)
             .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
             .maxChunkTrackingRange(10)
             .trackingTickInterval(1)
             .build();
-
     public static final Identifier ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID = new Identifier(ID, "ancient_city_portal_advancement_entity");
-    public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
-            .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
-            .maxChunkTrackingRange(10)
-            .trackingTickInterval(1)
-            .build();
-
     public static final Identifier ANCIENT_CITY_PORTAL_HINT_ENTITY_ID = new Identifier(ID, "ancient_city_portal_prompt_entity");
     public static final EntityType<AncientCityPortalPromptEntity> ANCIENT_CITY_PORTAL_HINT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalPromptEntity::new)
             .setDimensions(EntityDimensions.changing(0.0f, 0.0f))

@@ -1,8 +1,7 @@
 package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.server.AchieveToDoServer;
-import com.diskree.achievetodo.BlockedAction;
+import com.diskree.achievetodo.client.AchieveToDoClient;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.client.MinecraftClient;
@@ -31,12 +30,15 @@ public abstract class AdvancementWidgetMixin {
     @Final
     private AdvancementTab tab;
 
-    @Shadow @Final private MinecraftClient client;
+    @Shadow
+    @Final
+    private MinecraftClient client;
 
     @Unique
     private boolean isActionLocked() {
-        BlockedAction action = AchieveToDoServer.getBlockedActionFromAdvancement(advancement);
-        return action != null && !action.isUnblocked(client.player) && (progress == null || !progress.isDone());
+//        BlockedAction action = AchieveToDoServer.getBlockedActionFromAdvancement(advancement);
+//        return action != null && !action.isUnblocked(client.player) && (progress == null || !progress.isDone());
+        return false;
     }
 
     @ModifyArg(method = "renderWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawItemWithoutEntity(Lnet/minecraft/item/ItemStack;II)V"), index = 0)
@@ -54,6 +56,6 @@ public abstract class AdvancementWidgetMixin {
 
     @ModifyConstant(method = "drawTooltip", constant = @Constant(intValue = 113), require = 1)
     public int drawTooltipModifyHeight(int constant) {
-        return tab.getScreen().height - AchieveToDoServer.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return tab.getScreen().height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 }

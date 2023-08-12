@@ -19,15 +19,10 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.VillagerProfession;
 import org.quiltmc.loader.api.ModContainer;
-import org.quiltmc.loader.api.QuiltLoader;
 import org.quiltmc.qsl.base.api.entrypoint.server.DedicatedServerModInitializer;
 import org.quiltmc.qsl.command.api.CommandRegistrationCallback;
-import org.quiltmc.qsl.resource.loader.api.ResourceLoader;
-import org.quiltmc.qsl.resource.loader.api.ResourcePackActivationType;
 
 public class AchieveToDoServer implements DedicatedServerModInitializer {
-
-    public static final int ADVANCEMENTS_SCREEN_MARGIN = 30;
 
     public static void grantHintsAdvancement(String pathName) {
         IntegratedServer server = MinecraftClient.getInstance().getServer();
@@ -74,9 +69,6 @@ public class AchieveToDoServer implements DedicatedServerModInitializer {
         if (player != null) {
             player.sendMessage(action.buildBlockedDescription(player), true);
         }
-        if (player instanceof ServerPlayerEntity serverPlayerEntity) {
-            grantActionAdvancement(serverPlayerEntity, action);
-        }
         return true;
     }
 
@@ -122,6 +114,22 @@ public class AchieveToDoServer implements DedicatedServerModInitializer {
         }
     }
 
+    public static boolean isToolBlocked(PlayerEntity player, Hand hand) {
+        ItemStack stack = hand == Hand.MAIN_HAND ? player.getMainHandStack() : player.getOffHandStack();
+        if (!stack.isDamageable()) {
+            return false;
+        }
+        Item item = stack.getItem();
+        if (item instanceof ToolItem) {
+            ToolMaterial toolMaterial = ((ToolItem) item).getMaterial();
+            return toolMaterial == ToolMaterials.STONE && isActionBlocked(player, BlockedAction.USING_STONE_TOOLS) ||
+                    toolMaterial == ToolMaterials.IRON && isActionBlocked(player, BlockedAction.USING_IRON_TOOLS) ||
+                    toolMaterial == ToolMaterials.DIAMOND && isActionBlocked(player, BlockedAction.USING_DIAMOND_TOOLS) ||
+                    toolMaterial == ToolMaterials.NETHERITE && isActionBlocked(player, BlockedAction.USING_NETHERITE_TOOLS);
+        }
+        return false;
+    }
+
     @Override
     public void onInitializeServer(ModContainer mod) {
         CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> dispatcher.register(CommandManager.literal("random").executes((context -> {
@@ -145,21 +153,5 @@ public class AchieveToDoServer implements DedicatedServerModInitializer {
             }
             return Command.SINGLE_SUCCESS;
         }))));
-    }
-
-    public static boolean isToolBlocked(PlayerEntity player, Hand hand) {
-        ItemStack stack = hand == Hand.MAIN_HAND ? player.getMainHandStack() : player.getOffHandStack();
-        if (!stack.isDamageable()) {
-            return false;
-        }
-        Item item = stack.getItem();
-        if (item instanceof ToolItem) {
-            ToolMaterial toolMaterial = ((ToolItem) item).getMaterial();
-            return toolMaterial == ToolMaterials.STONE && isActionBlocked(player, BlockedAction.USING_STONE_TOOLS) ||
-                    toolMaterial == ToolMaterials.IRON && isActionBlocked(player, BlockedAction.USING_IRON_TOOLS) ||
-                    toolMaterial == ToolMaterials.DIAMOND && isActionBlocked(player, BlockedAction.USING_DIAMOND_TOOLS) ||
-                    toolMaterial == ToolMaterials.NETHERITE && isActionBlocked(player, BlockedAction.USING_NETHERITE_TOOLS);
-        }
-        return false;
     }
 }

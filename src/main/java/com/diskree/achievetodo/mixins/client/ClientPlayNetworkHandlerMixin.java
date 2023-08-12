@@ -1,8 +1,8 @@
 package com.diskree.achievetodo.mixins.client;
 
-import com.diskree.achievetodo.client.ClientPlayNetworkHandlerImpl;
 import com.diskree.achievetodo.advancements.hints.AncientCityPortalExperienceOrbEntity;
 import com.diskree.achievetodo.advancements.hints.AncientCityPortalExperienceOrbSpawnS2CPacket;
+import com.diskree.achievetodo.client.ClientPlayNetworkHandlerImpl;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.client.world.ClientWorld;

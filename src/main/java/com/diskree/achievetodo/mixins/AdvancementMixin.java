@@ -1,8 +1,8 @@
 package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import com.diskree.achievetodo.BlockedAction;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Final;

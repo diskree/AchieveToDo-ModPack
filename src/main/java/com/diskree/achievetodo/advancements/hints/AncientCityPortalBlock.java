@@ -8,6 +8,7 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
@@ -73,11 +74,19 @@ public class AncientCityPortalBlock extends Block {
         if (world.isClient || entity == null || entity.isRemoved()) {
             return;
         }
-        if (entity instanceof AncientCityPortalExperienceOrbEntity || entity instanceof ItemEntity && ((ItemEntity) entity).getStack().isOf(Items.DRAGON_EGG)) {
-            AchieveToDoServer.grantHintsAdvancement("three_pointer");
+        if (entity instanceof ItemEntity dragonEgg && dragonEgg.getStack().isOf(Items.DRAGON_EGG)) {
+            Entity owner = dragonEgg.getOwner();
+            if (owner instanceof ServerPlayerEntity player) {
+                AncientCityPortalEntity portalEntity = AncientCityPortalEntity.findForBlock(world, pos);
+                if (portalEntity != null && portalEntity.grantDragonEgg(player)) {
+                    AchieveToDoServer.grantHintsAdvancement(player, "three_pointer");
+                    dragonEgg.kill();
+                }
+            }
+        } else if (entity instanceof AncientCityPortalExperienceOrbEntity xpOrb) {
             AncientCityPortalEntity portalEntity = AncientCityPortalEntity.findForBlock(world, pos);
-            if (portalEntity != null && portalEntity.charge(entity instanceof AncientCityPortalExperienceOrbEntity)) {
-                entity.kill();
+            if (portalEntity != null && portalEntity.charge()) {
+                xpOrb.kill();
             }
         }
     }

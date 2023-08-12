@@ -5,8 +5,6 @@ import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementDisplay;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.criterion.CriterionProgress;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.Item;
@@ -15,7 +13,6 @@ import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
 import net.minecraft.registry.Registries;
-import net.minecraft.server.integrated.IntegratedServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
@@ -25,22 +22,14 @@ import java.util.ArrayList;
 public class AdvancementGenerator {
 
     @Nullable
-    public static Advancement generateForCommand() {
-        return generateRandomAdvancement(true);
+    public static Advancement getRandomAdvancement(ServerPlayerEntity player) {
+        return getRandomAdvancement(player, true);
     }
 
     @SuppressWarnings("DataFlowIssue")
     @Nullable
-    public static AdvancementHint generateForHint() {
-        IntegratedServer server = MinecraftClient.getInstance().getServer();
-        if (server == null) {
-            return null;
-        }
-        ServerPlayerEntity serverPlayer = server.getPlayerManager().getPlayerList().get(0);
-        if (serverPlayer == null) {
-            return null;
-        }
-        Advancement advancement = generateRandomAdvancement(false);
+    public static AdvancementHint getRandomAdvancementHint(ServerPlayerEntity player) {
+        Advancement advancement = getRandomAdvancement(player, false);
         if (advancement == null) {
             return null;
         }
@@ -50,7 +39,7 @@ public class AdvancementGenerator {
             return null;
         }
         ArrayList<String> incompleteCriteria = new ArrayList<>();
-        AdvancementProgress progress = serverPlayer.getAdvancementTracker().getProgress(advancement);
+        AdvancementProgress progress = player.getAdvancementTracker().getProgress(advancement);
         for (String[] requirement : advancement.getRequirements()) {
             boolean isRequirementCompleted = false;
             for (String criterion : requirement) {
@@ -67,7 +56,7 @@ public class AdvancementGenerator {
         if (incompleteCriteria.isEmpty()) {
             return null;
         }
-        String criterion = incompleteCriteria.get(serverPlayer.getRandom().nextInt(incompleteCriteria.size()));
+        String criterion = incompleteCriteria.get(player.getRandom().nextInt(incompleteCriteria.size()));
         Item hintItem = null;
         NbtCompound nbt = new NbtCompound();
         boolean dropHint = false;
@@ -106,51 +95,11 @@ public class AdvancementGenerator {
             }
             case "blazeandcave:animal/colorful_cavalry" -> {
                 hintItem = Items.LEATHER_HORSE_ARMOR;
-                NbtCompound color = new NbtCompound();
-                color.putInt("color", switch (criterion) {
-                    case "white" -> 16383998;
-                    case "orange" -> 16351261;
-                    case "magenta" -> 13061821;
-                    case "light_blue" -> 3847130;
-                    case "yellow" -> 16701501;
-                    case "lime" -> 8439583;
-                    case "pink" -> 15961002;
-                    case "gray" -> 4673362;
-                    case "light_gray" -> 10329495;
-                    case "cyan" -> 1481884;
-                    case "purple" -> 8991416;
-                    case "blue" -> 3949738;
-                    case "brown" -> 8606770;
-                    case "green" -> 6192150;
-                    case "red" -> 11546150;
-                    case "black" -> 1908001;
-                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                });
-                nbt.put("display", color);
+                nbt.put("display", getColorNbtByCriterion(criterion));
             }
             case "blazeandcave:animal/shoe_shed" -> {
                 hintItem = Items.LEATHER_BOOTS;
-                NbtCompound color = new NbtCompound();
-                color.putInt("color", switch (criterion) {
-                    case "white" -> 16383998;
-                    case "orange" -> 16351261;
-                    case "magenta" -> 13061821;
-                    case "light_blue" -> 3847130;
-                    case "yellow" -> 16701501;
-                    case "lime" -> 8439583;
-                    case "pink" -> 15961002;
-                    case "gray" -> 4673362;
-                    case "light_gray" -> 10329495;
-                    case "cyan" -> 1481884;
-                    case "purple" -> 8991416;
-                    case "blue" -> 3949738;
-                    case "brown" -> 8606770;
-                    case "green" -> 6192150;
-                    case "red" -> 11546150;
-                    case "black" -> 1908001;
-                    default -> throw new IllegalStateException("Unexpected value: " + criterion);
-                });
-                nbt.put("display", color);
+                nbt.put("display", getColorNbtByCriterion(criterion));
             }
             case "blazeandcave:animal/tropical_collection" -> {
                 hintItem = Items.TROPICAL_FISH_BUCKET;
@@ -957,22 +906,36 @@ public class AdvancementGenerator {
         return new AdvancementHint(tabDisplay.getIcon(), advancementDisplay.getIcon(), hint, dropHint);
     }
 
-    private static Advancement generateRandomAdvancement(boolean withSingleRequirement) {
-        ClientPlayerEntity player = MinecraftClient.getInstance().player;
+    private static NbtCompound getColorNbtByCriterion(String criterion) {
+        NbtCompound colorNbt = new NbtCompound();
+        colorNbt.putInt("color", switch (criterion) {
+            case "white" -> 16383998;
+            case "orange" -> 16351261;
+            case "magenta" -> 13061821;
+            case "light_blue" -> 3847130;
+            case "yellow" -> 16701501;
+            case "lime" -> 8439583;
+            case "pink" -> 15961002;
+            case "gray" -> 4673362;
+            case "light_gray" -> 10329495;
+            case "cyan" -> 1481884;
+            case "purple" -> 8991416;
+            case "blue" -> 3949738;
+            case "brown" -> 8606770;
+            case "green" -> 6192150;
+            case "red" -> 11546150;
+            case "black" -> 1908001;
+            default -> throw new IllegalStateException("Unexpected value: " + criterion);
+        });
+        return colorNbt;
+    }
+
+    private static Advancement getRandomAdvancement(ServerPlayerEntity player, boolean withSingleRequirement) {
         if (player == null) {
             return null;
         }
-        IntegratedServer server = MinecraftClient.getInstance().getServer();
-        if (server == null) {
-            return null;
-        }
-        ServerPlayerEntity serverPlayer = server.getPlayerManager().getPlayerList().get(0);
-        if (serverPlayer == null) {
-            return null;
-        }
-        ArrayList<Advancement> allAdvancement = new ArrayList<>(player.networkHandler.getAdvancementHandler().getManager().getAdvancements());
         ArrayList<Advancement> filteredAdvancements = new ArrayList<>();
-        for (Advancement advancement : allAdvancement) {
+        for (Advancement advancement : new ArrayList<>(player.getAdvancementTracker().visibleAdvancements)) {
             Identifier identifier = advancement.getId();
             String namespace = identifier.getNamespace();
             String tab = identifier.getPath().split("/")[0];
@@ -1004,11 +967,15 @@ public class AdvancementGenerator {
                     continue;
                 }
                 String id = identifier.toString();
-                if (id.equals("blazeandcave:challenges/the_perfect_run") || id.equals("blazeandcave:challenges/were_in_the_endgame_now") || id.equals("blazeandcave:nether/this_ones_mine") || id.equals("blazeandcave:redstone/take_notes") || id.equals("blazeandcave:building/art_gallery")) {
+                if (id.equals("blazeandcave:challenges/the_perfect_run") ||
+                        id.equals("blazeandcave:challenges/were_in_the_endgame_now") ||
+                        id.equals("blazeandcave:nether/this_ones_mine") ||
+                        id.equals("blazeandcave:redstone/take_notes") ||
+                        id.equals("blazeandcave:building/art_gallery")) {
                     continue;
                 }
             }
-            AdvancementProgress progress = serverPlayer.getAdvancementTracker().getProgress(advancement);
+            AdvancementProgress progress = player.getAdvancementTracker().advancementProgresses.get(advancement);
             if (progress != null && progress.isDone()) {
                 continue;
             }

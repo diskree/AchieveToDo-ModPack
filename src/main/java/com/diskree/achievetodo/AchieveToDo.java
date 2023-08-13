@@ -62,6 +62,7 @@ public class AchieveToDo implements ModInitializer {
     public static final String BACAP_REWARDS_TROPHY_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_trophy";
     public static final String BACAP_LANGUAGE_PACK = AchieveToDo.ID + "/" + "bacap_lp";
 
+    public static final Identifier ADVANCEMENTS_SEARCH = new Identifier(AchieveToDo.ID, "advancements_search");
 
     public static final Identifier ANCIENT_CITY_PORTAL_BLOCK_ID = new Identifier(ID, "ancient_city_portal");
     public static final AncientCityPortalBlock ANCIENT_CITY_PORTAL_BLOCK = new AncientCityPortalBlock(AbstractBlock.Settings.create()

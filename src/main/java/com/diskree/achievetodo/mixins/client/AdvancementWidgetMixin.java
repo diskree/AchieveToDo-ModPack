@@ -5,6 +5,7 @@ import com.diskree.achievetodo.client.AchieveToDoClient;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screen.advancement.AdvancementTab;
 import net.minecraft.client.gui.screen.advancement.AdvancementWidget;
 import net.minecraft.item.ItemStack;
@@ -14,6 +15,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(AdvancementWidget.class)
@@ -57,5 +59,12 @@ public abstract class AdvancementWidgetMixin {
     @ModifyConstant(method = "drawTooltip", constant = @Constant(intValue = 113), require = 1)
     public int drawTooltipModifyHeight(int constant) {
         return tab.getScreen().height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+    }
+
+    @Inject(method = "renderLines", at = @At(value = "HEAD"), cancellable = true)
+    public void renderLinesInject(GuiGraphics graphics, int x, int y, boolean border, CallbackInfo ci) {
+        if (tab.getRoot() != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(tab.getRoot().getId())) {
+            ci.cancel();
+        }
     }
 }

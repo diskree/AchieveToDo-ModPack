@@ -16,6 +16,7 @@ public enum AdvancementRoot {
     ACTION,
     STATISTICS,
     BACAP,
+    ADVANCEMENTS_SEARCH,
 
     REDSTONE,
     POTION,

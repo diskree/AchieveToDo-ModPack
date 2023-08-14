@@ -23,7 +23,6 @@
     "LivingEntityMixin",
     "PlayerEntityMixin",
     "PlayerScreenHandlerMixin",
-    "PotionUtilMixin",
     "RaiderEntityMixin",
     "ReinforcedDeepslateMixin",
     "ServerPlayerEntityMixin",

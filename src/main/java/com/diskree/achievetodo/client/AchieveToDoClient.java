@@ -28,28 +28,6 @@ public class AchieveToDoClient implements ClientModInitializer {
     public void onInitializeClient(ModContainer mod) {
         BlockRenderLayerMap.put(RenderLayer.getTranslucent(), AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK);
         ModelPredicateProviderRegistry.register(AchieveToDo.ANCIENT_CITY_PORTAL_HINT_ITEM, ModelPredicateProviderRegistry.DAMAGE_ID, ModelPredicateProviderRegistry.DAMAGE_PROVIDER);
-        UnclampedModelPredicateProvider potionsPredicateProvider = (stack, world, entity, seed) -> {
-            NbtCompound nbt = stack.getNbt();
-            if (nbt == null) {
-                return 0.0f;
-            }
-            String potion = nbt.getString("Potion");
-            if (potion == null) {
-                return 0.0f;
-            }
-            Identifier potionId = new Identifier(potion);
-            if (potionId.getPath().startsWith("long_")) {
-                return 0.5f;
-            }
-            if (potionId.getPath().startsWith("strong_")) {
-                return 1.0f;
-            }
-            return 0.0f;
-        };
-        ModelPredicateProviderRegistry.register(Items.POTION, new Identifier("long_or_strong"), potionsPredicateProvider);
-        ModelPredicateProviderRegistry.register(Items.SPLASH_POTION, new Identifier("long_or_strong"), potionsPredicateProvider);
-        ModelPredicateProviderRegistry.register(Items.LINGERING_POTION, new Identifier("long_or_strong"), potionsPredicateProvider);
-        ModelPredicateProviderRegistry.register(Items.TIPPED_ARROW, new Identifier("long_or_strong"), potionsPredicateProvider);
         ParticleFactoryRegistry.getInstance().register(AchieveToDo.ANCIENT_CITY_PORTAL_PARTICLES, AncientCityPortalParticleFactory::new);
         EntityRendererRegistry.register(AchieveToDo.ANCIENT_CITY_PORTAL_TAB, AncientCityPortalItemDisplayEntityRenderer::new);
         EntityRendererRegistry.register(AchieveToDo.ANCIENT_CITY_PORTAL_ADVANCEMENT, AncientCityPortalItemDisplayEntityRenderer::new);

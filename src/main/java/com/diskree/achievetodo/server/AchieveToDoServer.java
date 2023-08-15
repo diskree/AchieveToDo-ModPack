@@ -12,6 +12,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.village.VillagerProfession;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.server.DedicatedServerModInitializer;
+import org.quiltmc.qsl.networking.api.PacketByteBufs;
+import org.quiltmc.qsl.networking.api.client.ClientPlayNetworking;
 
 public class AchieveToDoServer implements DedicatedServerModInitializer {
 
@@ -20,6 +22,17 @@ public class AchieveToDoServer implements DedicatedServerModInitializer {
             return;
         }
         Advancement advancement = player.server.getAdvancementLoader().get(new Identifier(AchieveToDo.ID, "hints/" + pathName));
+        AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
+        for (String criterion : advancementProgress.getUnobtainedCriteria()) {
+            player.getAdvancementTracker().grantCriterion(advancement, criterion);
+        }
+    }
+
+    public static void grantActionAdvancement(ServerPlayerEntity player, Identifier actionAdvancement) {
+        if (player == null) {
+            return;
+        }
+        Advancement advancement = player.server.getAdvancementLoader().get(actionAdvancement);
         AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
         for (String criterion : advancementProgress.getUnobtainedCriteria()) {
             player.getAdvancementTracker().grantCriterion(advancement, criterion);
@@ -35,8 +48,9 @@ public class AchieveToDoServer implements DedicatedServerModInitializer {
         if (action == null || player != null && player.isCreative() || action.isUnblocked(player)) {
             return false;
         }
-        if (player != null) {
+        if (player != null && player.getWorld().isClient) {
             player.sendMessage(action.buildBlockedDescription(player), true);
+            ClientPlayNetworking.send(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeIdentifier(action.buildAdvancementId()));
         }
         return true;
     }

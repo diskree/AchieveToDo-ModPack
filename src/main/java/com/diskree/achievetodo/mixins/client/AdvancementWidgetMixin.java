@@ -1,7 +1,9 @@
 package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.BlockedAction;
 import com.diskree.achievetodo.client.AchieveToDoClient;
+import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.client.MinecraftClient;
@@ -23,7 +25,7 @@ public abstract class AdvancementWidgetMixin {
 
     @Shadow
     @Final
-    private Advancement advancement;
+    public Advancement advancement;
 
     @Shadow
     private @Nullable AdvancementProgress progress;
@@ -38,9 +40,8 @@ public abstract class AdvancementWidgetMixin {
 
     @Unique
     private boolean isActionLocked() {
-//        BlockedAction action = AchieveToDoServer.getBlockedActionFromAdvancement(advancement);
-//        return action != null && !action.isUnblocked(client.player) && (progress == null || !progress.isDone());
-        return false;
+        BlockedAction action = AchieveToDoServer.getBlockedActionFromAdvancement(advancement);
+        return action != null && !action.isUnblocked(client.player) && (progress == null || !progress.isDone());
     }
 
     @ModifyArg(method = "renderWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawItemWithoutEntity(Lnet/minecraft/item/ItemStack;II)V"), index = 0)

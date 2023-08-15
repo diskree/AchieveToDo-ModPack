@@ -38,6 +38,7 @@ import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
 import org.quiltmc.qsl.entity.api.QuiltEntityTypeBuilder;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
+import org.quiltmc.qsl.networking.api.ServerPlayNetworking;
 import org.quiltmc.qsl.resource.loader.api.ResourceLoader;
 import org.quiltmc.qsl.resource.loader.api.ResourcePackActivationType;
 
@@ -61,6 +62,8 @@ public class AchieveToDo implements ModInitializer {
     public static final String BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_experience";
     public static final String BACAP_REWARDS_TROPHY_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_trophy";
     public static final String BACAP_LANGUAGE_PACK = AchieveToDo.ID + "/" + "bacap_lp";
+
+    public static final Identifier DEMYSTIFY_LOCKED_ACTION_PACKET_ID = new Identifier(ID, "demystify_locked_action");
 
     public static final Identifier ADVANCEMENTS_SEARCH = new Identifier(AchieveToDo.ID, "advancements_search");
 
@@ -150,6 +153,10 @@ public class AchieveToDo implements ModInitializer {
         registerParticles();
         registerEvents();
         registerEntities();
+        ServerPlayNetworking.registerGlobalReceiver(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
+            Identifier actionAdvancementId = buf.readIdentifier();
+            server.execute(() -> AchieveToDoServer.grantActionAdvancement(player, actionAdvancementId));
+        });
 
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {

@@ -112,11 +112,6 @@ public class AdvancementTabMixin implements AdvancementTabImpl {
         focusedAdvancement = null;
     }
 
-    @Inject(method = "move", at = @At(value = "RETURN"))
-    private void moveInject(double offsetX, double offsetY, CallbackInfo ci) {
-        System.out.println("originX = " + originX + " originY = " + originY);
-    }
-
     @Redirect(method = "drawWidgetTooltip", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/advancement/AdvancementWidget;shouldRender(IIII)Z"))
     private boolean drawWidgetTooltipInject(AdvancementWidget instance, int originX, int originY, int mouseX, int mouseY) {
         boolean shouldRender = instance.shouldRender(originX, originY, mouseX, mouseY);

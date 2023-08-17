@@ -8,7 +8,6 @@
   "mixins": [
     "AbstractBlockMixin",
     "AbstractBlockSettingsMixin",
-    "AbstractFurnaceBlockMixin",
     "AdvancementMixin",
     "AdvancementVisibilityEvaluatorMixin",
     "ElytraItemMixin",

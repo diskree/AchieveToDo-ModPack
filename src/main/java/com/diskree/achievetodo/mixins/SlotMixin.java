@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.server.AchieveToDoServer;
+import com.diskree.achievetodo.AchieveToDo;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -25,7 +25,7 @@ public class SlotMixin {
 
     @Inject(method = "insertStack(Lnet/minecraft/item/ItemStack;I)Lnet/minecraft/item/ItemStack;", at = @At("HEAD"), cancellable = true)
     public void insertStackInject(ItemStack stack, int count, CallbackInfoReturnable<ItemStack> cir) {
-        if (inventory instanceof PlayerInventory playerInventory && id >= 5 && id <= 8 && stack != null && AchieveToDoServer.isEquipmentBlocked(playerInventory.player, stack.getItem())) {
+        if (inventory instanceof PlayerInventory playerInventory && id >= 5 && id <= 8 && stack != null && AchieveToDo.isEquipmentBlocked(playerInventory.player, stack.getItem())) {
             cir.setReturnValue(stack);
         }
     }
@@ -34,7 +34,7 @@ public class SlotMixin {
     public void canTakeItemsInject(PlayerEntity playerEntity, CallbackInfoReturnable<Boolean> cir) {
         if (playerEntity != null && inventory instanceof PlayerInventory && id >= 5 && id <= 8) {
             ItemStack stack = playerEntity.playerScreenHandler.getCursorStack();
-            if (stack != null && AchieveToDoServer.isEquipmentBlocked(playerEntity, stack.getItem())) {
+            if (stack != null && AchieveToDo.isEquipmentBlocked(playerEntity, stack.getItem())) {
                 cir.setReturnValue(false);
             }
         }

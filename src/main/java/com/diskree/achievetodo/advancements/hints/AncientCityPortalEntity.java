@@ -4,7 +4,6 @@ import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.ItemDisplayEntityImpl;
 import com.diskree.achievetodo.advancements.AdvancementGenerator;
 import com.diskree.achievetodo.advancements.AdvancementHint;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
@@ -107,7 +106,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                 }
             }
             if (isPortalActivated) {
-                AchieveToDoServer.grantHintsAdvancement(getChargerPlayer(), "ancient_light");
+                AchieveToDo.grantHintsAdvancement(getChargerPlayer(), "ancient_light");
             }
         } else {
             stopJukebox(jukeboxPos);
@@ -138,7 +137,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         }
         if (!checkChargingPlayerRadius()) {
             discharge();
-            AchieveToDoServer.grantHintsAdvancement(getChargerPlayer(), "so_long_and_thanks_for_the_xp");
+            AchieveToDo.grantHintsAdvancement(getChargerPlayer(), "so_long_and_thanks_for_the_xp");
             return true;
         }
         ArrayList<BlockPos> blocksToCharge = new ArrayList<>();
@@ -158,7 +157,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                 showAdvancementTab(advancementHint.tab());
                 showAdvancementHint(advancementHint.hint(), advancementHint.dropHint());
                 showAdvancement(advancementHint.advancement());
-                AchieveToDoServer.grantHintsAdvancement(getChargerPlayer(), "soul_energizer");
+                AchieveToDo.grantHintsAdvancement(getChargerPlayer(), "soul_energizer");
                 if (++receivedHints >= HINTS_LIMIT) {
                     for (BlockPos pos : getPortalBlocks(true, true)) {
                         if (!isReinforcedDeepslate(pos)) {
@@ -166,14 +165,14 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                         }
                         getWorld().setBlockState(pos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_BROKEN_PROPERTY, true));
                     }
-                    AchieveToDoServer.grantHintsAdvancement(getChargerPlayer(), "nothing_lasts_forever");
+                    AchieveToDo.grantHintsAdvancement(getChargerPlayer(), "nothing_lasts_forever");
                 }
             } else {
                 ItemStack barrierItem = new ItemStack(Items.BARRIER);
                 showAdvancementTab(barrierItem);
                 showAdvancementHint(barrierItem, false);
                 showAdvancement(barrierItem);
-                AchieveToDoServer.grantHintsAdvancement(getChargerPlayer(), "no_new_updates");
+                AchieveToDo.grantHintsAdvancement(getChargerPlayer(), "no_new_updates");
             }
             discharge();
         } else {
@@ -217,7 +216,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         int experienceCount = player.totalExperience;
         if (experienceCount < CHARGE_XP_COUNT) {
             player.damage(getWorld().getDamageSources().badRespawnPoint(playerPos), 1);
-            AchieveToDoServer.grantHintsAdvancement(getChargerPlayer(), "beethoven_mistake");
+            AchieveToDo.grantHintsAdvancement(getChargerPlayer(), "beethoven_mistake");
         } else {
             player.addExperience(-CHARGE_XP_COUNT);
         }

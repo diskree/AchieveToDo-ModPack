@@ -1,9 +1,13 @@
 package com.diskree.achievetodo;
 
+import com.diskree.achievetodo.advancements.AdvancementGenerator;
 import com.diskree.achievetodo.advancements.hints.*;
-import com.diskree.achievetodo.server.AchieveToDoServer;
+import com.mojang.brigadier.Command;
 import net.fabricmc.fabric.api.event.player.*;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementDisplay;
+import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -23,22 +27,25 @@ import net.minecraft.registry.Registry;
 import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.scoreboard.ScoreboardObjective;
 import net.minecraft.scoreboard.ScoreboardPlayerScore;
+import net.minecraft.server.command.CommandManager;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.*;
+import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.loader.api.QuiltLoader;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
+import org.quiltmc.qsl.command.api.CommandRegistrationCallback;
 import org.quiltmc.qsl.entity.api.QuiltEntityTypeBuilder;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
+import org.quiltmc.qsl.networking.api.PacketByteBufs;
 import org.quiltmc.qsl.networking.api.ServerPlayNetworking;
+import org.quiltmc.qsl.networking.api.client.ClientPlayNetworking;
 import org.quiltmc.qsl.resource.loader.api.ResourceLoader;
 import org.quiltmc.qsl.resource.loader.api.ResourcePackActivationType;
 
@@ -153,100 +160,208 @@ public class AchieveToDo implements ModInitializer {
         registerParticles();
         registerEvents();
         registerEntities();
+
+        CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> dispatcher.register(CommandManager.literal("random").executes((context -> {
+            Advancement randomAdvancement = AdvancementGenerator.getRandomAdvancement(context.getSource().getPlayer());
+            if (randomAdvancement != null) {
+                AdvancementDisplay display = randomAdvancement.getDisplay();
+                AdvancementDisplay rootDisplay = randomAdvancement.getRoot().getDisplay();
+                Text displayTitle = display != null ? display.getTitle() : null;
+                if (display == null || rootDisplay == null || displayTitle == null) {
+                    context.getSource().sendSystemMessage(Text.of("Parsing error for advancement: " + randomAdvancement.getId()).copy().formatted(Formatting.RED));
+                    return Command.SINGLE_SUCCESS;
+                }
+                final String separator = "----------";
+                context.getSource().sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
+                context.getSource().sendSystemMessage(rootDisplay.getTitle().copy().formatted(Formatting.BLUE, Formatting.BOLD));
+                context.getSource().sendSystemMessage(display.getTitle().copy().formatted(Formatting.AQUA, Formatting.ITALIC));
+                context.getSource().sendSystemMessage(display.getDescription().copy().formatted(Formatting.YELLOW));
+                context.getSource().sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
+            } else {
+                context.getSource().sendSystemMessage(Text.translatable("commands.random.no_advancements"));
+            }
+            return Command.SINGLE_SUCCESS;
+        }))));
         ServerPlayNetworking.registerGlobalReceiver(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
             Identifier actionAdvancementId = buf.readIdentifier();
-            server.execute(() -> AchieveToDoServer.grantActionAdvancement(player, actionAdvancementId));
+            server.execute(() -> {
+                Advancement advancement = player.server.getAdvancementLoader().get(actionAdvancementId);
+                AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
+                for (String criterion : advancementProgress.getUnobtainedCriteria()) {
+                    player.getAdvancementTracker().grantCriterion(advancement, criterion);
+                }
+            });
         });
 
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {
-                if (pos.getY() >= 0 && AchieveToDoServer.isActionBlocked(player, BlockedAction.BREAK_BLOCKS_IN_POSITIVE_Y)) {
+                if (pos.getY() >= 0 && isActionBlocked(player, BlockedAction.BREAK_BLOCKS_IN_POSITIVE_Y)) {
                     return ActionResult.FAIL;
                 }
-                if (pos.getY() < 0 && AchieveToDoServer.isActionBlocked(player, BlockedAction.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
+                if (pos.getY() < 0 && isActionBlocked(player, BlockedAction.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
                     return ActionResult.FAIL;
                 }
             }
-            if (AchieveToDoServer.isToolBlocked(player, hand)) {
+            if (isToolBlocked(player, hand)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
         });
         AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-            if (AchieveToDoServer.isToolBlocked(player, hand)) {
+            if (isToolBlocked(player, hand)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
         });
         UseItemCallback.EVENT.register((player, world, hand) -> {
             ItemStack stack = hand == Hand.MAIN_HAND ? player.getMainHandStack() : player.getOffHandStack();
-            if (stack.isFood() && AchieveToDoServer.isFoodBlocked(player, stack.getItem().getFoodComponent())) {
+            if (stack.isFood() && isFoodBlocked(player, stack.getItem().getFoodComponent())) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
-            if (stack.isOf(Items.SHIELD) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_SHIELD)) {
+            if (stack.isOf(Items.SHIELD) && isActionBlocked(player, BlockedAction.USING_SHIELD)) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
-            if (stack.isOf(Items.BOW) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_BOW)) {
+            if (stack.isOf(Items.BOW) && isActionBlocked(player, BlockedAction.USING_BOW)) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
-            if (stack.isOf(Items.FIREWORK_ROCKET) && player.isFallFlying() && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_FIREWORKS_WHILE_FLY)) {
+            if (stack.isOf(Items.FIREWORK_ROCKET) && player.isFallFlying() && isActionBlocked(player, BlockedAction.USING_FIREWORKS_WHILE_FLY)) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
-            if (stack.getItem() instanceof ArmorItem armorItem && AchieveToDoServer.isEquipmentBlocked(player, armorItem)) {
+            if (stack.isOf(Items.ELYTRA) && isActionBlocked(player, BlockedAction.EQUIP_ELYTRA)) {
+                return TypedActionResult.fail(ItemStack.EMPTY);
+            }
+            if (stack.getItem() instanceof ArmorItem armorItem && isEquipmentBlocked(player, armorItem)) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
             return TypedActionResult.pass(ItemStack.EMPTY);
         });
         UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
             BlockState block = world.getBlockState(hitResult.getBlockPos());
-            if (block.isOf(Blocks.CRAFTING_TABLE) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_CRAFTING_TABLE)) {
+            if (block.isOf(Blocks.CRAFTING_TABLE) && isActionBlocked(player, BlockedAction.USING_CRAFTING_TABLE)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.FURNACE) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_FURNACE)) {
+            if (block.isOf(Blocks.FURNACE) && isActionBlocked(player, BlockedAction.USING_FURNACE)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.ANVIL) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_ANVIL)) {
+            if (block.isOf(Blocks.ANVIL) && isActionBlocked(player, BlockedAction.USING_ANVIL)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.SMOKER) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_SMOKER)) {
+            if (block.isOf(Blocks.SMOKER) && isActionBlocked(player, BlockedAction.USING_SMOKER)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.BLAST_FURNACE) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_BLAST_FURNACE)) {
+            if (block.isOf(Blocks.BLAST_FURNACE) && isActionBlocked(player, BlockedAction.USING_BLAST_FURNACE)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.ENDER_CHEST) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_ENDER_CHEST)) {
+            if (block.isOf(Blocks.ENDER_CHEST) && isActionBlocked(player, BlockedAction.USING_ENDER_CHEST)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.BREWING_STAND) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_BREWING_STAND)) {
+            if (block.isOf(Blocks.BREWING_STAND) && isActionBlocked(player, BlockedAction.USING_BREWING_STAND)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.BEACON) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_BEACON)) {
+            if (block.isOf(Blocks.BEACON) && isActionBlocked(player, BlockedAction.USING_BEACON)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.BLACK_SHULKER_BOX) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {
+            if (block.isOf(Blocks.BLACK_SHULKER_BOX) && isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.SHULKER_BOX) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {
+            if (block.isOf(Blocks.SHULKER_BOX) && isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.ENCHANTING_TABLE) && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_ENCHANTING_TABLE)) {
+            if (block.isOf(Blocks.ENCHANTING_TABLE) && isActionBlocked(player, BlockedAction.USING_ENCHANTING_TABLE)) {
                 return ActionResult.FAIL;
             }
-            if (AchieveToDoServer.isToolBlocked(player, hand)) {
+            if (isToolBlocked(player, hand)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
         });
         UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-            if (entity instanceof BoatEntity && AchieveToDoServer.isActionBlocked(player, BlockedAction.USING_BOAT)) {
+            if (entity instanceof BoatEntity && isActionBlocked(player, BlockedAction.USING_BOAT)) {
                 return ActionResult.FAIL;
             }
-            if (entity instanceof VillagerEntity villagerEntity && AchieveToDoServer.isVillagerBlocked(player, villagerEntity.getVillagerData().getProfession())) {
+            if (entity instanceof VillagerEntity villagerEntity && isVillagerBlocked(player, villagerEntity.getVillagerData().getProfession())) {
                 villagerEntity.sayNo();
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
         });
+    }
+
+    public static void grantHintsAdvancement(ServerPlayerEntity player, String pathName) {
+        if (player == null) {
+            return;
+        }
+        Advancement advancement = player.server.getAdvancementLoader().get(new Identifier(AchieveToDo.ID, "hints/" + pathName));
+        AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
+        for (String criterion : advancementProgress.getUnobtainedCriteria()) {
+            player.getAdvancementTracker().grantCriterion(advancement, criterion);
+        }
+    }
+
+    public static BlockedAction getBlockedActionFromAdvancement(Advancement advancement) {
+        String[] pathPieces = advancement.getId().getPath().split("/");
+        return pathPieces.length == 2 ? BlockedAction.map(pathPieces[1]) : null;
+    }
+
+    public static boolean isActionBlocked(PlayerEntity player, BlockedAction action) {
+        if (action == null || player != null && player.isCreative() || action.isUnblocked(player)) {
+            return false;
+        }
+        if (player != null && player.getWorld().isClient) {
+            player.sendMessage(action.buildBlockedDescription(player), true);
+            ClientPlayNetworking.send(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeIdentifier(action.buildAdvancementId()));
+        }
+        return true;
+    }
+
+    public static boolean isEquipmentBlocked(PlayerEntity player, Item item) {
+        if (item == Items.ELYTRA && isActionBlocked(player, BlockedAction.EQUIP_ELYTRA)) {
+            return true;
+        }
+        if (item instanceof ArmorItem) {
+            ArmorMaterial armorMaterial = ((ArmorItem) item).getMaterial();
+            return armorMaterial == ArmorMaterials.IRON && isActionBlocked(player, BlockedAction.EQUIP_IRON_ARMOR) ||
+                    armorMaterial == ArmorMaterials.DIAMOND && isActionBlocked(player, BlockedAction.EQUIP_DIAMOND_ARMOR) ||
+                    armorMaterial == ArmorMaterials.NETHERITE && isActionBlocked(player, BlockedAction.EQUIP_NETHERITE_ARMOR);
+        }
+        return false;
+    }
+
+    private boolean isFoodBlocked(PlayerEntity player, FoodComponent food) {
+        if (food == null) {
+            return false;
+        }
+        for (BlockedAction action : BlockedAction.values()) {
+            if (action.getFoodComponent() == food) {
+                return isActionBlocked(player, action);
+            }
+        }
+        return false;
+    }
+
+    private boolean isToolBlocked(PlayerEntity player, Hand hand) {
+        ItemStack stack = hand == Hand.MAIN_HAND ? player.getMainHandStack() : player.getOffHandStack();
+        if (!stack.isDamageable()) {
+            return false;
+        }
+        Item item = stack.getItem();
+        if (item instanceof ToolItem) {
+            ToolMaterial toolMaterial = ((ToolItem) item).getMaterial();
+            return toolMaterial == ToolMaterials.STONE && isActionBlocked(player, BlockedAction.USING_STONE_TOOLS) ||
+                    toolMaterial == ToolMaterials.IRON && isActionBlocked(player, BlockedAction.USING_IRON_TOOLS) ||
+                    toolMaterial == ToolMaterials.DIAMOND && isActionBlocked(player, BlockedAction.USING_DIAMOND_TOOLS) ||
+                    toolMaterial == ToolMaterials.NETHERITE && isActionBlocked(player, BlockedAction.USING_NETHERITE_TOOLS);
+        }
+        return false;
+    }
+
+    private boolean isVillagerBlocked(PlayerEntity player, VillagerProfession profession) {
+        for (BlockedAction action : BlockedAction.values()) {
+            if (action.getVillagerProfession() == profession) {
+                return isActionBlocked(player, action);
+            }
+        }
+        return false;
     }
 
     private void registerPacks() {

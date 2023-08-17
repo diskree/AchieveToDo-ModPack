@@ -2,7 +2,6 @@ package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.BlockedAction;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Final;
@@ -30,7 +29,7 @@ public class AdvancementMixin {
 
     @Inject(method = "getRequirementCount", at = @At("HEAD"), cancellable = true)
     public void getRequirementCountInject(CallbackInfoReturnable<Integer> cir) {
-        BlockedAction action = AchieveToDoServer.getBlockedActionFromAdvancement((Advancement) (Object) this);
+        BlockedAction action = AchieveToDo.getBlockedActionFromAdvancement((Advancement) (Object) this);
         if (action != null) {
             cir.setReturnValue(action.getUnblockAdvancementsCount());
         }

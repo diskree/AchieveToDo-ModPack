@@ -19,7 +19,6 @@
     "intermediate_mappings": "net.fabricmc:intermediary",
     "entrypoints": {
       "init": "com.diskree.achievetodo.AchieveToDo",
-      "server_init": "com.diskree.achievetodo.server.AchieveToDoServer",
       "client_init": "com.diskree.achievetodo.client.AchieveToDoClient"
     },
     "depends": [

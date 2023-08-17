@@ -1,7 +1,6 @@
 package com.diskree.achievetodo.advancements.hints;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
@@ -79,7 +78,7 @@ public class AncientCityPortalBlock extends Block {
             if (owner instanceof ServerPlayerEntity player) {
                 AncientCityPortalEntity portalEntity = AncientCityPortalEntity.findForBlock(world, pos);
                 if (portalEntity != null && portalEntity.grantDragonEgg(player)) {
-                    AchieveToDoServer.grantHintsAdvancement(player, "three_pointer");
+                    AchieveToDo.grantHintsAdvancement(player, "three_pointer");
                     dragonEgg.kill();
                 }
             }

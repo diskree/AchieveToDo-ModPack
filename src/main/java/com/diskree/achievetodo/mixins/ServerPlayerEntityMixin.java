@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
+import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.BlockedAction;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.entity.Entity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -17,10 +17,10 @@ public abstract class ServerPlayerEntityMixin {
     @Inject(method = "moveToWorld", at = @At("HEAD"), cancellable = true)
     public void moveToWorldInject(ServerWorld destination, CallbackInfoReturnable<Entity> cir) {
         ServerPlayerEntity playerEntity = ((ServerPlayerEntity) (Object) this);
-        if (destination.getRegistryKey() == World.NETHER && AchieveToDoServer.isActionBlocked(playerEntity, BlockedAction.NETHER)) {
+        if (destination.getRegistryKey() == World.NETHER && AchieveToDo.isActionBlocked(playerEntity, BlockedAction.NETHER)) {
             cir.setReturnValue((Entity) (Object) this);
         }
-        if (destination.getRegistryKey() == World.END && AchieveToDoServer.isActionBlocked(playerEntity, BlockedAction.END)) {
+        if (destination.getRegistryKey() == World.END && AchieveToDo.isActionBlocked(playerEntity, BlockedAction.END)) {
             cir.setReturnValue((Entity) (Object) this);
         }
     }

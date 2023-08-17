@@ -3,7 +3,6 @@ package com.diskree.achievetodo.mixins.client;
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.BlockedAction;
 import com.diskree.achievetodo.client.AchieveToDoClient;
-import com.diskree.achievetodo.server.AchieveToDoServer;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.client.MinecraftClient;
@@ -40,7 +39,7 @@ public abstract class AdvancementWidgetMixin {
 
     @Unique
     private boolean isActionLocked() {
-        BlockedAction action = AchieveToDoServer.getBlockedActionFromAdvancement(advancement);
+        BlockedAction action = AchieveToDo.getBlockedActionFromAdvancement(advancement);
         return action != null && !action.isUnblocked(client.player) && (progress == null || !progress.isDone());
     }
 

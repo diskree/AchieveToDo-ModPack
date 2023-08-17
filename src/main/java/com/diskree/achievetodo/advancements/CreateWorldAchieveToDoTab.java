@@ -59,7 +59,7 @@ public class CreateWorldAchieveToDoTab extends GridWidgetTab {
         generationOptionsBuilder.button(END_GENERATION, worldSettings::achieveToDo$isNullscapeEnabled, worldSettings::achieveToDo$setNullscapeEnabled).info(END_GENERATION_INFO);
         SwitchGrid generationOptionGrid = generationOptionsBuilder.build(widget -> adder.add(widget, 2));
 
-        worldCreator.method_48712(worldCreator1 -> {
+        worldCreator.addListener(worldCreator1 -> {
             rewardsOptionsGrid.updateStates();
             generationOptionGrid.updateStates();
         });

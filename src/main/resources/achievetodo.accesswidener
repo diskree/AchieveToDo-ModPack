@@ -5,6 +5,8 @@ accessible class net/minecraft/client/gui/screen/advancement/AdvancementTabType
 accessible class net/minecraft/client/gui/screen/world/CreateWorldScreen$GameTab
 accessible class net/minecraft/client/gui/screen/world/CreateWorldScreen$MoreTab
 accessible class net/minecraft/client/gui/screen/world/SwitchGrid
+accessible class net/minecraft/network/NetworkState$PacketHandlerInitializer
+accessible class net/minecraft/network/NetworkState$PacketHandler
 
 accessible method net/minecraft/data/server/tag/TagsProvider getOrCreateTagBuilder (Lnet/minecraft/registry/tag/TagKey;)Lnet/minecraft/data/server/tag/TagsProvider$ObjectBuilder;
 accessible method net/minecraft/data/server/tag/TagsProvider$ObjectBuilder add ([Ljava/lang/Object;)Lnet/minecraft/data/server/tag/TagsProvider$ObjectBuilder;
@@ -30,3 +32,4 @@ accessible field net/minecraft/client/gui/screen/advancement/AdvancementWidget p
 accessible field net/minecraft/client/gui/screen/advancement/AdvancementWidget advancement Lnet/minecraft/advancement/Advancement;
 accessible field net/minecraft/client/gui/screen/advancement/AdvancementTab originX D
 accessible field net/minecraft/client/gui/screen/advancement/AdvancementTab originY D
+accessible field net/minecraft/network/NetworkState$PacketHandler packetIds Lit/unimi/dsi/fastutil/objects/Object2IntMap;

@@ -30,6 +30,5 @@ public class AchieveToDoClient implements ClientModInitializer {
         EntityRendererRegistry.register(AchieveToDo.ANCIENT_CITY_PORTAL_ADVANCEMENT, AncientCityPortalItemDisplayEntityRenderer::new);
         EntityRendererRegistry.register(AchieveToDo.ANCIENT_CITY_PORTAL_HINT, AncientCityPortalItemDisplayEntityRenderer::new);
         EntityRendererRegistry.register(AchieveToDo.ANCIENT_CITY_PORTAL_EXPERIENCE_ORB, AncientCityPortalExperienceOrbEntityRenderer::new);
-        ClientPlayNetworking.registerGlobalReceiver(new Identifier(AchieveToDo.ID, "ancient_city_portal_experience_c2s_packet"), (client, handler, buf, responseSender) -> new AncientCityPortalExperienceOrbSpawnS2CPacket(buf).apply(handler));
     }
 }

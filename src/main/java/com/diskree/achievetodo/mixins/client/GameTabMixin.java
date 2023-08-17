@@ -27,10 +27,10 @@ public class GameTabMixin {
         }
     }
 
-    @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/world/WorldCreator;method_48712(Ljava/util/function/Consumer;)V", ordinal = 3))
+    @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/world/WorldCreator;addListener(Ljava/util/function/Consumer;)V", ordinal = 3))
     public void initRedirect(WorldCreator instance, Consumer<WorldCreator> consumer) {
         if (BuildConfig.DEBUG) {
-            instance.method_48712(consumer);
+            instance.addListener(consumer);
         }
     }
 }

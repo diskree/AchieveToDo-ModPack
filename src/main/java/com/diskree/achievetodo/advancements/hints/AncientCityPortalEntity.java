@@ -67,7 +67,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public AncientCityPortalEntity(EntityType<?> entityType, World world) {
         super(entityType, world);
-        this.jukeboxEventHandler = new DynamicGameEventListener<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalEntity.this, 0), AchieveToDo.JUKEBOX_PLAY.getRange()));
+        this.jukeboxEventHandler = new DynamicGameEventListener<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalEntity.this, 0), RITUAL_RADIUS));
     }
 
     private void updateJukeboxPos(BlockPos jukeboxPos, boolean playing) {
@@ -636,11 +636,11 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
         @Override
         public boolean listen(ServerWorld world, GameEvent event, GameEvent.Context context, Vec3d pos) {
-            if (event == AchieveToDo.JUKEBOX_PLAY) {
+            if (event == GameEvent.JUKEBOX_PLAY) {
                 AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.fromPosition(pos), true);
                 return true;
             }
-            if (event == AchieveToDo.JUKEBOX_STOP_PLAY) {
+            if (event == GameEvent.JUKEBOX_STOP_PLAY) {
                 AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.fromPosition(pos), false);
                 return true;
             }

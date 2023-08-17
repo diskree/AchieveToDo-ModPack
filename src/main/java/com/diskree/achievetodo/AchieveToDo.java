@@ -100,15 +100,11 @@ public class AchieveToDo implements ModInitializer {
     public static final Identifier ANCIENT_CITY_PORTAL_PARTICLES_ID = new Identifier(ID, "ancient_city_portal_particles");
     public static final DefaultParticleType ANCIENT_CITY_PORTAL_PARTICLES = FabricParticleTypes.simple();
 
-    public static final Identifier JUKEBOX_PLAY_EVENT_ID = new Identifier(ID, "jukebox_play");
-    public static final GameEvent JUKEBOX_PLAY = new GameEvent(JUKEBOX_PLAY_EVENT_ID.toString(), AncientCityPortalEntity.RITUAL_RADIUS);
     public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
             .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
             .maxChunkTrackingRange(10)
             .trackingTickInterval(1)
             .build();
-    public static final Identifier JUKEBOX_STOP_PLAY_EVENT_ID = new Identifier(ID, "jukebox_stop_play");
-    public static final GameEvent JUKEBOX_STOP_PLAY = new GameEvent(JUKEBOX_STOP_PLAY_EVENT_ID.toString(), AncientCityPortalEntity.RITUAL_RADIUS);
     public static final Identifier ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = new Identifier(ID, "ancient_city_portal_tab_entity");
     public static final EntityType<AncientCityPortalTabEntity> ANCIENT_CITY_PORTAL_TAB = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalTabEntity::new)
             .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
@@ -158,7 +154,6 @@ public class AchieveToDo implements ModInitializer {
         registerBlocks();
         registerItems();
         registerParticles();
-        registerEvents();
         registerEntities();
 
         CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> dispatcher.register(CommandManager.literal("random").executes((context -> {
@@ -391,11 +386,6 @@ public class AchieveToDo implements ModInitializer {
 
     private void registerParticles() {
         Registry.register(Registries.PARTICLE_TYPE, ANCIENT_CITY_PORTAL_PARTICLES_ID, ANCIENT_CITY_PORTAL_PARTICLES);
-    }
-
-    private void registerEvents() {
-        Registry.register(Registries.GAME_EVENT, JUKEBOX_PLAY_EVENT_ID, JUKEBOX_PLAY);
-        Registry.register(Registries.GAME_EVENT, JUKEBOX_STOP_PLAY_EVENT_ID, JUKEBOX_STOP_PLAY);
     }
 
     private void registerEntities() {

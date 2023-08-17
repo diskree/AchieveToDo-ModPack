@@ -27,8 +27,7 @@
     "ReinforcedDeepslateMixin",
     "ServerPlayerEntityMixin",
     "SlotMixin",
-    "VanillaBlockTagProviderMixin",
-    "WorldAccessMixin"
+    "VanillaBlockTagProviderMixin"
   ],
   "client": [
     "client.AdvancementProgressMixin",

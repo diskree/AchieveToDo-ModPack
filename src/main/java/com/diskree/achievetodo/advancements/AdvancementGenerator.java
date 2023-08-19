@@ -7,6 +7,8 @@ import net.minecraft.advancement.AdvancementDisplay;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.criterion.CriterionProgress;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.decoration.painting.PaintingEntity;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -137,6 +139,12 @@ public class AdvancementGenerator {
                 }
             }
             case "blazeandcave:building/armor_display" -> criterion += "_chestplate";
+            case "blazeandcave:building/art_gallery" -> {
+                hintItem = Items.PAINTING;
+                NbtCompound variantNbt = new NbtCompound();
+                variantNbt.putString(PaintingEntity.VARIANT_NBT_KEY, new Identifier(criterion).toString());
+                nbt.put(EntityType.ENTITY_TAG_KEY, variantNbt);
+            }
             case "blazeandcave:building/creepers_and_withers" -> criterion = "chiseled_" + criterion;
             case "blazeandcave:building/fake_fortress" -> {
                 switch (criterion) {
@@ -972,8 +980,7 @@ public class AdvancementGenerator {
                 if (id.equals("blazeandcave:challenges/the_perfect_run") ||
                         id.equals("blazeandcave:challenges/were_in_the_endgame_now") ||
                         id.equals("blazeandcave:nether/this_ones_mine") ||
-                        id.equals("blazeandcave:redstone/take_notes") ||
-                        id.equals("blazeandcave:building/art_gallery")) {
+                        id.equals("blazeandcave:redstone/take_notes")) {
                     continue;
                 }
             }

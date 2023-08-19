@@ -12,14 +12,9 @@ import org.quiltmc.loader.api.minecraft.ClientOnly;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Enumeration;
 import java.util.List;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
 
 @ClientOnly
 public class DownloadExternalPackScreen extends ConfirmScreen {
@@ -76,8 +71,9 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
                     if (!Files.exists(globalPacksDir)) {
                         Files.createDirectory(globalPacksDir);
                     }
-                    if (fileName.toString().startsWith("[UNZIP ME]")) {
-                        unzip(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
+                    if (fileName.toString().contains("UNZIP ME")) {
+                        Path extractedArchive = AdvancementsEncryptor.unzip(downloadedFile, globalPacksDir);
+                        Files.move(extractedArchive, globalPacksDir.resolve(externalPack.toFileName()));
                         Files.delete(downloadedFile);
                     } else {
                         Files.move(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
@@ -88,26 +84,6 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
             }
             exitWithCreateLevel = true;
             closeScreen();
-        }
-    }
-
-    private void unzip(Path source, Path destination) throws IOException {
-        try (ZipFile zipFile = new ZipFile(source.toFile())) {
-            Enumeration<? extends ZipEntry> entries = zipFile.entries();
-            while (entries.hasMoreElements()) {
-                ZipEntry entry = entries.nextElement();
-                if (entry.getName().endsWith(".zip")) {
-                    Files.createDirectories(destination.getParent());
-                    try (InputStream in = zipFile.getInputStream(entry);
-                         OutputStream out = Files.newOutputStream(destination)) {
-                        byte[] buffer = new byte[1024];
-                        int len;
-                        while ((len = in.read(buffer)) != -1) {
-                            out.write(buffer, 0, len);
-                        }
-                    }
-                }
-            }
         }
     }
 }

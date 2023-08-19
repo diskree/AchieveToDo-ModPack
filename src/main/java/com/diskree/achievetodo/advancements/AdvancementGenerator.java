@@ -1,6 +1,7 @@
 package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.client.AdvancementsEncryptor;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementDisplay;
 import net.minecraft.advancement.AdvancementProgress;
@@ -56,11 +57,12 @@ public class AdvancementGenerator {
         if (incompleteCriteria.isEmpty()) {
             return null;
         }
-        String criterion = incompleteCriteria.get(player.getRandom().nextInt(incompleteCriteria.size()));
+        Identifier advancementId = advancement.getId();
+        String criterion = AdvancementsEncryptor.decryptCriteria(advancementId, incompleteCriteria.get(player.getRandom().nextInt(incompleteCriteria.size())), player.getServerWorld().getSeed());
         Item hintItem = null;
         NbtCompound nbt = new NbtCompound();
         boolean dropHint = false;
-        switch (advancement.getId().toString()) {
+        switch (advancementId.toString()) {
             case "blazeandcave:adventure/chromatic_armory" -> {
                 switch (criterion) {
                     case "amethyst" -> hintItem = Items.AMETHYST_SHARD;

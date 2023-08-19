@@ -2,10 +2,7 @@ package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.advancements.CreateWorldAchieveToDoTab;
-import com.diskree.achievetodo.client.CreateWorldScreenImpl;
-import com.diskree.achievetodo.client.DownloadExternalPackScreen;
-import com.diskree.achievetodo.client.ExternalPack;
-import com.diskree.achievetodo.client.WorldCreatorImpl;
+import com.diskree.achievetodo.client.*;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
@@ -26,13 +23,14 @@ import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 @Mixin(CreateWorldScreen.class)
 public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
@@ -120,15 +118,16 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
             requiredPacks.add(ExternalPack.NULLSCAPE);
         }
         for (ExternalPack requiredPack : requiredPacks) {
-            if (!new File(globalPacksDir.toFile(), requiredPack.toFileName()).exists()) {
-                client.setScreen(new DownloadExternalPackScreen(self, requiredPack, (exitWithCreateLevel) -> {
-                    if (exitWithCreateLevel) {
-                        createLevel();
-                    }
-                }));
-                ci.cancel();
-                return;
+            if (Files.exists(globalPacksDir.resolve(requiredPack.toFileName()))) {
+                continue;
             }
+            client.setScreen(new DownloadExternalPackScreen(self, requiredPack, (exitWithCreateLevel) -> {
+                if (exitWithCreateLevel) {
+                    createLevel();
+                }
+            }));
+            ci.cancel();
+            return;
         }
 
         if (!isWaitingDatapacks) {
@@ -138,14 +137,31 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 return;
             }
 
-            try (DirectoryStream<Path> stream = Files.newDirectoryStream(globalPacksDir)) {
-                for (Path path : stream) {
-                    if (!Files.isDirectory(path)) {
-                        Files.copy(path, worldPacksDir.resolve(path.getFileName()), StandardCopyOption.REPLACE_EXISTING);
+            long seed = worldCreator.getContext().options().getSeed();
+
+            try {
+                for (ExternalPack pack : requiredPacks) {
+                    Path globalPack = globalPacksDir.resolve(pack.toFileName());
+                    Path worldPack = worldPacksDir.resolve(globalPack.getFileName());
+                    Files.copy(globalPack, worldPack, StandardCopyOption.REPLACE_EXISTING);
+                    if (!pack.isAdvancementsPack()) {
+                        continue;
+                    }
+                    Path tempDir = worldPacksDir.resolve("temp");
+                    AdvancementsEncryptor.unzip(worldPack, tempDir);
+                    Files.deleteIfExists(worldPack);
+                    AdvancementsEncryptor.encrypt(tempDir, seed);
+                    AdvancementsEncryptor.zip(tempDir, worldPack);
+                    try (Stream<Path> stream = Files.walk(tempDir)) {
+                        stream.sorted(Comparator.reverseOrder()).forEach(path -> {
+                            try {
+                                Files.deleteIfExists(path);
+                            } catch (IOException ignored) {
+                            }
+                        });
                     }
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (IOException ignored) {
             }
 
             if (packManager != null) {

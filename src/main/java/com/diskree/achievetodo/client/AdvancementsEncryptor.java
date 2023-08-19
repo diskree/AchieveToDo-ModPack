@@ -96,31 +96,31 @@ public class AdvancementsEncryptor {
                     Identifier advancementId = new Identifier(namespace, path);
                     Map<String, String> encryptedCriteriaMap = new HashMap<>();
                     JsonObject criteria = advancement.getAsJsonObject(CRITERIA_KEY);
-                    for (String oldKey : new HashSet<>(criteria.keySet())) {
-                        String encryptedCriteria = encryptCriteria(advancementId, oldKey, seed);
-                        encryptedCriteriaMap.put(oldKey, encryptedCriteria);
-                        JsonObject criteriaValue = criteria.getAsJsonObject(oldKey);
-                        criteria.remove(oldKey);
-                        criteria.add(encryptedCriteria, criteriaValue);
+                    for (String criterion : new HashSet<>(criteria.keySet())) {
+                        String encryptedCriteria = encryptCriterion(advancementId, criterion, seed);
+                        encryptedCriteriaMap.put(criterion, encryptedCriteria);
+                        JsonObject criterionObj = criteria.getAsJsonObject(criterion);
+                        criteria.remove(criterion);
+                        criteria.add(encryptedCriteria, criterionObj);
                     }
                     shuffleCriteria(criteria);
                     if (advancement.has(REQUIREMENTS_KEY)) {
                         JsonArray requirementsArray = advancement.getAsJsonArray(REQUIREMENTS_KEY);
                         for (int i = 0; i < requirementsArray.size(); i++) {
-                            JsonArray innerArray = requirementsArray.get(i).getAsJsonArray();
-                            for (int j = 0; j < innerArray.size(); j++) {
-                                String oldRequirement = innerArray.get(j).getAsString();
+                            JsonArray requirementArray = requirementsArray.get(i).getAsJsonArray();
+                            for (int j = 0; j < requirementArray.size(); j++) {
+                                String oldRequirement = requirementArray.get(j).getAsString();
                                 String encryptedRequirement = encryptedCriteriaMap.get(oldRequirement);
                                 if (encryptedRequirement != null) {
-                                    innerArray.set(j, new JsonPrimitive(encryptedRequirement));
+                                    requirementArray.set(j, new JsonPrimitive(encryptedRequirement));
                                 }
                             }
-                            shuffleRequirements(innerArray);
+                            shuffleRequirements(requirementArray);
                         }
                     }
                     advancementToEncryptedCriteriaMap.put(advancementId, encryptedCriteriaMap);
+                    Files.writeString(file, new GsonBuilder().setPrettyPrinting().create().toJson(advancement));
                 }
-                Files.writeString(file, new GsonBuilder().setPrettyPrinting().create().toJson(advancement));
                 return FileVisitResult.CONTINUE;
             }
         });
@@ -137,20 +137,25 @@ public class AdvancementsEncryptor {
                 }
                 String content = Files.readString(file);
                 Matcher matcher = pattern.matcher(content);
-                StringBuilder sb = new StringBuilder();
+                StringBuilder sb = null;
                 while (matcher.find()) {
                     String advancementId = matcher.group(1);
-                    String criteriaName = matcher.group(2);
+                    String criterion = matcher.group(2);
                     Map<String, String> encryptedCriteriaMap = advancementToEncryptedCriteriaMap.get(new Identifier(advancementId));
                     if (encryptedCriteriaMap != null) {
-                        String encryptedName = encryptedCriteriaMap.get(criteriaName);
-                        if (encryptedName != null) {
-                            matcher.appendReplacement(sb, "only " + advancementId + " " + encryptedName);
+                        String encryptedCriterion = encryptedCriteriaMap.get(criterion);
+                        if (encryptedCriterion != null) {
+                            if (sb == null) {
+                                sb = new StringBuilder();
+                            }
+                            matcher.appendReplacement(sb, "only " + advancementId + " " + encryptedCriterion);
                         }
                     }
                 }
-                matcher.appendTail(sb);
-                Files.writeString(file, sb.toString());
+                if (sb != null) {
+                    matcher.appendTail(sb);
+                    Files.writeString(file, sb.toString());
+                }
                 return FileVisitResult.CONTINUE;
             }
         });
@@ -180,7 +185,7 @@ public class AdvancementsEncryptor {
         }
     }
 
-    private static String encryptCriteria(Identifier advancementId, String criteria, long seed) {
+    private static String encryptCriterion(Identifier advancementId, String criterion, long seed) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] keyBytes = digest.digest((seed + advancementId.toString()).getBytes(StandardCharsets.UTF_8));
@@ -191,19 +196,19 @@ public class AdvancementsEncryptor {
             IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
-            byte[] encrypted = cipher.doFinal(criteria.getBytes());
+            byte[] encrypted = cipher.doFinal(criterion.getBytes());
             byte[] combined = new byte[iv.length + encrypted.length];
             System.arraycopy(iv, 0, combined, 0, iv.length);
             System.arraycopy(encrypted, 0, combined, iv.length, encrypted.length);
             return Base64.getUrlEncoder().withoutPadding().encodeToString(combined);
         } catch (Exception e) {
-            return criteria;
+            return criterion;
         }
     }
 
-    public static String decryptCriteria(Identifier advancementId, String criteria, long seed) {
+    public static String decryptCriterion(Identifier advancementId, String criterion, long seed) {
         try {
-            byte[] combined = Base64.getUrlDecoder().decode(criteria);
+            byte[] combined = Base64.getUrlDecoder().decode(criterion);
             byte[] iv = Arrays.copyOfRange(combined, 0, 16);
             byte[] cipherText = Arrays.copyOfRange(combined, 16, combined.length);
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -215,7 +220,7 @@ public class AdvancementsEncryptor {
             byte[] originalTextBytes = cipher.doFinal(cipherText);
             return new String(originalTextBytes, StandardCharsets.UTF_8);
         } catch (Exception e) {
-            return criteria;
+            return criterion;
         }
     }
 }

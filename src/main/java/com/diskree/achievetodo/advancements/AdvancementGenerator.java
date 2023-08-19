@@ -58,7 +58,7 @@ public class AdvancementGenerator {
             return null;
         }
         Identifier advancementId = advancement.getId();
-        String criterion = AdvancementsEncryptor.decryptCriteria(advancementId, incompleteCriteria.get(player.getRandom().nextInt(incompleteCriteria.size())), player.getServerWorld().getSeed());
+        String criterion = AdvancementsEncryptor.decryptCriterion(advancementId, incompleteCriteria.get(player.getRandom().nextInt(incompleteCriteria.size())), player.getServerWorld().getSeed());
         Item hintItem = null;
         NbtCompound nbt = new NbtCompound();
         boolean dropHint = false;

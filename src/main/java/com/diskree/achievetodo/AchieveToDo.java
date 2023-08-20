@@ -2,6 +2,7 @@ package com.diskree.achievetodo;
 
 import com.diskree.achievetodo.advancements.AdvancementGenerator;
 import com.diskree.achievetodo.advancements.hints.*;
+import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
 import com.mojang.brigadier.Command;
 import net.fabricmc.fabric.api.event.player.*;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
@@ -14,6 +15,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.texture.MissingSprite;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -35,7 +38,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.*;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
-import net.minecraft.world.event.GameEvent;
+import org.apache.http.util.TextUtils;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.loader.api.QuiltLoader;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
@@ -48,6 +51,10 @@ import org.quiltmc.qsl.networking.api.ServerPlayNetworking;
 import org.quiltmc.qsl.networking.api.client.ClientPlayNetworking;
 import org.quiltmc.qsl.resource.loader.api.ResourceLoader;
 import org.quiltmc.qsl.resource.loader.api.ResourcePackActivationType;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AchieveToDo implements ModInitializer {
 
@@ -128,6 +135,8 @@ public class AchieveToDo implements ModInitializer {
 
     public static final SoundEvent MUSIC_DISC_5_ACTIVATOR = SoundEvent.createVariableRangeEvent(new Identifier(ID, "music_disc_5_activator"));
     public static final Identifier EVOKER_NO_TOTEM_OF_UNDYING_LOOT_TABLE_ID = new Identifier(ID, "entities/evoker_no_totem_of_undying");
+
+    private boolean isPanoramaLoading;
 
     public static int getScore(PlayerEntity player) {
         if (player == null) {
@@ -227,6 +236,12 @@ public class AchieveToDo implements ModInitializer {
             }
             if (stack.getItem() instanceof ArmorItem armorItem && isEquipmentBlocked(player, armorItem)) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
+            }
+            if (world.isClient && stack.isOf(Items.SPYGLASS)) {
+                String panoramaPath = SpyglassPanoramaDetails.getSpyglassPanoramaPath(stack);
+                if (!TextUtils.isEmpty(panoramaPath) && !isPanoramaReady(panoramaPath)) {
+                    return TypedActionResult.fail(ItemStack.EMPTY);
+                }
             }
             return TypedActionResult.pass(ItemStack.EMPTY);
         });
@@ -357,6 +372,59 @@ public class AchieveToDo implements ModInitializer {
             }
         }
         return false;
+    }
+
+    public boolean isPanoramaReady(String panoramaPath) {
+        MinecraftClient client = MinecraftClient.getInstance();
+        if (isPanoramaLoading) {
+            if (client.player != null) {
+                client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading").getString()).copy().formatted(Formatting.GREEN), true);
+            }
+            return false;
+        }
+        List<Integer> missingPanoramaFaces = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            if (client.getTextureManager().getOrDefault(new Identifier(AchieveToDo.ID, panoramaPath + "_" + i + ".png"), MissingSprite.getMissingSpriteTexture()) == MissingSprite.getMissingSpriteTexture()) {
+                missingPanoramaFaces.add(i);
+            }
+        }
+        if (missingPanoramaFaces.isEmpty()) {
+            return true;
+        }
+        File panoramaDir = new File(client.runDirectory, "panorama");
+        if (!panoramaDir.exists() && !panoramaDir.mkdirs()) {
+            return false;
+        }
+        SpyglassPanoramaDetails details = SpyglassPanoramaDetails.from(panoramaPath);
+        if (details == null) {
+            return false;
+        }
+        isPanoramaLoading = true;
+        boolean isCached = true;
+        for (int face : missingPanoramaFaces) {
+            boolean isLastLoading = face == missingPanoramaFaces.get(missingPanoramaFaces.size() - 1);
+            File cacheFile = details.generateCacheFile(panoramaDir, face);
+            if (!cacheFile.exists()) {
+                isCached = false;
+            }
+            String url = details.generateURL(face);
+            SpyglassPanoramaTexture spyglassPanoramaTexture = new SpyglassPanoramaTexture(cacheFile, url, (success) -> {
+                isPanoramaLoading = false;
+                if (client.player != null && isLastLoading) {
+                    if (success) {
+                        client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.success").getString()).copy().formatted(Formatting.GREEN), true);
+                    } else {
+                        client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.error").getString()).copy().formatted(Formatting.RED), true);
+                    }
+                }
+            });
+            Identifier panoramaFace = new Identifier(AchieveToDo.ID, panoramaPath + "_" + face + ".png");
+            client.getTextureManager().registerTexture(panoramaFace, spyglassPanoramaTexture);
+        }
+        if (client.player != null) {
+            client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading").getString()).copy().formatted(Formatting.GREEN), true);
+        }
+        return isCached;
     }
 
     private void registerPacks() {

@@ -59,10 +59,13 @@
 
   "feature.not_supported": "AchieveToDo worlds do not support this.",
 
-  "spyglass.tooltip.panorama.header": "Look through me to discover",
-  "spyglass.tooltip.panorama.biome": "a biome you haven't visited yet",
-  "spyglass.tooltip.panorama.structure": "a structure you haven't explored yet",
-  "spyglass.tooltip.panorama.chest": "a chest you haven't opened yet",
+  "spyglass.panorama.tooltip.header": "Look through me to discover",
+  "spyglass.panorama.tooltip.biome": "a biome you haven't visited yet",
+  "spyglass.panorama.tooltip.structure": "a structure you haven't explored yet",
+  "spyglass.panorama.tooltip.chest": "a chest you haven't opened yet",
+  "spyglass.panorama.loading": "Panorama loading...",
+  "spyglass.panorama.loading.success": "Panorama loading completed.",
+  "spyglass.panorama.loading.error": "Panorama loading error. Check your internet connection.",
 
   "blocked.break_blocks_in_negative_y.title": "Breaking blocks below zero",
   "blocked.break_blocks_in_negative_y.description": "Ability to break blocks below zero",

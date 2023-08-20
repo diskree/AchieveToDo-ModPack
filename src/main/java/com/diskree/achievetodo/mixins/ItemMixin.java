@@ -26,13 +26,13 @@ public class ItemMixin {
             if (nbt != null) {
                 int panoramaType = nbt.getInt("CustomModelData");
                 if (panoramaType != 0) {
-                    tooltip.add(Text.translatable("spyglass.tooltip.panorama.header").formatted(Formatting.DARK_AQUA));
+                    tooltip.add(Text.translatable("spyglass.panorama.tooltip.header").formatted(Formatting.DARK_AQUA));
                     if (panoramaType == 1) {
-                        tooltip.add(Text.translatable("spyglass.tooltip.panorama.biome").formatted(Formatting.DARK_GREEN));
+                        tooltip.add(Text.translatable("spyglass.panorama.tooltip.biome").formatted(Formatting.DARK_GREEN));
                     } else if (panoramaType == 2) {
-                        tooltip.add(Text.translatable("spyglass.tooltip.panorama.structure").formatted(Formatting.DARK_BLUE));
+                        tooltip.add(Text.translatable("spyglass.panorama.tooltip.structure").formatted(Formatting.DARK_BLUE));
                     } else if (panoramaType == 3) {
-                        tooltip.add(Text.translatable("spyglass.tooltip.panorama.chest").formatted(Formatting.DARK_PURPLE));
+                        tooltip.add(Text.translatable("spyglass.panorama.tooltip.chest").formatted(Formatting.DARK_PURPLE));
                     }
                 }
             }

@@ -3,5 +3,6 @@
 build/
 /external/BACAP/
 /pack/*.mrpack
+/pack/mods/achievetodo-*.jar
 /run/
 src/main/java/com/diskree/achievetodo/BuildConfig.java

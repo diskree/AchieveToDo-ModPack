@@ -1,13 +1,10 @@
 package com.diskree.achievetodo.mixins.client;
 
-import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.CubeMapRenderer;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.Identifier;
-import org.apache.http.util.TextUtils;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -35,12 +32,12 @@ public abstract class GameRendererMixin {
             cubeMap = null;
             return;
         }
-        String panoramaPath = SpyglassPanoramaDetails.getSpyglassPanoramaPath(client.player.getActiveItem());
-        if (TextUtils.isEmpty(panoramaPath)) {
+        SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.from(client.player.getActiveItem());
+        if (panoramaDetails == null) {
             return;
         }
         if (cubeMap == null) {
-            cubeMap = new CubeMapRenderer(new Identifier(AchieveToDo.ID, panoramaPath));
+            cubeMap = new CubeMapRenderer(panoramaDetails.generatePanoramaTextureId());
         }
         float pitch = client.player.prevPitch;
         if (pitch > 180.0f) {

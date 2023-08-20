@@ -2,11 +2,13 @@ package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.client.AdvancementsEncryptor;
+import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementDisplay;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.criterion.CriterionProgress;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.decoration.painting.PaintingEntity;
 import net.minecraft.item.EnchantedBookItem;
@@ -888,20 +890,20 @@ public class AdvancementGenerator {
                     default -> criterion;
                 };
                 hintItem = Items.SPYGLASS;
-                nbt.putInt("CustomModelData", 1);
-                nbt.putString("Panorama", "textures/panorama/biome/" + criterion + "/panorama");
+                nbt.putString(SpyglassPanoramaDetails.PANORAMA_TYPE, "biome");
+                nbt.putString(SpyglassPanoramaDetails.PANORAMA_NAME, criterion);
                 dropHint = true;
             }
             case "blazeandcave:adventure/raidin_master" -> {
                 hintItem = Items.SPYGLASS;
-                nbt.putInt("CustomModelData", 2);
-                nbt.putString("Panorama", "textures/panorama/structure/" + criterion + "/panorama");
+                nbt.putString(SpyglassPanoramaDetails.PANORAMA_TYPE, "structure");
+                nbt.putString(SpyglassPanoramaDetails.PANORAMA_NAME, criterion);
                 dropHint = true;
             }
             case "blazeandcave:challenges/i_am_loot" -> {
                 hintItem = Items.SPYGLASS;
-                nbt.putInt("CustomModelData", 3);
-                nbt.putString("Panorama", "textures/panorama/chest/" + criterion + "/panorama");
+                nbt.putString(SpyglassPanoramaDetails.PANORAMA_TYPE, "chest");
+                nbt.putString(SpyglassPanoramaDetails.PANORAMA_NAME, criterion);
                 dropHint = true;
             }
         }
@@ -913,6 +915,10 @@ public class AdvancementGenerator {
         }
         ItemStack hint = new ItemStack(hintItem);
         hint.setNbt(nbt);
+        if (dropHint) {
+            hint.addEnchantment(Enchantments.UNBREAKING, 1);
+            hint.addHideFlag(ItemStack.TooltipSection.ENCHANTMENTS);
+        }
         return new AdvancementHint(tabDisplay.getIcon(), advancementDisplay.getIcon(), hint, dropHint);
     }
 

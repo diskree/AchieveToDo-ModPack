@@ -42,7 +42,6 @@
     "client.GameRendererMixin",
     "client.GameTabMixin",
     "client.LockButtonWidgetMixin",
-    "client.LogoDrawerMixin",
     "client.MinecraftClientMixin",
     "client.MoreTabMixin",
     "client.MouseMixin",

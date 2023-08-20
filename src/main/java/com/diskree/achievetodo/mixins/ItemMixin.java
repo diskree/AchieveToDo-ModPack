@@ -1,10 +1,9 @@
 package com.diskree.achievetodo.mixins;
 
+import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
@@ -21,21 +20,10 @@ public class ItemMixin {
 
     @Inject(method = "appendTooltip", at = @At("HEAD"))
     private void appendTooltipInject(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context, CallbackInfo ci) {
-        if (stack != null && stack.isOf(Items.SPYGLASS)) {
-            NbtCompound nbt = stack.getNbt();
-            if (nbt != null) {
-                int panoramaType = nbt.getInt("CustomModelData");
-                if (panoramaType != 0) {
-                    tooltip.add(Text.translatable("spyglass.panorama.tooltip.header").formatted(Formatting.DARK_AQUA));
-                    if (panoramaType == 1) {
-                        tooltip.add(Text.translatable("spyglass.panorama.tooltip.biome").formatted(Formatting.DARK_GREEN));
-                    } else if (panoramaType == 2) {
-                        tooltip.add(Text.translatable("spyglass.panorama.tooltip.structure").formatted(Formatting.DARK_BLUE));
-                    } else if (panoramaType == 3) {
-                        tooltip.add(Text.translatable("spyglass.panorama.tooltip.chest").formatted(Formatting.DARK_PURPLE));
-                    }
-                }
-            }
+        SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.from(stack);
+        if (panoramaDetails != null) {
+            tooltip.add(Text.translatable("spyglass.panorama.tooltip.header").formatted(Formatting.DARK_AQUA));
+            tooltip.add(Text.translatable("spyglass.panorama.tooltip." + panoramaDetails.type()).formatted(Formatting.DARK_GREEN));
         }
     }
 }

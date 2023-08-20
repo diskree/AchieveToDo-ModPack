@@ -150,14 +150,15 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         Collections.shuffle(blocksToCharge);
         BlockPos randomPortalFrameBlockPos = blocksToCharge.get(0);
         getWorld().setBlockState(randomPortalFrameBlockPos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_PROPERTY, true));
-        getWorld().playSound(null, (double) randomPortalFrameBlockPos.getX() + 0.5, (double) randomPortalFrameBlockPos.getY() + 0.5, (double) randomPortalFrameBlockPos.getZ() + 0.5, SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 1.0f, 0.8f);
+        ServerPlayerEntity charger = getChargerPlayer();
+        getWorld().playSound(null, charger.getX(), charger.getY(), charger.getZ(), SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 1.0f, 0.4f);
         if (blocksToCharge.size() == 1) {
-            AdvancementHint advancementHint = AdvancementGenerator.getRandomAdvancementHint(getChargerPlayer());
+            AdvancementHint advancementHint = AdvancementGenerator.getRandomAdvancementHint(charger);
             if (advancementHint != null) {
                 showAdvancementTab(advancementHint.tab());
                 showAdvancementHint(advancementHint.hint(), advancementHint.dropHint());
                 showAdvancement(advancementHint.advancement());
-                AchieveToDo.grantHintsAdvancement(getChargerPlayer(), "soul_energizer");
+                AchieveToDo.grantHintsAdvancement(charger, "soul_energizer");
                 if (++receivedHints >= HINTS_LIMIT) {
                     for (BlockPos pos : getPortalBlocks(true, true)) {
                         if (!isReinforcedDeepslate(pos)) {
@@ -165,14 +166,14 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
                         }
                         getWorld().setBlockState(pos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_BROKEN_PROPERTY, true));
                     }
-                    AchieveToDo.grantHintsAdvancement(getChargerPlayer(), "nothing_lasts_forever");
+                    AchieveToDo.grantHintsAdvancement(charger, "nothing_lasts_forever");
                 }
             } else {
                 ItemStack barrierItem = new ItemStack(Items.BARRIER);
                 showAdvancementTab(barrierItem);
                 showAdvancementHint(barrierItem, false);
                 showAdvancement(barrierItem);
-                AchieveToDo.grantHintsAdvancement(getChargerPlayer(), "no_new_updates");
+                AchieveToDo.grantHintsAdvancement(charger, "no_new_updates");
             }
             discharge();
         } else {
@@ -216,7 +217,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         int experienceCount = player.totalExperience;
         if (experienceCount < CHARGE_XP_COUNT) {
             player.damage(getWorld().getDamageSources().badRespawnPoint(playerPos), 1);
-            AchieveToDo.grantHintsAdvancement(getChargerPlayer(), "beethoven_mistake");
+            AchieveToDo.grantHintsAdvancement(player, "beethoven_mistake");
         } else {
             player.addExperience(-CHARGE_XP_COUNT);
         }
@@ -269,8 +270,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
     }
 
     private boolean checkPlayerForActivation() {
-        Box box = getBoundingBox().expand(RITUAL_RADIUS, RITUAL_RADIUS, RITUAL_RADIUS);
-        List<PlayerEntity> players = getWorld().getEntitiesByClass(PlayerEntity.class, box, (LivingEntity::isAlive));
+        List<PlayerEntity> players = getPlayersAroundPortal();
         if (players.isEmpty()) {
             return false;
         }
@@ -280,6 +280,11 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             }
         }
         return true;
+    }
+
+    private List<PlayerEntity> getPlayersAroundPortal() {
+        Box box = getBoundingBox().expand(RITUAL_RADIUS, RITUAL_RADIUS, RITUAL_RADIUS);
+        return getWorld().getEntitiesByClass(PlayerEntity.class, box, (LivingEntity::isAlive));
     }
 
     private boolean checkDisk(BlockPos jukeboxPos) {

@@ -38,7 +38,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.*;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
-import org.apache.http.util.TextUtils;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.loader.api.QuiltLoader;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
@@ -238,8 +237,8 @@ public class AchieveToDo implements ModInitializer {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
             if (world.isClient && stack.isOf(Items.SPYGLASS)) {
-                String panoramaPath = SpyglassPanoramaDetails.getSpyglassPanoramaPath(stack);
-                if (!TextUtils.isEmpty(panoramaPath) && !isPanoramaReady(panoramaPath)) {
+                SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.from(stack);
+                if (panoramaDetails != null && !isPanoramaReady(panoramaDetails)) {
                     return TypedActionResult.fail(ItemStack.EMPTY);
                 }
             }
@@ -374,58 +373,53 @@ public class AchieveToDo implements ModInitializer {
         return false;
     }
 
-    public boolean isPanoramaReady(String panoramaPath) {
+    public boolean isPanoramaReady(SpyglassPanoramaDetails panoramaDetails) {
         MinecraftClient client = MinecraftClient.getInstance();
         if (isPanoramaLoading) {
-            if (client.player != null) {
-                client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading").getString()).copy().formatted(Formatting.GREEN), true);
-            }
             return false;
         }
         List<Integer> missingPanoramaFaces = new ArrayList<>();
-        for (int i = 0; i < 6; i++) {
-            if (client.getTextureManager().getOrDefault(new Identifier(AchieveToDo.ID, panoramaPath + "_" + i + ".png"), MissingSprite.getMissingSpriteTexture()) == MissingSprite.getMissingSpriteTexture()) {
-                missingPanoramaFaces.add(i);
+        for (int face = 0; face < 6; face++) {
+            if (client.getTextureManager().getOrDefault(panoramaDetails.generateFaceTextureId(face), MissingSprite.getMissingSpriteTexture()) == MissingSprite.getMissingSpriteTexture()) {
+                missingPanoramaFaces.add(face);
             }
         }
         if (missingPanoramaFaces.isEmpty()) {
             return true;
         }
-        File panoramaDir = new File(client.runDirectory, "panorama");
-        if (!panoramaDir.exists() && !panoramaDir.mkdirs()) {
-            return false;
-        }
-        SpyglassPanoramaDetails details = SpyglassPanoramaDetails.from(panoramaPath);
-        if (details == null) {
+        File cacheDir = new File(client.runDirectory, "panorama");
+        if (!cacheDir.exists() && !cacheDir.mkdirs()) {
             return false;
         }
         isPanoramaLoading = true;
-        boolean isCached = true;
+        boolean isPanoramaExists = true;
         for (int face : missingPanoramaFaces) {
             boolean isLastLoading = face == missingPanoramaFaces.get(missingPanoramaFaces.size() - 1);
-            File cacheFile = details.generateCacheFile(panoramaDir, face);
-            if (!cacheFile.exists()) {
-                isCached = false;
+            File cacheFile = panoramaDetails.generateCacheFile(cacheDir, face);
+            boolean isFaceExists = cacheFile.exists();
+            if (!isFaceExists) {
+                isPanoramaExists = false;
             }
-            String url = details.generateURL(face);
+            String url = panoramaDetails.generateURL(face);
             SpyglassPanoramaTexture spyglassPanoramaTexture = new SpyglassPanoramaTexture(cacheFile, url, (success) -> {
                 if (!isLastLoading || client.player == null) {
                     return;
                 }
                 isPanoramaLoading = false;
-                if (success) {
-                    client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.success").getString()).copy().formatted(Formatting.GREEN), true);
-                } else {
-                    client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.error").getString()).copy().formatted(Formatting.RED), true);
+                if (!isFaceExists) {
+                    if (success) {
+                        client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.success").getString()).copy().formatted(Formatting.GREEN), true);
+                    } else {
+                        client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.error").getString()).copy().formatted(Formatting.RED), true);
+                    }
                 }
             });
-            Identifier panoramaFace = new Identifier(AchieveToDo.ID, panoramaPath + "_" + face + ".png");
-            client.getTextureManager().registerTexture(panoramaFace, spyglassPanoramaTexture);
+            client.getTextureManager().registerTexture(panoramaDetails.generateFaceTextureId(face), spyglassPanoramaTexture);
         }
-        if (client.player != null) {
-            client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading").getString()).copy().formatted(Formatting.GREEN), true);
+        if (!isPanoramaExists && client.player != null) {
+            client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading").getString()).copy().formatted(Formatting.YELLOW), true);
         }
-        return isCached;
+        return isPanoramaExists;
     }
 
     private void registerPacks() {

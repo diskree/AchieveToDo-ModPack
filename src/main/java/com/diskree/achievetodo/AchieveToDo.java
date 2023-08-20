@@ -409,13 +409,14 @@ public class AchieveToDo implements ModInitializer {
             }
             String url = details.generateURL(face);
             SpyglassPanoramaTexture spyglassPanoramaTexture = new SpyglassPanoramaTexture(cacheFile, url, (success) -> {
+                if (!isLastLoading || client.player == null) {
+                    return;
+                }
                 isPanoramaLoading = false;
-                if (client.player != null && isLastLoading) {
-                    if (success) {
-                        client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.success").getString()).copy().formatted(Formatting.GREEN), true);
-                    } else {
-                        client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.error").getString()).copy().formatted(Formatting.RED), true);
-                    }
+                if (success) {
+                    client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.success").getString()).copy().formatted(Formatting.GREEN), true);
+                } else {
+                    client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.error").getString()).copy().formatted(Formatting.RED), true);
                 }
             });
             Identifier panoramaFace = new Identifier(AchieveToDo.ID, panoramaPath + "_" + face + ".png");

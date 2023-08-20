@@ -9,10 +9,7 @@ import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementDisplay;
 import net.minecraft.advancement.AdvancementProgress;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.MinecraftClient;
@@ -271,7 +268,7 @@ public class AchieveToDo implements ModInitializer {
             if (block.isOf(Blocks.BEACON) && isActionBlocked(player, BlockedAction.USING_BEACON)) {
                 return ActionResult.FAIL;
             }
-            if (block.isOf(Blocks.BLACK_SHULKER_BOX) && isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {
+            if (block.getBlock() instanceof ShulkerBoxBlock && isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {
                 return ActionResult.FAIL;
             }
             if (block.isOf(Blocks.SHULKER_BOX) && isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {

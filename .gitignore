@@ -1,6 +1,7 @@
 .gradle/
 .idea/
 build/
+/external/BACAP/
+/pack/*.mrpack
 /run/
 src/main/java/com/diskree/achievetodo/BuildConfig.java
-*.mrpack

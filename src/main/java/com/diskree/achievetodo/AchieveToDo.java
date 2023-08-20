@@ -31,6 +31,7 @@ import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.scoreboard.ScoreboardObjective;
 import net.minecraft.scoreboard.ScoreboardPlayerScore;
 import net.minecraft.server.command.CommandManager;
+import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
@@ -165,23 +166,24 @@ public class AchieveToDo implements ModInitializer {
         registerEntities();
 
         CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> dispatcher.register(CommandManager.literal("random").executes((context -> {
-            Advancement randomAdvancement = AdvancementGenerator.getRandomAdvancement(context.getSource().getPlayer());
+            ServerCommandSource source = context.getSource();
+            Advancement randomAdvancement = AdvancementGenerator.getRandomAdvancement(source.getPlayer());
             if (randomAdvancement != null) {
                 AdvancementDisplay display = randomAdvancement.getDisplay();
                 AdvancementDisplay rootDisplay = randomAdvancement.getRoot().getDisplay();
                 Text displayTitle = display != null ? display.getTitle() : null;
                 if (display == null || rootDisplay == null || displayTitle == null) {
-                    context.getSource().sendSystemMessage(Text.of("Parsing error for advancement: " + randomAdvancement.getId()).copy().formatted(Formatting.RED));
+                    source.sendSystemMessage(Text.of("Parsing error for advancement: " + randomAdvancement.getId()).copy().formatted(Formatting.RED));
                     return Command.SINGLE_SUCCESS;
                 }
                 final String separator = "----------";
-                context.getSource().sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
-                context.getSource().sendSystemMessage(rootDisplay.getTitle().copy().formatted(Formatting.BLUE, Formatting.BOLD));
-                context.getSource().sendSystemMessage(display.getTitle().copy().formatted(Formatting.AQUA, Formatting.ITALIC));
-                context.getSource().sendSystemMessage(display.getDescription().copy().formatted(Formatting.YELLOW));
-                context.getSource().sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
+                source.sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
+                source.sendSystemMessage(rootDisplay.getTitle().copy().formatted(Formatting.BLUE, Formatting.BOLD));
+                source.sendSystemMessage(display.getTitle().copy().formatted(Formatting.AQUA, Formatting.ITALIC));
+                source.sendSystemMessage(display.getDescription().copy().formatted(Formatting.YELLOW));
+                source.sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
             } else {
-                context.getSource().sendSystemMessage(Text.translatable("commands.random.no_advancements"));
+                source.sendSystemMessage(Text.translatable("commands.random.no_advancements"));
             }
             return Command.SINGLE_SUCCESS;
         }))));
@@ -195,7 +197,6 @@ public class AchieveToDo implements ModInitializer {
                 }
             });
         });
-
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {
                 if (pos.getY() >= 0 && isActionBlocked(player, BlockedAction.BREAK_BLOCKS_IN_POSITIVE_Y)) {

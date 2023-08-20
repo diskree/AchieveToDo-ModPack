@@ -1,0 +1,41 @@
+{
+  "main_menu": {
+    "top_left": [],
+    "top_right": [],
+    "bottom_left": [
+      {
+        "text": "AchieveToDo 1.0",
+        "clickEvent": {
+          "action": "open_url",
+          "value": "https://github.com/diskree/AchieveToDo"
+        },
+        "hoverEvent": {
+          "action": "show_text",
+          "contents": "Open modpack page on Github"
+        }
+      }
+    ],
+    "bottom_right": [],
+    "mod_blacklist": []
+  },
+  "pause_menu": {
+    "top_left": [],
+    "top_right": [],
+    "bottom_left": [
+      {
+        "text": "AchieveToDo 1.0",
+        "color": "gray",
+        "clickEvent": {
+          "action": "open_url",
+          "value": "https://github.com/diskree/AchieveToDo"
+        },
+        "hoverEvent": {
+          "action": "show_text",
+          "contents": "Open modpack page on Github"
+        }
+      }
+    ],
+    "bottom_right": [],
+    "mod_blacklist": []
+  }
+}

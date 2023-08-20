@@ -1,0 +1,62 @@
+{
+  "preview": {
+    "enable": true,
+    "swapModes": true,
+    "alwaysOn": true,
+    "compactPreviewNbtBehavior": "SEPARATE",
+    "defaultMaxRowSize": 9,
+    "serverIntegration": true,
+    "theme": "SHULKERBOXTOOLTIP",
+    "position": "OUTSIDE_BOTTOM",
+    "shortItemCounts": true
+  },
+  "tooltip": {
+    "showKeyHints": false,
+    "type": "NONE",
+    "lootTableInfoType": "HIDE",
+    "hideShulkerBoxLore": false
+  },
+  "colors": {
+    "coloredPreview": true,
+    "colors": {
+      "shulkerboxtooltip:shulker_boxes": {
+        "shulker_box": 0x976797,
+        "white_shulker_box": 0xf9fffe,
+        "orange_shulker_box": 0xf98026,
+        "magenta_shulker_box": 0xc74ebd,
+        "light_blue_shulker_box": 0x3ab3da,
+        "yellow_shulker_box": 0xfed83d,
+        "lime_shulker_box": 0x80c726,
+        "pink_shulker_box": 0xf38baa,
+        "gray_shulker_box": 0x474f52,
+        "light_gray_shulker_box": 0x9d9d97,
+        "cyan_shulker_box": 0x269c9c,
+        "purple_shulker_box": 0x8932b8,
+        "blue_shulker_box": 0x3c44aa,
+        "brown_shulker_box": 0x835432,
+        "green_shulker_box": 0x5e7c26,
+        "red_shulker_box": 0xb02e26,
+        "black_shulker_box": 0x262626
+      },
+      "shulkerboxtooltip:default": {
+        "default": 0xffffff,
+        "ender_chest": 0xb4b41
+      }
+    }
+  },
+  "controls": {
+    "previewKey": {
+      "code": "key.keyboard.unknown"
+    },
+    "fullPreviewKey": {
+      "code": "key.keyboard.unknown"
+    },
+    "lockTooltipKey": {
+      "code": "key.keyboard.unknown"
+    }
+  },
+  "server": {
+    "clientIntegration": true,
+    "enderChestSyncType": "ACTIVE"
+  }
+}

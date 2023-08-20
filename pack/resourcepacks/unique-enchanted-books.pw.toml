@@ -1,0 +1,13 @@
+name = "Unique Enchanted Books"
+filename = "Unique Enchanted Books 2.0.3.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/54UxoRa8/versions/n64kSoVL/UniqueEnchantedBooks_v2.0.3.zip"
+hash-format = "sha1"
+hash = "8a5324d089dcdd2419c0b48de1072acb3a874a07"
+
+[update]
+[update.modrinth]
+mod-id = "54UxoRa8"
+version = "n64kSoVL"

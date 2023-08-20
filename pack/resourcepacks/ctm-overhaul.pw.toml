@@ -1,0 +1,13 @@
+name = "Connected Textures (CTM) Overhaul"
+filename = "CTM Overhaul 5.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/S1rcrDD7/versions/Nur7Brdi/CTM-Overhaul-V_5.0.zip"
+hash-format = "sha1"
+hash = "945a38988a427e8cb7ff417a274041b0eb63a9e5"
+
+[update]
+[update.modrinth]
+mod-id = "S1rcrDD7"
+version = "Nur7Brdi"

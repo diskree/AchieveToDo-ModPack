@@ -1,0 +1,13 @@
+name = "Better Recipe Book"
+filename = "brb-1.8.0-fabric.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/vWIaVOTE/versions/yqmNoWxL/brb-1.8.0-fabric.jar"
+hash-format = "sha1"
+hash = "c108c945a25cb86260416547fb953a0364c2c5c6"
+
+[update]
+[update.modrinth]
+mod-id = "vWIaVOTE"
+version = "yqmNoWxL"

@@ -14,7 +14,7 @@ public record SpyglassPanoramaDetails(String type, String name) {
     public static final String PANORAMA_NAME = "PanoramaName";
 
     public String generateURL(int face) {
-        return "https://raw.githubusercontent.com/diskree/AchieveToDo-core/master/panorama/" + type + "/" + name + "/panorama_" + face + ".png";
+        return "https://raw.githubusercontent.com/diskree/AchieveToDo/master/external/panorama/" + type + "/" + name + "/panorama_" + face + ".png";
     }
 
     public Identifier generatePanoramaTextureId() {

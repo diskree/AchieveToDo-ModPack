@@ -1,0 +1,13 @@
+name = "Better Grass"
+filename = "Banner Pattern Clarity 1.3.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/Uigm3P2d/versions/gORsZJpG/Banner%20Pattern%20Clarity%20v1.3%20pf15.zip"
+hash-format = "sha1"
+hash = "ce5379d43e47fcbaf89e9208544276c6be06b642"
+
+[update]
+[update.modrinth]
+mod-id = "Uigm3P2d"
+version = "gORsZJpG"

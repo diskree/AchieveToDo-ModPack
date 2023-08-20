@@ -1,0 +1,3 @@
+[registry_sync]
+missing_registry_sync_message = "Unsupported (vanilla?) client!\nThis server requires a modded client to join!"
+support_fabric_api_protocol = true

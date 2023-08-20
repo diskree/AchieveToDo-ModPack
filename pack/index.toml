@@ -1,34 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = ".idea/AchieveToDo.iml"
-hash = "0ff94b49c61885dd797e3da61dc3444c7ab48f317373ca42681910f1f8413752"
-
-[[files]]
-file = ".idea/libraries/resourcepacks.xml"
-hash = "ce834c583b68cdb70300b9dbdf43631acd786a3c74729ad285216705e0801718"
-
-[[files]]
-file = ".idea/misc.xml"
-hash = "57bea35097014a036eab2807a673960cb5f1c52fe05dd0fa9fbe23d8a7676ae4"
-
-[[files]]
-file = ".idea/modules.xml"
-hash = "4f36fc3d62386e6341d96044942c7b0250f2390cd23ab3deece67553636854f0"
-
-[[files]]
-file = ".idea/vcs.xml"
-hash = "6323e12648862a0a96fc0d7877672817d6cd91e2c2a3c3d78f1090db23c6e88e"
-
-[[files]]
-file = ".idea/workspace.xml"
-hash = "fb1c7f2dff3f2343796600a11e626174e37d8bba9e0da1245ffb6290c3928c3c"
-
-[[files]]
-file = "LICENSE"
-hash = "43a372304b1da21ff143b9dd10424d93dc193073aecd5984a6b3872416dc7acd"
-
-[[files]]
 file = "config/betterf3.json"
 hash = "0a0bcb9a72a86befbf2f8720122e538806483d7f7cee326385e73b3afd04877d"
 
@@ -118,11 +90,11 @@ hash = "74efe4642640ba19537becf0f2dbf7a34d957d3902b88f5e0a53fec9a9b28796"
 
 [[files]]
 file = "config/yosbr/config/debugify-descriptions.json "
-hash = "a855ea6bc92dda18227842c053f5ad9236631b8086732559a914ce30e08b91a8"
+hash = "9e0a3e50d3354d8f812dee6fdc146dd863a44be50fad55950abd2224a963d15f"
 
 [[files]]
 file = "config/yosbr/config/debugify.json"
-hash = "c959d888e2eb832b8f628dc382f48223a6b21ecb9d3d2c5ea3308fa9e4370c0c"
+hash = "44f3a321708eb2eb517d7b05cc9ca212d38f7bab91f9977ea19d89c8ef3f47ab"
 
 [[files]]
 file = "config/yosbr/config/dynamicfps.toml"
@@ -191,11 +163,6 @@ hash = "6301114a214b8a1bd0c4938efde478b151818e167ddd5b4d2b337ea376868092"
 [[files]]
 file = "icon.png"
 hash = "48e41ad5654e7b11c81a771434b7907573c25295a58e9194ba2ac1848098260c"
-
-[[files]]
-file = "mods/achievetodo.pw.toml"
-hash = "87d0aff9a298480bfab5d51306d34e7c50df5f450ce4d738fa1cb5af8c0f9cce"
-metafile = true
 
 [[files]]
 file = "mods/antighost.pw.toml"

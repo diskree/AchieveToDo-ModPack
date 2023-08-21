@@ -1,6 +1,7 @@
-version:3120
-quilt_available_resource_packs:["continuity/default","continuity/glass_pane_culling_fix"]
+version:3465
+quilt_available_resource_packs:["continuity/default","continuity/glass_pane_culling_fix","achievetodo/bacap_lp","file/Better Banner Pattern.zip","file/Better Waxed Copper 1.0.zip","file/CTM Overhaul 5.0.zip","file/Default Dark Mode 1.20-2023.7.0.zip","file/Unique Enchanted Books 2.0.3.zip","file/Visual Fish Buckets 1.3.zip","file/Visual Goat Horns 1.0.1.zip","file/Visual Potions 1.0.zip","file/§fBetter §a§lGrass §71.20.zip","high_contrast","programmer_art","vanilla"]
 autoJump:false
+operatorItemsTab:false
 autoSuggestions:true
 chatColors:true
 chatLinks:true
@@ -26,6 +27,10 @@ fov:0.0
 screenEffectScale:1.0
 fovEffectScale:1.0
 darknessEffectScale:1.0
+glintSpeed:0.5
+glintStrength:0.75
+damageTiltStrength:1.0
+highContrast:false
 gamma:0.5
 renderDistance:12
 simulationDistance:12
@@ -34,11 +39,11 @@ guiScale:3
 particles:0
 maxFps:260
 graphicsMode:1
-ao:2
+ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:5
 renderClouds:"true"
-resourcePacks:["vanilla","continuity/default","continuity/glass_pane_culling_fix","achievetodo/bacap_lp","file/Default Dark Mode 1.20-2023.7.0.zip","file/Visual Goat Horns 1.0.1.zip","file/Banner Pattern Clarity 1.3.zip","file/Better Waxed Copper 1.0.zip","file/Unique Enchanted Books 2.0.3.zip"]
+resourcePacks:["vanilla","continuity/default","continuity/glass_pane_culling_fix","achievetodo/bacap_lp","file/Default Dark Mode 1.20-2023.7.0.zip","file/Visual Goat Horns 1.0.1.zip","file/Visual Fish Buckets 1.3.zip","file/Visual Potions 1.0.zip","file/Better Banner Pattern.zip","file/Better Waxed Copper 1.0.zip","file/Unique Enchanted Books 2.0.3.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
@@ -53,12 +58,12 @@ advancedItemTooltips:false
 pauseOnLostFocus:true
 overrideWidth:0
 overrideHeight:0
-heldItemTooltips:true
 chatHeightFocused:1.0
 chatDelay:0.0
 chatHeightUnfocused:0.44366195797920227
 chatScale:1.0
 chatWidth:1.0
+notificationDisplayTime:1.0
 mipmapLevels:4
 useNativeTransport:true
 mainHand:"right"
@@ -76,8 +81,11 @@ hideBundleTutorial:false
 syncChunkWrites:false
 showAutosaveIndicator:true
 allowServerListing:true
-chatPreview:1
 onlyShowSecureChat:false
+panoramaScrollSpeed:1.0
+debugifyTelemetry:0
+telemetryOptInExtra:false
+onboardAccessibility:false
 key_key.attack:key.mouse.left
 key_key.use:key.mouse.right
 key_key.forward:key.keyboard.w
@@ -112,15 +120,17 @@ key_key.hotbar.6:key.keyboard.6
 key_key.hotbar.7:key.keyboard.7
 key_key.hotbar.8:key.keyboard.8
 key_key.hotbar.9:key.keyboard.9
-key_key.dynamicfps.toggle_forced:key.keyboard.unknown
-key_key.dynamicfps.toggle_disabled:key.keyboard.unknown
 key_key.custom_hud.enable:key.keyboard.unknown
 key_key.custom_hud.cycle_profiles:key.keyboard.unknown
 key_key.custom_hud.swap_to_profile1:key.keyboard.unknown
 key_key.custom_hud.swap_to_profile2:key.keyboard.unknown
 key_key.custom_hud.swap_to_profile3:key.keyboard.unknown
-key_key.antighost.reveal:key.keyboard.g
+key_key.custom_hud.show_errors:key.keyboard.unknown
+key_key.dynamicfps.toggle_forced:key.keyboard.unknown
+key_key.dynamicfps.toggle_disabled:key.keyboard.unknown
 key_key.entityculling.toggle:key.keyboard.unknown
+key_key.antighost.reveal:key.keyboard.g
+key_key.fabricskyboxes.toggle:key.keyboard.keypad.0
 key_key.modmenu.open_menu:key.keyboard.unknown
 key_iris.keybind.reload:key.keyboard.r
 key_iris.keybind.toggleShaders:key.keyboard.k

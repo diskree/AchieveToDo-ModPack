@@ -144,22 +144,22 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                     Path globalPack = globalPacksDir.resolve(pack.toFileName());
                     Path worldPack = worldPacksDir.resolve(globalPack.getFileName());
                     Files.copy(globalPack, worldPack, StandardCopyOption.REPLACE_EXISTING);
-                    if (!pack.isAdvancementsPack()) {
-                        continue;
-                    }
-                    Path tempDir = worldPacksDir.resolve("temp");
-                    AdvancementsEncryptor.unzip(worldPack, tempDir);
-                    Files.deleteIfExists(worldPack);
-                    AdvancementsEncryptor.encrypt(tempDir, seed);
-                    AdvancementsEncryptor.zip(tempDir, worldPack);
-                    try (Stream<Path> stream = Files.walk(tempDir)) {
-                        stream.sorted(Comparator.reverseOrder()).forEach(path -> {
-                            try {
-                                Files.deleteIfExists(path);
-                            } catch (IOException ignored) {
-                            }
-                        });
-                    }
+//                    if (!pack.isAdvancementsPack()) {
+//                        continue;
+//                    }
+//                    Path tempDir = worldPacksDir.resolve("temp");
+//                    AdvancementsEncryptor.unzip(worldPack, tempDir);
+//                    Files.deleteIfExists(worldPack);
+//                    AdvancementsEncryptor.encrypt(tempDir, seed);
+//                    AdvancementsEncryptor.zip(tempDir, worldPack);
+//                    try (Stream<Path> stream = Files.walk(tempDir)) {
+//                        stream.sorted(Comparator.reverseOrder()).forEach(path -> {
+//                            try {
+//                                Files.deleteIfExists(path);
+//                            } catch (IOException ignored) {
+//                            }
+//                        });
+//                    }
                 }
             } catch (IOException ignored) {
             }

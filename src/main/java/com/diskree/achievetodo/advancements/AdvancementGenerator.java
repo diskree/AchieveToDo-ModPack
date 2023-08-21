@@ -1,7 +1,6 @@
 package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.client.AdvancementsEncryptor;
 import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementDisplay;
@@ -62,6 +61,9 @@ public class AdvancementGenerator {
             return null;
         }
         Identifier advancementId = advancement.getId();
+        /* TODO encryption fix
+        String criterion = AdvancementsEncryptor.decryptCriterion(advancementId, incompleteCriteria.get(player.getRandom().nextInt(incompleteCriteria.size())), player.getServerWorld().getSeed());
+        */
         String criterion = incompleteCriteria.get(player.getRandom().nextInt(incompleteCriteria.size()));
         Item hintItem = null;
         NbtCompound nbt = new NbtCompound();

@@ -45,6 +45,7 @@
     "client.MinecraftClientMixin",
     "client.MoreTabMixin",
     "client.MouseMixin",
+    "client.ScoreboardPlayerScoreMixin",
     "client.SelectWorldScreenMixin",
     "client.WorldCreatorMixin",
     "client.WorldRendererMixin"

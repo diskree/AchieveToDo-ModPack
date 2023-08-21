@@ -1,6 +1,7 @@
 package com.diskree.achievetodo;
 
 import com.diskree.achievetodo.advancements.AdvancementGenerator;
+import com.diskree.achievetodo.advancements.UnblockActionToast;
 import com.diskree.achievetodo.advancements.hints.*;
 import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
 import com.mojang.brigadier.Command;
@@ -38,11 +39,13 @@ import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.loader.api.QuiltLoader;
+import org.quiltmc.loader.api.minecraft.ClientOnly;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
 import org.quiltmc.qsl.command.api.CommandRegistrationCallback;
 import org.quiltmc.qsl.entity.api.QuiltEntityTypeBuilder;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
+import org.quiltmc.qsl.lifecycle.api.event.ServerWorldLoadEvents;
 import org.quiltmc.qsl.networking.api.PacketByteBufs;
 import org.quiltmc.qsl.networking.api.ServerPlayNetworking;
 import org.quiltmc.qsl.networking.api.client.ClientPlayNetworking;
@@ -134,6 +137,7 @@ public class AchieveToDo implements ModInitializer {
     public static final Identifier EVOKER_NO_TOTEM_OF_UNDYING_LOOT_TABLE_ID = new Identifier(ID, "entities/evoker_no_totem_of_undying");
 
     private boolean isPanoramaLoading;
+    private static int advancementsCount;
 
     public static int getScore(PlayerEntity player) {
         if (player == null) {
@@ -292,6 +296,7 @@ public class AchieveToDo implements ModInitializer {
             }
             return ActionResult.PASS;
         });
+        ServerWorldLoadEvents.LOAD.register((server, world) -> advancementsCount = 0);
     }
 
     public static void grantHintsAdvancement(ServerPlayerEntity player, String pathName) {
@@ -371,6 +376,7 @@ public class AchieveToDo implements ModInitializer {
         return false;
     }
 
+    @ClientOnly
     public boolean isPanoramaReady(SpyglassPanoramaDetails panoramaDetails) {
         MinecraftClient client = MinecraftClient.getInstance();
         if (isPanoramaLoading) {
@@ -418,6 +424,27 @@ public class AchieveToDo implements ModInitializer {
             client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading").getString()).copy().formatted(Formatting.YELLOW), true);
         }
         return isPanoramaExists;
+    }
+
+    @ClientOnly
+    public static void setAdvancementsCount(String playerName, int count) {
+        MinecraftClient client = MinecraftClient.getInstance();
+        if (client.player == null || !client.player.getEntityName().equals(playerName)) {
+            return;
+        }
+        if (count >= 0 && count <= advancementsCount) {
+            return;
+        }
+        int oldCount = advancementsCount;
+        advancementsCount = count;
+        if (oldCount != 0) {
+            for (BlockedAction action : BlockedAction.values()) {
+                if (advancementsCount >= action.getUnblockAdvancementsCount() && oldCount < action.getUnblockAdvancementsCount()) {
+                    Advancement advancement = client.player.networkHandler.getAdvancementHandler().getManager().get(action.buildAdvancementId());
+                    client.getToastManager().add(new UnblockActionToast(advancement, action));
+                }
+            }
+        }
     }
 
     private void registerPacks() {

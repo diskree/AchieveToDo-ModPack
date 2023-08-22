@@ -1,5 +1,5 @@
 version:3465
-quilt_available_resource_packs:["continuity/default","continuity/glass_pane_culling_fix","achievetodo/bacap_lp","file/Better Banner Pattern.zip","file/Better Waxed Copper 1.0.zip","file/CTM Overhaul 5.0.zip","file/Default Dark Mode 1.20-2023.7.0.zip","file/Unique Enchanted Books 2.0.3.zip","file/Visual Fish Buckets 1.3.zip","file/Visual Goat Horns 1.0.1.zip","file/Visual Potions 1.0.zip","file/§fBetter §a§lGrass §71.20.zip","high_contrast","programmer_art","vanilla"]
+quilt_available_resource_packs:["vanilla","programmer_art","high_contrast","continuity/default","continuity/glass_pane_culling_fix","achievetodo/bacap_lp","file/Default Dark Mode.zip","file/What Painting I\u0027m Looking At.zip","file/Visual Goat Horns.zip","file/Visual Fish Buckets.zip","file/Visual Potions.zip","file/Better Banner Pattern.zip","file/Better Waxed Copper.zip","file/Unique Enchanted Books.zip"]
 autoJump:false
 operatorItemsTab:false
 autoSuggestions:true
@@ -43,7 +43,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:5
 renderClouds:"true"
-resourcePacks:["vanilla","continuity/default","continuity/glass_pane_culling_fix","achievetodo/bacap_lp","file/Default Dark Mode 1.20-2023.7.0.zip","file/Visual Goat Horns 1.0.1.zip","file/Visual Fish Buckets 1.3.zip","file/Visual Potions 1.0.zip","file/Better Banner Pattern.zip","file/Better Waxed Copper 1.0.zip","file/Unique Enchanted Books 2.0.3.zip"]
+resourcePacks:["vanilla","continuity/default","continuity/glass_pane_culling_fix","achievetodo/bacap_lp","file/Default Dark Mode.zip","file/What Painting I\u0027m Looking At.zip","file/Visual Goat Horns.zip","file/Visual Fish Buckets.zip","file/Visual Potions.zip","file/Better Banner Pattern.zip","file/Better Waxed Copper.zip","file/Unique Enchanted Books.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us

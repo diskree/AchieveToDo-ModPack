@@ -89,7 +89,7 @@ file = "config/yosbr/config/custom-hud/config.json"
 hash = "74efe4642640ba19537becf0f2dbf7a34d957d3902b88f5e0a53fec9a9b28796"
 
 [[files]]
-file = "config/yosbr/config/debugify-descriptions.json "
+file = "config/yosbr/config/debugify-descriptions.json"
 hash = "9e0a3e50d3354d8f812dee6fdc146dd863a44be50fad55950abd2224a963d15f"
 
 [[files]]
@@ -158,7 +158,7 @@ hash = "e467b61963b8f8d78efd9971c266473100e29e084a22a604c4e5296608d1a1fb"
 
 [[files]]
 file = "config/yosbr/options.txt"
-hash = "713a04e7fdffa7fedd8ff9ca757bfd9e61bd7a496c0a7bad359b17d69aac9ea2"
+hash = "1cf148414deb8567efc674b4600ae546c430301f4e4680ebef5e9aad672a8763"
 
 [[files]]
 file = "icon.png"
@@ -368,39 +368,44 @@ file = "resourcepacks/Better Banner Pattern.zip"
 hash = "4514016a0112b6d513d2d106be460bba2f33d9c25794c67aa126a2d956bc7225"
 
 [[files]]
-file = "resourcepacks/Better Waxed Copper 1.0.zip"
+file = "resourcepacks/Better Waxed Copper.zip"
 hash = "b501812947a930666fb2e5527e8db7da535ce0357c9b5cb092e7f2f21c47b7ca"
 
 [[files]]
-file = "resourcepacks/Visual Fish Buckets 1.3.zip"
+file = "resourcepacks/Visual Fish Buckets.zip"
 hash = "355d0fed7d8ead0dfa5717a4859eab29365b9704300fa921c0563136c6e70ae1"
 
 [[files]]
-file = "resourcepacks/Visual Goat Horns 1.0.1.zip"
+file = "resourcepacks/Visual Goat Horns.zip"
 hash = "abb09e23ca2fc35d6868cf2534cd1bf0a64c596e940399f567e97fe72e4d624e"
 
 [[files]]
-file = "resourcepacks/Visual Potions 1.0.zip"
+file = "resourcepacks/Visual Potions.zip"
 hash = "dd38bece893aedf6e17b845431483374d706ec63977c41657baa9ca95cc58c1e"
 
 [[files]]
 file = "resourcepacks/bettergrass.pw.toml"
-hash = "9572a387e3ef562b91027d854d00ea23f62bb39304ccb775c1cdb0dd1b46161d"
+hash = "15774ebc100b1bff991ee7a131f28e6d64ddfb759345a08e2403df371e076271"
 metafile = true
 
 [[files]]
 file = "resourcepacks/ctm-overhaul.pw.toml"
-hash = "aee2751648ba63f44b2435369897183daf4e2cdb85adcc4f8d36a6478419eceb"
+hash = "51e5824cf5e8854b613f3e7895cd795c15591ecb2d894849e49ac173678b9c3d"
 metafile = true
 
 [[files]]
 file = "resourcepacks/default-dark-mode.pw.toml"
-hash = "bab7da6e31af483dee420e6a9f7f0186ad20a6daa2c9d5f40616dc6b790d529a"
+hash = "6b5562acc4c5b3c96eab282c5596255c507751fcc68a1e2a3ad7743cd73fb87d"
 metafile = true
 
 [[files]]
 file = "resourcepacks/unique-enchanted-books.pw.toml"
-hash = "229a78a73a34e8aff703ab05463bb234cacac510a7f6a806ed842da74d5165f9"
+hash = "15bd00ae8e3290611085bb91231b344ffdc8c7b9a14b178ff8f4f33d761f16a1"
+metafile = true
+
+[[files]]
+file = "resourcepacks/wpila.pw.toml"
+hash = "11775f165ada512f63049b5c87479e015956d45c4bd31a5275804f40f332f096"
 metafile = true
 
 [[files]]

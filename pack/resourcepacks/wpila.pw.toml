@@ -1,0 +1,13 @@
+name = "What Painting I'm Looking At"
+filename = "What Painting I'm Looking At.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/PhaxOHJ2/versions/N0GhbBUC/What%20Painting%20I%27m%20Looking%20At.zip"
+hash-format = "sha1"
+hash = "daf30b7799772dbda057c4253530c0e99c876a66"
+
+[update]
+[update.modrinth]
+mod-id = "PhaxOHJ2"
+version = "N0GhbBUC"

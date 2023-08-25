@@ -25,6 +25,7 @@ import net.minecraft.item.*;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.scoreboard.ScoreboardObjective;
 import net.minecraft.scoreboard.ScoreboardPlayerScore;
@@ -34,7 +35,11 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
-import net.minecraft.util.*;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.math.Direction;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
 import org.quiltmc.loader.api.ModContainer;
@@ -199,6 +204,7 @@ public class AchieveToDo implements ModInitializer {
             });
         });
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
+            ItemStack stack = player.getStackInHand(hand);
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {
                 if (pos.getY() >= 0 && isActionBlocked(player, BlockedAction.BREAK_BLOCKS_IN_POSITIVE_Y)) {
                     return ActionResult.FAIL;
@@ -207,47 +213,14 @@ public class AchieveToDo implements ModInitializer {
                     return ActionResult.FAIL;
                 }
             }
-            if (isToolBlocked(player, hand)) {
+            if (isToolBlocked(player, stack)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
-        });
-        AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-            if (isToolBlocked(player, hand)) {
-                return ActionResult.FAIL;
-            }
-            return ActionResult.PASS;
-        });
-        UseItemCallback.EVENT.register((player, world, hand) -> {
-            ItemStack stack = hand == Hand.MAIN_HAND ? player.getMainHandStack() : player.getOffHandStack();
-            if (stack.isFood() && isFoodBlocked(player, stack.getItem().getFoodComponent())) {
-                return TypedActionResult.fail(ItemStack.EMPTY);
-            }
-            if (stack.isOf(Items.SHIELD) && isActionBlocked(player, BlockedAction.USING_SHIELD)) {
-                return TypedActionResult.fail(ItemStack.EMPTY);
-            }
-            if (stack.isOf(Items.BOW) && isActionBlocked(player, BlockedAction.USING_BOW)) {
-                return TypedActionResult.fail(ItemStack.EMPTY);
-            }
-            if (stack.isOf(Items.FIREWORK_ROCKET) && player.isFallFlying() && isActionBlocked(player, BlockedAction.USING_FIREWORKS_WHILE_FLY)) {
-                return TypedActionResult.fail(ItemStack.EMPTY);
-            }
-            if (stack.isOf(Items.ELYTRA) && isActionBlocked(player, BlockedAction.EQUIP_ELYTRA)) {
-                return TypedActionResult.fail(ItemStack.EMPTY);
-            }
-            if (stack.getItem() instanceof ArmorItem armorItem && isEquipmentBlocked(player, armorItem)) {
-                return TypedActionResult.fail(ItemStack.EMPTY);
-            }
-            if (world.isClient && stack.isOf(Items.SPYGLASS)) {
-                SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.from(stack);
-                if (panoramaDetails != null && !isPanoramaReady(panoramaDetails)) {
-                    return TypedActionResult.fail(ItemStack.EMPTY);
-                }
-            }
-            return TypedActionResult.pass(ItemStack.EMPTY);
         });
         UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
             BlockState block = world.getBlockState(hitResult.getBlockPos());
+            ItemStack stack = player.getStackInHand(hand);
             if (block.isOf(Blocks.CRAFTING_TABLE) && isActionBlocked(player, BlockedAction.USING_CRAFTING_TABLE)) {
                 return ActionResult.FAIL;
             }
@@ -281,7 +254,32 @@ public class AchieveToDo implements ModInitializer {
             if (block.isOf(Blocks.ENCHANTING_TABLE) && isActionBlocked(player, BlockedAction.USING_ENCHANTING_TABLE)) {
                 return ActionResult.FAIL;
             }
-            if (isToolBlocked(player, hand)) {
+            if (isToolBlocked(player, stack)) {
+                return ActionResult.FAIL;
+            }
+            if (stack.getItem() instanceof AliasedBlockItem aliasedBlockItem) {
+                if (!aliasedBlockItem.getBlock().getDefaultState().isIn(BlockTags.MAINTAINS_FARMLAND) || !block.isOf(Blocks.FARMLAND) || hitResult.getSide() != Direction.UP) {
+                    if (isItemLocked(player, stack)) {
+                        return ActionResult.FAIL;
+                    }
+                }
+            } else {
+                if (isItemLocked(player, stack)) {
+                    return ActionResult.FAIL;
+                }
+            }
+            return ActionResult.PASS;
+        });
+        UseItemCallback.EVENT.register((player, world, hand) -> {
+            ItemStack stack = player.getStackInHand(hand);
+            if (isItemLocked(player, stack)) {
+                return TypedActionResult.fail(ItemStack.EMPTY);
+            }
+            return TypedActionResult.pass(ItemStack.EMPTY);
+        });
+        AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+            ItemStack stack = player.getStackInHand(hand);
+            if (isToolBlocked(player, stack)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
@@ -297,6 +295,32 @@ public class AchieveToDo implements ModInitializer {
             return ActionResult.PASS;
         });
         ServerWorldLoadEvents.LOAD.register((server, world) -> advancementsCount = 0);
+    }
+
+    private boolean isItemLocked(PlayerEntity player, ItemStack stack) {
+        if (stack.isFood() && isFoodBlocked(player, stack.getItem().getFoodComponent())) {
+            return true;
+        }
+        if (stack.isOf(Items.SHIELD) && isActionBlocked(player, BlockedAction.USING_SHIELD)) {
+            return true;
+        }
+        if (stack.isOf(Items.BOW) && isActionBlocked(player, BlockedAction.USING_BOW)) {
+            return true;
+        }
+        if (stack.isOf(Items.FIREWORK_ROCKET) && player.isFallFlying() && isActionBlocked(player, BlockedAction.USING_FIREWORKS_WHILE_FLY)) {
+            return true;
+        }
+        if (stack.isOf(Items.ELYTRA) && isActionBlocked(player, BlockedAction.EQUIP_ELYTRA)) {
+            return true;
+        }
+        if (stack.getItem() instanceof ArmorItem armorItem && isEquipmentBlocked(player, armorItem)) {
+            return true;
+        }
+        if (stack.isOf(Items.SPYGLASS) && player.getWorld().isClient) {
+            SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.from(stack);
+            return panoramaDetails != null && !isPanoramaReady(panoramaDetails);
+        }
+        return false;
     }
 
     public static void grantHintsAdvancement(ServerPlayerEntity player, String pathName) {
@@ -351,8 +375,7 @@ public class AchieveToDo implements ModInitializer {
         return false;
     }
 
-    private boolean isToolBlocked(PlayerEntity player, Hand hand) {
-        ItemStack stack = hand == Hand.MAIN_HAND ? player.getMainHandStack() : player.getOffHandStack();
+    private boolean isToolBlocked(PlayerEntity player, ItemStack stack) {
         if (!stack.isDamageable()) {
             return false;
         }

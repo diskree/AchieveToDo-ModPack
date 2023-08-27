@@ -14,6 +14,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.texture.MissingSprite;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -194,14 +195,10 @@ public class AchieveToDo implements ModInitializer {
             return Command.SINGLE_SUCCESS;
         }))));
         ServerPlayNetworking.registerGlobalReceiver(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
-            Identifier actionAdvancementId = buf.readIdentifier();
-            server.execute(() -> {
-                Advancement advancement = player.server.getAdvancementLoader().get(actionAdvancementId);
-                AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
-                for (String criterion : advancementProgress.getUnobtainedCriteria()) {
-                    player.getAdvancementTracker().grantCriterion(advancement, criterion);
-                }
-            });
+            BlockedAction action = buf.readEnumConstant(BlockedAction.class);
+            if (action != null) {
+                server.execute(() -> demystifyAction(player, action));
+            }
         });
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             ItemStack stack = player.getStackInHand(hand);
@@ -258,7 +255,7 @@ public class AchieveToDo implements ModInitializer {
                 return ActionResult.FAIL;
             }
             if (stack.getItem() instanceof AliasedBlockItem aliasedBlockItem) {
-                if (!aliasedBlockItem.getBlock().getDefaultState().isIn(BlockTags.MAINTAINS_FARMLAND) || !block.isOf(Blocks.FARMLAND) || hitResult.getSide() != Direction.UP) {
+                if (!block.isOf(Blocks.FARMLAND) || hitResult.getSide() != Direction.UP || !aliasedBlockItem.getBlock().getDefaultState().isIn(BlockTags.MAINTAINS_FARMLAND)) {
                     if (isItemLocked(player, stack)) {
                         return ActionResult.FAIL;
                     }
@@ -340,12 +337,19 @@ public class AchieveToDo implements ModInitializer {
     }
 
     public static boolean isActionBlocked(PlayerEntity player, BlockedAction action) {
-        if (action == null || player != null && player.isCreative() || action.isUnblocked(player)) {
+        return isActionBlocked(player, action, false);
+    }
+
+    public static boolean isActionBlocked(PlayerEntity player, BlockedAction action, boolean isServerSide) {
+        if (action == null || player == null || player.isCreative() || action.isUnblocked(player)) {
             return false;
         }
-        if (player != null && player.getWorld().isClient) {
+        if (isServerSide && player instanceof ServerPlayerEntity serverPlayer) {
             player.sendMessage(action.buildBlockedDescription(player), true);
-            ClientPlayNetworking.send(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeIdentifier(action.buildAdvancementId()));
+            demystifyAction(serverPlayer, action);
+        } else if (player instanceof ClientPlayerEntity) {
+            player.sendMessage(action.buildBlockedDescription(player), true);
+            ClientPlayNetworking.send(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action));
         }
         return true;
     }
@@ -467,6 +471,14 @@ public class AchieveToDo implements ModInitializer {
                     client.getToastManager().add(new UnblockActionToast(advancement, action));
                 }
             }
+        }
+    }
+
+    private static void demystifyAction(ServerPlayerEntity player, BlockedAction action) {
+        Advancement advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
+        AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
+        for (String criterion : advancementProgress.getUnobtainedCriteria()) {
+            player.getAdvancementTracker().grantCriterion(advancement, criterion);
         }
     }
 

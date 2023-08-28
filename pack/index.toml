@@ -166,7 +166,7 @@ hash = "48e41ad5654e7b11c81a771434b7907573c25295a58e9194ba2ac1848098260c"
 
 [[files]]
 file = "mods/achievetodo-1.1+1.20.1.jar"
-hash = "4ecca08ae18baccad088df082e959d693156d68c692630ecf19dc47e4d836967"
+hash = "78b253aa1b72b998c30d27d46ad727beb5452a2cb999e4918c3167f3f4f2571f"
 
 [[files]]
 file = "mods/antighost.pw.toml"
@@ -250,7 +250,7 @@ metafile = true
 
 [[files]]
 file = "mods/exordium.pw.toml"
-hash = "4b3aa2a31aa0ab8c748561418200357b717f1ea9626672aea0653e862964a43f"
+hash = "54a35a60c72cb0881e99d3c186734ecb9bf9e32acb2a8f4d5b2936f6a0449698"
 metafile = true
 
 [[files]]
@@ -270,7 +270,7 @@ metafile = true
 
 [[files]]
 file = "mods/immediatelyfast.pw.toml"
-hash = "cdfba6239ea3dd9c111ebdca03626c3f179f7794ee146d0f043a82064ea39be1"
+hash = "9c34ed612c766a07a0dd5425a2bab5531b7ba59821cb5bd98050da0f2ec02bc7"
 metafile = true
 
 [[files]]
@@ -340,7 +340,7 @@ metafile = true
 
 [[files]]
 file = "mods/reeses-sodium-options.pw.toml"
-hash = "16edb6e9b2eb85405f9a3e4ac7159a0c00a9d47bfb4dc9d5b548bca37245fc06"
+hash = "44b0a2294e1693230308e53b529d671a0303e94b623ba2c2650cdf5760a5a335"
 metafile = true
 
 [[files]]

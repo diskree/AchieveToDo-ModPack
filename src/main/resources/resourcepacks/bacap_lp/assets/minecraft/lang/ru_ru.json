@@ -4069,19 +4069,19 @@
 
 # Configuration Menu
 ## BlazeandCave
-"'s Advancements Pack Config": "'s Advancements Pack Настройки",
+"'s Advancements Pack Config": "'s Advancements Pack | Настройки",
 
-"Welcome Message currently enabled": "Приветственное сообщение в данный момент включено",
-"Welcome Message currently disabled": "Приветственное сообщение в данный момент выключено",
+"Welcome Message currently enabled": "Приветствие в чате ВКЛ",
+"Welcome Message currently disabled": "Приветствие в чате ВЫКЛ",
 
-"Item Rewards currently enabled": "Награды за предметы в данный момент включены",
-"Item Rewards currently disabled": "Награды за предметы в данный момент выключены",
+"Item Rewards currently enabled": "Предметы ВКЛ",
+"Item Rewards currently disabled": "Предметы ВЫКЛ",
 
-"Experience Rewards currently enabled": "Награды опытом в данный момент включены",
-"Experience Rewards currently disabled": "Награды опытом в данный момент выключены",
+"Experience Rewards currently enabled": "Очки опыта ВКЛ",
+"Experience Rewards currently disabled": "Очки опыта ВЫКЛ",
 
-"Trophies currently enabled": "Трофеи в данный момент включены",
-"Trophies currently disabled": "Трофеи в данный момент выключены",
+"Trophies currently enabled": "Трофеи ВКЛ",
+"Trophies currently disabled": "Трофеи ВЫКЛ",
 
 "Display scoreboard on tab list": "Отображение списка во вкладке Tab",
 "Clear scoreboard from tab list": "Очистить список во вкладке Tab",
@@ -4396,9 +4396,9 @@
 "Cooperative Mode currently enabled": "Кооперативный режим включён",
 "Cooperative Mode currently disabled": "Кооперативный режим отключён",
 
-"Cooperative Mode makes it so that whenever a player gets an advancement, that advancement will be shared across all players.": "Кооперативный режим делает так, что всякий раз, когда игрок получает продвижение, это продвижение будет делиться между всеми игроками",
-"Everyone's currently-obtained advancements will be shared between all players immediately when turning this setting on.": "Все достижения, полученные на данный момент, будут переданы всем игрокам сразу после включения этой настройки",
-"While the mode can be turned off, shared advancements cannot be easily revoked.": "Хотя этот режим можно отключить, общие достижения не могут быть легко отменены",
+"Cooperative Mode makes it so that whenever a player gets an advancement, that advancement will be shared across all players.": "В кооперативном режиме каждое полученное достижение одного игрока автоматически выдаётся всем игрокам.",
+"Everyone's currently-obtained advancements will be shared between all players immediately when turning this setting on.": "Все достижения, полученные на данный момент, будут выданы всем игрокам сразу после включения этой настройки.",
+"While the mode can be turned off, shared advancements cannot be easily revoked.": "Этот режим можно будет отключить в будущем, но уже полученные достижения не будут отозваны.",
 
 
 "Click to enable for all players": "Нажмите, чтобы включить для всех игроков",

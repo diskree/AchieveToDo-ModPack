@@ -1,18 +1,7 @@
 import os
-import argparse
 import json
 
-def validate_folder(path):
-    if not os.path.isdir(path):
-        raise argparse.ArgumentTypeError(f"{path} is not a valid path")
-    return path
-
-parser = argparse.ArgumentParser(description='Process folder path.')
-parser.add_argument('path', type=validate_folder, help='The path to the directory')
-
-args = parser.parse_args()
-
-folder_path = args.path
+folder_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'BACAP')
 
 found_json_files = []
 
@@ -36,7 +25,7 @@ for root, dirs, files in os.walk(folder_path):
                         print(f"Could not parse {relative_path}")
 
 found_json_files.sort()
-output_file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'advancements_with_progresses.txt')
+output_file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'BACAP/advancements_with_progresses.txt')
 with open(output_file_path, 'w', encoding='utf-8') as output_file:
     for i, (file, criteria) in enumerate(found_json_files):
         parts = file.split(os.sep)

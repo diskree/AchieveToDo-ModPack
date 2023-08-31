@@ -38,7 +38,7 @@ hash = "50a55c924278220692f53d4d0a0663a271cf563c4da17f8208c3159c1c88f10b"
 
 [[files]]
 file = "config/isxander-main-menu-credits.json"
-hash = "31015c8f7ba16ec5cda4eb849a3c609cfcdf4e5a9127ad36edd78efa834635f3"
+hash = "ce9de40bada43a615ffd454fd1f586aa4a88e99c402e072bcf9adb6a64e7dd52"
 
 [[files]]
 file = "config/midnightlib.json"

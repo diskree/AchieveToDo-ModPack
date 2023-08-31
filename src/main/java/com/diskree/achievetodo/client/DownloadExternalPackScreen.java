@@ -13,11 +13,15 @@ import org.quiltmc.loader.api.minecraft.ClientOnly;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Enumeration;
 import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
 @ClientOnly
 public class DownloadExternalPackScreen extends ConfirmScreen {
@@ -82,7 +86,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
                 Files.createDirectory(globalPacksDir);
             }
             if (downloadedFile.getFileName().toString().contains("UNZIP ME")) {
-                Path extractedArchive = AdvancementsEncryptor.unzip(downloadedFile, globalPacksDir);
+                Path extractedArchive = unzip(downloadedFile, globalPacksDir);
                 Files.move(extractedArchive, globalPacksDir.resolve(externalPack.toFileName()));
             } else {
                 Files.copy(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
@@ -92,6 +96,33 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
         }
         exitWithCreateLevel = true;
         closeScreen();
+    }
+
+    public static Path unzip(Path source, Path destination) throws IOException {
+        Path firstExtractedFile = null;
+        try (ZipFile zipFile = new ZipFile(source.toFile())) {
+            Enumeration<? extends ZipEntry> entries = zipFile.entries();
+            while (entries.hasMoreElements()) {
+                ZipEntry entry = entries.nextElement();
+                Path outputPath = destination.resolve(entry.getName());
+                if (entry.isDirectory()) {
+                    Files.createDirectories(outputPath);
+                } else {
+                    if (firstExtractedFile == null) {
+                        firstExtractedFile = outputPath;
+                    }
+                    try (InputStream in = zipFile.getInputStream(entry);
+                         OutputStream out = Files.newOutputStream(outputPath)) {
+                        byte[] buffer = new byte[1024];
+                        int len;
+                        while ((len = in.read(buffer)) != -1) {
+                            out.write(buffer, 0, len);
+                        }
+                    }
+                }
+            }
+        }
+        return firstExtractedFile;
     }
 
     public static String calculateSHA1(Path path) throws NoSuchAlgorithmException, IOException {
@@ -106,6 +137,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
             return bytesToHex(bytes);
         }
     }
+
     private static String bytesToHex(byte[] bytes) {
         StringBuilder sb = new StringBuilder();
         for (byte b : bytes) {

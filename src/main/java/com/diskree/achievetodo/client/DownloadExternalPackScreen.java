@@ -12,8 +12,11 @@ import org.quiltmc.loader.api.minecraft.ClientOnly;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 @ClientOnly
@@ -62,28 +65,52 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
     @Override
     public void filesDragged(List<Path> paths) {
         super.filesDragged(paths);
-        if (client != null && paths != null && paths.size() == 1) {
-            Path downloadedFile = paths.get(0);
-            Path fileName = downloadedFile.getFileName();
-            if (fileName.toString().endsWith(".zip")) {
-                Path globalPacksDir = new File(client.runDirectory, "datapacks").toPath();
-                try {
-                    if (!Files.exists(globalPacksDir)) {
-                        Files.createDirectory(globalPacksDir);
-                    }
-                    if (fileName.toString().contains("UNZIP ME")) {
-                        Path extractedArchive = AdvancementsEncryptor.unzip(downloadedFile, globalPacksDir);
-                        Files.move(extractedArchive, globalPacksDir.resolve(externalPack.toFileName()));
-                        Files.delete(downloadedFile);
-                    } else {
-                        Files.move(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
-                    }
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-            exitWithCreateLevel = true;
-            closeScreen();
+        if (client == null || paths == null || paths.size() != 1) {
+            return;
         }
+        Path downloadedFile = paths.get(0);
+        try {
+            if (!calculateSHA1(downloadedFile).equals(externalPack.getSha1())) {
+                return;
+            }
+        } catch (Exception e) {
+            return;
+        }
+        Path globalPacksDir = new File(client.runDirectory, "datapacks").toPath();
+        try {
+            if (!Files.exists(globalPacksDir)) {
+                Files.createDirectory(globalPacksDir);
+            }
+            if (downloadedFile.getFileName().toString().contains("UNZIP ME")) {
+                Path extractedArchive = AdvancementsEncryptor.unzip(downloadedFile, globalPacksDir);
+                Files.move(extractedArchive, globalPacksDir.resolve(externalPack.toFileName()));
+            } else {
+                Files.copy(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
+            }
+        } catch (IOException e) {
+            return;
+        }
+        exitWithCreateLevel = true;
+        closeScreen();
+    }
+
+    public static String calculateSHA1(Path path) throws NoSuchAlgorithmException, IOException {
+        MessageDigest sha1Digest = MessageDigest.getInstance("SHA-1");
+        try (InputStream is = Files.newInputStream(path)) {
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            while ((bytesRead = is.read(buffer)) != -1) {
+                sha1Digest.update(buffer, 0, bytesRead);
+            }
+            byte[] bytes = sha1Digest.digest();
+            return bytesToHex(bytes);
+        }
+    }
+    private static String bytesToHex(byte[] bytes) {
+        StringBuilder sb = new StringBuilder();
+        for (byte b : bytes) {
+            sb.append(String.format("%02x", b));
+        }
+        return sb.toString().toLowerCase();
     }
 }

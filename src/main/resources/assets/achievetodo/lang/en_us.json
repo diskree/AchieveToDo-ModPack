@@ -268,5 +268,5 @@
   "external.pack.open_page": "Open Page",
   "external.pack.download": "Download",
   "external.pack.required_prefix": "To play you need to download ",
-  "external.pack.help": "Drag and drop file into this window."
+  "external.pack.help": "Drag and drop downloaded file into this window."
 }

@@ -4,7 +4,7 @@
     "top_right": [],
     "bottom_left": [
       {
-        "text": "AchieveToDo 1.1",
+        "text": "AchieveToDo 1.2",
         "clickEvent": {
           "action": "open_url",
           "value": "https://github.com/diskree/AchieveToDo"
@@ -23,7 +23,7 @@
     "top_right": [],
     "bottom_left": [
       {
-        "text": "AchieveToDo 1.1",
+        "text": "AchieveToDo 1.2",
         "color": "gray",
         "clickEvent": {
           "action": "open_url",

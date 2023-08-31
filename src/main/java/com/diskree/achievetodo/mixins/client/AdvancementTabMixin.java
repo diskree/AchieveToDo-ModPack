@@ -1,7 +1,6 @@
 package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.AdvancementTabImpl;
 import com.diskree.achievetodo.advancements.AdvancementRoot;
 import com.diskree.achievetodo.client.AchieveToDoClient;
 import net.minecraft.advancement.Advancement;
@@ -9,13 +8,15 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screen.advancement.AdvancementTab;
 import net.minecraft.client.gui.screen.advancement.AdvancementTabType;
-import net.minecraft.client.gui.screen.advancement.AdvancementWidget;
 import net.minecraft.client.gui.screen.advancement.AdvancementsScreen;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Constant;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
@@ -24,15 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mixin(AdvancementTab.class)
-public class AdvancementTabMixin implements AdvancementTabImpl {
-
-    @Unique
-    private Advancement focusedAdvancement;
-
-    @Unique
-    public Advancement achieveToDo$getFocusedAdvancement() {
-        return focusedAdvancement;
-    }
+public class AdvancementTabMixin {
 
     @Unique
     private static Map<AdvancementTabType, List<AdvancementRoot>> tabLocations = new HashMap<>() {{
@@ -49,12 +42,6 @@ public class AdvancementTabMixin implements AdvancementTabImpl {
     @Shadow
     @Final
     private Advancement root;
-
-    @Shadow
-    public double originX;
-
-    @Shadow
-    public double originY;
 
     @Inject(method = "create", at = @At("HEAD"), cancellable = true)
     private static void createInject(MinecraftClient client, AdvancementsScreen screen, int index, Advancement root, CallbackInfoReturnable<AdvancementTab> cir) {
@@ -105,20 +92,6 @@ public class AdvancementTabMixin implements AdvancementTabImpl {
         if (root != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(root.getId())) {
             cir.setReturnValue(false);
         }
-    }
-
-    @Inject(method = "drawWidgetTooltip", at = @At(value = "HEAD"))
-    private void drawWidgetTooltipInject(GuiGraphics graphics, int mouseX, int mouseY, int x, int y, CallbackInfo ci) {
-        focusedAdvancement = null;
-    }
-
-    @Redirect(method = "drawWidgetTooltip", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/advancement/AdvancementWidget;shouldRender(IIII)Z"))
-    private boolean drawWidgetTooltipInject(AdvancementWidget instance, int originX, int originY, int mouseX, int mouseY) {
-        boolean shouldRender = instance.shouldRender(originX, originY, mouseX, mouseY);
-        if (shouldRender) {
-            focusedAdvancement = instance.advancement;
-        }
-        return shouldRender;
     }
 
     @ModifyConstant(method = "move", constant = @Constant(intValue = 234), require = 2)

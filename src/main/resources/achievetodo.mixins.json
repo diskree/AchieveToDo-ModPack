@@ -38,7 +38,6 @@
     "client.ClientPlayNetworkHandlerMixin",
     "client.CreateWorldScreenMixin",
     "client.CyclingButtonWidgetMixin",
-    "client.GameMenuScreenMixin",
     "client.GameRendererMixin",
     "client.GameTabMixin",
     "client.LockButtonWidgetMixin",
@@ -48,6 +47,7 @@
     "client.ScoreboardPlayerScoreMixin",
     "client.SelectWorldScreenMixin",
     "client.WorldCreatorMixin",
-    "client.WorldRendererMixin"
+    "client.WorldRendererMixin",
+    "client.OpenToLanScreenMixin"
   ]
 }

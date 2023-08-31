@@ -81,6 +81,8 @@ public class AchieveToDo implements ModInitializer {
     public static final String BACAP_REWARDS_ITEM_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_item";
     public static final String BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_experience";
     public static final String BACAP_REWARDS_TROPHY_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_trophy";
+    public static final String BACAP_COOPERATIVE_MODE_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_cooperative_mode";
+
     public static final String BACAP_LANGUAGE_PACK = AchieveToDo.ID + "/" + "bacap_lp";
 
     public static final Identifier DEMYSTIFY_LOCKED_ACTION_PACKET_ID = new Identifier(ID, "demystify_locked_action");
@@ -486,6 +488,7 @@ public class AchieveToDo implements ModInitializer {
         QuiltLoader.getModContainer(AchieveToDo.ID).ifPresent((modContainer) -> {
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_HARDCORE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_ITEM_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
             ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_TROPHY_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);

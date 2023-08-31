@@ -42,6 +42,8 @@
 
   "commands.random.no_advancements": "No advancements found",
 
+  "createWorld.lan.cooperative_mode": "Cooperative mode",
+  "createWorld.lan.cooperative_mode.info": "Makes it so that whenever a player gets an advancement, that advancement will be shared across all players.",
   "createWorld.rewards.title": "Advancement rewards",
   "createWorld.rewards.item": "Items",
   "createWorld.rewards.item.info": "You will receive items for completing advancements. For example, several logs for the first felling of a tree.",
@@ -265,6 +267,7 @@
   "hints.nothing_lasts_forever.description": "Break the portal, having received 10 hints from it",
   "hints.no_new_updates.title": "No New Updates",
   "hints.no_new_updates.description": "Try to get hint if there are no advancements that have hints",
+
   "external.pack.open_page": "Open Page",
   "external.pack.download": "Download",
   "external.pack.required_prefix": "To play you need to download ",

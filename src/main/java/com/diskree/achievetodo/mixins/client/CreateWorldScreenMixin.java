@@ -142,25 +142,6 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                     Path globalPack = globalPacksDir.resolve(pack.toFileName());
                     Path worldPack = worldPacksDir.resolve(globalPack.getFileName());
                     Files.copy(globalPack, worldPack, StandardCopyOption.REPLACE_EXISTING);
-                    /* TODO encryption fix
-                    if (!pack.isAdvancementsPack()) {
-                        continue;
-                    }
-                    long seed = worldCreator.getContext().options().getSeed();
-                    Path tempDir = worldPacksDir.resolve("temp");
-                    AdvancementsEncryptor.unzip(worldPack, tempDir);
-                    Files.deleteIfExists(worldPack);
-                    AdvancementsEncryptor.encrypt(tempDir, seed);
-                    AdvancementsEncryptor.zip(tempDir, worldPack);
-                    try (Stream<Path> stream = Files.walk(tempDir)) {
-                        stream.sorted(Comparator.reverseOrder()).forEach(path -> {
-                            try {
-                                Files.deleteIfExists(path);
-                            } catch (IOException ignored) {
-                            }
-                        });
-                    }
-                    */
                 }
             } catch (IOException ignored) {
             }
@@ -197,6 +178,9 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 packManager.enablePackProfile(AchieveToDo.BACAP_OVERRIDE_DATA_PACK);
                 if (isHardcoreEnabled) {
                     packManager.enablePackProfile(AchieveToDo.BACAP_OVERRIDE_HARDCORE_DATA_PACK);
+                }
+                if (worldCreatorImpl.achieveToDo$isCooperativeModeEnabled()) {
+                    packManager.enablePackProfile(AchieveToDo.BACAP_COOPERATIVE_MODE_DATA_PACK_NAME);
                 }
                 if (worldCreatorImpl.achieveToDo$isItemRewardsEnabled()) {
                     packManager.enablePackProfile(AchieveToDo.BACAP_REWARDS_ITEM_DATA_PACK_NAME);

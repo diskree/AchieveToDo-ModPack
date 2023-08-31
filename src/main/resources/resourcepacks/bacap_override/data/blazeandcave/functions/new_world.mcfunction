@@ -18,3 +18,4 @@ scoreboard objectives setdisplay sidebar bac_advancements
 function blazeandcave:setup_item_rewards
 function blazeandcave:setup_experience_rewards
 function blazeandcave:setup_trophy_rewards
+function blazeandcave:setup_cooperative_mode

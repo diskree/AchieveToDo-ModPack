@@ -12,6 +12,9 @@ import net.minecraft.util.Formatting;
 
 public class CreateWorldAchieveToDoTab extends GridWidgetTab {
 
+    private static final Text LAN_TITLE = Text.translatable("lanServer.title");
+    private static final Text COOPERATIVE_MODE = Text.translatable("createWorld.lan.cooperative_mode");
+    private static final Text COOPERATIVE_MODE_INFO = Text.translatable("createWorld.lan.cooperative_mode.info");
     private static final Text REWARDS_TITLE = Text.translatable("createWorld.rewards.title");
     private static final Text ITEM_REWARDS = Text.translatable("createWorld.rewards.item");
     private static final Text ITEM_REWARDS_INFO = Text.translatable("createWorld.rewards.item.info");
@@ -59,9 +62,18 @@ public class CreateWorldAchieveToDoTab extends GridWidgetTab {
         generationOptionsBuilder.button(END_GENERATION, worldSettings::achieveToDo$isNullscapeEnabled, worldSettings::achieveToDo$setNullscapeEnabled).info(END_GENERATION_INFO);
         SwitchGrid generationOptionGrid = generationOptionsBuilder.build(widget -> adder.add(widget, 2));
 
-        worldCreator.addListener(worldCreator1 -> {
+        GridWidget.AdditionHelper lanTitleAdder = new GridWidget().setRowSpacing(4).createAdditionHelper(1);
+        lanTitleAdder.add(new TextWidget(LAN_TITLE.copy().formatted(Formatting.YELLOW), screen.getClient().textRenderer));
+        adder.add(lanTitleAdder.getWidget(), 2);
+
+        SwitchGrid.Builder lanOptionsBuilder = SwitchGrid.builder(170).leftPadding(1);
+        lanOptionsBuilder.button(COOPERATIVE_MODE, worldSettings::achieveToDo$isCooperativeModeEnabled, worldSettings::achieveToDo$setCooperativeModeEnabled).info(COOPERATIVE_MODE_INFO);
+        SwitchGrid lanOptionsGrid = lanOptionsBuilder.build(widget -> adder.add(widget, 2));
+
+        worldCreator.addListener(creator -> {
             rewardsOptionsGrid.updateStates();
             generationOptionGrid.updateStates();
+            lanOptionsGrid.updateStates();
         });
     }
 }

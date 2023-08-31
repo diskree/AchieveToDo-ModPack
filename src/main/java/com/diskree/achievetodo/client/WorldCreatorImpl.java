@@ -4,6 +4,7 @@ import org.quiltmc.loader.api.minecraft.ClientOnly;
 
 @ClientOnly
 public interface WorldCreatorImpl {
+
     boolean achieveToDo$isItemRewardsEnabled();
 
     boolean achieveToDo$isExperienceRewardsEnabled();
@@ -16,6 +17,8 @@ public interface WorldCreatorImpl {
 
     boolean achieveToDo$isNullscapeEnabled();
 
+    boolean achieveToDo$isCooperativeModeEnabled();
+
     void achieveToDo$setItemRewardsEnabled(boolean itemRewardsEnabled);
 
     void achieveToDo$setExperienceRewardsEnabled(boolean experienceRewardsEnabled);
@@ -27,4 +30,6 @@ public interface WorldCreatorImpl {
     void achieveToDo$setAmplifiedNetherEnabled(boolean amplifiedNetherEnabled);
 
     void achieveToDo$setNullscapeEnabled(boolean nullscapeEnabled);
+
+    void achieveToDo$setCooperativeModeEnabled(boolean cooperativeModeEnabled);
 }

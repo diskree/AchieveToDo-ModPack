@@ -30,6 +30,7 @@
   "blocked.shulker_box": "Вы сейчас не можете использовать шалкеровый ящик",
   "blocked.firework": "Вы сейчас не можете использовать фейерверки для полёта",
   "blocked.enchanting_table": "Вы сейчас не можете использовать стол зачарований",
+
   "unblock.amount": ". Для разблокировки осталось выполнить достижений: ",
   "unblock.food": "Доступна еда",
   "unblock.action": "Доступно действие",
@@ -38,7 +39,11 @@
   "unblock.armor": "Доступна броня",
   "unblock.portal": "Доступен портал",
   "unblock.villager": "Доступен житель",
+
   "commands.random.no_advancements": "Достижения не найдены",
+
+  "createWorld.lan.cooperative_mode": "Кооперативный режим",
+  "createWorld.lan.cooperative_mode.info": "Каждое полученное достижение одного игрока автоматически выдаётся всем игрокам.",
   "createWorld.rewards.title": "Награды за выполнение достижений",
   "createWorld.rewards.item": "Предметы",
   "createWorld.rewards.item.info": "Вы будете получать предметы из игры за выполнение достижений. Например, несколько брёвен при первой вырубке дерева.",
@@ -53,7 +58,9 @@
   "createWorld.generation.nether.info": "Amplified Nether - значительно расширяет рельеф Незера и увеличивает его высоту.",
   "createWorld.generation.end": "Энд",
   "createWorld.generation.end.info": "Nullscape - разрушенные острова, парящие глыбы и завораживающий рельеф в Энде.",
+
   "feature.not_supported": "Миры в AchieveToDo не поддерживают это.",
+
   "spyglass.panorama.tooltip.header": "Взгляни в меня, чтобы узнать",
   "spyglass.panorama.tooltip.biome": "какой биом ты ещё не посещал",
   "spyglass.panorama.tooltip.structure": "какую структуру ты ещё не посещал",
@@ -61,6 +68,7 @@
   "spyglass.panorama.loading": "Загрузка панорамы...",
   "spyglass.panorama.loading.success": "Загрузка панорамы завершена.",
   "spyglass.panorama.loading.error": "Ошибка загрузки панорамы. Проверьте подключение к Интернету.",
+
   "blocked.break_blocks_in_negative_y.title": "Ломать блоки ниже нуля",
   "blocked.break_blocks_in_negative_y.description": "Возможность ломать блоки ниже нуля",
   "blocked.break_blocks_in_positive_y.title": "Ломать блоки",
@@ -225,6 +233,7 @@
   "blocked.villager_toolsmith.description": "Возможность торговли с инструментальщиком",
   "blocked.villager_weaponsmith.title": "Оружейник",
   "blocked.villager_weaponsmith.description": "Возможность торговли с оружейником",
+
   "hints.hintly_hallows.title": "Дары Подсказок",
   "hints.hintly_hallows.description.line01": "Бетховен в полной темноте",
   "hints.hintly_hallows.description.line02": "Играл на девяти осколках,",
@@ -258,6 +267,7 @@
   "hints.nothing_lasts_forever.description": "Сломайте портал, получив от него 10 подсказок",
   "hints.no_new_updates.title": "Новых обновлений нет",
   "hints.no_new_updates.description": "Попытайтесь получить подсказку при отсутствии достижений, по которым есть что подсказать",
+
   "external.pack.open_page": "Открыть страницу",
   "external.pack.download": "Загрузить",
   "external.pack.required_prefix": "Для игры необходимо загрузить ",

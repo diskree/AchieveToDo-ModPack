@@ -14,7 +14,7 @@ hash = "73bd54643e9ea4f77183d8e58f528fce8ad57cc42ba2f7fcf94ec987c573894a"
 
 [[files]]
 file = "config/custom-hud/profile1.txt"
-hash = "da6a982b9ed51aa8fa8d25dc4f811e64bfcf7e75db00aa2db6a636c97a655247"
+hash = "eca9ff030394367bc33bb5f98b8b1f8e4577e7febf0b650dc060853cfec45145"
 
 [[files]]
 file = "config/dark-loading-screen.json"
@@ -165,8 +165,8 @@ file = "icon.png"
 hash = "48e41ad5654e7b11c81a771434b7907573c25295a58e9194ba2ac1848098260c"
 
 [[files]]
-file = "mods/achievetodo-1.1+1.20.1.jar"
-hash = "78b253aa1b72b998c30d27d46ad727beb5452a2cb999e4918c3167f3f4f2571f"
+file = "mods/achievetodo-1.2+1.20.1.jar"
+hash = "8bf18b3444bf4956b01c870c2cb5c057b60774b50462975817e83deca4da1e64"
 
 [[files]]
 file = "mods/antighost.pw.toml"
@@ -226,11 +226,6 @@ metafile = true
 [[files]]
 file = "mods/dark-loading-screen.pw.toml"
 hash = "97ca0b01ac6888486402018e7c95ec3b219a89c3338a416fd25418def5f51fa1"
-metafile = true
-
-[[files]]
-file = "mods/debugify.pw.toml"
-hash = "42719916299868eac028485676c05db8d979277e0e34a1a41cb8d4cbbe6f8bfe"
 metafile = true
 
 [[files]]

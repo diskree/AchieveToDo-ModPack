@@ -1,12 +1,12 @@
 name = "AchieveToDo"
 author = "diskree"
-version = "1.1"
+version = "1.2"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "a5e57d796bf86b7fde7782df3fdb33b01feae441193a606f36c7a9c1ddd4f774"
+hash = "ddda645dc6912158350aaf6b4d74e776b13ffc7c09567fe788945527651e93b3"
 
 [versions]
 minecraft = "1.20.1"

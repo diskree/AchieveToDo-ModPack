@@ -98,7 +98,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
         closeScreen();
     }
 
-    public static Path unzip(Path source, Path destination) throws IOException {
+    private Path unzip(Path source, Path destination) throws IOException {
         Path firstExtractedFile = null;
         try (ZipFile zipFile = new ZipFile(source.toFile())) {
             Enumeration<? extends ZipEntry> entries = zipFile.entries();
@@ -125,7 +125,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
         return firstExtractedFile;
     }
 
-    public static String calculateSHA1(Path path) throws NoSuchAlgorithmException, IOException {
+    private String calculateSHA1(Path path) throws NoSuchAlgorithmException, IOException {
         MessageDigest sha1Digest = MessageDigest.getInstance("SHA-1");
         try (InputStream is = Files.newInputStream(path)) {
             byte[] buffer = new byte[1024];
@@ -138,7 +138,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
         }
     }
 
-    private static String bytesToHex(byte[] bytes) {
+    private String bytesToHex(byte[] bytes) {
         StringBuilder sb = new StringBuilder();
         for (byte b : bytes) {
             sb.append(String.format("%02x", b));

@@ -339,19 +339,14 @@ public class AchieveToDo implements ModInitializer {
     }
 
     public static boolean isActionBlocked(PlayerEntity player, BlockedAction action) {
-        return isActionBlocked(player, action, false);
-    }
-
-    public static boolean isActionBlocked(PlayerEntity player, BlockedAction action, boolean isServerSide) {
         if (action == null || player == null || player.isCreative() || action.isUnblocked(player)) {
             return false;
         }
-        if (isServerSide && player instanceof ServerPlayerEntity serverPlayer) {
-            player.sendMessage(action.buildBlockedDescription(player), true);
-            demystifyAction(serverPlayer, action);
-        } else if (player instanceof ClientPlayerEntity) {
-            player.sendMessage(action.buildBlockedDescription(player), true);
+        player.sendMessage(action.buildBlockedDescription(player), true);
+        if (player.getWorld().isClient) {
             ClientPlayNetworking.send(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action));
+        } else if (player instanceof ServerPlayerEntity serverPlayer) {
+            demystifyAction(serverPlayer, action);
         }
         return true;
     }

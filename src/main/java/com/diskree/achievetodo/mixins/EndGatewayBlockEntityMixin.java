@@ -15,7 +15,7 @@ public class EndGatewayBlockEntityMixin {
 
     @Inject(method = "canTeleport", at = @At("HEAD"), cancellable = true)
     private static void canTeleportInject(Entity entity, CallbackInfoReturnable<Boolean> cir) {
-        if (entity instanceof PlayerEntity playerEntity && AchieveToDo.isActionBlocked(playerEntity, BlockedAction.END_GATE, true)) {
+        if (entity instanceof PlayerEntity playerEntity && AchieveToDo.isActionBlocked(playerEntity, BlockedAction.END_GATE)) {
             cir.setReturnValue(false);
         }
     }

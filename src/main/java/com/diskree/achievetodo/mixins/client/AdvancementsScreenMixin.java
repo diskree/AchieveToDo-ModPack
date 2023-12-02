@@ -287,7 +287,8 @@ public abstract class AdvancementsScreenMixin extends Screen {
         });
         AdvancementDisplay searchRootAdvancementDisplay = new AdvancementDisplay(ItemStack.EMPTY, Text.empty(), Text.empty(), new Identifier("textures/block/gray_glazed_terracotta.png"), AdvancementFrame.TASK, false, false, true);
         searchRootAdvancement = new Advancement(AchieveToDo.ADVANCEMENTS_SEARCH, null, searchRootAdvancementDisplay, AdvancementRewards.NONE, Maps.newLinkedHashMap(), new String[][]{}, false);
-        searchTab = AdvancementTab.create(client, (AdvancementsScreen) (Object) this, 0, searchRootAdvancement);
+        AdvancementsScreen advancementsScreen = (AdvancementsScreen) (Object) this;
+        searchTab = AdvancementTab.create(client, advancementsScreen, 0, searchRootAdvancement);
         tabs.put(searchRootAdvancement, searchTab);
     }
 

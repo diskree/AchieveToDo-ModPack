@@ -14,7 +14,8 @@ public class VanillaBlockTagProviderMixin {
 
     @Inject(method = "configure", at = @At("HEAD"))
     public void configureInject(HolderLookup.Provider lookup, CallbackInfo ci) {
-        BlockTagsProvider self = (BlockTagsProvider) (Object) this;
-        self.getOrCreateTagBuilder(BlockTags.DRAGON_IMMUNE).add(AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK, AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK);
+        BlockTagsProvider blockTagsProvider = (BlockTagsProvider) (Object) this;
+        blockTagsProvider.getOrCreateTagBuilder(BlockTags.DRAGON_IMMUNE)
+                .add(AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK, AchieveToDo.ANCIENT_CITY_PORTAL_BLOCK);
     }
 }

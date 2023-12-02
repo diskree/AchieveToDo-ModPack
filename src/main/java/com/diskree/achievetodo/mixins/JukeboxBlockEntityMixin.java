@@ -25,8 +25,8 @@ public abstract class JukeboxBlockEntityMixin {
     @Unique
     private boolean isAncientCityPortalActivator() {
         ItemStack stack = getStack(0);
-        JukeboxBlockEntity self = (JukeboxBlockEntity) (Object) this;
-        return stack != null && Items.MUSIC_DISC_5.equals(stack.getItem()) && AncientCityPortalEntity.isJukebox(self.getWorld(), self.getPos());
+        JukeboxBlockEntity jukeboxBlockEntity = (JukeboxBlockEntity) (Object) this;
+        return stack != null && Items.MUSIC_DISC_5.equals(stack.getItem()) && AncientCityPortalEntity.isJukebox(jukeboxBlockEntity.getWorld(), jukeboxBlockEntity.getPos());
     }
 
     @Shadow

@@ -70,20 +70,20 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
 
     @ModifyArgs(method = "init", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/HeaderBar$Builder;tabs([Lnet/minecraft/client/gui/tab/Tab;)Lnet/minecraft/client/gui/widget/HeaderBar$Builder;"))
     private void initInject(Args args) {
-        CreateWorldScreen self = (CreateWorldScreen) (Object) this;
+        CreateWorldScreen createWorldScreen = (CreateWorldScreen) (Object) this;
         Tab[] originalTabs = args.get(0);
         Tab[] newTabs = new Tab[originalTabs.length + 1];
         System.arraycopy(originalTabs, 0, newTabs, 0, 2);
-        newTabs[2] = new CreateWorldAchieveToDoTab(self);
+        newTabs[2] = new CreateWorldAchieveToDoTab(createWorldScreen);
         System.arraycopy(originalTabs, 2, newTabs, 3, originalTabs.length - 2);
         args.set(0, newTabs);
     }
 
     @Inject(method = "createLevel", at = @At("HEAD"), cancellable = true)
     private void createLevelInject(CallbackInfo ci) {
-        CreateWorldScreen self = (CreateWorldScreen) (Object) this;
+        CreateWorldScreen createWorldScreen = (CreateWorldScreen) (Object) this;
         WorldCreatorImpl worldCreatorImpl = (WorldCreatorImpl) worldCreator;
-        MinecraftClient client = self.client;
+        MinecraftClient client = createWorldScreen.client;
         if (client == null) {
             ci.cancel();
             return;
@@ -122,7 +122,7 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
             if (Files.exists(globalPacksDir.resolve(requiredPack.toFileName()))) {
                 continue;
             }
-            client.setScreen(new DownloadExternalPackScreen(self, requiredPack, (exitWithCreateLevel) -> {
+            client.setScreen(new DownloadExternalPackScreen(createWorldScreen, requiredPack, (exitWithCreateLevel) -> {
                 if (exitWithCreateLevel) {
                     createLevel();
                 }
@@ -193,7 +193,7 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 }
 
                 isWaitingDatapacks = true;
-                applyDataPacks(packManager, false, (dataConfiguration) -> client.setScreen(self));
+                applyDataPacks(packManager, false, (dataConfiguration) -> client.setScreen(createWorldScreen));
 
                 ci.cancel();
             }

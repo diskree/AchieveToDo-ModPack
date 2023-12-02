@@ -14,7 +14,6 @@ import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.texture.MissingSprite;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -339,14 +338,20 @@ public class AchieveToDo implements ModInitializer {
     }
 
     public static boolean isActionBlocked(PlayerEntity player, BlockedAction action) {
+        return isActionBlocked(player, action, false);
+    }
+
+    public static boolean isActionBlocked(PlayerEntity player, BlockedAction action, boolean isCheckOnly) {
         if (action == null || player == null || player.isCreative() || action.isUnblocked(player)) {
             return false;
         }
-        player.sendMessage(action.buildBlockedDescription(player), true);
-        if (player.getWorld().isClient) {
-            ClientPlayNetworking.send(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action));
-        } else if (player instanceof ServerPlayerEntity serverPlayer) {
-            demystifyAction(serverPlayer, action);
+        if (!isCheckOnly) {
+            player.sendMessage(action.buildBlockedDescription(player), true);
+            if (player.getWorld().isClient) {
+                ClientPlayNetworking.send(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action));
+            } else if (player instanceof ServerPlayerEntity serverPlayer) {
+                demystifyAction(serverPlayer, action);
+            }
         }
         return true;
     }

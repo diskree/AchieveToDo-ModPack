@@ -23,7 +23,8 @@ public class ClientPlayNetworkHandlerMixin implements ClientPlayNetworkHandlerIm
 
     @Override
     public void achieveToDo$onAncientCityPortalExperienceOrbSpawn(AncientCityPortalExperienceOrbSpawnS2CPacket packet) {
-        NetworkThreadUtils.forceMainThread(packet, (ClientPlayNetworkHandler) (Object) this, client);
+        ClientPlayNetworkHandler clientPlayNetworkHandler = (ClientPlayNetworkHandler) (Object) this;
+        NetworkThreadUtils.forceMainThread(packet, clientPlayNetworkHandler, client);
         double x = packet.getX();
         double y = packet.getY();
         double z = packet.getZ();

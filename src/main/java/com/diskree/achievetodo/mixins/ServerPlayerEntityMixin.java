@@ -18,10 +18,10 @@ public abstract class ServerPlayerEntityMixin {
     public void moveToWorldInject(ServerWorld destination, CallbackInfoReturnable<Entity> cir) {
         ServerPlayerEntity playerEntity = ((ServerPlayerEntity) (Object) this);
         if (destination.getRegistryKey() == World.NETHER && AchieveToDo.isActionBlocked(playerEntity, BlockedAction.NETHER)) {
-            cir.setReturnValue((Entity) (Object) this);
+            cir.setReturnValue(playerEntity);
         }
         if (destination.getRegistryKey() == World.END && AchieveToDo.isActionBlocked(playerEntity, BlockedAction.END)) {
-            cir.setReturnValue((Entity) (Object) this);
+            cir.setReturnValue(playerEntity);
         }
     }
 }

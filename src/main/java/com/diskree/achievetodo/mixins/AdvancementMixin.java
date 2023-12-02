@@ -29,7 +29,8 @@ public class AdvancementMixin {
 
     @Inject(method = "getRequirementCount", at = @At("HEAD"), cancellable = true)
     public void getRequirementCountInject(CallbackInfoReturnable<Integer> cir) {
-        BlockedAction action = AchieveToDo.getBlockedActionFromAdvancement((Advancement) (Object) this);
+        Advancement advancement = (Advancement) (Object) this;
+        BlockedAction action = AchieveToDo.getBlockedActionFromAdvancement(advancement);
         if (action != null) {
             cir.setReturnValue(action.getUnblockAdvancementsCount());
         }

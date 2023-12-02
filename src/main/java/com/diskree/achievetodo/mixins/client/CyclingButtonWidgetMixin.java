@@ -5,7 +5,6 @@ import com.google.common.collect.ImmutableList;
 import net.minecraft.client.gui.widget.CyclingButtonWidget;
 import net.minecraft.client.world.WorldCreator;
 import net.minecraft.world.Difficulty;
-import net.minecraft.world.GameMode;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -21,7 +20,6 @@ public abstract class CyclingButtonWidgetMixin {
     @Shadow
     public abstract CyclingButtonWidget.Builder<Object> values(CyclingButtonWidget.Values<Object> values);
 
-    @SuppressWarnings("unchecked")
     @Inject(method = "values(Ljava/util/Collection;)Lnet/minecraft/client/gui/widget/CyclingButtonWidget$Builder;", at = @At("HEAD"), cancellable = true)
     private void valuesInject(Collection<Object> values, CallbackInfoReturnable<CyclingButtonWidget.Builder<Object>> cir) {
         if (!BuildConfig.DEBUG && values != null) {
@@ -37,7 +35,9 @@ public abstract class CyclingButtonWidgetMixin {
                         filteredList.add(value);
                     }
                     values(CyclingButtonWidget.Values.of(ImmutableList.copyOf(filteredList)));
-                    cir.setReturnValue((CyclingButtonWidget.Builder<Object>) (Object) this);
+                    //noinspection unchecked
+                    CyclingButtonWidget.Builder<Object> builder = (CyclingButtonWidget.Builder<Object>) (Object) this;
+                    cir.setReturnValue(builder);
                 }
             }
         }

@@ -15,8 +15,8 @@ public class LivingEntityMixin {
 
     @Inject(method = "getLootTable", at = @At("HEAD"), cancellable = true)
     private void getLootTableInject(CallbackInfoReturnable<Identifier> cir) {
-        LivingEntity self = (LivingEntity) (Object) this;
-        if (self.getType() == EntityType.EVOKER && self instanceof RaiderEntityImpl && ((RaiderEntityImpl) self).achieveToDo$isSpawnedAsRaider()) {
+        LivingEntity livingEntity = (LivingEntity) (Object) this;
+        if (livingEntity.getType() == EntityType.EVOKER && livingEntity instanceof RaiderEntityImpl && ((RaiderEntityImpl) livingEntity).achieveToDo$isSpawnedAsRaider()) {
             cir.setReturnValue(AchieveToDo.EVOKER_NO_TOTEM_OF_UNDYING_LOOT_TABLE_ID);
         }
     }

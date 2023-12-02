@@ -1,4 +1,4 @@
-<img src="https://github.com/diskree/AchieveToDo/blob/master/pack/icon.png" align="left" title="AchieveToDo" alt="AchieveToDo Logo" width="200" height=""/>
+<img src="https://github.com/diskree/AchieveToDo/blob/master/pack/icon.png" align="left" title="AchieveToDo" alt="AchieveToDo Logo" width="220" height=""/>
 
 [<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg" align="right" title="Download" alt="Modrinth"/>](https://modrinth.com/modpack/achievetodo)
 

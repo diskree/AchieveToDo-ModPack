@@ -470,7 +470,9 @@ public class AchieveToDo implements ModInitializer {
             for (BlockedAction action : BlockedAction.values()) {
                 if (advancementsCount >= action.getUnblockAdvancementsCount() && oldCount < action.getUnblockAdvancementsCount()) {
                     Advancement advancement = client.player.networkHandler.getAdvancementHandler().getManager().get(action.buildAdvancementId());
-                    client.getToastManager().add(new UnblockActionToast(advancement, action));
+                    if (advancement != null) {
+                        client.getToastManager().add(new UnblockActionToast(advancement, action));
+                    }
                 }
             }
         }

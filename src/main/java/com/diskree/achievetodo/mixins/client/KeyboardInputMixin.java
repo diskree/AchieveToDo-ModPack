@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class KeyboardInputMixin extends Input {
 
     @Inject(method = "tick", at = @At("TAIL"))
-    private void tickInject(boolean slowDown, float f, CallbackInfo ci) {
+    private void tickInject(boolean slowDown, float movementMultiplier, CallbackInfo ci) {
         if (jumping && AchieveToDo.isActionBlocked(MinecraftClient.getInstance().player, BlockedAction.JUMP)) {
             jumping = false;
         }

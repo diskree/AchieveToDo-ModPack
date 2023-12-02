@@ -1,6 +1,11 @@
+<img src="https://github.com/diskree/AchieveToDo/blob/master/pack/icon.png" align="left" style="margin: 0px 0px 1em 1em" title="AchieveToDo" alt="AchieveToDo Logo" width="200" height=""/>
+<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg" align="right" style="margin: 0px 0px 1em 1em" title="Download" alt="Modrinth"/>
+
 # AchieveToDo
 
 Welcome to a world where the use of every game mechanic, food, item, and block is a privilege you must earn! This is designed for those Minecraft explorers who desire a more challenging survival experience. Everything relies purely on vanilla, but with a twist - you need to unlock advancements to utilize your resources.
+
+<br>
 
 Each world you generate comes bundled with BlazeandCave's advancements pack, boasting 1000+ advancements. This extensive pool of advancements not only prolongs gameplay but also weaves a new layer of complexity, adding an extra dash of fun.
 

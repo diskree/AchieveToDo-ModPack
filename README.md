@@ -1,5 +1,6 @@
-<img src="https://github.com/diskree/AchieveToDo/blob/master/pack/icon.png" align="left" style="margin: 0px 0px 1em 1em" title="AchieveToDo" alt="AchieveToDo Logo" width="200" height=""/>
-<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg" align="right" style="margin: 0px 0px 1em 1em" title="Download" alt="Modrinth"/>
+<img src="https://github.com/diskree/AchieveToDo/blob/master/pack/icon.png" align="left" title="AchieveToDo" alt="AchieveToDo Logo" width="200" height=""/>
+
+[<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg" align="right" title="Download" alt="Modrinth"/>](https://modrinth.com/modpack/achievetodo)
 
 # AchieveToDo
 

@@ -22,11 +22,9 @@
     "NetworkStateMixin",
     "NetworkStateMixin$PacketHandlerInitializerMixin",
     "PlayerEntityMixin",
-    "PlayerScreenHandlerMixin",
     "RaiderEntityMixin",
     "ReinforcedDeepslateMixin",
     "ServerPlayerEntityMixin",
-    "SlotMixin",
     "VanillaBlockTagProviderMixin"
   ],
   "client": [
@@ -44,10 +42,11 @@
     "client.MinecraftClientMixin",
     "client.MoreTabMixin",
     "client.MouseMixin",
+    "client.OpenToLanScreenMixin",
+    "client.PlayerScreenHandlerMixin",
     "client.ScoreboardPlayerScoreMixin",
     "client.SelectWorldScreenMixin",
     "client.WorldCreatorMixin",
-    "client.WorldRendererMixin",
-    "client.OpenToLanScreenMixin"
+    "client.WorldRendererMixin"
   ]
 }

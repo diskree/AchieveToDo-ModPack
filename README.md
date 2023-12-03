@@ -1,12 +1,6 @@
-<img src="https://github.com/diskree/AchieveToDo/blob/master/pack/icon.png" align="left" title="AchieveToDo" alt="AchieveToDo Logo" width="130" height=""/>
-
 [<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg" align="right" title="Download" alt="Modrinth"/>](https://modrinth.com/modpack/achievetodo)
 
 # AchieveToDo
-
-⚡Challenging modpack that makes advancements 🏅 a part of the gameplay 🎮 with built-in optimization.
-
-<br>
 
 Welcome to a world where the use of every game mechanic, food, item, and block is a privilege you must earn! This is designed for those Minecraft explorers who desire a more challenging survival experience. Everything relies purely on vanilla, but with a twist - you need to unlock advancements to utilize your resources.
 

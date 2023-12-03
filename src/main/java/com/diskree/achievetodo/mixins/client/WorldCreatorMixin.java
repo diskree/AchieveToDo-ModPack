@@ -27,7 +27,7 @@ public class WorldCreatorMixin implements WorldCreatorImpl {
     private boolean isNullscapeEnabled;
 
     @Unique
-    private boolean isCooperativeModeEnabled;
+    private boolean isCooperativeModeEnabled = true;
 
     @Override
     public boolean achieveToDo$isItemRewardsEnabled() {

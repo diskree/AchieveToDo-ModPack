@@ -1,12 +1,14 @@
-<img src="https://github.com/diskree/AchieveToDo/blob/master/pack/icon.png" align="left" title="AchieveToDo" alt="AchieveToDo Logo" width="220" height=""/>
+<img src="https://github.com/diskree/AchieveToDo/blob/master/pack/icon.png" align="left" title="AchieveToDo" alt="AchieveToDo Logo" width="130" height=""/>
 
 [<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg" align="right" title="Download" alt="Modrinth"/>](https://modrinth.com/modpack/achievetodo)
 
 # AchieveToDo
 
-Welcome to a world where the use of every game mechanic, food, item, and block is a privilege you must earn! This is designed for those Minecraft explorers who desire a more challenging survival experience. Everything relies purely on vanilla, but with a twist - you need to unlock advancements to utilize your resources.
+⚡Challenging modpack that makes advancements 🏅 a part of the gameplay 🎮 with built-in optimization.
 
 <br>
+
+Welcome to a world where the use of every game mechanic, food, item, and block is a privilege you must earn! This is designed for those Minecraft explorers who desire a more challenging survival experience. Everything relies purely on vanilla, but with a twist - you need to unlock advancements to utilize your resources.
 
 Each world you generate comes bundled with BlazeandCave's advancements pack, boasting 1000+ advancements. This extensive pool of advancements not only prolongs gameplay but also weaves a new layer of complexity, adding an extra dash of fun.
 

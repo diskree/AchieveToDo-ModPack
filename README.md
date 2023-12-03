@@ -1,10 +1,15 @@
-[<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg" align="right" title="Download" alt="Modrinth"/>](https://modrinth.com/modpack/achievetodo)
 
 # AchieveToDo
 
 Welcome to a world where the use of every game mechanic, food, item, and block is a privilege you must earn! This is designed for those Minecraft explorers who desire a more challenging survival experience. Everything relies purely on vanilla, but with a twist - you need to unlock advancements to utilize your resources.
 
 Each world you generate comes bundled with BlazeandCave's advancements pack, boasting 1000+ advancements. This extensive pool of advancements not only prolongs gameplay but also weaves a new layer of complexity, adding an extra dash of fun.
+
+## How to install?
+
+[<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg" align="right"/>](https://modrinth.com/modpack/achievetodo)
+
+To install AchieveToDo, I recommend download [the Modrinth App](https://modrinth.com/app). For instructions with other launchers, please see [Modrinth's documentation](https://docs.modrinth.com/docs/modpacks/playing_modpacks/).
 
 ## World Creation
 

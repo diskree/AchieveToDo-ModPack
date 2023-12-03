@@ -50,7 +50,17 @@ public class AdvancementTabMixin {
             return;
         }
         String rootName = root.getId().getPath().split("/")[0];
-        AdvancementRoot tabToAdd = AdvancementRoot.valueOf(rootName.toUpperCase());
+        AdvancementRoot tabToAdd = null;
+        for (AdvancementRoot tab : AdvancementRoot.values()) {
+            if (rootName.toUpperCase().equals(tab.name())) {
+                tabToAdd = tab;
+                break;
+            }
+        }
+        if (tabToAdd == null) {
+            cir.setReturnValue(null);
+            return;
+        }
 
         AdvancementTabType tabGravity = null;
         int order = 0;

@@ -14,6 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.ArrayList;
 import java.util.Collection;
 
+@SuppressWarnings("unchecked")
 @Mixin(CyclingButtonWidget.Builder.class)
 public abstract class CyclingButtonWidgetMixin {
 
@@ -35,7 +36,6 @@ public abstract class CyclingButtonWidgetMixin {
                         filteredList.add(value);
                     }
                     values(CyclingButtonWidget.Values.of(ImmutableList.copyOf(filteredList)));
-                    //noinspection unchecked
                     CyclingButtonWidget.Builder<Object> builder = (CyclingButtonWidget.Builder<Object>) (Object) this;
                     cir.setReturnValue(builder);
                 }

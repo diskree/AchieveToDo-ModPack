@@ -13,7 +13,7 @@ for root, dirs, files in os.walk(folder_path):
                 with open(os.path.join(root, file), 'r', encoding='utf-8') as json_file:
                     try:
                         data = json.load(json_file)
-                        if len(data.get('criteria', {})) > 1 and (not data.get('requirements') or len(data.get('requirements', [])) > 1) and not data.get('display', {}).get('hidden') == 'true' and 'display' in data:
+                        if len(data.get('criteria', {})) > 1 and (not data.get('requirements') or len(data.get('requirements', [])) > 1) and not data.get('display', {}).get('hidden') and 'display' in data:
                             criteria = []
                             if data.get('requirements'):
                                 for requirement in data['requirements']:

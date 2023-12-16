@@ -38,13 +38,13 @@ public class CreateWorldAchieveToDoTab extends GridScreenTab {
         WorldCreator worldCreator = screen.getWorldCreator();
         WorldCreatorImpl worldSettings = (WorldCreatorImpl) worldCreator;
 
-        this.grid.copyPositioner().alignHorizontalCenter();
+        this.grid.getMainPositioner().alignHorizontalCenter();
 
         GridWidget.Adder adder = this.grid.setColumnSpacing(10).setRowSpacing(8).createAdder(2);
 
         GridWidget.Adder rewardsTitleAdder = new GridWidget().setRowSpacing(4).createAdder(1);
         rewardsTitleAdder.add(new TextWidget(REWARDS_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
-        adder.add(rewardsTitleAdder.getGridWidget());
+        adder.add(rewardsTitleAdder.getGridWidget(), 2, grid.copyPositioner().marginTop(24));
 
         WorldScreenOptionGrid.Builder rewardsOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
         rewardsOptionsBuilder.add(ITEM_REWARDS, worldSettings::achieveToDo$isItemRewardsEnabled, worldSettings::achieveToDo$setItemRewardsEnabled).tooltip(ITEM_REWARDS_INFO);

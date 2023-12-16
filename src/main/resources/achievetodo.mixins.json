@@ -8,7 +8,6 @@
   "mixins": [
     "AbstractBlockMixin",
     "AbstractBlockSettingsMixin",
-    "AdvancementMixin",
     "AdvancementVisibilityEvaluatorMixin",
     "EnderDragonFightMixin",
     "EndGatewayBlockEntityMixin",
@@ -21,6 +20,7 @@
     "LivingEntityMixin",
     "NetworkStateMixin",
     "NetworkStateMixin$PacketHandlerInitializerMixin",
+    "PlacedAdvancementMixin",
     "PlayerEntityMixin",
     "RaiderEntityMixin",
     "ReinforcedDeepslateMixin",
@@ -46,7 +46,6 @@
     "client.MouseMixin",
     "client.OpenToLanScreenMixin",
     "client.PlayerScreenHandlerMixin",
-    "client.ScoreboardPlayerScoreMixin",
     "client.SelectWorldScreenMixin",
     "client.WorldCreatorMixin",
     "client.WorldRendererMixin"

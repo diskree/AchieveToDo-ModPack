@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "achievetodo",
+  "version": "${version}",
+  "name": "AchieveToDo",
+  "description": "Minecraft mod that makes advancements a part of the gameplay.",
+  "authors": [
+    "diskree"
+  ],
+  "contact": {
+    "sources": "https://github.com/diskree/AchieveToDo-core"
+  },
+  "license": "CC-BY-4.0",
+  "icon": "assets/achievetodo/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.diskree.achievetodo.AchieveToDo"
+    ],
+    "client": [
+      "com.diskree.achievetodo.client.AchieveToDoClient"
+    ]
+  },
+  "mixins": [
+    "achievetodo.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.2",
+    "minecraft": "~1.20.4",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "accessWidener": "achievetodo.accesswidener"
+}

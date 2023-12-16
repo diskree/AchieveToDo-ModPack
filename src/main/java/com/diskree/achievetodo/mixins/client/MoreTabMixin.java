@@ -13,12 +13,12 @@ import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 @Mixin(CreateWorldScreen.MoreTab.class)
 public class MoreTabMixin {
 
-    @ModifyArgs(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/GridWidget$AdditionHelper;add(Lnet/minecraft/client/gui/widget/Widget;)Lnet/minecraft/client/gui/widget/Widget;", ordinal = 2))
+    @ModifyArgs(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/GridWidget$Adder;add(Lnet/minecraft/client/gui/widget/Widget;)Lnet/minecraft/client/gui/widget/Widget;", ordinal = 2))
     private void initInject(Args args) {
         if (!BuildConfig.DEBUG) {
             ButtonWidget buttonWidget = args.get(0);
             buttonWidget.active = false;
-            buttonWidget.setTooltip(Tooltip.create(Text.translatable("feature.not_supported")));
+            buttonWidget.setTooltip(Tooltip.of(Text.translatable("feature.not_supported")));
         }
     }
 }

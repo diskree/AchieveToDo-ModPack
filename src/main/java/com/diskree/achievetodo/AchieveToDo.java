@@ -5,13 +5,24 @@ import com.diskree.achievetodo.advancements.UnblockActionToast;
 import com.diskree.achievetodo.advancements.hints.*;
 import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
 import com.mojang.brigadier.Command;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerWorldEvents;
 import net.fabricmc.fabric.api.event.player.*;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
-import net.minecraft.advancement.Advancement;
-import net.minecraft.advancement.AdvancementDisplay;
-import net.minecraft.advancement.AdvancementProgress;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.advancement.*;
 import net.minecraft.block.*;
-import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.texture.MissingSprite;
@@ -26,9 +37,10 @@ import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.scoreboard.ReadableScoreboardScore;
+import net.minecraft.scoreboard.ScoreHolder;
 import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.scoreboard.ScoreboardObjective;
-import net.minecraft.scoreboard.ScoreboardPlayerScore;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -42,29 +54,17 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Direction;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
-import org.quiltmc.loader.api.ModContainer;
-import org.quiltmc.loader.api.QuiltLoader;
-import org.quiltmc.loader.api.minecraft.ClientOnly;
-import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
-import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
-import org.quiltmc.qsl.command.api.CommandRegistrationCallback;
-import org.quiltmc.qsl.entity.api.QuiltEntityTypeBuilder;
-import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
-import org.quiltmc.qsl.lifecycle.api.event.ServerWorldLoadEvents;
-import org.quiltmc.qsl.networking.api.PacketByteBufs;
-import org.quiltmc.qsl.networking.api.ServerPlayNetworking;
-import org.quiltmc.qsl.networking.api.client.ClientPlayNetworking;
-import org.quiltmc.qsl.resource.loader.api.ResourceLoader;
-import org.quiltmc.qsl.resource.loader.api.ResourcePackActivationType;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class AchieveToDo implements ModInitializer {
 
     public static final String ID = "achievetodo";
 
+    public static final String BACAP_SCORE_OBJECTIVE = "bac_advancements";
     public static final String BACAP_DATA_PACK = "file/bacap.zip";
     public static final String BACAP_HARDCORE_DATA_PACK = "file/bacap_hardcore.zip";
     public static final String BACAP_TERRALITH_DATA_PACK = "file/bacap_terralith.zip";
@@ -92,7 +92,6 @@ public class AchieveToDo implements ModInitializer {
     public static final AncientCityPortalBlock ANCIENT_CITY_PORTAL_BLOCK = new AncientCityPortalBlock(AbstractBlock.Settings.create()
             .noCollision()
             .ticksRandomly()
-            .instrument(NoteBlockInstrument.BASEDRUM)
             .strength(-1.0f, 3600000.0f)
             .dropsNothing()
             .sounds(BlockSoundGroup.GLASS)
@@ -100,47 +99,47 @@ public class AchieveToDo implements ModInitializer {
             .pistonBehavior(PistonBehavior.BLOCK));
 
     public static final Identifier REINFORCED_DEEPSLATE_CHARGED_BLOCK_ID = new Identifier(ID, "reinforced_deepslate_charged");
-    public static final Block REINFORCED_DEEPSLATE_CHARGED_BLOCK = new Block(QuiltBlockSettings.create());
+    public static final Block REINFORCED_DEEPSLATE_CHARGED_BLOCK = new Block(FabricBlockSettings.create());
 
     public static final Identifier REINFORCED_DEEPSLATE_BROKEN_BLOCK_ID = new Identifier(ID, "reinforced_deepslate_broken");
-    public static final Block REINFORCED_DEEPSLATE_BROKEN_BLOCK = new Block(QuiltBlockSettings.create());
+    public static final Block REINFORCED_DEEPSLATE_BROKEN_BLOCK = new Block(FabricBlockSettings.create());
 
     public static final Identifier LOCKED_ACTION_ITEM_ID = new Identifier(ID, "locked_action");
-    public static final Item LOCKED_ACTION_ITEM = new Item(new QuiltItemSettings());
+    public static final Item LOCKED_ACTION_ITEM = new Item(new FabricItemSettings());
 
     public static final Identifier ANCIENT_CITY_PORTAL_HINT_ITEM_ID = new Identifier(ID, "ancient_city_portal_hint");
-    public static final Item ANCIENT_CITY_PORTAL_HINT_ITEM = new Item(new QuiltItemSettings().maxDamage(1000));
+    public static final Item ANCIENT_CITY_PORTAL_HINT_ITEM = new Item(new FabricItemSettings().maxDamage(1000));
 
     public static final Identifier ANCIENT_CITY_PORTAL_PARTICLES_ID = new Identifier(ID, "ancient_city_portal_particles");
     public static final DefaultParticleType ANCIENT_CITY_PORTAL_PARTICLES = FabricParticleTypes.simple();
 
-    public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
-            .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
-            .maxChunkTrackingRange(10)
-            .trackingTickInterval(1)
+    public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = FabricEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
+            .dimensions(EntityDimensions.changing(0.0f, 0.0f))
+            .trackRangeChunks(10)
+            .trackedUpdateRate(1)
             .build();
     public static final Identifier ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = new Identifier(ID, "ancient_city_portal_tab_entity");
-    public static final EntityType<AncientCityPortalTabEntity> ANCIENT_CITY_PORTAL_TAB = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalTabEntity::new)
-            .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
-            .maxChunkTrackingRange(10)
-            .trackingTickInterval(1)
+    public static final EntityType<AncientCityPortalTabEntity> ANCIENT_CITY_PORTAL_TAB = FabricEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalTabEntity::new)
+            .dimensions(EntityDimensions.changing(0.0f, 0.0f))
+            .trackRangeChunks(10)
+            .trackedUpdateRate(1)
             .build();
     public static final Identifier ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID = new Identifier(ID, "ancient_city_portal_advancement_entity");
     public static final Identifier ANCIENT_CITY_PORTAL_HINT_ENTITY_ID = new Identifier(ID, "ancient_city_portal_prompt_entity");
-    public static final EntityType<AncientCityPortalPromptEntity> ANCIENT_CITY_PORTAL_HINT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalPromptEntity::new)
-            .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
-            .maxChunkTrackingRange(10)
-            .trackingTickInterval(1)
+    public static final EntityType<AncientCityPortalPromptEntity> ANCIENT_CITY_PORTAL_HINT = FabricEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalPromptEntity::new)
+            .dimensions(EntityDimensions.changing(0.0f, 0.0f))
+            .trackRangeChunks(10)
+            .trackedUpdateRate(1)
             .build();
 
     public static final Identifier ANCIENT_CITY_PORTAL_EXPERIENCE_ORB_ENTITY_ID = new Identifier(ID, "ancient_city_portal_experience_orb");
-    public static final EntityType<AncientCityPortalExperienceOrbEntity> ANCIENT_CITY_PORTAL_EXPERIENCE_ORB = QuiltEntityTypeBuilder.<AncientCityPortalExperienceOrbEntity>create(SpawnGroup.MISC, AncientCityPortalExperienceOrbEntity::new)
-            .setDimensions(EntityDimensions.changing(0.5f, 0.5f))
-            .maxChunkTrackingRange(6)
-            .trackingTickInterval(20)
+    public static final EntityType<AncientCityPortalExperienceOrbEntity> ANCIENT_CITY_PORTAL_EXPERIENCE_ORB = FabricEntityTypeBuilder.<AncientCityPortalExperienceOrbEntity>create(SpawnGroup.MISC, AncientCityPortalExperienceOrbEntity::new)
+            .dimensions(EntityDimensions.changing(0.5f, 0.5f))
+            .trackRangeChunks(6)
+            .trackedUpdateRate(20)
             .build();
 
-    public static final SoundEvent MUSIC_DISC_5_ACTIVATOR = SoundEvent.createVariableRangeEvent(new Identifier(ID, "music_disc_5_activator"));
+    public static final SoundEvent MUSIC_DISC_5_ACTIVATOR = SoundEvent.of(new Identifier(ID, "music_disc_5_activator"));
     public static final Identifier EVOKER_NO_TOTEM_OF_UNDYING_LOOT_TABLE_ID = new Identifier(ID, "entities/evoker_no_totem_of_undying");
 
     private boolean isPanoramaLoading;
@@ -154,11 +153,11 @@ public class AchieveToDo implements ModInitializer {
         if (scoreboard == null) {
             return 0;
         }
-        ScoreboardObjective scoreObjective = scoreboard.getObjective("bac_advancements");
+        ScoreboardObjective scoreObjective = scoreboard.getNullableObjective(BACAP_SCORE_OBJECTIVE);
         if (scoreObjective == null) {
             return 0;
         }
-        ScoreboardPlayerScore playerScore = scoreboard.getPlayerScore(player.getEntityName(), scoreObjective);
+        ReadableScoreboardScore playerScore = scoreboard.getScore(ScoreHolder.fromName(player.getNameForScoreboard()), scoreObjective);
         if (playerScore == null) {
             return 0;
         }
@@ -166,7 +165,7 @@ public class AchieveToDo implements ModInitializer {
     }
 
     @Override
-    public void onInitialize(ModContainer mod) {
+    public void onInitialize() {
         registerPacks();
         registerBlocks();
         registerItems();
@@ -175,23 +174,22 @@ public class AchieveToDo implements ModInitializer {
 
         CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> dispatcher.register(CommandManager.literal("random").executes((context -> {
             ServerCommandSource source = context.getSource();
-            Advancement randomAdvancement = AdvancementGenerator.getRandomAdvancement(source.getPlayer());
-            if (randomAdvancement != null) {
-                AdvancementDisplay display = randomAdvancement.getDisplay();
-                AdvancementDisplay rootDisplay = randomAdvancement.getRoot().getDisplay();
-                Text displayTitle = display != null ? display.getTitle() : null;
-                if (display == null || rootDisplay == null || displayTitle == null) {
-                    source.sendSystemMessage(Text.of("Parsing error for advancement: " + randomAdvancement.getId()).copy().formatted(Formatting.RED));
+            PlacedAdvancement placedAdvancement = AdvancementGenerator.getRandomAdvancement(source.getPlayer());
+            if (placedAdvancement != null) {
+                Optional<AdvancementDisplay> display = placedAdvancement.getAdvancement().display();
+                Optional<AdvancementDisplay> rootDisplay = placedAdvancement.getRoot().getAdvancement().display();
+                if (display.isEmpty() || rootDisplay.isEmpty()) {
+                    source.sendMessage(Text.of("Parsing error for advancement: " + placedAdvancement.getAdvancementEntry().id()).copy().formatted(Formatting.RED));
                     return Command.SINGLE_SUCCESS;
                 }
                 final String separator = "----------";
-                source.sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
-                source.sendSystemMessage(rootDisplay.getTitle().copy().formatted(Formatting.BLUE, Formatting.BOLD));
-                source.sendSystemMessage(display.getTitle().copy().formatted(Formatting.AQUA, Formatting.ITALIC));
-                source.sendSystemMessage(display.getDescription().copy().formatted(Formatting.YELLOW));
-                source.sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
+                source.sendMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
+                source.sendMessage(rootDisplay.get().getTitle().copy().formatted(Formatting.BLUE, Formatting.BOLD));
+                source.sendMessage(display.get().getTitle().copy().formatted(Formatting.AQUA, Formatting.ITALIC));
+                source.sendMessage(display.get().getDescription().copy().formatted(Formatting.YELLOW));
+                source.sendMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
             } else {
-                source.sendSystemMessage(Text.translatable("commands.random.no_advancements"));
+                source.sendMessage(Text.translatable("commands.random.no_advancements"));
             }
             return Command.SINGLE_SUCCESS;
         }))));
@@ -292,7 +290,7 @@ public class AchieveToDo implements ModInitializer {
             }
             return ActionResult.PASS;
         });
-        ServerWorldLoadEvents.LOAD.register((server, world) -> advancementsCount = 0);
+        ServerWorldEvents.LOAD.register((server, world) -> advancementsCount = 0);
     }
 
     private boolean isItemLocked(PlayerEntity player, ItemStack stack) {
@@ -325,15 +323,15 @@ public class AchieveToDo implements ModInitializer {
         if (player == null) {
             return;
         }
-        Advancement advancement = player.server.getAdvancementLoader().get(new Identifier(AchieveToDo.ID, "hints/" + pathName));
+        AdvancementEntry advancement = player.server.getAdvancementLoader().get(new Identifier(AchieveToDo.ID, "hints/" + pathName));
         AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
         for (String criterion : advancementProgress.getUnobtainedCriteria()) {
             player.getAdvancementTracker().grantCriterion(advancement, criterion);
         }
     }
 
-    public static BlockedAction getBlockedActionFromAdvancement(Advancement advancement) {
-        String[] pathPieces = advancement.getId().getPath().split("/");
+    public static BlockedAction getBlockedActionFromAdvancement(PlacedAdvancement advancement) {
+        String[] pathPieces = advancement.getAdvancementEntry().id().getPath().split("/");
         return pathPieces.length == 2 ? BlockedAction.map(pathPieces[1]) : null;
     }
 
@@ -405,7 +403,7 @@ public class AchieveToDo implements ModInitializer {
         return false;
     }
 
-    @ClientOnly
+    @Environment(EnvType.CLIENT)
     public boolean isPanoramaReady(SpyglassPanoramaDetails panoramaDetails) {
         MinecraftClient client = MinecraftClient.getInstance();
         if (isPanoramaLoading) {
@@ -455,13 +453,10 @@ public class AchieveToDo implements ModInitializer {
         return isPanoramaExists;
     }
 
-    @ClientOnly
-    public static void setAdvancementsCount(String playerName, int count) {
+    @Environment(EnvType.CLIENT)
+    public static void setAdvancementsCount(int count) {
         MinecraftClient client = MinecraftClient.getInstance();
-        if (client.player == null || !client.player.getEntityName().equals(playerName)) {
-            return;
-        }
-        if (count >= 0 && count <= advancementsCount) {
+        if (client.player == null || count >= 0 && count <= advancementsCount) {
             return;
         }
         int oldCount = advancementsCount;
@@ -469,9 +464,9 @@ public class AchieveToDo implements ModInitializer {
         if (oldCount != 0) {
             for (BlockedAction action : BlockedAction.values()) {
                 if (advancementsCount >= action.getUnblockAdvancementsCount() && oldCount < action.getUnblockAdvancementsCount()) {
-                    Advancement advancement = client.player.networkHandler.getAdvancementHandler().getManager().get(action.buildAdvancementId());
+                    PlacedAdvancement advancement = client.player.networkHandler.getAdvancementHandler().getManager().get(action.buildAdvancementId());
                     if (advancement != null) {
-                        client.getToastManager().add(new UnblockActionToast(advancement, action));
+                        client.getToastManager().add(new UnblockActionToast(advancement.getAdvancementEntry(), action));
                     }
                 }
             }
@@ -479,7 +474,7 @@ public class AchieveToDo implements ModInitializer {
     }
 
     private static void demystifyAction(ServerPlayerEntity player, BlockedAction action) {
-        Advancement advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
+        AdvancementEntry advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
         AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
         for (String criterion : advancementProgress.getUnobtainedCriteria()) {
             player.getAdvancementTracker().grantCriterion(advancement, criterion);
@@ -487,15 +482,15 @@ public class AchieveToDo implements ModInitializer {
     }
 
     private void registerPacks() {
-        QuiltLoader.getModContainer(AchieveToDo.ID).ifPresent((modContainer) -> {
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_HARDCORE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_ITEM_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_TROPHY_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+        FabricLoader.getInstance().getModContainer(AchieveToDo.ID).ifPresent((modContainer) -> {
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_HARDCORE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_ITEM_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_TROPHY_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
 
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_LANGUAGE_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.DEFAULT_ENABLED, Text.of("BACAP Language Pack"));
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_LANGUAGE_PACK.replace("/", ":")), modContainer, Text.of("BACAP Language Pack"), ResourcePackActivationType.DEFAULT_ENABLED);
         });
     }
 
@@ -508,8 +503,8 @@ public class AchieveToDo implements ModInitializer {
     private void registerItems() {
         Registry.register(Registries.ITEM, LOCKED_ACTION_ITEM_ID, LOCKED_ACTION_ITEM);
         Registry.register(Registries.ITEM, ANCIENT_CITY_PORTAL_HINT_ITEM_ID, ANCIENT_CITY_PORTAL_HINT_ITEM);
-        Registry.register(Registries.ITEM, REINFORCED_DEEPSLATE_CHARGED_BLOCK_ID, new BlockItem(REINFORCED_DEEPSLATE_CHARGED_BLOCK, new QuiltItemSettings()));
-        Registry.register(Registries.ITEM, REINFORCED_DEEPSLATE_BROKEN_BLOCK_ID, new BlockItem(REINFORCED_DEEPSLATE_BROKEN_BLOCK, new QuiltItemSettings()));
+        Registry.register(Registries.ITEM, REINFORCED_DEEPSLATE_CHARGED_BLOCK_ID, new BlockItem(REINFORCED_DEEPSLATE_CHARGED_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, REINFORCED_DEEPSLATE_BROKEN_BLOCK_ID, new BlockItem(REINFORCED_DEEPSLATE_BROKEN_BLOCK, new FabricItemSettings()));
     }
 
     private void registerParticles() {

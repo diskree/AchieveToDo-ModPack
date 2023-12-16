@@ -18,7 +18,7 @@ public class OpenToLanScreenMixin {
         if (!BuildConfig.DEBUG) {
             ClickableWidget buttonWidget = args.get(0);
             buttonWidget.active = false;
-            buttonWidget.setTooltip(Tooltip.create(Text.translatable("feature.not_supported")));
+            buttonWidget.setTooltip(Tooltip.of(Text.translatable("feature.not_supported")));
         }
     }
 
@@ -27,7 +27,7 @@ public class OpenToLanScreenMixin {
         if (!BuildConfig.DEBUG) {
             ClickableWidget buttonWidget = args.get(0);
             buttonWidget.active = false;
-            buttonWidget.setTooltip(Tooltip.create(Text.translatable("feature.not_supported")));
+            buttonWidget.setTooltip(Tooltip.of(Text.translatable("feature.not_supported")));
         }
     }
 }

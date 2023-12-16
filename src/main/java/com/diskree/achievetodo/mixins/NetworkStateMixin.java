@@ -17,8 +17,8 @@ public class NetworkStateMixin {
     public static class PacketHandlerInitializerMixin {
 
         @Inject(method = "setup", at = @At("HEAD"))
-        private void setupInject(NetworkSide side, NetworkState.PacketHandler<ClientPlayPacketListener> handler, CallbackInfoReturnable<NetworkState.PacketHandlerInitializer> cir) {
-            if (side == NetworkSide.C2S && handler.getId(ExperienceOrbSpawnS2CPacket.class) != -1) {
+        private void setupInject(NetworkSide side, NetworkState.InternalPacketHandler<ClientPlayPacketListener> handler, CallbackInfoReturnable<NetworkState.PacketHandlerInitializer> cir) {
+            if (side == NetworkSide.CLIENTBOUND && handler.getId(ExperienceOrbSpawnS2CPacket.class) != -1) {
                 handler.register(AncientCityPortalExperienceOrbSpawnS2CPacket.class, AncientCityPortalExperienceOrbSpawnS2CPacket::new);
             }
         }

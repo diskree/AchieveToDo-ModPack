@@ -3,15 +3,16 @@ package com.diskree.achievetodo.advancements.hints;
 import com.diskree.achievetodo.AchieveToDo;
 import com.mojang.blaze3d.platform.TextureUtil;
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.texture.NativeImage;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.texture.NativeImage;
 import net.minecraft.client.texture.ResourceTexture;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import org.apache.commons.io.FileUtils;
 import org.jetbrains.annotations.Nullable;
-import org.quiltmc.loader.api.minecraft.ClientOnly;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,7 +23,7 @@ import java.net.URL;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
-@ClientOnly
+@Environment(EnvType.CLIENT)
 public class SpyglassPanoramaTexture extends ResourceTexture {
 
     private final File cacheFile;

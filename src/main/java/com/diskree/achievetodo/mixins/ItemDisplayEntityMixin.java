@@ -10,10 +10,10 @@ import org.spongepowered.asm.mixin.Shadow;
 public abstract class ItemDisplayEntityMixin implements ItemDisplayEntityImpl {
 
     @Shadow
-    abstract void setStack(ItemStack stack);
+    abstract void setItemStack(ItemStack stack);
 
     @Override
     public void achieveToDo$publicSetStack(ItemStack stack) {
-        setStack(stack);
+        setItemStack(stack);
     }
 }

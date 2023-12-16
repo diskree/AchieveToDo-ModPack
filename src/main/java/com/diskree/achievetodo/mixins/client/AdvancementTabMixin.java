@@ -4,11 +4,15 @@ import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.advancements.AdvancementRoot;
 import com.diskree.achievetodo.client.AchieveToDoClient;
 import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementDisplay;
+import net.minecraft.advancement.AdvancementEntry;
+import net.minecraft.advancement.PlacedAdvancement;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.advancement.AdvancementTab;
 import net.minecraft.client.gui.screen.advancement.AdvancementTabType;
 import net.minecraft.client.gui.screen.advancement.AdvancementsScreen;
+import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -23,12 +27,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @Mixin(AdvancementTab.class)
 public class AdvancementTabMixin {
 
     @Unique
-    private static Map<AdvancementTabType, List<AdvancementRoot>> tabLocations = new HashMap<>() {{
+    private static final Map<AdvancementTabType, List<AdvancementRoot>> tabLocations = new HashMap<>() {{
         put(AdvancementTabType.LEFT, List.of(AdvancementRoot.BIOMES, AdvancementRoot.ADVENTURE, AdvancementRoot.WEAPONRY, AdvancementRoot.HUSBANDRY, AdvancementRoot.MONSTERS));
         put(AdvancementTabType.ABOVE, List.of(AdvancementRoot.MINING, AdvancementRoot.BUILDING, AdvancementRoot.FARMING, AdvancementRoot.NETHER, AdvancementRoot.END));
         put(AdvancementTabType.RIGHT, List.of(AdvancementRoot.ACTION, AdvancementRoot.STATISTICS, AdvancementRoot.BACAP, AdvancementRoot.ADVANCEMENTS_SEARCH));
@@ -41,15 +46,35 @@ public class AdvancementTabMixin {
 
     @Shadow
     @Final
-    private Advancement root;
+    private PlacedAdvancement root;
 
     @Inject(method = "create", at = @At("HEAD"), cancellable = true)
-    private static void createInject(MinecraftClient client, AdvancementsScreen screen, int index, Advancement root, CallbackInfoReturnable<AdvancementTab> cir) {
-        if (root == null || root.getDisplay() == null) {
+    private static void createInject(MinecraftClient client, AdvancementsScreen screen, int index, PlacedAdvancement root, CallbackInfoReturnable<AdvancementTab> cir) {
+        if (root == null) {
             cir.setReturnValue(null);
             return;
         }
-        String rootName = root.getId().getPath().split("/")[0];
+        AdvancementEntry advancementEntry = root.getAdvancementEntry();
+        if (advancementEntry == null) {
+            cir.setReturnValue(null);
+            return;
+        }
+        Identifier advancementId = advancementEntry.id();
+        if (advancementId == null) {
+            cir.setReturnValue(null);
+            return;
+        }
+        Advancement advancement = root.getAdvancement();
+        if (advancement == null) {
+            cir.setReturnValue(null);
+            return;
+        }
+        Optional<AdvancementDisplay> advancementDisplayOptional = advancement.display();
+        if (advancementDisplayOptional.isEmpty()) {
+            cir.setReturnValue(null);
+            return;
+        }
+        String rootName = advancementId.getPath().split("/")[0];
         AdvancementRoot tabToAdd = null;
         for (AdvancementRoot tab : AdvancementRoot.values()) {
             if (rootName.toUpperCase().equals(tab.name())) {
@@ -80,26 +105,26 @@ public class AdvancementTabMixin {
             }
         }
 
-        cir.setReturnValue(new AdvancementTab(client, screen, tabGravity, order, root, root.getDisplay()));
+        cir.setReturnValue(new AdvancementTab(client, screen, tabGravity, order, root, advancementDisplayOptional.get()));
     }
 
     @Inject(method = "drawBackground", at = @At(value = "HEAD"), cancellable = true)
-    public void drawBackgroundInject(GuiGraphics graphics, int x, int y, boolean selected, CallbackInfo ci) {
-        if (root != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(root.getId())) {
+    public void drawBackgroundInject(DrawContext context, int x, int y, boolean selected, CallbackInfo ci) {
+        if (root != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(root.getAdvancementEntry().id())) {
             ci.cancel();
         }
     }
 
     @Inject(method = "drawIcon", at = @At(value = "HEAD"), cancellable = true)
-    public void drawIconInject(GuiGraphics graphics, int x, int y, CallbackInfo ci) {
-        if (root != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(root.getId())) {
+    public void drawIconInject(DrawContext context, int x, int y, CallbackInfo ci) {
+        if (root != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(root.getAdvancementEntry().id())) {
             ci.cancel();
         }
     }
 
     @Inject(method = "isClickOnTab", at = @At(value = "HEAD"), cancellable = true)
     public void isClickOnTabInject(int screenX, int screenY, double mouseX, double mouseY, CallbackInfoReturnable<Boolean> cir) {
-        if (root != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(root.getId())) {
+        if (root != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(root.getAdvancementEntry().id())) {
             cir.setReturnValue(false);
         }
     }

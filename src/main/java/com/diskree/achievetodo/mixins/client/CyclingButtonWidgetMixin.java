@@ -2,8 +2,8 @@ package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.BuildConfig;
 import com.google.common.collect.ImmutableList;
+import net.minecraft.client.gui.screen.world.WorldCreator;
 import net.minecraft.client.gui.widget.CyclingButtonWidget;
-import net.minecraft.client.world.WorldCreator;
 import net.minecraft.world.Difficulty;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -27,10 +27,10 @@ public abstract class CyclingButtonWidgetMixin {
             ImmutableList<Object> list = ImmutableList.copyOf(values);
             if (!list.isEmpty()) {
                 Object firstValue = list.get(0);
-                if (firstValue instanceof WorldCreator.GameMode || firstValue instanceof Difficulty) {
+                if (firstValue instanceof WorldCreator.Mode || firstValue instanceof Difficulty) {
                     Collection<Object> filteredList = new ArrayList<>();
                     for (Object value : values) {
-                        if (value == WorldCreator.GameMode.CREATIVE || value == Difficulty.PEACEFUL) {
+                        if (value == WorldCreator.Mode.CREATIVE || value == Difficulty.PEACEFUL) {
                             continue;
                         }
                         filteredList.add(value);

@@ -2,33 +2,26 @@ package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDo;
 import it.unimi.dsi.fastutil.Stack;
-import net.minecraft.advancement.Advancement;
-import net.minecraft.advancement.AdvancementVisibilityEvaluator;
+import net.minecraft.advancement.AdvancementDisplays;
+import net.minecraft.advancement.PlacedAdvancement;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.function.Predicate;
 
-@Mixin(AdvancementVisibilityEvaluator.class)
+@Mixin(AdvancementDisplays.class)
 public abstract class AdvancementVisibilityEvaluatorMixin {
 
-    @Shadow
-    private static boolean method_48030(Advancement advancement, Stack<AdvancementVisibilityEvaluator.C_bfuhkkvt> stack, Predicate<Advancement> predicate, AdvancementVisibilityEvaluator.C_laxhphom c_laxhphom) {
-        return false;
-    }
-
-    @Inject(method = "method_48030", at = @At("HEAD"), cancellable = true)
-    private static void calculateDisplayInject(Advancement advancement, Stack<AdvancementVisibilityEvaluator.C_bfuhkkvt> stack, Predicate<Advancement> predicate, AdvancementVisibilityEvaluator.C_laxhphom c_laxhphom, CallbackInfoReturnable<Boolean> cir) {
+    @Inject(method = "shouldDisplay(Lnet/minecraft/advancement/PlacedAdvancement;Lit/unimi/dsi/fastutil/Stack;Ljava/util/function/Predicate;Lnet/minecraft/advancement/AdvancementDisplays$ResultConsumer;)Z", at = @At("HEAD"), cancellable = true)
+    private static void calculateDisplayInject(PlacedAdvancement advancement, Stack<AdvancementDisplays.Status> statuses, Predicate<PlacedAdvancement> donePredicate, AdvancementDisplays.ResultConsumer consumer, CallbackInfoReturnable<Boolean> cir) {
         if (AchieveToDo.getBlockedActionFromAdvancement(advancement) != null) {
-            stack.push(AdvancementVisibilityEvaluator.C_bfuhkkvt.SHOW);
-            for (Advancement child : advancement.getChildren()) {
-                //noinspection ResultOfMethodCallIgnored
-                method_48030(child, stack, predicate, c_laxhphom);
+            statuses.push(AdvancementDisplays.Status.SHOW);
+            for (PlacedAdvancement child : advancement.getChildren()) {
+                AdvancementDisplays.shouldDisplay(child, statuses, donePredicate, consumer);
             }
-            c_laxhphom.accept(advancement, true);
+            consumer.accept(advancement, true);
             cir.setReturnValue(true);
         }
     }

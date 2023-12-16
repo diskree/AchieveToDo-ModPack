@@ -1,8 +1,8 @@
 package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.BlockedAction;
-import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementEntry;
+import net.minecraft.advancement.PlacedAdvancement;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,28 +16,19 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-@Mixin(Advancement.class)
-public class AdvancementMixin {
+@Mixin(PlacedAdvancement.class)
+public abstract class PlacedAdvancementMixin {
+
+    @Shadow
+    public abstract AdvancementEntry getAdvancementEntry();
 
     @Shadow
     @Final
-    private Identifier id;
-
-    @Shadow
-    @Final
-    private Set<Advancement> children;
-
-    @Inject(method = "getRequirementCount", at = @At("HEAD"), cancellable = true)
-    public void getRequirementCountInject(CallbackInfoReturnable<Integer> cir) {
-        Advancement advancement = (Advancement) (Object) this;
-        BlockedAction action = AchieveToDo.getBlockedActionFromAdvancement(advancement);
-        if (action != null) {
-            cir.setReturnValue(action.getUnblockAdvancementsCount());
-        }
-    }
+    private Set<PlacedAdvancement> children;
 
     @Inject(method = "getChildren", at = @At("HEAD"), cancellable = true)
-    public void getChildrenInject(CallbackInfoReturnable<Iterable<Advancement>> cir) {
+    public void getChildrenInject(CallbackInfoReturnable<Iterable<PlacedAdvancement>> cir) {
+        Identifier id = getAdvancementEntry().id();
         if (id.getNamespace().equals(AchieveToDo.ID) && id.getPath().endsWith("/root")) {
             List<String> order = new ArrayList<>(Arrays.asList(
                     "action/eat_salmon",
@@ -50,10 +41,10 @@ public class AdvancementMixin {
                     "action/villager_mason",
                     "hints/hintly_hallows"
             ));
-            List<Advancement> childrenList = new ArrayList<>(children);
+            List<PlacedAdvancement> childrenList = new ArrayList<>(children);
             childrenList.sort((a1, a2) -> {
-                Integer order1 = order.indexOf(a1.getId().getPath());
-                Integer order2 = order.indexOf(a2.getId().getPath());
+                Integer order1 = order.indexOf(a1.getAdvancementEntry().id().getPath());
+                Integer order2 = order.indexOf(a2.getAdvancementEntry().id().getPath());
                 return order1.compareTo(order2);
             });
             cir.setReturnValue(childrenList);

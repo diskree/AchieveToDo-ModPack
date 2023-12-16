@@ -2,9 +2,7 @@ package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
-import net.minecraft.advancement.Advancement;
-import net.minecraft.advancement.AdvancementDisplay;
-import net.minecraft.advancement.AdvancementProgress;
+import net.minecraft.advancement.*;
 import net.minecraft.advancement.criterion.CriterionProgress;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
@@ -22,29 +20,27 @@ import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AdvancementGenerator {
 
     @Nullable
-    public static Advancement getRandomAdvancement(ServerPlayerEntity player) {
+    public static PlacedAdvancement getRandomAdvancement(ServerPlayerEntity player) {
         return getRandomAdvancement(player, true);
     }
 
     @SuppressWarnings("DataFlowIssue")
     @Nullable
     public static AdvancementHint getRandomAdvancementHint(ServerPlayerEntity player) {
-        Advancement advancement = getRandomAdvancement(player, false);
-        if (advancement == null) {
+        PlacedAdvancement placedAdvancement = getRandomAdvancement(player, false);
+        if (placedAdvancement == null) {
             return null;
         }
-        AdvancementDisplay tabDisplay = advancement.getRoot().getDisplay();
-        AdvancementDisplay advancementDisplay = advancement.getDisplay();
-        if (tabDisplay == null || advancementDisplay == null) {
-            return null;
-        }
+        PlacedAdvancement root = PlacedAdvancement.findRoot(placedAdvancement);
+        AdvancementDisplay advancementDisplay = placedAdvancement.getAdvancement().display().get();
         ArrayList<String> incompleteCriteria = new ArrayList<>();
-        AdvancementProgress progress = player.getAdvancementTracker().getProgress(advancement);
-        for (String[] requirement : advancement.getRequirements()) {
+        AdvancementProgress progress = player.getAdvancementTracker().getProgress(placedAdvancement.getAdvancementEntry());
+        for (List<String> requirement : placedAdvancement.getAdvancement().requirements().requirements()) {
             boolean isRequirementCompleted = false;
             for (String criterion : requirement) {
                 CriterionProgress criterionProgress = progress.getCriterionProgress(criterion);
@@ -53,19 +49,19 @@ public class AdvancementGenerator {
                     break;
                 }
             }
-            if (!isRequirementCompleted && requirement.length > 0) {
-                incompleteCriteria.add(requirement[0]);
+            if (!isRequirementCompleted && !requirement.isEmpty()) {
+                incompleteCriteria.add(requirement.get(0));
             }
         }
         if (incompleteCriteria.isEmpty()) {
             return null;
         }
-        Identifier advancementId = advancement.getId();
         String criterion = incompleteCriteria.get(player.getRandom().nextInt(incompleteCriteria.size()));
         Item hintItem = null;
         NbtCompound nbt = new NbtCompound();
         boolean dropHint = false;
-        switch (advancementId.toString()) {
+
+        switch (placedAdvancement.getAdvancementEntry().id().toString()) {
             case "blazeandcave:adventure/chromatic_armory" -> {
                 switch (criterion) {
                     case "amethyst" -> hintItem = Items.AMETHYST_SHARD;
@@ -918,7 +914,7 @@ public class AdvancementGenerator {
             hint.addEnchantment(Enchantments.UNBREAKING, 1);
             hint.addHideFlag(ItemStack.TooltipSection.ENCHANTMENTS);
         }
-        return new AdvancementHint(tabDisplay.getIcon(), advancementDisplay.getIcon(), hint, dropHint);
+        return new AdvancementHint(root.getAdvancement().display().get().getIcon(), advancementDisplay.getIcon(), hint, dropHint);
     }
 
     private static NbtCompound getColorNbtByCriterion(String criterion) {
@@ -945,18 +941,22 @@ public class AdvancementGenerator {
         return colorNbt;
     }
 
-    private static Advancement getRandomAdvancement(ServerPlayerEntity player, boolean withSingleRequirement) {
+    private static PlacedAdvancement getRandomAdvancement(ServerPlayerEntity player, boolean withSingleRequirement) {
         if (player == null) {
             return null;
         }
-        ArrayList<Advancement> filteredAdvancements = new ArrayList<>();
-        for (Advancement advancement : new ArrayList<>(player.getAdvancementTracker().visibleAdvancements)) {
-            Identifier identifier = advancement.getId();
+        ArrayList<PlacedAdvancement> advancements = new ArrayList<>();
+        for (PlacedAdvancement placedAdvancement : new ArrayList<>(player.getAdvancementTracker().advancementManager.getAdvancements())) {
+            AdvancementEntry advancementEntry = placedAdvancement.getAdvancementEntry();
+            Advancement advancement = placedAdvancement.getAdvancement();
+            Identifier identifier = advancementEntry.id();
+
             String namespace = identifier.getNamespace();
             String tab = identifier.getPath().split("/")[0];
             String name = identifier.getPath().split("/")[1];
-            AdvancementDisplay display = advancement.getDisplay();
-            int requirementsCount = advancement.getRequirementCount();
+            int requirementsCount = advancement.requirements().requirements().size();
+
+            AdvancementDisplay display = advancement.display().isEmpty() ? null : advancement.display().get();
             if (display == null || display.isHidden()) {
                 continue;
             }
@@ -989,15 +989,15 @@ public class AdvancementGenerator {
                     continue;
                 }
             }
-            AdvancementProgress progress = player.getAdvancementTracker().advancementProgresses.get(advancement);
+            AdvancementProgress progress = player.getAdvancementTracker().progress.get(advancementEntry);
             if (progress != null && progress.isDone()) {
                 continue;
             }
-            filteredAdvancements.add(advancement);
+            advancements.add(placedAdvancement);
         }
-        if (filteredAdvancements.isEmpty()) {
+        if (advancements.isEmpty()) {
             return null;
         }
-        return filteredAdvancements.get(player.getRandom().nextInt(filteredAdvancements.size()));
+        return advancements.get(player.getRandom().nextInt(advancements.size()));
     }
 }

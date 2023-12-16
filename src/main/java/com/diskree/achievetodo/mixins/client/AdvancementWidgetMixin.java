@@ -3,10 +3,11 @@ package com.diskree.achievetodo.mixins.client;
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.BlockedAction;
 import com.diskree.achievetodo.client.AchieveToDoClient;
-import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementProgress;
+import net.minecraft.advancement.AdvancementRequirements;
+import net.minecraft.advancement.PlacedAdvancement;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.advancement.AdvancementTab;
 import net.minecraft.client.gui.screen.advancement.AdvancementWidget;
 import net.minecraft.item.ItemStack;
@@ -24,7 +25,7 @@ public abstract class AdvancementWidgetMixin {
 
     @Shadow
     @Final
-    public Advancement advancement;
+    private PlacedAdvancement advancement;
 
     @Shadow
     private @Nullable AdvancementProgress progress;
@@ -43,7 +44,7 @@ public abstract class AdvancementWidgetMixin {
         return action != null && !action.isUnblocked(client.player) && (progress == null || !progress.isDone());
     }
 
-    @ModifyArg(method = "renderWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawItemWithoutEntity(Lnet/minecraft/item/ItemStack;II)V"), index = 0)
+    @ModifyArg(method = "renderWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawItemWithoutEntity(Lnet/minecraft/item/ItemStack;II)V"), index = 0)
     private ItemStack renderWidgetsModifyIcon(ItemStack stack) {
         if (isActionLocked()) {
             return new ItemStack(AchieveToDo.LOCKED_ACTION_ITEM);
@@ -62,9 +63,18 @@ public abstract class AdvancementWidgetMixin {
     }
 
     @Inject(method = "renderLines", at = @At(value = "HEAD"), cancellable = true)
-    public void renderLinesInject(GuiGraphics graphics, int x, int y, boolean border, CallbackInfo ci) {
-        if (tab.getRoot() != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(tab.getRoot().getId())) {
+    public void renderLinesInject(DrawContext context, int x, int y, boolean border, CallbackInfo ci) {
+        if (tab.getRoot() != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(tab.getRoot().getAdvancementEntry().id())) {
             ci.cancel();
         }
+    }
+
+    @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/advancement/AdvancementRequirements;getLength()I"))
+    public int initRedirect(AdvancementRequirements instance) {
+        BlockedAction action = AchieveToDo.getBlockedActionFromAdvancement(advancement);
+        if (action != null) {
+            return action.getUnblockAdvancementsCount();
+        }
+        return advancement.getAdvancement().requirements().getLength();
     }
 }

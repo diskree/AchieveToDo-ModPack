@@ -1,10 +1,8 @@
 plugins {
-    id 'maven-publish'
-    alias libs.plugins.quilt.loom
-    alias libs.plugins.quilt.flower
+    alias libs.plugins.loom
 }
 
-base.archivesName = project.archives_base_name
+base.archivesName = project.mod_id
 version = "$project.version+${libs.versions.minecraft.get()}"
 group = project.maven_group
 
@@ -15,16 +13,16 @@ repositories {
 dependencies {
     minecraft libs.minecraft
 
-    mappings variantOf(libs.quilt.mappings) { classifier 'intermediary-v2' }
+    mappings variantOf(libs.mappings) { classifier 'v2' }
 
-    modImplementation libs.quilt.loader
-    modImplementation libs.quilted.fabric.api
+    modImplementation libs.loader
+    modImplementation libs.api
 }
 
 processResources {
     inputs.property 'version', version
 
-    filesMatching('quilt.mod.json') {
+    filesMatching('fabric.mod.json') {
         expand 'version': version
     }
 }

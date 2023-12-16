@@ -1,14 +1,15 @@
 package com.diskree.achievetodo.client;
 
 import it.unimi.dsi.fastutil.booleans.BooleanConsumer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ConfirmScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.text.CommonTexts;
+import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Util;
-import org.quiltmc.loader.api.minecraft.ClientOnly;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,7 +24,7 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-@ClientOnly
+@Environment(EnvType.CLIENT)
 public class DownloadExternalPackScreen extends ConfirmScreen {
 
     private final Screen parent;
@@ -43,7 +44,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
     }
 
     @Override
-    public void closeScreen() {
+    public void close() {
         if (client != null) {
             client.setScreen(parent);
             exitCallback.accept(exitWithCreateLevel);
@@ -52,15 +53,15 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
 
     @Override
     protected void addButtons(int y) {
-        this.addDrawableChild(ButtonWidget.builder(Text.translatable("external.pack.open_page"), button -> callback.accept(false)).positionAndSize(this.width / 2 - 50 - 105, y, 100, 20).build());
-        this.addDrawableChild(ButtonWidget.builder(CommonTexts.CANCEL, button -> closeScreen()).positionAndSize(this.width / 2 - 50, y, 100, 20).build());
-        this.addDrawableChild(ButtonWidget.builder(Text.translatable("external.pack.download"), button -> callback.accept(true)).positionAndSize(this.width / 2 - 50 + 105, y, 100, 20).build());
+        this.addDrawableChild(ButtonWidget.builder(Text.translatable("external.pack.open_page"), button -> callback.accept(false)).dimensions(this.width / 2 - 50 - 105, y, 100, 20).build());
+        this.addDrawableChild(ButtonWidget.builder(ScreenTexts.CANCEL, button -> close()).dimensions(this.width / 2 - 50, y, 100, 20).build());
+        this.addDrawableChild(ButtonWidget.builder(Text.translatable("external.pack.download"), button -> callback.accept(true)).dimensions(this.width / 2 - 50 + 105, y, 100, 20).build());
     }
 
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if (keyCode == 256) {
-            closeScreen();
+            close();
             return true;
         }
         return super.keyPressed(keyCode, scanCode, modifiers);
@@ -95,7 +96,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
             return;
         }
         exitWithCreateLevel = true;
-        closeScreen();
+        close();
     }
 
     private Path unzip(Path source, Path destination) throws IOException {

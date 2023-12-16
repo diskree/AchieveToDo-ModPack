@@ -1,9 +1,10 @@
 package com.diskree.achievetodo.client;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.util.Formatting;
-import org.quiltmc.loader.api.minecraft.ClientOnly;
 
-@ClientOnly
+@Environment(EnvType.CLIENT)
 public enum ExternalPack {
     BACAP(
             "BlazeandCave's Advancements Pack",

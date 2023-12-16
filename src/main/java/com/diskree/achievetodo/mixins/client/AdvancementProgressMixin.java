@@ -4,6 +4,7 @@ import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.BlockedAction;
 import com.diskree.achievetodo.advancements.AdvancementRoot;
 import net.minecraft.advancement.AdvancementProgress;
+import net.minecraft.advancement.AdvancementRequirements;
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -12,18 +13,20 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.List;
+
 @Mixin(AdvancementProgress.class)
 public abstract class AdvancementProgressMixin {
 
     @Shadow
-    private String[][] requirements;
+    private AdvancementRequirements requirements;
 
     @Unique
     private int getActionUnblockAdvancementsCount() {
-        if (requirements.length == 1) {
-            String[] requirement = requirements[0];
-            if (requirement != null && requirement.length == 1) {
-                String criteria = requirement[0];
+        if (requirements.requirements().size() == 1) {
+            List<String> requirement = requirements.requirements().get(0);
+            if (requirement != null && requirement.size() == 1) {
+                String criteria = requirement.get(0);
                 String actionPrefix = AdvancementRoot.ACTION.name().toLowerCase() + "_";
                 if (criteria != null && criteria.startsWith(actionPrefix)) {
                     BlockedAction action = BlockedAction.map(criteria.split(actionPrefix)[1]);

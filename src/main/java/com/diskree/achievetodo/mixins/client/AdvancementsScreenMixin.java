@@ -2,12 +2,8 @@ package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.client.AchieveToDoClient;
-import com.google.common.collect.Maps;
-import net.minecraft.advancement.Advancement;
-import net.minecraft.advancement.AdvancementDisplay;
-import net.minecraft.advancement.AdvancementFrame;
-import net.minecraft.advancement.AdvancementRewards;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.advancement.*;
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.advancement.AdvancementTab;
 import net.minecraft.client.gui.screen.advancement.AdvancementWidget;
@@ -15,7 +11,7 @@ import net.minecraft.client.gui.screen.advancement.AdvancementsScreen;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.network.ClientAdvancementManager;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.CommonTexts;
+import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
@@ -45,13 +41,13 @@ public abstract class AdvancementsScreenMixin extends Screen {
     private TextFieldWidget searchField;
 
     @Unique
-    private Advancement searchRootAdvancement;
+    private PlacedAdvancement searchRootAdvancement;
 
     @Unique
     private AdvancementTab searchTab;
 
     @Unique
-    private Advancement tabToRestore;
+    private PlacedAdvancement tabToRestore;
 
     @Unique
     private void refreshSearchResults() {
@@ -59,7 +55,7 @@ public abstract class AdvancementsScreenMixin extends Screen {
             return;
         }
         String query = searchField.getText().toLowerCase(Locale.ROOT);
-        ArrayList<Advancement> advancements = new ArrayList<>(client.player.networkHandler.getAdvancementHandler().advancementProgresses.keySet());
+        ArrayList<AdvancementEntry> advancements = new ArrayList<>(client.player.networkHandler.getAdvancementHandler().advancementProgresses.keySet());
         for (AdvancementWidget widget : searchTab.widgets.values()) {
             widget.parent = null;
             widget.children.clear();
@@ -71,32 +67,31 @@ public abstract class AdvancementsScreenMixin extends Screen {
         searchTab.maxPanY = Integer.MIN_VALUE;
         searchTab.initialized = false;
 
-        searchTab.addWidget(searchTab.rootWidget, searchRootAdvancement);
+        searchTab.addWidget(searchTab.rootWidget, searchRootAdvancement.getAdvancementEntry());
 
-        Advancement parent = searchRootAdvancement;
         int rowIndex = 0;
         int columnIndex = 0;
-        ArrayList<Advancement> searchResults = new ArrayList<>();
-        for (Advancement advancement : advancements) {
-            if (advancement == null || advancement.getId().getNamespace().equals(AchieveToDo.ID) || advancement.getId().getPath().split("/")[1].equals("root")) {
+        ArrayList<PlacedAdvancement> searchResults = new ArrayList<>();
+        for (AdvancementEntry advancement : advancements) {
+            if (advancement == null || advancement.id().getNamespace().equals(AchieveToDo.ID) || advancement.id().getPath().split("/")[1].equals("root")) {
                 continue;
             }
-            AdvancementDisplay display = advancement.getDisplay();
+            AdvancementDisplay display = advancement.value().display().orElse(null);
             if (display == null || display.isHidden()) {
                 continue;
             }
             String title = display.getTitle().getString().toLowerCase(Locale.ROOT);
             String description = display.getDescription().getString().toLowerCase(Locale.ROOT);
             if (title.contains(query) || description.contains(query)) {
-                searchResults.add(advancement);
+                searchResults.add(advancementHandler.getManager().get(advancement.id()));
             }
         }
 
         List<AdvancementFrame> frameOrder = Arrays.asList(AdvancementFrame.TASK, AdvancementFrame.GOAL, AdvancementFrame.CHALLENGE);
-        searchResults.sort(Comparator.comparing(Advancement::getId));
+        searchResults.sort(Comparator.comparing((advancement) -> advancement.getAdvancementEntry().id()));
         searchResults.sort((advancement1, advancement2) -> {
-            AdvancementDisplay display1 = advancement1.getDisplay();
-            AdvancementDisplay display2 = advancement2.getDisplay();
+            AdvancementDisplay display1 = advancement1.getAdvancement().display().orElse(null);
+            AdvancementDisplay display2 = advancement2.getAdvancement().display().orElse(null);
             if (display1 == null || display2 == null) {
                 return 0;
             }
@@ -105,8 +100,9 @@ public abstract class AdvancementsScreenMixin extends Screen {
             return Integer.compare(index1, index2);
         });
 
-        for (Advancement searchResult : searchResults) {
-            AdvancementDisplay searchResultDisplay = searchResult.getDisplay();
+        PlacedAdvancement parentPlacedAdvancement = new PlacedAdvancement(searchRootAdvancement.getAdvancementEntry(), null);
+        for (PlacedAdvancement searchResult : searchResults) {
+            AdvancementDisplay searchResultDisplay = searchResult.getAdvancement().display().orElse(null);
             if (searchResultDisplay == null) {
                 continue;
             }
@@ -121,23 +117,27 @@ public abstract class AdvancementsScreenMixin extends Screen {
                     searchResultDisplay.isHidden()
             );
             searchResultAdvancementDisplay.setPos(columnIndex, rowIndex);
-            Advancement searchResultAdvancement = new Advancement(
-                    searchResult.getId(),
-                    parent,
-                    searchResultAdvancementDisplay,
-                    searchResult.getRewards(),
-                    searchResult.getCriteria(),
-                    searchResult.getRequirements(),
-                    searchResult.doesSendTelemetryEvent()
-            );
-            searchTab.addAdvancement(searchResultAdvancement);
-            searchTab.widgets.get(searchResultAdvancement).setProgress(client.player.networkHandler.getAdvancementHandler().advancementProgresses.get(searchResultAdvancement));
+
+            Advancement.Builder searchResultAdvancementBuilder = Advancement.Builder.create()
+                    .parent(parentPlacedAdvancement.getAdvancementEntry())
+                    .display(searchResultAdvancementDisplay)
+                    .rewards(searchResult.getAdvancement().rewards())
+                    .requirements(searchResult.getAdvancement().requirements());
+            searchResult.getAdvancement().criteria().forEach(searchResultAdvancementBuilder::criterion);
+            if (searchResult.getAdvancement().sendsTelemetryEvent()) {
+                searchResultAdvancementBuilder = searchResultAdvancementBuilder.sendsTelemetryEvent();
+            }
+            AdvancementEntry searchResultAdvancementEntry = searchResultAdvancementBuilder.build(searchResult.getAdvancementEntry().id());
+            PlacedAdvancement searchResultPlacedAdvancement = new PlacedAdvancement(searchResultAdvancementEntry, parentPlacedAdvancement);
+
+            searchTab.addAdvancement(searchResultPlacedAdvancement);
+            searchTab.widgets.get(searchResultAdvancementEntry).setProgress(client.player.networkHandler.getAdvancementHandler().advancementProgresses.get(searchResultAdvancementEntry));
             if (columnIndex == SEARCH_RESULT_COLUMNS - 1) {
-                parent = searchRootAdvancement;
+                parentPlacedAdvancement = new PlacedAdvancement(searchRootAdvancement.getAdvancementEntry(), null);
                 columnIndex = 0;
                 rowIndex++;
             } else {
-                parent = searchResultAdvancement;
+                parentPlacedAdvancement = new PlacedAdvancement(searchResultAdvancementEntry, searchResultPlacedAdvancement);
                 columnIndex++;
             }
         }
@@ -148,14 +148,8 @@ public abstract class AdvancementsScreenMixin extends Screen {
         if (tabToRestore == null) {
             return;
         }
-        advancementHandler.selectTab(tabToRestore, true);
+        advancementHandler.selectTab(tabToRestore.getAdvancementEntry(), true);
         tabToRestore = null;
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-        searchField.tick();
     }
 
     @Override
@@ -234,12 +228,12 @@ public abstract class AdvancementsScreenMixin extends Screen {
         return height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
-    @Redirect(method = "drawWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
-    public void drawWindowVanilla(GuiGraphics instance, Identifier texture, int x, int y, int u, int v, int width, int height) {
+    @Redirect(method = "drawWindow", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
+    public void drawWindowVanilla(DrawContext instance, Identifier texture, int x, int y, int u, int v, int width, int height) {
     }
 
-    @Inject(method = "drawWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
-    public void drawWindowCustom(GuiGraphics graphics, int x, int y, CallbackInfo ci) {
+    @Inject(method = "drawWindow", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V"))
+    public void drawWindowCustom(DrawContext context, int x, int y, CallbackInfo ci) {
         int screenWidth = 252;
         int screenHeight = 140;
         int actualWidth = width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - x;
@@ -254,25 +248,25 @@ public abstract class AdvancementsScreenMixin extends Screen {
         int rightX = width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - halfOfWidth + clipTopX;
         int bottomY = height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - halfOfHeight + clipTopY;
 
-        graphics.drawTexture(WINDOW_TEXTURE, x, y, 0, 0, halfOfWidth - clipLeftX, halfOfHeight - clipLeftY);
-        graphics.drawTexture(WINDOW_TEXTURE, rightX, y, halfOfWidth + clipTopX, 0, halfOfWidth - clipTopX, halfOfHeight - clipLeftY);
-        graphics.drawTexture(WINDOW_TEXTURE, x, bottomY, 0, halfOfHeight + clipTopY, halfOfWidth - clipLeftX, halfOfHeight - clipTopY);
-        graphics.drawTexture(WINDOW_TEXTURE, rightX, bottomY, halfOfWidth + clipTopX, halfOfHeight + clipTopY, halfOfWidth - clipTopX, halfOfHeight - clipTopY);
+        context.drawTexture(WINDOW_TEXTURE, x, y, 0, 0, halfOfWidth - clipLeftX, halfOfHeight - clipLeftY);
+        context.drawTexture(WINDOW_TEXTURE, rightX, y, halfOfWidth + clipTopX, 0, halfOfWidth - clipTopX, halfOfHeight - clipLeftY);
+        context.drawTexture(WINDOW_TEXTURE, x, bottomY, 0, halfOfHeight + clipTopY, halfOfWidth - clipLeftX, halfOfHeight - clipTopY);
+        context.drawTexture(WINDOW_TEXTURE, rightX, bottomY, halfOfWidth + clipTopX, halfOfHeight + clipTopY, halfOfWidth - clipTopX, halfOfHeight - clipTopY);
 
         iterate(x + halfOfWidth - clipLeftX, rightX, 200, (pos, len) -> {
-            graphics.drawTexture(WINDOW_TEXTURE, pos, y, 15, 0, len, halfOfHeight);
-            graphics.drawTexture(WINDOW_TEXTURE, pos, bottomY, 15, halfOfHeight + clipTopY, len, halfOfHeight - clipTopY);
+            context.drawTexture(WINDOW_TEXTURE, pos, y, 15, 0, len, halfOfHeight);
+            context.drawTexture(WINDOW_TEXTURE, pos, bottomY, 15, halfOfHeight + clipTopY, len, halfOfHeight - clipTopY);
         });
         iterate(y + halfOfHeight - clipLeftY, bottomY, 100, (pos, len) -> {
-            graphics.drawTexture(WINDOW_TEXTURE, x, pos, 0, 25, halfOfWidth, len);
-            graphics.drawTexture(WINDOW_TEXTURE, rightX, pos, halfOfWidth + clipTopX, 25, halfOfWidth - clipTopX, len);
+            context.drawTexture(WINDOW_TEXTURE, x, pos, 0, 25, halfOfWidth, len);
+            context.drawTexture(WINDOW_TEXTURE, rightX, pos, halfOfWidth + clipTopX, 25, halfOfWidth - clipTopX, len);
         });
     }
 
     @Inject(method = "init", at = @At(value = "RETURN"))
     public void initInject(CallbackInfo ci) {
-        searchField = new TextFieldWidget(textRenderer, width - width / 3 - 34, 8, width / 3, 22, CommonTexts.EMPTY);
-        searchField.setHint(SEARCH_HINT);
+        searchField = new TextFieldWidget(textRenderer, width - width / 3 - 34, 8, width / 3, 22, ScreenTexts.EMPTY);
+        searchField.setPlaceholder(SEARCH_HINT);
         searchField.setMaxLength(64);
         searchField.setChangedListener(query -> {
             if (query.isEmpty()) {
@@ -282,19 +276,23 @@ public abstract class AdvancementsScreenMixin extends Screen {
                 if (selectedTab != null && selectedTab != searchTab) {
                     tabToRestore = selectedTab.getRoot();
                 }
-                advancementHandler.selectTab(searchRootAdvancement, false);
+                advancementHandler.selectTab(searchRootAdvancement.getAdvancementEntry(), false);
             }
         });
-        AdvancementDisplay searchRootAdvancementDisplay = new AdvancementDisplay(ItemStack.EMPTY, Text.empty(), Text.empty(), new Identifier("textures/block/gray_glazed_terracotta.png"), AdvancementFrame.TASK, false, false, true);
-        searchRootAdvancement = new Advancement(AchieveToDo.ADVANCEMENTS_SEARCH, null, searchRootAdvancementDisplay, AdvancementRewards.NONE, Maps.newLinkedHashMap(), new String[][]{}, false);
+        searchRootAdvancement = new PlacedAdvancement(
+                Advancement.Builder.create()
+                        .display(ItemStack.EMPTY, Text.empty(), Text.empty(), new Identifier("textures/block/gray_glazed_terracotta.png"), AdvancementFrame.TASK, false, false, true)
+                        .build(AchieveToDo.ADVANCEMENTS_SEARCH),
+                null
+        );
         AdvancementsScreen advancementsScreen = (AdvancementsScreen) (Object) this;
         searchTab = AdvancementTab.create(client, advancementsScreen, 0, searchRootAdvancement);
-        tabs.put(searchRootAdvancement, searchTab);
+        tabs.put(searchRootAdvancement.getAdvancement(), searchTab);
     }
 
     @Inject(method = "render", at = @At(value = "RETURN"))
-    public void renderInject(GuiGraphics graphics, int mouseX, int mouseY, float delta, CallbackInfo ci) {
-        searchField.render(graphics, mouseX, mouseY, delta);
+    public void renderInject(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
+        searchField.render(context, mouseX, mouseY, delta);
     }
 
     @Inject(method = "keyPressed", at = @At(value = "HEAD"), cancellable = true)

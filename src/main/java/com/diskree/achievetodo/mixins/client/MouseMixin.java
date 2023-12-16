@@ -17,7 +17,7 @@ public class MouseMixin {
     @Final
     private MinecraftClient client;
 
-    @Redirect(method = "updateLookDirection", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingSpyglass()Z"))
+    @Redirect(method = "updateMouse", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingSpyglass()Z"))
     private boolean updateMouseRedirect(ClientPlayerEntity instance) {
         if (client.player != null && client.player.isUsingSpyglass()) {
             return SpyglassPanoramaDetails.from(client.player.getActiveItem()) == null;

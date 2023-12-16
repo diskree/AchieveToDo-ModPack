@@ -7,9 +7,10 @@ import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.decoration.DisplayEntity;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class AncientCityPortalItemDisplayEntityRenderer extends DisplayEntityRenderer<DisplayEntity.ItemDisplayEntity, DisplayEntity.ItemDisplayEntity.RenderData> {
+public class AncientCityPortalItemDisplayEntityRenderer extends DisplayEntityRenderer<DisplayEntity.ItemDisplayEntity, DisplayEntity.ItemDisplayEntity.Data> {
 
     private final ItemRenderer itemRenderer;
 
@@ -18,14 +19,16 @@ public class AncientCityPortalItemDisplayEntityRenderer extends DisplayEntityRen
         this.itemRenderer = context.getItemRenderer();
     }
 
+    @Override
     @Nullable
-    protected DisplayEntity.ItemDisplayEntity.RenderData getRenderData(DisplayEntity.ItemDisplayEntity itemDisplayEntity) {
-        return itemDisplayEntity.getRenderData();
+    protected DisplayEntity.ItemDisplayEntity.Data getData(DisplayEntity.@NotNull ItemDisplayEntity itemDisplayEntity) {
+        return itemDisplayEntity.getData();
     }
 
-    public void renderInner(
+    @Override
+    public void render(
             DisplayEntity.ItemDisplayEntity itemDisplayEntity,
-            DisplayEntity.ItemDisplayEntity.RenderData renderData,
+            DisplayEntity.ItemDisplayEntity.Data renderData,
             MatrixStack matrices,
             VertexConsumerProvider vertexConsumers,
             int i,

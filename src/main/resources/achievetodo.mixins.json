@@ -39,7 +39,6 @@
     "client.CyclingButtonWidgetMixin",
     "client.GameRendererMixin",
     "client.GameTabMixin",
-    "client.KeyboardInputMixin",
     "client.LockButtonWidgetMixin",
     "client.MinecraftClientMixin",
     "client.MoreTabMixin",

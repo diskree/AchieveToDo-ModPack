@@ -11,10 +11,19 @@ import net.minecraft.util.math.Direction;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin {
+
+    @Inject(method = "jump", at = @At("HEAD"), cancellable = true)
+    public void jumpInject(CallbackInfo ci) {
+        PlayerEntity playerEntity = ((PlayerEntity) (Object) this);
+        if (!playerEntity.isTouchingWater() && AchieveToDo.isActionBlocked(playerEntity, BlockedAction.JUMP)) {
+            ci.cancel();
+        }
+    }
 
     @Inject(method = "canPlaceOn", at = @At("HEAD"), cancellable = true)
     public void canPlaceOnInject(BlockPos pos, Direction facing, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {

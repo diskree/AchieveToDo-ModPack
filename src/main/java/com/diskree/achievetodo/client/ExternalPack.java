@@ -9,16 +9,16 @@ public enum ExternalPack {
     BACAP(
             "BlazeandCave's Advancements Pack",
             Formatting.LIGHT_PURPLE,
-            "https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/",
-            "https://www.mediafire.com/file/6mj2x3v6jtikdet/BlazeandCave%2527s_Advancements_Pack_1.16.2.zip/file",
-            "d84e8e1b3e85c801046beefb46e2529567bda6b3"
+            "https://modrinth.com/datapack/blazeandcaves-advancements-pack",
+            "https://cdn.modrinth.com/data/VoVJ47kN/versions/OjTY8pAl/BlazeandCave%27s%20Advancements%20Pack%201.16.6.zip",
+            "4d2ddaee3b17b9a8c93bb9a176d3bf9cddb006cd"
     ),
     BACAP_HARDCORE(
             "BlazeandCave's Advancements Pack (Hardcore version)",
             Formatting.RED,
             "https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-hardcore-version/",
-            "https://www.mediafire.com/file/5anxgeucs1udpml/%255BUNZIP_ME%255D_BlazeandCave%2527s_Advancements_Pack_H%2Ardc%2Ar%2A_1.16.zip/file",
-            "57b96613030fcf8b63972394b836263d473e4a0f"
+            "https://www.mediafire.com/file/samh3amrlhk15pu/%255BUNZIP_ME%255D_BlazeandCave%2527s_Advancements_Pack_H%2Ardc%2Ar%2A_1.16.0.1.zip/file",
+            "dabbf0610d3d31a89609efe232c15b083db99ca7"
     ),
     BACAP_TERRALITH(
             "BlazeandCave's Advancements Pack (Terralith version)",

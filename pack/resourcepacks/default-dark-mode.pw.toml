@@ -1,13 +1,13 @@
 name = "Default Dark Mode"
-filename = "Default Dark Mode.zip"
+filename = "Default-Dark-Mode-1.20.2+-2023.11.0.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/6SLU7tS5/versions/SEAHWiIS/Default-Dark-Mode-1.20-2023.7.0.zip"
+url = "https://cdn.modrinth.com/data/6SLU7tS5/versions/aJlqSPu5/Default-Dark-Mode-1.20.2%2B-2023.11.0.zip"
 hash-format = "sha1"
-hash = "fc488eca9d771b6bd7ce5c651793d812a0adb1ae"
+hash = "a911cb9f3aaaee90801dbf069f7395842ccb451d"
 
 [update]
 [update.modrinth]
 mod-id = "6SLU7tS5"
-version = "SEAHWiIS"
+version = "aJlqSPu5"

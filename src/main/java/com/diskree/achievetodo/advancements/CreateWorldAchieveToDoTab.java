@@ -1,5 +1,6 @@
 package com.diskree.achievetodo.advancements;
 
+import com.diskree.achievetodo.BuildConfig;
 import com.diskree.achievetodo.client.WorldCreatorImpl;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 import net.minecraft.client.gui.screen.world.WorldCreator;
@@ -31,7 +32,7 @@ public class CreateWorldAchieveToDoTab extends GridScreenTab {
     private static final Text END_GENERATION_INFO = Text.translatable("createWorld.generation.end.info");
 
     public CreateWorldAchieveToDoTab(CreateWorldScreen screen) {
-        super(Text.of("AchieveToDo"));
+        super(Text.of(BuildConfig.MOD_NAME));
         if (screen == null || screen.client == null) {
             return;
         }

@@ -62,7 +62,7 @@ import java.util.Optional;
 
 public class AchieveToDo implements ModInitializer {
 
-    public static final String ID = "achievetodo";
+    public static final String ID = BuildConfig.MOD_ID;
 
     public static final String BACAP_SCORE_OBJECTIVE = "bac_advancements";
     public static final String BACAP_DATA_PACK = "file/bacap.zip";

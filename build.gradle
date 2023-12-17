@@ -2,9 +2,11 @@ plugins {
     alias libs.plugins.loom
 }
 
-base.archivesName = project.mod_id
+def modId = project.mod_name.toLowerCase()
+
+base.archivesName = modId
 version = "$project.version+${libs.versions.minecraft.get()}"
-group = project.maven_group
+group = "com." + project.author
 
 repositories {
     mavenCentral()
@@ -23,7 +25,10 @@ processResources {
     inputs.property 'version', version
 
     filesMatching('fabric.mod.json') {
-        expand 'version': version
+        expand 'modId': modId,
+                'version': version,
+                'modName': mod_name,
+                'author': author
     }
 }
 
@@ -31,19 +36,21 @@ tasks.withType(JavaCompile).configureEach {
     it.options.encoding = 'UTF-8'
     it.options.release.set(17)
 }
+
 tasks.register('generateBuildConfig', DefaultTask) {
     doLast {
+        def templatePath = "$projectDir/src/main/java/com/diskree/achievetodo/BuildConfig.java"
+        def configPath = "$projectDir/gradle/BuildConfig.java.txt"
         def isDebug = project.properties['debug'] ?: 'false'
-        new File("$projectDir/src/main/java/com/diskree/achievetodo/BuildConfig.java").text = """
-package com.diskree.achievetodo;
 
-public class BuildConfig {
-    public static final boolean DEBUG = ${isDebug};
-}""".trim()
+        file(templatePath).text = file(configPath).text
+                .replace('${modName}', "\"" + mod_name.toString() + "\"")
+                .replace('${isDebug}', isDebug.toString())
     }
 }
+
 tasks.register('buildRelease', GradleBuild) {
-    tasks = ['build']
+    tasks(['build'])
     startParameter.projectProperties = ['debug': 'false']
 }
 
@@ -56,7 +63,7 @@ java {
 
 jar {
     from('LICENSE') {
-        rename { "${it}_${base.archivesName.get()}" }
+        rename { "${it}_${modId}" }
     }
     compileJava.dependsOn(generateBuildConfig)
 }

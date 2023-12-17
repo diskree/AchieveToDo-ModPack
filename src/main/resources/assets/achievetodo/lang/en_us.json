@@ -268,13 +268,13 @@
   "hints.no_new_updates.title": "No New Updates",
   "hints.no_new_updates.description": "Try to get hint if there are no advancements that have hints",
 
-  "error.screen.title": "Ooops!",
+  "error.screen.title": "Oops!",
 
   "external.pack.open_page": "Open Page",
   "external.pack.download": "Download",
   "external.pack.select_file": "Select File…",
   "external.pack.required_prefix": "To play you need to download ",
-  "external.pack.help": "Drag and drop the uploaded file here or select it from your files",
+  "external.pack.help": "Drag and drop the downloaded file here or select it from your files",
   "external.pack.picker": "Select downloaded file",
   "external.pack.error": "This file is incorrect. Please check that you downloaded the file using the \"Download\" button and did not unzip anything, then try again."
 }

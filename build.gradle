@@ -39,18 +39,19 @@ tasks.withType(JavaCompile).configureEach {
 
 tasks.register('generateBuildConfig', DefaultTask) {
     doLast {
-        def templatePath = "$projectDir/src/main/java/com/diskree/achievetodo/BuildConfig.java"
-        def configPath = "$projectDir/gradle/BuildConfig.java.txt"
+        def configPath = "$projectDir/src/main/java/com/diskree/achievetodo/BuildConfig.java"
+        def templatePath = "$projectDir/gradle/BuildConfig.java.txt"
         def isDebug = project.properties['debug'] ?: 'false'
 
-        file(templatePath).text = file(configPath).text
-                .replace('${modName}', "\"" + mod_name.toString() + "\"")
+        file(configPath).text = file(templatePath).text
+                .replace('${modName}', mod_name.toString())
                 .replace('${isDebug}', isDebug.toString())
     }
 }
 
 tasks.register('buildRelease', GradleBuild) {
-    tasks(['build'])
+    //noinspection GroovyAssignabilityCheck
+    tasks = ['build']
     startParameter.projectProperties = ['debug': 'false']
 }
 

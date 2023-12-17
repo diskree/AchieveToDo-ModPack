@@ -1,7 +1,7 @@
 package com.diskree.achievetodo;
 
 public class BuildConfig {
-    public static final String MOD_NAME = ${modName};
+    public static final String MOD_NAME = "${modName}";
     public static final String MOD_ID = MOD_NAME.toLowerCase();
     public static final boolean DEBUG = ${isDebug};
 }

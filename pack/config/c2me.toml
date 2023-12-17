@@ -39,4 +39,3 @@ enabled = true
 [vanillaWorldGenOptimizations]
 optimizeAquifer = true
 useEndBiomeCache = true
-

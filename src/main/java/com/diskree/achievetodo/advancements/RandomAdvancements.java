@@ -22,17 +22,17 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdvancementGenerator {
+public class RandomAdvancements {
 
     @Nullable
-    public static PlacedAdvancement getRandomAdvancement(ServerPlayerEntity player) {
-        return getRandomAdvancement(player, true);
+    public static PlacedAdvancement getAdvancement(ServerPlayerEntity player) {
+        return getAdvancement(player, true);
     }
 
     @SuppressWarnings("DataFlowIssue")
     @Nullable
-    public static AdvancementHint getRandomAdvancementHint(ServerPlayerEntity player) {
-        PlacedAdvancement placedAdvancement = getRandomAdvancement(player, false);
+    public static AdvancementHint getHint(ServerPlayerEntity player) {
+        PlacedAdvancement placedAdvancement = getAdvancement(player, false);
         if (placedAdvancement == null) {
             return null;
         }
@@ -941,7 +941,7 @@ public class AdvancementGenerator {
         return colorNbt;
     }
 
-    private static PlacedAdvancement getRandomAdvancement(ServerPlayerEntity player, boolean withSingleRequirement) {
+    private static PlacedAdvancement getAdvancement(ServerPlayerEntity player, boolean withSingleRequirement) {
         if (player == null) {
             return null;
         }

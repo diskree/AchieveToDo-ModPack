@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.BlockedAction;
+import com.diskree.achievetodo.action.BlockedActionType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.EntityBucketItem;
 import net.minecraft.item.ItemStack;
@@ -19,24 +19,24 @@ public abstract class PlayerEntityMixin {
 
     @Inject(method = "jump", at = @At("HEAD"), cancellable = true)
     public void jumpInject(CallbackInfo ci) {
-        PlayerEntity playerEntity = ((PlayerEntity) (Object) this);
-        if (!playerEntity.isTouchingWater() && AchieveToDo.isActionBlocked(playerEntity, BlockedAction.JUMP)) {
+        PlayerEntity playerEntity = (PlayerEntity) (Object) this;
+        if (!playerEntity.isTouchingWater() && AchieveToDo.isActionBlocked(playerEntity, BlockedActionType.JUMP)) {
             ci.cancel();
         }
     }
 
     @Inject(method = "canPlaceOn", at = @At("HEAD"), cancellable = true)
     public void canPlaceOnInject(BlockPos pos, Direction facing, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        PlayerEntity playerEntity = ((PlayerEntity) (Object) this);
-        if (stack != null && (stack.isOf(Items.WATER_BUCKET) || stack.getItem() instanceof EntityBucketItem) && AchieveToDo.isActionBlocked(playerEntity, BlockedAction.USING_WATER_BUCKET)) {
+        PlayerEntity playerEntity = (PlayerEntity) (Object) this;
+        if (stack != null && (stack.isOf(Items.WATER_BUCKET) || stack.getItem() instanceof EntityBucketItem) && AchieveToDo.isActionBlocked(playerEntity, BlockedActionType.USING_WATER_BUCKET)) {
             cir.setReturnValue(false);
         }
     }
 
     @Inject(method = "canEquip", at = @At("HEAD"), cancellable = true)
     public void canEquipInject(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        PlayerEntity playerEntity = ((PlayerEntity) (Object) this);
-        if (stack != null && AchieveToDo.isEquipmentBlocked(playerEntity, stack.getItem())) {
+        PlayerEntity playerEntity = (PlayerEntity) (Object) this;
+        if (AchieveToDo.isEquipmentBlocked(playerEntity, stack)) {
             cir.setReturnValue(false);
         }
     }

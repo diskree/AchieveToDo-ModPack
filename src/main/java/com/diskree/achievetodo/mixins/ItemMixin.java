@@ -20,7 +20,7 @@ public class ItemMixin {
 
     @Inject(method = "appendTooltip", at = @At("HEAD"))
     private void appendTooltipInject(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context, CallbackInfo ci) {
-        SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.from(stack);
+        SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.of(stack);
         if (panoramaDetails != null) {
             tooltip.add(Text.translatable("spyglass.panorama.tooltip.header").formatted(Formatting.DARK_AQUA));
             tooltip.add(Text.translatable("spyglass.panorama.tooltip." + panoramaDetails.type()).formatted(Formatting.DARK_GREEN));

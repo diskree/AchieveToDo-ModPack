@@ -27,7 +27,9 @@ public class ClientPlayNetworkHandlerMixin implements ClientPlayNetworkHandlerIm
         double x = packet.getX();
         double y = packet.getY();
         double z = packet.getZ();
-        AncientCityPortalExperienceOrbEntity entity = new AncientCityPortalExperienceOrbEntity(world, x, y, z, packet.getPortalTarget(), packet.getInclineTarget(), packet.getSize());
+        AncientCityPortalExperienceOrbEntity entity = new AncientCityPortalExperienceOrbEntity(
+                world, x, y, z, packet.getPortalTarget(), packet.getInclineTarget(), packet.getSize()
+        );
         entity.updateTrackedPosition(x, y, z);
         entity.setYaw(0.0f);
         entity.setPitch(0.0f);
@@ -36,7 +38,7 @@ public class ClientPlayNetworkHandlerMixin implements ClientPlayNetworkHandlerIm
     }
 
     @Inject(method = "onScoreboardScoreUpdate", at = @At("RETURN"))
-    private void isAutoJumpEnabledInject(ScoreboardScoreUpdateS2CPacket packet, CallbackInfo ci) {
+    private void onScoreboardScoreUpdateInject(ScoreboardScoreUpdateS2CPacket packet, CallbackInfo ci) {
         if (AchieveToDo.BACAP_SCORE_OBJECTIVE.equals(packet.objectiveName)) {
             AchieveToDo.setAdvancementsCount(packet.score);
         }

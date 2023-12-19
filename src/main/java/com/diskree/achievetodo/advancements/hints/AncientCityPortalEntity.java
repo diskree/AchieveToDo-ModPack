@@ -2,7 +2,7 @@ package com.diskree.achievetodo.advancements.hints;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.ItemDisplayEntityImpl;
-import com.diskree.achievetodo.advancements.AdvancementGenerator;
+import com.diskree.achievetodo.advancements.RandomAdvancements;
 import com.diskree.achievetodo.advancements.AdvancementHint;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -153,7 +153,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         ServerPlayerEntity charger = getChargerPlayer();
         getWorld().playSound(null, charger.getX(), charger.getY(), charger.getZ(), SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 1.0f, 0.4f);
         if (blocksToCharge.size() == 1) {
-            AdvancementHint advancementHint = AdvancementGenerator.getRandomAdvancementHint(charger);
+            AdvancementHint advancementHint = RandomAdvancements.getHint(charger);
             if (advancementHint != null) {
                 showAdvancementTab(advancementHint.tab());
                 showAdvancementHint(advancementHint.hint(), advancementHint.dropHint());

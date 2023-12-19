@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.advancements;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.BlockedAction;
+import com.diskree.achievetodo.action.BlockedActionType;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.advancement.AdvancementDisplay;
@@ -19,15 +19,15 @@ import java.util.List;
 @Environment(EnvType.CLIENT)
 public class UnblockActionToast implements Toast {
 
-    public final BlockedAction blockedAction;
+    public final BlockedActionType blockedAction;
     private final Identifier TEXTURE;
 
     private final AdvancementEntry advancement;
 
-    public UnblockActionToast(AdvancementEntry advancement, BlockedAction blockedAction) {
+    public UnblockActionToast(AdvancementEntry advancement, BlockedActionType blockedAction) {
         this.advancement = advancement;
         this.blockedAction = blockedAction;
-        TEXTURE = new Identifier(AchieveToDo.ID, "textures/gui/toasts_" + blockedAction.getActionType().name().toLowerCase() + ".png");
+        TEXTURE = new Identifier(AchieveToDo.ID, "textures/gui/toasts_" + blockedAction.getCategory().name().toLowerCase() + ".png");
     }
 
     @Override
@@ -38,12 +38,12 @@ public class UnblockActionToast implements Toast {
             int i = 0xFFFF00;
             List<OrderedText> list = manager.getClient().textRenderer.wrapLines(advancementDisplay.getTitle(), 125);
             if (list.size() == 1) {
-                context.drawText(manager.getClient().textRenderer, Text.translatable(blockedAction.getActionType().getUnblockPopupTitle()), 30, 7, i | 0xFF000000, false);
+                context.drawText(manager.getClient().textRenderer, Text.translatable(blockedAction.getCategory().getUnblockPopupTitle().getString()), 30, 7, i | 0xFF000000, false);
                 context.drawText(manager.getClient().textRenderer, list.get(0), 30, 18, -1, false);
             } else {
                 if (startTime < 1500L) {
                     int k = MathHelper.floor(MathHelper.clamp((float) (1500L - startTime) / 300.0f, 0.0f, 1.0f) * 255.0f) << 24 | 0x4000000;
-                    context.drawText(manager.getClient().textRenderer, Text.translatable(blockedAction.getActionType().getUnblockPopupTitle()), 30, 11, i | k, false);
+                    context.drawText(manager.getClient().textRenderer, Text.translatable(blockedAction.getCategory().getUnblockPopupTitle().getString()), 30, 11, i | k, false);
                 } else {
                     int k = MathHelper.floor(MathHelper.clamp((float) (startTime - 1500L) / 300.0f, 0.0f, 1.0f) * 252.0f) << 24 | 0x4000000;
                     int l = this.getHeight() / 2 - list.size() * manager.getClient().textRenderer.fontHeight / 2;

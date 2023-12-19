@@ -1,8 +1,8 @@
 package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.BlockedAction;
-import com.diskree.achievetodo.advancements.AdvancementRoot;
+import com.diskree.achievetodo.action.BlockedActionType;
+import com.diskree.achievetodo.datagen.AdvancementsGenerator;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.AdvancementRequirements;
 import net.minecraft.client.MinecraftClient;
@@ -27,9 +27,8 @@ public abstract class AdvancementProgressMixin {
             List<String> requirement = requirements.requirements().get(0);
             if (requirement != null && requirement.size() == 1) {
                 String criteria = requirement.get(0);
-                String actionPrefix = AdvancementRoot.ACTION.name().toLowerCase() + "_";
-                if (criteria != null && criteria.startsWith(actionPrefix)) {
-                    BlockedAction action = BlockedAction.map(criteria.split(actionPrefix)[1]);
+                if (criteria != null && criteria.startsWith(AdvancementsGenerator.BLOCKED_ACTION_CRITERIA_NAME_PREFIX)) {
+                    BlockedActionType action = BlockedActionType.map(criteria.split(AdvancementsGenerator.BLOCKED_ACTION_CRITERIA_NAME_PREFIX)[1]);
                     if (action != null) {
                         return action.getUnblockAdvancementsCount();
                     }

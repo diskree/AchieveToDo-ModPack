@@ -37,7 +37,7 @@ public abstract class PlayerScreenHandlerMixin {
 
             @Override
             public boolean canInsert(ItemStack stack) {
-                if (stack != null && AchieveToDo.isEquipmentBlocked(MinecraftClient.getInstance().player, stack.getItem())) {
+                if (AchieveToDo.isEquipmentBlocked(MinecraftClient.getInstance().player, stack)) {
                     if (MinecraftClient.getInstance().currentScreen != null) {
                         MinecraftClient.getInstance().currentScreen.close();
                     }

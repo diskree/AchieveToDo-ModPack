@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.BlockedAction;
+import com.diskree.achievetodo.action.BlockedActionType;
 import com.diskree.achievetodo.client.AchieveToDoClient;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.AdvancementRequirements;
@@ -40,7 +40,7 @@ public abstract class AdvancementWidgetMixin {
 
     @Unique
     private boolean isActionLocked() {
-        BlockedAction action = AchieveToDo.getBlockedActionFromAdvancement(advancement);
+        BlockedActionType action = AchieveToDo.getBlockedActionFromAdvancement(advancement);
         return action != null && !action.isUnblocked(client.player) && (progress == null || !progress.isDone());
     }
 
@@ -71,7 +71,7 @@ public abstract class AdvancementWidgetMixin {
 
     @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/advancement/AdvancementRequirements;getLength()I"))
     public int initRedirect(AdvancementRequirements instance) {
-        BlockedAction action = AchieveToDo.getBlockedActionFromAdvancement(advancement);
+        BlockedActionType action = AchieveToDo.getBlockedActionFromAdvancement(advancement);
         if (action != null) {
             return action.getUnblockAdvancementsCount();
         }

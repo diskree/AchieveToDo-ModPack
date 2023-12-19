@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.BlockedAction;
+import com.diskree.achievetodo.action.BlockedActionType;
 import net.minecraft.block.entity.EndGatewayBlockEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -20,7 +20,7 @@ public class EndGatewayBlockEntityMixin {
         if (teleportEntity instanceof EnderPearlEntity enderPearl) {
             teleportEntity = enderPearl.getOwner();
         }
-        if (teleportEntity instanceof PlayerEntity playerEntity && AchieveToDo.isActionBlocked(playerEntity, BlockedAction.END_GATE)) {
+        if (teleportEntity instanceof PlayerEntity playerEntity && AchieveToDo.isActionBlocked(playerEntity, BlockedActionType.END_GATEWAY)) {
             cir.setReturnValue(false);
         }
     }

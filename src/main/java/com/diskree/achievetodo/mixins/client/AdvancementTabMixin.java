@@ -36,7 +36,7 @@ public class AdvancementTabMixin {
     private static final Map<AdvancementTabType, List<AdvancementRoot>> tabLocations = new HashMap<>() {{
         put(AdvancementTabType.LEFT, List.of(AdvancementRoot.BIOMES, AdvancementRoot.ADVENTURE, AdvancementRoot.WEAPONRY, AdvancementRoot.HUSBANDRY, AdvancementRoot.MONSTERS));
         put(AdvancementTabType.ABOVE, List.of(AdvancementRoot.MINING, AdvancementRoot.BUILDING, AdvancementRoot.FARMING, AdvancementRoot.NETHER, AdvancementRoot.END));
-        put(AdvancementTabType.RIGHT, List.of(AdvancementRoot.ACTION, AdvancementRoot.STATISTICS, AdvancementRoot.BACAP, AdvancementRoot.ADVANCEMENTS_SEARCH));
+        put(AdvancementTabType.RIGHT, List.of(AdvancementRoot.BLOCKED_ACTIONS, AdvancementRoot.STATISTICS, AdvancementRoot.BACAP, AdvancementRoot.ADVANCEMENTS_SEARCH));
         put(AdvancementTabType.BELOW, List.of(AdvancementRoot.REDSTONE, AdvancementRoot.POTION, AdvancementRoot.ENCHANTING, AdvancementRoot.CHALLENGES));
     }};
 
@@ -77,7 +77,7 @@ public class AdvancementTabMixin {
         String rootName = advancementId.getPath().split("/")[0];
         AdvancementRoot tabToAdd = null;
         for (AdvancementRoot tab : AdvancementRoot.values()) {
-            if (rootName.toUpperCase().equals(tab.name())) {
+            if (rootName.toLowerCase().equals(tab.getNamespace())) {
                 tabToAdd = tab;
                 break;
             }

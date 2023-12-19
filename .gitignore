@@ -6,3 +6,4 @@ build/
 /pack/mods/achievetodo-*.jar
 /run/
 src/main/java/com/diskree/achievetodo/BuildConfig.java
+src/main/generated/

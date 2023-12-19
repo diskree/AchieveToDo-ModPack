@@ -1,6 +1,7 @@
 package com.diskree.achievetodo;
 
-import com.diskree.achievetodo.advancements.AdvancementGenerator;
+import com.diskree.achievetodo.action.BlockedActionType;
+import com.diskree.achievetodo.advancements.RandomAdvancements;
 import com.diskree.achievetodo.advancements.UnblockActionToast;
 import com.diskree.achievetodo.advancements.hints.*;
 import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
@@ -21,11 +22,16 @@ import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.advancement.*;
-import net.minecraft.block.*;
+import net.minecraft.advancement.AdvancementDisplay;
+import net.minecraft.advancement.AdvancementEntry;
+import net.minecraft.advancement.AdvancementProgress;
+import net.minecraft.advancement.PlacedAdvancement;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.texture.MissingSprite;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -36,6 +42,7 @@ import net.minecraft.item.*;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.scoreboard.ReadableScoreboardScore;
 import net.minecraft.scoreboard.ScoreHolder;
@@ -55,9 +62,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 public class AchieveToDo implements ModInitializer {
@@ -142,7 +146,6 @@ public class AchieveToDo implements ModInitializer {
     public static final SoundEvent MUSIC_DISC_5_ACTIVATOR = SoundEvent.of(new Identifier(ID, "music_disc_5_activator"));
     public static final Identifier EVOKER_NO_TOTEM_OF_UNDYING_LOOT_TABLE_ID = new Identifier(ID, "entities/evoker_no_totem_of_undying");
 
-    private boolean isPanoramaLoading;
     private static int advancementsCount;
 
     public static int getScore(PlayerEntity player) {
@@ -174,7 +177,7 @@ public class AchieveToDo implements ModInitializer {
 
         CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> dispatcher.register(CommandManager.literal("random").executes((context -> {
             ServerCommandSource source = context.getSource();
-            PlacedAdvancement placedAdvancement = AdvancementGenerator.getRandomAdvancement(source.getPlayer());
+            PlacedAdvancement placedAdvancement = RandomAdvancements.getAdvancement(source.getPlayer());
             if (placedAdvancement != null) {
                 Optional<AdvancementDisplay> display = placedAdvancement.getAdvancement().display();
                 Optional<AdvancementDisplay> rootDisplay = placedAdvancement.getRoot().getAdvancement().display();
@@ -194,7 +197,7 @@ public class AchieveToDo implements ModInitializer {
             return Command.SINGLE_SUCCESS;
         }))));
         ServerPlayNetworking.registerGlobalReceiver(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
-            BlockedAction action = buf.readEnumConstant(BlockedAction.class);
+            BlockedActionType action = buf.readEnumConstant(BlockedActionType.class);
             if (action != null) {
                 server.execute(() -> demystifyAction(player, action));
             }
@@ -202,10 +205,10 @@ public class AchieveToDo implements ModInitializer {
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             ItemStack stack = player.getStackInHand(hand);
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {
-                if (pos.getY() >= 0 && isActionBlocked(player, BlockedAction.BREAK_BLOCKS_IN_POSITIVE_Y)) {
+                if (pos.getY() >= 0 && isActionBlocked(player, BlockedActionType.BREAK_BLOCKS_IN_POSITIVE_Y)) {
                     return ActionResult.FAIL;
                 }
-                if (pos.getY() < 0 && isActionBlocked(player, BlockedAction.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
+                if (pos.getY() < 0 && isActionBlocked(player, BlockedActionType.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
                     return ActionResult.FAIL;
                 }
             }
@@ -217,37 +220,7 @@ public class AchieveToDo implements ModInitializer {
         UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
             BlockState block = world.getBlockState(hitResult.getBlockPos());
             ItemStack stack = player.getStackInHand(hand);
-            if (block.isOf(Blocks.CRAFTING_TABLE) && isActionBlocked(player, BlockedAction.USING_CRAFTING_TABLE)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.FURNACE) && isActionBlocked(player, BlockedAction.USING_FURNACE)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.ANVIL) && isActionBlocked(player, BlockedAction.USING_ANVIL)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.SMOKER) && isActionBlocked(player, BlockedAction.USING_SMOKER)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.BLAST_FURNACE) && isActionBlocked(player, BlockedAction.USING_BLAST_FURNACE)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.ENDER_CHEST) && isActionBlocked(player, BlockedAction.USING_ENDER_CHEST)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.BREWING_STAND) && isActionBlocked(player, BlockedAction.USING_BREWING_STAND)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.BEACON) && isActionBlocked(player, BlockedAction.USING_BEACON)) {
-                return ActionResult.FAIL;
-            }
-            if (block.getBlock() instanceof ShulkerBoxBlock && isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.SHULKER_BOX) && isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.ENCHANTING_TABLE) && isActionBlocked(player, BlockedAction.USING_ENCHANTING_TABLE)) {
+            if (isBlockBlocked(player, block.getBlock())) {
                 return ActionResult.FAIL;
             }
             if (isToolBlocked(player, stack)) {
@@ -255,12 +228,12 @@ public class AchieveToDo implements ModInitializer {
             }
             if (stack.getItem() instanceof AliasedBlockItem aliasedBlockItem) {
                 if (!block.isOf(Blocks.FARMLAND) || hitResult.getSide() != Direction.UP || !aliasedBlockItem.getBlock().getDefaultState().isIn(BlockTags.MAINTAINS_FARMLAND)) {
-                    if (isItemLocked(player, stack)) {
+                    if (isItemBlocked(player, stack)) {
                         return ActionResult.FAIL;
                     }
                 }
             } else {
-                if (isItemLocked(player, stack)) {
+                if (isItemBlocked(player, stack)) {
                     return ActionResult.FAIL;
                 }
             }
@@ -268,7 +241,7 @@ public class AchieveToDo implements ModInitializer {
         });
         UseItemCallback.EVENT.register((player, world, hand) -> {
             ItemStack stack = player.getStackInHand(hand);
-            if (isItemLocked(player, stack)) {
+            if (isItemBlocked(player, stack)) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
             return TypedActionResult.pass(ItemStack.EMPTY);
@@ -281,7 +254,7 @@ public class AchieveToDo implements ModInitializer {
             return ActionResult.PASS;
         });
         UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-            if (entity instanceof BoatEntity && isActionBlocked(player, BlockedAction.USING_BOAT)) {
+            if (entity instanceof BoatEntity && isActionBlocked(player, BlockedActionType.USING_BOAT)) {
                 return ActionResult.FAIL;
             }
             if (entity instanceof VillagerEntity villagerEntity && isVillagerBlocked(player, villagerEntity.getVillagerData().getProfession())) {
@@ -291,32 +264,6 @@ public class AchieveToDo implements ModInitializer {
             return ActionResult.PASS;
         });
         ServerWorldEvents.LOAD.register((server, world) -> advancementsCount = 0);
-    }
-
-    private boolean isItemLocked(PlayerEntity player, ItemStack stack) {
-        if (stack.isFood() && isFoodBlocked(player, stack.getItem().getFoodComponent())) {
-            return true;
-        }
-        if (stack.isOf(Items.SHIELD) && isActionBlocked(player, BlockedAction.USING_SHIELD)) {
-            return true;
-        }
-        if (stack.isOf(Items.BOW) && isActionBlocked(player, BlockedAction.USING_BOW)) {
-            return true;
-        }
-        if (stack.isOf(Items.FIREWORK_ROCKET) && player.isFallFlying() && isActionBlocked(player, BlockedAction.USING_FIREWORKS_WHILE_FLY)) {
-            return true;
-        }
-        if (stack.isOf(Items.ELYTRA) && isActionBlocked(player, BlockedAction.EQUIP_ELYTRA)) {
-            return true;
-        }
-        if (stack.getItem() instanceof ArmorItem armorItem && isEquipmentBlocked(player, armorItem)) {
-            return true;
-        }
-        if (stack.isOf(Items.SPYGLASS) && player.getWorld().isClient) {
-            SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.from(stack);
-            return panoramaDetails != null && !isPanoramaReady(panoramaDetails);
-        }
-        return false;
     }
 
     public static void grantHintsAdvancement(ServerPlayerEntity player, String pathName) {
@@ -330,16 +277,39 @@ public class AchieveToDo implements ModInitializer {
         }
     }
 
-    public static BlockedAction getBlockedActionFromAdvancement(PlacedAdvancement advancement) {
+    public static BlockedActionType getBlockedActionFromAdvancement(PlacedAdvancement advancement) {
         String[] pathPieces = advancement.getAdvancementEntry().id().getPath().split("/");
-        return pathPieces.length == 2 ? BlockedAction.map(pathPieces[1]) : null;
+        return pathPieces.length == 2 ? BlockedActionType.map(pathPieces[1]) : null;
     }
 
-    public static boolean isActionBlocked(PlayerEntity player, BlockedAction action) {
+    private boolean isItemBlocked(PlayerEntity player, ItemStack stack) {
+        if (isFoodBlocked(player, stack.getItem().getFoodComponent())) {
+            return true;
+        }
+        if (isEquipmentBlocked(player, stack)) {
+            return true;
+        }
+        if (stack.isOf(Items.SHIELD) && isActionBlocked(player, BlockedActionType.USING_SHIELD)) {
+            return true;
+        }
+        if (stack.isOf(Items.BOW) && isActionBlocked(player, BlockedActionType.USING_BOW)) {
+            return true;
+        }
+        if (stack.isOf(Items.FIREWORK_ROCKET) && player.isFallFlying() && isActionBlocked(player, BlockedActionType.USING_FIREWORKS_WHILE_FLY)) {
+            return true;
+        }
+        if (stack.isOf(Items.SPYGLASS) && player.getWorld().isClient) {
+            SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.of(stack);
+            return panoramaDetails != null && !panoramaDetails.isPanoramaReady();
+        }
+        return false;
+    }
+
+    public static boolean isActionBlocked(PlayerEntity player, BlockedActionType action) {
         return isActionBlocked(player, action, false);
     }
 
-    public static boolean isActionBlocked(PlayerEntity player, BlockedAction action, boolean isCheckOnly) {
+    public static boolean isActionBlocked(PlayerEntity player, BlockedActionType action, boolean isCheckOnly) {
         if (action == null || player == null || player.isCreative() || action.isUnblocked(player)) {
             return false;
         }
@@ -354,103 +324,70 @@ public class AchieveToDo implements ModInitializer {
         return true;
     }
 
-    public static boolean isEquipmentBlocked(PlayerEntity player, Item item) {
-        if (item == Items.ELYTRA && isActionBlocked(player, BlockedAction.EQUIP_ELYTRA)) {
-            return true;
+    public static boolean isFoodBlocked(PlayerEntity player, FoodComponent food) {
+        if (food == null) {
+            return false;
         }
-        if (item instanceof ArmorItem) {
-            ArmorMaterial armorMaterial = ((ArmorItem) item).getMaterial();
-            return armorMaterial == ArmorMaterials.IRON && isActionBlocked(player, BlockedAction.EQUIP_IRON_ARMOR) ||
-                    armorMaterial == ArmorMaterials.DIAMOND && isActionBlocked(player, BlockedAction.EQUIP_DIAMOND_ARMOR) ||
-                    armorMaterial == ArmorMaterials.NETHERITE && isActionBlocked(player, BlockedAction.EQUIP_NETHERITE_ARMOR);
+        BlockedActionType action = BlockedActionType.findBlockedFood(food);
+        if (action != null) {
+            return isActionBlocked(player, action);
         }
         return false;
     }
 
-    private boolean isFoodBlocked(PlayerEntity player, FoodComponent food) {
-        if (food == null) {
+    public static boolean isBlockBlocked(PlayerEntity player, Block block) {
+        if (block == null) {
             return false;
         }
-        for (BlockedAction action : BlockedAction.values()) {
-            if (action.getFoodComponent() == food) {
-                return isActionBlocked(player, action);
-            }
+        BlockedActionType action = BlockedActionType.findBlockedBlock(block);
+        if (action != null) {
+            return isActionBlocked(player, action);
         }
         return false;
     }
 
     private boolean isToolBlocked(PlayerEntity player, ItemStack stack) {
-        if (!stack.isDamageable()) {
+        if (stack == null) {
             return false;
         }
-        Item item = stack.getItem();
-        if (item instanceof ToolItem) {
-            ToolMaterial toolMaterial = ((ToolItem) item).getMaterial();
-            return toolMaterial == ToolMaterials.STONE && isActionBlocked(player, BlockedAction.USING_STONE_TOOLS) ||
-                    toolMaterial == ToolMaterials.IRON && isActionBlocked(player, BlockedAction.USING_IRON_TOOLS) ||
-                    toolMaterial == ToolMaterials.DIAMOND && isActionBlocked(player, BlockedAction.USING_DIAMOND_TOOLS) ||
-                    toolMaterial == ToolMaterials.NETHERITE && isActionBlocked(player, BlockedAction.USING_NETHERITE_TOOLS);
+        BlockedActionType action = BlockedActionType.findBlockedTool(stack.getItem());
+        if (action != null) {
+            return isActionBlocked(player, action);
+        }
+        return false;
+    }
+
+    public static boolean isEquipmentBlocked(PlayerEntity player, ItemStack stack) {
+        if (stack == null) {
+            return false;
+        }
+        BlockedActionType action = BlockedActionType.findBlockedEquipment(stack.getItem());
+        if (action != null) {
+            return isActionBlocked(player, action);
+        }
+        return false;
+    }
+
+    public static boolean isDimensionBlocked(PlayerEntity player, RegistryKey<World> dimension) {
+        if (dimension == null) {
+            return false;
+        }
+        BlockedActionType action = BlockedActionType.findBlockedDimension(dimension);
+        if (action != null) {
+            return isActionBlocked(player, action);
         }
         return false;
     }
 
     private boolean isVillagerBlocked(PlayerEntity player, VillagerProfession profession) {
-        for (BlockedAction action : BlockedAction.values()) {
-            if (action.getVillagerProfession() == profession) {
-                return isActionBlocked(player, action);
-            }
+        if (profession == null) {
+            return false;
+        }
+        BlockedActionType action = BlockedActionType.findBlockedVillager(profession);
+        if (action != null) {
+            return isActionBlocked(player, action);
         }
         return false;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public boolean isPanoramaReady(SpyglassPanoramaDetails panoramaDetails) {
-        MinecraftClient client = MinecraftClient.getInstance();
-        if (isPanoramaLoading) {
-            return false;
-        }
-        List<Integer> missingPanoramaFaces = new ArrayList<>();
-        for (int face = 0; face < 6; face++) {
-            if (client.getTextureManager().getOrDefault(panoramaDetails.generateFaceTextureId(face), MissingSprite.getMissingSpriteTexture()) == MissingSprite.getMissingSpriteTexture()) {
-                missingPanoramaFaces.add(face);
-            }
-        }
-        if (missingPanoramaFaces.isEmpty()) {
-            return true;
-        }
-        File cacheDir = new File(client.runDirectory, "panorama");
-        if (!cacheDir.exists() && !cacheDir.mkdirs()) {
-            return false;
-        }
-        isPanoramaLoading = true;
-        boolean isPanoramaExists = true;
-        for (int face : missingPanoramaFaces) {
-            boolean isLastLoading = face == missingPanoramaFaces.get(missingPanoramaFaces.size() - 1);
-            File cacheFile = panoramaDetails.generateCacheFile(cacheDir, face);
-            boolean isFaceExists = cacheFile.exists();
-            if (!isFaceExists) {
-                isPanoramaExists = false;
-            }
-            String url = panoramaDetails.generateURL(face);
-            SpyglassPanoramaTexture spyglassPanoramaTexture = new SpyglassPanoramaTexture(cacheFile, url, (success) -> {
-                if (!isLastLoading || client.player == null) {
-                    return;
-                }
-                isPanoramaLoading = false;
-                if (!isFaceExists) {
-                    if (success) {
-                        client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.success").getString()).copy().formatted(Formatting.GREEN), true);
-                    } else {
-                        client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.error").getString()).copy().formatted(Formatting.RED), true);
-                    }
-                }
-            });
-            client.getTextureManager().registerTexture(panoramaDetails.generateFaceTextureId(face), spyglassPanoramaTexture);
-        }
-        if (!isPanoramaExists && client.player != null) {
-            client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading").getString()).copy().formatted(Formatting.YELLOW), true);
-        }
-        return isPanoramaExists;
     }
 
     @Environment(EnvType.CLIENT)
@@ -462,7 +399,7 @@ public class AchieveToDo implements ModInitializer {
         int oldCount = advancementsCount;
         advancementsCount = count;
         if (oldCount != 0) {
-            for (BlockedAction action : BlockedAction.values()) {
+            for (BlockedActionType action : BlockedActionType.values()) {
                 if (advancementsCount >= action.getUnblockAdvancementsCount() && oldCount < action.getUnblockAdvancementsCount()) {
                     PlacedAdvancement advancement = client.player.networkHandler.getAdvancementHandler().getManager().get(action.buildAdvancementId());
                     if (advancement != null) {
@@ -473,7 +410,7 @@ public class AchieveToDo implements ModInitializer {
         }
     }
 
-    private static void demystifyAction(ServerPlayerEntity player, BlockedAction action) {
+    private static void demystifyAction(ServerPlayerEntity player, BlockedActionType action) {
         AdvancementEntry advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
         AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
         for (String criterion : advancementProgress.getUnobtainedCriteria()) {

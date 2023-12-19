@@ -14,6 +14,9 @@
   "icon": "assets/achievetodo/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "com.diskree.achievetodo.datagen.DataGeneratorEntrypoint"
+    ],
     "main": [
       "com.diskree.achievetodo.AchieveToDo"
     ],

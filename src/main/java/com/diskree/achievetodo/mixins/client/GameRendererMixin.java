@@ -32,7 +32,7 @@ public abstract class GameRendererMixin {
             cubeMap = null;
             return;
         }
-        SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.from(client.player.getActiveItem());
+        SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.of(client.player.getActiveItem());
         if (panoramaDetails == null) {
             return;
         }

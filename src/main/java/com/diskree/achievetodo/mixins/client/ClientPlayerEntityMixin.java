@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.BlockedAction;
+import com.diskree.achievetodo.action.BlockedActionType;
 import net.minecraft.client.network.ClientPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -14,7 +14,7 @@ public class ClientPlayerEntityMixin {
     @Inject(method = "isAutoJumpEnabled", at = @At("HEAD"), cancellable = true)
     private void isAutoJumpEnabledInject(CallbackInfoReturnable<Boolean> cir) {
         ClientPlayerEntity clientPlayerEntity = (ClientPlayerEntity) (Object) this;
-        if (AchieveToDo.isActionBlocked(clientPlayerEntity, BlockedAction.JUMP, true)) {
+        if (AchieveToDo.isActionBlocked(clientPlayerEntity, BlockedActionType.JUMP, true)) {
             cir.setReturnValue(false);
         }
     }

@@ -38,3 +38,4 @@ accessible field net/minecraft/advancement/PlayerAdvancementTracker advancementM
 accessible field net/minecraft/client/network/ClientCommonNetworkHandler client Lnet/minecraft/client/MinecraftClient;
 accessible field net/minecraft/network/packet/s2c/play/ScoreboardScoreUpdateS2CPacket objectiveName Ljava/lang/String;
 accessible field net/minecraft/network/packet/s2c/play/ScoreboardScoreUpdateS2CPacket score I
+accessible field net/minecraft/advancement/PlayerAdvancementTracker visibleAdvancements Ljava/util/Set;

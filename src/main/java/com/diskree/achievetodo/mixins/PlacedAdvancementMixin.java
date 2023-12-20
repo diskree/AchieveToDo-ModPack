@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.action.IGeneratedAdvancement;
-import com.diskree.achievetodo.advancements.AdvancementRoot;
+import com.diskree.achievetodo.advancements.AdvancementsTab;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.PlacedAdvancement;
 import org.spongepowered.asm.mixin.Final;
@@ -28,8 +28,8 @@ public abstract class PlacedAdvancementMixin {
     @Inject(method = "getChildren", at = @At("HEAD"), cancellable = true)
     public void getChildrenInject(CallbackInfoReturnable<Iterable<PlacedAdvancement>> cir) {
         String namespace = getAdvancementEntry().id().getPath();
-        for (AdvancementRoot root : AdvancementRoot.values()) {
-            if (root.getPath().equals(namespace.toLowerCase()) && root.children != null) {
+        for (AdvancementsTab root : AdvancementsTab.values()) {
+            if (root.getRootAdvancementPath().equals(namespace.toLowerCase()) && root.children != null) {
                 List<String> advancementPaths = new ArrayList<>();
                 for (List<IGeneratedAdvancement> row : root.children) {
                     advancementPaths.add(root.getAdvancementPath(row.get(0)));

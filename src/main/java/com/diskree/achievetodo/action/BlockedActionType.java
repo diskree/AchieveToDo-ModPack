@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.action;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.advancements.AdvancementRoot;
+import com.diskree.achievetodo.advancements.AdvancementsTab;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -353,7 +353,7 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         if (villager != null) {
             return Text.translatable("blocked.villager");
         }
-        return Text.translatable("blocked." + name().toLowerCase());
+        return Text.translatable("blocked." + getName());
     }
 
     public Text buildBlockedDescription(PlayerEntity player) {
@@ -372,7 +372,7 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     }
 
     public Identifier buildAdvancementId() {
-        return new Identifier(AdvancementRoot.BLOCKED_ACTIONS.getNamespace() + "/" + name().toLowerCase());
+        return AdvancementsTab.BLOCKED_ACTIONS.getAdvancementId(this);
     }
 
     public static BlockedActionType map(String name) {
@@ -512,11 +512,11 @@ public enum BlockedActionType implements IGeneratedAdvancement {
 
     @Override
     public Text getTitle() {
-        return Text.translatable("blocked." + name().toLowerCase() + ".title");
+        return Text.translatable("blocked." + getName() + ".title");
     }
 
     @Override
     public Text getDescription() {
-        return Text.translatable("blocked." + name().toLowerCase() + ".description");
+        return Text.translatable("blocked." + getName() + ".description");
     }
 }

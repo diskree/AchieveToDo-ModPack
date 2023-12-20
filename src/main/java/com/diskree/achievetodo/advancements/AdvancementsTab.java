@@ -18,19 +18,17 @@ import java.util.List;
 
 import static com.diskree.achievetodo.action.BlockedActionType.*;
 
-public enum AdvancementRoot {
+public enum AdvancementsTab {
     BIOMES,
     ADVENTURE,
     WEAPONRY,
     HUSBANDRY,
     MONSTERS,
-
     MINING,
     BUILDING,
     FARMING,
     NETHER,
     END,
-
     BLOCKED_ACTIONS(
             Items.BOOK,
             Blocks.CHERRY_TRAPDOOR,
@@ -137,8 +135,11 @@ public enum AdvancementRoot {
     ),
     STATISTICS,
     BACAP,
-    ADVANCEMENTS_SEARCH,
-
+    ADVANCEMENTS_SEARCH(
+            Items.AIR,
+            Blocks.BLACK_CONCRETE,
+            List.of()
+    ),
     REDSTONE,
     POTION,
     ENCHANTING,
@@ -151,40 +152,40 @@ public enum AdvancementRoot {
     final Block background;
     public final List<List<IGeneratedAdvancement>> children;
 
-    AdvancementRoot() {
+    AdvancementsTab() {
         isModded = false;
         icon = null;
         background = null;
         children = null;
     }
 
-    AdvancementRoot(Item icon, Block background, List<List<IGeneratedAdvancement>> children) {
+    AdvancementsTab(Item icon, Block background, @NotNull List<List<IGeneratedAdvancement>> children) {
         isModded = true;
         this.icon = icon;
         this.background = background;
         this.children = children;
     }
 
-    public String getNamespace() {
-        String namespace = name().toLowerCase();
+    public String getBasePath() {
+        String name = name().toLowerCase();
         if (isModded) {
-            namespace = AchieveToDo.ID + "_" + namespace;
+            name = AchieveToDo.ID + "_" + name;
         }
-        return namespace;
+        return name;
     }
 
     @NotNull
-    public String getPath() {
-        return getNamespace() + "/" + ROOT;
+    public String getRootAdvancementPath() {
+        return getBasePath() + "/" + ROOT;
     }
 
     @NotNull
     public String getAdvancementPath(@NotNull IGeneratedAdvancement advancement) {
-        return getNamespace() + "/" + advancement.getName();
+        return getBasePath() + "/" + advancement.getName();
     }
 
     @NotNull
-    public Identifier getBackgroundTexture() {
+    public Identifier getBackgroundTextureId() {
         return new Identifier("textures/block/" + Registries.BLOCK.getId(background).getPath() + ".png");
     }
 
@@ -201,5 +202,15 @@ public enum AdvancementRoot {
     @NotNull
     public Text getDescription() {
         return Text.translatable("advancement.root." + name().toLowerCase() + ".description");
+    }
+
+    @NotNull
+    public Identifier getRootAdvancementId() {
+        return new Identifier(getRootAdvancementPath());
+    }
+
+    @NotNull
+    public Identifier getAdvancementId(@NotNull IGeneratedAdvancement advancement) {
+        return new Identifier(getAdvancementPath(advancement));
     }
 }

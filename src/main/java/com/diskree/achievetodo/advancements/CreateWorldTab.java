@@ -11,7 +11,7 @@ import net.minecraft.client.gui.widget.TextWidget;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
-public class CreateWorldAchieveToDoTab extends GridScreenTab {
+public class CreateWorldTab extends GridScreenTab {
 
     private static final Text LAN_TITLE = Text.translatable("lanServer.title");
     private static final Text COOPERATIVE_MODE = Text.translatable("createWorld.lan.cooperative_mode");
@@ -31,7 +31,7 @@ public class CreateWorldAchieveToDoTab extends GridScreenTab {
     private static final Text END_GENERATION = Text.translatable("createWorld.generation.end");
     private static final Text END_GENERATION_INFO = Text.translatable("createWorld.generation.end.info");
 
-    public CreateWorldAchieveToDoTab(CreateWorldScreen screen) {
+    public CreateWorldTab(CreateWorldScreen screen) {
         super(Text.of(BuildConfig.MOD_NAME));
         if (screen == null || screen.client == null) {
             return;

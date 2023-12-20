@@ -62,8 +62,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
 
-import java.util.Optional;
-
 public class AchieveToDo implements ModInitializer {
 
     public static final String ID = BuildConfig.MOD_ID;
@@ -90,8 +88,6 @@ public class AchieveToDo implements ModInitializer {
 
     public static final Identifier DEMYSTIFY_LOCKED_ACTION_PACKET_ID = new Identifier(ID, "demystify_locked_action");
 
-    public static final Identifier ADVANCEMENTS_SEARCH = new Identifier(AchieveToDo.ID, "advancements_search");
-
     public static final Identifier ANCIENT_CITY_PORTAL_BLOCK_ID = new Identifier(ID, "ancient_city_portal");
     public static final AncientCityPortalBlock ANCIENT_CITY_PORTAL_BLOCK = new AncientCityPortalBlock(AbstractBlock.Settings.create()
             .noCollision()
@@ -117,11 +113,6 @@ public class AchieveToDo implements ModInitializer {
     public static final Identifier ANCIENT_CITY_PORTAL_PARTICLES_ID = new Identifier(ID, "ancient_city_portal_particles");
     public static final DefaultParticleType ANCIENT_CITY_PORTAL_PARTICLES = FabricParticleTypes.simple();
 
-    public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = FabricEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
-            .dimensions(EntityDimensions.changing(0.0f, 0.0f))
-            .trackRangeChunks(10)
-            .trackedUpdateRate(1)
-            .build();
     public static final Identifier ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = new Identifier(ID, "ancient_city_portal_tab_entity");
     public static final EntityType<AncientCityPortalTabEntity> ANCIENT_CITY_PORTAL_TAB = FabricEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalTabEntity::new)
             .dimensions(EntityDimensions.changing(0.0f, 0.0f))
@@ -129,6 +120,12 @@ public class AchieveToDo implements ModInitializer {
             .trackedUpdateRate(1)
             .build();
     public static final Identifier ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID = new Identifier(ID, "ancient_city_portal_advancement_entity");
+    public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = FabricEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
+            .dimensions(EntityDimensions.changing(0.0f, 0.0f))
+            .trackRangeChunks(10)
+            .trackedUpdateRate(1)
+            .build();
+
     public static final Identifier ANCIENT_CITY_PORTAL_HINT_ENTITY_ID = new Identifier(ID, "ancient_city_portal_prompt_entity");
     public static final EntityType<AncientCityPortalPromptEntity> ANCIENT_CITY_PORTAL_HINT = FabricEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalPromptEntity::new)
             .dimensions(EntityDimensions.changing(0.0f, 0.0f))
@@ -179,17 +176,17 @@ public class AchieveToDo implements ModInitializer {
             ServerCommandSource source = context.getSource();
             PlacedAdvancement placedAdvancement = RandomAdvancements.getAdvancement(source.getPlayer());
             if (placedAdvancement != null) {
-                Optional<AdvancementDisplay> display = placedAdvancement.getAdvancement().display();
-                Optional<AdvancementDisplay> rootDisplay = placedAdvancement.getRoot().getAdvancement().display();
-                if (display.isEmpty() || rootDisplay.isEmpty()) {
+                AdvancementDisplay display = placedAdvancement.getAdvancement().display().orElse(null);
+                AdvancementDisplay rootDisplay = placedAdvancement.getRoot().getAdvancement().display().orElse(null);
+                if (display == null || rootDisplay == null) {
                     source.sendMessage(Text.of("Parsing error for advancement: " + placedAdvancement.getAdvancementEntry().id()).copy().formatted(Formatting.RED));
                     return Command.SINGLE_SUCCESS;
                 }
                 final String separator = "----------";
                 source.sendMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
-                source.sendMessage(rootDisplay.get().getTitle().copy().formatted(Formatting.BLUE, Formatting.BOLD));
-                source.sendMessage(display.get().getTitle().copy().formatted(Formatting.AQUA, Formatting.ITALIC));
-                source.sendMessage(display.get().getDescription().copy().formatted(Formatting.YELLOW));
+                source.sendMessage(rootDisplay.getTitle().copy().formatted(Formatting.BLUE, Formatting.BOLD));
+                source.sendMessage(display.getTitle().copy().formatted(Formatting.AQUA, Formatting.ITALIC));
+                source.sendMessage(display.getDescription().copy().formatted(Formatting.YELLOW));
                 source.sendMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
             } else {
                 source.sendMessage(Text.translatable("commands.random.no_advancements"));

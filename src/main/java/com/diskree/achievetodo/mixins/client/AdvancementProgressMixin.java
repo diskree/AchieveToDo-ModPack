@@ -6,6 +6,7 @@ import com.diskree.achievetodo.datagen.AdvancementsGenerator;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.AdvancementRequirements;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -47,10 +48,14 @@ public abstract class AdvancementProgressMixin {
     }
 
     @Inject(method = "getProgressBarFraction", at = @At("HEAD"), cancellable = true)
-    public void getProgressBarFractionInject(CallbackInfoReturnable<String> cir) {
+    public void getProgressBarFractionInject(CallbackInfoReturnable<Text> cir) {
         int actionUnblockAdvancementsCount = getActionUnblockAdvancementsCount();
         if (actionUnblockAdvancementsCount != -1) {
-            cir.setReturnValue(Math.min(actionUnblockAdvancementsCount, AchieveToDo.getScore(MinecraftClient.getInstance().player)) + "/" + actionUnblockAdvancementsCount);
+            cir.setReturnValue(Text.translatable(
+                    "advancements.progress",
+                    Math.min(actionUnblockAdvancementsCount, AchieveToDo.getScore(MinecraftClient.getInstance().player)),
+                    actionUnblockAdvancementsCount
+            ));
         }
     }
 }

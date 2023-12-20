@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.advancements.CreateWorldAchieveToDoTab;
+import com.diskree.achievetodo.advancements.CreateWorldTab;
 import com.diskree.achievetodo.client.CreateWorldScreenImpl;
 import com.diskree.achievetodo.client.DownloadExternalPackScreen;
 import com.diskree.achievetodo.client.ExternalPack;
@@ -74,7 +74,7 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
         Tab[] originalTabs = args.get(0);
         Tab[] newTabs = new Tab[originalTabs.length + 1];
         System.arraycopy(originalTabs, 0, newTabs, 0, 2);
-        newTabs[2] = new CreateWorldAchieveToDoTab(createWorldScreen);
+        newTabs[2] = new CreateWorldTab(createWorldScreen);
         System.arraycopy(originalTabs, 2, newTabs, 3, originalTabs.length - 2);
         args.set(0, newTabs);
     }

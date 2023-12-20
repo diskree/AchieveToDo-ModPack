@@ -37,7 +37,7 @@ public class RandomAdvancements {
             return null;
         }
         PlacedAdvancement root = PlacedAdvancement.findRoot(placedAdvancement);
-        AdvancementDisplay advancementDisplay = placedAdvancement.getAdvancement().display().get();
+        AdvancementDisplay advancementDisplay = placedAdvancement.getAdvancement().display().orElse(null);
         ArrayList<String> incompleteCriteria = new ArrayList<>();
         AdvancementProgress progress = player.getAdvancementTracker().getProgress(placedAdvancement.getAdvancementEntry());
         for (List<String> requirement : placedAdvancement.getAdvancement().requirements().requirements()) {
@@ -945,10 +945,9 @@ public class RandomAdvancements {
         if (player == null) {
             return null;
         }
-        ArrayList<PlacedAdvancement> advancements = new ArrayList<>();
-        for (PlacedAdvancement placedAdvancement : new ArrayList<>(player.getAdvancementTracker().advancementManager.getAdvancements())) {
-            AdvancementEntry advancementEntry = placedAdvancement.getAdvancementEntry();
-            Advancement advancement = placedAdvancement.getAdvancement();
+        ArrayList<AdvancementEntry> advancements = new ArrayList<>();
+        for (AdvancementEntry advancementEntry : new ArrayList<>(player.getAdvancementTracker().visibleAdvancements)) {
+            Advancement advancement = advancementEntry.value();
             Identifier identifier = advancementEntry.id();
 
             String namespace = identifier.getNamespace();
@@ -966,7 +965,7 @@ public class RandomAdvancements {
             if (name.equals("root")) {
                 continue;
             }
-            if (tab.equals(AdvancementRoot.STATISTICS.name().toLowerCase())) {
+            if (tab.equals(AdvancementsTab.STATISTICS.name().toLowerCase())) {
                 continue;
             }
             if (withSingleRequirement) {
@@ -978,7 +977,7 @@ public class RandomAdvancements {
                 if (requirementsCount == 1) {
                     continue;
                 }
-                if (tab.equals(AdvancementRoot.BACAP.name().toLowerCase())) {
+                if (tab.equals(AdvancementsTab.BACAP.name().toLowerCase())) {
                     continue;
                 }
                 String id = identifier.toString();
@@ -993,11 +992,11 @@ public class RandomAdvancements {
             if (progress != null && progress.isDone()) {
                 continue;
             }
-            advancements.add(placedAdvancement);
+            advancements.add(advancementEntry);
         }
         if (advancements.isEmpty()) {
             return null;
         }
-        return advancements.get(player.getRandom().nextInt(advancements.size()));
+        return player.getAdvancementTracker().advancementManager.get(advancements.get(player.getRandom().nextInt(advancements.size())));
     }
 }

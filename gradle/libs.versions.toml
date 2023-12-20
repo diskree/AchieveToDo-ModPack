@@ -1,8 +1,8 @@
 [versions]
 minecraft = "1.20.4"
 yarn = "1.20.4+build.3"
-loader = "0.15.2"
-api = "0.91.2+1.20.4"
+loader = "0.15.3"
+api = "0.91.3+1.20.4"
 loom = "1.4-SNAPSHOT"
 
 [libraries]

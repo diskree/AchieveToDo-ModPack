@@ -2,7 +2,7 @@ package com.diskree.achievetodo.datagen;
 
 import com.diskree.achievetodo.action.BlockedActionType;
 import com.diskree.achievetodo.action.IGeneratedAdvancement;
-import com.diskree.achievetodo.advancements.AdvancementRoot;
+import com.diskree.achievetodo.advancements.AdvancementsTab;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.Advancement;
@@ -26,8 +26,8 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
 
     @Override
     public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
-        for (AdvancementRoot root : AdvancementRoot.values()) {
-            if (!root.isModded) {
+        for (AdvancementsTab root : AdvancementsTab.values()) {
+            if (!root.isModded || root == AdvancementsTab.ADVANCEMENTS_SEARCH) {
                 continue;
             }
             AdvancementEntry rootAdvancement = Advancement.Builder
@@ -36,20 +36,20 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
                             root.getIcon(),
                             root.getTitle(),
                             root.getDescription(),
-                            root.getBackgroundTexture(),
+                            root.getBackgroundTextureId(),
                             AdvancementFrame.TASK,
                             false,
                             false,
                             false
                     )
                     .criterion("tick", TickCriterion.Conditions.createTick())
-                    .build(consumer, root.getPath());
+                    .build(consumer, root.getRootAdvancementPath());
             AdvancementEntry parentAdvancement = rootAdvancement;
             for (List<IGeneratedAdvancement> row : root.children) {
                 for (IGeneratedAdvancement advancement : row) {
                     ItemStack icon = advancement.getIcon();
                     if (icon == null) {
-                        throw new IllegalArgumentException("Icon not found for " + advancement.getName() + " in " + root.getNamespace());
+                        throw new IllegalArgumentException("Icon not found for " + root.getAdvancementPath(advancement));
                     }
                     Advancement.Builder builder = Advancement.Builder
                             .createUntelemetered()

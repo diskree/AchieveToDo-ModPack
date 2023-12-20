@@ -2,6 +2,7 @@ package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.action.BlockedActionType;
+import com.diskree.achievetodo.advancements.AdvancementsTab;
 import com.diskree.achievetodo.client.AchieveToDoClient;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.AdvancementRequirements;
@@ -64,7 +65,7 @@ public abstract class AdvancementWidgetMixin {
 
     @Inject(method = "renderLines", at = @At(value = "HEAD"), cancellable = true)
     public void renderLinesInject(DrawContext context, int x, int y, boolean border, CallbackInfo ci) {
-        if (tab.getRoot() != null && AchieveToDo.ADVANCEMENTS_SEARCH.equals(tab.getRoot().getAdvancementEntry().id())) {
+        if (tab.getRoot() != null && AdvancementsTab.ADVANCEMENTS_SEARCH.getRootAdvancementId().equals(tab.getRoot().getAdvancementEntry().id())) {
             ci.cancel();
         }
     }

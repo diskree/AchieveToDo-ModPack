@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/betterf3.json"
-hash = "0a0bcb9a72a86befbf2f8720122e538806483d7f7cee326385e73b3afd04877d"
+hash = "7aeea5d0e16c5356b40ddcabb92447217209fd742f306a8a050018cf088eede1"
 
 [[files]]
 file = "config/brb.toml"
@@ -10,7 +10,7 @@ hash = "89611da9fdc53fa4321cbdb433a715e98a9a514e7df62f01ac7abdb4cd1d990a"
 
 [[files]]
 file = "config/c2me.toml"
-hash = "73bd54643e9ea4f77183d8e58f528fce8ad57cc42ba2f7fcf94ec987c573894a"
+hash = "777f32fb8932f49955ce63d52d35c873b822242478ee667fe9a989ec0da0c0cd"
 
 [[files]]
 file = "config/custom-hud/profile1.txt"
@@ -18,11 +18,11 @@ hash = "eca9ff030394367bc33bb5f98b8b1f8e4577e7febf0b650dc060853cfec45145"
 
 [[files]]
 file = "config/dark-loading-screen.json"
-hash = "586c17137d6aede71738562d4a2e2ede3de6dc3c300b14865289929767db4e48"
+hash = "e702386edff731a2d2bef15b330f6604c8741dc6f540d0a9c4b7afd119333894"
 
 [[files]]
 file = "config/enhanced_bes.properties"
-hash = "1023b0837be2b272bf2b57a697be47e28f96077f5a89b5477aa5f30b041e1849"
+hash = "92f9359eec238c552d87e34b1a9252f013f7a4215a39231c0c98bbae015c7f67"
 
 [[files]]
 file = "config/entityculling.json"
@@ -54,11 +54,11 @@ hash = "f250397a4458e68916c641916d6b62f0e857477acb6e334a16f0cce0a05b2474"
 
 [[files]]
 file = "config/yosbr/config/appleskin.json5"
-hash = "a39a55c12b06ded8fb6010b9f3b6cac2f70ffad2a027f297bd4a5c6142c7419f"
+hash = "3cefa634c08ee7a15f7b749a0dfe5bf12a693848adb4026062395350e2a0e6d3"
 
 [[files]]
 file = "config/yosbr/config/blur.json"
-hash = "61287dafe4d782a60d05f4b5e417407da0d7c08378468b2572b00797a6a1c08b"
+hash = "4ba85a8f4cd685bbae0065c17fd451053155e3c4543405a6d30a15df605e5c59"
 
 [[files]]
 file = "config/yosbr/config/capes.json5"
@@ -66,11 +66,11 @@ hash = "26f7730b69277b55dc6346922a581b76375bb6166e0b132e4539f26cccf059aa"
 
 [[files]]
 file = "config/yosbr/config/citresewn-defaults.json"
-hash = "cddaca3a34ea2cebfd6fb5719773c7836b20f114560c0ed08185de1b54d48448"
+hash = "9c30846f66183d21bfb25aff60832a89f61c00deadfee8853785de8e1dd07d3a"
 
 [[files]]
 file = "config/yosbr/config/citresewn.json"
-hash = "5495e8da151baca4e2e195c190bf92e3a2824fe73e9efd9419337d840274c073"
+hash = "c8090df71747d04e704ae9cffa64970bfeeade3928895c1bfb571bc27aa841c3"
 
 [[files]]
 file = "config/yosbr/config/colormatic.properties"
@@ -78,23 +78,23 @@ hash = "92744133b997a61559bc9210e7746bdc6031b91e3c4bab6b8ea1b46122cce2cc"
 
 [[files]]
 file = "config/yosbr/config/continuity.json"
-hash = "00267a602028cbb037dcb0b5f803db31bed284235ca9c1ea189ad4179311a2f4"
+hash = "24ad71770bbffe801af75d430a6abe7d40301ffd82657d8b38d17c11f51379f1"
 
 [[files]]
 file = "config/yosbr/config/crowdin.txt"
-hash = "6b4d7eb81f36519c9672a2af5007a85501e33752d6e37edc509c3cea2b312215"
+hash = "ac3e064af4812d1efafcb294b5242de2ed99b450816dd65ab41429d8febca537"
 
 [[files]]
 file = "config/yosbr/config/custom-hud/config.json"
-hash = "74efe4642640ba19537becf0f2dbf7a34d957d3902b88f5e0a53fec9a9b28796"
+hash = "0eed98345875253690c6c025dc2b33c222b7a9f14c145676c9643bf076a4c8a7"
 
 [[files]]
 file = "config/yosbr/config/debugify-descriptions.json"
-hash = "9e0a3e50d3354d8f812dee6fdc146dd863a44be50fad55950abd2224a963d15f"
+hash = "e09f5dfa36893522d988a8d2ab71c96b787c2380d18118b0f221e4011bcb0775"
 
 [[files]]
 file = "config/yosbr/config/debugify.json"
-hash = "44f3a321708eb2eb517d7b05cc9ca212d38f7bab91f9977ea19d89c8ef3f47ab"
+hash = "d9f8a8b7a320823df7b411fc4a27b5bd9a2f18f84a6ce2c7d241dc5467e7e40e"
 
 [[files]]
 file = "config/yosbr/config/dynamicfps.toml"
@@ -102,7 +102,7 @@ hash = "a0cc42b4a1efc18fff1caeabf9df716f19bf8d00f7718e61eea81c013c85cd88"
 
 [[files]]
 file = "config/yosbr/config/exordium.json"
-hash = "fa4e11ae6581c67e802f7295148e03100d340403682ee74eb272e73a84efd95d"
+hash = "18b249f27390272e441c7881ff19e837729933f1e3bfbd372bc682d0e38af6a6"
 
 [[files]]
 file = "config/yosbr/config/fabric/indigo-renderer.properties"
@@ -110,11 +110,11 @@ hash = "50a55c924278220692f53d4d0a0663a271cf563c4da17f8208c3159c1c88f10b"
 
 [[files]]
 file = "config/yosbr/config/fallingleaves.json"
-hash = "0c3b5ca101a5b604cd5eb13b1f80c569004735d586b86d72dc6ca9a3d33bb588"
+hash = "66374b02a447fe8c6bcb27bfa54c3d36c5ad94a40dd7cf6bf2239f7f607c5604"
 
 [[files]]
 file = "config/yosbr/config/firstperson.json"
-hash = "888c308f1c21e6c7dc8530bdd6f70e93ab6bf69161526351db883e248a79c919"
+hash = "6e9b5fe72171961252eac55cb8a11329e74c0c5221b099f50c62d813a3bc6ab4"
 
 [[files]]
 file = "config/yosbr/config/iris.properties"
@@ -122,7 +122,7 @@ hash = "27dab39c0cc3a1a9845bbebda85fbb044a276e64935dbdfd8679a5c7f4170703"
 
 [[files]]
 file = "config/yosbr/config/itemmodelfix.json"
-hash = "f67460631e5dd59fd646347174cfe7b8de38be6556bb928bea4619cbd6f32616"
+hash = "7e6bdd5f9d22fa2fad44f35b5857e09b82a8cabf1ca91b010aa44319575f48eb"
 
 [[files]]
 file = "config/yosbr/config/lambdynlights.toml"
@@ -133,28 +133,24 @@ file = "config/yosbr/config/moreculling.toml"
 hash = "4a3aebac25e3e6ec1c97401004952532a2dc1677f06389a7f326c3fcd0d111dd"
 
 [[files]]
-file = "config/yosbr/config/quilt/qsl/registry.toml"
-hash = "4702e277a548f904fff87d4f0286cf8b0362f155fb755996cfa1bb07687d7060"
-
-[[files]]
 file = "config/yosbr/config/shulkerboxtooltip.json5"
-hash = "16e8d9dfd26067fc6062d916ebb4d2a6f9aa7234df245e996fb71ffa08120df4"
+hash = "950846786ec89b3a8816e67495ed610b7136b3f68b381915f44991388780f52c"
 
 [[files]]
 file = "config/yosbr/config/skinlayers.json"
-hash = "b0ca2818b56ce84e2f5a0febc5bbc3df41503d26c2f3a210839c2f5ba0b854ac"
+hash = "27154f1724237a41251f6c506b309997b0c1d9527d01f5720133bb521d1e18a1"
 
 [[files]]
 file = "config/yosbr/config/smoothswapping.json"
-hash = "d9c4f1fc51e524fdbf0c6d5f4588ba048bfecfe51256561a70355d164d72a75f"
+hash = "b2698d4f10bc5bf0decfa5a4f1c892309fb2d2894c7a086e47274270e5edd7ac"
 
 [[files]]
 file = "config/yosbr/config/sodium-extra-options.json"
-hash = "e2c5347981a1354124b6c094a826a79c556ebbdc1aa9acc845baeddc92b57fdd"
+hash = "0c5a56efc2569e42223075d1099a213c7419a9eaf58b96782fd6105cef1bf128"
 
 [[files]]
 file = "config/yosbr/config/sodium-options.json"
-hash = "e467b61963b8f8d78efd9971c266473100e29e084a22a604c4e5296608d1a1fb"
+hash = "c55b07a460965413fc9a59dddc2dfc5a5fcbecdbb3adde97145f733a396c90b5"
 
 [[files]]
 file = "config/yosbr/options.txt"
@@ -166,7 +162,7 @@ hash = "48e41ad5654e7b11c81a771434b7907573c25295a58e9194ba2ac1848098260c"
 
 [[files]]
 file = "mods/achievetodo-1.3+1.20.4.jar"
-hash = "281a6a9eb8c463850bf33c42e5c0a7963de12fd9e003bbe3f12d81549280f4e0"
+hash = "c2547ed92945e607cc1bd17a7ec5c8cc1e38d560d7fc96a350cb1ae8c49b025b"
 
 [[files]]
 file = "mods/antighost.pw.toml"
@@ -175,7 +171,17 @@ metafile = true
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
-hash = "7b164c76fa4f0adb1281601fa2f18688f29fde3933d03a4b2fbfa18b95c61a71"
+hash = "bdee49ed5bd0f58601ea8d56101490f685e75540a7885b5bb50674df1f4dd328"
+metafile = true
+
+[[files]]
+file = "mods/betterf3.pw.toml"
+hash = "7d3b0183e9e2f58cacbd4cd348c02219033539502094e45ac13f392f1ebfda3e"
+metafile = true
+
+[[files]]
+file = "mods/blur.pw.toml"
+hash = "333bf9497bb63a173e24f33a00b0026bc7d4fdcf70d2df8de623c72f658c883a"
 metafile = true
 
 [[files]]
@@ -185,7 +191,7 @@ metafile = true
 
 [[files]]
 file = "mods/cloth-config.pw.toml"
-hash = "53a9d821352aca075cbb47c032d388ae6232f727fac76a856f239d2f4df8181f"
+hash = "f250d6778f5b8d03ca32913bea5ea677508e9bb6d8201cdebe005bbe9c3100ee"
 metafile = true
 
 [[files]]
@@ -239,6 +245,11 @@ hash = "c4afda1d505225ad18e689ded06f0ed170dec2ea5e6c9621277b565d0fc338b8"
 metafile = true
 
 [[files]]
+file = "mods/indium.pw.toml"
+hash = "a81a6caaf787401a7a32dceee38e1d3f67ee6d747fb8fd7e38950b9c220e0c92"
+metafile = true
+
+[[files]]
 file = "mods/iris.pw.toml"
 hash = "61fc4926a5d915dd8e52dce0c906b100f0d3c72ac91008c2a90c88abe22a3bf0"
 metafile = true
@@ -249,8 +260,13 @@ hash = "037f6b72bde7b586901f261820197efb52a369cdad3557eeaaa7a3f8e9c19799"
 metafile = true
 
 [[files]]
+file = "mods/lithium.pw.toml"
+hash = "3dedde5213176d72e1c353877fa44315945e8f3da2ba05f5679d81e9f558bb1d"
+metafile = true
+
+[[files]]
 file = "mods/modmenu.pw.toml"
-hash = "331c6d89776fbf94b3208089d2f3f4c58b37835739b9f49b1249a8628f866cbe"
+hash = "b61b0ccdc8328d637c0f57cbb25258491b94ae03c89c4194ad6ca8b86579dd28"
 metafile = true
 
 [[files]]

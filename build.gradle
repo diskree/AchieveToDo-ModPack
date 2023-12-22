@@ -1,34 +1,39 @@
 plugins {
-    alias libs.plugins.loom
+    id 'fabric-loom' version "${loomVersion}-SNAPSHOT"
 }
 
-def modId = project.mod_name.toLowerCase()
-
-base.archivesName = modId
-version = "$project.version+${libs.versions.minecraft.get()}"
+def modId = project.modName.toLowerCase()
+version = "mc${minecraftVersion}+${modVersion}"
 group = "com." + project.author
+
+base {
+    archivesName = modId
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    minecraft libs.minecraft
-
-    mappings variantOf(libs.mappings) { classifier 'v2' }
-
-    modImplementation libs.loader
-    modImplementation libs.api
+    minecraft "com.mojang:minecraft:${minecraftVersion}"
+    mappings "net.fabricmc:yarn:${minecraftVersion}+build.${mappingsBuild}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${minLoaderVersion}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${apiVersion}+${minecraftVersion}"
 }
 
 processResources {
-    inputs.property 'version', version
-
-    filesMatching('fabric.mod.json') {
-        expand 'modId': modId,
-                'version': version,
-                'modName': mod_name,
-                'author': author
+    def propertyMap = [
+            'modId'           : modId,
+            'modVersion'      : modVersion,
+            'modName'         : modName,
+            'author'          : author,
+            'minJavaVersion'  : minJavaVersion,
+            'minecraftVersion': minecraftVersion,
+            'minLoaderVersion': minLoaderVersion
+    ]
+    inputs.properties(propertyMap)
+    filesMatching("fabric.mod.json") {
+        expand(propertyMap)
     }
 }
 
@@ -44,32 +49,29 @@ sourceSets {
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = 'UTF-8'
-    it.options.release.set(17)
+    it.options.release.set(minJavaVersion.toInteger())
 }
 
 tasks.register('generateBuildConfig', DefaultTask) {
     doLast {
         def configPath = "$projectDir/src/main/java/com/diskree/achievetodo/BuildConfig.java"
         def templatePath = "$projectDir/gradle/BuildConfig.java.txt"
-        def isDebug = project.properties['debug'] ?: 'false'
 
         file(configPath).text = file(templatePath).text
-                .replace('${modName}', mod_name.toString())
-                .replace('${isDebug}', isDebug.toString())
+                .replace('${modName}', modName)
+                .replace('${isDebug}', isDebug)
     }
 }
 
 tasks.register('buildRelease', GradleBuild) {
+    startParameter.projectProperties = ['isDebug': 'false']
+
     //noinspection GroovyAssignabilityCheck
     tasks = ['build']
-    startParameter.projectProperties = ['debug': 'false']
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-
-    withSourcesJar()
+    sourceCompatibility = targetCompatibility = minJavaVersion.toInteger()
 }
 
 jar {

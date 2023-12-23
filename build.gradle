@@ -3,6 +3,8 @@ plugins {
 }
 
 def modId = project.modName.toLowerCase()
+def repoUrl = "https://github.com/${author}/${modName}"
+
 version = "mc${minecraftVersion}+${modVersion}"
 group = "com." + project.author
 
@@ -27,6 +29,7 @@ processResources {
             'modVersion'      : modVersion,
             'modName'         : modName,
             'author'          : author,
+            'repoUrl'         : repoUrl,
             'minJavaVersion'  : minJavaVersion,
             'minecraftVersion': minecraftVersion,
             'minLoaderVersion': minLoaderVersion
@@ -63,11 +66,15 @@ tasks.register('generateBuildConfig', DefaultTask) {
     }
 }
 
-tasks.register('buildRelease', GradleBuild) {
-    startParameter.projectProperties = ['isDebug': 'false']
-
-    //noinspection GroovyAssignabilityCheck
-    tasks = ['build']
+tasks.register('buildPack', Exec) {
+    commandLine 'sh', "$projectDir/build_pack.sh",
+            modId,
+            modVersion,
+            modName,
+            author,
+            repoUrl,
+            minecraftVersion,
+            minLoaderVersion
 }
 
 java {

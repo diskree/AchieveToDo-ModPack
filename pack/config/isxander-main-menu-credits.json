@@ -4,10 +4,10 @@
     "top_right": [],
     "bottom_left": [
       {
-        "text": "AchieveToDo 1.3",
+        "text": "${packName} ${packVersion}",
         "clickEvent": {
           "action": "open_url",
-          "value": "https://github.com/diskree/AchieveToDo"
+          "value": "${repoUrl}"
         },
         "hoverEvent": {
           "action": "show_text",
@@ -23,11 +23,11 @@
     "top_right": [],
     "bottom_left": [
       {
-        "text": "AchieveToDo 1.3",
+        "text": "${packName} ${packVersion}",
         "color": "gray",
         "clickEvent": {
           "action": "open_url",
-          "value": "https://github.com/diskree/AchieveToDo"
+          "value": "${repoUrl}"
         },
         "hoverEvent": {
           "action": "show_text",

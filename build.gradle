@@ -57,7 +57,7 @@ tasks.withType(JavaCompile).configureEach {
 
 tasks.register('generateBuildConfig', DefaultTask) {
     doLast {
-        def configPath = "$projectDir/src/main/java/com/diskree/achievetodo/BuildConfig.java"
+        def configPath = "$projectDir/src/main/java/com/${author}/${modId}/BuildConfig.java"
         def templatePath = "$projectDir/gradle/BuildConfig.java.txt"
 
         file(configPath).text = file(templatePath).text
@@ -89,7 +89,7 @@ jar {
 }
 
 loom {
-    accessWidenerPath.set(file("src/main/resources/achievetodo.accesswidener"))
+    accessWidenerPath.set(file("src/main/resources/${modId}.accesswidener"))
 
     runs {
         datagen {

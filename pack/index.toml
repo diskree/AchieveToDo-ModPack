@@ -14,7 +14,7 @@ hash = "777f32fb8932f49955ce63d52d35c873b822242478ee667fe9a989ec0da0c0cd"
 
 [[files]]
 file = "config/custom-hud/profile1.txt"
-hash = "eca9ff030394367bc33bb5f98b8b1f8e4577e7febf0b650dc060853cfec45145"
+hash = "bc1ea1d4315616461b00437d7896e0b8bb87ac56f3c4688f9f8a236c7a3d802b"
 
 [[files]]
 file = "config/dark-loading-screen.json"
@@ -162,7 +162,7 @@ hash = "48e41ad5654e7b11c81a771434b7907573c25295a58e9194ba2ac1848098260c"
 
 [[files]]
 file = "mods/achievetodo-mc1.20.4+1.3.jar"
-hash = "a76fe4954963ca7ba4e65fa3bb4138541621ec9676bddadb09addde4fcf97feb"
+hash = "c9e390c311fb9891d92aa275e8e8d24f218f7f76b8515715df3d962f61e4b77d"
 
 [[files]]
 file = "mods/antighost.pw.toml"
@@ -326,11 +326,11 @@ metafile = true
 
 [[files]]
 file = "shaderpacks/BSL_v8.2.07.1.zip.txt"
-hash = "7d79d063d033b8780cff987e55ea7d30f0129d926a511e02467bc89ab8eb2fa2"
+hash = "cf40d23989ac2ecb11ef966c61ee898d087fe817c452ba09ffc87e291a74b7a3"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.1.1.zip.txt"
-hash = "ea9186459a42374041ad9ab2a0ec57c3813b53f229489c47c9a70c4a554d3be5"
+hash = "90f55490183edc24552dc15bb62963d39f8a8febd7ad97dfd46fbdee36e47ab6"
 
 [[files]]
 file = "shaderpacks/ComplementaryShaders_v4.7.2.zip.txt"

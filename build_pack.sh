@@ -7,8 +7,6 @@ readonly VERSION_COLOR_MAJOR="fd99b1"
 readonly VERSION_COLOR_MINOR="fee6a8"
 readonly VERSION_COLOR_PATCH="e4adf7"
 
-readonly MOD_LOADER="fabric"
-
 readonly modId=$1
 readonly packVersion=$2
 readonly packName=$3
@@ -25,14 +23,6 @@ rm "$packDir/mods/$modId"*
 cp "build/libs/$modId"* "$packDir/mods"
 
 cd "$packDir" || exit
-
-packwiz init -r \
-    --name "$packName" \
-    --author "$author" \
-    --version "$packVersion" \
-    --mc-version "$minecraftVersion" \
-    --modloader "$MOD_LOADER" \
-    --fabric-version "$loaderVersion"
 
 wordCenter="$packName"
 wordStartArray=()
@@ -94,6 +84,14 @@ if [[ -n "$patch" ]]; then
     coloredPackVersion+=".&{#${VERSION_COLOR_PATCH}}$patch"
 fi
 
+packMetadataPath="pack.toml"
+packMetadata=$(<"$packMetadataPath")
+sed -i "s/\${packName}/$(printf '%s\n' "${packName}" | sed -e 's/[\/&]/\\&/g')/g" "${packMetadataPath}"
+sed -i "s/\${author}/$(printf '%s\n' "${author}" | sed -e 's/[\/&]/\\&/g')/g" "${packMetadataPath}"
+sed -i "s/\${packVersion}/$(printf '%s\n' "${packVersion}" | sed -e 's/[\/&]/\\&/g')/g" "${packMetadataPath}"
+sed -i "s/\${loaderVersion}/$(printf '%s\n' "${loaderVersion}" | sed -e 's/[\/&]/\\&/g')/g" "${packMetadataPath}"
+sed -i "s/\${minecraftVersion}/$(printf '%s\n' "${minecraftVersion}" | sed -e 's/[\/&]/\\&/g')/g" "${packMetadataPath}"
+
 customHudProfilePath="config/custom-hud/profile1.txt"
 customHudProfile=$(<"$customHudProfilePath")
 sed -i "s/\${coloredPackName}/$(printf '%s\n' "${coloredPackName}" | sed -e 's/[\/&]/\\&/g')/g" "${customHudProfilePath}"
@@ -108,5 +106,6 @@ sed -i "s/\${repoUrl}/$(printf '%s\n' "${repoUrl}" | sed -e 's/[\/&]/\\&/g')/g" 
 packwiz refresh
 packwiz modrinth export
 
-echo "$mainMenuCreditsConfig" > "$mainMenuCreditsConfigPath"
+echo "$packMetadata" > "$packMetadataPath"
 echo "$customHudProfile" > "$customHudProfilePath"
+echo "$mainMenuCreditsConfig" > "$mainMenuCreditsConfigPath"

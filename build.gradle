@@ -42,11 +42,8 @@ processResources {
 
 sourceSets {
     main {
-        resources {
-            srcDirs += [
-                    'src/main/generated'
-            ]
-        }
+        resources.srcDirs += ['src/main/generated']
+        java.srcDirs += ['src/main/generated/java']
     }
 }
 
@@ -57,10 +54,13 @@ tasks.withType(JavaCompile).configureEach {
 
 tasks.register('generateBuildConfig', DefaultTask) {
     doLast {
-        def configPath = "$projectDir/src/main/java/com/${author}/${modId}/BuildConfig.java"
-        def templatePath = "$projectDir/gradle/BuildConfig.java.txt"
+        def templateFile = file("$projectDir/gradle/BuildConfig.java.txt")
+        def configFile = file("$projectDir/src/main/generated/java/com/${author}/${modId}/BuildConfig.java")
+        configFile.getParentFile().mkdirs()
 
-        file(configPath).text = file(templatePath).text
+        configFile.text = templateFile.text
+                .replace('${author}', author)
+                .replace('${modId}', modId)
                 .replace('${modName}', modName)
                 .replace('${isDebug}', isDebug)
     }

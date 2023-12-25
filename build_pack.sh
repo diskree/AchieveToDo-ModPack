@@ -3,9 +3,9 @@
 readonly NAME_COLOR_FROM="#07c5fa"
 readonly NAME_COLOR_TO="#dff2f7"
 
-readonly VERSION_COLOR_MAJOR="fd99b1"
-readonly VERSION_COLOR_MINOR="fee6a8"
-readonly VERSION_COLOR_PATCH="e4adf7"
+readonly VERSION_COLOR_MAJOR="#fd99b1"
+readonly VERSION_COLOR_MINOR="#fee6a8"
+readonly VERSION_COLOR_PATCH="#e4adf7"
 
 readonly modId=$1
 readonly packVersion=$2
@@ -75,13 +75,13 @@ done
 IFS='.' read -r major minor patch <<< "$packVersion"
 coloredPackVersion=""
 if [[ -n "$major" ]]; then
-    coloredPackVersion+="&{#${VERSION_COLOR_MAJOR}}$major"
+    coloredPackVersion+="&{${VERSION_COLOR_MAJOR}}$major"
 fi
 if [[ -n "$minor" ]]; then
-    coloredPackVersion+=".&{#${VERSION_COLOR_MINOR}}$minor"
+    coloredPackVersion+=".&{${VERSION_COLOR_MINOR}}$minor"
 fi
 if [[ -n "$patch" ]]; then
-    coloredPackVersion+=".&{#${VERSION_COLOR_PATCH}}$patch"
+    coloredPackVersion+=".&{${VERSION_COLOR_PATCH}}$patch"
 fi
 
 packMetadataPath="pack.toml"

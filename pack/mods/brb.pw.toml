@@ -1,0 +1,13 @@
+name = "Better Recipe Book"
+filename = "brb-1.10.0+1.20.4.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/vWIaVOTE/versions/8he9iORq/brb-1.10.0%2B1.20.4.jar"
+hash-format = "sha1"
+hash = "c574107dbb2d8964bc00f7a7e70ee718b17cbc3d"
+
+[update]
+[update.modrinth]
+mod-id = "vWIaVOTE"
+version = "8he9iORq"

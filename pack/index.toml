@@ -134,7 +134,7 @@ hash = "4a3aebac25e3e6ec1c97401004952532a2dc1677f06389a7f326c3fcd0d111dd"
 
 [[files]]
 file = "config/yosbr/config/shulkerboxtooltip.json5"
-hash = "950846786ec89b3a8816e67495ed610b7136b3f68b381915f44991388780f52c"
+hash = "94f0b1bd5986edf1d6b3a3d248760b0f24f13ba8d97889d1008e3d4a89082f2c"
 
 [[files]]
 file = "config/yosbr/config/skinlayers.json"
@@ -154,7 +154,7 @@ hash = "c55b07a460965413fc9a59dddc2dfc5a5fcbecdbb3adde97145f733a396c90b5"
 
 [[files]]
 file = "config/yosbr/options.txt"
-hash = "1cf148414deb8567efc674b4600ae546c430301f4e4680ebef5e9aad672a8763"
+hash = "a8a87100452fedb1fb4189004a8dce7e652784492129fec0ace9a5b7e572ebd1"
 
 [[files]]
 file = "icon.png"
@@ -185,13 +185,28 @@ hash = "333bf9497bb63a173e24f33a00b0026bc7d4fdcf70d2df8de623c72f658c883a"
 metafile = true
 
 [[files]]
+file = "mods/brb.pw.toml"
+hash = "11bc1fea4fcbfa832330442289a14db01d1c014eceb03d8dc1a4159e8b85c65a"
+metafile = true
+
+[[files]]
 file = "mods/c2me.pw.toml"
 hash = "b470c6b202b05a8689a1c7e579beb393a1fc7fd5b10bcc4e9aba5be890c1f574"
 metafile = true
 
 [[files]]
+file = "mods/capes.pw.toml"
+hash = "617563db0d44229fb65eb660130d02d1a4d2f29233eda03b68d3273e700326f8"
+metafile = true
+
+[[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "f250d6778f5b8d03ca32913bea5ea677508e9bb6d8201cdebe005bbe9c3100ee"
+metafile = true
+
+[[files]]
+file = "mods/continuity.pw.toml"
+hash = "ab1c014ce67654e89af779137bdfd1f6f22888af218f44cf5d83e943d0d5fbc4"
 metafile = true
 
 [[files]]
@@ -202,6 +217,11 @@ metafile = true
 [[files]]
 file = "mods/dark-loading-screen.pw.toml"
 hash = "97ca0b01ac6888486402018e7c95ec3b219a89c3338a416fd25418def5f51fa1"
+metafile = true
+
+[[files]]
+file = "mods/dcwa.pw.toml"
+hash = "e96c71e46932e7060f04e19145977c2ca71686f373273a8fae78f933a37b1b75"
 metafile = true
 
 [[files]]
@@ -255,6 +275,11 @@ hash = "61fc4926a5d915dd8e52dce0c906b100f0d3c72ac91008c2a90c88abe22a3bf0"
 metafile = true
 
 [[files]]
+file = "mods/krypton.pw.toml"
+hash = "f999930809222b57898da25a30aad2135b02894f42c0e1d2832c4670272fbd1d"
+metafile = true
+
+[[files]]
 file = "mods/language-reload.pw.toml"
 hash = "037f6b72bde7b586901f261820197efb52a369cdad3557eeaaa7a3f8e9c19799"
 metafile = true
@@ -265,8 +290,23 @@ hash = "3dedde5213176d72e1c353877fa44315945e8f3da2ba05f5679d81e9f558bb1d"
 metafile = true
 
 [[files]]
+file = "mods/main-menu-credits.pw.toml"
+hash = "2a79f7fb98b7073c926c6f87a93473f5714cf82a2ace7f344e4e2de4a33e0233"
+metafile = true
+
+[[files]]
+file = "mods/modelfix.pw.toml"
+hash = "6c417b19bc836d7c516be0097261c49cf1a167951bb4744ec0f3cc0bd0d1d24a"
+metafile = true
+
+[[files]]
 file = "mods/modmenu.pw.toml"
 hash = "b61b0ccdc8328d637c0f57cbb25258491b94ae03c89c4194ad6ca8b86579dd28"
+metafile = true
+
+[[files]]
+file = "mods/moreculling.pw.toml"
+hash = "be1f88824f7ceb008ce38ae763a93921db0c27db68577fdb16c29c6a085ec1f3"
 metafile = true
 
 [[files]]
@@ -277,6 +317,11 @@ metafile = true
 [[files]]
 file = "mods/reeses-sodium-options.pw.toml"
 hash = "92fbfef541293794a06fdc71deedfb86d12fc2f3e5fc42842f94bb9f6a42e2ed"
+metafile = true
+
+[[files]]
+file = "mods/shulkerboxtooltip.pw.toml"
+hash = "ef8bedeb72d8ea0df446ec82cfc645727fee3a38d0e766193ad7158856a41f6d"
 metafile = true
 
 [[files]]
@@ -292,6 +337,16 @@ metafile = true
 [[files]]
 file = "mods/yacl.pw.toml"
 hash = "2498a978634a0add18ebd0a47b4e8d23dbe8ac19d926fabf436d15ad94bd9a44"
+metafile = true
+
+[[files]]
+file = "mods/yosbr.pw.toml"
+hash = "6f6334f336a876088431df70e2bba6ac52ca2ddeb73a4880ce88d6954b09af00"
+metafile = true
+
+[[files]]
+file = "mods/zoomify.pw.toml"
+hash = "1f77901c1b32849c704d8dbd0cd3aefc47e36a63b718fa92708ab73a3a529d89"
 metafile = true
 
 [[files]]
@@ -316,7 +371,7 @@ hash = "dd38bece893aedf6e17b845431483374d706ec63977c41657baa9ca95cc58c1e"
 
 [[files]]
 file = "resourcepacks/default-dark-mode.pw.toml"
-hash = "0aa728deb609a9a8a5885f6466f6b5df27ea6a9d488b43cdc94ad7bdb2adc21c"
+hash = "325a977152e9273146843c9970bd549201d9fb115af8f1cb7c2f425480600451"
 metafile = true
 
 [[files]]

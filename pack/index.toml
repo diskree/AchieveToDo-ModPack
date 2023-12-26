@@ -335,8 +335,8 @@ hash = "582b585d4bcb3bc316e0451a3c46a869d0b2f120598df12bd339bae2a68c5734"
 metafile = true
 
 [[files]]
-file = "mods/textile-backup.pw.toml"
-hash = "de89d4ffd14c02db24f737055f1f11b784bcb98e7e826efa4bc2329a962b4ba5"
+file = "mods/textile_backup.pw.toml"
+hash = "03de68747c0d4578e8f1b47a582787eb2cc5b0c56c652a878957c26db7c4cebf"
 metafile = true
 
 [[files]]

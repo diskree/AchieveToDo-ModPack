@@ -134,7 +134,7 @@ hash = "4a3aebac25e3e6ec1c97401004952532a2dc1677f06389a7f326c3fcd0d111dd"
 
 [[files]]
 file = "config/yosbr/config/shulkerboxtooltip.json5"
-hash = "94f0b1bd5986edf1d6b3a3d248760b0f24f13ba8d97889d1008e3d4a89082f2c"
+hash = "3d33b3d2142e155dc77a08edcdd3a327c7911cebae5d0c4f5044f6c77e0c87ea"
 
 [[files]]
 file = "config/yosbr/config/skinlayers.json"
@@ -335,6 +335,11 @@ hash = "582b585d4bcb3bc316e0451a3c46a869d0b2f120598df12bd339bae2a68c5734"
 metafile = true
 
 [[files]]
+file = "mods/textile-backup.pw.toml"
+hash = "de89d4ffd14c02db24f737055f1f11b784bcb98e7e826efa4bc2329a962b4ba5"
+metafile = true
+
+[[files]]
 file = "mods/yacl.pw.toml"
 hash = "2498a978634a0add18ebd0a47b4e8d23dbe8ac19d926fabf436d15ad94bd9a44"
 metafile = true
@@ -366,12 +371,13 @@ file = "resourcepacks/Visual Goat Horns.zip"
 hash = "abb09e23ca2fc35d6868cf2534cd1bf0a64c596e940399f567e97fe72e4d624e"
 
 [[files]]
-file = "resourcepacks/Visual Potions.zip"
-hash = "dd38bece893aedf6e17b845431483374d706ec63977c41657baa9ca95cc58c1e"
-
-[[files]]
 file = "resourcepacks/default-dark-mode.pw.toml"
 hash = "325a977152e9273146843c9970bd549201d9fb115af8f1cb7c2f425480600451"
+metafile = true
+
+[[files]]
+file = "resourcepacks/visual-potions.pw.toml"
+hash = "76f48c593b2ced5322b84b7203ff9d53f8826f81acc4c13292d7473a7cbd2647"
 metafile = true
 
 [[files]]

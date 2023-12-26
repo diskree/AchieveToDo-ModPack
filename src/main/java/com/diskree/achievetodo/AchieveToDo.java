@@ -77,14 +77,14 @@ public class AchieveToDo implements ModInitializer {
     public static final String AMPLIFIED_NETHER_DATA_PACK = "file/amplified_nether.zip";
     public static final String NULLSCAPE_DATA_PACK = "file/nullscape.zip";
 
-    public static final String BACAP_OVERRIDE_DATA_PACK = AchieveToDo.ID + "/" + "bacap_override";
-    public static final String BACAP_OVERRIDE_HARDCORE_DATA_PACK = AchieveToDo.ID + "/" + "bacap_override_hardcore";
-    public static final String BACAP_REWARDS_ITEM_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_item";
-    public static final String BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_experience";
-    public static final String BACAP_REWARDS_TROPHY_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_trophy";
-    public static final String BACAP_COOPERATIVE_MODE_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_cooperative_mode";
+    public static final Identifier BACAP_OVERRIDE_DATA_PACK = new Identifier(ID, "bacap_override");
+    public static final Identifier BACAP_OVERRIDE_HARDCORE_DATA_PACK = new Identifier(ID, "bacap_override_hardcore");
+    public static final Identifier BACAP_REWARDS_ITEM_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_item");
+    public static final Identifier BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_experience");
+    public static final Identifier BACAP_REWARDS_TROPHY_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_trophy");
+    public static final Identifier BACAP_COOPERATIVE_MODE_DATA_PACK_NAME = new Identifier(ID, "bacap_cooperative_mode");
 
-    public static final String BACAP_LANGUAGE_PACK = AchieveToDo.ID + "/" + "bacap_lp";
+    public static final Identifier BACAP_LANGUAGE_PACK = new Identifier(ID, "bacap_lp");
 
     public static final Identifier DEMYSTIFY_LOCKED_ACTION_PACKET_ID = new Identifier(ID, "demystify_locked_action");
 
@@ -193,7 +193,7 @@ public class AchieveToDo implements ModInitializer {
             }
             return Command.SINGLE_SUCCESS;
         }))));
-        ServerPlayNetworking.registerGlobalReceiver(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
+        ServerPlayNetworking.registerGlobalReceiver(DEMYSTIFY_LOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
             BlockedActionType action = buf.readEnumConstant(BlockedActionType.class);
             if (action != null) {
                 server.execute(() -> demystifyAction(player, action));
@@ -267,7 +267,7 @@ public class AchieveToDo implements ModInitializer {
         if (player == null) {
             return;
         }
-        AdvancementEntry advancement = player.server.getAdvancementLoader().get(new Identifier(AchieveToDo.ID, "hints/" + pathName));
+        AdvancementEntry advancement = player.server.getAdvancementLoader().get(new Identifier(ID, "hints/" + pathName));
         AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
         for (String criterion : advancementProgress.getUnobtainedCriteria()) {
             player.getAdvancementTracker().grantCriterion(advancement, criterion);
@@ -313,7 +313,7 @@ public class AchieveToDo implements ModInitializer {
         if (!isCheckOnly) {
             player.sendMessage(action.buildBlockedDescription(player), true);
             if (player.getWorld().isClient) {
-                ClientPlayNetworking.send(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action));
+                ClientPlayNetworking.send(DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action));
             } else if (player instanceof ServerPlayerEntity serverPlayer) {
                 demystifyAction(serverPlayer, action);
             }
@@ -416,15 +416,15 @@ public class AchieveToDo implements ModInitializer {
     }
 
     private void registerPacks() {
-        FabricLoader.getInstance().getModContainer(AchieveToDo.ID).ifPresent((modContainer) -> {
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_HARDCORE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_ITEM_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_TROPHY_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
+        FabricLoader.getInstance().getModContainer(ID).ifPresent((modContainer) -> {
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_OVERRIDE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_OVERRIDE_HARDCORE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_COOPERATIVE_MODE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_ITEM_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_TROPHY_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
 
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(BACAP_LANGUAGE_PACK.replace("/", ":")), modContainer, Text.of("BACAP Language Pack"), ResourcePackActivationType.DEFAULT_ENABLED);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_LANGUAGE_PACK, modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
         });
     }
 

@@ -175,21 +175,21 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                     packManager.enable(AchieveToDo.TERRALITH_DATA_PACK);
                 }
 
-                packManager.enable(AchieveToDo.BACAP_OVERRIDE_DATA_PACK);
+                packManager.enable(AchieveToDo.BACAP_OVERRIDE_DATA_PACK.toString());
                 if (isHardcoreEnabled) {
-                    packManager.enable(AchieveToDo.BACAP_OVERRIDE_HARDCORE_DATA_PACK);
+                    packManager.enable(AchieveToDo.BACAP_OVERRIDE_HARDCORE_DATA_PACK.toString());
                 }
                 if (worldCreatorImpl.achieveToDo$isCooperativeModeEnabled()) {
-                    packManager.enable(AchieveToDo.BACAP_COOPERATIVE_MODE_DATA_PACK_NAME);
+                    packManager.enable(AchieveToDo.BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.toString());
                 }
                 if (worldCreatorImpl.achieveToDo$isItemRewardsEnabled()) {
-                    packManager.enable(AchieveToDo.BACAP_REWARDS_ITEM_DATA_PACK_NAME);
+                    packManager.enable(AchieveToDo.BACAP_REWARDS_ITEM_DATA_PACK_NAME.toString());
                 }
                 if (worldCreatorImpl.achieveToDo$isExperienceRewardsEnabled()) {
-                    packManager.enable(AchieveToDo.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME);
+                    packManager.enable(AchieveToDo.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.toString());
                 }
                 if (worldCreatorImpl.achieveToDo$isTrophyRewardsEnabled()) {
-                    packManager.enable(AchieveToDo.BACAP_REWARDS_TROPHY_DATA_PACK_NAME);
+                    packManager.enable(AchieveToDo.BACAP_REWARDS_TROPHY_DATA_PACK_NAME.toString());
                 }
 
                 isWaitingDatapacks = true;

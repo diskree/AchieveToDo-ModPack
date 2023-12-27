@@ -82,21 +82,21 @@ public class AdvancementTabMixin {
 
     @Inject(method = "drawBackground", at = @At(value = "HEAD"), cancellable = true)
     public void drawBackgroundInject(DrawContext context, int x, int y, boolean selected, CallbackInfo ci) {
-        if (root != null && AdvancementsTab.ADVANCEMENTS_SEARCH.getRootAdvancementId().equals(root.getAdvancementEntry().id())) {
+        if (root != null && AchieveToDoClient.ADVANCEMENTS_SEARCH_ID.equals(root.getAdvancementEntry().id())) {
             ci.cancel();
         }
     }
 
     @Inject(method = "drawIcon", at = @At(value = "HEAD"), cancellable = true)
     public void drawIconInject(DrawContext context, int x, int y, CallbackInfo ci) {
-        if (root != null && AdvancementsTab.ADVANCEMENTS_SEARCH.getRootAdvancementId().equals(root.getAdvancementEntry().id())) {
+        if (root != null && AchieveToDoClient.ADVANCEMENTS_SEARCH_ID.equals(root.getAdvancementEntry().id())) {
             ci.cancel();
         }
     }
 
     @Inject(method = "isClickOnTab", at = @At(value = "HEAD"), cancellable = true)
     public void isClickOnTabInject(int screenX, int screenY, double mouseX, double mouseY, CallbackInfoReturnable<Boolean> cir) {
-        if (root != null && AdvancementsTab.ADVANCEMENTS_SEARCH.getRootAdvancementId().equals(root.getAdvancementEntry().id())) {
+        if (root != null && AchieveToDoClient.ADVANCEMENTS_SEARCH_ID.equals(root.getAdvancementEntry().id())) {
             cir.setReturnValue(false);
         }
     }

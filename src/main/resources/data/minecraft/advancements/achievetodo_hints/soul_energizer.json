@@ -11,7 +11,7 @@
     },
     "frame": "goal"
   },
-  "parent": "achievetodo:hints/three_pointer",
+  "parent": "minecraft:achievetodo_hints/three_pointer",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

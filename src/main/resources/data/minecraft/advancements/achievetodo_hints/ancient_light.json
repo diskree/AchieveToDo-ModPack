@@ -11,7 +11,7 @@
     },
     "frame": "goal"
   },
-  "parent": "achievetodo:hints/know_your_place",
+  "parent": "minecraft:achievetodo_hints/know_your_place",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

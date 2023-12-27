@@ -1,17 +1,17 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:barrier"
+      "item": "minecraft:dragon_egg"
     },
     "title": {
-      "translate": "hints.no_new_updates.title"
+      "translate": "hints.three_pointer.title"
     },
     "description": {
-      "translate": "hints.no_new_updates.description"
+      "translate": "hints.three_pointer.description"
     },
     "frame": "goal"
   },
-  "parent": "achievetodo:hints/nothing_lasts_forever",
+  "parent": "minecraft:achievetodo_hints/ancient_light",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

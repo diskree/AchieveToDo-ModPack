@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:barrier"
+    },
+    "title": {
+      "translate": "hints.no_new_updates.title"
+    },
+    "description": {
+      "translate": "hints.no_new_updates.description"
+    },
+    "frame": "goal"
+  },
+  "parent": "minecraft:achievetodo_hints/nothing_lasts_forever",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

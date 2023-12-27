@@ -3,15 +3,18 @@ package com.diskree.achievetodo.mixins.client;
 import com.diskree.achievetodo.advancements.AdvancementsTab;
 import com.diskree.achievetodo.client.AchieveToDoClient;
 import net.minecraft.advancement.*;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.advancement.AdvancementTab;
+import net.minecraft.client.gui.screen.advancement.AdvancementTabType;
 import net.minecraft.client.gui.screen.advancement.AdvancementWidget;
 import net.minecraft.client.gui.screen.advancement.AdvancementsScreen;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.network.ClientAdvancementManager;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -89,11 +92,11 @@ public abstract class AdvancementsScreenMixin extends Screen {
             }
             AdvancementsTab tab = null;
             for (AdvancementsTab advancementsTab : AdvancementsTab.values()) {
-                if (advancementsTab.getRootAdvancementId().equals(rootAdvancement.getAdvancementEntry().id())) {
+                if (advancementsTab.getRootAdvancementPath().equals(rootAdvancement.getAdvancementEntry().id().getPath())) {
                     tab = advancementsTab;
                 }
             }
-            if (tab == null || tab == AdvancementsTab.BLOCKED_ACTIONS) {
+            if (tab == null || tab == AdvancementsTab.BLOCKED_ACTIONS || tab == AdvancementsTab.HINTS) {
                 continue;
             }
             AdvancementDisplay display = advancement.value().display().orElse(null);
@@ -347,15 +350,27 @@ public abstract class AdvancementsScreenMixin extends Screen {
                 refreshSearchResults();
             }
         });
+        AdvancementDisplay searchRootAdvancementDisplay = new AdvancementDisplay(
+                ItemStack.EMPTY,
+                Text.empty(),
+                Text.empty(),
+                Optional.of(new Identifier("textures/block/" + Registries.BLOCK.getId(Blocks.BLACK_CONCRETE).getPath() + ".png")),
+                AdvancementFrame.TASK,
+                false,
+                false,
+                true
+        );
         searchRootAdvancement = new PlacedAdvancement(
                 Advancement.Builder
                         .createUntelemetered()
-                        .display(ItemStack.EMPTY, Text.empty(), Text.empty(), AdvancementsTab.ADVANCEMENTS_SEARCH.getBackgroundTextureId(), AdvancementFrame.TASK, false, false, true)
-                        .build(AdvancementsTab.ADVANCEMENTS_SEARCH.getRootAdvancementId()),
+                        .display(searchRootAdvancementDisplay)
+                        .build(AchieveToDoClient.ADVANCEMENTS_SEARCH_ID),
                 null
         );
         AdvancementsScreen advancementsScreen = (AdvancementsScreen) (Object) this;
-        searchTab = AdvancementTab.create(client, advancementsScreen, 0, searchRootAdvancement);
+        if (client != null) {
+            searchTab = new AdvancementTab(client, advancementsScreen, AdvancementTabType.RIGHT, 0, searchRootAdvancement, searchRootAdvancementDisplay);
+        }
     }
 
     @Inject(method = "render", at = @At(value = "RETURN"))

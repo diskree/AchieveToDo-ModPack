@@ -11,7 +11,7 @@
     },
     "frame": "goal"
   },
-  "parent": "achievetodo:hints/so_long_and_thanks_for_the_xp",
+  "parent": "minecraft:achievetodo_hints/so_long_and_thanks_for_the_xp",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

@@ -133,13 +133,9 @@ public enum AdvancementsTab {
                     )
             )
     ),
+    HINTS(true),
     STATISTICS,
     BACAP,
-    ADVANCEMENTS_SEARCH(
-            Items.AIR,
-            Blocks.BLACK_CONCRETE,
-            List.of()
-    ),
     REDSTONE,
     POTION,
     ENCHANTING,
@@ -153,7 +149,11 @@ public enum AdvancementsTab {
     public final List<List<IGeneratedAdvancement>> children;
 
     AdvancementsTab() {
-        isModded = false;
+        this(false);
+    }
+
+    AdvancementsTab(boolean isModded) {
+        this.isModded = isModded;
         icon = null;
         background = null;
         children = null;
@@ -202,11 +202,6 @@ public enum AdvancementsTab {
     @NotNull
     public Text getDescription() {
         return Text.translatable("advancement.root." + name().toLowerCase() + ".description");
-    }
-
-    @NotNull
-    public Identifier getRootAdvancementId() {
-        return new Identifier(getRootAdvancementPath());
     }
 
     @NotNull

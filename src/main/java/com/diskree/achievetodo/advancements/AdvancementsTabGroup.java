@@ -32,9 +32,9 @@ public enum AdvancementsTabGroup {
             AdvancementTabType.RIGHT,
             List.of(
                     BLOCKED_ACTIONS,
+                    HINTS,
                     STATISTICS,
-                    BACAP,
-                    ADVANCEMENTS_SEARCH
+                    BACAP
             )
     ),
     BOTTOM(

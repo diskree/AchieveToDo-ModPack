@@ -1,6 +1,7 @@
 package com.diskree.achievetodo;
 
 import com.diskree.achievetodo.action.BlockedActionType;
+import com.diskree.achievetodo.advancements.AdvancementsTab;
 import com.diskree.achievetodo.advancements.RandomAdvancements;
 import com.diskree.achievetodo.advancements.UnblockActionToast;
 import com.diskree.achievetodo.advancements.hints.*;
@@ -267,7 +268,7 @@ public class AchieveToDo implements ModInitializer {
         if (player == null) {
             return;
         }
-        AdvancementEntry advancement = player.server.getAdvancementLoader().get(new Identifier(ID, "hints/" + pathName));
+        AdvancementEntry advancement = player.server.getAdvancementLoader().get(new Identifier(AdvancementsTab.HINTS.getBasePath() + "/" + pathName));
         AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
         for (String criterion : advancementProgress.getUnobtainedCriteria()) {
             player.getAdvancementTracker().grantCriterion(advancement, criterion);

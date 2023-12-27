@@ -1,0 +1,19 @@
+{
+  "rewards": {
+    "function": "minecraft:achievetodo_hints/hintly_hallows_message"
+  },
+  "criteria": {
+    "music_disc_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:music_disc_5"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

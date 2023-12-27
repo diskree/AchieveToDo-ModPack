@@ -27,7 +27,7 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
     @Override
     public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
         for (AdvancementsTab root : AdvancementsTab.values()) {
-            if (!root.isModded || root == AdvancementsTab.ADVANCEMENTS_SEARCH) {
+            if (!root.isModded || root == AdvancementsTab.HINTS) {
                 continue;
             }
             AdvancementEntry rootAdvancement = Advancement.Builder

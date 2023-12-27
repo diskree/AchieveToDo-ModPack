@@ -11,7 +11,7 @@
     },
     "frame": "goal"
   },
-  "parent": "achievetodo:hints/hintly_hallows",
+  "parent": "minecraft:achievetodo_hints/hintly_hallows",
   "criteria": {
     "dragon_egg": {
       "trigger": "minecraft:placed_block",

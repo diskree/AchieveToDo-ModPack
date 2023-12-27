@@ -12,10 +12,12 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.renderer.v1.material.BlendMode;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
+import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
 public class AchieveToDoClient implements ClientModInitializer {
 
+    public static final Identifier ADVANCEMENTS_SEARCH_ID = new Identifier(AchieveToDo.ID, "advancements_search/root");
     public static final int ADVANCEMENTS_SCREEN_MARGIN = 30;
 
     @Override

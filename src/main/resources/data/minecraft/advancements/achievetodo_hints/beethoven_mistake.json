@@ -11,7 +11,7 @@
     },
     "frame": "goal"
   },
-  "parent": "achievetodo:hints/soul_energizer",
+  "parent": "minecraft:achievetodo_hints/soul_energizer",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"

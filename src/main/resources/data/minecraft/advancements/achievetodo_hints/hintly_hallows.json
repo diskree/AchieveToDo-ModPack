@@ -1,14 +1,14 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:nether_star"
+      "item": "minecraft:map"
     },
     "title": {
       "translate": "hints.hintly_hallows.title",
       "extra": [
         {
-          "italic": "true",
-          "text": "           "
+          "italic": true,
+          "text": "                                "
         }
       ]
     },
@@ -129,29 +129,29 @@
     },
     "frame": "challenge"
   },
-  "parent": "achievetodo:action/root",
+  "parent": "minecraft:achievetodo_hints/root",
   "criteria": {
-    "9_to_5": {
+    "music_disc_5": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": {
           "type_specific": {
             "type": "player",
             "advancements": {
-              "blazeandcave:mining/9_to_5": "true"
+              "minecraft:technical/hintly_hallows_music_disc_5": true
             }
           }
         }
       }
     },
-    "the_invisible_player": {
+    "potion_of_invisibility": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": {
           "type_specific": {
             "type": "player",
             "advancements": {
-              "blazeandcave:potion/the_invisible_player": "true"
+              "minecraft:technical/hintly_hallows_potion_of_invisibility": true
             }
           }
         }
@@ -164,7 +164,7 @@
           "type_specific": {
             "type": "player",
             "advancements": {
-              "minecraft:end/dragon_egg": "true"
+              "minecraft:technical/hintly_hallows_dragon_egg": true
             }
           }
         }

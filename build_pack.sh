@@ -14,12 +14,13 @@ readonly author=$4
 readonly repoUrl=$5
 readonly minecraftVersion=$6
 readonly loaderVersion=$7
+readonly isDebug=$8
 
 readonly packDir="pack"
 
 rm -f -r "build/libs"
 rm "$packDir/mods/$modId"*
-./gradlew build -PisDebug=false
+./gradlew build -PisDebug="$isDebug"
 cp "build/libs/$modId"* "$packDir/mods"
 
 cd "$packDir" || exit

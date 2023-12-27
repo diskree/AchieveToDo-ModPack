@@ -66,7 +66,7 @@ tasks.register('generateBuildConfig', DefaultTask) {
     }
 }
 
-tasks.register('buildPack', Exec) {
+tasks.register('packBuildDebug', Exec) {
     commandLine 'sh', "$projectDir/build_pack.sh",
             modId,
             modVersion,
@@ -74,7 +74,20 @@ tasks.register('buildPack', Exec) {
             author,
             repoUrl,
             minecraftVersion,
-            minLoaderVersion
+            minLoaderVersion,
+            true
+}
+
+tasks.register('packBuildRelease', Exec) {
+    commandLine 'sh', "$projectDir/build_pack.sh",
+            modId,
+            modVersion,
+            modName,
+            author,
+            repoUrl,
+            minecraftVersion,
+            minLoaderVersion,
+            false
 }
 
 java {

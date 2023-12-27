@@ -2,6 +2,7 @@ package com.diskree.achievetodo.action;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.advancements.AdvancementsTab;
+import net.minecraft.advancement.PlacedAdvancement;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -376,12 +377,24 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     }
 
     public static BlockedActionType map(String name) {
+        if (name == null) {
+            return null;
+        }
         for (BlockedActionType action : values()) {
             if (action.name().equalsIgnoreCase(name)) {
                 return action;
             }
         }
         return null;
+    }
+
+    public static BlockedActionType map(PlacedAdvancement advancement) {
+        return map(advancement.getAdvancementEntry().id());
+    }
+
+    public static BlockedActionType map(Identifier advancementId) {
+        String[] pathPieces = advancementId.getPath().split("/");
+        return pathPieces.length == 2 ? BlockedActionType.map(pathPieces[1]) : null;
     }
 
     @Nullable

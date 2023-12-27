@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.action.BlockedActionType;
 import it.unimi.dsi.fastutil.Stack;
 import net.minecraft.advancement.AdvancementDisplays;
 import net.minecraft.advancement.PlacedAdvancement;
@@ -16,7 +16,7 @@ public abstract class AdvancementVisibilityEvaluatorMixin {
 
     @Inject(method = "shouldDisplay(Lnet/minecraft/advancement/PlacedAdvancement;Lit/unimi/dsi/fastutil/Stack;Ljava/util/function/Predicate;Lnet/minecraft/advancement/AdvancementDisplays$ResultConsumer;)Z", at = @At("HEAD"), cancellable = true)
     private static void calculateDisplayInject(PlacedAdvancement advancement, Stack<AdvancementDisplays.Status> statuses, Predicate<PlacedAdvancement> donePredicate, AdvancementDisplays.ResultConsumer consumer, CallbackInfoReturnable<Boolean> cir) {
-        if (AchieveToDo.getBlockedActionFromAdvancement(advancement) != null) {
+        if (BlockedActionType.map(advancement) != null) {
             statuses.push(AdvancementDisplays.Status.SHOW);
             for (PlacedAdvancement child : advancement.getChildren()) {
                 AdvancementDisplays.shouldDisplay(child, statuses, donePredicate, consumer);

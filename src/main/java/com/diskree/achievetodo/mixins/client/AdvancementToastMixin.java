@@ -29,12 +29,12 @@ public class AdvancementToastMixin {
         if (advancement == null) {
             return null;
         }
-        BlockedActionType action = AchieveToDo.getBlockedActionFromAdvancement(advancement.id());
+        BlockedActionType action = BlockedActionType.map(advancement.id());
         return action != null ? action.getCategory() : null;
     }
 
     @Redirect(method = "draw", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawGuiTexture(Lnet/minecraft/util/Identifier;IIII)V"))
-    private void modifyBackgroundTexture(DrawContext instance, Identifier texture, int x, int y, int width, int height) {
+    private void redirectBackgroundTexture(DrawContext instance, Identifier texture, int x, int y, int width, int height) {
         BlockedActionCategory category = getBlockedActionCategory();
         if (category != null) {
             instance.drawTexture(new Identifier(AchieveToDo.ID, "textures/gui/toast/blocked_action/" + category.getName() + ".png"), 0, 0, 0, 0, width, height);
@@ -44,7 +44,7 @@ public class AdvancementToastMixin {
     }
 
     @ModifyArgs(method = "draw", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawText(Lnet/minecraft/client/font/TextRenderer;Lnet/minecraft/text/Text;IIIZ)I"))
-    private void modifyTitle1(Args args) {
+    private void modifyTitle(Args args) {
         BlockedActionCategory category = getBlockedActionCategory();
         if (category != null) {
             args.set(1, Text.translatable(category.getUnblockPopupTitle().getString()));

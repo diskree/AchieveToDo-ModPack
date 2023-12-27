@@ -2926,6 +2926,7 @@
 
 "Get attacked by Piglin Brutes" : "Получите урон от брутального пиглина",
 
+"Get attacked by a Hoglin" : "Получите урон от хоглина",
 
 # All advancements added in version 1.11 are here
 "Time to Dig!" : "Время копать!",
@@ -5298,7 +5299,7 @@
 "Loot chests opened:": "Обыскано сундуков в данжах:",
 "Gold Bartered to Piglins:": "Сделок с пиглинами:",
 
-"You have eaten an apple every day for": "Вы ели яблоко каждый день в течении",
+"You have eaten an apple every day for": "Вы ели яблоко каждый день в течение",
 # Number
 "days.": "дней.",
 "You have eaten an apple today.": "Вы съели яблоко сегодня.",

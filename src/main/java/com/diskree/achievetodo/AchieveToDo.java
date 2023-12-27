@@ -87,7 +87,7 @@ public class AchieveToDo implements ModInitializer {
 
     public static final Identifier BACAP_LANGUAGE_PACK = new Identifier(ID, "bacap_lp");
 
-    public static final Identifier GRANT_LOCKED_ACTION_PACKET_ID = new Identifier(ID, "grant_locked_action");
+    public static final Identifier GRANT_BLOCKED_ACTION_PACKET_ID = new Identifier(ID, "grant_blocked_action");
 
     public static final Identifier ANCIENT_CITY_PORTAL_BLOCK_ID = new Identifier(ID, "ancient_city_portal");
     public static final AncientCityPortalBlock ANCIENT_CITY_PORTAL_BLOCK = new AncientCityPortalBlock(AbstractBlock.Settings.create()
@@ -194,7 +194,7 @@ public class AchieveToDo implements ModInitializer {
             }
             return Command.SINGLE_SUCCESS;
         }))));
-        ServerPlayNetworking.registerGlobalReceiver(GRANT_LOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
+        ServerPlayNetworking.registerGlobalReceiver(GRANT_BLOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
             BlockedActionType action = buf.readEnumConstant(BlockedActionType.class);
             boolean isDemystifyOnly = buf.readBoolean();
             if (action != null) {
@@ -276,15 +276,6 @@ public class AchieveToDo implements ModInitializer {
         }
     }
 
-    public static BlockedActionType getBlockedActionFromAdvancement(PlacedAdvancement advancement) {
-        return getBlockedActionFromAdvancement(advancement.getAdvancementEntry().id());
-    }
-
-    public static BlockedActionType getBlockedActionFromAdvancement(Identifier advancementId) {
-        String[] pathPieces = advancementId.getPath().split("/");
-        return pathPieces.length == 2 ? BlockedActionType.map(pathPieces[1]) : null;
-    }
-
     private boolean isItemBlocked(PlayerEntity player, ItemStack stack) {
         if (isFoodBlocked(player, stack.getItem().getFoodComponent())) {
             return true;
@@ -319,7 +310,7 @@ public class AchieveToDo implements ModInitializer {
         if (!isCheckOnly) {
             player.sendMessage(action.buildBlockedDescription(player), true);
             if (player.getWorld().isClient) {
-                ClientPlayNetworking.send(GRANT_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action).writeBoolean(true));
+                ClientPlayNetworking.send(GRANT_BLOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action).writeBoolean(true));
             } else if (player instanceof ServerPlayerEntity serverPlayer) {
                 grantBlockedAction(serverPlayer, action, true);
             }
@@ -404,7 +395,7 @@ public class AchieveToDo implements ModInitializer {
         if (oldCount != 0) {
             for (BlockedActionType action : BlockedActionType.values()) {
                 if (advancementsCount >= action.getUnblockAdvancementsCount() && oldCount < action.getUnblockAdvancementsCount()) {
-                    ClientPlayNetworking.send(GRANT_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action).writeBoolean(false));
+                    ClientPlayNetworking.send(GRANT_BLOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action).writeBoolean(false));
                 }
             }
         }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "achievetodo:item/locked_action"
+    "layer0": "achievetodo:item/mystified_label"
   }
 }

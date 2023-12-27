@@ -12,6 +12,10 @@ public enum BlockedActionCategory {
     VILLAGER;
 
     public Text getUnblockPopupTitle() {
-        return Text.translatable("unblock." + name().toLowerCase());
+        return Text.translatable("unblock." + getName());
+    }
+
+    public String getName() {
+        return name().toLowerCase();
     }
 }

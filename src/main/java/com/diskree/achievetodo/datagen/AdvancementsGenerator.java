@@ -18,7 +18,8 @@ import java.util.function.Consumer;
 
 public class AdvancementsGenerator extends FabricAdvancementProvider {
 
-    public static final String BLOCKED_ACTION_CRITERIA_NAME_PREFIX = "action_";
+    public static final String BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX = "demystified_";
+    public static final String BLOCKED_ACTION_UNBLOCKED_CRITERION_NAME = "unblocked";
 
     protected AdvancementsGenerator(FabricDataOutput output) {
         super(output);
@@ -74,7 +75,8 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
 
     private Advancement.Builder setupRequirements(Advancement.Builder builder, IGeneratedAdvancement advancement) {
         if (advancement instanceof BlockedActionType blockedActionType) {
-            builder.criterion(BLOCKED_ACTION_CRITERIA_NAME_PREFIX + blockedActionType.getName(), Criteria.IMPOSSIBLE.create(new ImpossibleCriterion.Conditions()));
+            builder.criterion(BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + blockedActionType.getName(), Criteria.IMPOSSIBLE.create(new ImpossibleCriterion.Conditions()));
+            builder.criterion(BLOCKED_ACTION_UNBLOCKED_CRITERION_NAME, Criteria.IMPOSSIBLE.create(new ImpossibleCriterion.Conditions()));
         }
         return builder;
     }

@@ -3,9 +3,11 @@ package com.diskree.achievetodo.mixins.client;
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.action.BlockedActionType;
 import com.diskree.achievetodo.client.AchieveToDoClient;
+import com.diskree.achievetodo.datagen.AdvancementsGenerator;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.AdvancementRequirements;
 import net.minecraft.advancement.PlacedAdvancement;
+import net.minecraft.advancement.criterion.CriterionProgress;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.advancement.AdvancementTab;
@@ -39,22 +41,26 @@ public abstract class AdvancementWidgetMixin {
     private MinecraftClient client;
 
     @Unique
-    private boolean isActionLocked() {
+    private boolean isMystified() {
         BlockedActionType action = AchieveToDo.getBlockedActionFromAdvancement(advancement);
-        return action != null && !action.isUnblocked(client.player) && (progress == null || !progress.isDone());
+        if (action == null || action.isUnblocked(client.player) || progress == null) {
+            return false;
+        }
+        CriterionProgress demystifiedProgress = progress.getCriterionProgress(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + action.getName());
+        return demystifiedProgress != null && !demystifiedProgress.isObtained();
     }
 
     @ModifyArg(method = "renderWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawItemWithoutEntity(Lnet/minecraft/item/ItemStack;II)V"), index = 0)
     private ItemStack renderWidgetsModifyIcon(ItemStack stack) {
-        if (isActionLocked()) {
-            return new ItemStack(AchieveToDo.LOCKED_ACTION_ITEM);
+        if (isMystified()) {
+            return new ItemStack(AchieveToDo.MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM);
         }
         return stack;
     }
 
     @Inject(method = "shouldRender", at = @At("RETURN"), cancellable = true)
     private void shouldRenderInject(int originX, int originY, int mouseX, int mouseY, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(cir.getReturnValue() && !isActionLocked());
+        cir.setReturnValue(cir.getReturnValue() && !isMystified());
     }
 
     @ModifyConstant(method = "drawTooltip", constant = @Constant(intValue = 113), require = 1)

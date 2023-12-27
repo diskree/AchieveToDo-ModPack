@@ -32,6 +32,7 @@
     "client.AdvancementsScreenMixin",
     "client.AdvancementTabMixin",
     "client.AdvancementTabTypeMixin",
+    "client.AdvancementToastMixin",
     "client.AdvancementWidgetMixin",
     "client.ClientPlayerEntityMixin",
     "client.ClientPlayNetworkHandlerMixin",

@@ -24,12 +24,12 @@ public abstract class AdvancementProgressMixin {
 
     @Unique
     private int getActionUnblockAdvancementsCount() {
-        if (requirements.requirements().size() == 1) {
-            List<String> requirement = requirements.requirements().get(0);
-            if (requirement != null && requirement.size() == 1) {
-                String criteria = requirement.get(0);
-                if (criteria != null && criteria.startsWith(AdvancementsGenerator.BLOCKED_ACTION_CRITERIA_NAME_PREFIX)) {
-                    BlockedActionType action = BlockedActionType.map(criteria.split(AdvancementsGenerator.BLOCKED_ACTION_CRITERIA_NAME_PREFIX)[1]);
+        if (requirements.requirements().size() == 2) {
+            List<String> criteria = requirements.requirements().get(0);
+            if (criteria != null && !criteria.isEmpty()) {
+                String maybeDemystifiedCriterion = criteria.get(0);
+                if (maybeDemystifiedCriterion != null && maybeDemystifiedCriterion.startsWith(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX)) {
+                    BlockedActionType action = BlockedActionType.map(maybeDemystifiedCriterion.split(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX)[1]);
                     if (action != null) {
                         return action.getUnblockAdvancementsCount();
                     }

@@ -18,8 +18,10 @@ readonly isDebug=$8
 
 readonly packDir="pack"
 
-rm -f -r "build/libs"
+rm -rf "build/libs"
 rm "$packDir/mods/$modId"*
+rm -rf "src/main/generated"
+./gradlew runDatagen
 ./gradlew build -PisDebug="$isDebug"
 cp "build/libs/$modId"* "$packDir/mods"
 

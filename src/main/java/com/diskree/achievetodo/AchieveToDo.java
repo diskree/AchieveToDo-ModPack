@@ -3,9 +3,9 @@ package com.diskree.achievetodo;
 import com.diskree.achievetodo.action.BlockedActionType;
 import com.diskree.achievetodo.advancements.AdvancementsTab;
 import com.diskree.achievetodo.advancements.RandomAdvancements;
-import com.diskree.achievetodo.advancements.UnblockActionToast;
 import com.diskree.achievetodo.advancements.hints.*;
 import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
+import com.diskree.achievetodo.datagen.AdvancementsGenerator;
 import com.mojang.brigadier.Command;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -87,7 +87,7 @@ public class AchieveToDo implements ModInitializer {
 
     public static final Identifier BACAP_LANGUAGE_PACK = new Identifier(ID, "bacap_lp");
 
-    public static final Identifier DEMYSTIFY_LOCKED_ACTION_PACKET_ID = new Identifier(ID, "demystify_locked_action");
+    public static final Identifier GRANT_LOCKED_ACTION_PACKET_ID = new Identifier(ID, "grant_locked_action");
 
     public static final Identifier ANCIENT_CITY_PORTAL_BLOCK_ID = new Identifier(ID, "ancient_city_portal");
     public static final AncientCityPortalBlock ANCIENT_CITY_PORTAL_BLOCK = new AncientCityPortalBlock(AbstractBlock.Settings.create()
@@ -105,8 +105,8 @@ public class AchieveToDo implements ModInitializer {
     public static final Identifier REINFORCED_DEEPSLATE_BROKEN_BLOCK_ID = new Identifier(ID, "reinforced_deepslate_broken");
     public static final Block REINFORCED_DEEPSLATE_BROKEN_BLOCK = new Block(FabricBlockSettings.create());
 
-    public static final Identifier LOCKED_ACTION_ITEM_ID = new Identifier(ID, "locked_action");
-    public static final Item LOCKED_ACTION_ITEM = new Item(new FabricItemSettings());
+    public static final Identifier MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM_ID = new Identifier(ID, "mystified_label");
+    public static final Item MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM = new Item(new FabricItemSettings());
 
     public static final Identifier ANCIENT_CITY_PORTAL_HINT_ITEM_ID = new Identifier(ID, "ancient_city_portal_hint");
     public static final Item ANCIENT_CITY_PORTAL_HINT_ITEM = new Item(new FabricItemSettings().maxDamage(1000));
@@ -194,10 +194,11 @@ public class AchieveToDo implements ModInitializer {
             }
             return Command.SINGLE_SUCCESS;
         }))));
-        ServerPlayNetworking.registerGlobalReceiver(DEMYSTIFY_LOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
+        ServerPlayNetworking.registerGlobalReceiver(GRANT_LOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
             BlockedActionType action = buf.readEnumConstant(BlockedActionType.class);
+            boolean isDemystifyOnly = buf.readBoolean();
             if (action != null) {
-                server.execute(() -> demystifyAction(player, action));
+                server.execute(() -> grantBlockedAction(player, action, isDemystifyOnly));
             }
         });
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
@@ -276,7 +277,11 @@ public class AchieveToDo implements ModInitializer {
     }
 
     public static BlockedActionType getBlockedActionFromAdvancement(PlacedAdvancement advancement) {
-        String[] pathPieces = advancement.getAdvancementEntry().id().getPath().split("/");
+        return getBlockedActionFromAdvancement(advancement.getAdvancementEntry().id());
+    }
+
+    public static BlockedActionType getBlockedActionFromAdvancement(Identifier advancementId) {
+        String[] pathPieces = advancementId.getPath().split("/");
         return pathPieces.length == 2 ? BlockedActionType.map(pathPieces[1]) : null;
     }
 
@@ -314,9 +319,9 @@ public class AchieveToDo implements ModInitializer {
         if (!isCheckOnly) {
             player.sendMessage(action.buildBlockedDescription(player), true);
             if (player.getWorld().isClient) {
-                ClientPlayNetworking.send(DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action));
+                ClientPlayNetworking.send(GRANT_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action).writeBoolean(true));
             } else if (player instanceof ServerPlayerEntity serverPlayer) {
-                demystifyAction(serverPlayer, action);
+                grantBlockedAction(serverPlayer, action, true);
             }
         }
         return true;
@@ -399,20 +404,24 @@ public class AchieveToDo implements ModInitializer {
         if (oldCount != 0) {
             for (BlockedActionType action : BlockedActionType.values()) {
                 if (advancementsCount >= action.getUnblockAdvancementsCount() && oldCount < action.getUnblockAdvancementsCount()) {
-                    PlacedAdvancement advancement = client.player.networkHandler.getAdvancementHandler().getManager().get(action.buildAdvancementId());
-                    if (advancement != null) {
-                        client.getToastManager().add(new UnblockActionToast(advancement.getAdvancementEntry(), action));
-                    }
+                    ClientPlayNetworking.send(GRANT_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action).writeBoolean(false));
                 }
             }
         }
     }
 
-    private static void demystifyAction(ServerPlayerEntity player, BlockedActionType action) {
-        AdvancementEntry advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
-        AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
-        for (String criterion : advancementProgress.getUnobtainedCriteria()) {
-            player.getAdvancementTracker().grantCriterion(advancement, criterion);
+    private static void grantBlockedAction(ServerPlayerEntity player, BlockedActionType action, boolean isDemystifyOnly) {
+        if (isDemystifyOnly) {
+            player.getAdvancementTracker().grantCriterion(
+                    player.server.getAdvancementLoader().get(action.buildAdvancementId()),
+                    AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + action.getName()
+            );
+        } else {
+            AdvancementEntry advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
+            AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
+            for (String criterion : advancementProgress.getUnobtainedCriteria()) {
+                player.getAdvancementTracker().grantCriterion(advancement, criterion);
+            }
         }
     }
 
@@ -436,7 +445,7 @@ public class AchieveToDo implements ModInitializer {
     }
 
     private void registerItems() {
-        Registry.register(Registries.ITEM, LOCKED_ACTION_ITEM_ID, LOCKED_ACTION_ITEM);
+        Registry.register(Registries.ITEM, MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM_ID, MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM);
         Registry.register(Registries.ITEM, ANCIENT_CITY_PORTAL_HINT_ITEM_ID, ANCIENT_CITY_PORTAL_HINT_ITEM);
         Registry.register(Registries.ITEM, REINFORCED_DEEPSLATE_CHARGED_BLOCK_ID, new BlockItem(REINFORCED_DEEPSLATE_CHARGED_BLOCK, new FabricItemSettings()));
         Registry.register(Registries.ITEM, REINFORCED_DEEPSLATE_BROKEN_BLOCK_ID, new BlockItem(REINFORCED_DEEPSLATE_BROKEN_BLOCK, new FabricItemSettings()));

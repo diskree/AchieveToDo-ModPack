@@ -172,7 +172,7 @@ public class AchieveToDo implements ModInitializer {
         registerParticles();
         registerEntities();
 
-        CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> dispatcher.register(CommandManager.literal("random").executes((context -> {
+        CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> dispatcher.register(CommandManager.literal("advRandom").executes((context -> {
             ServerCommandSource source = context.getSource();
             PlacedAdvancement placedAdvancement = RandomAdvancements.getAdvancement(source.getPlayer());
             if (placedAdvancement != null) {
@@ -401,15 +401,14 @@ public class AchieveToDo implements ModInitializer {
     }
 
     private static void grantBlockedAction(ServerPlayerEntity player, BlockedActionType action, boolean isDemystifyOnly) {
+        AdvancementEntry advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
         if (isDemystifyOnly) {
             player.getAdvancementTracker().grantCriterion(
-                    player.server.getAdvancementLoader().get(action.buildAdvancementId()),
+                    advancement,
                     AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + action.getName()
             );
         } else {
-            AdvancementEntry advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
-            AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
-            for (String criterion : advancementProgress.getUnobtainedCriteria()) {
+            for (String criterion : player.getAdvancementTracker().getProgress(advancement).getUnobtainedCriteria()) {
                 player.getAdvancementTracker().grantCriterion(advancement, criterion);
             }
         }

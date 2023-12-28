@@ -59,7 +59,7 @@ For advancements requiring a visit to a particular location, a special spyglass 
 
 ## Commands
 
-`/random`. Instead of manually perusing the advancements window, you can use this command to have a random, uncompleted advancement displayed in the chat. It offers a convenient way to set a personal objective without taking your attention away from the gameplay. However, advancements that require progress or are notably difficult will not be included in the suggestions.
+`/advRandom`. Instead of manually perusing the advancements window, you can use this command to have a random, uncompleted advancement displayed in the chat. It offers a convenient way to set a personal objective without taking your attention away from the gameplay. However, advancements that require progress or are notably difficult will not be included in the suggestions.
 
 ## Advancement Window
 

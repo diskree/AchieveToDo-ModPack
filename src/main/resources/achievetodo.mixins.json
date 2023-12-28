@@ -17,7 +17,6 @@
     "ItemDisplayEntityMixin",
     "ItemMixin",
     "JukeboxBlockEntityMixin",
-    "LivingEntityMixin",
     "NetworkStateMixin",
     "NetworkStateMixin$PacketHandlerInitializerMixin",
     "PlacedAdvancementMixin",

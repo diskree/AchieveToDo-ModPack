@@ -142,7 +142,6 @@ public class AchieveToDo implements ModInitializer {
             .build();
 
     public static final SoundEvent MUSIC_DISC_5_ACTIVATOR = SoundEvent.of(new Identifier(ID, "music_disc_5_activator"));
-    public static final Identifier EVOKER_NO_TOTEM_OF_UNDYING_LOOT_TABLE_ID = new Identifier(ID, "entities/evoker_no_totem_of_undying");
 
     private static int advancementsCount;
 

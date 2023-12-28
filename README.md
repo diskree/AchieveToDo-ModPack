@@ -67,7 +67,6 @@ For enhanced convenience, the advancements window has been expanded to fill the 
 
 ## Non-Vanilla Mechanics
 
-- Totem of Undying will only drop from the Evoker found in the Woodland Mansion. This design choice was made to restore the original mechanic, stripping the raiders of totems to add a unique flavor to the gameplay.
 - You'll also encounter a familiar vanilla block in a place you wouldn't typically expect. However, as it's part of a «Hintly Hallows» riddle, I can't reveal much more about it.
 
 # 📦 Resources

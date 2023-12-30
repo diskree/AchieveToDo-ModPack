@@ -154,7 +154,7 @@ hash = "c55b07a460965413fc9a59dddc2dfc5a5fcbecdbb3adde97145f733a396c90b5"
 
 [[files]]
 file = "config/yosbr/options.txt"
-hash = "1b7c40b8f76a5853d5d2ae6675d7891fea0198e1254de3e516e7954776ad96d4"
+hash = "bc2aeba4ec61739e7ad6375eda1040a3cb20900386d7ba402ff3336af76b9931"
 
 [[files]]
 file = "icon.png"
@@ -162,7 +162,7 @@ hash = "48e41ad5654e7b11c81a771434b7907573c25295a58e9194ba2ac1848098260c"
 
 [[files]]
 file = "mods/achievetodo-mc1.20.4+1.3.jar"
-hash = "7ce3bb90cd2fb628437f50597ee57f12a06306295e5e9667bafd86523124fd24"
+hash = "1a77bfdc56264771c3bd099fe6a7b6c175b9ffe8833f2d09ec6090eaec30dac3"
 
 [[files]]
 file = "mods/antighost.pw.toml"

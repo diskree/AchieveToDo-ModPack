@@ -1,0 +1,13 @@
+name = "Yeetus Experimentus"
+filename = "YeetusExperimentus-Fabric-2.3.0-build.4+mc1.20.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/HaaH232J/versions/vPTIVHrC/YeetusExperimentus-Fabric-2.3.0-build.4%2Bmc1.20.1.jar"
+hash-format = "sha1"
+hash = "a97794ac52a21f8598acc541c4571c4ec7bacaae"
+
+[update]
+[update.modrinth]
+mod-id = "HaaH232J"
+version = "vPTIVHrC"

@@ -162,7 +162,7 @@ hash = "48e41ad5654e7b11c81a771434b7907573c25295a58e9194ba2ac1848098260c"
 
 [[files]]
 file = "mods/achievetodo-mc1.20.4+1.3.jar"
-hash = "025f29d2899802daad8cae5267d67d06814f40921e1ef047773be8299e9ac2af"
+hash = "2ac440f65741c9a7e13372fcd64b5ddf17236854aae6cb5738bc3cb96607080e"
 
 [[files]]
 file = "mods/antighost.pw.toml"
@@ -231,12 +231,22 @@ metafile = true
 
 [[files]]
 file = "mods/dynamic-fps.pw.toml"
-hash = "689ddf2293756df17ff80a4ed9ff181419f1f3fdfd450036f31e717db15e9447"
+hash = "3c74be6e3f141680170ab0235cf272db65d5bf82ddbf99f9cbdc178fffc9a735"
+metafile = true
+
+[[files]]
+file = "mods/ebe.pw.toml"
+hash = "179d1b7ca85bd3202749e2cc95413daec331dd37dbcf66d07f12a2cd1c0ee397"
 metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
 hash = "d8141ee9ad948865c4da8594fe1e785ff6933d3f5b299234d002e2014559c0e4"
+metafile = true
+
+[[files]]
+file = "mods/extra-sounds.pw.toml"
+hash = "4d6949e04703498a6adfac55a11dd6e255bf06d4b5c058bda40d63ec7d9590d5"
 metafile = true
 
 [[files]]
@@ -325,6 +335,16 @@ hash = "92fbfef541293794a06fdc71deedfb86d12fc2f3e5fc42842f94bb9f6a42e2ed"
 metafile = true
 
 [[files]]
+file = "mods/rrls.pw.toml"
+hash = "be45cdd2ea730890957e66f7998ca9543a7bf252fb9aa052c859e4f03ff92ed1"
+metafile = true
+
+[[files]]
+file = "mods/screenshot-to-clipboard.pw.toml"
+hash = "672f3809a2053eef01aea4015ca4b0d4be6c507622172c091c17833b8d2ffb39"
+metafile = true
+
+[[files]]
 file = "mods/shulkerboxtooltip.pw.toml"
 hash = "ef8bedeb72d8ea0df446ec82cfc645727fee3a38d0e766193ad7158856a41f6d"
 metafile = true
@@ -347,6 +367,11 @@ metafile = true
 [[files]]
 file = "mods/yacl.pw.toml"
 hash = "2498a978634a0add18ebd0a47b4e8d23dbe8ac19d926fabf436d15ad94bd9a44"
+metafile = true
+
+[[files]]
+file = "mods/yeetus-experimentus.pw.toml"
+hash = "441bb3a82f6d0b09cc10984cfd468f53bdd9879f7fda5b0299b53ccbf2ba7ca6"
 metafile = true
 
 [[files]]
@@ -388,6 +413,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/default-dark-mode.pw.toml"
 hash = "325a977152e9273146843c9970bd549201d9fb115af8f1cb7c2f425480600451"
+metafile = true
+
+[[files]]
+file = "resourcepacks/translations-for-sodium.pw.toml"
+hash = "873cc072ae826658a2bc30004c53c063477e34a364862d83cd2c306956d0f2f8"
 metafile = true
 
 [[files]]

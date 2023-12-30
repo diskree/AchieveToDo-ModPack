@@ -1,0 +1,13 @@
+name = "Minimal Rain & Snow"
+filename = "Minimal Rain & Snow.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/9aE6Ib8a/versions/Z55eHlrO/Minimal-Rain%20and-Snow-2.2.zip"
+hash-format = "sha1"
+hash = "7a326bb80bb7d34b6fff41968dd5fee1ccff7451"
+
+[update]
+[update.modrinth]
+mod-id = "9aE6Ib8a"
+version = "Z55eHlrO"

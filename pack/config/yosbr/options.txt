@@ -42,7 +42,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:5
 renderClouds:"true"
-resourcePacks:["vanilla","continuity:default","continuity:glass_pane_culling_fix","achievetodo:bacap_lp","file/Default Dark Mode.zip","file/What Painting I\u0027m Looking At.zip","file/Visual Goat Horns.zip","file/Visual Fish Buckets.zip","file/Visual Potions.zip","file/Better Banner Pattern.zip","file/Better Waxed Copper.zip","file/Unique Enchanted Books.zip"]
+resourcePacks:["vanilla","fabric","continuity:default","continuity:glass_pane_culling_fix","achievetodo:bacap_lp","file/Default Dark Mode.zip","file/What Painting I\u0027m Looking At.zip","file/Visual Goat Horns.zip","file/Visual Fish Buckets.zip","file/Visual Potions.zip","file/Better Banner Pattern.zip","file/Better Waxed Copper.zip","file/Unique Enchanted Books.zip","file/No Z-Fighting.zip","file/SodiumTranslations.zip","file/Minimal Rain & Snow.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us

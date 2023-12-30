@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/betterf3.json"
-hash = "7aeea5d0e16c5356b40ddcabb92447217209fd742f306a8a050018cf088eede1"
+hash = "f18095f89e7f5efb3b82a760e1606fd28fa705df6313d04d2af8482f8bc388e6"
 
 [[files]]
 file = "config/brb.toml"
@@ -154,7 +154,7 @@ hash = "c55b07a460965413fc9a59dddc2dfc5a5fcbecdbb3adde97145f733a396c90b5"
 
 [[files]]
 file = "config/yosbr/options.txt"
-hash = "a8a87100452fedb1fb4189004a8dce7e652784492129fec0ace9a5b7e572ebd1"
+hash = "1b7c40b8f76a5853d5d2ae6675d7891fea0198e1254de3e516e7954776ad96d4"
 
 [[files]]
 file = "icon.png"
@@ -162,7 +162,7 @@ hash = "48e41ad5654e7b11c81a771434b7907573c25295a58e9194ba2ac1848098260c"
 
 [[files]]
 file = "mods/achievetodo-mc1.20.4+1.3.jar"
-hash = "2ac440f65741c9a7e13372fcd64b5ddf17236854aae6cb5738bc3cb96607080e"
+hash = "3f3484bbca9fd25c9ce6e181ec9170592e595259ac82aa0070ac7f550351d6a6"
 
 [[files]]
 file = "mods/antighost.pw.toml"
@@ -172,6 +172,16 @@ metafile = true
 [[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "bdee49ed5bd0f58601ea8d56101490f685e75540a7885b5bb50674df1f4dd328"
+metafile = true
+
+[[files]]
+file = "mods/better-mount-hud.pw.toml"
+hash = "961a423cc427d4c785354239e8e7b251b5575756b1cf85dd1bc85011b47f0fbf"
+metafile = true
+
+[[files]]
+file = "mods/better-stats.pw.toml"
+hash = "dea1a285520fd0c2929c8da255c09c2671211d8d672ae19a6aa4663f914a0089"
 metafile = true
 
 [[files]]
@@ -212,6 +222,11 @@ metafile = true
 [[files]]
 file = "mods/continuity.pw.toml"
 hash = "ab1c014ce67654e89af779137bdfd1f6f22888af218f44cf5d83e943d0d5fbc4"
+metafile = true
+
+[[files]]
+file = "mods/cursorcentered-fix.pw.toml"
+hash = "368bce14d855675d437aab64c88ee48adfeb03eb9ef2a023a66542ce2b170a3d"
 metafile = true
 
 [[files]]
@@ -370,11 +385,6 @@ hash = "2498a978634a0add18ebd0a47b4e8d23dbe8ac19d926fabf436d15ad94bd9a44"
 metafile = true
 
 [[files]]
-file = "mods/yeetus-experimentus.pw.toml"
-hash = "441bb3a82f6d0b09cc10984cfd468f53bdd9879f7fda5b0299b53ccbf2ba7ca6"
-metafile = true
-
-[[files]]
 file = "mods/yosbr.pw.toml"
 hash = "6f6334f336a876088431df70e2bba6ac52ca2ddeb73a4880ce88d6954b09af00"
 metafile = true
@@ -413,6 +423,16 @@ metafile = true
 [[files]]
 file = "resourcepacks/default-dark-mode.pw.toml"
 hash = "325a977152e9273146843c9970bd549201d9fb115af8f1cb7c2f425480600451"
+metafile = true
+
+[[files]]
+file = "resourcepacks/minimal-rain.pw.toml"
+hash = "8e7a580b3b08b141decc139add75e98ca178c04c8877ba8b115ffbc7474dea8c"
+metafile = true
+
+[[files]]
+file = "resourcepacks/no-z-fighting.pw.toml"
+hash = "5adf9bbaff75d025c869b32c1b890dba142ceb141fed6f08ba79d7ed41304a89"
 metafile = true
 
 [[files]]

@@ -118,7 +118,8 @@ file = "config/yosbr/config/sodium-options.json"
 file = "config/yosbr/options.txt"
 
 [[files]]
-file = "datapacks/bacap.toml"
+file = "datapacks/blazeandcaves-advancements-pack.pw.toml"
+metafile = true
 
 [[files]]
 file = "icon.png"
@@ -227,6 +228,10 @@ file = "mods/ferrite-core.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/fixbookgui.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/immediatelyfast.pw.toml"
 metafile = true
 
@@ -323,7 +328,27 @@ file = "resourcepacks/Visual Fish Buckets.zip"
 file = "resourcepacks/Visual Goat Horns.zip"
 
 [[files]]
+file = "resourcepacks/bacap-language-pack.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/barrel-fix.pw.toml"
+metafile = true
+
+[[files]]
 file = "resourcepacks/bettergrass.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/centered-crosshair-fix.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/chiseled-stone-bricks.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/colorful-sheared-sheep.pw.toml"
 metafile = true
 
 [[files]]
@@ -335,7 +360,19 @@ file = "resourcepacks/default-dark-mode.pw.toml"
 metafile = true
 
 [[files]]
+file = "resourcepacks/hardcore-absorption-fix.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/map-marking-fix.pw.toml"
+metafile = true
+
+[[files]]
 file = "resourcepacks/minimal-rain.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/nether-bricks-fix.pw.toml"
 metafile = true
 
 [[files]]
@@ -343,7 +380,11 @@ file = "resourcepacks/no-z-fighting.pw.toml"
 metafile = true
 
 [[files]]
-file = "resourcepacks/translations-for-sodium.pw.toml"
+file = "resourcepacks/sodium-translations.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/trapdoor-fix.pw.toml"
 metafile = true
 
 [[files]]

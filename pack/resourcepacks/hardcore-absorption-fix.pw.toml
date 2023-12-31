@@ -1,0 +1,13 @@
+name = "Fixed Hardcore Absorption Hearts"
+filename = "Hardcore Absorption Fix.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/8sAOhPiI/versions/uIOzS3Mb/Hardcore%20Absorption%201.20.3-pre1.zip"
+hash-format = "sha1"
+hash = "679687a375f935a1b393bcc1f9de943c5ba47d78"
+
+[update]
+[update.modrinth]
+mod-id = "8sAOhPiI"
+version = "uIOzS3Mb"

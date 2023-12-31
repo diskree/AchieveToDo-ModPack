@@ -1,6 +1,8 @@
 {
   "pack": {
     "pack_format": 22,
-    "description": "pack.bacap_better_ru.description"
+    "description": {
+      "translate": "pack.bacap_better_ru.description"
+    }
   }
 }

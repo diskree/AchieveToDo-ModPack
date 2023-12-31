@@ -1,11 +1,6 @@
 {
-  "pack.bacap_better_ru.title": "Улучшенный русский перевод",
-  "pack.bacap_better_ru.description": "для §b§oBlazeandCave's",
-
   "advancement.root.blocked_actions.title": "Блокировки",
-  "advancement.root.blocked_actions.description": "",
-  "advancement.root.hintly_hallows.title": "Дары Подсказок",
-  "advancement.root.hintly_hallows.description": "",
+  "advancement.root.blocked_actions.description": "Открой для себя Minecraft по-новому, выполняй достижения и разблокируй их все!",
 
   "blocked.food": "Эта еда сейчас недоступна",
   "blocked.jump": "Вы сейчас не можете прыгать",

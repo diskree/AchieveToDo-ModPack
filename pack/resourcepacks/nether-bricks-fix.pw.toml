@@ -1,0 +1,13 @@
+name = "Nether Bricks Fix"
+filename = "Nether Bricks Fix.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/XKwQ1c2r/versions/woadggX5/Nether%20Bricks%20Fix.zip"
+hash-format = "sha1"
+hash = "5dd47a984c8644291e476ba91a10e842122b35a8"
+
+[update]
+[update.modrinth]
+mod-id = "XKwQ1c2r"
+version = "woadggX5"

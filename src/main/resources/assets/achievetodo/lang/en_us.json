@@ -1,11 +1,9 @@
 {
-  "pack.bacap_better_ru.title": "",
-  "pack.bacap_better_ru.description": "",
+  "pack.bacap_better_ru.title": "Улучшенный русский перевод",
+  "pack.bacap_better_ru.description": "для §b§oBlazeandCave's",
 
   "advancement.root.blocked_actions.title": "Blocked Actions",
-  "advancement.root.blocked_actions.description": "",
-  "advancement.root.hintly_hallows.title": "Hintly Hallows",
-  "advancement.root.hintly_hallows.description": "",
+  "advancement.root.blocked_actions.description": "Discover Minecraft, complete advancements and unlock them all!",
 
   "blocked.food": "This food is not available",
   "blocked.jump": "You cannot jump yet",

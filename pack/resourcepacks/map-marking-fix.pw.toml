@@ -1,0 +1,13 @@
+name = "Map Marking Fix"
+filename = "Map Marking Fix.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/3Bf4du2Z/versions/nLF9jnW8/MapMarkingsFix%5B1.14%2B%5D.zip"
+hash-format = "sha1"
+hash = "0545fdb50f658e0c0f888683456a75104c072702"
+
+[update]
+[update.modrinth]
+mod-id = "3Bf4du2Z"
+version = "nLF9jnW8"

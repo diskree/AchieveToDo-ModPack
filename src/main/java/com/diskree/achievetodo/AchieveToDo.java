@@ -85,8 +85,6 @@ public class AchieveToDo implements ModInitializer {
     public static final Identifier BACAP_REWARDS_TROPHY_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_trophy");
     public static final Identifier BACAP_COOPERATIVE_MODE_DATA_PACK_NAME = new Identifier(ID, "bacap_cooperative_mode");
 
-    public static final Identifier BACAP_LANGUAGE_PACK = new Identifier(ID, "bacap_lp");
-
     public static final Identifier GRANT_BLOCKED_ACTION_PACKET_ID = new Identifier(ID, "grant_blocked_action");
 
     public static final Identifier ANCIENT_CITY_PORTAL_BLOCK_ID = new Identifier(ID, "ancient_city_portal");
@@ -166,7 +164,7 @@ public class AchieveToDo implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        registerPacks();
+        registerDataPacks();
         registerBlocks();
         registerItems();
         registerParticles();
@@ -414,16 +412,14 @@ public class AchieveToDo implements ModInitializer {
         }
     }
 
-    private void registerPacks() {
-        FabricLoader.getInstance().getModContainer(ID).ifPresent((modContainer) -> {
+    private void registerDataPacks() {
+        FabricLoader.getInstance().getModContainer(ID).ifPresent(modContainer -> {
             ResourceManagerHelper.registerBuiltinResourcePack(BACAP_OVERRIDE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL);
             ResourceManagerHelper.registerBuiltinResourcePack(BACAP_OVERRIDE_HARDCORE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL);
             ResourceManagerHelper.registerBuiltinResourcePack(BACAP_COOPERATIVE_MODE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
             ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_ITEM_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
             ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
             ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_TROPHY_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
-
-            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_LANGUAGE_PACK, modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
         });
     }
 

@@ -1,4 +1,7 @@
 {
+  "pack.bacap_better_ru.title": "Улучшенный русский перевод",
+  "pack.bacap_better_ru.description": "для §b§oBlazeandCave's",
+
   "advancement.root.blocked_actions.title": "Блокировки",
   "advancement.root.blocked_actions.description": "",
   "advancement.root.hintly_hallows.title": "Дары Подсказок",
@@ -160,8 +163,8 @@
   "blocked.eat_tropical_fish.description": "Возможность есть тропическую рыбу",
   "blocked.end.title": "Энд",
   "blocked.end.description": "Возможность перехода в измерение Энд",
-  "blocked.end_gate.title": "Дальний Энд",
-  "blocked.end_gate.description": "Возможность перехода в Дальний Энд",
+  "blocked.end_gateway.title": "Дальний Энд",
+  "blocked.end_gateway.description": "Возможность перехода в Дальний Энд",
   "blocked.equip_diamond_armor.title": "Алмазная броня",
   "blocked.equip_diamond_armor.description": "Возможность надевать алмазную броню",
   "blocked.equip_elytra.title": "Элитры",

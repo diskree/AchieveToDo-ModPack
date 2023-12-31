@@ -122,7 +122,7 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
             if (Files.exists(globalPacksDir.resolve(requiredPack.toFileName()))) {
                 continue;
             }
-            client.setScreen(new DownloadExternalPackScreen(createWorldScreen, requiredPack, (exitWithCreateLevel) -> {
+            client.setScreen(new DownloadExternalPackScreen(createWorldScreen, requiredPack, exitWithCreateLevel -> {
                 if (exitWithCreateLevel) {
                     createLevel();
                 }

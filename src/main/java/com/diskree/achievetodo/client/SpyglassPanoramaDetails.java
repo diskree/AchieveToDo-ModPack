@@ -70,7 +70,7 @@ public record SpyglassPanoramaDetails(String type, String name) {
                 isPanoramaExists = false;
             }
             String url = generateURL(face);
-            SpyglassPanoramaTexture spyglassPanoramaTexture = new SpyglassPanoramaTexture(cacheFile, url, (success) -> {
+            SpyglassPanoramaTexture spyglassPanoramaTexture = new SpyglassPanoramaTexture(cacheFile, url, success -> {
                 if (!isLastLoading || client.player == null) {
                     return;
                 }

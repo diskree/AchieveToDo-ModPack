@@ -1,0 +1,13 @@
+name = "BACAP Language Pack"
+filename = "BACAP Language Pack.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/YX5bAAJN/versions/ento2TML/BACAP%20Language%20Pack%201.16.0.2.zip"
+hash-format = "sha1"
+hash = "3685dcd44eae6863457977aa37d10662c91da91c"
+
+[update]
+[update.modrinth]
+mod-id = "YX5bAAJN"
+version = "ento2TML"

@@ -207,6 +207,10 @@ file = "mods/no-resource-pack-warnings.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/real-arrow-tip.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/reeses-sodium-options.pw.toml"
 metafile = true
 

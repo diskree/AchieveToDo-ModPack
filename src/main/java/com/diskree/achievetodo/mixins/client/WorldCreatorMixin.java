@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.client.WorldCreatorImpl;
-import net.minecraft.client.world.WorldCreator;
+import net.minecraft.client.gui.screen.world.WorldCreator;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 
@@ -27,7 +27,7 @@ public class WorldCreatorMixin implements WorldCreatorImpl {
     private boolean isNullscapeEnabled;
 
     @Unique
-    private boolean isCooperativeModeEnabled;
+    private boolean isCooperativeModeEnabled = true;
 
     @Override
     public boolean achieveToDo$isItemRewardsEnabled() {

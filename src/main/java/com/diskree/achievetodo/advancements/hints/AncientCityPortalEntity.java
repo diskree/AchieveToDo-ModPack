@@ -2,7 +2,7 @@ package com.diskree.achievetodo.advancements.hints;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.ItemDisplayEntityImpl;
-import com.diskree.achievetodo.advancements.AdvancementGenerator;
+import com.diskree.achievetodo.advancements.RandomAdvancements;
 import com.diskree.achievetodo.advancements.AdvancementHint;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -36,7 +36,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.event.EntityPositionSource;
 import net.minecraft.world.event.GameEvent;
 import net.minecraft.world.event.PositionSource;
-import net.minecraft.world.event.listener.DynamicGameEventListener;
+import net.minecraft.world.event.listener.EntityGameEventHandler;
 import net.minecraft.world.event.listener.GameEventListener;
 import org.jetbrains.annotations.Nullable;
 
@@ -57,7 +57,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public static final BooleanProperty REINFORCED_DEEPSLATE_CHARGED_PROPERTY = BooleanProperty.of("charged");
     public static final BooleanProperty REINFORCED_DEEPSLATE_BROKEN_PROPERTY = BooleanProperty.of("broken");
-    private final DynamicGameEventListener<JukeboxEventListener> jukeboxEventHandler;
+    private final EntityGameEventHandler<JukeboxEventListener> jukeboxEventHandler;
     @Nullable
     private BlockPos jukeboxPos;
     private boolean isDragonEggGranted;
@@ -67,7 +67,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public AncientCityPortalEntity(EntityType<?> entityType, World world) {
         super(entityType, world);
-        this.jukeboxEventHandler = new DynamicGameEventListener<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalEntity.this, 0), RITUAL_RADIUS));
+        this.jukeboxEventHandler = new EntityGameEventHandler<>(new JukeboxEventListener(new EntityPositionSource(AncientCityPortalEntity.this, 0), RITUAL_RADIUS));
     }
 
     private void updateJukeboxPos(BlockPos jukeboxPos, boolean playing) {
@@ -147,13 +147,17 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             }
             blocksToCharge.add(pos);
         }
+        if (blocksToCharge.isEmpty()) {
+            discharge();
+            return true;
+        }
         Collections.shuffle(blocksToCharge);
         BlockPos randomPortalFrameBlockPos = blocksToCharge.get(0);
         getWorld().setBlockState(randomPortalFrameBlockPos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_PROPERTY, true));
         ServerPlayerEntity charger = getChargerPlayer();
         getWorld().playSound(null, charger.getX(), charger.getY(), charger.getZ(), SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 1.0f, 0.4f);
         if (blocksToCharge.size() == 1) {
-            AdvancementHint advancementHint = AdvancementGenerator.getRandomAdvancementHint(charger);
+            AdvancementHint advancementHint = RandomAdvancements.getHint(charger);
             if (advancementHint != null) {
                 showAdvancementTab(advancementHint.tab());
                 showAdvancementHint(advancementHint.hint(), advancementHint.dropHint());
@@ -226,8 +230,8 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         double playerX = playerPos.getX();
         double playerY = playerPos.getY();
         double playerZ = playerPos.getZ();
-        BlockPos inclinePos = new BlockPos((int) playerX + random.rangeClosed(-1, 1), (int) playerY + random.rangeClosed(-1, 1), (int) playerZ + random.rangeClosed(-1, 1));
-        getWorld().spawnEntity(new AncientCityPortalExperienceOrbEntity(getWorld(), playerX, playerY, playerZ, portalBlocks.get(0), inclinePos, random.rangeClosed(1, 10)));
+        BlockPos inclinePos = new BlockPos((int) playerX + random.nextBetweenExclusive(-1, 1), (int) playerY + random.nextBetweenExclusive(-1, 1), (int) playerZ + random.nextBetweenExclusive(-1, 1));
+        getWorld().spawnEntity(new AncientCityPortalExperienceOrbEntity(getWorld(), playerX, playerY, playerZ, portalBlocks.get(0), inclinePos, random.nextBetweenExclusive(1, 10)));
     }
 
     @Override
@@ -262,10 +266,10 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
     }
 
     @Override
-    public void updateDynamicGameEventListener(BiConsumer<DynamicGameEventListener<?>, ServerWorld> updater) {
+    public void updateEventHandler(BiConsumer<EntityGameEventHandler<?>, ServerWorld> callback) {
         World var3 = this.getWorld();
         if (var3 instanceof ServerWorld serverWorld) {
-            updater.accept(jukeboxEventHandler, serverWorld);
+            callback.accept(jukeboxEventHandler, serverWorld);
         }
     }
 
@@ -344,21 +348,20 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         if (player == null || !player.isAlive()) {
             return false;
         }
-        return player.getWorld().getRegistryKey() == getWorld().getRegistryKey() && player.getPos().distanceTo(getBlockPos().ofCenter()) <= RITUAL_RADIUS;
+        return player.getWorld().getRegistryKey() == getWorld().getRegistryKey() && player.getPos().distanceTo(getBlockPos().toCenterPos()) <= RITUAL_RADIUS;
     }
 
     @Nullable
     public static AncientCityPortalEntity findForBlock(WorldAccess world, BlockPos blockPos) {
-        Box box = new Box(
-                blockPos
-                        .offset(Direction.Axis.X, -AncientCityPortalEntity.PORTAL_WIDTH)
-                        .offset(Direction.Axis.Z, -AncientCityPortalEntity.PORTAL_WIDTH)
-                        .down(AncientCityPortalEntity.PORTAL_HEIGHT),
-                blockPos
-                        .offset(Direction.Axis.X, AncientCityPortalEntity.PORTAL_WIDTH)
-                        .offset(Direction.Axis.Z, AncientCityPortalEntity.PORTAL_WIDTH)
-                        .up(AncientCityPortalEntity.PORTAL_HEIGHT)
-        );
+        BlockPos firstCorner = blockPos
+                .offset(Direction.Axis.X, -AncientCityPortalEntity.PORTAL_WIDTH)
+                .offset(Direction.Axis.Z, -AncientCityPortalEntity.PORTAL_WIDTH)
+                .down(AncientCityPortalEntity.PORTAL_HEIGHT);
+        BlockPos secondCorner = blockPos
+                .offset(Direction.Axis.X, AncientCityPortalEntity.PORTAL_WIDTH)
+                .offset(Direction.Axis.Z, AncientCityPortalEntity.PORTAL_WIDTH)
+                .up(AncientCityPortalEntity.PORTAL_HEIGHT);
+        Box box = new Box(firstCorner.getX(), firstCorner.getY(), firstCorner.getZ(), secondCorner.getX(), secondCorner.getY(), secondCorner.getZ());
         List<AncientCityPortalEntity> portalEntities = world.getEntitiesByClass(AncientCityPortalEntity.class, box, (portalEntity) -> portalEntity.isPortalBlock(blockPos));
         return portalEntities.size() == 1 ? portalEntities.get(0) : null;
     }
@@ -373,16 +376,15 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
     }
 
     public static boolean isJukebox(WorldAccess world, BlockPos pos) {
-        Box box = new Box(
-                pos
-                        .offset(Direction.Axis.X, -AncientCityPortalEntity.RITUAL_RADIUS)
-                        .offset(Direction.Axis.Z, -AncientCityPortalEntity.RITUAL_RADIUS)
-                        .down(AncientCityPortalEntity.RITUAL_RADIUS),
-                pos
-                        .offset(Direction.Axis.X, AncientCityPortalEntity.RITUAL_RADIUS)
-                        .offset(Direction.Axis.Z, AncientCityPortalEntity.RITUAL_RADIUS)
-                        .up(AncientCityPortalEntity.RITUAL_RADIUS)
-        );
+        BlockPos firstCorner = pos
+                .offset(Direction.Axis.X, -AncientCityPortalEntity.RITUAL_RADIUS)
+                .offset(Direction.Axis.Z, -AncientCityPortalEntity.RITUAL_RADIUS)
+                .down(AncientCityPortalEntity.RITUAL_RADIUS);
+        BlockPos secondCorner = pos
+                .offset(Direction.Axis.X, AncientCityPortalEntity.RITUAL_RADIUS)
+                .offset(Direction.Axis.Z, AncientCityPortalEntity.RITUAL_RADIUS)
+                .up(AncientCityPortalEntity.RITUAL_RADIUS);
+        Box box = new Box(firstCorner.getX(), firstCorner.getY(), firstCorner.getZ(), secondCorner.getX(), secondCorner.getY(), secondCorner.getZ());
         if (world != null) {
             List<AncientCityPortalEntity> portalEntities = world.getEntitiesByClass(AncientCityPortalEntity.class, box, (portalEntity) -> true);
             return portalEntities.size() == 1;
@@ -410,7 +412,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public void showAdvancementTab(ItemStack tabItem) {
         BlockPos tabEntityPos = getBlockPos().offset(getHorizontalFacing().rotateYCounterclockwise(), 5);
-        List<AncientCityPortalTabEntity> tabEntities = getWorld().getEntitiesByType(AchieveToDo.ANCIENT_CITY_PORTAL_TAB, Box.of(tabEntityPos.ofCenter(), 1, 1, 1), (entity) -> true);
+        List<AncientCityPortalTabEntity> tabEntities = getWorld().getEntitiesByType(AchieveToDo.ANCIENT_CITY_PORTAL_TAB, Box.of(tabEntityPos.toCenterPos(), 1, 1, 1), (entity) -> true);
         if (tabEntities != null && tabEntities.size() == 1) {
             AncientCityPortalTabEntity tabEntity = tabEntities.get(0);
             ((ItemDisplayEntityImpl) tabEntity).achieveToDo$publicSetStack(tabItem);
@@ -419,7 +421,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public void showAdvancementHint(ItemStack hintItem, boolean drop) {
         BlockPos hintEntityPos = getBlockPos().offset(getHorizontalFacing().rotateYClockwise(), 5);
-        List<AncientCityPortalPromptEntity> hintEntities = getWorld().getEntitiesByType(AchieveToDo.ANCIENT_CITY_PORTAL_HINT, Box.of(hintEntityPos.ofCenter(), 1, 1, 1), (entity) -> true);
+        List<AncientCityPortalPromptEntity> hintEntities = getWorld().getEntitiesByType(AchieveToDo.ANCIENT_CITY_PORTAL_HINT, Box.of(hintEntityPos.toCenterPos(), 1, 1, 1), (entity) -> true);
         if (hintEntities != null && hintEntities.size() == 1) {
             AncientCityPortalPromptEntity hintEntity = hintEntities.get(0);
             if (drop) {
@@ -466,7 +468,7 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         }
         BlockEntity blockEntity = getWorld().getBlockEntity(jukeboxPos);
         if (blockEntity instanceof JukeboxBlockEntity jukebox) {
-            jukebox.dropDisc();
+            jukebox.dropRecord();
         }
     }
 
@@ -640,13 +642,13 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         }
 
         @Override
-        public boolean listen(ServerWorld world, GameEvent event, GameEvent.Context context, Vec3d pos) {
+        public boolean listen(ServerWorld world, GameEvent event, GameEvent.Emitter emitter, Vec3d emitterPos) {
             if (event == GameEvent.JUKEBOX_PLAY) {
-                AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.fromPosition(pos), true);
+                AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.ofFloored(emitterPos), true);
                 return true;
             }
             if (event == GameEvent.JUKEBOX_STOP_PLAY) {
-                AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.fromPosition(pos), false);
+                AncientCityPortalEntity.this.updateJukeboxPos(BlockPos.ofFloored(emitterPos), false);
                 return true;
             }
             return false;

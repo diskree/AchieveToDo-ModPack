@@ -1,68 +1,118 @@
 plugins {
-    id 'maven-publish'
-    alias libs.plugins.quilt.loom
-    alias libs.plugins.quilt.flower
+    id 'fabric-loom' version "${loomVersion}-SNAPSHOT"
 }
 
-base.archivesName = project.archives_base_name
-version = "$project.version+${libs.versions.minecraft.get()}"
-group = project.maven_group
+def modId = project.modName.toLowerCase()
+def repoUrl = "https://github.com/${author}/${modName}"
+
+version = "mc${minecraftVersion}+${modVersion}"
+group = "com." + project.author
+
+base {
+    archivesName = modId
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    minecraft libs.minecraft
-
-    mappings variantOf(libs.quilt.mappings) { classifier 'intermediary-v2' }
-
-    modImplementation libs.quilt.loader
-    modImplementation libs.quilted.fabric.api
+    minecraft "com.mojang:minecraft:${minecraftVersion}"
+    mappings "net.fabricmc:yarn:${minecraftVersion}+build.${mappingsBuild}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${minLoaderVersion}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${apiVersion}+${minecraftVersion}"
 }
 
 processResources {
-    inputs.property 'version', version
+    def propertyMap = [
+            'modId'           : modId,
+            'modVersion'      : modVersion,
+            'modName'         : modName,
+            'author'          : author,
+            'repoUrl'         : repoUrl,
+            'minJavaVersion'  : minJavaVersion,
+            'minecraftVersion': minecraftVersion,
+            'minLoaderVersion': minLoaderVersion
+    ]
+    inputs.properties(propertyMap)
+    filesMatching("fabric.mod.json") {
+        expand(propertyMap)
+    }
+}
 
-    filesMatching('quilt.mod.json') {
-        expand 'version': version
+sourceSets {
+    main {
+        resources.srcDirs += ['src/main/generated']
+        java.srcDirs += ['src/main/generated/java']
     }
 }
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = 'UTF-8'
-    it.options.release.set(17)
+    it.options.release.set(minJavaVersion.toInteger())
 }
+
 tasks.register('generateBuildConfig', DefaultTask) {
     doLast {
-        def isDebug = project.properties['debug'] ?: 'false'
-        new File("$projectDir/src/main/java/com/diskree/achievetodo/BuildConfig.java").text = """
-package com.diskree.achievetodo;
+        def templateFile = file("$projectDir/gradle/BuildConfig.java.txt")
+        def configFile = file("$projectDir/src/main/generated/java/com/${author}/${modId}/BuildConfig.java")
+        configFile.getParentFile().mkdirs()
 
-public class BuildConfig {
-    public static final boolean DEBUG = ${isDebug};
-}""".trim()
+        configFile.text = templateFile.text
+                .replace('${author}', author)
+                .replace('${modId}', modId)
+                .replace('${modName}', modName)
+                .replace('${isDebug}', isDebug)
     }
 }
-tasks.register('buildRelease', GradleBuild) {
-    tasks = ['build']
-    startParameter.projectProperties = ['debug': 'false']
+
+tasks.register('packBuildDebug', Exec) {
+    commandLine 'sh', "$projectDir/build_pack.sh",
+            modId,
+            modVersion,
+            modName,
+            author,
+            repoUrl,
+            minecraftVersion,
+            minLoaderVersion,
+            true
+}
+
+tasks.register('packBuildRelease', Exec) {
+    commandLine 'sh', "$projectDir/build_pack.sh",
+            modId,
+            modVersion,
+            modName,
+            author,
+            repoUrl,
+            minecraftVersion,
+            minLoaderVersion,
+            false
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-
-    withSourcesJar()
+    sourceCompatibility = targetCompatibility = minJavaVersion.toInteger()
 }
 
 jar {
     from('LICENSE') {
-        rename { "${it}_${base.archivesName.get()}" }
+        rename { "${it}_${modId}" }
     }
     compileJava.dependsOn(generateBuildConfig)
 }
 
 loom {
-    accessWidenerPath.set(file("src/main/resources/achievetodo.accesswidener"))
+    accessWidenerPath.set(file("src/main/resources/${modId}.accesswidener"))
+
+    runs {
+        datagen {
+            inherit server
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+            vmArg "-Dfabric-api.datagen.modid=${modId}"
+
+            runDir "build/datagen"
+        }
+    }
 }

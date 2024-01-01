@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:experience_bottle"
+    },
+    "title": {
+      "translate": "hints.so_long_and_thanks_for_the_xp.title"
+    },
+    "description": {
+      "translate": "hints.so_long_and_thanks_for_the_xp.description"
+    },
+    "frame": "goal"
+  },
+  "parent": "minecraft:achievetodo_hints/beethoven_mistake",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

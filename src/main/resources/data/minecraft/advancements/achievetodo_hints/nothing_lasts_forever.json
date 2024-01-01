@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {
+      "item": "achievetodo:reinforced_deepslate_broken"
+    },
+    "title": {
+      "translate": "hints.nothing_lasts_forever.title"
+    },
+    "description": {
+      "translate": "hints.nothing_lasts_forever.description"
+    },
+    "frame": "goal"
+  },
+  "parent": "minecraft:achievetodo_hints/so_long_and_thanks_for_the_xp",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

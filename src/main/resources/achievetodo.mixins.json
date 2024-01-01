@@ -8,7 +8,6 @@
   "mixins": [
     "AbstractBlockMixin",
     "AbstractBlockSettingsMixin",
-    "AdvancementMixin",
     "AdvancementVisibilityEvaluatorMixin",
     "EnderDragonFightMixin",
     "EndGatewayBlockEntityMixin",
@@ -18,15 +17,13 @@
     "ItemDisplayEntityMixin",
     "ItemMixin",
     "JukeboxBlockEntityMixin",
-    "LivingEntityMixin",
     "NetworkStateMixin",
     "NetworkStateMixin$PacketHandlerInitializerMixin",
+    "PlacedAdvancementMixin",
     "PlayerEntityMixin",
-    "PlayerScreenHandlerMixin",
     "RaiderEntityMixin",
     "ReinforcedDeepslateMixin",
     "ServerPlayerEntityMixin",
-    "SlotMixin",
     "VanillaBlockTagProviderMixin"
   ],
   "client": [
@@ -34,7 +31,9 @@
     "client.AdvancementsScreenMixin",
     "client.AdvancementTabMixin",
     "client.AdvancementTabTypeMixin",
+    "client.AdvancementToastMixin",
     "client.AdvancementWidgetMixin",
+    "client.ClientPlayerEntityMixin",
     "client.ClientPlayNetworkHandlerMixin",
     "client.CreateWorldScreenMixin",
     "client.CyclingButtonWidgetMixin",
@@ -44,10 +43,10 @@
     "client.MinecraftClientMixin",
     "client.MoreTabMixin",
     "client.MouseMixin",
-    "client.ScoreboardPlayerScoreMixin",
+    "client.OpenToLanScreenMixin",
+    "client.PlayerScreenHandlerMixin",
     "client.SelectWorldScreenMixin",
     "client.WorldCreatorMixin",
-    "client.WorldRendererMixin",
-    "client.OpenToLanScreenMixin"
+    "client.WorldRendererMixin"
   ]
 }

@@ -20,48 +20,48 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class JukeboxBlockEntityMixin {
 
     @Shadow
-    private int ticksSinceLastEvent;
-
-    @Unique
-    private boolean isAncientCityPortalActivator() {
-        ItemStack stack = getStack(0);
-        JukeboxBlockEntity self = (JukeboxBlockEntity) (Object) this;
-        return stack != null && Items.MUSIC_DISC_5.equals(stack.getItem()) && AncientCityPortalEntity.isJukebox(self.getWorld(), self.getPos());
-    }
-
-    @Shadow
-    public abstract ItemStack getStack(int slot);
+    private int ticksThisSecond;
 
     @Shadow
     protected abstract void stopPlaying();
 
     @Shadow
-    public abstract void dropDisc();
+    public abstract ItemStack getStack();
 
-    @Inject(method = "oneSecondWithoutEvents", at = @At("HEAD"), cancellable = true)
+    @Shadow
+    public abstract void dropRecord();
+
+    @Unique
+    private boolean isAncientCityPortalActivator() {
+        ItemStack stack = getStack();
+        JukeboxBlockEntity jukeboxBlockEntity = (JukeboxBlockEntity) (Object) this;
+        return stack != null && Items.MUSIC_DISC_5.equals(stack.getItem()) && AncientCityPortalEntity.isJukebox(jukeboxBlockEntity.getWorld(), jukeboxBlockEntity.getPos());
+    }
+
+    @Inject(method = "hasSecondPassed", at = @At("HEAD"), cancellable = true)
     private void hasSecondPassedInject(CallbackInfoReturnable<Boolean> cir) {
         if (isAncientCityPortalActivator()) {
-            cir.setReturnValue(ticksSinceLastEvent >= 3);
+            cir.setReturnValue(ticksThisSecond >= 3);
         }
     }
 
-    @Redirect(method = "isDiscFinishedPlaying", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/MusicDiscItem;getTicks()I"))
-    private int isDiscFinishedPlayingInject(MusicDiscItem instance) {
+    @Redirect(method = "isSongFinished", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/MusicDiscItem;getSongLengthInTicks()I"))
+    private int isSongFinishedInject(MusicDiscItem instance) {
         if (isAncientCityPortalActivator()) {
             return 35 * 20;
         }
-        return instance.getTicks();
+        return instance.getSongLengthInTicks();
     }
 
     @Redirect(method = "tick(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/entity/JukeboxBlockEntity;stopPlaying()V"))
     private void tickInject(JukeboxBlockEntity instance) {
         stopPlaying();
         if (isAncientCityPortalActivator()) {
-            dropDisc();
+            dropRecord();
         }
     }
 
-    @Inject(method = "spawnMusicParticles", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "spawnNoteParticle", at = @At("HEAD"), cancellable = true)
     private void spawnNoteParticleInject(World world, BlockPos pos, CallbackInfo ci) {
         if (isAncientCityPortalActivator()) {
             ci.cancel();

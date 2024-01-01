@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:reinforced_deepslate"
+    },
+    "title": {
+      "translate": "hints.ancient_light.title"
+    },
+    "description": {
+      "translate": "hints.ancient_light.description"
+    },
+    "frame": "goal"
+  },
+  "parent": "minecraft:achievetodo_hints/know_your_place",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

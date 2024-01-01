@@ -1,14 +1,18 @@
 package com.diskree.achievetodo.client;
 
 import it.unimi.dsi.fastutil.booleans.BooleanConsumer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ConfirmScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.text.CommonTexts;
+import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Util;
-import org.quiltmc.loader.api.minecraft.ClientOnly;
+import org.lwjgl.PointerBuffer;
+import org.lwjgl.system.MemoryStack;
+import org.lwjgl.util.tinyfd.TinyFileDialogs;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,6 +20,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Enumeration;
@@ -23,8 +28,12 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-@ClientOnly
+@Environment(EnvType.CLIENT)
 public class DownloadExternalPackScreen extends ConfirmScreen {
+
+    private static final int BUTTON_WIDTH = 100;
+    private static final int BUTTON_HEIGHT = 20;
+    private static final int BUTTON_MARGIN = 5;
 
     private final Screen parent;
     private final ExternalPack externalPack;
@@ -33,7 +42,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
 
     public DownloadExternalPackScreen(Screen parent, ExternalPack externalPack, BooleanConsumer exitCallback) {
         super(
-                (download) -> Util.getOperatingSystem().open(download ? externalPack.getDownloadUrl() : externalPack.getPageUrl()),
+                null,
                 Text.translatable("external.pack.required_prefix").append(Text.of(externalPack.getName()).copy().formatted(externalPack.getColor(), Formatting.ITALIC)),
                 Text.translatable("external.pack.help").copy().formatted(Formatting.YELLOW)
         );
@@ -43,7 +52,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
     }
 
     @Override
-    public void closeScreen() {
+    public void close() {
         if (client != null) {
             client.setScreen(parent);
             exitCallback.accept(exitWithCreateLevel);
@@ -52,15 +61,49 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
 
     @Override
     protected void addButtons(int y) {
-        this.addDrawableChild(ButtonWidget.builder(Text.translatable("external.pack.open_page"), button -> callback.accept(false)).positionAndSize(this.width / 2 - 50 - 105, y, 100, 20).build());
-        this.addDrawableChild(ButtonWidget.builder(CommonTexts.CANCEL, button -> closeScreen()).positionAndSize(this.width / 2 - 50, y, 100, 20).build());
-        this.addDrawableChild(ButtonWidget.builder(Text.translatable("external.pack.download"), button -> callback.accept(true)).positionAndSize(this.width / 2 - 50 + 105, y, 100, 20).build());
+        int selectFileButtonX = (width - BUTTON_WIDTH) / 2;
+
+        addDrawableChild(ButtonWidget.builder(
+                Text.translatable("external.pack.download"),
+                button -> Util.getOperatingSystem().open(externalPack.getDownloadUrl())
+        ).dimensions(selectFileButtonX - BUTTON_MARGIN - BUTTON_WIDTH, y, BUTTON_WIDTH, BUTTON_HEIGHT).build());
+
+        addDrawableChild(ButtonWidget.builder(
+                Text.translatable("external.pack.select_file"),
+                button -> {
+                    try (MemoryStack stack = MemoryStack.stackPush()) {
+                        PointerBuffer filters = stack.mallocPointer(1);
+                        filters.put(0, stack.UTF8("*.zip"));
+
+                        String selectedFilePath = TinyFileDialogs.tinyfd_openFileDialog(
+                                Text.translatable("external.pack.picker").getString(),
+                                System.getProperty("user.home"),
+                                filters,
+                                null,
+                                false
+                        );
+                        if (selectedFilePath != null) {
+                            handleDatapackFile(Paths.get(selectedFilePath));
+                        }
+                    }
+                }
+        ).dimensions(selectFileButtonX, y, BUTTON_WIDTH, BUTTON_HEIGHT).build());
+
+        addDrawableChild(ButtonWidget.builder(
+                Text.translatable("external.pack.open_page"),
+                button -> Util.getOperatingSystem().open(externalPack.getPageUrl())
+        ).dimensions(selectFileButtonX + BUTTON_WIDTH + BUTTON_MARGIN, y, BUTTON_WIDTH, BUTTON_HEIGHT).build());
+
+        addDrawableChild(ButtonWidget.builder(
+                ScreenTexts.CANCEL,
+                button -> close()
+        ).dimensions(selectFileButtonX + BUTTON_WIDTH + BUTTON_MARGIN, y + BUTTON_HEIGHT + BUTTON_MARGIN, BUTTON_WIDTH, BUTTON_HEIGHT).build());
     }
 
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if (keyCode == 256) {
-            closeScreen();
+            close();
             return true;
         }
         return super.keyPressed(keyCode, scanCode, modifiers);
@@ -69,12 +112,22 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
     @Override
     public void filesDragged(List<Path> paths) {
         super.filesDragged(paths);
-        if (client == null || paths == null || paths.size() != 1) {
+        if (paths == null || paths.size() != 1) {
             return;
         }
-        Path downloadedFile = paths.get(0);
+        handleDatapackFile(paths.get(0));
+    }
+
+    private void handleDatapackFile(Path path) {
+        if (client == null) {
+            return;
+        }
         try {
-            if (!calculateSHA1(downloadedFile).equals(externalPack.getSha1())) {
+            if (!externalPack.getSha1().equals(calculateSHA1(path))) {
+                client.setScreen(new ErrorScreen(
+                        DownloadExternalPackScreen.this,
+                        Text.translatable("external.pack.error")
+                ));
                 return;
             }
         } catch (Exception e) {
@@ -82,20 +135,20 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
         }
         Path globalPacksDir = new File(client.runDirectory, "datapacks").toPath();
         try {
-            if (!Files.exists(globalPacksDir)) {
+            if (Files.notExists(globalPacksDir)) {
                 Files.createDirectory(globalPacksDir);
             }
-            if (downloadedFile.getFileName().toString().contains("UNZIP ME")) {
-                Path extractedArchive = unzip(downloadedFile, globalPacksDir);
+            if (path.getFileName().toString().contains("UNZIP ME")) {
+                Path extractedArchive = unzip(path, globalPacksDir);
                 Files.move(extractedArchive, globalPacksDir.resolve(externalPack.toFileName()));
             } else {
-                Files.copy(downloadedFile, globalPacksDir.resolve(externalPack.toFileName()));
+                Files.copy(path, globalPacksDir.resolve(externalPack.toFileName()));
             }
         } catch (IOException e) {
             return;
         }
         exitWithCreateLevel = true;
-        closeScreen();
+        close();
     }
 
     private Path unzip(Path source, Path destination) throws IOException {
@@ -126,6 +179,9 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
     }
 
     private String calculateSHA1(Path path) throws NoSuchAlgorithmException, IOException {
+        if (path == null || Files.notExists(path)) {
+            return null;
+        }
         MessageDigest sha1Digest = MessageDigest.getInstance("SHA-1");
         try (InputStream is = Files.newInputStream(path)) {
             byte[] buffer = new byte[1024];

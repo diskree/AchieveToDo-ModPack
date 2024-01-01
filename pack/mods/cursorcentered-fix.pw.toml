@@ -1,0 +1,13 @@
+name = "CursorCentered Fix"
+filename = "cursorcenteredfix-1.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/3Vf97jLY/versions/kG0aSI4F/cursorcenteredfix-1.0.jar"
+hash-format = "sha1"
+hash = "0b689f0f46ca08575dd02f6a09928ca9a788ea9f"
+
+[update]
+[update.modrinth]
+mod-id = "3Vf97jLY"
+version = "kG0aSI4F"

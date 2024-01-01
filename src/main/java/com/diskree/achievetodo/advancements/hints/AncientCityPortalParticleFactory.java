@@ -7,6 +7,7 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
 
 public class AncientCityPortalParticleFactory implements ParticleFactory<DefaultParticleType> {
+
     private final SpriteProvider spriteProvider;
 
     public AncientCityPortalParticleFactory(SpriteProvider spriteProvider) {
@@ -19,5 +20,4 @@ public class AncientCityPortalParticleFactory implements ParticleFactory<Default
         portalParticle.setSprite(this.spriteProvider);
         return portalParticle;
     }
-
 }

@@ -5,6 +5,7 @@ import net.minecraft.client.gui.screen.world.SelectWorldScreen;
 import net.minecraft.client.gui.tooltip.Tooltip;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.text.Text;
+import net.minecraft.world.level.storage.LevelSummary;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -20,12 +21,12 @@ public class SelectWorldScreenMixin {
     @Inject(method = "init", at = @At("RETURN"))
     private void initInject(CallbackInfo ci) {
         if (!BuildConfig.DEBUG) {
-            recreateButton.setTooltip(Tooltip.create(Text.translatable("feature.not_supported")));
+            recreateButton.setTooltip(Tooltip.of(Text.translatable("feature.not_supported")));
         }
     }
 
     @Inject(method = "worldSelected", at = @At("RETURN"))
-    public void worldSelectedInject(boolean active, boolean deleteButtonActive, CallbackInfo ci) {
+    public void worldSelectedInject(LevelSummary levelSummary, CallbackInfo ci) {
         if (!BuildConfig.DEBUG) {
             recreateButton.active = false;
         }

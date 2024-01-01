@@ -1,0 +1,27 @@
+{
+  "rewards": {
+    "function": "minecraft:achievetodo_hints/hintly_hallows_message"
+  },
+  "criteria": {
+    "dragon_egg": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dragon_egg"
+            ]
+          }
+        ],
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "minecraft:technical/hintly_hallows_potion_of_invisibility": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

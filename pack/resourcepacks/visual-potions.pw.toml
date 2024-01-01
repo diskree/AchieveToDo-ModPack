@@ -1,0 +1,13 @@
+name = "Visual Potions"
+filename = "Visual Potions.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/vFLSpldG/versions/nCi55hsd/VisualPotions.zip"
+hash-format = "sha1"
+hash = "14135f6f5d8ec5b1eaf9fa9c1cb56ea73714a7cd"
+
+[update]
+[update.modrinth]
+mod-id = "vFLSpldG"
+version = "nCi55hsd"

@@ -12,10 +12,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(EndGatewayFeature.class)
 public class EndGatewayFeatureMixin {
 
-    @Inject(method = "place", at = @At("TAIL"))
+    @Inject(method = "generate", at = @At("TAIL"))
     public void placeInject(FeatureContext<EndGatewayFeatureConfig> context, CallbackInfoReturnable<Boolean> cir) {
         if (context.getConfig().getExitPos().isEmpty()) {
-            ((EndGatewayFeature) (Object) this).setBlockState(context.getWorld(), context.getOrigin().up(3), Blocks.DRAGON_EGG.getDefaultState());
+            EndGatewayFeature endGatewayFeature = (EndGatewayFeature) (Object) this;
+            endGatewayFeature.setBlockState(context.getWorld(), context.getOrigin().up(3), Blocks.DRAGON_EGG.getDefaultState());
         }
     }
 }

@@ -1,21 +1,38 @@
 package com.diskree.achievetodo;
 
-import com.diskree.achievetodo.advancements.AdvancementGenerator;
-import com.diskree.achievetodo.advancements.UnblockActionToast;
+import com.diskree.achievetodo.action.BlockedActionType;
+import com.diskree.achievetodo.advancements.AdvancementsTab;
+import com.diskree.achievetodo.advancements.RandomAdvancements;
 import com.diskree.achievetodo.advancements.hints.*;
 import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
+import com.diskree.achievetodo.datagen.AdvancementsGenerator;
 import com.mojang.brigadier.Command;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerWorldEvents;
 import net.fabricmc.fabric.api.event.player.*;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
-import net.minecraft.advancement.Advancement;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.advancement.AdvancementDisplay;
+import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementProgress;
-import net.minecraft.block.*;
-import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.advancement.PlacedAdvancement;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.client.texture.MissingSprite;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -26,10 +43,12 @@ import net.minecraft.item.*;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.scoreboard.ReadableScoreboardScore;
+import net.minecraft.scoreboard.ScoreHolder;
 import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.scoreboard.ScoreboardObjective;
-import net.minecraft.scoreboard.ScoreboardPlayerScore;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -43,29 +62,12 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Direction;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
-import org.quiltmc.loader.api.ModContainer;
-import org.quiltmc.loader.api.QuiltLoader;
-import org.quiltmc.loader.api.minecraft.ClientOnly;
-import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
-import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
-import org.quiltmc.qsl.command.api.CommandRegistrationCallback;
-import org.quiltmc.qsl.entity.api.QuiltEntityTypeBuilder;
-import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
-import org.quiltmc.qsl.lifecycle.api.event.ServerWorldLoadEvents;
-import org.quiltmc.qsl.networking.api.PacketByteBufs;
-import org.quiltmc.qsl.networking.api.ServerPlayNetworking;
-import org.quiltmc.qsl.networking.api.client.ClientPlayNetworking;
-import org.quiltmc.qsl.resource.loader.api.ResourceLoader;
-import org.quiltmc.qsl.resource.loader.api.ResourcePackActivationType;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 public class AchieveToDo implements ModInitializer {
 
-    public static final String ID = "achievetodo";
+    public static final String ID = BuildConfig.MOD_ID;
 
+    public static final String BACAP_SCORE_OBJECTIVE = "bac_advancements";
     public static final String BACAP_DATA_PACK = "file/bacap.zip";
     public static final String BACAP_HARDCORE_DATA_PACK = "file/bacap_hardcore.zip";
     public static final String BACAP_TERRALITH_DATA_PACK = "file/bacap_terralith.zip";
@@ -76,24 +78,19 @@ public class AchieveToDo implements ModInitializer {
     public static final String AMPLIFIED_NETHER_DATA_PACK = "file/amplified_nether.zip";
     public static final String NULLSCAPE_DATA_PACK = "file/nullscape.zip";
 
-    public static final String BACAP_OVERRIDE_DATA_PACK = AchieveToDo.ID + "/" + "bacap_override";
-    public static final String BACAP_OVERRIDE_HARDCORE_DATA_PACK = AchieveToDo.ID + "/" + "bacap_override_hardcore";
-    public static final String BACAP_REWARDS_ITEM_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_item";
-    public static final String BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_experience";
-    public static final String BACAP_REWARDS_TROPHY_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_rewards_trophy";
-    public static final String BACAP_COOPERATIVE_MODE_DATA_PACK_NAME = AchieveToDo.ID + "/" + "bacap_cooperative_mode";
+    public static final Identifier BACAP_OVERRIDE_DATA_PACK = new Identifier(ID, "bacap_override");
+    public static final Identifier BACAP_OVERRIDE_HARDCORE_DATA_PACK = new Identifier(ID, "bacap_override_hardcore");
+    public static final Identifier BACAP_REWARDS_ITEM_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_item");
+    public static final Identifier BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_experience");
+    public static final Identifier BACAP_REWARDS_TROPHY_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_trophy");
+    public static final Identifier BACAP_COOPERATIVE_MODE_DATA_PACK_NAME = new Identifier(ID, "bacap_cooperative_mode");
 
-    public static final String BACAP_LANGUAGE_PACK = AchieveToDo.ID + "/" + "bacap_lp";
-
-    public static final Identifier DEMYSTIFY_LOCKED_ACTION_PACKET_ID = new Identifier(ID, "demystify_locked_action");
-
-    public static final Identifier ADVANCEMENTS_SEARCH = new Identifier(AchieveToDo.ID, "advancements_search");
+    public static final Identifier GRANT_BLOCKED_ACTION_PACKET_ID = new Identifier(ID, "grant_blocked_action");
 
     public static final Identifier ANCIENT_CITY_PORTAL_BLOCK_ID = new Identifier(ID, "ancient_city_portal");
     public static final AncientCityPortalBlock ANCIENT_CITY_PORTAL_BLOCK = new AncientCityPortalBlock(AbstractBlock.Settings.create()
             .noCollision()
             .ticksRandomly()
-            .instrument(NoteBlockInstrument.BASEDRUM)
             .strength(-1.0f, 3600000.0f)
             .dropsNothing()
             .sounds(BlockSoundGroup.GLASS)
@@ -101,50 +98,49 @@ public class AchieveToDo implements ModInitializer {
             .pistonBehavior(PistonBehavior.BLOCK));
 
     public static final Identifier REINFORCED_DEEPSLATE_CHARGED_BLOCK_ID = new Identifier(ID, "reinforced_deepslate_charged");
-    public static final Block REINFORCED_DEEPSLATE_CHARGED_BLOCK = new Block(QuiltBlockSettings.create());
+    public static final Block REINFORCED_DEEPSLATE_CHARGED_BLOCK = new Block(FabricBlockSettings.create());
 
     public static final Identifier REINFORCED_DEEPSLATE_BROKEN_BLOCK_ID = new Identifier(ID, "reinforced_deepslate_broken");
-    public static final Block REINFORCED_DEEPSLATE_BROKEN_BLOCK = new Block(QuiltBlockSettings.create());
+    public static final Block REINFORCED_DEEPSLATE_BROKEN_BLOCK = new Block(FabricBlockSettings.create());
 
-    public static final Identifier LOCKED_ACTION_ITEM_ID = new Identifier(ID, "locked_action");
-    public static final Item LOCKED_ACTION_ITEM = new Item(new QuiltItemSettings());
+    public static final Identifier MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM_ID = new Identifier(ID, "mystified_label");
+    public static final Item MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM = new Item(new FabricItemSettings());
 
     public static final Identifier ANCIENT_CITY_PORTAL_HINT_ITEM_ID = new Identifier(ID, "ancient_city_portal_hint");
-    public static final Item ANCIENT_CITY_PORTAL_HINT_ITEM = new Item(new QuiltItemSettings().maxDamage(1000));
+    public static final Item ANCIENT_CITY_PORTAL_HINT_ITEM = new Item(new FabricItemSettings().maxDamage(1000));
 
     public static final Identifier ANCIENT_CITY_PORTAL_PARTICLES_ID = new Identifier(ID, "ancient_city_portal_particles");
     public static final DefaultParticleType ANCIENT_CITY_PORTAL_PARTICLES = FabricParticleTypes.simple();
 
-    public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
-            .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
-            .maxChunkTrackingRange(10)
-            .trackingTickInterval(1)
-            .build();
     public static final Identifier ANCIENT_CITY_PORTAL_TAB_ENTITY_ID = new Identifier(ID, "ancient_city_portal_tab_entity");
-    public static final EntityType<AncientCityPortalTabEntity> ANCIENT_CITY_PORTAL_TAB = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalTabEntity::new)
-            .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
-            .maxChunkTrackingRange(10)
-            .trackingTickInterval(1)
+    public static final EntityType<AncientCityPortalTabEntity> ANCIENT_CITY_PORTAL_TAB = FabricEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalTabEntity::new)
+            .dimensions(EntityDimensions.changing(0.0f, 0.0f))
+            .trackRangeChunks(10)
+            .trackedUpdateRate(1)
             .build();
     public static final Identifier ANCIENT_CITY_PORTAL_ADVANCEMENT_ENTITY_ID = new Identifier(ID, "ancient_city_portal_advancement_entity");
+    public static final EntityType<AncientCityPortalEntity> ANCIENT_CITY_PORTAL_ADVANCEMENT = FabricEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalEntity::new)
+            .dimensions(EntityDimensions.changing(0.0f, 0.0f))
+            .trackRangeChunks(10)
+            .trackedUpdateRate(1)
+            .build();
+
     public static final Identifier ANCIENT_CITY_PORTAL_HINT_ENTITY_ID = new Identifier(ID, "ancient_city_portal_prompt_entity");
-    public static final EntityType<AncientCityPortalPromptEntity> ANCIENT_CITY_PORTAL_HINT = QuiltEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalPromptEntity::new)
-            .setDimensions(EntityDimensions.changing(0.0f, 0.0f))
-            .maxChunkTrackingRange(10)
-            .trackingTickInterval(1)
+    public static final EntityType<AncientCityPortalPromptEntity> ANCIENT_CITY_PORTAL_HINT = FabricEntityTypeBuilder.create(SpawnGroup.MISC, AncientCityPortalPromptEntity::new)
+            .dimensions(EntityDimensions.changing(0.0f, 0.0f))
+            .trackRangeChunks(10)
+            .trackedUpdateRate(1)
             .build();
 
     public static final Identifier ANCIENT_CITY_PORTAL_EXPERIENCE_ORB_ENTITY_ID = new Identifier(ID, "ancient_city_portal_experience_orb");
-    public static final EntityType<AncientCityPortalExperienceOrbEntity> ANCIENT_CITY_PORTAL_EXPERIENCE_ORB = QuiltEntityTypeBuilder.<AncientCityPortalExperienceOrbEntity>create(SpawnGroup.MISC, AncientCityPortalExperienceOrbEntity::new)
-            .setDimensions(EntityDimensions.changing(0.5f, 0.5f))
-            .maxChunkTrackingRange(6)
-            .trackingTickInterval(20)
+    public static final EntityType<AncientCityPortalExperienceOrbEntity> ANCIENT_CITY_PORTAL_EXPERIENCE_ORB = FabricEntityTypeBuilder.<AncientCityPortalExperienceOrbEntity>create(SpawnGroup.MISC, AncientCityPortalExperienceOrbEntity::new)
+            .dimensions(EntityDimensions.changing(0.5f, 0.5f))
+            .trackRangeChunks(6)
+            .trackedUpdateRate(20)
             .build();
 
-    public static final SoundEvent MUSIC_DISC_5_ACTIVATOR = SoundEvent.createVariableRangeEvent(new Identifier(ID, "music_disc_5_activator"));
-    public static final Identifier EVOKER_NO_TOTEM_OF_UNDYING_LOOT_TABLE_ID = new Identifier(ID, "entities/evoker_no_totem_of_undying");
+    public static final SoundEvent MUSIC_DISC_5_ACTIVATOR = SoundEvent.of(new Identifier(ID, "music_disc_5_activator"));
 
-    private boolean isPanoramaLoading;
     private static int advancementsCount;
 
     public static int getScore(PlayerEntity player) {
@@ -155,11 +151,11 @@ public class AchieveToDo implements ModInitializer {
         if (scoreboard == null) {
             return 0;
         }
-        ScoreboardObjective scoreObjective = scoreboard.getObjective("bac_advancements");
+        ScoreboardObjective scoreObjective = scoreboard.getNullableObjective(BACAP_SCORE_OBJECTIVE);
         if (scoreObjective == null) {
             return 0;
         }
-        ScoreboardPlayerScore playerScore = scoreboard.getPlayerScore(player.getEntityName(), scoreObjective);
+        ReadableScoreboardScore playerScore = scoreboard.getScore(ScoreHolder.fromName(player.getNameForScoreboard()), scoreObjective);
         if (playerScore == null) {
             return 0;
         }
@@ -167,48 +163,48 @@ public class AchieveToDo implements ModInitializer {
     }
 
     @Override
-    public void onInitialize(ModContainer mod) {
-        registerPacks();
+    public void onInitialize() {
+        registerDataPacks();
         registerBlocks();
         registerItems();
         registerParticles();
         registerEntities();
 
-        CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> dispatcher.register(CommandManager.literal("random").executes((context -> {
+        CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> dispatcher.register(CommandManager.literal("advRandom").executes((context -> {
             ServerCommandSource source = context.getSource();
-            Advancement randomAdvancement = AdvancementGenerator.getRandomAdvancement(source.getPlayer());
-            if (randomAdvancement != null) {
-                AdvancementDisplay display = randomAdvancement.getDisplay();
-                AdvancementDisplay rootDisplay = randomAdvancement.getRoot().getDisplay();
-                Text displayTitle = display != null ? display.getTitle() : null;
-                if (display == null || rootDisplay == null || displayTitle == null) {
-                    source.sendSystemMessage(Text.of("Parsing error for advancement: " + randomAdvancement.getId()).copy().formatted(Formatting.RED));
+            PlacedAdvancement placedAdvancement = RandomAdvancements.getAdvancement(source.getPlayer());
+            if (placedAdvancement != null) {
+                AdvancementDisplay display = placedAdvancement.getAdvancement().display().orElse(null);
+                AdvancementDisplay rootDisplay = placedAdvancement.getRoot().getAdvancement().display().orElse(null);
+                if (display == null || rootDisplay == null) {
+                    source.sendMessage(Text.of("Parsing error for advancement: " + placedAdvancement.getAdvancementEntry().id()).copy().formatted(Formatting.RED));
                     return Command.SINGLE_SUCCESS;
                 }
                 final String separator = "----------";
-                source.sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
-                source.sendSystemMessage(rootDisplay.getTitle().copy().formatted(Formatting.BLUE, Formatting.BOLD));
-                source.sendSystemMessage(display.getTitle().copy().formatted(Formatting.AQUA, Formatting.ITALIC));
-                source.sendSystemMessage(display.getDescription().copy().formatted(Formatting.YELLOW));
-                source.sendSystemMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
+                source.sendMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
+                source.sendMessage(rootDisplay.getTitle().copy().formatted(Formatting.BLUE, Formatting.BOLD));
+                source.sendMessage(display.getTitle().copy().formatted(Formatting.AQUA, Formatting.ITALIC));
+                source.sendMessage(display.getDescription().copy().formatted(Formatting.YELLOW));
+                source.sendMessage(Text.of(separator).copy().formatted(Formatting.GOLD));
             } else {
-                source.sendSystemMessage(Text.translatable("commands.random.no_advancements"));
+                source.sendMessage(Text.translatable("commands.random.no_advancements"));
             }
             return Command.SINGLE_SUCCESS;
         }))));
-        ServerPlayNetworking.registerGlobalReceiver(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
-            BlockedAction action = buf.readEnumConstant(BlockedAction.class);
+        ServerPlayNetworking.registerGlobalReceiver(GRANT_BLOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
+            BlockedActionType action = buf.readEnumConstant(BlockedActionType.class);
+            boolean isDemystifyOnly = buf.readBoolean();
             if (action != null) {
-                server.execute(() -> demystifyAction(player, action));
+                server.execute(() -> grantBlockedAction(player, action, isDemystifyOnly));
             }
         });
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             ItemStack stack = player.getStackInHand(hand);
             if (world != null && world.getRegistryKey() == World.OVERWORLD && pos != null) {
-                if (pos.getY() >= 0 && isActionBlocked(player, BlockedAction.BREAK_BLOCKS_IN_POSITIVE_Y)) {
+                if (pos.getY() >= 0 && isActionBlocked(player, BlockedActionType.BREAK_BLOCKS_IN_POSITIVE_Y)) {
                     return ActionResult.FAIL;
                 }
-                if (pos.getY() < 0 && isActionBlocked(player, BlockedAction.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
+                if (pos.getY() < 0 && isActionBlocked(player, BlockedActionType.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
                     return ActionResult.FAIL;
                 }
             }
@@ -220,37 +216,7 @@ public class AchieveToDo implements ModInitializer {
         UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
             BlockState block = world.getBlockState(hitResult.getBlockPos());
             ItemStack stack = player.getStackInHand(hand);
-            if (block.isOf(Blocks.CRAFTING_TABLE) && isActionBlocked(player, BlockedAction.USING_CRAFTING_TABLE)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.FURNACE) && isActionBlocked(player, BlockedAction.USING_FURNACE)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.ANVIL) && isActionBlocked(player, BlockedAction.USING_ANVIL)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.SMOKER) && isActionBlocked(player, BlockedAction.USING_SMOKER)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.BLAST_FURNACE) && isActionBlocked(player, BlockedAction.USING_BLAST_FURNACE)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.ENDER_CHEST) && isActionBlocked(player, BlockedAction.USING_ENDER_CHEST)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.BREWING_STAND) && isActionBlocked(player, BlockedAction.USING_BREWING_STAND)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.BEACON) && isActionBlocked(player, BlockedAction.USING_BEACON)) {
-                return ActionResult.FAIL;
-            }
-            if (block.getBlock() instanceof ShulkerBoxBlock && isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.SHULKER_BOX) && isActionBlocked(player, BlockedAction.USING_SHULKER_BOX)) {
-                return ActionResult.FAIL;
-            }
-            if (block.isOf(Blocks.ENCHANTING_TABLE) && isActionBlocked(player, BlockedAction.USING_ENCHANTING_TABLE)) {
+            if (isBlockBlocked(player, block.getBlock())) {
                 return ActionResult.FAIL;
             }
             if (isToolBlocked(player, stack)) {
@@ -258,12 +224,12 @@ public class AchieveToDo implements ModInitializer {
             }
             if (stack.getItem() instanceof AliasedBlockItem aliasedBlockItem) {
                 if (!block.isOf(Blocks.FARMLAND) || hitResult.getSide() != Direction.UP || !aliasedBlockItem.getBlock().getDefaultState().isIn(BlockTags.MAINTAINS_FARMLAND)) {
-                    if (isItemLocked(player, stack)) {
+                    if (isItemBlocked(player, stack)) {
                         return ActionResult.FAIL;
                     }
                 }
             } else {
-                if (isItemLocked(player, stack)) {
+                if (isItemBlocked(player, stack)) {
                     return ActionResult.FAIL;
                 }
             }
@@ -271,7 +237,7 @@ public class AchieveToDo implements ModInitializer {
         });
         UseItemCallback.EVENT.register((player, world, hand) -> {
             ItemStack stack = player.getStackInHand(hand);
-            if (isItemLocked(player, stack)) {
+            if (isItemBlocked(player, stack)) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
             return TypedActionResult.pass(ItemStack.EMPTY);
@@ -284,7 +250,7 @@ public class AchieveToDo implements ModInitializer {
             return ActionResult.PASS;
         });
         UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-            if (entity instanceof BoatEntity && isActionBlocked(player, BlockedAction.USING_BOAT)) {
+            if (entity instanceof BoatEntity && isActionBlocked(player, BlockedActionType.USING_BOAT)) {
                 return ActionResult.FAIL;
             }
             if (entity instanceof VillagerEntity villagerEntity && isVillagerBlocked(player, villagerEntity.getVillagerData().getProfession())) {
@@ -293,202 +259,167 @@ public class AchieveToDo implements ModInitializer {
             }
             return ActionResult.PASS;
         });
-        ServerWorldLoadEvents.LOAD.register((server, world) -> advancementsCount = 0);
-    }
-
-    private boolean isItemLocked(PlayerEntity player, ItemStack stack) {
-        if (stack.isFood() && isFoodBlocked(player, stack.getItem().getFoodComponent())) {
-            return true;
-        }
-        if (stack.isOf(Items.SHIELD) && isActionBlocked(player, BlockedAction.USING_SHIELD)) {
-            return true;
-        }
-        if (stack.isOf(Items.BOW) && isActionBlocked(player, BlockedAction.USING_BOW)) {
-            return true;
-        }
-        if (stack.isOf(Items.FIREWORK_ROCKET) && player.isFallFlying() && isActionBlocked(player, BlockedAction.USING_FIREWORKS_WHILE_FLY)) {
-            return true;
-        }
-        if (stack.isOf(Items.ELYTRA) && isActionBlocked(player, BlockedAction.EQUIP_ELYTRA)) {
-            return true;
-        }
-        if (stack.getItem() instanceof ArmorItem armorItem && isEquipmentBlocked(player, armorItem)) {
-            return true;
-        }
-        if (stack.isOf(Items.SPYGLASS) && player.getWorld().isClient) {
-            SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.from(stack);
-            return panoramaDetails != null && !isPanoramaReady(panoramaDetails);
-        }
-        return false;
+        ServerWorldEvents.LOAD.register((server, world) -> advancementsCount = 0);
     }
 
     public static void grantHintsAdvancement(ServerPlayerEntity player, String pathName) {
         if (player == null) {
             return;
         }
-        Advancement advancement = player.server.getAdvancementLoader().get(new Identifier(AchieveToDo.ID, "hints/" + pathName));
+        AdvancementEntry advancement = player.server.getAdvancementLoader().get(new Identifier(AdvancementsTab.HINTS.getBasePath() + "/" + pathName));
         AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
         for (String criterion : advancementProgress.getUnobtainedCriteria()) {
             player.getAdvancementTracker().grantCriterion(advancement, criterion);
         }
     }
 
-    public static BlockedAction getBlockedActionFromAdvancement(Advancement advancement) {
-        String[] pathPieces = advancement.getId().getPath().split("/");
-        return pathPieces.length == 2 ? BlockedAction.map(pathPieces[1]) : null;
-    }
-
-    public static boolean isActionBlocked(PlayerEntity player, BlockedAction action) {
-        if (action == null || player == null || player.isCreative() || action.isUnblocked(player)) {
-            return false;
-        }
-        player.sendMessage(action.buildBlockedDescription(player), true);
-        if (player.getWorld().isClient) {
-            ClientPlayNetworking.send(AchieveToDo.DEMYSTIFY_LOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action));
-        } else if (player instanceof ServerPlayerEntity serverPlayer) {
-            demystifyAction(serverPlayer, action);
-        }
-        return true;
-    }
-
-    public static boolean isEquipmentBlocked(PlayerEntity player, Item item) {
-        if (item == Items.ELYTRA && isActionBlocked(player, BlockedAction.EQUIP_ELYTRA)) {
+    private boolean isItemBlocked(PlayerEntity player, ItemStack stack) {
+        if (isFoodBlocked(player, stack.getItem().getFoodComponent())) {
             return true;
         }
-        if (item instanceof ArmorItem) {
-            ArmorMaterial armorMaterial = ((ArmorItem) item).getMaterial();
-            return armorMaterial == ArmorMaterials.IRON && isActionBlocked(player, BlockedAction.EQUIP_IRON_ARMOR) ||
-                    armorMaterial == ArmorMaterials.DIAMOND && isActionBlocked(player, BlockedAction.EQUIP_DIAMOND_ARMOR) ||
-                    armorMaterial == ArmorMaterials.NETHERITE && isActionBlocked(player, BlockedAction.EQUIP_NETHERITE_ARMOR);
+        if (isEquipmentBlocked(player, stack)) {
+            return true;
+        }
+        if (stack.isOf(Items.SHIELD) && isActionBlocked(player, BlockedActionType.USING_SHIELD)) {
+            return true;
+        }
+        if (stack.isOf(Items.BOW) && isActionBlocked(player, BlockedActionType.USING_BOW)) {
+            return true;
+        }
+        if (stack.isOf(Items.FIREWORK_ROCKET) && player.isFallFlying() && isActionBlocked(player, BlockedActionType.USING_FIREWORKS_WHILE_FLY)) {
+            return true;
+        }
+        if (stack.isOf(Items.SPYGLASS) && player.getWorld().isClient) {
+            SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.of(stack);
+            return panoramaDetails != null && !panoramaDetails.isPanoramaReady();
         }
         return false;
     }
 
-    private boolean isFoodBlocked(PlayerEntity player, FoodComponent food) {
+    public static boolean isActionBlocked(PlayerEntity player, BlockedActionType action) {
+        return isActionBlocked(player, action, false);
+    }
+
+    public static boolean isActionBlocked(PlayerEntity player, BlockedActionType action, boolean isCheckOnly) {
+        if (action == null || player == null || player.isCreative() || action.isUnblocked(player)) {
+            return false;
+        }
+        if (!isCheckOnly) {
+            player.sendMessage(action.buildBlockedDescription(player), true);
+            if (player.getWorld().isClient) {
+                ClientPlayNetworking.send(GRANT_BLOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action).writeBoolean(true));
+            } else if (player instanceof ServerPlayerEntity serverPlayer) {
+                grantBlockedAction(serverPlayer, action, true);
+            }
+        }
+        return true;
+    }
+
+    public static boolean isFoodBlocked(PlayerEntity player, FoodComponent food) {
         if (food == null) {
             return false;
         }
-        for (BlockedAction action : BlockedAction.values()) {
-            if (action.getFoodComponent() == food) {
-                return isActionBlocked(player, action);
-            }
+        BlockedActionType action = BlockedActionType.findBlockedFood(food);
+        if (action != null) {
+            return isActionBlocked(player, action);
+        }
+        return false;
+    }
+
+    public static boolean isBlockBlocked(PlayerEntity player, Block block) {
+        if (block == null) {
+            return false;
+        }
+        BlockedActionType action = BlockedActionType.findBlockedBlock(block);
+        if (action != null) {
+            return isActionBlocked(player, action);
         }
         return false;
     }
 
     private boolean isToolBlocked(PlayerEntity player, ItemStack stack) {
-        if (!stack.isDamageable()) {
+        if (stack == null) {
             return false;
         }
-        Item item = stack.getItem();
-        if (item instanceof ToolItem) {
-            ToolMaterial toolMaterial = ((ToolItem) item).getMaterial();
-            return toolMaterial == ToolMaterials.STONE && isActionBlocked(player, BlockedAction.USING_STONE_TOOLS) ||
-                    toolMaterial == ToolMaterials.IRON && isActionBlocked(player, BlockedAction.USING_IRON_TOOLS) ||
-                    toolMaterial == ToolMaterials.DIAMOND && isActionBlocked(player, BlockedAction.USING_DIAMOND_TOOLS) ||
-                    toolMaterial == ToolMaterials.NETHERITE && isActionBlocked(player, BlockedAction.USING_NETHERITE_TOOLS);
+        BlockedActionType action = BlockedActionType.findBlockedTool(stack.getItem());
+        if (action != null) {
+            return isActionBlocked(player, action);
+        }
+        return false;
+    }
+
+    public static boolean isEquipmentBlocked(PlayerEntity player, ItemStack stack) {
+        if (stack == null) {
+            return false;
+        }
+        BlockedActionType action = BlockedActionType.findBlockedEquipment(stack.getItem());
+        if (action != null) {
+            return isActionBlocked(player, action);
+        }
+        return false;
+    }
+
+    public static boolean isDimensionBlocked(PlayerEntity player, RegistryKey<World> dimension) {
+        if (dimension == null) {
+            return false;
+        }
+        BlockedActionType action = BlockedActionType.findBlockedDimension(dimension);
+        if (action != null) {
+            return isActionBlocked(player, action);
         }
         return false;
     }
 
     private boolean isVillagerBlocked(PlayerEntity player, VillagerProfession profession) {
-        for (BlockedAction action : BlockedAction.values()) {
-            if (action.getVillagerProfession() == profession) {
-                return isActionBlocked(player, action);
-            }
+        if (profession == null) {
+            return false;
+        }
+        BlockedActionType action = BlockedActionType.findBlockedVillager(profession);
+        if (action != null) {
+            return isActionBlocked(player, action);
         }
         return false;
     }
 
-    @ClientOnly
-    public boolean isPanoramaReady(SpyglassPanoramaDetails panoramaDetails) {
+    @Environment(EnvType.CLIENT)
+    public static void setAdvancementsCount(int count) {
         MinecraftClient client = MinecraftClient.getInstance();
-        if (isPanoramaLoading) {
-            return false;
-        }
-        List<Integer> missingPanoramaFaces = new ArrayList<>();
-        for (int face = 0; face < 6; face++) {
-            if (client.getTextureManager().getOrDefault(panoramaDetails.generateFaceTextureId(face), MissingSprite.getMissingSpriteTexture()) == MissingSprite.getMissingSpriteTexture()) {
-                missingPanoramaFaces.add(face);
-            }
-        }
-        if (missingPanoramaFaces.isEmpty()) {
-            return true;
-        }
-        File cacheDir = new File(client.runDirectory, "panorama");
-        if (!cacheDir.exists() && !cacheDir.mkdirs()) {
-            return false;
-        }
-        isPanoramaLoading = true;
-        boolean isPanoramaExists = true;
-        for (int face : missingPanoramaFaces) {
-            boolean isLastLoading = face == missingPanoramaFaces.get(missingPanoramaFaces.size() - 1);
-            File cacheFile = panoramaDetails.generateCacheFile(cacheDir, face);
-            boolean isFaceExists = cacheFile.exists();
-            if (!isFaceExists) {
-                isPanoramaExists = false;
-            }
-            String url = panoramaDetails.generateURL(face);
-            SpyglassPanoramaTexture spyglassPanoramaTexture = new SpyglassPanoramaTexture(cacheFile, url, (success) -> {
-                if (!isLastLoading || client.player == null) {
-                    return;
-                }
-                isPanoramaLoading = false;
-                if (!isFaceExists) {
-                    if (success) {
-                        client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.success").getString()).copy().formatted(Formatting.GREEN), true);
-                    } else {
-                        client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading.error").getString()).copy().formatted(Formatting.RED), true);
-                    }
-                }
-            });
-            client.getTextureManager().registerTexture(panoramaDetails.generateFaceTextureId(face), spyglassPanoramaTexture);
-        }
-        if (!isPanoramaExists && client.player != null) {
-            client.player.sendMessage(Text.of(Text.translatable("spyglass.panorama.loading").getString()).copy().formatted(Formatting.YELLOW), true);
-        }
-        return isPanoramaExists;
-    }
-
-    @ClientOnly
-    public static void setAdvancementsCount(String playerName, int count) {
-        MinecraftClient client = MinecraftClient.getInstance();
-        if (client.player == null || !client.player.getEntityName().equals(playerName)) {
-            return;
-        }
-        if (count >= 0 && count <= advancementsCount) {
+        if (client.player == null || count >= 0 && count <= advancementsCount) {
             return;
         }
         int oldCount = advancementsCount;
         advancementsCount = count;
         if (oldCount != 0) {
-            for (BlockedAction action : BlockedAction.values()) {
+            for (BlockedActionType action : BlockedActionType.values()) {
                 if (advancementsCount >= action.getUnblockAdvancementsCount() && oldCount < action.getUnblockAdvancementsCount()) {
-                    Advancement advancement = client.player.networkHandler.getAdvancementHandler().getManager().get(action.buildAdvancementId());
-                    client.getToastManager().add(new UnblockActionToast(advancement, action));
+                    ClientPlayNetworking.send(GRANT_BLOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action).writeBoolean(false));
                 }
             }
         }
     }
 
-    private static void demystifyAction(ServerPlayerEntity player, BlockedAction action) {
-        Advancement advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
-        AdvancementProgress advancementProgress = player.getAdvancementTracker().getProgress(advancement);
-        for (String criterion : advancementProgress.getUnobtainedCriteria()) {
-            player.getAdvancementTracker().grantCriterion(advancement, criterion);
+    private static void grantBlockedAction(ServerPlayerEntity player, BlockedActionType action, boolean isDemystifyOnly) {
+        AdvancementEntry advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
+        if (isDemystifyOnly) {
+            player.getAdvancementTracker().grantCriterion(
+                    advancement,
+                    AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + action.getName()
+            );
+        } else {
+            for (String criterion : player.getAdvancementTracker().getProgress(advancement).getUnobtainedCriteria()) {
+                player.getAdvancementTracker().grantCriterion(advancement, criterion);
+            }
         }
     }
 
-    private void registerPacks() {
-        QuiltLoader.getModContainer(AchieveToDo.ID).ifPresent((modContainer) -> {
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_OVERRIDE_HARDCORE_DATA_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_ITEM_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_REWARDS_TROPHY_DATA_PACK_NAME.replace("/", ":")), modContainer, ResourcePackActivationType.NORMAL);
-
-            ResourceLoader.registerBuiltinResourcePack(new Identifier(BACAP_LANGUAGE_PACK.replace("/", ":")), modContainer, ResourcePackActivationType.DEFAULT_ENABLED, Text.of("BACAP Language Pack"));
+    private void registerDataPacks() {
+        FabricLoader.getInstance().getModContainer(ID).ifPresent(modContainer -> {
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_OVERRIDE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_OVERRIDE_HARDCORE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_COOPERATIVE_MODE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_ITEM_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_TROPHY_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
         });
     }
 
@@ -499,10 +430,10 @@ public class AchieveToDo implements ModInitializer {
     }
 
     private void registerItems() {
-        Registry.register(Registries.ITEM, LOCKED_ACTION_ITEM_ID, LOCKED_ACTION_ITEM);
+        Registry.register(Registries.ITEM, MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM_ID, MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM);
         Registry.register(Registries.ITEM, ANCIENT_CITY_PORTAL_HINT_ITEM_ID, ANCIENT_CITY_PORTAL_HINT_ITEM);
-        Registry.register(Registries.ITEM, REINFORCED_DEEPSLATE_CHARGED_BLOCK_ID, new BlockItem(REINFORCED_DEEPSLATE_CHARGED_BLOCK, new QuiltItemSettings()));
-        Registry.register(Registries.ITEM, REINFORCED_DEEPSLATE_BROKEN_BLOCK_ID, new BlockItem(REINFORCED_DEEPSLATE_BROKEN_BLOCK, new QuiltItemSettings()));
+        Registry.register(Registries.ITEM, REINFORCED_DEEPSLATE_CHARGED_BLOCK_ID, new BlockItem(REINFORCED_DEEPSLATE_CHARGED_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, REINFORCED_DEEPSLATE_BROKEN_BLOCK_ID, new BlockItem(REINFORCED_DEEPSLATE_BROKEN_BLOCK, new FabricItemSettings()));
     }
 
     private void registerParticles() {

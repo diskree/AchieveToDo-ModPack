@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:jukebox"
+    },
+    "title": {
+      "translate": "hints.beethoven_mistake.title"
+    },
+    "description": {
+      "translate": "hints.beethoven_mistake.description"
+    },
+    "frame": "goal"
+  },
+  "parent": "minecraft:achievetodo_hints/soul_energizer",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

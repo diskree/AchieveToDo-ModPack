@@ -1,0 +1,13 @@
+name = "Chiseled Stone Bricks Fix"
+filename = "Chiseled Stone Bricks Fix.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/UNtuypyn/versions/gQ9XMMiw/ChiseledStoneBricksFix.zip"
+hash-format = "sha1"
+hash = "d2b81d1b04d2732e9c438bac561e0a9d415e2d00"
+
+[update]
+[update.modrinth]
+mod-id = "UNtuypyn"
+version = "gQ9XMMiw"

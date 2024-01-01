@@ -1,6 +1,1 @@
-reduceFPSWhenUnfocused = true
-unfocusedFPS = 15
-restoreFPSWhenHovered = true
-unfocusedVolumeMultiplier = 0.50
-hiddenVolumeMultiplier = 0.50
-runGCOnUnfocus = false
+runGCOnUnfocus = true

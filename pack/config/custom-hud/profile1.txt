@@ -1,3 +1,3 @@
 ==BackgroundColor:0x22000000==
 ==Section:TopLeft==
-&{#29dfeb}Ac&{#1fa2ab}hi&{#179da6}e&{#0d686e}v&{#179da6}e&{#1fa2ab}To&{#29dfeb}Do &{#fd99b1}1.&{#fee6a8}2 &7| {fps} fps
+${coloredPackName} ${coloredPackVersion} &7| {fps} fps

@@ -147,6 +147,10 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
             }
             blocksToCharge.add(pos);
         }
+        if (blocksToCharge.isEmpty()) {
+            discharge();
+            return true;
+        }
         Collections.shuffle(blocksToCharge);
         BlockPos randomPortalFrameBlockPos = blocksToCharge.get(0);
         getWorld().setBlockState(randomPortalFrameBlockPos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_PROPERTY, true));

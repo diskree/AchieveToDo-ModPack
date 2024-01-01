@@ -61,7 +61,6 @@ public abstract class AdvancementsScreenMixin extends Screen {
             return;
         }
         String query = searchField.getText().toLowerCase(Locale.ROOT);
-        ArrayList<AdvancementEntry> advancements = new ArrayList<>(client.player.networkHandler.getAdvancementHandler().advancementProgresses.keySet());
         for (AdvancementWidget widget : searchTab.widgets.values()) {
             widget.parent = null;
             widget.children.clear();
@@ -77,16 +76,26 @@ public abstract class AdvancementsScreenMixin extends Screen {
 
         int rowIndex = 0;
         int columnIndex = 0;
+        AdvancementManager advancementManager = advancementHandler.getManager();
+        Map<AdvancementEntry, AdvancementProgress> progresses = client.player.networkHandler.getAdvancementHandler().advancementProgresses;
         ArrayList<PlacedAdvancement> searchResults = new ArrayList<>();
-        for (AdvancementEntry advancement : advancements) {
-            if (advancement == null || advancement.value().isRoot()) {
+        for (AdvancementEntry advancementEntry : new ArrayList<>(progresses.keySet())) {
+            if (advancementEntry == null) {
                 continue;
             }
-            PlacedAdvancement placedAdvancement = advancementHandler.getManager().get(advancement);
+            Advancement advancement = advancementEntry.value();
+            if (advancement.isRoot()) {
+                continue;
+            }
+            AdvancementDisplay display = advancementEntry.value().display().orElse(null);
+            if (display == null || display.isHidden()) {
+                continue;
+            }
+            PlacedAdvancement placedAdvancement = advancementManager.get(advancementEntry);
             if (placedAdvancement == null) {
                 continue;
             }
-            PlacedAdvancement rootAdvancement = PlacedAdvancement.findRoot(placedAdvancement);
+            PlacedAdvancement rootAdvancement = placedAdvancement.getRoot();
             if (rootAdvancement == null) {
                 continue;
             }
@@ -97,10 +106,6 @@ public abstract class AdvancementsScreenMixin extends Screen {
                 }
             }
             if (tab == null || tab == AdvancementsTab.BLOCKED_ACTIONS || tab == AdvancementsTab.HINTS) {
-                continue;
-            }
-            AdvancementDisplay display = advancement.value().display().orElse(null);
-            if (display == null || display.isHidden()) {
                 continue;
             }
             String title = display.getTitle().getString().toLowerCase(Locale.ROOT);
@@ -154,7 +159,7 @@ public abstract class AdvancementsScreenMixin extends Screen {
             PlacedAdvancement searchResultPlacedAdvancement = new PlacedAdvancement(searchResultAdvancementEntry, parentPlacedAdvancement);
 
             searchTab.addAdvancement(searchResultPlacedAdvancement);
-            searchTab.widgets.get(searchResultAdvancementEntry).setProgress(client.player.networkHandler.getAdvancementHandler().advancementProgresses.get(searchResultAdvancementEntry));
+            searchTab.widgets.get(searchResultAdvancementEntry).setProgress(progresses.get(searchResultAdvancementEntry));
             if (columnIndex == SEARCH_RESULT_COLUMNS - 1) {
                 parentPlacedAdvancement = new PlacedAdvancement(searchRootAdvancement.getAdvancementEntry(), null);
                 columnIndex = 0;

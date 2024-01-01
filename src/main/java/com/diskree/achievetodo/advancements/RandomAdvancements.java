@@ -21,8 +21,17 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class RandomAdvancements {
+
+    private static final String BACAP_NAMESPACE = "blazeandcave";
+    private static final List<String> BLACK_LIST = List.of(
+            "challenges/the_perfect_run",
+            "challenges/were_in_the_endgame_now",
+            "nether/this_ones_mine",
+            "redstone/take_notes"
+    );
 
     @Nullable
     public static PlacedAdvancement getAdvancement(ServerPlayerEntity player) {
@@ -945,50 +954,63 @@ public class RandomAdvancements {
         if (player == null) {
             return null;
         }
+        PlayerAdvancementTracker playerAdvancementTracker = player.getAdvancementTracker();
+        AdvancementManager advancementManager = playerAdvancementTracker.advancementManager;
+        Map<AdvancementEntry, AdvancementProgress> progresses = playerAdvancementTracker.progress;
         ArrayList<AdvancementEntry> advancements = new ArrayList<>();
-        for (AdvancementEntry advancementEntry : new ArrayList<>(player.getAdvancementTracker().visibleAdvancements)) {
+        for (AdvancementEntry advancementEntry : new ArrayList<>(progresses.keySet())) {
+            if (advancementEntry == null) {
+                continue;
+            }
             Advancement advancement = advancementEntry.value();
-            Identifier identifier = advancementEntry.id();
-
-            String namespace = identifier.getNamespace();
-            String tab = identifier.getPath().split("/")[0];
-            String name = identifier.getPath().split("/")[1];
-            int requirementsCount = advancement.requirements().requirements().size();
-
-            AdvancementDisplay display = advancement.display().isEmpty() ? null : advancement.display().get();
+            if (advancement.isRoot()) {
+                continue;
+            }
+            AdvancementDisplay display = advancement.display().orElse(null);
             if (display == null || display.isHidden()) {
                 continue;
             }
-            if (namespace.equals(AchieveToDo.ID)) {
+            PlacedAdvancement placedAdvancement = advancementManager.get(advancementEntry);
+            if (placedAdvancement == null) {
                 continue;
             }
-            if (name.equals("root")) {
+            PlacedAdvancement rootAdvancement = placedAdvancement.getRoot();
+            if (rootAdvancement == null) {
                 continue;
             }
-            if (tab.equals(AdvancementsTab.STATISTICS.name().toLowerCase())) {
+            AdvancementsTab tab = null;
+            for (AdvancementsTab advancementsTab : AdvancementsTab.values()) {
+                if (advancementsTab.getRootAdvancementPath().equals(rootAdvancement.getAdvancementEntry().id().getPath())) {
+                    tab = advancementsTab;
+                }
+            }
+            if (tab == null || tab == AdvancementsTab.BLOCKED_ACTIONS || tab == AdvancementsTab.HINTS || tab == AdvancementsTab.STATISTICS) {
                 continue;
             }
+            int requirementsCount = advancement.requirements().requirements().size();
             if (withSingleRequirement) {
                 if (requirementsCount > 1) {
                     continue;
                 }
-            }
-            if (!withSingleRequirement) {
+            } else {
                 if (requirementsCount == 1) {
                     continue;
                 }
-                if (tab.equals(AdvancementsTab.BACAP.name().toLowerCase())) {
+                if (tab == AdvancementsTab.BACAP) {
                     continue;
                 }
-                String id = identifier.toString();
-                if (id.equals("blazeandcave:challenges/the_perfect_run") ||
-                        id.equals("blazeandcave:challenges/were_in_the_endgame_now") ||
-                        id.equals("blazeandcave:nether/this_ones_mine") ||
-                        id.equals("blazeandcave:redstone/take_notes")) {
+                boolean isInBlackList = false;
+                for (String blackListAdvancement : BLACK_LIST) {
+                    if (advancementEntry.id().equals(new Identifier(BACAP_NAMESPACE, blackListAdvancement))) {
+                        isInBlackList = true;
+                        break;
+                    }
+                }
+                if (isInBlackList) {
                     continue;
                 }
             }
-            AdvancementProgress progress = player.getAdvancementTracker().progress.get(advancementEntry);
+            AdvancementProgress progress = progresses.get(advancementEntry);
             if (progress != null && progress.isDone()) {
                 continue;
             }
@@ -997,6 +1019,6 @@ public class RandomAdvancements {
         if (advancements.isEmpty()) {
             return null;
         }
-        return player.getAdvancementTracker().advancementManager.get(advancements.get(player.getRandom().nextInt(advancements.size())));
+        return advancementManager.get(advancements.get(player.getRandom().nextInt(advancements.size())));
     }
 }

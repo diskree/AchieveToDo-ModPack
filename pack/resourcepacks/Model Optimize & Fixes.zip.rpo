@@ -11,7 +11,7 @@
     "dragon_egg": true,
     "dripleaf": true,
     "seagrass": true,
-    "brewing_stand": true,
+    "brewing_stand": false,
     "sunflower": true,
     "stonecutter": true,
     "random_rotate": false,

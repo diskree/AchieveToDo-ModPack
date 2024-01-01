@@ -13,9 +13,8 @@ import net.minecraft.util.Formatting;
 
 public class CreateWorldTab extends GridScreenTab {
 
-    private static final Text LAN_TITLE = Text.translatable("lanServer.title");
-    private static final Text COOPERATIVE_MODE = Text.translatable("createWorld.lan.cooperative_mode");
-    private static final Text COOPERATIVE_MODE_INFO = Text.translatable("createWorld.lan.cooperative_mode.info");
+    private static final boolean ALLOW_CUSTOM_GENERATION = false;
+
     private static final Text REWARDS_TITLE = Text.translatable("createWorld.rewards.title");
     private static final Text ITEM_REWARDS = Text.translatable("createWorld.rewards.item");
     private static final Text ITEM_REWARDS_INFO = Text.translatable("createWorld.rewards.item.info");
@@ -30,10 +29,13 @@ public class CreateWorldTab extends GridScreenTab {
     private static final Text NETHER_GENERATION_INFO = Text.translatable("createWorld.generation.nether.info");
     private static final Text END_GENERATION = Text.translatable("createWorld.generation.end");
     private static final Text END_GENERATION_INFO = Text.translatable("createWorld.generation.end.info");
+    private static final Text LAN_TITLE = Text.translatable("lanServer.title");
+    private static final Text COOPERATIVE_MODE = Text.translatable("createWorld.lan.cooperative_mode");
+    private static final Text COOPERATIVE_MODE_INFO = Text.translatable("createWorld.lan.cooperative_mode.info");
 
-    private static final boolean ALLOW_CUSTOM_GENERATION = false;
-
-    private WorldScreenOptionGrid generationOptionGrid;
+    private WorldScreenOptionGrid rewardsSection;
+    private WorldScreenOptionGrid customGenerationSection;
+    private WorldScreenOptionGrid lanSection;
 
     public CreateWorldTab(CreateWorldScreen screen) {
         super(Text.of(BuildConfig.MOD_NAME));
@@ -43,46 +45,50 @@ public class CreateWorldTab extends GridScreenTab {
         WorldCreator worldCreator = screen.getWorldCreator();
         WorldCreatorImpl worldSettings = (WorldCreatorImpl) worldCreator;
 
-        this.grid.getMainPositioner().alignHorizontalCenter();
+        grid.getMainPositioner().alignHorizontalCenter();
 
-        GridWidget.Adder adder = this.grid.setColumnSpacing(10).setRowSpacing(8).createAdder(2);
+        GridWidget.Adder rootContainer = grid.setColumnSpacing(10).setRowSpacing(8).createAdder(2);
 
-        GridWidget.Adder rewardsTitleAdder = new GridWidget().setRowSpacing(4).createAdder(1);
-        rewardsTitleAdder.add(new TextWidget(REWARDS_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
-        adder.add(rewardsTitleAdder.getGridWidget(), 2, grid.copyPositioner().marginTop(24));
+        GridWidget.Adder rewardsTitleContainer = new GridWidget().setRowSpacing(4).createAdder(1);
+        rewardsTitleContainer.add(new TextWidget(REWARDS_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
+        rootContainer.add(rewardsTitleContainer.getGridWidget(), 2, grid.copyPositioner().marginTop(24));
 
-        WorldScreenOptionGrid.Builder rewardsOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-        rewardsOptionsBuilder.add(ITEM_REWARDS, worldSettings::achieveToDo$isItemRewardsEnabled, worldSettings::achieveToDo$setItemRewardsEnabled).tooltip(ITEM_REWARDS_INFO);
-        rewardsOptionsBuilder.add(EXPERIENCE_REWARDS, worldSettings::achieveToDo$isExperienceRewardsEnabled, worldSettings::achieveToDo$setExperienceRewardsEnabled).tooltip(EXPERIENCE_REWARDS_INFO);
-        rewardsOptionsBuilder.add(TROPHY_REWARDS, worldSettings::achieveToDo$isTrophyRewardsEnabled, worldSettings::achieveToDo$setTrophyRewardsEnabled).tooltip(TROPHY_REWARDS_INFO);
-        WorldScreenOptionGrid rewardsOptionsGrid = rewardsOptionsBuilder.build(widget -> adder.add(widget, 2));
+        WorldScreenOptionGrid.Builder rewardsSectionBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
+        rewardsSectionBuilder.add(ITEM_REWARDS, worldSettings::achieveToDo$isItemRewardsEnabled, worldSettings::achieveToDo$setItemRewardsEnabled).tooltip(ITEM_REWARDS_INFO);
+        rewardsSectionBuilder.add(EXPERIENCE_REWARDS, worldSettings::achieveToDo$isExperienceRewardsEnabled, worldSettings::achieveToDo$setExperienceRewardsEnabled).tooltip(EXPERIENCE_REWARDS_INFO);
+        rewardsSectionBuilder.add(TROPHY_REWARDS, worldSettings::achieveToDo$isTrophyRewardsEnabled, worldSettings::achieveToDo$setTrophyRewardsEnabled).tooltip(TROPHY_REWARDS_INFO);
+        rewardsSection = rewardsSectionBuilder.build(widget -> rootContainer.add(widget, 2));
 
         if (ALLOW_CUSTOM_GENERATION) {
-            GridWidget.Adder generationTitleAdder = new GridWidget().setRowSpacing(4).createAdder(1);
-            generationTitleAdder.add(new TextWidget(CUSTOM_GENERATION_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
-            adder.add(generationTitleAdder.getGridWidget(), 2);
+            GridWidget.Adder customGenerationTitleContainer = new GridWidget().setRowSpacing(4).createAdder(1);
+            customGenerationTitleContainer.add(new TextWidget(CUSTOM_GENERATION_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
+            rootContainer.add(customGenerationTitleContainer.getGridWidget(), 2);
 
-            WorldScreenOptionGrid.Builder customGenerationOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-            customGenerationOptionsBuilder.add(OVERWORLD_GENERATION, worldSettings::achieveToDo$isTerralithEnabled, worldSettings::achieveToDo$setTerralithEnabled).tooltip(OVERWORLD_GENERATION_INFO);
-            customGenerationOptionsBuilder.add(NETHER_GENERATION, worldSettings::achieveToDo$isAmplifiedNetherEnabled, worldSettings::achieveToDo$setAmplifiedNetherEnabled).tooltip(NETHER_GENERATION_INFO);
-            customGenerationOptionsBuilder.add(END_GENERATION, worldSettings::achieveToDo$isNullscapeEnabled, worldSettings::achieveToDo$setNullscapeEnabled).tooltip(END_GENERATION_INFO);
-            generationOptionGrid = customGenerationOptionsBuilder.build(widget -> adder.add(widget, 2));
+            WorldScreenOptionGrid.Builder customGenerationSectionBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
+            customGenerationSectionBuilder.add(OVERWORLD_GENERATION, worldSettings::achieveToDo$isTerralithEnabled, worldSettings::achieveToDo$setTerralithEnabled).tooltip(OVERWORLD_GENERATION_INFO);
+            customGenerationSectionBuilder.add(NETHER_GENERATION, worldSettings::achieveToDo$isAmplifiedNetherEnabled, worldSettings::achieveToDo$setAmplifiedNetherEnabled).tooltip(NETHER_GENERATION_INFO);
+            customGenerationSectionBuilder.add(END_GENERATION, worldSettings::achieveToDo$isNullscapeEnabled, worldSettings::achieveToDo$setNullscapeEnabled).tooltip(END_GENERATION_INFO);
+            customGenerationSection = customGenerationSectionBuilder.build(widget -> rootContainer.add(widget, 2));
         }
 
-        GridWidget.Adder lanTitleAdder = new GridWidget().setRowSpacing(4).createAdder(1);
-        lanTitleAdder.add(new TextWidget(LAN_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
-        adder.add(lanTitleAdder.getGridWidget(), 2);
+        GridWidget.Adder lanTitleContainer = new GridWidget().setRowSpacing(4).createAdder(1);
+        lanTitleContainer.add(new TextWidget(LAN_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
+        rootContainer.add(lanTitleContainer.getGridWidget(), 2);
 
-        WorldScreenOptionGrid.Builder lanOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-        lanOptionsBuilder.add(COOPERATIVE_MODE, worldSettings::achieveToDo$isCooperativeModeEnabled, worldSettings::achieveToDo$setCooperativeModeEnabled).tooltip(COOPERATIVE_MODE_INFO);
-        WorldScreenOptionGrid lanOptionsGrid = lanOptionsBuilder.build(widget -> adder.add(widget, 2));
+        WorldScreenOptionGrid.Builder lanSectionBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
+        lanSectionBuilder.add(COOPERATIVE_MODE, worldSettings::achieveToDo$isCooperativeModeEnabled, worldSettings::achieveToDo$setCooperativeModeEnabled).tooltip(COOPERATIVE_MODE_INFO);
+        lanSection = lanSectionBuilder.build(widget -> rootContainer.add(widget, 2));
 
         worldCreator.addListener(creator -> {
-            rewardsOptionsGrid.refresh();
-            if (generationOptionGrid != null) {
-                generationOptionGrid.refresh();
+            if (rewardsSection != null) {
+                rewardsSection.refresh();
             }
-            lanOptionsGrid.refresh();
+            if (customGenerationSection != null) {
+                customGenerationSection.refresh();
+            }
+            if (lanSection != null) {
+                lanSection.refresh();
+            }
         });
     }
 }

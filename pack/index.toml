@@ -7,7 +7,7 @@ file = "config/betterf3.json"
 file = "config/brb.toml"
 
 [[files]]
-file = "config/c2me.toml"
+file = "config/citresewn.json"
 
 [[files]]
 file = "config/custom-hud/profile1.txt"
@@ -16,31 +16,13 @@ file = "config/custom-hud/profile1.txt"
 file = "config/dark-loading-screen.json"
 
 [[files]]
-file = "config/enhanced_bes.properties"
-
-[[files]]
-file = "config/entityculling.json"
-
-[[files]]
-file = "config/ferritecore.mixin.properties"
-
-[[files]]
-file = "config/indium-renderer.properties"
+file = "config/debugify.json"
 
 [[files]]
 file = "config/isxander-main-menu-credits.json"
 
 [[files]]
-file = "config/midnightlib.json"
-
-[[files]]
 file = "config/modmenu.json"
-
-[[files]]
-file = "config/rrp.properties"
-
-[[files]]
-file = "config/yosbr/config/appleskin.json5"
 
 [[files]]
 file = "config/yosbr/config/blur.json"
@@ -49,37 +31,10 @@ file = "config/yosbr/config/blur.json"
 file = "config/yosbr/config/capes.json5"
 
 [[files]]
-file = "config/yosbr/config/citresewn-defaults.json"
-
-[[files]]
-file = "config/yosbr/config/citresewn.json"
-
-[[files]]
-file = "config/yosbr/config/colormatic.properties"
-
-[[files]]
-file = "config/yosbr/config/continuity.json"
-
-[[files]]
-file = "config/yosbr/config/crowdin.txt"
-
-[[files]]
 file = "config/yosbr/config/custom-hud/config.json"
 
 [[files]]
-file = "config/yosbr/config/debugify-descriptions.json"
-
-[[files]]
-file = "config/yosbr/config/debugify.json"
-
-[[files]]
 file = "config/yosbr/config/dynamicfps.toml"
-
-[[files]]
-file = "config/yosbr/config/exordium.json"
-
-[[files]]
-file = "config/yosbr/config/fabric/indigo-renderer.properties"
 
 [[files]]
 file = "config/yosbr/config/fallingleaves.json"
@@ -91,9 +46,6 @@ file = "config/yosbr/config/firstperson.json"
 file = "config/yosbr/config/iris.properties"
 
 [[files]]
-file = "config/yosbr/config/itemmodelfix.json"
-
-[[files]]
 file = "config/yosbr/config/lambdynlights.toml"
 
 [[files]]
@@ -101,12 +53,6 @@ file = "config/yosbr/config/moreculling.toml"
 
 [[files]]
 file = "config/yosbr/config/shulkerboxtooltip.json5"
-
-[[files]]
-file = "config/yosbr/config/skinlayers.json"
-
-[[files]]
-file = "config/yosbr/config/smoothswapping.json"
 
 [[files]]
 file = "config/yosbr/config/sodium-extra-options.json"

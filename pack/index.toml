@@ -4,9 +4,6 @@ hash-format = "sha256"
 file = "config/betterf3.json"
 
 [[files]]
-file = "config/brb.toml"
-
-[[files]]
 file = "config/citresewn.json"
 
 [[files]]
@@ -78,10 +75,6 @@ file = "mods/antighost.pw.toml"
 metafile = true
 
 [[files]]
-file = "mods/architectury-api.pw.toml"
-metafile = true
-
-[[files]]
 file = "mods/better-mount-hud.pw.toml"
 metafile = true
 
@@ -99,10 +92,6 @@ metafile = true
 
 [[files]]
 file = "mods/boat-break-fix.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/brb.pw.toml"
 metafile = true
 
 [[files]]

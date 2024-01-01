@@ -4,4 +4,7 @@ public class BuildConfig {
     public static final String MOD_NAME = "${modName}";
     public static final String MOD_ID = "${modId}";
     public static final boolean DEBUG = ${isDebug};
+
+    public static final String HINTLY_HALLOWS_FORM_ID = "${hintlyHallowsFormId}";
+    public static final String HINTLY_HALLOWS_ENTRY_ID = "${hintlyHallowsEntryId}";
 }

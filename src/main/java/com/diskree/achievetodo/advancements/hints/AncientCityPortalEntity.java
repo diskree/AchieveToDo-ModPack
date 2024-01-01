@@ -1,13 +1,15 @@
 package com.diskree.achievetodo.advancements.hints;
 
 import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.BuildConfig;
 import com.diskree.achievetodo.ItemDisplayEntityImpl;
-import com.diskree.achievetodo.advancements.RandomAdvancements;
 import com.diskree.achievetodo.advancements.AdvancementHint;
+import com.diskree.achievetodo.advancements.RandomAdvancements;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.JukeboxBlockEntity;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
@@ -20,6 +22,7 @@ import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtHelper;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -41,10 +44,17 @@ import net.minecraft.world.event.listener.GameEventListener;
 import org.jetbrains.annotations.Nullable;
 
 import java.awt.*;
+import java.io.File;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 
 public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
@@ -57,6 +67,9 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public static final BooleanProperty REINFORCED_DEEPSLATE_CHARGED_PROPERTY = BooleanProperty.of("charged");
     public static final BooleanProperty REINFORCED_DEEPSLATE_BROKEN_PROPERTY = BooleanProperty.of("broken");
+
+    private static boolean isHintlyHallowsUsedRequestInProgress;
+
     private final EntityGameEventHandler<JukeboxEventListener> jukeboxEventHandler;
     @Nullable
     private BlockPos jukeboxPos;
@@ -155,10 +168,15 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         BlockPos randomPortalFrameBlockPos = blocksToCharge.get(0);
         getWorld().setBlockState(randomPortalFrameBlockPos, Blocks.REINFORCED_DEEPSLATE.getDefaultState().with(REINFORCED_DEEPSLATE_CHARGED_PROPERTY, true));
         ServerPlayerEntity charger = getChargerPlayer();
+        if (charger == null) {
+            discharge();
+            return true;
+        }
         getWorld().playSound(null, charger.getX(), charger.getY(), charger.getZ(), SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 1.0f, 0.4f);
         if (blocksToCharge.size() == 1) {
             AdvancementHint advancementHint = RandomAdvancements.getHint(charger);
             if (advancementHint != null) {
+                hintlyHallowsUsed(charger);
                 showAdvancementTab(advancementHint.tab());
                 showAdvancementHint(advancementHint.hint(), advancementHint.dropHint());
                 showAdvancement(advancementHint.advancement());
@@ -620,6 +638,50 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     private Direction getFromOriginDirection() {
         return getHorizontalFacing().rotateYClockwise();
+    }
+
+    private void hintlyHallowsUsed(ServerPlayerEntity charger) {
+        if (isHintlyHallowsUsedRequestInProgress) {
+            return;
+        }
+        MinecraftServer server = charger.getServer();
+        if (server == null) {
+            return;
+        }
+        File hintlyHallowsUsedFile = charger.getServer().getFile(".hintly_hallows_used");
+        if (hintlyHallowsUsedFile.exists()) {
+            return;
+        }
+        CompletableFuture.runAsync(() -> {
+            isHintlyHallowsUsedRequestInProgress = true;
+            HttpURLConnection connection = null;
+            try {
+                String formUrl = "https://docs.google.com/forms/d/e/" + BuildConfig.HINTLY_HALLOWS_FORM_ID + "/formResponse";
+                String formParameters = "entry." + BuildConfig.HINTLY_HALLOWS_ENTRY_ID + "=" + AchieveToDo.getScore(charger);
+
+                connection = (HttpURLConnection) new URL(formUrl).openConnection(MinecraftClient.getInstance().getNetworkProxy());
+                connection.setConnectTimeout(15000);
+                connection.setReadTimeout(2000);
+                connection.setDoOutput(true);
+                connection.setDoInput(true);
+                connection.setRequestMethod("POST");
+                try (OutputStream outputStream = connection.getOutputStream();
+                     OutputStreamWriter writer = new OutputStreamWriter(outputStream, StandardCharsets.UTF_8)) {
+                    writer.write(formParameters);
+                    writer.flush();
+                }
+                if (connection.getResponseCode() / 100 == 2) {
+                    //noinspection ResultOfMethodCallIgnored
+                    hintlyHallowsUsedFile.createNewFile();
+                }
+            } catch (Exception ignored) {
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
+                isHintlyHallowsUsedRequestInProgress = false;
+            }
+        }, Util.getMainWorkerExecutor());
     }
 
     class JukeboxEventListener implements GameEventListener {

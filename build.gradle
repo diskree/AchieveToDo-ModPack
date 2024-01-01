@@ -2,6 +2,12 @@ plugins {
     id 'fabric-loom' version "${loomVersion}-SNAPSHOT"
 }
 
+Properties localProperties = new Properties()
+localProperties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+def hintlyHallowsFormId = localProperties.getProperty('HINTLY_HALLOWS_FORM_ID')
+def hintlyHallowsEntryId = localProperties.getProperty('HINTLY_HALLOWS_ENTRY_ID')
+
 def modId = project.modName.toLowerCase()
 def repoUrl = "https://github.com/${author}/${modName}"
 
@@ -63,6 +69,8 @@ tasks.register('generateBuildConfig', DefaultTask) {
                 .replace('${modId}', modId)
                 .replace('${modName}', modName)
                 .replace('${isDebug}', isDebug)
+                .replace('${hintlyHallowsFormId}', hintlyHallowsFormId)
+                .replace('${hintlyHallowsEntryId}', hintlyHallowsEntryId)
     }
 }
 

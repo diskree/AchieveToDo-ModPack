@@ -23,13 +23,17 @@ public class CreateWorldTab extends GridScreenTab {
     private static final Text EXPERIENCE_REWARDS_INFO = Text.translatable("createWorld.rewards.experience.info");
     private static final Text TROPHY_REWARDS = Text.translatable("createWorld.rewards.trophy");
     private static final Text TROPHY_REWARDS_INFO = Text.translatable("createWorld.rewards.trophy.info");
-    private static final Text GENERATION_TITLE = Text.translatable("createWorld.generation.title");
+    private static final Text CUSTOM_GENERATION_TITLE = Text.translatable("createWorld.generation.title");
     private static final Text OVERWORLD_GENERATION = Text.translatable("createWorld.generation.overworld");
     private static final Text OVERWORLD_GENERATION_INFO = Text.translatable("createWorld.generation.overworld.info");
     private static final Text NETHER_GENERATION = Text.translatable("createWorld.generation.nether");
     private static final Text NETHER_GENERATION_INFO = Text.translatable("createWorld.generation.nether.info");
     private static final Text END_GENERATION = Text.translatable("createWorld.generation.end");
     private static final Text END_GENERATION_INFO = Text.translatable("createWorld.generation.end.info");
+
+    private static final boolean ALLOW_CUSTOM_GENERATION = false;
+
+    private WorldScreenOptionGrid generationOptionGrid;
 
     public CreateWorldTab(CreateWorldScreen screen) {
         super(Text.of(BuildConfig.MOD_NAME));
@@ -53,15 +57,17 @@ public class CreateWorldTab extends GridScreenTab {
         rewardsOptionsBuilder.add(TROPHY_REWARDS, worldSettings::achieveToDo$isTrophyRewardsEnabled, worldSettings::achieveToDo$setTrophyRewardsEnabled).tooltip(TROPHY_REWARDS_INFO);
         WorldScreenOptionGrid rewardsOptionsGrid = rewardsOptionsBuilder.build(widget -> adder.add(widget, 2));
 
-        GridWidget.Adder generationTitleAdder = new GridWidget().setRowSpacing(4).createAdder(1);
-        generationTitleAdder.add(new TextWidget(GENERATION_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
-        adder.add(generationTitleAdder.getGridWidget(), 2);
+        if (ALLOW_CUSTOM_GENERATION) {
+            GridWidget.Adder generationTitleAdder = new GridWidget().setRowSpacing(4).createAdder(1);
+            generationTitleAdder.add(new TextWidget(CUSTOM_GENERATION_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
+            adder.add(generationTitleAdder.getGridWidget(), 2);
 
-        WorldScreenOptionGrid.Builder generationOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-        generationOptionsBuilder.add(OVERWORLD_GENERATION, worldSettings::achieveToDo$isTerralithEnabled, worldSettings::achieveToDo$setTerralithEnabled).tooltip(OVERWORLD_GENERATION_INFO);
-        generationOptionsBuilder.add(NETHER_GENERATION, worldSettings::achieveToDo$isAmplifiedNetherEnabled, worldSettings::achieveToDo$setAmplifiedNetherEnabled).tooltip(NETHER_GENERATION_INFO);
-        generationOptionsBuilder.add(END_GENERATION, worldSettings::achieveToDo$isNullscapeEnabled, worldSettings::achieveToDo$setNullscapeEnabled).tooltip(END_GENERATION_INFO);
-        WorldScreenOptionGrid generationOptionGrid = generationOptionsBuilder.build(widget -> adder.add(widget, 2));
+            WorldScreenOptionGrid.Builder customGenerationOptionsBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
+            customGenerationOptionsBuilder.add(OVERWORLD_GENERATION, worldSettings::achieveToDo$isTerralithEnabled, worldSettings::achieveToDo$setTerralithEnabled).tooltip(OVERWORLD_GENERATION_INFO);
+            customGenerationOptionsBuilder.add(NETHER_GENERATION, worldSettings::achieveToDo$isAmplifiedNetherEnabled, worldSettings::achieveToDo$setAmplifiedNetherEnabled).tooltip(NETHER_GENERATION_INFO);
+            customGenerationOptionsBuilder.add(END_GENERATION, worldSettings::achieveToDo$isNullscapeEnabled, worldSettings::achieveToDo$setNullscapeEnabled).tooltip(END_GENERATION_INFO);
+            generationOptionGrid = customGenerationOptionsBuilder.build(widget -> adder.add(widget, 2));
+        }
 
         GridWidget.Adder lanTitleAdder = new GridWidget().setRowSpacing(4).createAdder(1);
         lanTitleAdder.add(new TextWidget(LAN_TITLE.copy().formatted(Formatting.YELLOW), screen.client.textRenderer));
@@ -73,7 +79,9 @@ public class CreateWorldTab extends GridScreenTab {
 
         worldCreator.addListener(creator -> {
             rewardsOptionsGrid.refresh();
-            generationOptionGrid.refresh();
+            if (generationOptionGrid != null) {
+                generationOptionGrid.refresh();
+            }
             lanOptionsGrid.refresh();
         });
     }

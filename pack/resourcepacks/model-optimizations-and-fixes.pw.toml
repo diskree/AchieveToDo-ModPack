@@ -1,13 +1,13 @@
-name = "Model Optimize & Fixes"
-filename = "Model Optimize & Fixes.zip"
+name = "Model Optimizations & Fixes"
+filename = "Model Optimizations & Fixes.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/xq2isoUl/versions/QuvrxTnX/Model%20Optimizations%20%26%20Fixes.zip"
+url = "https://cdn.modrinth.com/data/xq2isoUl/versions/19ZrpaqL/Model%20Optimizations%20%26%20Fixes.zip"
 hash-format = "sha1"
-hash = "c6a56d64c58691c079edfc47b70d66143f41a275"
+hash = "8d9efc58c7ea6cd8ad0ab86e5b28b66f123351b3"
 
 [update]
 [update.modrinth]
 mod-id = "xq2isoUl"
-version = "QuvrxTnX"
+version = "19ZrpaqL"

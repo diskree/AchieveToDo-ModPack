@@ -278,10 +278,6 @@ file = "resourcepacks/barrel-fix.pw.toml"
 metafile = true
 
 [[files]]
-file = "resourcepacks/bettergrass.pw.toml"
-metafile = true
-
-[[files]]
 file = "resourcepacks/centered-crosshair-fix.pw.toml"
 metafile = true
 
@@ -299,6 +295,10 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/default-dark-mode.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fast-better-grass.pw.toml"
 metafile = true
 
 [[files]]

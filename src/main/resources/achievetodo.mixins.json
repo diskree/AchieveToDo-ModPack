@@ -21,7 +21,6 @@
     "NetworkStateMixin$PacketHandlerInitializerMixin",
     "PlacedAdvancementMixin",
     "PlayerEntityMixin",
-    "RaiderEntityMixin",
     "ReinforcedDeepslateMixin",
     "ServerPlayerEntityMixin",
     "VanillaBlockTagProviderMixin"

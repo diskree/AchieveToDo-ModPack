@@ -185,12 +185,12 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
             if (packManager != null) {
                 packManager.disable(AchieveToDo.BACAP_DATA_PACK);
                 packManager.disable(AchieveToDo.BACAP_HARDCORE_DATA_PACK);
-                packManager.disable(AchieveToDo.BACAP_NULLSCAPE_DATA_PACK);
-                packManager.disable(AchieveToDo.BACAP_AMPLIFIED_NETHER_DATA_PACK);
-                packManager.disable(AchieveToDo.BACAP_TERRALITH_DATA_PACK);
-                packManager.disable(AchieveToDo.NULLSCAPE_DATA_PACK);
-                packManager.disable(AchieveToDo.AMPLIFIED_NETHER_DATA_PACK);
                 packManager.disable(AchieveToDo.TERRALITH_DATA_PACK);
+                packManager.disable(AchieveToDo.BACAP_TERRALITH_DATA_PACK);
+                packManager.disable(AchieveToDo.AMPLIFIED_NETHER_DATA_PACK);
+                packManager.disable(AchieveToDo.BACAP_AMPLIFIED_NETHER_DATA_PACK);
+                packManager.disable(AchieveToDo.NULLSCAPE_DATA_PACK);
+                packManager.disable(AchieveToDo.BACAP_NULLSCAPE_DATA_PACK);
                 packManager.disable(AchieveToDo.BACAP_OVERRIDE_DATA_PACK.toString());
                 packManager.disable(AchieveToDo.BACAP_OVERRIDE_HARDCORE_DATA_PACK.toString());
                 packManager.disable(AchieveToDo.BACAP_REWARDS_ITEM_DATA_PACK_NAME.toString());

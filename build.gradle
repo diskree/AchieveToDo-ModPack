@@ -68,13 +68,12 @@ tasks.register('generateBuildConfig', DefaultTask) {
                 .replace('${author}', author)
                 .replace('${modId}', modId)
                 .replace('${modName}', modName)
-                .replace('${isDebug}', isDebug)
                 .replace('${hintlyHallowsFormId}', hintlyHallowsFormId)
                 .replace('${hintlyHallowsEntryId}', hintlyHallowsEntryId)
     }
 }
 
-tasks.register('packBuildDebug', Exec) {
+tasks.register('packBuild', Exec) {
     commandLine 'sh', "$projectDir/build_pack.sh",
             modId,
             modVersion,
@@ -82,20 +81,7 @@ tasks.register('packBuildDebug', Exec) {
             author,
             repoUrl,
             minecraftVersion,
-            minLoaderVersion,
-            true
-}
-
-tasks.register('packBuildRelease', Exec) {
-    commandLine 'sh', "$projectDir/build_pack.sh",
-            modId,
-            modVersion,
-            modName,
-            author,
-            repoUrl,
-            minecraftVersion,
-            minLoaderVersion,
-            false
+            minLoaderVersion
 }
 
 java {

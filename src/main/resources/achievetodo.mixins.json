@@ -36,16 +36,10 @@
     "client.ClientPlayerEntityMixin",
     "client.ClientPlayNetworkHandlerMixin",
     "client.CreateWorldScreenMixin",
-    "client.CyclingButtonWidgetMixin",
     "client.GameRendererMixin",
-    "client.GameTabMixin",
-    "client.LockButtonWidgetMixin",
     "client.MinecraftClientMixin",
-    "client.MoreTabMixin",
     "client.MouseMixin",
-    "client.OpenToLanScreenMixin",
     "client.PlayerScreenHandlerMixin",
-    "client.SelectWorldScreenMixin",
     "client.WorldCreatorMixin",
     "client.WorldRendererMixin"
   ]

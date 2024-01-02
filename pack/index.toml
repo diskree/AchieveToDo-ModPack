@@ -338,7 +338,7 @@ file = "resourcepacks/unique-enchanted-books.pw.toml"
 metafile = true
 
 [[files]]
-file = "resourcepacks/visual-potions.pw.toml"
+file = "resourcepacks/visualpotions.pw.toml"
 metafile = true
 
 [[files]]

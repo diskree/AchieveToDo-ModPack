@@ -237,9 +237,10 @@
   "blocked.villager_weaponsmith.title": "Оружейник",
   "blocked.villager_weaponsmith.description": "Возможность торговли с оружейником",
 
-  "hints.root.title": "Дары Подсказок",
+  "hints.root.title": "Загадка",
   "hints.root.description": "Разгадайте загадку и получите доступ к игровой механике, которая подскажет что осталось сделать для выполнения достижений",
-  "hints.hintly_hallows.title": "Загадка",
+  "hints.hintly_hallows.title": "Дары Подсказок",
+  "hints.hintly_hallows.title.extra": "            ",
   "hints.hintly_hallows.description.line01": "Бетховен в полной темноте",
   "hints.hintly_hallows.description.line02": "Играл на девяти осколках,",
   "hints.hintly_hallows.description.line03": "Те ноты проливали б свет",

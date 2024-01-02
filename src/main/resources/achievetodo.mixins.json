@@ -39,6 +39,7 @@
     "client.GameRendererMixin",
     "client.MinecraftClientMixin",
     "client.MouseMixin",
+    "client.PackScreenMixin",
     "client.PlayerScreenHandlerMixin",
     "client.WorldCreatorMixin",
     "client.WorldRendererMixin"

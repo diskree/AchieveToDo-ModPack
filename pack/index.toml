@@ -99,6 +99,10 @@ file = "mods/capes.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/cit-resewn.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/cloth-config.pw.toml"
 metafile = true
 
@@ -172,6 +176,10 @@ metafile = true
 
 [[files]]
 file = "mods/krypton.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/lambdynamiclights.pw.toml"
 metafile = true
 
 [[files]]

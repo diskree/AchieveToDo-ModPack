@@ -106,8 +106,9 @@ sed -i "s/\${packName}/$(printf '%s\n' "${packName}" | sed -e 's/[\/&]/\\&/g')/g
 sed -i "s/\${packVersion}/$(printf '%s\n' "${packVersion}" | sed -e 's/[\/&]/\\&/g')/g" "${mainMenuCreditsConfigPath}"
 sed -i "s/\${repoUrl}/$(printf '%s\n' "${repoUrl}" | sed -e 's/[\/&]/\\&/g')/g" "${mainMenuCreditsConfigPath}"
 
-packwiz refresh
+packwiz refresh --build
 packwiz modrinth export
+packwiz refresh
 
 echo "$packMetadata" > "$packMetadataPath"
 echo "$customHudProfile" > "$customHudProfilePath"

@@ -29,11 +29,9 @@ accessible field net/minecraft/client/gui/screen/advancement/AdvancementTab maxP
 accessible field net/minecraft/client/gui/screen/advancement/AdvancementTab initialized Z
 accessible field net/minecraft/client/gui/screen/advancement/AdvancementWidget children Ljava/util/List;
 accessible field net/minecraft/client/gui/screen/advancement/AdvancementWidget parent Lnet/minecraft/client/gui/screen/advancement/AdvancementWidget;
-#accessible field net/minecraft/client/gui/screen/advancement/AdvancementWidget advancement Lnet/minecraft/advancement/Advancement;
 accessible field net/minecraft/client/gui/screen/advancement/AdvancementTab originX D
 accessible field net/minecraft/client/gui/screen/advancement/AdvancementTab originY D
-#accessible field net/minecraft/network/NetworkState$PacketHandler packetIds Lit/unimi/dsi/fastutil/objects/Object2IntMap;
-
+accessible field net/minecraft/client/gui/screen/world/CreateWorldScreen worldCreator Lnet/minecraft/client/gui/screen/world/WorldCreator;
 accessible field net/minecraft/advancement/PlayerAdvancementTracker advancementManager Lnet/minecraft/advancement/AdvancementManager;
 accessible field net/minecraft/client/network/ClientCommonNetworkHandler client Lnet/minecraft/client/MinecraftClient;
 accessible field net/minecraft/network/packet/s2c/play/ScoreboardScoreUpdateS2CPacket objectiveName Ljava/lang/String;

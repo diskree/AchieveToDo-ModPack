@@ -14,7 +14,6 @@ readonly author=$4
 readonly repoUrl=$5
 readonly minecraftVersion=$6
 readonly loaderVersion=$7
-readonly isDebug=$8
 
 readonly packDir="pack"
 
@@ -22,7 +21,7 @@ rm -rf "build/libs"
 rm "$packDir/mods/$modId"*
 rm -rf "src/main/generated"
 ./gradlew runDatagen
-./gradlew build -PisDebug="$isDebug"
+./gradlew build
 cp "build/libs/$modId"* "$packDir/mods"
 
 cd "$packDir" || exit

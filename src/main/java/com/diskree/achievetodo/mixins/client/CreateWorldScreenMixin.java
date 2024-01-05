@@ -36,11 +36,13 @@ import java.util.function.Consumer;
 @Mixin(CreateWorldScreen.class)
 public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
 
+    @Unique
+    private boolean isWaitingDatapacks;
+
     @Shadow
     @Final
     WorldCreator worldCreator;
-    @Unique
-    private boolean isWaitingDatapacks;
+
     @Shadow
     private @Nullable ResourcePackManager packManager;
 

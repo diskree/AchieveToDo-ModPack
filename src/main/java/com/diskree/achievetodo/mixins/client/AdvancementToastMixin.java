@@ -20,10 +20,6 @@ import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 @Mixin(AdvancementToast.class)
 public class AdvancementToastMixin {
 
-    @Shadow
-    @Final
-    private AdvancementEntry advancement;
-
     @Unique
     private BlockedActionCategory getBlockedActionCategory() {
         if (advancement == null) {
@@ -32,6 +28,10 @@ public class AdvancementToastMixin {
         BlockedActionType action = BlockedActionType.map(advancement.id());
         return action != null ? action.getCategory() : null;
     }
+
+    @Shadow
+    @Final
+    private AdvancementEntry advancement;
 
     @Redirect(method = "draw", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawGuiTexture(Lnet/minecraft/util/Identifier;IIII)V"))
     private void redirectBackgroundTexture(DrawContext instance, Identifier texture, int x, int y, int width, int height) {

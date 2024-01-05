@@ -19,9 +19,6 @@ import java.util.List;
 @Mixin(AdvancementProgress.class)
 public abstract class AdvancementProgressMixin {
 
-    @Shadow
-    private AdvancementRequirements requirements;
-
     @Unique
     private int getActionUnblockAdvancementsCount() {
         if (requirements.requirements().size() == 2) {
@@ -38,6 +35,9 @@ public abstract class AdvancementProgressMixin {
         }
         return -1;
     }
+
+    @Shadow
+    private AdvancementRequirements requirements;
 
     @Inject(method = "getProgressBarPercentage", at = @At("HEAD"), cancellable = true)
     public void getProgressBarPercentageInject(CallbackInfoReturnable<Float> cir) {

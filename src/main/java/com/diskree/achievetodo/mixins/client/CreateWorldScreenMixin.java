@@ -48,7 +48,7 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
 
     @Shadow
     @Final
-    WorldCreator worldCreator;
+    public WorldCreator worldCreator;
 
     @Shadow
     private @Nullable ResourcePackManager packManager;

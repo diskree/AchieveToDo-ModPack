@@ -123,6 +123,10 @@ file = "mods/dark-loading-screen.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/dcwa.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/debugify.pw.toml"
 metafile = true
 
@@ -269,9 +273,6 @@ file = "resourcepacks/Better Banner Pattern.zip"
 file = "resourcepacks/Better Waxed Copper.zip"
 
 [[files]]
-file = "resourcepacks/Model Optimizations & Fixes.zip.rpo"
-
-[[files]]
 file = "resourcepacks/Visual Fish Buckets.zip"
 
 [[files]]
@@ -319,10 +320,6 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/minimal-rain.pw.toml"
-metafile = true
-
-[[files]]
-file = "resourcepacks/model-optimizations-and-fixes.pw.toml"
 metafile = true
 
 [[files]]

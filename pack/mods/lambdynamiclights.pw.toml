@@ -1,0 +1,8 @@
+name = "LambDynamicLights"
+filename = "lambdynamiclights-2.3.4+1.20.4-local.jar"
+side = "client"
+
+[download]
+url = "https://github.com/diskree/LambDynamicLights/releases/download/mc1.20.4/lambdynamiclights-2.3.4+1.20.4-local.jar"
+hash-format = "sha1"
+hash = "243771df1368f5ba417c11da79d59eda887f3754"

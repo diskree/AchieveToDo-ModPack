@@ -99,6 +99,10 @@ file = "mods/capes.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/cit-resewn.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/cloth-config.pw.toml"
 metafile = true
 
@@ -116,6 +120,10 @@ metafile = true
 
 [[files]]
 file = "mods/dark-loading-screen.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/dcwa.pw.toml"
 metafile = true
 
 [[files]]
@@ -175,6 +183,10 @@ file = "mods/krypton.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/lambdynamiclights.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/language-reload.pw.toml"
 metafile = true
 
@@ -204,6 +216,10 @@ metafile = true
 
 [[files]]
 file = "mods/no-resource-pack-warnings.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/real-arrow-tip.pw.toml"
 metafile = true
 
 [[files]]
@@ -257,9 +273,6 @@ file = "resourcepacks/Better Banner Pattern.zip"
 file = "resourcepacks/Better Waxed Copper.zip"
 
 [[files]]
-file = "resourcepacks/Model Optimize & Fixes.zip.rpo"
-
-[[files]]
 file = "resourcepacks/Visual Fish Buckets.zip"
 
 [[files]]
@@ -271,10 +284,6 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/barrel-fix.pw.toml"
-metafile = true
-
-[[files]]
-file = "resourcepacks/bettergrass.pw.toml"
 metafile = true
 
 [[files]]
@@ -298,6 +307,10 @@ file = "resourcepacks/default-dark-mode.pw.toml"
 metafile = true
 
 [[files]]
+file = "resourcepacks/fast-better-grass.pw.toml"
+metafile = true
+
+[[files]]
 file = "resourcepacks/hardcore-absorption-fix.pw.toml"
 metafile = true
 
@@ -307,10 +320,6 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/minimal-rain.pw.toml"
-metafile = true
-
-[[files]]
-file = "resourcepacks/model-optimizations-and-fixes.pw.toml"
 metafile = true
 
 [[files]]
@@ -334,7 +343,7 @@ file = "resourcepacks/unique-enchanted-books.pw.toml"
 metafile = true
 
 [[files]]
-file = "resourcepacks/visual-potions.pw.toml"
+file = "resourcepacks/visualpotions.pw.toml"
 metafile = true
 
 [[files]]

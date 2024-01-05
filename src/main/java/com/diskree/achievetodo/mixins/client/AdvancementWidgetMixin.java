@@ -25,6 +25,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(AdvancementWidget.class)
 public abstract class AdvancementWidgetMixin {
 
+    @Unique
+    private boolean isMystified() {
+        BlockedActionType action = BlockedActionType.map(advancement);
+        if (action == null || action.isUnblocked(client.player) || progress == null) {
+            return false;
+        }
+        CriterionProgress demystifiedProgress = progress.getCriterionProgress(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + action.getName());
+        return demystifiedProgress != null && !demystifiedProgress.isObtained();
+    }
+
     @Shadow
     @Final
     private PlacedAdvancement advancement;
@@ -39,16 +49,6 @@ public abstract class AdvancementWidgetMixin {
     @Shadow
     @Final
     private MinecraftClient client;
-
-    @Unique
-    private boolean isMystified() {
-        BlockedActionType action = BlockedActionType.map(advancement);
-        if (action == null || action.isUnblocked(client.player) || progress == null) {
-            return false;
-        }
-        CriterionProgress demystifiedProgress = progress.getCriterionProgress(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + action.getName());
-        return demystifiedProgress != null && !demystifiedProgress.isObtained();
-    }
 
     @ModifyArg(method = "renderWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawItemWithoutEntity(Lnet/minecraft/item/ItemStack;II)V"), index = 0)
     private ItemStack renderWidgetsModifyIcon(ItemStack stack) {

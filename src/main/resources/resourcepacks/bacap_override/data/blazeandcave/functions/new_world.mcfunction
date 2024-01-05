@@ -15,6 +15,8 @@ scoreboard players set bac_created bac_created 1
 gamerule announceAdvancements false
 
 scoreboard objectives setdisplay sidebar bac_advancements
+scoreboard objectives modify bac_advancements displayname {"translate":"gui.advancements"}
+
 function blazeandcave:setup_item_rewards
 function blazeandcave:setup_experience_rewards
 function blazeandcave:setup_trophy_rewards

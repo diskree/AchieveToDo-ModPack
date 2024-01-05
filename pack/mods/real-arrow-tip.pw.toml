@@ -1,0 +1,13 @@
+name = "Real Arrow Tip"
+filename = "real-arrow-tip-0.1.0+mc1.20.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/vgVfk0m2/versions/ds27RuKL/real-arrow-tip-0.1.0%2Bmc1.20.jar"
+hash-format = "sha1"
+hash = "3eb430c14fa789d263552a8c0512692a195f52ee"
+
+[update]
+[update.modrinth]
+mod-id = "vgVfk0m2"
+version = "ds27RuKL"

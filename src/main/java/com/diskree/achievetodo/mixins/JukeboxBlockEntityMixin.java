@@ -19,6 +19,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(JukeboxBlockEntity.class)
 public abstract class JukeboxBlockEntityMixin {
 
+    @Unique
+    private boolean isAncientCityPortalActivator() {
+        ItemStack stack = getStack();
+        JukeboxBlockEntity jukeboxBlockEntity = (JukeboxBlockEntity) (Object) this;
+        return stack != null && Items.MUSIC_DISC_5.equals(stack.getItem()) && AncientCityPortalEntity.isJukebox(jukeboxBlockEntity.getWorld(), jukeboxBlockEntity.getPos());
+    }
+
     @Shadow
     private int ticksThisSecond;
 
@@ -30,13 +37,6 @@ public abstract class JukeboxBlockEntityMixin {
 
     @Shadow
     public abstract void dropRecord();
-
-    @Unique
-    private boolean isAncientCityPortalActivator() {
-        ItemStack stack = getStack();
-        JukeboxBlockEntity jukeboxBlockEntity = (JukeboxBlockEntity) (Object) this;
-        return stack != null && Items.MUSIC_DISC_5.equals(stack.getItem()) && AncientCityPortalEntity.isJukebox(jukeboxBlockEntity.getWorld(), jukeboxBlockEntity.getPos());
-    }
 
     @Inject(method = "hasSecondPassed", at = @At("HEAD"), cancellable = true)
     private void hasSecondPassedInject(CallbackInfoReturnable<Boolean> cir) {

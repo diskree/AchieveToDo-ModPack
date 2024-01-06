@@ -27,11 +27,11 @@ public abstract class AdvancementWidgetMixin {
 
     @Unique
     private boolean isMystified() {
-        BlockedActionType action = BlockedActionType.map(advancement);
-        if (action == null || action.isUnblocked(client.player) || progress == null) {
+        BlockedActionType blockedAction = BlockedActionType.map(advancement);
+        if (blockedAction == null || blockedAction.isUnblocked(client.player) || progress == null) {
             return false;
         }
-        CriterionProgress demystifiedProgress = progress.getCriterionProgress(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + action.getName());
+        CriterionProgress demystifiedProgress = progress.getCriterionProgress(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + blockedAction.getName());
         return demystifiedProgress != null && !demystifiedProgress.isObtained();
     }
 
@@ -77,9 +77,9 @@ public abstract class AdvancementWidgetMixin {
 
     @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/advancement/AdvancementRequirements;getLength()I"))
     public int initRedirect(AdvancementRequirements instance) {
-        BlockedActionType action = BlockedActionType.map(advancement);
-        if (action != null) {
-            return action.getUnblockAdvancementsCount();
+        BlockedActionType blockedAction = BlockedActionType.map(advancement);
+        if (blockedAction != null) {
+            return blockedAction.getUnblockAdvancementsCount();
         }
         return advancement.getAdvancement().requirements().getLength();
     }

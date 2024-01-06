@@ -25,8 +25,8 @@ public class AdvancementToastMixin {
         if (advancement == null) {
             return null;
         }
-        BlockedActionType action = BlockedActionType.map(advancement.id());
-        return action != null ? action.getCategory() : null;
+        BlockedActionType blockedAction = BlockedActionType.map(advancement.id());
+        return blockedAction != null ? blockedAction.getCategory() : null;
     }
 
     @Shadow

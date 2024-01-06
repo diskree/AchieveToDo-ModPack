@@ -1,12 +1,11 @@
 package com.diskree.achievetodo.action;
 
 import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.Utils;
 import com.diskree.achievetodo.advancements.AdvancementsTab;
 import net.minecraft.advancement.PlacedAdvancement;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.ShulkerBoxBlock;
+import net.minecraft.block.*;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -26,7 +25,7 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     JUMP(
             8
     ),
-    USING_DOOR(
+    OPEN_DOOR(
             15
     ),
     SLEEP(
@@ -42,34 +41,37 @@ public enum BlockedActionType implements IGeneratedAdvancement {
             80
     ),
     USING_SHIELD(
-            90
+            90, Items.SHIELD
     ),
     USING_WATER_BUCKET(
-            130
+            130, Items.WATER_BUCKET
     ),
     USING_SHEARS(
-            140
+            140, Items.SHEARS
     ),
     USING_CROSSBOW(
-            150
+            150, Items.CROSSBOW
     ),
     BREAK_BLOCKS_IN_NEGATIVE_Y(
             200
     ),
     USING_FISHING_ROD(
-            220
+            220, Items.FISHING_ROD
     ),
     USING_BOW(
-            240
+            240, Items.BOW
     ),
     USING_BRUSH(
-            260
-    ),
-    USING_TRIDENT(
-            300
+            260, Items.BRUSH
     ),
     USING_SPYGLASS(
-            280
+            280, Items.SPYGLASS
+    ),
+    THROW_TRIDENT(
+            300, Items.TRIDENT
+    ),
+    THROW_ENDER_PEARL(
+            330, Items.ENDER_PEARL
     ),
     EQUIP_ELYTRA(
             650
@@ -77,10 +79,10 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     END_GATEWAY(
             675
     ),
-    USING_FIREWORKS_WHILE_FLY(
-            725
+    FLY(
+            725, Items.FIREWORK_ROCKET
     ),
-    USING_SHULKER_BOX(
+    OPEN_SHULKER_BOX(
             750
     ),
 
@@ -162,50 +164,50 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     EAT_ENCHANTED_GOLDEN_APPLE(
             160, FoodComponents.ENCHANTED_GOLDEN_APPLE
     ),
-    EAT_BAKED_POTATO(
-            180, FoodComponents.BAKED_POTATO
-    ),
     EAT_RABBIT(
-            200, FoodComponents.RABBIT
+            180, FoodComponents.RABBIT
     ),
     EAT_MUTTON(
-            220, FoodComponents.MUTTON
+            200, FoodComponents.MUTTON
     ),
     EAT_PORKCHOP(
-            240, FoodComponents.PORKCHOP
+            220, FoodComponents.PORKCHOP
     ),
     EAT_BEEF(
-            250, FoodComponents.BEEF
+            240, FoodComponents.BEEF
+    ),
+    EAT_BAKED_POTATO(
+            250, FoodComponents.BAKED_POTATO
     ),
     EAT_COOKED_SALMON(
             300, FoodComponents.COOKED_SALMON
     ),
     EAT_COOKED_COD(
-            400, FoodComponents.COOKED_COD
+            350, FoodComponents.COOKED_COD
     ),
     EAT_COOKED_RABBIT(
-            450, FoodComponents.COOKED_RABBIT
+            400, FoodComponents.COOKED_RABBIT
     ),
     EAT_COOKED_CHICKEN(
-            500, FoodComponents.COOKED_CHICKEN
+            450, FoodComponents.COOKED_CHICKEN
     ),
     EAT_COOKED_MUTTON(
-            550, FoodComponents.COOKED_MUTTON
+            500, FoodComponents.COOKED_MUTTON
     ),
     EAT_COOKED_PORKCHOP(
-            600, FoodComponents.COOKED_PORKCHOP
+            550, FoodComponents.COOKED_PORKCHOP
     ),
     EAT_COOKED_BEEF(
-            650, FoodComponents.COOKED_BEEF
+            600, FoodComponents.COOKED_BEEF
     ),
     EAT_BREAD(
-            700, FoodComponents.BREAD
+            650, FoodComponents.BREAD
     ),
     EAT_GOLDEN_CARROT(
-            800, FoodComponents.GOLDEN_CARROT
+            700, FoodComponents.GOLDEN_CARROT
     ),
 
-    USING_CHEST(
+    OPEN_CHEST(
             30, Blocks.CHEST
     ),
     USING_CRAFTING_TABLE(
@@ -214,7 +216,7 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     USING_STONECUTTER(
             75, Blocks.STONECUTTER
     ),
-    USING_FURNACE(
+    OPEN_FURNACE(
             100, Blocks.FURNACE
     ),
     USING_ANVIL(
@@ -226,19 +228,19 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     USING_LOOM(
             200, Blocks.LOOM
     ),
-    USING_SMOKER(
+    OPEN_SMOKER(
             250, Blocks.SMOKER
     ),
-    USING_BLAST_FURNACE(
+    OPEN_BLAST_FURNACE(
             270, Blocks.BLAST_FURNACE
     ),
     USING_CARTOGRAPHY_TABLE(
             300, Blocks.CARTOGRAPHY_TABLE
     ),
-    USING_ENDER_CHEST(
+    OPEN_ENDER_CHEST(
             350, Blocks.ENDER_CHEST
     ),
-    USING_BREWING_STAND(
+    OPEN_BREWING_STAND(
             400, Blocks.BREWING_STAND
     ),
     USING_SMITHING_TABLE(
@@ -251,11 +253,11 @@ public enum BlockedActionType implements IGeneratedAdvancement {
             950, Blocks.ENCHANTING_TABLE
     ),
 
-    USING_GOLD_TOOLS(
+    USING_GOLDEN_TOOLS(
             40, ToolMaterials.GOLD
     ),
-    USING_WOOD_TOOLS(
-            70, ToolMaterials.WOOD
+    USING_WOODEN_TOOLS(
+            60, ToolMaterials.WOOD
     ),
     USING_STONE_TOOLS(
             90, ToolMaterials.STONE
@@ -270,7 +272,7 @@ public enum BlockedActionType implements IGeneratedAdvancement {
             500, ToolMaterials.NETHERITE
     ),
 
-    EQUIP_GOLD_ARMOR(
+    EQUIP_GOLDEN_ARMOR(
             40, ArmorMaterials.GOLD
     ),
     EQUIP_LEATHER_ARMOR(
@@ -279,14 +281,11 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     EQUIP_IRON_ARMOR(
             150, ArmorMaterials.IRON
     ),
-    EQUIP_CHAIN_ARMOR(
+    EQUIP_CHAINMAIL_ARMOR(
             200, ArmorMaterials.CHAIN
     ),
-    EQUIP_TURTLE_ARMOR(
-            300, ArmorMaterials.TURTLE
-    ),
     EQUIP_DIAMOND_ARMOR(
-            400, ArmorMaterials.DIAMOND
+            300, ArmorMaterials.DIAMOND
     ),
     EQUIP_NETHERITE_ARMOR(
             550, ArmorMaterials.NETHERITE
@@ -342,6 +341,7 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     private final int unblockAdvancementsCount;
 
     private final FoodComponent food;
+    private final Item item;
     private final Block block;
     private final ToolMaterials toolMaterial;
     private final ArmorMaterials equipmentMaterial;
@@ -349,36 +349,41 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     private final VillagerProfession villager;
 
     BlockedActionType(int unblockAdvancementsCount) {
-        this(unblockAdvancementsCount, null, null, null, null, null, null);
+        this(unblockAdvancementsCount, null, null, null, null, null, null, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, FoodComponent food) {
-        this(unblockAdvancementsCount, food, null, null, null, null, null);
+        this(unblockAdvancementsCount, food, null, null, null, null, null, null);
+    }
+
+    BlockedActionType(int unblockAdvancementsCount, Item item) {
+        this(unblockAdvancementsCount, null, item, null, null, null, null, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, Block block) {
-        this(unblockAdvancementsCount, null, block, null, null, null, null);
+        this(unblockAdvancementsCount, null, null, block, null, null, null, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, ToolMaterials materials) {
-        this(unblockAdvancementsCount, null, null, materials, null, null, null);
+        this(unblockAdvancementsCount, null, null, null, materials, null, null, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, ArmorMaterials materials) {
-        this(unblockAdvancementsCount, null, null, null, materials, null, null);
+        this(unblockAdvancementsCount, null, null, null, null, materials, null, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, RegistryKey<World> dimension) {
-        this(unblockAdvancementsCount, null, null, null, null, dimension, null);
+        this(unblockAdvancementsCount, null, null, null, null, null, dimension, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, VillagerProfession villager) {
-        this(unblockAdvancementsCount, null, null, null, null, null, villager);
+        this(unblockAdvancementsCount, null, null, null, null, null, null, villager);
     }
 
     BlockedActionType(
             int unblockAdvancementsCount,
             FoodComponent food,
+            Item item,
             Block block,
             ToolMaterials toolMaterial,
             ArmorMaterials equipmentMaterial,
@@ -387,6 +392,7 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     ) {
         this.unblockAdvancementsCount = unblockAdvancementsCount;
         this.food = food;
+        this.item = item;
         this.block = block;
         this.toolMaterial = toolMaterial;
         this.equipmentMaterial = equipmentMaterial;
@@ -398,7 +404,10 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         if (food != null) {
             return BlockedActionCategory.FOOD;
         }
-        if (block != null || this == USING_SHULKER_BOX) {
+        if (item != null && this != USING_WATER_BUCKET && this != FLY) {
+            return BlockedActionCategory.ITEM;
+        }
+        if (block != null || this == OPEN_SHULKER_BOX) {
             return BlockedActionCategory.BLOCK;
         }
         if (toolMaterial != null) {
@@ -418,12 +427,12 @@ public enum BlockedActionType implements IGeneratedAdvancement {
 
     public Text getBlockedMessage() {
         if (food != null) {
-            return Text.translatable("blocked.food");
+            return Utils.translateOrNull("blocked.food");
         }
         if (villager != null) {
-            return Text.translatable("blocked.villager");
+            return Utils.translateOrNull("blocked.villager");
         }
-        return Text.translatable("blocked." + getName());
+        return Utils.translateOrNull("blocked." + getName());
     }
 
     public Text buildBlockedDescription(PlayerEntity player) {
@@ -449,9 +458,9 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         if (name == null) {
             return null;
         }
-        for (BlockedActionType action : values()) {
-            if (action.name().equalsIgnoreCase(name)) {
-                return action;
+        for (BlockedActionType blockedAction : values()) {
+            if (blockedAction.name().equalsIgnoreCase(name)) {
+                return blockedAction;
             }
         }
         return null;
@@ -477,12 +486,41 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     }
 
     @Nullable
-    public static BlockedActionType findBlockedBlock(Block block) {
-        if (block instanceof ShulkerBoxBlock) {
-            return USING_SHULKER_BOX;
+    public static BlockedActionType findBlockedItem(PlayerEntity player, ItemStack stack) {
+        if (stack.isOf(Items.CROSSBOW)) {
+            return CrossbowItem.isCharged(stack) ? BlockedActionType.USING_CROSSBOW : null;
+        }
+        if (stack.isOf(Items.FIREWORK_ROCKET)) {
+            return player.isFallFlying() ? BlockedActionType.FLY : null;
+        }
+        if (stack.isOf(Items.TRIDENT)) {
+            return EnchantmentHelper.getRiptide(stack) == 0 ? BlockedActionType.THROW_TRIDENT : null;
         }
         for (BlockedActionType blockedAction : BlockedActionType.values()) {
-            if (block == blockedAction.block) {
+            Item item = stack.getItem();
+            if (item == blockedAction.item) {
+                return blockedAction;
+            }
+        }
+        return null;
+    }
+
+    @Nullable
+    public static BlockedActionType findBlockedBlock(BlockState blockState) {
+        if (blockState == null) {
+            return null;
+        }
+        if (blockState.getBlock() instanceof ShulkerBoxBlock) {
+            return OPEN_SHULKER_BOX;
+        }
+        if (blockState.getBlock() instanceof BedBlock) {
+            return SLEEP;
+        }
+        if (blockState.getBlock() instanceof DoorBlock doorBlock) {
+            return !doorBlock.isOpen(blockState) ? OPEN_DOOR : null;
+        }
+        for (BlockedActionType blockedAction : BlockedActionType.values()) {
+            if (blockState.isOf(blockedAction.block)) {
                 return blockedAction;
             }
         }
@@ -491,6 +529,12 @@ public enum BlockedActionType implements IGeneratedAdvancement {
 
     @Nullable
     public static BlockedActionType findBlockedTool(Item item) {
+        if (item == null) {
+            return null;
+        }
+        if (item == Items.SHEARS) {
+            return BlockedActionType.USING_SHEARS;
+        }
         if (item instanceof ToolItem toolItem) {
             for (BlockedActionType blockedAction : BlockedActionType.values()) {
                 if (toolItem.getMaterial() == blockedAction.toolMaterial) {
@@ -503,6 +547,9 @@ public enum BlockedActionType implements IGeneratedAdvancement {
 
     @Nullable
     public static BlockedActionType findBlockedEquipment(Item item) {
+        if (item == null) {
+            return null;
+        }
         if (item == Items.ELYTRA) {
             return EQUIP_ELYTRA;
         }
@@ -518,6 +565,9 @@ public enum BlockedActionType implements IGeneratedAdvancement {
 
     @Nullable
     public static BlockedActionType findBlockedDimension(RegistryKey<World> dimension) {
+        if (dimension == null) {
+            return null;
+        }
         for (BlockedActionType blockedAction : BlockedActionType.values()) {
             if (dimension == blockedAction.dimension) {
                 return blockedAction;
@@ -528,6 +578,9 @@ public enum BlockedActionType implements IGeneratedAdvancement {
 
     @Nullable
     public static BlockedActionType findBlockedVillager(VillagerProfession profession) {
+        if (profession == null) {
+            return null;
+        }
         for (BlockedActionType blockedAction : BlockedActionType.values()) {
             if (profession == blockedAction.villager) {
                 return blockedAction;
@@ -550,6 +603,8 @@ public enum BlockedActionType implements IGeneratedAdvancement {
                     .filter(item -> item.getFoodComponent() == food)
                     .findFirst()
                     .orElse(null);
+        } else if (item != null) {
+            iconItem = item;
         } else if (block != null) {
             iconItem = block.asItem();
         } else if (toolMaterial != null) {
@@ -562,6 +617,8 @@ public enum BlockedActionType implements IGeneratedAdvancement {
                     .filter(item -> item instanceof ArmorItem chestPlateItem && chestPlateItem.getType() == ArmorItem.Type.CHESTPLATE && chestPlateItem.getMaterial() == equipmentMaterial)
                     .findFirst()
                     .orElse(null);
+        } else if (dimension != null) {
+            iconItem = dimension == World.NETHER ? Items.OBSIDIAN : Items.END_PORTAL_FRAME;
         } else if (villager != null) {
             PointOfInterestType poi = Registries.POINT_OF_INTEREST_TYPE.get(new Identifier(villager.id()));
             if (poi != null && poi.blockStates() != null) {
@@ -574,31 +631,30 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         } else {
             iconItem = switch (this) {
                 case JUMP -> Items.SLIME_BLOCK;
-                case BREAK_BLOCKS_IN_POSITIVE_Y -> Items.WOODEN_PICKAXE;
+                case OPEN_DOOR -> Items.DARK_OAK_DOOR;
+                case SLEEP -> Items.RED_BED;
+                case OPEN_INVENTORY -> Items.BUNDLE;
+                case BREAK_BLOCKS_IN_POSITIVE_Y -> Items.COBBLESTONE;
                 case USING_BOAT -> Items.OAK_BOAT;
-                case USING_SHIELD -> Items.SHIELD;
-                case USING_WATER_BUCKET -> Items.WATER_BUCKET;
-                case BREAK_BLOCKS_IN_NEGATIVE_Y -> Items.STONE_PICKAXE;
-                case USING_BOW -> Items.BOW;
-                case USING_FIREWORKS_WHILE_FLY -> Items.FIREWORK_ROCKET;
-                case USING_SHULKER_BOX -> Items.SHULKER_BOX;
-                case NETHER -> Items.OBSIDIAN;
-                case END -> Items.END_PORTAL_FRAME;
+                case BREAK_BLOCKS_IN_NEGATIVE_Y -> Items.COBBLED_DEEPSLATE;
                 case EQUIP_ELYTRA -> Items.ELYTRA;
                 case END_GATEWAY -> Items.END_STONE_BRICKS;
+                case OPEN_SHULKER_BOX -> Items.SHULKER_BOX;
                 default -> null;
             };
         }
         return iconItem != null ? new ItemStack(iconItem) : null;
     }
 
+    @Nullable
     @Override
     public Text getTitle() {
-        return Text.translatable("blocked." + getName() + ".title");
+        return Utils.translateOrNull("blocked." + getName() + ".title");
     }
 
+    @Nullable
     @Override
     public Text getDescription() {
-        return Text.translatable("blocked." + getName() + ".description");
+        return Utils.translateOrNull("blocked." + getName() + ".description");
     }
 }

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 readonly NAME_COLOR_FROM="#07c5fa"
-readonly NAME_COLOR_TO="#dff2f7"
+readonly NAME_COLOR_TO="#b2e8f7"
 
-readonly VERSION_COLOR_MAJOR="#fd99b1"
-readonly VERSION_COLOR_MINOR="#fee6a8"
+readonly VERSION_COLOR_MAJOR="#f8c8dc"
+readonly VERSION_COLOR_MINOR="#fac898"
 readonly VERSION_COLOR_PATCH="#e4adf7"
 
 readonly modId=$1

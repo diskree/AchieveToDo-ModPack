@@ -55,7 +55,7 @@
   "blocked.using_cartography_table": "Вы сейчас не можете использовать стол картографа",
   "blocked.using_smithing_table": "Вы сейчас не можете использовать стол кузнеца",
 
-  "unblock.amount": ". Для разблокировки осталось выполнить достижений: ",
+  "unblock.amount": ". Осталось выполнить достижений: ",
   "unblock.food": "Доступна еда",
   "unblock.action": "Доступно действие",
   "unblock.item": "Доступен предмет",
@@ -338,6 +338,8 @@
   "hints.nothing_lasts_forever.description": "Сломайте портал, получив от него 10 подсказок",
   "hints.no_new_updates.title": "Новых обновлений нет",
   "hints.no_new_updates.description": "Попытайтесь получить подсказку при отсутствии достижений, по которым есть что подсказать",
+
+  "%1$s has unblocked %2$s%3$s%4$s": "%1$s разблокировал %2$s%3$s%4$s",
 
   "error.screen.title": "Упс!",
 

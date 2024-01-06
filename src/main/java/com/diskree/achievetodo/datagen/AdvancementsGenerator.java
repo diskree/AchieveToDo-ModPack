@@ -14,9 +14,7 @@ import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.function.Consumer;
 
 public class AdvancementsGenerator extends FabricAdvancementProvider {
@@ -30,6 +28,14 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
 
     @Override
     public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
+        Map<Integer, BlockedActionType> countMap = new HashMap<>();
+        for (BlockedActionType actionToCheck : BlockedActionType.values()) {
+            BlockedActionType action = countMap.get(actionToCheck.getUnblockAdvancementsCount());
+            if (action != null) {
+                throw new IllegalArgumentException("Same count of required advancements in " + action.getName() + " and " + actionToCheck.getName());
+            }
+            countMap.put(actionToCheck.getUnblockAdvancementsCount(), actionToCheck);
+        }
         for (AdvancementsTab root : AdvancementsTab.values()) {
             if (!root.isModded || root == AdvancementsTab.HINTS) {
                 continue;

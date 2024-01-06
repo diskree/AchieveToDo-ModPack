@@ -58,7 +58,7 @@
   "blocked.using_cartography_table": "You cannot use a cartography table yet",
   "blocked.using_smithing_table": "You cannot use a smithing table yet",
 
-  "unblock.amount": ". Advancements left until unlocking: ",
+  "unblock.amount": ". Advancements left: ",
   "unblock.food": "Food available",
   "unblock.action": "Action available",
   "unblock.item": "Item available",

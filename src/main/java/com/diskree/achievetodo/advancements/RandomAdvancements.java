@@ -955,10 +955,8 @@ public class RandomAdvancements {
             return null;
         }
         PlayerAdvancementTracker playerAdvancementTracker = player.getAdvancementTracker();
-        AdvancementManager advancementManager = playerAdvancementTracker.advancementManager;
-        Map<AdvancementEntry, AdvancementProgress> progresses = playerAdvancementTracker.progress;
         ArrayList<AdvancementEntry> advancements = new ArrayList<>();
-        for (AdvancementEntry advancementEntry : new ArrayList<>(progresses.keySet())) {
+        for (AdvancementEntry advancementEntry : new ArrayList<>(playerAdvancementTracker.visibleAdvancements)) {
             if (advancementEntry == null) {
                 continue;
             }
@@ -970,7 +968,7 @@ public class RandomAdvancements {
             if (display == null || display.isHidden()) {
                 continue;
             }
-            PlacedAdvancement placedAdvancement = advancementManager.get(advancementEntry);
+            PlacedAdvancement placedAdvancement = playerAdvancementTracker.advancementManager.get(advancementEntry);
             if (placedAdvancement == null) {
                 continue;
             }
@@ -1010,7 +1008,7 @@ public class RandomAdvancements {
                     continue;
                 }
             }
-            AdvancementProgress progress = progresses.get(advancementEntry);
+            AdvancementProgress progress = playerAdvancementTracker.progress.get(advancementEntry);
             if (progress != null && progress.isDone()) {
                 continue;
             }
@@ -1019,6 +1017,6 @@ public class RandomAdvancements {
         if (advancements.isEmpty()) {
             return null;
         }
-        return advancementManager.get(advancements.get(player.getRandom().nextInt(advancements.size())));
+        return playerAdvancementTracker.advancementManager.get(advancements.get(player.getRandom().nextInt(advancements.size())));
     }
 }

@@ -255,6 +255,10 @@ file = "mods/textile-backup.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/xyzbook.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/yacl.pw.toml"
 metafile = true
 

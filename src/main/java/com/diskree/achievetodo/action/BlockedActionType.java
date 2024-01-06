@@ -38,52 +38,52 @@ public enum BlockedActionType implements IGeneratedAdvancement {
             30
     ),
     USING_BOAT(
-            80
+            82
     ),
     USING_SHIELD(
-            90, Items.SHIELD
+            93, Items.SHIELD
     ),
     USING_WATER_BUCKET(
-            130, Items.WATER_BUCKET
+            135, Items.WATER_BUCKET
     ),
     USING_SHEARS(
-            140, Items.SHEARS
+            144, Items.SHEARS
     ),
     USING_CROSSBOW(
-            150, Items.CROSSBOW
+            178, Items.CROSSBOW
     ),
     BREAK_BLOCKS_IN_NEGATIVE_Y(
-            200
+            206
     ),
     USING_FISHING_ROD(
-            220, Items.FISHING_ROD
+            225, Items.FISHING_ROD
     ),
     USING_BOW(
-            240, Items.BOW
+            243, Items.BOW
     ),
     USING_BRUSH(
-            260, Items.BRUSH
+            261, Items.BRUSH
     ),
     USING_SPYGLASS(
-            280, Items.SPYGLASS
+            282, Items.SPYGLASS
     ),
     THROW_TRIDENT(
-            300, Items.TRIDENT
+            311, Items.TRIDENT
     ),
     THROW_ENDER_PEARL(
-            330, Items.ENDER_PEARL
+            334, Items.ENDER_PEARL
     ),
     EQUIP_ELYTRA(
-            650
+            657
     ),
     END_GATEWAY(
-            675
+            679
     ),
     FLY(
-            725, Items.FIREWORK_ROCKET
+            721, Items.FIREWORK_ROCKET
     ),
     OPEN_SHULKER_BOX(
-            750
+            754
     ),
 
     EAT_SALMON(
@@ -111,191 +111,191 @@ public enum BlockedActionType implements IGeneratedAdvancement {
             18, FoodComponents.PUFFERFISH
     ),
     EAT_POISONOUS_POTATO(
-            20, FoodComponents.POISONOUS_POTATO
+            22, FoodComponents.POISONOUS_POTATO
     ),
     EAT_CHORUS_FRUIT(
-            25, FoodComponents.CHORUS_FRUIT
+            27, FoodComponents.CHORUS_FRUIT
     ),
     EAT_SUSPICIOUS_STEW(
-            30, FoodComponents.SUSPICIOUS_STEW
+            32, FoodComponents.SUSPICIOUS_STEW
     ),
     EAT_BEETROOT(
-            35, FoodComponents.BEETROOT
+            38, FoodComponents.BEETROOT
     ),
     EAT_CARROT(
-            40, FoodComponents.CARROT
+            43, FoodComponents.CARROT
     ),
     EAT_CHICKEN(
-            45, FoodComponents.CHICKEN
+            47, FoodComponents.CHICKEN
     ),
     EAT_DRIED_KELP(
-            50, FoodComponents.DRIED_KELP
+            51, FoodComponents.DRIED_KELP
     ),
     EAT_BEETROOT_SOUP(
-            60, FoodComponents.BEETROOT_SOUP
+            68, FoodComponents.BEETROOT_SOUP
     ),
     EAT_POTATO(
-            70, FoodComponents.POTATO
+            71, FoodComponents.POTATO
     ),
     EAT_APPLE(
-            80, FoodComponents.APPLE
+            83, FoodComponents.APPLE
     ),
     EAT_MELON_SLICE(
-            90, FoodComponents.MELON_SLICE
+            95, FoodComponents.MELON_SLICE
     ),
     EAT_COOKIE(
-            100, FoodComponents.COOKIE
+            102, FoodComponents.COOKIE
     ),
     EAT_MUSHROOM_STEW(
-            110, FoodComponents.MUSHROOM_STEW
+            114, FoodComponents.MUSHROOM_STEW
     ),
     EAT_RABBIT_STEW(
-            120, FoodComponents.RABBIT_STEW
+            127, FoodComponents.RABBIT_STEW
     ),
     EAT_HONEY_BOTTLE(
-            130, FoodComponents.HONEY_BOTTLE
+            132, FoodComponents.HONEY_BOTTLE
     ),
     EAT_PUMPKIN_PIE(
-            140, FoodComponents.PUMPKIN_PIE
+            141, FoodComponents.PUMPKIN_PIE
     ),
     EAT_GOLDEN_APPLE(
-            150, FoodComponents.GOLDEN_APPLE
+            155, FoodComponents.GOLDEN_APPLE
     ),
     EAT_ENCHANTED_GOLDEN_APPLE(
-            160, FoodComponents.ENCHANTED_GOLDEN_APPLE
+            166, FoodComponents.ENCHANTED_GOLDEN_APPLE
     ),
     EAT_RABBIT(
-            180, FoodComponents.RABBIT
+            182, FoodComponents.RABBIT
     ),
     EAT_MUTTON(
-            200, FoodComponents.MUTTON
+            212, FoodComponents.MUTTON
     ),
     EAT_PORKCHOP(
-            220, FoodComponents.PORKCHOP
+            226, FoodComponents.PORKCHOP
     ),
     EAT_BEEF(
-            240, FoodComponents.BEEF
+            249, FoodComponents.BEEF
     ),
     EAT_BAKED_POTATO(
-            250, FoodComponents.BAKED_POTATO
+            252, FoodComponents.BAKED_POTATO
     ),
     EAT_COOKED_SALMON(
-            300, FoodComponents.COOKED_SALMON
+            312, FoodComponents.COOKED_SALMON
     ),
     EAT_COOKED_COD(
-            350, FoodComponents.COOKED_COD
+            373, FoodComponents.COOKED_COD
     ),
     EAT_COOKED_RABBIT(
-            400, FoodComponents.COOKED_RABBIT
+            432, FoodComponents.COOKED_RABBIT
     ),
     EAT_COOKED_CHICKEN(
-            450, FoodComponents.COOKED_CHICKEN
+            459, FoodComponents.COOKED_CHICKEN
     ),
     EAT_COOKED_MUTTON(
-            500, FoodComponents.COOKED_MUTTON
+            524, FoodComponents.COOKED_MUTTON
     ),
     EAT_COOKED_PORKCHOP(
             550, FoodComponents.COOKED_PORKCHOP
     ),
     EAT_COOKED_BEEF(
-            600, FoodComponents.COOKED_BEEF
+            603, FoodComponents.COOKED_BEEF
     ),
     EAT_BREAD(
-            650, FoodComponents.BREAD
+            654, FoodComponents.BREAD
     ),
     EAT_GOLDEN_CARROT(
-            700, FoodComponents.GOLDEN_CARROT
+            702, FoodComponents.GOLDEN_CARROT
     ),
 
     OPEN_CHEST(
-            30, Blocks.CHEST
+            36, Blocks.CHEST
     ),
     USING_CRAFTING_TABLE(
-            50, Blocks.CRAFTING_TABLE
+            52, Blocks.CRAFTING_TABLE
     ),
     USING_STONECUTTER(
-            75, Blocks.STONECUTTER
+            78, Blocks.STONECUTTER
     ),
     OPEN_FURNACE(
-            100, Blocks.FURNACE
+            99, Blocks.FURNACE
     ),
     USING_ANVIL(
-            150, Blocks.ANVIL
+            103, Blocks.ANVIL
     ),
     USING_GRINDSTONE(
-            175, Blocks.GRINDSTONE
+            174, Blocks.GRINDSTONE
     ),
     USING_LOOM(
-            200, Blocks.LOOM
+            215, Blocks.LOOM
     ),
     OPEN_SMOKER(
-            250, Blocks.SMOKER
+            257, Blocks.SMOKER
     ),
     OPEN_BLAST_FURNACE(
-            270, Blocks.BLAST_FURNACE
+            272, Blocks.BLAST_FURNACE
     ),
     USING_CARTOGRAPHY_TABLE(
-            300, Blocks.CARTOGRAPHY_TABLE
+            304, Blocks.CARTOGRAPHY_TABLE
     ),
     OPEN_ENDER_CHEST(
-            350, Blocks.ENDER_CHEST
+            352, Blocks.ENDER_CHEST
     ),
     OPEN_BREWING_STAND(
-            400, Blocks.BREWING_STAND
+            409, Blocks.BREWING_STAND
     ),
     USING_SMITHING_TABLE(
-            450, Blocks.SMITHING_TABLE
+            453, Blocks.SMITHING_TABLE
     ),
     USING_BEACON(
-            500, Blocks.BEACON
+            505, Blocks.BEACON
     ),
     USING_ENCHANTING_TABLE(
-            950, Blocks.ENCHANTING_TABLE
+            937, Blocks.ENCHANTING_TABLE
     ),
 
     USING_GOLDEN_TOOLS(
-            40, ToolMaterials.GOLD
+            41, ToolMaterials.GOLD
     ),
     USING_WOODEN_TOOLS(
-            60, ToolMaterials.WOOD
+            63, ToolMaterials.WOOD
     ),
     USING_STONE_TOOLS(
-            90, ToolMaterials.STONE
+            97, ToolMaterials.STONE
     ),
     USING_IRON_TOOLS(
-            120, ToolMaterials.IRON
+            122, ToolMaterials.IRON
     ),
     USING_DIAMOND_TOOLS(
-            350, ToolMaterials.DIAMOND
+            358, ToolMaterials.DIAMOND
     ),
     USING_NETHERITE_TOOLS(
-            500, ToolMaterials.NETHERITE
+            504, ToolMaterials.NETHERITE
     ),
 
     EQUIP_GOLDEN_ARMOR(
-            40, ArmorMaterials.GOLD
+            44, ArmorMaterials.GOLD
     ),
     EQUIP_LEATHER_ARMOR(
-            90, ArmorMaterials.LEATHER
+            98, ArmorMaterials.LEATHER
     ),
     EQUIP_IRON_ARMOR(
-            150, ArmorMaterials.IRON
+            158, ArmorMaterials.IRON
     ),
     EQUIP_CHAINMAIL_ARMOR(
-            200, ArmorMaterials.CHAIN
+            203, ArmorMaterials.CHAIN
     ),
     EQUIP_DIAMOND_ARMOR(
-            300, ArmorMaterials.DIAMOND
+            305, ArmorMaterials.DIAMOND
     ),
     EQUIP_NETHERITE_ARMOR(
-            550, ArmorMaterials.NETHERITE
+            552, ArmorMaterials.NETHERITE
     ),
 
     NETHER(
-            300, World.NETHER
+            275, World.NETHER
     ),
     END(
-            600, World.END
+            575, World.END
     ),
 
     VILLAGER_MASON(

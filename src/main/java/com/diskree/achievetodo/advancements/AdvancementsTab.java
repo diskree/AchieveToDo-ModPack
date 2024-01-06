@@ -58,30 +58,6 @@ public enum AdvancementsTab {
                             EAT_COOKIE
                     ),
                     List.of(
-                            EAT_MUSHROOM_STEW,
-                            EAT_RABBIT_STEW,
-                            EAT_HONEY_BOTTLE,
-                            EAT_PUMPKIN_PIE,
-                            EAT_GOLDEN_APPLE,
-                            EAT_ENCHANTED_GOLDEN_APPLE,
-                            EAT_BAKED_POTATO,
-                            EAT_RABBIT,
-                            EAT_MUTTON,
-                            EAT_PORKCHOP
-                    ),
-                    List.of(
-                            EAT_BEEF,
-                            EAT_COOKED_SALMON,
-                            EAT_COOKED_COD,
-                            EAT_COOKED_RABBIT,
-                            EAT_COOKED_CHICKEN,
-                            EAT_COOKED_MUTTON,
-                            EAT_COOKED_PORKCHOP,
-                            EAT_COOKED_BEEF,
-                            EAT_BREAD,
-                            EAT_GOLDEN_CARROT
-                    ),
-                    List.of(
                             OPEN_CHEST,
                             USING_CRAFTING_TABLE,
                             USING_STONECUTTER,
@@ -90,38 +66,6 @@ public enum AdvancementsTab {
                             USING_GRINDSTONE,
                             USING_LOOM,
                             OPEN_SMOKER
-                    ),
-                    List.of(
-                            OPEN_BLAST_FURNACE,
-                            USING_CARTOGRAPHY_TABLE,
-                            OPEN_ENDER_CHEST,
-                            OPEN_BREWING_STAND,
-                            USING_SMITHING_TABLE,
-                            USING_BEACON,
-                            OPEN_SHULKER_BOX,
-                            USING_ENCHANTING_TABLE
-                    ),
-                    List.of(
-                            JUMP,
-                            OPEN_DOOR,
-                            SLEEP,
-                            OPEN_INVENTORY,
-                            BREAK_BLOCKS_IN_POSITIVE_Y,
-                            USING_BOAT,
-                            USING_SHIELD,
-                            USING_WATER_BUCKET,
-                            USING_SHEARS
-                    ),
-                    List.of(
-                            USING_CROSSBOW,
-                            BREAK_BLOCKS_IN_NEGATIVE_Y,
-                            USING_FISHING_ROD,
-                            USING_BOW,
-                            USING_BRUSH,
-                            USING_SPYGLASS,
-                            THROW_TRIDENT,
-                            THROW_ENDER_PEARL,
-                            FLY
                     ),
                     List.of(
                             USING_GOLDEN_TOOLS,
@@ -134,14 +78,15 @@ public enum AdvancementsTab {
                             EQUIP_CHAINMAIL_ARMOR
                     ),
                     List.of(
-                            EQUIP_DIAMOND_ARMOR,
-                            BlockedActionType.NETHER,
-                            USING_DIAMOND_TOOLS,
-                            USING_NETHERITE_TOOLS,
-                            EQUIP_NETHERITE_ARMOR,
-                            BlockedActionType.END,
-                            EQUIP_ELYTRA,
-                            END_GATEWAY
+                            JUMP,
+                            OPEN_DOOR,
+                            SLEEP,
+                            OPEN_INVENTORY,
+                            BREAK_BLOCKS_IN_POSITIVE_Y,
+                            USING_BOAT,
+                            USING_SHIELD,
+                            USING_WATER_BUCKET,
+                            USING_SHEARS
                     ),
                     List.of(
                             VILLAGER_MASON,
@@ -157,6 +102,61 @@ public enum AdvancementsTab {
                             VILLAGER_WEAPONSMITH,
                             VILLAGER_TOOLSMITH,
                             VILLAGER_LIBRARIAN
+                    ),
+                    List.of(
+                            USING_CROSSBOW,
+                            BREAK_BLOCKS_IN_NEGATIVE_Y,
+                            USING_FISHING_ROD,
+                            USING_BOW,
+                            USING_BRUSH,
+                            USING_SPYGLASS,
+                            THROW_TRIDENT,
+                            THROW_ENDER_PEARL,
+                            FLY
+                    ),
+                    List.of(
+                            BlockedActionType.NETHER,
+                            EQUIP_DIAMOND_ARMOR,
+                            USING_DIAMOND_TOOLS,
+                            USING_NETHERITE_TOOLS,
+                            EQUIP_NETHERITE_ARMOR,
+                            BlockedActionType.END,
+                            EQUIP_ELYTRA,
+                            END_GATEWAY
+                    ),
+                    List.of(
+                            OPEN_BLAST_FURNACE,
+                            USING_CARTOGRAPHY_TABLE,
+                            OPEN_ENDER_CHEST,
+                            OPEN_BREWING_STAND,
+                            USING_SMITHING_TABLE,
+                            USING_BEACON,
+                            OPEN_SHULKER_BOX,
+                            USING_ENCHANTING_TABLE
+                    ),
+                    List.of(
+                            EAT_MUSHROOM_STEW,
+                            EAT_RABBIT_STEW,
+                            EAT_HONEY_BOTTLE,
+                            EAT_PUMPKIN_PIE,
+                            EAT_GOLDEN_APPLE,
+                            EAT_ENCHANTED_GOLDEN_APPLE,
+                            EAT_RABBIT,
+                            EAT_MUTTON,
+                            EAT_PORKCHOP,
+                            EAT_BEEF
+                    ),
+                    List.of(
+                            EAT_BAKED_POTATO,
+                            EAT_COOKED_SALMON,
+                            EAT_COOKED_COD,
+                            EAT_COOKED_RABBIT,
+                            EAT_COOKED_CHICKEN,
+                            EAT_COOKED_MUTTON,
+                            EAT_COOKED_PORKCHOP,
+                            EAT_COOKED_BEEF,
+                            EAT_BREAD,
+                            EAT_GOLDEN_CARROT
                     )
             )
     ),

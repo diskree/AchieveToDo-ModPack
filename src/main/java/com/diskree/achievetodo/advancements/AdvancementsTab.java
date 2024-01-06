@@ -115,8 +115,8 @@ public enum AdvancementsTab {
                             FLY
                     ),
                     List.of(
-                            EQUIP_DIAMOND_ARMOR,
                             BlockedActionType.NETHER,
+                            EQUIP_DIAMOND_ARMOR,
                             USING_DIAMOND_TOOLS,
                             USING_NETHERITE_TOOLS,
                             EQUIP_NETHERITE_ARMOR,
@@ -141,13 +141,13 @@ public enum AdvancementsTab {
                             EAT_PUMPKIN_PIE,
                             EAT_GOLDEN_APPLE,
                             EAT_ENCHANTED_GOLDEN_APPLE,
-                            EAT_BAKED_POTATO,
                             EAT_RABBIT,
                             EAT_MUTTON,
-                            EAT_PORKCHOP
+                            EAT_PORKCHOP,
+                            EAT_BEEF
                     ),
                     List.of(
-                            EAT_BEEF,
+                            EAT_BAKED_POTATO,
                             EAT_COOKED_SALMON,
                             EAT_COOKED_COD,
                             EAT_COOKED_RABBIT,

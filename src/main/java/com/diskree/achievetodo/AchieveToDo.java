@@ -192,10 +192,10 @@ public class AchieveToDo implements ModInitializer {
             return Command.SINGLE_SUCCESS;
         }))));
         ServerPlayNetworking.registerGlobalReceiver(GRANT_BLOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
-            BlockedActionType action = buf.readEnumConstant(BlockedActionType.class);
+            BlockedActionType blockedAction = buf.readEnumConstant(BlockedActionType.class);
             boolean isDemystifyOnly = buf.readBoolean();
-            if (action != null) {
-                server.execute(() -> grantBlockedAction(player, action, isDemystifyOnly));
+            if (blockedAction != null) {
+                server.execute(() -> grantBlockedAction(player, blockedAction, isDemystifyOnly));
             }
         });
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
@@ -216,7 +216,7 @@ public class AchieveToDo implements ModInitializer {
         UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
             BlockState block = world.getBlockState(hitResult.getBlockPos());
             ItemStack stack = player.getStackInHand(hand);
-            if (isBlockBlocked(player, block.getBlock())) {
+            if (isBlockBlocked(player, block)) {
                 return ActionResult.FAIL;
             }
             if (isToolBlocked(player, stack)) {
@@ -273,43 +273,20 @@ public class AchieveToDo implements ModInitializer {
         }
     }
 
-    private boolean isItemBlocked(PlayerEntity player, ItemStack stack) {
-        if (isFoodBlocked(player, stack.getItem().getFoodComponent())) {
-            return true;
-        }
-        if (isEquipmentBlocked(player, stack)) {
-            return true;
-        }
-        if (stack.isOf(Items.SHIELD) && isActionBlocked(player, BlockedActionType.USING_SHIELD)) {
-            return true;
-        }
-        if (stack.isOf(Items.BOW) && isActionBlocked(player, BlockedActionType.USING_BOW)) {
-            return true;
-        }
-        if (stack.isOf(Items.FIREWORK_ROCKET) && player.isFallFlying() && isActionBlocked(player, BlockedActionType.USING_FIREWORKS_WHILE_FLY)) {
-            return true;
-        }
-        if (stack.isOf(Items.SPYGLASS) && player.getWorld().isClient) {
-            SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.of(stack);
-            return panoramaDetails != null && !panoramaDetails.isPanoramaReady();
-        }
-        return false;
+    public static boolean isActionBlocked(PlayerEntity player, BlockedActionType blockedAction) {
+        return isActionBlocked(player, blockedAction, false);
     }
 
-    public static boolean isActionBlocked(PlayerEntity player, BlockedActionType action) {
-        return isActionBlocked(player, action, false);
-    }
-
-    public static boolean isActionBlocked(PlayerEntity player, BlockedActionType action, boolean isCheckOnly) {
-        if (action == null || player == null || player.isCreative() || action.isUnblocked(player)) {
+    public static boolean isActionBlocked(PlayerEntity player, BlockedActionType blockedAction, boolean isCheckOnly) {
+        if (blockedAction == null || player == null || player.isCreative() || blockedAction.isUnblocked(player)) {
             return false;
         }
         if (!isCheckOnly) {
-            player.sendMessage(action.buildBlockedDescription(player), true);
+            player.sendMessage(blockedAction.buildBlockedDescription(player), true);
             if (player.getWorld().isClient) {
-                ClientPlayNetworking.send(GRANT_BLOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action).writeBoolean(true));
+                ClientPlayNetworking.send(GRANT_BLOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(blockedAction).writeBoolean(true));
             } else if (player instanceof ServerPlayerEntity serverPlayer) {
-                grantBlockedAction(serverPlayer, action, true);
+                grantBlockedAction(serverPlayer, blockedAction, true);
             }
         }
         return true;
@@ -319,20 +296,43 @@ public class AchieveToDo implements ModInitializer {
         if (food == null) {
             return false;
         }
-        BlockedActionType action = BlockedActionType.findBlockedFood(food);
-        if (action != null) {
-            return isActionBlocked(player, action);
+        BlockedActionType blockedAction = BlockedActionType.findBlockedFood(food);
+        if (blockedAction != null) {
+            return isActionBlocked(player, blockedAction);
         }
         return false;
     }
 
-    public static boolean isBlockBlocked(PlayerEntity player, Block block) {
-        if (block == null) {
+    private boolean isItemBlocked(PlayerEntity player, ItemStack stack) {
+        if (stack == null) {
             return false;
         }
-        BlockedActionType action = BlockedActionType.findBlockedBlock(block);
-        if (action != null) {
-            return isActionBlocked(player, action);
+        if (stack.isOf(Items.SPYGLASS) && player.getWorld().isClient) {
+            SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.of(stack);
+            if (panoramaDetails != null) {
+                return !panoramaDetails.isPanoramaReady();
+            }
+        }
+        if (isFoodBlocked(player, stack.getItem().getFoodComponent())) {
+            return true;
+        }
+        if (isEquipmentBlocked(player, stack)) {
+            return true;
+        }
+        BlockedActionType blockedAction = BlockedActionType.findBlockedItem(player, stack);
+        if (blockedAction != null) {
+            return isActionBlocked(player, blockedAction);
+        }
+        return false;
+    }
+
+    public static boolean isBlockBlocked(PlayerEntity player, BlockState blockState) {
+        if (blockState == null) {
+            return false;
+        }
+        BlockedActionType blockedAction = BlockedActionType.findBlockedBlock(blockState);
+        if (blockedAction != null) {
+            return isActionBlocked(player, blockedAction);
         }
         return false;
     }
@@ -341,9 +341,9 @@ public class AchieveToDo implements ModInitializer {
         if (stack == null) {
             return false;
         }
-        BlockedActionType action = BlockedActionType.findBlockedTool(stack.getItem());
-        if (action != null) {
-            return isActionBlocked(player, action);
+        BlockedActionType blockedAction = BlockedActionType.findBlockedTool(stack.getItem());
+        if (blockedAction != null) {
+            return isActionBlocked(player, blockedAction);
         }
         return false;
     }
@@ -352,9 +352,9 @@ public class AchieveToDo implements ModInitializer {
         if (stack == null) {
             return false;
         }
-        BlockedActionType action = BlockedActionType.findBlockedEquipment(stack.getItem());
-        if (action != null) {
-            return isActionBlocked(player, action);
+        BlockedActionType blockedAction = BlockedActionType.findBlockedEquipment(stack.getItem());
+        if (blockedAction != null) {
+            return isActionBlocked(player, blockedAction);
         }
         return false;
     }
@@ -363,9 +363,9 @@ public class AchieveToDo implements ModInitializer {
         if (dimension == null) {
             return false;
         }
-        BlockedActionType action = BlockedActionType.findBlockedDimension(dimension);
-        if (action != null) {
-            return isActionBlocked(player, action);
+        BlockedActionType blockedAction = BlockedActionType.findBlockedDimension(dimension);
+        if (blockedAction != null) {
+            return isActionBlocked(player, blockedAction);
         }
         return false;
     }
@@ -374,9 +374,9 @@ public class AchieveToDo implements ModInitializer {
         if (profession == null) {
             return false;
         }
-        BlockedActionType action = BlockedActionType.findBlockedVillager(profession);
-        if (action != null) {
-            return isActionBlocked(player, action);
+        BlockedActionType blockedAction = BlockedActionType.findBlockedVillager(profession);
+        if (blockedAction != null) {
+            return isActionBlocked(player, blockedAction);
         }
         return false;
     }
@@ -390,20 +390,20 @@ public class AchieveToDo implements ModInitializer {
         int oldCount = advancementsCount;
         advancementsCount = count;
         if (oldCount != 0) {
-            for (BlockedActionType action : BlockedActionType.values()) {
-                if (advancementsCount >= action.getUnblockAdvancementsCount() && oldCount < action.getUnblockAdvancementsCount()) {
-                    ClientPlayNetworking.send(GRANT_BLOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(action).writeBoolean(false));
+            for (BlockedActionType blockedAction : BlockedActionType.values()) {
+                if (advancementsCount >= blockedAction.getUnblockAdvancementsCount() && oldCount < blockedAction.getUnblockAdvancementsCount()) {
+                    ClientPlayNetworking.send(GRANT_BLOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(blockedAction).writeBoolean(false));
                 }
             }
         }
     }
 
-    private static void grantBlockedAction(ServerPlayerEntity player, BlockedActionType action, boolean isDemystifyOnly) {
-        AdvancementEntry advancement = player.server.getAdvancementLoader().get(action.buildAdvancementId());
+    private static void grantBlockedAction(ServerPlayerEntity player, BlockedActionType blockedAction, boolean isDemystifyOnly) {
+        AdvancementEntry advancement = player.server.getAdvancementLoader().get(blockedAction.buildAdvancementId());
         if (isDemystifyOnly) {
             player.getAdvancementTracker().grantCriterion(
                     advancement,
-                    AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + action.getName()
+                    AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + blockedAction.getName()
             );
         } else {
             for (String criterion : player.getAdvancementTracker().getProgress(advancement).getUnobtainedCriteria()) {

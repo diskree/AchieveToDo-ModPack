@@ -1,10 +1,10 @@
 #!/bin/bash
 
 readonly NAME_COLOR_FROM="#07c5fa"
-readonly NAME_COLOR_TO="#dff2f7"
+readonly NAME_COLOR_TO="#b2e8f7"
 
-readonly VERSION_COLOR_MAJOR="#fd99b1"
-readonly VERSION_COLOR_MINOR="#fee6a8"
+readonly VERSION_COLOR_MAJOR="#f8c8dc"
+readonly VERSION_COLOR_MINOR="#fac898"
 readonly VERSION_COLOR_PATCH="#e4adf7"
 
 readonly modId=$1
@@ -14,7 +14,6 @@ readonly author=$4
 readonly repoUrl=$5
 readonly minecraftVersion=$6
 readonly loaderVersion=$7
-readonly isDebug=$8
 
 readonly packDir="pack"
 
@@ -22,7 +21,7 @@ rm -rf "build/libs"
 rm "$packDir/mods/$modId"*
 rm -rf "src/main/generated"
 ./gradlew runDatagen
-./gradlew build -PisDebug="$isDebug"
+./gradlew build
 cp "build/libs/$modId"* "$packDir/mods"
 
 cd "$packDir" || exit
@@ -106,8 +105,9 @@ sed -i "s/\${packName}/$(printf '%s\n' "${packName}" | sed -e 's/[\/&]/\\&/g')/g
 sed -i "s/\${packVersion}/$(printf '%s\n' "${packVersion}" | sed -e 's/[\/&]/\\&/g')/g" "${mainMenuCreditsConfigPath}"
 sed -i "s/\${repoUrl}/$(printf '%s\n' "${repoUrl}" | sed -e 's/[\/&]/\\&/g')/g" "${mainMenuCreditsConfigPath}"
 
-packwiz refresh
+packwiz refresh --build
 packwiz modrinth export
+packwiz refresh
 
 echo "$packMetadata" > "$packMetadataPath"
 echo "$customHudProfile" > "$customHudProfilePath"

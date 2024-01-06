@@ -171,6 +171,39 @@ public abstract class AdvancementsScreenMixin extends Screen {
         }
     }
 
+    @Unique
+    private void iterate(int start, int end, int maxStep, BiConsumer<Integer, Integer> func) {
+        if (start >= end) {
+            return;
+        }
+        int size;
+        for (int i = start; i < end; i += maxStep) {
+            size = maxStep;
+            if (i + size > end) {
+                size = end - i;
+                if (size <= 0) {
+                    return;
+                }
+            }
+            func.accept(i, size);
+        }
+    }
+
+    @Shadow
+    @Final
+    private static Identifier WINDOW_TEXTURE;
+
+    @Shadow
+    @Final
+    private ClientAdvancementManager advancementHandler;
+
+    @Shadow
+    private @Nullable AdvancementTab selectedTab;
+
+    public AdvancementsScreenMixin() {
+        super(null);
+    }
+
     @Redirect(method = "mouseClicked", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientAdvancementManager;selectTab(Lnet/minecraft/advancement/AdvancementEntry;Z)V"))
     private void mouseClickedRedirect(ClientAdvancementManager instance, AdvancementEntry tab, boolean local) {
         isSearchActive = false;
@@ -231,35 +264,69 @@ public abstract class AdvancementsScreenMixin extends Screen {
         return false;
     }
 
-    @Shadow
-    @Final
-    private static Identifier WINDOW_TEXTURE;
-
-    @Shadow
-    @Final
-    private ClientAdvancementManager advancementHandler;
-
-    @Shadow private @Nullable AdvancementTab selectedTab;
-
-    public AdvancementsScreenMixin() {
-        super(null);
+    @Inject(method = "init", at = @At(value = "RETURN"))
+    public void initInject(CallbackInfo ci) {
+        searchField = new TextFieldWidget(textRenderer, width - width / 3 - 34, 8, width / 3, 22, ScreenTexts.EMPTY);
+        searchField.setPlaceholder(SEARCH_HINT);
+        searchField.setMaxLength(64);
+        searchField.setChangedListener(query -> {
+            if (query.isEmpty()) {
+                isSearchActive = false;
+            } else {
+                isSearchActive = true;
+                refreshSearchResults();
+            }
+        });
+        AdvancementDisplay searchRootAdvancementDisplay = new AdvancementDisplay(
+                ItemStack.EMPTY,
+                Text.empty(),
+                Text.empty(),
+                Optional.of(new Identifier("textures/block/" + Registries.BLOCK.getId(Blocks.BLACK_CONCRETE).getPath() + ".png")),
+                AdvancementFrame.TASK,
+                false,
+                false,
+                true
+        );
+        searchRootAdvancement = new PlacedAdvancement(
+                Advancement.Builder
+                        .createUntelemetered()
+                        .display(searchRootAdvancementDisplay)
+                        .build(AchieveToDoClient.ADVANCEMENTS_SEARCH_ID),
+                null
+        );
+        AdvancementsScreen advancementsScreen = (AdvancementsScreen) (Object) this;
+        if (client != null) {
+            searchTab = new AdvancementTab(client, advancementsScreen, AdvancementTabType.RIGHT, 0, searchRootAdvancement, searchRootAdvancementDisplay);
+        }
     }
 
-    @Unique
-    private void iterate(int start, int end, int maxStep, BiConsumer<Integer, Integer> func) {
-        if (start >= end) {
-            return;
+    @Inject(method = "render", at = @At(value = "RETURN"))
+    public void renderInject(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
+        searchField.render(context, mouseX, mouseY, delta);
+    }
+
+    @Inject(method = "keyPressed", at = @At(value = "HEAD"), cancellable = true)
+    public void keyPressedInject(int keyCode, int scanCode, int modifiers, CallbackInfoReturnable<Boolean> cir) {
+        if (keyCode == GLFW.GLFW_KEY_ESCAPE && searchField.isFocused() && !searchField.getText().isEmpty()) {
+            searchField.setText("");
+            searchField.setFocused(false);
+            cir.setReturnValue(true);
+        } else if (searchField.keyPressed(keyCode, scanCode, modifiers)) {
+            cir.setReturnValue(true);
+        } else if (searchField.isFocused() && keyCode != GLFW.GLFW_KEY_ESCAPE) {
+            cir.setReturnValue(true);
+        } else if (client != null && client.options.advancementsKey.matchesKey(keyCode, scanCode) && searchField.isFocused()) {
+            cir.setReturnValue(true);
         }
-        int size;
-        for (int i = start; i < end; i += maxStep) {
-            size = maxStep;
-            if (i + size > end) {
-                size = end - i;
-                if (size <= 0) {
-                    return;
-                }
-            }
-            func.accept(i, size);
+    }
+
+    @Inject(method = "mouseClicked", at = @At(value = "HEAD"), cancellable = true)
+    public void mouseClickedInject(double mouseX, double mouseY, int button, CallbackInfoReturnable<Boolean> cir) {
+        if (searchField.mouseClicked(mouseX, mouseY, button)) {
+            searchField.setFocused(true);
+            cir.setReturnValue(true);
+        } else {
+            searchField.setFocused(false);
         }
     }
 
@@ -340,71 +407,5 @@ public abstract class AdvancementsScreenMixin extends Screen {
             context.drawTexture(WINDOW_TEXTURE, x, pos, 0, 25, halfOfWidth, len);
             context.drawTexture(WINDOW_TEXTURE, rightX, pos, halfOfWidth + clipTopX, 25, halfOfWidth - clipTopX, len);
         });
-    }
-
-    @Inject(method = "init", at = @At(value = "RETURN"))
-    public void initInject(CallbackInfo ci) {
-        searchField = new TextFieldWidget(textRenderer, width - width / 3 - 34, 8, width / 3, 22, ScreenTexts.EMPTY);
-        searchField.setPlaceholder(SEARCH_HINT);
-        searchField.setMaxLength(64);
-        searchField.setChangedListener(query -> {
-            if (query.isEmpty()) {
-                isSearchActive = false;
-            } else {
-                isSearchActive = true;
-                refreshSearchResults();
-            }
-        });
-        AdvancementDisplay searchRootAdvancementDisplay = new AdvancementDisplay(
-                ItemStack.EMPTY,
-                Text.empty(),
-                Text.empty(),
-                Optional.of(new Identifier("textures/block/" + Registries.BLOCK.getId(Blocks.BLACK_CONCRETE).getPath() + ".png")),
-                AdvancementFrame.TASK,
-                false,
-                false,
-                true
-        );
-        searchRootAdvancement = new PlacedAdvancement(
-                Advancement.Builder
-                        .createUntelemetered()
-                        .display(searchRootAdvancementDisplay)
-                        .build(AchieveToDoClient.ADVANCEMENTS_SEARCH_ID),
-                null
-        );
-        AdvancementsScreen advancementsScreen = (AdvancementsScreen) (Object) this;
-        if (client != null) {
-            searchTab = new AdvancementTab(client, advancementsScreen, AdvancementTabType.RIGHT, 0, searchRootAdvancement, searchRootAdvancementDisplay);
-        }
-    }
-
-    @Inject(method = "render", at = @At(value = "RETURN"))
-    public void renderInject(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
-        searchField.render(context, mouseX, mouseY, delta);
-    }
-
-    @Inject(method = "keyPressed", at = @At(value = "HEAD"), cancellable = true)
-    public void keyPressedInject(int keyCode, int scanCode, int modifiers, CallbackInfoReturnable<Boolean> cir) {
-        if (keyCode == GLFW.GLFW_KEY_ESCAPE && searchField.isFocused() && !searchField.getText().isEmpty()) {
-            searchField.setText("");
-            searchField.setFocused(false);
-            cir.setReturnValue(true);
-        } else if (searchField.keyPressed(keyCode, scanCode, modifiers)) {
-            cir.setReturnValue(true);
-        } else if (searchField.isFocused() && keyCode != GLFW.GLFW_KEY_ESCAPE) {
-            cir.setReturnValue(true);
-        } else if (client != null && client.options.advancementsKey.matchesKey(keyCode, scanCode) && searchField.isFocused()) {
-            cir.setReturnValue(true);
-        }
-    }
-
-    @Inject(method = "mouseClicked", at = @At(value = "HEAD"), cancellable = true)
-    public void mouseClickedInject(double mouseX, double mouseY, int button, CallbackInfoReturnable<Boolean> cir) {
-        if (searchField.mouseClicked(mouseX, mouseY, button)) {
-            searchField.setFocused(true);
-            cir.setReturnValue(true);
-        } else {
-            searchField.setFocused(false);
-        }
     }
 }

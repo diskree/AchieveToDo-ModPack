@@ -7,8 +7,7 @@
       "translate": "hints.hintly_hallows.title",
       "extra": [
         {
-          "italic": true,
-          "text": "                                "
+          "translate": "hints.hintly_hallows.title.extra"
         }
       ]
     },

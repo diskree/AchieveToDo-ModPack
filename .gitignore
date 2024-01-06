@@ -6,3 +6,4 @@ build/
 /pack/mods/*.jar
 /run/
 src/main/generated/
+local.properties

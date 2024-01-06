@@ -1,0 +1,8 @@
+name = "XYZ Book"
+filename = "xyzbook-mc1.20.4+1.0.jar"
+side = "client"
+
+[download]
+url = "https://github.com/diskree/XYZBook/releases/download/1.0/xyzbook-mc1.20.4+1.0.jar"
+hash-format = "sha1"
+hash = "fd295910285aa9bc00a74dcf17d43d0e2a83ebd8"

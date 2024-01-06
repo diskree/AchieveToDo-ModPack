@@ -19,9 +19,6 @@ import java.util.List;
 @Mixin(AdvancementProgress.class)
 public abstract class AdvancementProgressMixin {
 
-    @Shadow
-    private AdvancementRequirements requirements;
-
     @Unique
     private int getActionUnblockAdvancementsCount() {
         if (requirements.requirements().size() == 2) {
@@ -29,15 +26,18 @@ public abstract class AdvancementProgressMixin {
             if (criteria != null && !criteria.isEmpty()) {
                 String maybeDemystifiedCriterion = criteria.get(0);
                 if (maybeDemystifiedCriterion != null && maybeDemystifiedCriterion.startsWith(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX)) {
-                    BlockedActionType action = BlockedActionType.map(maybeDemystifiedCriterion.split(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX)[1]);
-                    if (action != null) {
-                        return action.getUnblockAdvancementsCount();
+                    BlockedActionType blockedAction = BlockedActionType.map(maybeDemystifiedCriterion.split(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX)[1]);
+                    if (blockedAction != null) {
+                        return blockedAction.getUnblockAdvancementsCount();
                     }
                 }
             }
         }
         return -1;
     }
+
+    @Shadow
+    private AdvancementRequirements requirements;
 
     @Inject(method = "getProgressBarPercentage", at = @At("HEAD"), cancellable = true)
     public void getProgressBarPercentageInject(CallbackInfoReturnable<Float> cir) {

@@ -5,6 +5,7 @@ import net.minecraft.text.Text;
 public enum BlockedActionCategory {
     ACTION,
     FOOD,
+    ITEM,
     BLOCK,
     TOOL,
     EQUIPMENT,

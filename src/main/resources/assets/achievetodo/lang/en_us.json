@@ -342,6 +342,8 @@
   "hints.no_new_updates.title": "No New Updates",
   "hints.no_new_updates.description": "Try to get hint if there are no advancements that have hints",
 
+  "%1$s has unblocked %2$s%3$s%4$s": "%1$s has unblocked %2$s%3$s%4$s",
+
   "error.screen.title": "Oops!",
 
   "external.pack.open_page": "Open Page",

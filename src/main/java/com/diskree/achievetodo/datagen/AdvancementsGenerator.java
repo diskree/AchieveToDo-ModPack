@@ -8,15 +8,18 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
+import net.minecraft.advancement.AdvancementRewards;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.advancement.criterion.ImpossibleCriterion;
 import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
 import java.util.*;
 import java.util.function.Consumer;
 
+// TODO Refactoring
 public class AdvancementsGenerator extends FabricAdvancementProvider {
 
     public static final String BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX = "demystified_";
@@ -104,6 +107,7 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
 
     private Advancement.Builder setupRequirements(Advancement.Builder builder, IGeneratedAdvancement advancement) {
         if (advancement instanceof BlockedActionType blockedAction) {
+            builder.rewards(AdvancementRewards.Builder.function(new Identifier("achievetodo_blocked_actions/" + blockedAction.getName())));
             builder.criterion(BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + blockedAction.getName(), Criteria.IMPOSSIBLE.create(new ImpossibleCriterion.Conditions()));
             builder.criterion(BLOCKED_ACTION_UNBLOCKED_CRITERION_NAME, Criteria.IMPOSSIBLE.create(new ImpossibleCriterion.Conditions()));
         }

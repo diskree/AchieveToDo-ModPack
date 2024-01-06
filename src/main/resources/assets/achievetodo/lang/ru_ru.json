@@ -339,6 +339,8 @@
   "hints.no_new_updates.title": "Новых обновлений нет",
   "hints.no_new_updates.description": "Попытайтесь получить подсказку при отсутствии достижений, по которым есть что подсказать",
 
+  "%1$s has unblocked %2$s%3$s%4$s": "%1$s разблокировал %2$s%3$s%4$s",
+
   "error.screen.title": "Упс!",
 
   "external.pack.open_page": "Открыть страницу",

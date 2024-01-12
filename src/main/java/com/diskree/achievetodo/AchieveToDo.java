@@ -250,11 +250,15 @@ public class AchieveToDo implements ModInitializer {
             return ActionResult.PASS;
         });
         UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+            ItemStack stack = player.getStackInHand(hand);
             if (entity instanceof BoatEntity && isActionBlocked(player, BlockedActionType.USING_BOAT)) {
                 return ActionResult.FAIL;
             }
             if (entity instanceof VillagerEntity villagerEntity && isVillagerBlocked(player, villagerEntity.getVillagerData().getProfession())) {
                 villagerEntity.sayNo();
+                return ActionResult.FAIL;
+            }
+            if (isToolBlocked(player, stack)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;

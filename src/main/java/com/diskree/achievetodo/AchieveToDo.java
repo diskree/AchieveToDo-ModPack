@@ -36,6 +36,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.*;
+import net.minecraft.entity.decoration.ItemFrameEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.vehicle.BoatEntity;
@@ -60,8 +61,8 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
@@ -194,6 +195,7 @@ public class AchieveToDo implements ModInitializer {
             }
             return Command.SINGLE_SUCCESS;
         }))));
+
         ServerPlayNetworking.registerGlobalReceiver(GRANT_BLOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
             BlockedActionType blockedAction = buf.readEnumConstant(BlockedActionType.class);
             boolean isDemystifyOnly = buf.readBoolean();
@@ -201,6 +203,7 @@ public class AchieveToDo implements ModInitializer {
                 server.execute(() -> grantBlockedAction(player, blockedAction, isDemystifyOnly));
             }
         });
+
         UseItemCallback.EVENT.register((player, world, hand) -> {
             ItemStack stack = player.getStackInHand(hand);
             if (stack.isOf(Items.SPYGLASS) && player.getWorld().isClient) {
@@ -248,22 +251,14 @@ public class AchieveToDo implements ModInitializer {
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             BlockState blockState = world.getBlockState(pos);
             ItemStack stack = player.getStackInHand(hand);
-            if (world.getRegistryKey() == World.OVERWORLD) {
-                if (pos.getY() >= 0 && isActionBlocked(player, BlockedActionType.BREAK_BLOCKS_IN_POSITIVE_Y)) {
-                    return ActionResult.FAIL;
-                }
-                if (pos.getY() < 0 && isActionBlocked(player, BlockedActionType.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
-                    return ActionResult.FAIL;
-                }
-            }
-            if (isToolBlocked(player, stack, blockState, null, null, false)) {
+            if (isAttackBlocked(player, stack, blockState, null, pos, null)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
         });
         AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
             ItemStack stack = player.getStackInHand(hand);
-            if (isToolBlocked(player, stack, null, entity, hitResult, false)) {
+            if (isAttackBlocked(player, stack, null, entity, entity.getBlockPos(), hitResult)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
@@ -329,6 +324,9 @@ public class AchieveToDo implements ModInitializer {
                 }
             }
         } else if (entity != null) {
+            if (entity instanceof ItemFrameEntity) {
+                return false;
+            }
             if (item == Items.SHEARS) {
                 if (!(entity instanceof Shearable shearable && shearable.isShearable())) {
                     return false;
@@ -348,7 +346,26 @@ public class AchieveToDo implements ModInitializer {
         return isActionBlocked(player, BlockedActionType.findBlockedItem(player, stack));
     }
 
-    public static boolean isBlockBlocked(PlayerEntity player, BlockState blockState) {
+    private boolean isAttackBlocked(PlayerEntity player, ItemStack stack, BlockState blockState, Entity entity, BlockPos targetPos, HitResult hitResult) {
+        if (blockState != null) {
+            if (player.getWorld().getRegistryKey() == World.OVERWORLD) {
+                if (isActionBlocked(player, targetPos.getY() >= 0 ? BlockedActionType.BREAK_BLOCKS_IN_POSITIVE_Y : BlockedActionType.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
+                    return true;
+                }
+            }
+            if (stack.isOf(Items.SHEARS) && (
+                    blockState.isIn(BlockTags.LEAVES) || blockState.isOf(Blocks.COBWEB) || blockState.isOf(Blocks.SHORT_GRASS) ||
+                            blockState.isOf(Blocks.FERN) || blockState.isOf(Blocks.DEAD_BUSH) || blockState.isOf(Blocks.HANGING_ROOTS) ||
+                            blockState.isOf(Blocks.VINE) || blockState.isOf(Blocks.TRIPWIRE) || blockState.isIn(BlockTags.WOOL))) {
+                return isActionBlocked(player, BlockedActionType.USING_SHEARS);
+            }
+        } else if (entity != null) {
+            return isToolBlocked(player, stack, null, entity, hitResult, false);
+        }
+        return false;
+    }
+
+    private boolean isBlockBlocked(PlayerEntity player, BlockState blockState) {
         return isActionBlocked(player, BlockedActionType.findBlockedBlock(blockState));
     }
 
@@ -363,7 +380,7 @@ public class AchieveToDo implements ModInitializer {
                     if (!blockedTool.achieveToDo$canUseOnBlock(player, (BlockHitResult) hitResult)) {
                         return false;
                     }
-                } else if (entity != null && hitResult instanceof EntityHitResult) {
+                } else if (entity != null) {
                     return false;
                 }
             }

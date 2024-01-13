@@ -532,9 +532,6 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         if (item == null) {
             return null;
         }
-        if (item == Items.SHEARS) {
-            return BlockedActionType.USING_SHEARS;
-        }
         if (item instanceof ToolItem toolItem) {
             for (BlockedActionType blockedAction : BlockedActionType.values()) {
                 if (toolItem.getMaterial() == blockedAction.toolMaterial) {

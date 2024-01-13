@@ -2,7 +2,7 @@ package com.diskree.achievetodo.advancements.hints;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.BuildConfig;
-import com.diskree.achievetodo.ItemDisplayEntityImpl;
+import com.diskree.achievetodo.injection.ItemDisplayEntityImpl;
 import com.diskree.achievetodo.advancements.AdvancementHint;
 import com.diskree.achievetodo.advancements.RandomAdvancements;
 import net.minecraft.block.BlockState;

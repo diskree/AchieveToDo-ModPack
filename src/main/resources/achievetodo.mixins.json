@@ -9,10 +9,12 @@
     "AbstractBlockMixin",
     "AbstractBlockSettingsMixin",
     "AdvancementVisibilityEvaluatorMixin",
+    "AxeItemMixin",
     "EnderDragonFightMixin",
     "EndGatewayBlockEntityMixin",
     "EndGatewayFeatureMixin",
     "FlowableFluidMixin",
+    "HoeItemMixin",
     "HugeRedMushroomFeatureMixin",
     "ItemDisplayEntityMixin",
     "ItemMixin",
@@ -23,6 +25,8 @@
     "PlayerEntityMixin",
     "ReinforcedDeepslateMixin",
     "ServerPlayerEntityMixin",
+    "ShearsItemMixin",
+    "ShovelItemMixin",
     "VanillaBlockTagProviderMixin"
   ],
   "client": [

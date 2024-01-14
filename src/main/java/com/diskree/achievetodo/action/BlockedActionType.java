@@ -477,6 +477,9 @@ public enum BlockedActionType implements IGeneratedAdvancement {
 
     @Nullable
     public static BlockedActionType findBlockedFood(FoodComponent food) {
+        if (food == null) {
+            return null;
+        }
         for (BlockedActionType blockedAction : BlockedActionType.values()) {
             if (food == blockedAction.food) {
                 return blockedAction;
@@ -487,6 +490,9 @@ public enum BlockedActionType implements IGeneratedAdvancement {
 
     @Nullable
     public static BlockedActionType findBlockedItem(PlayerEntity player, ItemStack stack) {
+        if (stack == null) {
+            return null;
+        }
         if (stack.isOf(Items.CROSSBOW)) {
             return CrossbowItem.isCharged(stack) ? BlockedActionType.USING_CROSSBOW : null;
         }

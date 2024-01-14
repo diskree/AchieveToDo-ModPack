@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.injection.BlockedItem;
+import com.diskree.achievetodo.injection.UsableOnBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.ShearsItem;
@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ShearsItem.class)
-public abstract class ShearsItemMixin implements BlockedItem {
+public abstract class ShearsItemMixin implements UsableOnBlock {
 
     @Unique
     private boolean isCanUseOnBlockChecking;

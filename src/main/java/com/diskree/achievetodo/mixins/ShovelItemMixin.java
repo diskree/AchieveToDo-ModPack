@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.injection.BlockedTool;
+import com.diskree.achievetodo.injection.UsableOnBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.ShovelItem;
@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ShovelItem.class)
-public abstract class ShovelItemMixin implements BlockedTool {
+public abstract class ShovelItemMixin implements UsableOnBlock {
 
     @Shadow
     public abstract ActionResult useOnBlock(ItemUsageContext context);

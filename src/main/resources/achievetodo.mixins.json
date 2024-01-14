@@ -9,6 +9,7 @@
     "AbstractBlockMixin",
     "AbstractBlockSettingsMixin",
     "AdvancementVisibilityEvaluatorMixin",
+    "AliasedBlockItemMixin",
     "AxeItemMixin",
     "EnderDragonFightMixin",
     "EndGatewayBlockEntityMixin",

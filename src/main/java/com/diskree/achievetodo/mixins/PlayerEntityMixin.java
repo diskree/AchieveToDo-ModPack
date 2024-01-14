@@ -23,8 +23,8 @@ public abstract class PlayerEntityMixin {
 
     @Inject(method = "canEquip", at = @At("HEAD"), cancellable = true)
     public void canEquipInject(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        PlayerEntity playerEntity = (PlayerEntity) (Object) this;
-        if (AchieveToDo.isEquipmentBlocked(playerEntity, stack)) {
+        PlayerEntity player = (PlayerEntity) (Object) this;
+        if (AchieveToDo.isActionBlocked(player, BlockedActionType.findBlockedEquipment(stack.getItem()))) {
             cir.setReturnValue(false);
         }
     }

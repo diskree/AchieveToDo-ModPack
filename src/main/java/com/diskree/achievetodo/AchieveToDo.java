@@ -6,8 +6,7 @@ import com.diskree.achievetodo.advancements.RandomAdvancements;
 import com.diskree.achievetodo.advancements.hints.*;
 import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
 import com.diskree.achievetodo.datagen.AdvancementsGenerator;
-import com.diskree.achievetodo.injection.BlockedItem;
-import com.diskree.achievetodo.injection.BlockedTool;
+import com.diskree.achievetodo.injection.UsableOnBlock;
 import com.mojang.brigadier.Command;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -32,20 +31,23 @@ import net.minecraft.advancement.PlacedAdvancement;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.entity.*;
+import net.minecraft.entity.EntityDimensions;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.Shearable;
+import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.decoration.ItemFrameEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.vehicle.BoatEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.scoreboard.ReadableScoreboardScore;
 import net.minecraft.scoreboard.ScoreHolder;
 import net.minecraft.scoreboard.Scoreboard;
@@ -60,11 +62,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.HitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
 
 public class AchieveToDo implements ModInitializer {
@@ -204,15 +201,27 @@ public class AchieveToDo implements ModInitializer {
             }
         });
 
+        ServerWorldEvents.LOAD.register((server, world) -> advancementsCount = 0);
+
         UseItemCallback.EVENT.register((player, world, hand) -> {
             ItemStack stack = player.getStackInHand(hand);
+            Item item = stack.getItem();
             if (stack.isOf(Items.SPYGLASS) && player.getWorld().isClient) {
                 SpyglassPanoramaDetails panoramaDetails = SpyglassPanoramaDetails.of(stack);
                 if (panoramaDetails != null && !panoramaDetails.isPanoramaReady()) {
                     return TypedActionResult.fail(ItemStack.EMPTY);
                 }
             }
-            if (isItemBlocked(player, stack, null, null, null)) {
+            if (item == Items.SHEARS || item == Items.BRUSH) {
+                return TypedActionResult.pass(ItemStack.EMPTY);
+            }
+            if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getFoodComponent()))) {
+                return TypedActionResult.fail(ItemStack.EMPTY);
+            }
+            if (isActionBlocked(player, BlockedActionType.findBlockedEquipment(item))) {
+                return TypedActionResult.fail(ItemStack.EMPTY);
+            }
+            if (isActionBlocked(player, BlockedActionType.findBlockedItem(player, stack))) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
             return TypedActionResult.pass(ItemStack.EMPTY);
@@ -220,50 +229,68 @@ public class AchieveToDo implements ModInitializer {
         UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
             BlockState blockState = world.getBlockState(hitResult.getBlockPos());
             ItemStack stack = player.getStackInHand(hand);
-            if (isBlockBlocked(player, blockState)) {
+            Item item = stack.getItem();
+            if ((!player.shouldCancelInteraction() || player.getMainHandStack().isEmpty() && player.getOffHandStack().isEmpty()) && isActionBlocked(player, BlockedActionType.findBlockedBlock(blockState))) {
                 return ActionResult.FAIL;
             }
-            if (isToolBlocked(player, stack, blockState, null, hitResult, true)) {
-                return ActionResult.FAIL;
-            }
-            if (isItemBlocked(player, stack, blockState, hitResult, null)) {
-                return ActionResult.FAIL;
+
+            if (item instanceof UsableOnBlock usableOnBlock && usableOnBlock.achieveToDo$canUseOnBlock(player, hitResult)) {
+                if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getFoodComponent()))) {
+                    return ActionResult.FAIL;
+                }
+                if (isActionBlocked(player, BlockedActionType.findBlockedTool(item))) {
+                    return ActionResult.FAIL;
+                }
+                if (isActionBlocked(player, BlockedActionType.findBlockedItem(player, stack))) {
+                    return ActionResult.FAIL;
+                }
             }
             return ActionResult.PASS;
         });
         UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
             ItemStack stack = player.getStackInHand(hand);
+            Item item = stack.getItem();
+            if (entity instanceof ItemFrameEntity) {
+                return ActionResult.PASS;
+            }
             if (entity instanceof BoatEntity && isActionBlocked(player, BlockedActionType.USING_BOAT)) {
                 return ActionResult.FAIL;
             }
-            if (entity instanceof VillagerEntity villagerEntity && isVillagerBlocked(player, villagerEntity.getVillagerData().getProfession())) {
+            if (entity instanceof VillagerEntity villagerEntity && isActionBlocked(player, BlockedActionType.findBlockedVillager(villagerEntity.getVillagerData().getProfession()))) {
                 villagerEntity.sayNo();
                 return ActionResult.FAIL;
             }
-            if (isToolBlocked(player, stack, null, entity, hitResult, true)) {
-                return ActionResult.FAIL;
-            }
-            if (isItemBlocked(player, stack, null, null, entity)) {
+            if (item == Items.SHEARS && entity instanceof Shearable shearable && shearable.isShearable() && isActionBlocked(player, BlockedActionType.USING_SHEARS)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
         });
+
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
-            BlockState blockState = world.getBlockState(pos);
             ItemStack stack = player.getStackInHand(hand);
-            if (isAttackBlocked(player, stack, blockState, null, pos, null)) {
+            Item item = stack.getItem();
+            if (player.getWorld().getRegistryKey() == World.OVERWORLD && isActionBlocked(player, pos.getY() >= 0 ? BlockedActionType.BREAK_BLOCKS_IN_POSITIVE_Y : BlockedActionType.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
+                return ActionResult.FAIL;
+            }
+            if (isActionBlocked(player, BlockedActionType.findBlockedTool(item))) {
+                return ActionResult.FAIL;
+            }
+            if (item == Items.SHEARS && isActionBlocked(player, BlockedActionType.USING_SHEARS)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
         });
         AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
             ItemStack stack = player.getStackInHand(hand);
-            if (isAttackBlocked(player, stack, null, entity, entity.getBlockPos(), hitResult)) {
+            Item item = stack.getItem();
+            if (isActionBlocked(player, BlockedActionType.findBlockedTool(item))) {
+                return ActionResult.FAIL;
+            }
+            if (item == Items.SHEARS && isActionBlocked(player, BlockedActionType.USING_SHEARS)) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;
         });
-        ServerWorldEvents.LOAD.register((server, world) -> advancementsCount = 0);
     }
 
     public static void grantHintsAdvancement(ServerPlayerEntity player, String pathName) {
@@ -294,113 +321,6 @@ public class AchieveToDo implements ModInitializer {
             }
         }
         return true;
-    }
-
-    public static boolean isFoodBlocked(PlayerEntity player, FoodComponent food) {
-        if (food == null) {
-            return false;
-        }
-        BlockedActionType blockedAction = BlockedActionType.findBlockedFood(food);
-        if (blockedAction != null) {
-            return isActionBlocked(player, blockedAction);
-        }
-        return false;
-    }
-
-    private boolean isItemBlocked(PlayerEntity player, ItemStack stack, BlockState blockState, BlockHitResult blockHitResult, Entity entity) {
-        if (stack == null) {
-            return false;
-        }
-        Item item = stack.getItem();
-        if (blockState != null) {
-            if (item instanceof BlockedItem blockedItem) {
-                if (!blockedItem.achieveToDo$canUseOnBlock(player, blockHitResult)) {
-                    return false;
-                }
-            } else if (item instanceof AliasedBlockItem aliasedBlockItem) {
-                BlockState aliasedBlock = aliasedBlockItem.getBlock().getDefaultState();
-                if (aliasedBlock.isIn(BlockTags.MAINTAINS_FARMLAND) && blockState.isOf(Blocks.FARMLAND) && blockHitResult.getSide() == Direction.UP) {
-                    return false;
-                }
-            }
-        } else if (entity != null) {
-            if (entity instanceof ItemFrameEntity) {
-                return false;
-            }
-            if (item == Items.SHEARS) {
-                if (!(entity instanceof Shearable shearable && shearable.isShearable())) {
-                    return false;
-                }
-            }
-        } else {
-            if (item == Items.SHEARS) {
-                return false;
-            }
-        }
-        if (isFoodBlocked(player, item.getFoodComponent())) {
-            return true;
-        }
-        if (isEquipmentBlocked(player, stack)) {
-            return true;
-        }
-        return isActionBlocked(player, BlockedActionType.findBlockedItem(player, stack));
-    }
-
-    private boolean isAttackBlocked(PlayerEntity player, ItemStack stack, BlockState blockState, Entity entity, BlockPos targetPos, HitResult hitResult) {
-        if (blockState != null) {
-            if (player.getWorld().getRegistryKey() == World.OVERWORLD) {
-                if (isActionBlocked(player, targetPos.getY() >= 0 ? BlockedActionType.BREAK_BLOCKS_IN_POSITIVE_Y : BlockedActionType.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
-                    return true;
-                }
-            }
-            if (stack.isOf(Items.SHEARS) && (
-                    blockState.isIn(BlockTags.LEAVES) || blockState.isOf(Blocks.COBWEB) || blockState.isOf(Blocks.SHORT_GRASS) ||
-                            blockState.isOf(Blocks.FERN) || blockState.isOf(Blocks.DEAD_BUSH) || blockState.isOf(Blocks.HANGING_ROOTS) ||
-                            blockState.isOf(Blocks.VINE) || blockState.isOf(Blocks.TRIPWIRE) || blockState.isIn(BlockTags.WOOL))) {
-                return isActionBlocked(player, BlockedActionType.USING_SHEARS);
-            }
-        } else if (entity != null) {
-            return isToolBlocked(player, stack, null, entity, hitResult, false);
-        }
-        return false;
-    }
-
-    private boolean isBlockBlocked(PlayerEntity player, BlockState blockState) {
-        return isActionBlocked(player, BlockedActionType.findBlockedBlock(blockState));
-    }
-
-    private boolean isToolBlocked(PlayerEntity player, ItemStack stack, BlockState blockState, Entity entity, HitResult hitResult, boolean use) {
-        if (stack == null) {
-            return false;
-        }
-        Item item = stack.getItem();
-        if (use) {
-            if (item instanceof BlockedTool blockedTool) {
-                if (blockState != null && hitResult instanceof BlockHitResult) {
-                    if (!blockedTool.achieveToDo$canUseOnBlock(player, (BlockHitResult) hitResult)) {
-                        return false;
-                    }
-                } else if (entity != null) {
-                    return false;
-                }
-            }
-        }
-        return isActionBlocked(player, BlockedActionType.findBlockedTool(item));
-    }
-
-    public static boolean isEquipmentBlocked(PlayerEntity player, ItemStack stack) {
-        if (stack == null) {
-            return false;
-        }
-        return isActionBlocked(player, BlockedActionType.findBlockedEquipment(stack.getItem()));
-    }
-
-    public static boolean isDimensionBlocked(PlayerEntity player, RegistryKey<World> dimension) {
-        return isActionBlocked(player, BlockedActionType.findBlockedDimension(dimension));
-    }
-
-    private boolean isVillagerBlocked(PlayerEntity player, VillagerProfession profession) {
-        return isActionBlocked(player, BlockedActionType.findBlockedVillager(profession));
     }
 
     @Environment(EnvType.CLIENT)

@@ -6,7 +6,8 @@ import com.diskree.achievetodo.advancements.RandomAdvancements;
 import com.diskree.achievetodo.advancements.hints.*;
 import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
 import com.diskree.achievetodo.datagen.AdvancementsGenerator;
-import com.diskree.achievetodo.injection.UsableOnBlock;
+import com.diskree.achievetodo.injection.UsableBlock;
+import com.diskree.achievetodo.injection.UsableItem;
 import com.mojang.brigadier.Command;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -233,8 +234,9 @@ public class AchieveToDo implements ModInitializer {
             if ((!player.shouldCancelInteraction() || player.getMainHandStack().isEmpty() && player.getOffHandStack().isEmpty()) && isActionBlocked(player, BlockedActionType.findBlockedBlock(blockState))) {
                 return ActionResult.FAIL;
             }
-
-            if (item instanceof UsableOnBlock usableOnBlock && usableOnBlock.achieveToDo$canUseOnBlock(player, hitResult)) {
+            boolean canUseItem = item instanceof UsableItem usableItem && usableItem.achieveToDo$canUse(player, hitResult);
+            boolean canUseBlock = !(blockState.getBlock() instanceof UsableBlock) || ((UsableBlock) blockState.getBlock()).achieveToDo$canUse(item);
+            if (player.shouldCancelInteraction() || canUseItem || canUseBlock) {
                 if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getFoodComponent()))) {
                     return ActionResult.FAIL;
                 }

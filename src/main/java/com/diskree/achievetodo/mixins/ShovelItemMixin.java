@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.injection.UsableOnBlock;
+import com.diskree.achievetodo.injection.UsableItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.ShovelItem;
@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ShovelItem.class)
-public abstract class ShovelItemMixin implements UsableOnBlock {
+public abstract class ShovelItemMixin implements UsableItem {
 
     @Shadow
     public abstract ActionResult useOnBlock(ItemUsageContext context);
@@ -23,7 +23,7 @@ public abstract class ShovelItemMixin implements UsableOnBlock {
     private boolean isCanUseOnBlockChecking;
 
     @Override
-    public boolean achieveToDo$canUseOnBlock(PlayerEntity player, BlockHitResult blockHitResult) {
+    public boolean achieveToDo$canUse(PlayerEntity player, BlockHitResult blockHitResult) {
         isCanUseOnBlockChecking = true;
         boolean canUseOnBlock = useOnBlock(new ItemUsageContext(player.getWorld(), player, null, null, blockHitResult)) == null;
         isCanUseOnBlockChecking = false;

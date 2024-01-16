@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.injection.UsableOnBlock;
+import com.diskree.achievetodo.injection.UsableItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.ShearsItem;
@@ -14,13 +14,13 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ShearsItem.class)
-public abstract class ShearsItemMixin implements UsableOnBlock {
+public abstract class ShearsItemMixin implements UsableItem {
 
     @Unique
     private boolean isCanUseOnBlockChecking;
 
     @Override
-    public boolean achieveToDo$canUseOnBlock(PlayerEntity player, BlockHitResult blockHitResult) {
+    public boolean achieveToDo$canUse(PlayerEntity player, BlockHitResult blockHitResult) {
         isCanUseOnBlockChecking = true;
         boolean canUseOnBlock = useOnBlock(new ItemUsageContext(player.getWorld(), player, null, null, blockHitResult)) == null;
         isCanUseOnBlockChecking = false;

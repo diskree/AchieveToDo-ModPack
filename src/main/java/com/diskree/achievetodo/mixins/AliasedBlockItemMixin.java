@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.injection.UsableOnBlock;
+import com.diskree.achievetodo.injection.UsableItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -13,14 +13,14 @@ import net.minecraft.util.math.Direction;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(AliasedBlockItem.class)
-public class AliasedBlockItemMixin extends BlockItem implements UsableOnBlock {
+public class AliasedBlockItemMixin extends BlockItem implements UsableItem {
 
     public AliasedBlockItemMixin(Block block, Settings settings) {
         super(block, settings);
     }
 
     @Override
-    public boolean achieveToDo$canUseOnBlock(PlayerEntity player, BlockHitResult blockHitResult) {
+    public boolean achieveToDo$canUse(PlayerEntity player, BlockHitResult blockHitResult) {
         BlockState aliasedBlockState = getBlock().getDefaultState();
         BlockState blockState = player.getWorld().getBlockState(blockHitResult.getBlockPos());
         return !aliasedBlockState.isIn(BlockTags.MAINTAINS_FARMLAND) || !blockState.isOf(Blocks.FARMLAND) || blockHitResult.getSide() != Direction.UP;

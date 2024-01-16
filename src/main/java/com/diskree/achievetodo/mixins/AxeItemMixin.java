@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixins;
 
-import com.diskree.achievetodo.injection.UsableOnBlock;
+import com.diskree.achievetodo.injection.UsableItem;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,13 +19,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Optional;
 
 @Mixin(AxeItem.class)
-public abstract class AxeItemMixin implements UsableOnBlock {
+public abstract class AxeItemMixin implements UsableItem {
 
     @Unique
     private boolean isCanUseOnBlockChecking;
 
     @Override
-    public boolean achieveToDo$canUseOnBlock(PlayerEntity player, BlockHitResult blockHitResult) {
+    public boolean achieveToDo$canUse(PlayerEntity player, BlockHitResult blockHitResult) {
         isCanUseOnBlockChecking = true;
         boolean canUseOnBlock = tryStrip(player.getWorld(), blockHitResult.getBlockPos(), player, player.getWorld().getBlockState(blockHitResult.getBlockPos())).isPresent();
         isCanUseOnBlockChecking = false;

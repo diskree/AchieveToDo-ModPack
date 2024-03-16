@@ -16,6 +16,7 @@
     "BeaconBlockMixin",
     "BedBlockMixin",
     "BrewingStandBlockMixin",
+    "BrushItemMixin",
     "CartographyTableBlockMixin",
     "ChestBlockMixin",
     "CraftingTableBlockMixin",

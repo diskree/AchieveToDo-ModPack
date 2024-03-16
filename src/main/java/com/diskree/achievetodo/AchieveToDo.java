@@ -232,13 +232,14 @@ public class AchieveToDo implements ModInitializer {
             Item item = stack.getItem();
             BlockState blockState = world.getBlockState(hitResult.getBlockPos());
             Block block = blockState.getBlock();
-            boolean canUseBlock = block instanceof UsableBlock usableBlock && usableBlock.achieveToDo$canUse(item, player, hand, hitResult);
-            boolean shouldCancelInteraction = player.shouldCancelInteraction();
-            if ((!shouldCancelInteraction || player.getMainHandStack().isEmpty() && player.getOffHandStack().isEmpty()) && canUseBlock && isActionBlocked(player, BlockedActionType.findBlockedBlock(blockState))) {
+            if ((!player.shouldCancelInteraction() || player.getMainHandStack().isEmpty() &&
+                    player.getOffHandStack().isEmpty()) &&
+                    block instanceof UsableBlock usableBlock && usableBlock.achieveToDo$canUse(item, player, hand, hitResult) &&
+                    isActionBlocked(player, BlockedActionType.findBlockedBlock(blockState))
+            ) {
                 return ActionResult.FAIL;
             }
-            boolean canUseItem = item instanceof UsableItem usableItem && usableItem.achieveToDo$canUse(player, hitResult);
-            if (shouldCancelInteraction || canUseItem) {
+            if (item instanceof UsableItem usableItem && usableItem.achieveToDo$canUse(player, hitResult)) {
                 if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getFoodComponent()))) {
                     return ActionResult.FAIL;
                 }
@@ -257,14 +258,25 @@ public class AchieveToDo implements ModInitializer {
             if (entity instanceof ItemFrameEntity) {
                 return ActionResult.PASS;
             }
-            if (entity instanceof BoatEntity && isActionBlocked(player, BlockedActionType.USING_BOAT)) {
+            if (entity instanceof BoatEntity boatEntity &&
+                    boatEntity.canAddPassenger(player) &&
+                    isActionBlocked(player, BlockedActionType.USING_BOAT)
+            ) {
                 return ActionResult.FAIL;
             }
-            if (entity instanceof VillagerEntity villagerEntity && isActionBlocked(player, BlockedActionType.findBlockedVillager(villagerEntity.getVillagerData().getProfession()))) {
+            if (entity instanceof VillagerEntity villagerEntity &&
+                    !villagerEntity.isBaby() &&
+                    !villagerEntity.getOffers().isEmpty() &&
+                    isActionBlocked(player, BlockedActionType.findBlockedVillager(villagerEntity.getVillagerData().getProfession()))
+            ) {
                 villagerEntity.sayNo();
                 return ActionResult.FAIL;
             }
-            if (item == Items.SHEARS && entity instanceof Shearable shearable && shearable.isShearable() && isActionBlocked(player, BlockedActionType.USING_SHEARS)) {
+            if (item == Items.SHEARS &&
+                    entity instanceof Shearable shearable &&
+                    shearable.isShearable() &&
+                    isActionBlocked(player, BlockedActionType.USING_SHEARS)
+            ) {
                 return ActionResult.FAIL;
             }
             return ActionResult.PASS;

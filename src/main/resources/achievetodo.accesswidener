@@ -14,6 +14,7 @@ accessible method net/minecraft/world/gen/feature/Feature setBlockState (Lnet/mi
 accessible method net/minecraft/entity/passive/VillagerEntity sayNo ()V
 accessible method net/minecraft/client/gui/screen/advancement/AdvancementTab addWidget (Lnet/minecraft/client/gui/screen/advancement/AdvancementWidget;Lnet/minecraft/advancement/AdvancementEntry;)V
 accessible method net/minecraft/advancement/AdvancementDisplays shouldDisplay (Lnet/minecraft/advancement/PlacedAdvancement;Lit/unimi/dsi/fastutil/Stack;Ljava/util/function/Predicate;Lnet/minecraft/advancement/AdvancementDisplays$ResultConsumer;)Z
+accessible method net/minecraft/entity/vehicle/BoatEntity canAddPassenger (Lnet/minecraft/entity/Entity;)Z
 
 accessible field net/minecraft/client/item/ModelPredicateProviderRegistry DAMAGE_ID Lnet/minecraft/util/Identifier;
 accessible field net/minecraft/client/item/ModelPredicateProviderRegistry DAMAGE_PROVIDER Lnet/minecraft/client/item/ClampedModelPredicateProvider;

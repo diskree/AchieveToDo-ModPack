@@ -228,15 +228,17 @@ public class AchieveToDo implements ModInitializer {
             return TypedActionResult.pass(ItemStack.EMPTY);
         });
         UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
-            BlockState blockState = world.getBlockState(hitResult.getBlockPos());
             ItemStack stack = player.getStackInHand(hand);
             Item item = stack.getItem();
-            if ((!player.shouldCancelInteraction() || player.getMainHandStack().isEmpty() && player.getOffHandStack().isEmpty()) && isActionBlocked(player, BlockedActionType.findBlockedBlock(blockState))) {
+            BlockState blockState = world.getBlockState(hitResult.getBlockPos());
+            Block block = blockState.getBlock();
+            boolean canUseBlock = block instanceof UsableBlock usableBlock && usableBlock.achieveToDo$canUse(item, player, hand, hitResult);
+            boolean shouldCancelInteraction = player.shouldCancelInteraction();
+            if ((!shouldCancelInteraction || player.getMainHandStack().isEmpty() && player.getOffHandStack().isEmpty()) && canUseBlock && isActionBlocked(player, BlockedActionType.findBlockedBlock(blockState))) {
                 return ActionResult.FAIL;
             }
             boolean canUseItem = item instanceof UsableItem usableItem && usableItem.achieveToDo$canUse(player, hitResult);
-            boolean canUseBlock = !(blockState.getBlock() instanceof UsableBlock) || ((UsableBlock) blockState.getBlock()).achieveToDo$canUse(item);
-            if (player.shouldCancelInteraction() || canUseItem || canUseBlock) {
+            if (shouldCancelInteraction || canUseItem) {
                 if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getFoodComponent()))) {
                     return ActionResult.FAIL;
                 }
@@ -311,7 +313,7 @@ public class AchieveToDo implements ModInitializer {
     }
 
     public static boolean isActionBlocked(PlayerEntity player, BlockedActionType blockedAction, boolean isCheckOnly) {
-        if (blockedAction == null || player == null || player.isCreative() || blockedAction.isUnblocked(player)) {
+        if (blockedAction == null || player == null || player.isCreative() || player.isSpectator() || blockedAction.isUnblocked(player)) {
             return false;
         }
         if (!isCheckOnly) {

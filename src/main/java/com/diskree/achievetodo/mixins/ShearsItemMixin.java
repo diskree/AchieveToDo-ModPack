@@ -17,14 +17,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class ShearsItemMixin implements UsableItem {
 
     @Unique
-    private boolean isCanUseOnBlockChecking;
+    private boolean isCanUseChecking;
 
     @Override
     public boolean achieveToDo$canUse(PlayerEntity player, BlockHitResult blockHitResult) {
-        isCanUseOnBlockChecking = true;
-        boolean canUseOnBlock = useOnBlock(new ItemUsageContext(player.getWorld(), player, null, null, blockHitResult)) == null;
-        isCanUseOnBlockChecking = false;
-        return canUseOnBlock;
+        isCanUseChecking = true;
+        boolean canUse = useOnBlock(new ItemUsageContext(player.getWorld(), player, null, null, blockHitResult)) == null;
+        isCanUseChecking = false;
+        return canUse;
     }
 
     @Shadow
@@ -32,7 +32,7 @@ public abstract class ShearsItemMixin implements UsableItem {
 
     @Inject(method = "useOnBlock", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemUsageContext;getPlayer()Lnet/minecraft/entity/player/PlayerEntity;", ordinal = 0, shift = At.Shift.BEFORE), cancellable = true)
     public void returnOnUse(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
-        if (isCanUseOnBlockChecking) {
+        if (isCanUseChecking) {
             cir.setReturnValue(null);
         }
     }

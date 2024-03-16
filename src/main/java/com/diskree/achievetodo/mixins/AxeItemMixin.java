@@ -22,14 +22,14 @@ import java.util.Optional;
 public abstract class AxeItemMixin implements UsableItem {
 
     @Unique
-    private boolean isCanUseOnBlockChecking;
+    private boolean isCanUseChecking;
 
     @Override
     public boolean achieveToDo$canUse(PlayerEntity player, BlockHitResult blockHitResult) {
-        isCanUseOnBlockChecking = true;
-        boolean canUseOnBlock = tryStrip(player.getWorld(), blockHitResult.getBlockPos(), player, player.getWorld().getBlockState(blockHitResult.getBlockPos())).isPresent();
-        isCanUseOnBlockChecking = false;
-        return canUseOnBlock;
+        isCanUseChecking = true;
+        boolean canUse = tryStrip(player.getWorld(), blockHitResult.getBlockPos(), player, player.getWorld().getBlockState(blockHitResult.getBlockPos())).isPresent();
+        isCanUseChecking = false;
+        return canUse;
     }
 
     @Shadow
@@ -37,21 +37,21 @@ public abstract class AxeItemMixin implements UsableItem {
 
     @Inject(method = "tryStrip", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;playSound(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V", ordinal = 0, shift = At.Shift.BEFORE), cancellable = true)
     public void returnOnStrip(World world, BlockPos pos, @Nullable PlayerEntity player, BlockState state, CallbackInfoReturnable<Optional<BlockState>> cir, @SuppressWarnings("OptionalUsedAsFieldOrParameterType") @Local(ordinal = 0) Optional<BlockState> blockState) {
-        if (isCanUseOnBlockChecking) {
+        if (isCanUseChecking) {
             cir.setReturnValue(blockState);
         }
     }
 
     @Inject(method = "tryStrip", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;playSound(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V", ordinal = 1, shift = At.Shift.BEFORE), cancellable = true)
     public void returnOnDecreaseOxidationState(World world, BlockPos pos, @Nullable PlayerEntity player, BlockState state, CallbackInfoReturnable<Optional<BlockState>> cir, @SuppressWarnings("OptionalUsedAsFieldOrParameterType") @Local(ordinal = 1) Optional<BlockState> blockState) {
-        if (isCanUseOnBlockChecking) {
+        if (isCanUseChecking) {
             cir.setReturnValue(blockState);
         }
     }
 
     @Inject(method = "tryStrip", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;playSound(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V", ordinal = 2, shift = At.Shift.BEFORE), cancellable = true)
     public void returnOnWaxOff(World world, BlockPos pos, @Nullable PlayerEntity player, BlockState state, CallbackInfoReturnable<Optional<BlockState>> cir, @SuppressWarnings("OptionalUsedAsFieldOrParameterType") @Local(ordinal = 2) Optional<BlockState> blockState) {
-        if (isCanUseOnBlockChecking) {
+        if (isCanUseChecking) {
             cir.setReturnValue(blockState);
         }
     }

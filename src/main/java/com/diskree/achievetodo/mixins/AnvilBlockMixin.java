@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixins;
 
 import com.diskree.achievetodo.injection.UsableBlock;
-import net.minecraft.block.AbstractFurnaceBlock;
+import net.minecraft.block.AnvilBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -19,11 +19,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(AbstractFurnaceBlock.class)
-public abstract class AbstractFurnaceBlockMixin implements UsableBlock {
+@Mixin(AnvilBlock.class)
+public abstract class AnvilBlockMixin implements UsableBlock {
 
     @Shadow
-    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
+    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hitResult);
 
     @Unique
     private boolean isCanUseChecking;
@@ -36,7 +36,7 @@ public abstract class AbstractFurnaceBlockMixin implements UsableBlock {
         return canUse;
     }
 
-    @Inject(method = "onUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/AbstractFurnaceBlock;openScreen(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/player/PlayerEntity;)V", shift = At.Shift.BEFORE), cancellable = true)
+    @Inject(method = "onUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;openHandledScreen(Lnet/minecraft/screen/NamedScreenHandlerFactory;)Ljava/util/OptionalInt;", shift = At.Shift.BEFORE), cancellable = true)
     public void returnOnUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(null);

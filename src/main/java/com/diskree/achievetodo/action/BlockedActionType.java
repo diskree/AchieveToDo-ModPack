@@ -516,11 +516,14 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         if (blockState == null) {
             return null;
         }
+        if (blockState.getBlock() instanceof BedBlock) {
+            return SLEEP;
+        }
         if (blockState.getBlock() instanceof ShulkerBoxBlock) {
             return OPEN_SHULKER_BOX;
         }
-        if (blockState.getBlock() instanceof BedBlock) {
-            return SLEEP;
+        if (blockState.getBlock() instanceof AnvilBlock) {
+            return USING_ANVIL;
         }
         if (blockState.getBlock() instanceof DoorBlock doorBlock) {
             return !doorBlock.isOpen(blockState) ? OPEN_DOOR : null;

@@ -477,6 +477,9 @@ public enum BlockedActionType implements IGeneratedAdvancement {
 
     @Nullable
     public static BlockedActionType findBlockedFood(FoodComponent food) {
+        if (food == null) {
+            return null;
+        }
         for (BlockedActionType blockedAction : BlockedActionType.values()) {
             if (food == blockedAction.food) {
                 return blockedAction;
@@ -487,6 +490,9 @@ public enum BlockedActionType implements IGeneratedAdvancement {
 
     @Nullable
     public static BlockedActionType findBlockedItem(PlayerEntity player, ItemStack stack) {
+        if (stack == null) {
+            return null;
+        }
         if (stack.isOf(Items.CROSSBOW)) {
             return CrossbowItem.isCharged(stack) ? BlockedActionType.USING_CROSSBOW : null;
         }
@@ -510,11 +516,14 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         if (blockState == null) {
             return null;
         }
+        if (blockState.getBlock() instanceof BedBlock) {
+            return SLEEP;
+        }
         if (blockState.getBlock() instanceof ShulkerBoxBlock) {
             return OPEN_SHULKER_BOX;
         }
-        if (blockState.getBlock() instanceof BedBlock) {
-            return SLEEP;
+        if (blockState.getBlock() instanceof AnvilBlock) {
+            return USING_ANVIL;
         }
         if (blockState.getBlock() instanceof DoorBlock doorBlock) {
             return !doorBlock.isOpen(blockState) ? OPEN_DOOR : null;
@@ -531,9 +540,6 @@ public enum BlockedActionType implements IGeneratedAdvancement {
     public static BlockedActionType findBlockedTool(Item item) {
         if (item == null) {
             return null;
-        }
-        if (item == Items.SHEARS) {
-            return BlockedActionType.USING_SHEARS;
         }
         if (item instanceof ToolItem toolItem) {
             for (BlockedActionType blockedAction : BlockedActionType.values()) {

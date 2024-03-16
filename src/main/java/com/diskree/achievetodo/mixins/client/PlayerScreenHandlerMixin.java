@@ -1,6 +1,7 @@
 package com.diskree.achievetodo.mixins.client;
 
 import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.action.BlockedActionType;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.player.PlayerEntity;
@@ -37,7 +38,7 @@ public abstract class PlayerScreenHandlerMixin {
 
             @Override
             public boolean canInsert(ItemStack stack) {
-                if (AchieveToDo.isEquipmentBlocked(MinecraftClient.getInstance().player, stack)) {
+                if (AchieveToDo.isActionBlocked(MinecraftClient.getInstance().player, BlockedActionType.findBlockedEquipment(stack.getItem()))) {
                     if (MinecraftClient.getInstance().currentScreen != null) {
                         MinecraftClient.getInstance().currentScreen.close();
                     }

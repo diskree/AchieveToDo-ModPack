@@ -9,7 +9,7 @@ Each world you generate comes bundled with BlazeandCave's advancements pack, boa
 
 [<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg"/>](https://modrinth.com/modpack/achievetodo)
 
-To install AchieveToDo, I recommend download [the Modrinth App](https://modrinth.com/app). For instructions with other launchers, please see [Modrinth's documentation](https://docs.modrinth.com/docs/modpacks/playing_modpacks/).
+To install AchieveToDo, I recommend download [the Modrinth App](https://modrinth.com/app). For instructions with other launchers, please see [Modrinth's documentation](https://docs.modrinth.com/docs/modpacks/playing_modpacks).
 
 ## World Creation
 
@@ -71,68 +71,103 @@ For enhanced convenience, the advancements window has been expanded to fill the 
 
 # 📦 Resources
 
-### Mods
+## Mods
 
-- [AntiGhost](https://github.com/gbl/AntiGhost)
-- [Architectury API](https://github.com/architectury/architectury-api)
-- [BetterF3](https://modrinth.com/mod/betterf3)
-- [Blur](https://github.com/Motschen/Blur)
-- [Better Recipe Book](https://github.com/mrshmllow/BetterRecipeBook)
-- [C^2M](https://github.com/RelativityMC/C2ME-fabric)
-- [Capes](https://github.com/CaelTheColher/Capes)
-- [CITResewn](https://github.com/SHsuperCM/CITResewn)
-- [Cloth Config API](https://github.com/shedaniel/ClothConfig/)
-- [Continuity](https://github.com/PepperCode1/Continuity)
-- [CustomHUD](https://github.com/Minenash/CustomHUD)
-- [Dark Loading Screen](https://github.com/A5b84/dark-loading-screen)
-- [Debugify](https://github.com/isXander/Debugify)
-- [Disable Custom Worlds Advice](https://github.com/rdvdev2/DisableCustomWorldsAdvice)
-- [Dynamic FPS](https://github.com/juliand665/Dynamic-FPS)
-- [EntityCulling](https://github.com/tr7zw/EntityCulling)
-- [Exordium](https://github.com/tr7zw/Exordium)
-- [FabricSkyboxes](https://github.com/AMereBagatelle/fabricskyboxes)
-- [Falling Leaves](https://github.com/RandomMcSomethin/fallingleaves)
-- [FerriteCore](https://github.com/malte0811/FerriteCore)
-- [ImmediatelyFast](https://github.com/RaphiMC/ImmediatelyFast)
-- [Indium](https://github.com/comp500/Indium)
-- [Iris](https://github.com/IrisShaders/Iris)
-- [Krypton](https://github.com/astei/krypton)
-- [LambDynamicLights](https://github.com/LambdAurora/LambDynamicLights)
-- [Language Reload](https://github.com/Jerozgen/LanguageReload)
-- [Lithium](https://github.com/CaffeineMC/lithium-fabric)
-- [Main Menu Credits](https://github.com/isXander/main-menu-credits)
-- [Model Gap Fix](https://github.com/MehVahdJukaar/modelfix-multi)
-- [Mod Menu](https://github.com/TerraformersMC/ModMenu)
-- [More Culling](https://github.com/fxmorin/moreculling)
-- [No Resource Pack Warnings](https://github.com/SpaceWalkerRS/no-resource-pack-warnings)
-- [Quilt Standard Libraries](https://github.com/QuiltMC/quilt-standard-libraries)
-- [Quilt Kotlin Libraries](https://github.com/QuiltMC/quilt-kotlin-libraries)
-- [Reese's Sodium Options](https://github.com/FlashyReese/reeses-sodium-options)
-- [Sodium](https://github.com/CaffeineMC/sodium-fabric/)
-- [Sodium Extra](https://github.com/FlashyReese/sodium-extra-fabric)
-- [YetAnotherConfigLib](https://github.com/isXander/YetAnotherConfigLib)
-- [YOSBR](https://github.com/shedaniel/your-options-shall-be-respected)
+- [AntiGhost](https://modrinth.com/mod/antighost) [[GitHub](https://github.com/gbl/AntiGhost)]
+- [Better Mount HUD](https://modrinth.com/mod/better-mount-hud) [[GitHub](https://github.com/Lortseam/better-mount-hud)]
+- [BetterF3](https://modrinth.com/mod/betterf3) [[GitHub](https://github.com/TreyRuffy/BetterF3)]
+- [Blur](https://modrinth.com/mod/blur-fabric) [[GitHub](https://github.com/Motschen/Blur)]
+- [Boat Break Fix](https://modrinth.com/mod/boat-break-fix) [[GitHub](https://github.com/nvb-uy/boatbreakfix)]
+- [Concurrent Chunk Management Engine](https://modrinth.com/mod/c2me-fabric) [[GitHub](https://github.com/RelativityMC/C2ME-fabric)]
+- [Capes](https://modrinth.com/mod/capes) [[GitHub](https://github.com/CaelTheColher/Capes)]
+- [CIT Resewn](https://modrinth.com/mod/cit-resewn) [[GitHub](https://github.com/SHsuperCM/CITResewn)] ([1.20.4 by dicedpixels](https://github.com/dicedpixels/CITResewn))
+- [Cloth Config API](https://modrinth.com/mod/cloth-config) [[GitHub](https://github.com/shedaniel/cloth-config)]
+- [Continuity](https://modrinth.com/mod/continuity) [[GitHub](https://github.com/PepperCode1/Continuity)]
+- [CursorCentered Fix](https://modrinth.com/mod/cursorcentered-fix) [[GitHub](https://github.com/LitnhJacuzzi/CursorCentered-Fix)]
+- [CustomHud](https://modrinth.com/mod/customhud) [[GitHub](https://github.com/Minenash/CustomHUD)]
+- [Dark Loading Screen](https://modrinth.com/mod/dark-loading-screen) [[GitHub](https://github.com/A5b84/dark-loading-screen)]
+- [Disable Custom Worlds Advice](https://modrinth.com/mod/dcwa) [[GitHub](https://github.com/rdvdev2/DisableCustomWorldsAdvice)]
+- [Debugify](https://modrinth.com/mod/debugify) [[GitHub](https://github.com/isXander/Debugify)]
+- [Dynamic FPS](https://modrinth.com/mod/dynamic-fps) [[GitHub](https://github.com/juliand665/Dynamic-FPS)]
+- [Enhanced Block Entities](https://modrinth.com/mod/ebe) [[GitHub](https://github.com/FoundationGames/EnhancedBlockEntities)]
+- [Entity Culling](https://modrinth.com/mod/entityculling) [[GitHub](https://github.com/tr7zw/EntityCulling)]
+- [Exordium](https://modrinth.com/mod/exordium) [[GitHub](https://github.com/tr7zw/Exordium)]
+- [ExtraSounds](https://modrinth.com/mod/extrasounds) [[GitHub](https://github.com/stashymane/extra-sounds)] ([1.20.4 by lonefelidae16](https://github.com/lonefelidae16/extra-sounds))
+- [Fabric API](https://modrinth.com/mod/fabric-api) [[GitHub](https://github.com/FabricMC/fabric)]
+- [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) [[GitHub](https://github.com/FabricMC/fabric-language-kotlin)]
+- [FabricSkyboxes](https://modrinth.com/mod/fabricskyboxes) [[GitHub](https://github.com/AMereBagatelle/fabricskyboxes)]
+- [Falling Leaves](https://modrinth.com/mod/fallingleaves) [[GitHub](https://github.com/RandomMcSomethin/fallingleaves)]
+- [FerriteCore](https://modrinth.com/mod/ferrite-core) [[GitHub](https://github.com/malte0811/FerriteCore)]
+- [FixBookGUI](https://modrinth.com/mod/fixbookgui) [[GitHub](https://github.com/KosmoMoustache/FixBookGUI)]
+- [Indium](https://modrinth.com/mod/indium) [[GitHub](https://github.com/comp500/Indium)]
+- [Iris Shaders](https://modrinth.com/mod/iris) [[GitHub](https://github.com/IrisShaders/Iris)]
+- [Krypton](https://modrinth.com/mod/krypton) [[GitHub](https://github.com/astei/krypton)]
+- [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights) [[GitHub](https://github.com/LambdAurora/LambDynamicLights)]
+- [Language Reload](https://modrinth.com/mod/language-reload) [[GitHub](https://github.com/Jerozgen/LanguageReload)]
+- [LibJF](https://modrinth.com/mod/libjf) [[JfGit](https://git.frohnmeyer-wds.de/JfMods/LibJF)]
+- [Lithium](https://modrinth.com/mod/lithium) [[GitHub](https://github.com/caffeinemc/lithium-fabric)]
+- [Main Menu Credits](https://modrinth.com/mod/main-menu-credits) [[GitHub](https://github.com/isXander/main-menu-credits)]
+- [Model Gap Fix](https://modrinth.com/mod/modelfix) [[GitHub](https://github.com/MehVahdJukaar/modelfix-multi)]
+- [Mod Menu](https://modrinth.com/mod/modmenu) [[GitHub](https://github.com/TerraformersMC/ModMenu)]
+- [More Culling](https://modrinth.com/mod/moreculling) [[GitHub](https://github.com/fxmorin/moreculling)]
+- [No Resource Pack Warnings](https://modrinth.com/mod/no-resource-pack-warnings) [[GitHub](https://github.com/SpaceWalkerRS/no-resource-pack-warnings)]
+- [Real Arrow Tip](https://modrinth.com/mod/real-arrow-tip) [[GitHub](https://github.com/ToBinio/real-arrow-tip)]
+- [Reese's Sodium Options](https://modrinth.com/mod/reeses-sodium-options) [[GitHub](https://github.com/FlashyReese/reeses-sodium-options)]
+- [Respackopts](https://modrinth.com/mod/respackopts) [[JfGit](https://git.frohnmeyer-wds.de/JfMods/Respackopts)]
+- [Remove Reloading Screen](https://modrinth.com/mod/rrls) [[GitHub](https://github.com/dima-dencep/rrls)]
+- [Screenshot to Clipboard](https://modrinth.com/mod/screenshot-to-clipboard) [[GitHub](https://github.com/comp500/ScreenshotToClipboard)]
+- [Shulker Box Tooltip](https://modrinth.com/mod/shulkerboxtooltip) [[GitHub](https://github.com/MisterPeModder/ShulkerBoxTooltip)]
+- [ShutUpDeadEntities](https://modrinth.com/mod/shutupdeadentities) [[GitHub](https://github.com/diskree/ShutUpDeadEntities)]
+- [Sodium](https://modrinth.com/mod/sodium) [[GitHub](https://github.com/CaffeineMC/sodium-fabric)]
+- [Sodium Extra](https://modrinth.com/mod/sodium-extra) [[GitHub](https://github.com/FlashyReese/sodium-extra-fabric)]
+- [Textile Backup](https://modrinth.com/mod/textile_backup) [[GitHub](https://github.com/Szum123321/textile_backup)]
+- [XYZBook](https://modrinth.com/mod/xyzbook) [[GitHub](https://github.com/diskree/XYZBook)]
+- [Your Options Shall Be Respected](https://modrinth.com/mod/yosbr) [[GitHub](https://github.com/shedaniel/your-options-shall-be-respected)]
+- [Zoomify](https://modrinth.com/mod/zoomify) [[GitHub](https://github.com/isXander/Zoomify)]
 
-### Resource packs
+## Data packs
+- [BlazeandCave's Advancements Pack](https://modrinth.com/datapack/blazeandcaves-advancements-pack) [[PMC](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12)]
+- BlazeandCave's Advancements Pack Hardcore version [[PMC](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-hardcore-version)]
+- BlazeandCave's Advancements Pack Terralith version [[PMC](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-terralith-version)]
+- BlazeandCave's Advancements Pack Amplified Nether version [[PMC](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-terralith-version)]
+- BlazeandCave's Advancements Pack Nullscape version [[PMC](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-terralith-version)]
+- [Terralith](https://modrinth.com/mod/terralith) [[GitHub](https://github.com/Stardust-Labs-MC/Terralith)] [[PMC](https://www.planetminecraft.com/data-pack/terralith-overworld-evolved-100-biomes-caves-and-more)]
+- [Amplified Nether](https://modrinth.com/mod/amplified-nether) [[GitHub](https://github.com/Stardust-Labs-MC/Amplified-Nether)] [[PMC](https://www.planetminecraft.com/data-pack/amplified-nether-1-18)]
+- [Nullscape](https://modrinth.com/mod/nullscape) [[GitHub](https://github.com/Stardust-Labs-MC/Nullscape)] [[PMC](https://www.planetminecraft.com/data-pack/nullscape)]
 
-- [Better Banner Pattern](https://www.planetminecraft.com/texture-pack/banner-pattern-new/)
-- [Better Grass](https://modrinth.com/resourcepack/bettergrass)
-- [Better Waxed Copper](https://www.curseforge.com/minecraft/texture-packs/better-waxed-copper)
+## Shaders
+
+- [BSL Shaders](https://www.curseforge.com/minecraft/customization/bsl-shaders)
+- [Complementary Shaders - Reimagined](https://www.curseforge.com/minecraft/customization/complementary-reimagined) [[GitHub](https://github.com/ComplementaryDevelopment/ComplementaryReimagined)]
+- [Complementary Shaders - Unbound](https://modrinth.com/shader/complementary-unbound) [[GitHub](https://github.com/ComplementaryDevelopment/ComplementaryReimagined)]
+
+## Resource Packs
+
+- [BACAP Language Pack](https://modrinth.com/resourcepack/bacap-language-pack)
+- Better Banner Pattern [[PMC](https://www.planetminecraft.com/texture-pack/banner-pattern-new)]
+- Better Waxed Copper [[PMC](https://www.planetminecraft.com/texture-pack/better-waxed-copper)]
+- [Centered Crosshair Fix](https://modrinth.com/resourcepack/centered-crosshair-fix)
+- [Centered Stone Bricks](https://modrinth.com/resourcepack/centered-stone-bricks)
+- [Colorful Sheared Sheep](https://modrinth.com/resourcepack/colorful-sheared-sheep)
 - [CTM Overhaul](https://modrinth.com/resourcepack/ctm-overhaul)
-- [Default Dark Mode](https://github.com/xnebulr/Minecraft-Default-Dark-Mode)
+- [Default Dark Mode](https://github.com/xnebulr/Minecraft-Default-Dark-Mode) [[GitHub](https://github.com/nebuIr/Default-Dark-Mode)]
+- [Fast Better Grass](https://modrinth.com/resourcepack/fast-better-grass) [[GitHub](https://github.com/Fabulously-Optimized/fabulously-optimized/tree/main/Resource%20Packs/Fast%20Better%20Grass)]
+- [Fixed Barrel](https://modrinth.com/resourcepack/fixed-barrel)
+- [Fixed Hardcore Absorption Hearts](https://modrinth.com/resourcepack/embin-hardcore_absorption)
+- [Map Marking Fix](https://modrinth.com/resourcepack/map-marking-fix)
+- [Minimal Rain & Snow](https://modrinth.com/resourcepack/minimal-rain)
+- [Nether Bricks Fix](https://modrinth.com/resourcepack/nether-bricks-fix)
+- [No Z-Fighting](https://modrinth.com/resourcepack/no-z-fighting)
+- [Translations for Sodium](https://modrinth.com/resourcepack/translations-for-sodium) [[GitHub](https://github.com/Madis0/sodium-fabric-translations)]
+- [Trap Door Fix](https://modrinth.com/resourcepack/trap-door-fix)
 - [Unique Enchanted Books](https://www.curseforge.com/minecraft/texture-packs/unique-enchanted-books)
 - [Visual Fish Buckets](https://www.curseforge.com/minecraft/texture-packs/visual-fish-buckets)
 - [Visual Goat Horns](https://www.curseforge.com/minecraft/texture-packs/visual-goat-horns)
-- [What Painting I'm Looking At?](https://www.planetminecraft.com/texture-pack/what-painting-i-m-looking-at/)
+- [Visual Potions](https://modrinth.com/resourcepack/visualpotions) [[GitHub](https://github.com/diskree/VisualPotions)]
+- [What Painting I'm Looking At?](https://www.planetminecraft.com/texture-pack/what-painting-i-m-looking-at)
 
-### Shader packs
+# Acknowledgments
 
-- [BSL Shaders](https://www.curseforge.com/minecraft/customization/bsl-shaders)
-- [Complementary Reimagined](https://www.curseforge.com/minecraft/customization/complementary-reimagined)
-- [Complementary Shaders](https://www.curseforge.com/minecraft/customization/complementary-shaders)
-
-## Acknowledgments
-
-- This marks my first major project in Minecraft modding. In fact, it wouldn't have been possible without Cavinator1's creation of the [BlazeandCave's advancement pack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12/), which served as a significant inspiration for me.
-- I extend my gratitude to the [StardustLabs](https://www.stardustlabs.net/) team for their world generation contribution for all three dimensions.
+- This marks my first major project in Minecraft modding. In fact, it wouldn't have been possible without [Cavinator1](https://www.planetminecraft.com/member/cavinator1)'s creation of the [BlazeandCave's advancement pack](https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-1-12), which served as a significant inspiration for me.
+- I extend my gratitude to the [StardustLabs](https://www.stardustlabs.net) team for their world generation contribution for all three dimensions.
 - This modpack is based on 💜 [Sugar Optimization](https://modrinth.com/modpack/sugar) modpack. I express my appreciation for the exceptional work put into optimizing and enhancing the Minecraft experience!

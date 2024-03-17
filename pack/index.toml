@@ -299,7 +299,7 @@ file = "resourcepacks/centered-crosshair-fix.pw.toml"
 metafile = true
 
 [[files]]
-file = "resourcepacks/chiseled-stone-bricks.pw.toml"
+file = "resourcepacks/centered-stone-bricks.pw.toml"
 metafile = true
 
 [[files]]

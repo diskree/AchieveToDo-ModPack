@@ -1,0 +1,13 @@
+name = "YetAnotherGlint"
+filename = "Yet Another Glint.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/h51P631G/versions/njwOfWZd/Yet%20Another%20Glint.zip"
+hash-format = "sha1"
+hash = "391357ea6f0256a6e4de8030f1363e4829d55e61"
+
+[update]
+[update.modrinth]
+mod-id = "h51P631G"
+version = "njwOfWZd"

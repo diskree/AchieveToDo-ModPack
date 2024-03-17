@@ -363,6 +363,10 @@ file = "resourcepacks/wpila.pw.toml"
 metafile = true
 
 [[files]]
+file = "resourcepacks/yetanotherglint.pw.toml"
+metafile = true
+
+[[files]]
 file = "shaderpacks/BSL_v8.2.08.zip.txt"
 
 [[files]]

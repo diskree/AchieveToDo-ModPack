@@ -44,7 +44,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:5
 renderClouds:"true"
-resourcePacks:["vanilla","fabric","continuity:default","continuity:glass_pane_culling_fix","file/BACAP Language Pack.zip","achievetodo:bacap_better_ru","file/Sodium Translations.zip","file/Default Dark Mode.zip","file/Centered Crosshair Fix.zip","file/Hardcore Absorption Fix.zip","file/Map Marking Fix.zip","file/Trapdoor Fix.zip","file/Barrel Fix.zip","file/Nether Bricks Fix.zip","file/Chiseled Stone Bricks Fix.zip","file/Colorful Sheared Sheep.zip","file/No Z-Fighting.zip","file/What Painting I\u0027m Looking At.zip","file/Visual Goat Horns.zip","file/Visual Fish Buckets.zip","file/Visual Potions.zip","file/Better Banner Pattern.zip","file/Better Waxed Copper.zip","file/Unique Enchanted Books.zip","file/Minimal Rain \u0026 Snow.zip"]
+resourcePacks:["vanilla","fabric","continuity:default","continuity:glass_pane_culling_fix","file/BACAP Language Pack.zip","achievetodo:bacap_better_ru","file/Sodium Translations.zip","file/Default Dark Mode.zip","file/Centered Crosshair Fix.zip","file/Hardcore Absorption Fix.zip","file/Map Marking Fix.zip","file/Trapdoor Fix.zip","file/Barrel Fix.zip","file/Nether Bricks Fix.zip","file/Centered Stone Bricks Fix.zip","file/Colorful Sheared Sheep.zip","file/No Z-Fighting.zip","file/What Painting I\u0027m Looking At.zip","file/Visual Goat Horns.zip","file/Visual Fish Buckets.zip","file/Visual Potions.zip","file/Better Banner Pattern.zip","file/Unique Enchanted Books.zip","file/Better Waxed Copper.zip","file/Yet Another Glint.zip","file/Minimal Rain \u0026 Snow.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 soundDevice:""

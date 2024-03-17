@@ -1,0 +1,13 @@
+name = "ShutUpDeadEntities"
+filename = "shutupdeadentities-mc1.20.4+1.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/9FJiZMp8/versions/w35PovIi/shutupdeadentities-mc1.20.4%2B1.0.jar"
+hash-format = "sha1"
+hash = "aac0749e90ef93fbcb7c794b62dffa41a813352d"
+
+[update]
+[update.modrinth]
+mod-id = "9FJiZMp8"
+version = "w35PovIi"

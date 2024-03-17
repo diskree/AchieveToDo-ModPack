@@ -44,7 +44,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:5
 renderClouds:"true"
-resourcePacks:["vanilla","fabric","continuity:default","continuity:glass_pane_culling_fix","file/BACAP Language Pack.zip","achievetodo:bacap_better_ru","file/Sodium Translations.zip","file/Default Dark Mode.zip","file/Centered Crosshair Fix.zip","file/Hardcore Absorption Fix.zip","file/Map Marking Fix.zip","file/Trapdoor Fix.zip","file/Barrel Fix.zip","file/Nether Bricks Fix.zip","file/Chiseled Stone Bricks Fix.zip","file/Colorful Sheared Sheep.zip","file/No Z-Fighting.zip","file/What Painting I\u0027m Looking At.zip","file/Visual Goat Horns.zip","file/Visual Fish Buckets.zip","file/Visual Potions.zip","file/Better Banner Pattern.zip","file/Better Waxed Copper.zip","file/Unique Enchanted Books.zip","file/Minimal Rain \u0026 Snow.zip"]
+resourcePacks:["vanilla","fabric","continuity:default","continuity:glass_pane_culling_fix","file/BACAP Language Pack.zip","achievetodo:bacap_better_ru","file/Sodium Translations.zip","file/Default Dark Mode.zip","file/Centered Crosshair Fix.zip","file/Hardcore Absorption Fix.zip","file/Map Marking Fix.zip","file/Trapdoor Fix.zip","file/Barrel Fix.zip","file/Nether Bricks Fix.zip","file/Centered Stone Bricks Fix.zip","file/Colorful Sheared Sheep.zip","file/No Z-Fighting.zip","file/What Painting I\u0027m Looking At.zip","file/Visual Goat Horns.zip","file/Visual Fish Buckets.zip","file/Visual Potions.zip","file/Better Banner Pattern.zip","file/Unique Enchanted Books.zip","file/Better Waxed Copper.zip","file/Yet Another Glint.zip","file/Minimal Rain \u0026 Snow.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 soundDevice:""
@@ -120,7 +120,8 @@ key_key.hotbar.6:key.keyboard.6
 key_key.hotbar.7:key.keyboard.7
 key_key.hotbar.8:key.keyboard.8
 key_key.hotbar.9:key.keyboard.9
-key_key.brb.pin:key.keyboard.unknown
+key_key.dynamic_fps.toggle_forced:key.keyboard.unknown
+key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown
 key_key.custom_hud.enable:key.keyboard.unknown
 key_key.custom_hud.cycle_profiles:key.keyboard.unknown
 key_key.custom_hud.swap_to_profile1:key.keyboard.unknown
@@ -128,8 +129,6 @@ key_key.custom_hud.swap_to_profile2:key.keyboard.unknown
 key_key.custom_hud.swap_to_profile3:key.keyboard.unknown
 key_key.custom_hud.show_errors:key.keyboard.unknown
 key_key.antighost.reveal:key.keyboard.g
-key_key.dynamic_fps.toggle_forced:key.keyboard.unknown
-key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown
 key_key.entityculling.toggle:key.keyboard.unknown
 key_key.fabricskyboxes.toggle:key.keyboard.unknown
 key_key.fabricskyboxes.toggle.debug_hud:key.keyboard.unknown

@@ -13,7 +13,7 @@ import net.minecraft.util.Formatting;
 
 public class CreateWorldTab extends GridScreenTab {
 
-    private static final boolean ALLOW_CUSTOM_GENERATION = false;
+    private static final boolean ALLOW_CUSTOM_GENERATION = true;
 
     private static final Text REWARDS_TITLE = Text.translatable("createWorld.rewards.title");
     private static final Text ITEM_REWARDS = Text.translatable("createWorld.rewards.item");

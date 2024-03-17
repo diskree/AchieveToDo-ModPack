@@ -31,7 +31,7 @@
   "blocked.using_netherite_tools": "You cannot use netherite tools yet",
   "blocked.equip_netherite_armor": "You cannot equip netherite armor yet",
   "blocked.end": "The End is locked",
-  "blocked.equip_elytra": "You cannot use an elytra yet",
+  "blocked.equip_elytra": "You cannot equip an elytra yet",
   "blocked.end_gateway": "You cannot teleport to the Outer Islands yet",
   "blocked.open_shulker_box": "You cannot open a shulker box yet",
   "blocked.fly": "You cannot use fireworks for flying yet",

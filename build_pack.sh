@@ -5,7 +5,7 @@ readonly NAME_COLOR_TO="#b2e8f7"
 
 readonly VERSION_COLOR_MAJOR="#f8c8dc"
 readonly VERSION_COLOR_MINOR="#fac898"
-readonly VERSION_COLOR_PATCH="#e4adf7"
+readonly VERSION_COLOR_PATCH="#f8c8dc"
 
 readonly modId=$1
 readonly packVersion=$2
@@ -19,6 +19,7 @@ readonly packDir="pack"
 
 rm -rf "build/libs"
 rm "$packDir/mods/$modId"*
+rm "$packDir/"*.mrpack
 rm -rf "src/main/generated"
 ./gradlew runDatagen
 ./gradlew build

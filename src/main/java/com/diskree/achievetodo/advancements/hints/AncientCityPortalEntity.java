@@ -2,7 +2,7 @@ package com.diskree.achievetodo.advancements.hints;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.BuildConfig;
-import com.diskree.achievetodo.ItemDisplayEntityImpl;
+import com.diskree.achievetodo.injection.ItemDisplayEntityImpl;
 import com.diskree.achievetodo.advancements.AdvancementHint;
 import com.diskree.achievetodo.advancements.RandomAdvancements;
 import net.minecraft.block.BlockState;
@@ -67,8 +67,6 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     public static final BooleanProperty REINFORCED_DEEPSLATE_CHARGED_PROPERTY = BooleanProperty.of("charged");
     public static final BooleanProperty REINFORCED_DEEPSLATE_BROKEN_PROPERTY = BooleanProperty.of("broken");
-
-    private static boolean isHintlyHallowsUsedRequestInProgress;
 
     private final EntityGameEventHandler<JukeboxEventListener> jukeboxEventHandler;
     @Nullable
@@ -176,7 +174,6 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
         if (blocksToCharge.size() == 1) {
             AdvancementHint advancementHint = RandomAdvancements.getHint(charger);
             if (advancementHint != null) {
-                hintlyHallowsUsed(charger);
                 showAdvancementTab(advancementHint.tab());
                 showAdvancementHint(advancementHint.hint(), advancementHint.dropHint());
                 showAdvancement(advancementHint.advancement());
@@ -638,50 +635,6 @@ public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {
 
     private Direction getFromOriginDirection() {
         return getHorizontalFacing().rotateYClockwise();
-    }
-
-    private void hintlyHallowsUsed(ServerPlayerEntity charger) {
-        if (isHintlyHallowsUsedRequestInProgress) {
-            return;
-        }
-        MinecraftServer server = charger.getServer();
-        if (server == null) {
-            return;
-        }
-        File hintlyHallowsUsedFile = charger.getServer().getFile(".hintly_hallows_used");
-        if (hintlyHallowsUsedFile.exists()) {
-            return;
-        }
-        CompletableFuture.runAsync(() -> {
-            isHintlyHallowsUsedRequestInProgress = true;
-            HttpURLConnection connection = null;
-            try {
-                String formUrl = "https://docs.google.com/forms/d/e/" + BuildConfig.HINTLY_HALLOWS_FORM_ID + "/formResponse";
-                String formParameters = "entry." + BuildConfig.HINTLY_HALLOWS_ENTRY_ID + "=" + AchieveToDo.getScore(charger);
-
-                connection = (HttpURLConnection) new URL(formUrl).openConnection(MinecraftClient.getInstance().getNetworkProxy());
-                connection.setConnectTimeout(15000);
-                connection.setReadTimeout(2000);
-                connection.setDoOutput(true);
-                connection.setDoInput(true);
-                connection.setRequestMethod("POST");
-                try (OutputStream outputStream = connection.getOutputStream();
-                     OutputStreamWriter writer = new OutputStreamWriter(outputStream, StandardCharsets.UTF_8)) {
-                    writer.write(formParameters);
-                    writer.flush();
-                }
-                if (connection.getResponseCode() / 100 == 2) {
-                    //noinspection ResultOfMethodCallIgnored
-                    hintlyHallowsUsedFile.createNewFile();
-                }
-            } catch (Exception ignored) {
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
-                }
-                isHintlyHallowsUsedRequestInProgress = false;
-            }
-        }, Util.getMainWorkerExecutor());
     }
 
     class JukeboxEventListener implements GameEventListener {

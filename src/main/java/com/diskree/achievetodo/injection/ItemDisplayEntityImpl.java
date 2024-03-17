@@ -1,4 +1,4 @@
-package com.diskree.achievetodo;
+package com.diskree.achievetodo.injection;
 
 import net.minecraft.item.ItemStack;
 

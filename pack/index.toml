@@ -58,6 +58,9 @@ file = "config/yosbr/config/sodium-extra-options.json"
 file = "config/yosbr/config/sodium-options.json"
 
 [[files]]
+file = "config/yosbr/config/textile_backup.json5"
+
+[[files]]
 file = "config/yosbr/options.txt"
 
 [[files]]

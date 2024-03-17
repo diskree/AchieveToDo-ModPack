@@ -1,8 +1,7 @@
-## How to install?
-
 [<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg"/>](https://modrinth.com/modpack/achievetodo)
 
 To install AchieveToDo, I recommend download [the Modrinth App](https://modrinth.com/app). For instructions with other launchers, please see [Modrinth's documentation](https://docs.modrinth.com/docs/modpacks/playing_modpacks).
+
 
 # AchieveToDo
 
@@ -18,11 +17,7 @@ An AchieveToDo tab has been introduced to the world creation screen, featuring t
 
 By default, only trophies are set as rewards for advancements. However, you can enable options to receive various in-game items and increased experience for each advancement, as well as custom world generation from StardustLabs.
 
-Before world creation, you'll be prompted to download the necessary datapacks, contingent on the settings of the world you're creating. This includes, at the very least, the main BlazeandCave's datapack. To install, simply download the file and drag and drop it into the Minecraft window. After the initial installation, the game will remember and store datapacks, so you won't have to repeat this process for each new world creation.
-
-_Note, these settings cannot be altered once the world has been created._
-
-_The game difficulty is automatically locked in this modpack. Make sure to select your preferred difficulty when creating the world._
+Depending on the settings of the world you create, you may be prompted to install the necessary datapacks. To install, simply download the file and choose it from your files or drag and drop it into the Minecraft window. After the first installation, the game will remember and store datapacks, so you won't have to repeat this process for each new world creation.
 
 ## Gameplay
 

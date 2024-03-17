@@ -165,6 +165,7 @@ For enhanced convenience, the advancements window has been expanded to fill the 
 - [Visual Goat Horns](https://www.curseforge.com/minecraft/texture-packs/visual-goat-horns)
 - [Visual Potions](https://modrinth.com/resourcepack/visualpotions) [[GitHub](https://github.com/diskree/VisualPotions)]
 - [What Painting I'm Looking At?](https://www.planetminecraft.com/texture-pack/what-painting-i-m-looking-at)
+- [YetAnotherGlint](https://modrinth.com/resourcepack/yetanotherglint) [[GitHub](https://github.com/diskree/YetAnotherGlint)]
 
 # Acknowledgments
 

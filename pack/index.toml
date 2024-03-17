@@ -247,6 +247,10 @@ file = "mods/shulkerboxtooltip.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/shutupdeadentities.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/sodium-extra.pw.toml"
 metafile = true
 

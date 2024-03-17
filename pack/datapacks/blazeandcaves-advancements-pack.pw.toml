@@ -3,11 +3,11 @@ filename = "bacap.zip"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/VoVJ47kN/versions/OjTY8pAl/BlazeandCave%27s%20Advancements%20Pack%201.16.6.zip"
+url = "https://cdn.modrinth.com/data/VoVJ47kN/versions/fVpQcesg/BlazeandCave%27s%20Advancements%20Pack%201.16.7.zip"
 hash-format = "sha1"
-hash = "4d2ddaee3b17b9a8c93bb9a176d3bf9cddb006cd"
+hash = "ecdde0fa0f5b0cda52ba07cf611a04b3517f53df"
 
 [update]
 [update.modrinth]
 mod-id = "VoVJ47kN"
-version = "OjTY8pAl"
+version = "fVpQcesg"

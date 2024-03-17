@@ -91,7 +91,7 @@ file = "mods/boat-break-fix.pw.toml"
 metafile = true
 
 [[files]]
-file = "mods/c2me.pw.toml"
+file = "mods/c2me-fabric.pw.toml"
 metafile = true
 
 [[files]]
@@ -140,6 +140,10 @@ metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/exordium.pw.toml"
 metafile = true
 
 [[files]]
@@ -287,10 +291,6 @@ file = "resourcepacks/bacap-language-pack.pw.toml"
 metafile = true
 
 [[files]]
-file = "resourcepacks/barrel-fix.pw.toml"
-metafile = true
-
-[[files]]
 file = "resourcepacks/centered-crosshair-fix.pw.toml"
 metafile = true
 
@@ -315,6 +315,10 @@ file = "resourcepacks/fast-better-grass.pw.toml"
 metafile = true
 
 [[files]]
+file = "resourcepacks/fixed-barrel.pw.toml"
+metafile = true
+
+[[files]]
 file = "resourcepacks/hardcore-absorption-fix.pw.toml"
 metafile = true
 
@@ -335,7 +339,7 @@ file = "resourcepacks/no-z-fighting.pw.toml"
 metafile = true
 
 [[files]]
-file = "resourcepacks/sodium-translations.pw.toml"
+file = "resourcepacks/translations-for-sodium.pw.toml"
 metafile = true
 
 [[files]]
@@ -355,7 +359,7 @@ file = "resourcepacks/wpila.pw.toml"
 metafile = true
 
 [[files]]
-file = "shaderpacks/BSL_v8.2.07.1.zip.txt"
+file = "shaderpacks/BSL_v8.2.08.zip.txt"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.1.1.zip.txt"

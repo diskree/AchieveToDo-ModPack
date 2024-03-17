@@ -120,7 +120,8 @@ key_key.hotbar.6:key.keyboard.6
 key_key.hotbar.7:key.keyboard.7
 key_key.hotbar.8:key.keyboard.8
 key_key.hotbar.9:key.keyboard.9
-key_key.brb.pin:key.keyboard.unknown
+key_key.dynamic_fps.toggle_forced:key.keyboard.unknown
+key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown
 key_key.custom_hud.enable:key.keyboard.unknown
 key_key.custom_hud.cycle_profiles:key.keyboard.unknown
 key_key.custom_hud.swap_to_profile1:key.keyboard.unknown
@@ -128,8 +129,6 @@ key_key.custom_hud.swap_to_profile2:key.keyboard.unknown
 key_key.custom_hud.swap_to_profile3:key.keyboard.unknown
 key_key.custom_hud.show_errors:key.keyboard.unknown
 key_key.antighost.reveal:key.keyboard.g
-key_key.dynamic_fps.toggle_forced:key.keyboard.unknown
-key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown
 key_key.entityculling.toggle:key.keyboard.unknown
 key_key.fabricskyboxes.toggle:key.keyboard.unknown
 key_key.fabricskyboxes.toggle.debug_hud:key.keyboard.unknown

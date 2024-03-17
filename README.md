@@ -1,3 +1,8 @@
+## How to install?
+
+[<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg"/>](https://modrinth.com/modpack/achievetodo)
+
+To install AchieveToDo, I recommend download [the Modrinth App](https://modrinth.com/app). For instructions with other launchers, please see [Modrinth's documentation](https://docs.modrinth.com/docs/modpacks/playing_modpacks).
 
 # AchieveToDo
 
@@ -5,17 +10,11 @@ Welcome to a world where the use of every game mechanic, food, item, and block i
 
 Each world you generate comes bundled with BlazeandCave's advancements pack, boasting 1000+ advancements. This extensive pool of advancements not only prolongs gameplay but also weaves a new layer of complexity, adding an extra dash of fun.
 
-## How to install?
-
-[<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg"/>](https://modrinth.com/modpack/achievetodo)
-
-To install AchieveToDo, I recommend download [the Modrinth App](https://modrinth.com/app). For instructions with other launchers, please see [Modrinth's documentation](https://docs.modrinth.com/docs/modpacks/playing_modpacks).
-
 ## World Creation
 
 An AchieveToDo tab has been introduced to the world creation screen, featuring the following settings:
 
-![java_fv3uKVONsa](https://github.com/diskree/AchieveToDo/assets/96978370/ea1ac4cb-c082-46bb-8f27-b5368b32e5a3)
+![img0](https://user-images.githubusercontent.com/96978370/253137967-ea1ac4cb-c082-46bb-8f27-b5368b32e5a3.png)
 
 By default, only trophies are set as rewards for advancements. However, you can enable options to receive various in-game items and increased experience for each advancement, as well as custom world generation from StardustLabs.
 
@@ -27,7 +26,7 @@ _The game difficulty is automatically locked in this modpack. Make sure to selec
 
 ## Gameplay
 
-Your abilities within the game progressively unlock as you complete advancements. To understand what actions are available or locked, open the AchieveToDo tab in the advancements window:
+Your abilities within the game progressively unlock as you complete advancements. To understand what actions are available or locked, open the Blocked Actions tab in the advancements window:
 
 ![javaw_YjF99qBPO7](https://github.com/diskree/AchieveToDo/assets/96978370/641bfdd6-fa1f-4d0c-b9d3-c6442c05a0bd)
 
@@ -45,7 +44,7 @@ And once you've successfully completed 7 advancements, the ability to jump will 
 
 ## Hints
 
-Keeping track of all you've accomplished in the world — the biomes you've visited, the items you've crafted, the mobs you've defeated — can be a daunting task. However, to combat this issue, a hint system has been developed. In the AchieveToDo tab, at the very bottom, I've left you a «Hintly Hallows» riddle along with a series of advancements. Inside awaits a game mechanic that presents holograms as hints for a random advancement.
+Keeping track of all you've accomplished in the world — the biomes you've visited, the items you've crafted, the mobs you've defeated — can be a daunting task. However, to combat this issue, a hint system has been developed. In the Riddle tab, I've left you a «Hintly Hallows» riddle along with a series of advancements. Inside awaits a game mechanic that presents holograms as hints for a random advancement.
 
 ![image](https://github.com/diskree/AchieveToDo-core/assets/96978370/2c419f00-8fe9-484b-b1e2-13f1f453639c)
 
@@ -64,10 +63,6 @@ For advancements requiring a visit to a particular location, a special spyglass 
 ## Advancement Window
 
 For enhanced convenience, the advancements window has been expanded to fill the entire screen. Furthermore, the tabs are meticulously organized - they are grouped by their relevance and positioned uniformly on all four sides of the window, maintaining a consistent offset. There is also a search for advancements by name or description.
-
-## Non-Vanilla Mechanics
-
-- You'll also encounter a familiar vanilla block in a place you would not typically expect. However, as it's part of a «Hintly Hallows» riddle, I can't reveal much more about it.
 
 # 📦 Resources
 
@@ -160,11 +155,11 @@ For enhanced convenience, the advancements window has been expanded to fill the 
 - [No Z-Fighting](https://modrinth.com/resourcepack/no-z-fighting)
 - [Translations for Sodium](https://modrinth.com/resourcepack/translations-for-sodium) [[GitHub](https://github.com/Madis0/sodium-fabric-translations)]
 - [Trap Door Fix](https://modrinth.com/resourcepack/trap-door-fix)
-- [Unique Enchanted Books](https://www.curseforge.com/minecraft/texture-packs/unique-enchanted-books)
-- [Visual Fish Buckets](https://www.curseforge.com/minecraft/texture-packs/visual-fish-buckets)
-- [Visual Goat Horns](https://www.curseforge.com/minecraft/texture-packs/visual-goat-horns)
+- Unique Enchanted Books [[CurseForge](https://www.curseforge.com/minecraft/texture-packs/unique-enchanted-books)]
+- Visual Fish Buckets [[CurseForge](https://www.curseforge.com/minecraft/texture-packs/visual-fish-buckets)]
+- Visual Goat Horns [[CurseForge](https://www.curseforge.com/minecraft/texture-packs/visual-goat-horns)]
 - [Visual Potions](https://modrinth.com/resourcepack/visualpotions) [[GitHub](https://github.com/diskree/VisualPotions)]
-- [What Painting I'm Looking At?](https://www.planetminecraft.com/texture-pack/what-painting-i-m-looking-at)
+- What Painting I'm Looking At? [[PMC](https://www.planetminecraft.com/texture-pack/what-painting-i-m-looking-at)]
 - [YetAnotherGlint](https://modrinth.com/resourcepack/yetanotherglint) [[GitHub](https://github.com/diskree/YetAnotherGlint)]
 
 # Acknowledgments

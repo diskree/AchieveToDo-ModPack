@@ -122,8 +122,14 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
         if (client == null) {
             return;
         }
+        boolean isWrapper;
         try {
-            if (!externalPack.getSha1().equals(calculateSHA1(path))) {
+            String sha1 = calculateSHA1(path);
+            if (sha1 == null) {
+                return;
+            }
+            isWrapper = sha1.equals(externalPack.getWrapperSha1());
+            if (!isWrapper && !sha1.equalsIgnoreCase(externalPack.getSha1())) {
                 client.setScreen(new ErrorScreen(
                         DownloadExternalPackScreen.this,
                         Text.translatable("external.pack.error")
@@ -138,7 +144,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
             if (Files.notExists(globalPacksDir)) {
                 Files.createDirectory(globalPacksDir);
             }
-            if (path.getFileName().toString().contains("UNZIP ME")) {
+            if (isWrapper) {
                 Path extractedArchive = unzip(path, globalPacksDir);
                 Files.move(extractedArchive, globalPacksDir.resolve(externalPack.toFileName()));
             } else {

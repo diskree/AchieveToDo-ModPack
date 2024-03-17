@@ -53,7 +53,7 @@ The first image symbolizes the tab from which the advancement was chosen, the se
 
 ![image](https://github.com/diskree/AchieveToDo-core/assets/96978370/6b0cc981-e600-4aa2-b851-72836bb340a0)
 
-For advancements requiring a visit to a particular location, a special spyglass will be given instead of a hologram. Just look into it and you will get a 3D panorama where you need to go: find a biome, visit a structure, or open a loot chest:
+For advancements requiring a visit to a particular location, a special spyglass will be given instead of a hologram. Just look into it, and you will get a 3D panorama where you need to go: find a biome, visit a structure, or open a loot chest:
 
 ![image](https://github.com/diskree/AchieveToDo-core/assets/96978370/e1f267f5-f45b-4133-8447-94d2b2090806)
 
@@ -63,11 +63,11 @@ For advancements requiring a visit to a particular location, a special spyglass 
 
 ## Advancement Window
 
-For enhanced convenience, the advancements window has been expanded to fill the entire screen. Furthermore, the tabs are meticulously organized - they are grouped by their relevance and positioned uniformly on all four sides of the window, maintaining a consistent offset.
+For enhanced convenience, the advancements window has been expanded to fill the entire screen. Furthermore, the tabs are meticulously organized - they are grouped by their relevance and positioned uniformly on all four sides of the window, maintaining a consistent offset. There is also a search for advancements by name or description.
 
 ## Non-Vanilla Mechanics
 
-- You'll also encounter a familiar vanilla block in a place you wouldn't typically expect. However, as it's part of a «Hintly Hallows» riddle, I can't reveal much more about it.
+- You'll also encounter a familiar vanilla block in a place you would not typically expect. However, as it's part of a «Hintly Hallows» riddle, I can't reveal much more about it.
 
 # 📦 Resources
 

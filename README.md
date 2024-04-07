@@ -1,6 +1,6 @@
 [<img src="https://github.com/modrinth/art/blob/main/Branding/Badge/badge-dark.svg"/>](https://modrinth.com/modpack/achievetodo)
 
-To install AchieveToDo, I recommend download [the Modrinth App](https://modrinth.com/app). For instructions with other launchers, please see [Modrinth's documentation](https://docs.modrinth.com/docs/modpacks/playing_modpacks).
+To install AchieveToDo, I recommend download [the Modrinth App](https://modrinth.com/app). For instructions with other launchers, please see [Modrinth's documentation](https://support.modrinth.com/en/articles/8802250-modpacks-on-modrinth).
 
 
 # AchieveToDo

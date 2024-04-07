@@ -1,15 +1,13 @@
 package com.diskree.achievetodo.advancements.hints;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.BuildConfig;
-import com.diskree.achievetodo.injection.ItemDisplayEntityImpl;
 import com.diskree.achievetodo.advancements.AdvancementHint;
 import com.diskree.achievetodo.advancements.RandomAdvancements;
+import com.diskree.achievetodo.injection.ItemDisplayEntityImpl;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.JukeboxBlockEntity;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
@@ -22,7 +20,6 @@ import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtHelper;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -44,17 +41,10 @@ import net.minecraft.world.event.listener.GameEventListener;
 import org.jetbrains.annotations.Nullable;
 
 import java.awt.*;
-import java.io.File;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 
 public class AncientCityPortalEntity extends DisplayEntity.ItemDisplayEntity {

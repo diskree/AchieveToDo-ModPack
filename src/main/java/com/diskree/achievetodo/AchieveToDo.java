@@ -8,6 +8,7 @@ import com.diskree.achievetodo.client.SpyglassPanoramaDetails;
 import com.diskree.achievetodo.datagen.AdvancementsGenerator;
 import com.diskree.achievetodo.injection.UsableBlock;
 import com.diskree.achievetodo.injection.UsableItem;
+import com.diskree.achievetodo.injection.UsableItemOnBlock;
 import com.mojang.brigadier.Command;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -227,19 +228,19 @@ public class AchieveToDo implements ModInitializer {
             }
             return TypedActionResult.pass(ItemStack.EMPTY);
         });
-        UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
+        UseBlockCallback.EVENT.register((player, world, hand, hit) -> {
             ItemStack stack = player.getStackInHand(hand);
             Item item = stack.getItem();
-            BlockState blockState = world.getBlockState(hitResult.getBlockPos());
+            BlockState blockState = world.getBlockState(hit.getBlockPos());
             Block block = blockState.getBlock();
             if ((!player.shouldCancelInteraction() || player.getMainHandStack().isEmpty() &&
                     player.getOffHandStack().isEmpty()) &&
-                    block instanceof UsableBlock usableBlock && usableBlock.achieveToDo$canUse(item, player, hand, hitResult) &&
+                    block instanceof UsableBlock usableBlock && usableBlock.achieveToDo$canUse(player, hand, hit) &&
                     isActionBlocked(player, BlockedActionType.findBlockedBlock(blockState))
             ) {
                 return ActionResult.FAIL;
             }
-            if (item instanceof UsableItem usableItem && usableItem.achieveToDo$canUse(player, hitResult)) {
+            if (item instanceof UsableItem usableItem && (usableItem.achieveToDo$canUse(player, hit)) || block instanceof UsableItemOnBlock usableItemOnBlock && usableItemOnBlock.achieveToDo$canUse(player, hand, hit)) {
                 if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getFoodComponent()))) {
                     return ActionResult.FAIL;
                 }
@@ -252,7 +253,7 @@ public class AchieveToDo implements ModInitializer {
             }
             return ActionResult.PASS;
         });
-        UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+        UseEntityCallback.EVENT.register((player, world, hand, entity, hit) -> {
             ItemStack stack = player.getStackInHand(hand);
             Item item = stack.getItem();
             if (entity instanceof ItemFrameEntity) {
@@ -296,7 +297,7 @@ public class AchieveToDo implements ModInitializer {
             }
             return ActionResult.PASS;
         });
-        AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+        AttackEntityCallback.EVENT.register((player, world, hand, entity, hit) -> {
             ItemStack stack = player.getStackInHand(hand);
             Item item = stack.getItem();
             if (isActionBlocked(player, BlockedActionType.findBlockedTool(item))) {

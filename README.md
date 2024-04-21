@@ -37,24 +37,6 @@ And once you've successfully completed 7 advancements, the ability to jump will 
 
 ![java_sUcsDl9pBD](https://github.com/diskree/AchieveToDo/assets/96978370/70848bab-d72b-4341-b9c1-1e236d817de6)
 
-## Hints
-
-Keeping track of all you've accomplished in the world — the biomes you've visited, the items you've crafted, the mobs you've defeated — can be a daunting task. However, to combat this issue, a hint system has been developed. In the Riddle tab, I've left you a «Hintly Hallows» riddle along with a series of advancements. Inside awaits a game mechanic that presents holograms as hints for a random advancement.
-
-![image](https://github.com/diskree/AchieveToDo-core/assets/96978370/2c419f00-8fe9-484b-b1e2-13f1f453639c)
-
-The first image symbolizes the tab from which the advancement was chosen, the second stands for the advancement itself, and the third is the hint. For example, here's a hint suggesting that there is Amethyst Shard (3rd hologram) left to get the «Chromatic Armory» advancement (2nd hologram) from the Adventure tab (1st hologram):
-
-![image](https://github.com/diskree/AchieveToDo-core/assets/96978370/6b0cc981-e600-4aa2-b851-72836bb340a0)
-
-For advancements requiring a visit to a particular location, a special spyglass will be given instead of a hologram. Just look into it, and you will get a 3D panorama where you need to go: find a biome, visit a structure, or open a loot chest:
-
-![image](https://github.com/diskree/AchieveToDo-core/assets/96978370/e1f267f5-f45b-4133-8447-94d2b2090806)
-
-## Commands
-
-`/advRandom`. Instead of manually perusing the advancements window, you can use this command to have a random, uncompleted advancement displayed in the chat. It offers a convenient way to set a personal objective without taking your attention away from the gameplay. However, advancements that require progress or are notably difficult will not be included in the suggestions.
-
 ## Advancement Window
 
 For enhanced convenience, the advancements window has been expanded to fill the entire screen. Furthermore, the tabs are meticulously organized - they are grouped by their relevance and positioned uniformly on all four sides of the window, maintaining a consistent offset. There is also a search for advancements by name or description.

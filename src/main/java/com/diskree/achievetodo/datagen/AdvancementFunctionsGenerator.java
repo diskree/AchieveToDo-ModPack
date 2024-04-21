@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 
 import java.util.function.Consumer;
 
-// TODO Refactoring
 public class AdvancementFunctionsGenerator extends FunctionProvider {
 
     protected AdvancementFunctionsGenerator(FabricDataOutput dataOutput) {

@@ -2,7 +2,6 @@ package com.diskree.achievetodo.mixin.client;
 
 import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.action.BlockedActionType;
-import com.diskree.achievetodo.client.AchieveToDoClient;
 import com.diskree.achievetodo.datagen.AdvancementsGenerator;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.AdvancementRequirements;
@@ -25,6 +24,18 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(AdvancementWidget.class)
 public abstract class AdvancementWidgetMixin {
 
+    @Shadow
+    @Final
+    private PlacedAdvancement advancement;
+    @Shadow
+    private @Nullable AdvancementProgress progress;
+    @Shadow
+    @Final
+    private AdvancementTab tab;
+    @Shadow
+    @Final
+    private MinecraftClient client;
+
     @Unique
     private boolean isMystified() {
         BlockedActionType blockedAction = BlockedActionType.map(advancement);
@@ -34,21 +45,6 @@ public abstract class AdvancementWidgetMixin {
         CriterionProgress demystifiedProgress = progress.getCriterionProgress(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + blockedAction.getName());
         return demystifiedProgress != null && !demystifiedProgress.isObtained();
     }
-
-    @Shadow
-    @Final
-    private PlacedAdvancement advancement;
-
-    @Shadow
-    private @Nullable AdvancementProgress progress;
-
-    @Shadow
-    @Final
-    private AdvancementTab tab;
-
-    @Shadow
-    @Final
-    private MinecraftClient client;
 
     @ModifyArg(method = "renderWidgets", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawItemWithoutEntity(Lnet/minecraft/item/ItemStack;II)V"), index = 0)
     private ItemStack renderWidgetsModifyIcon(ItemStack stack) {
@@ -65,12 +61,12 @@ public abstract class AdvancementWidgetMixin {
 
     @ModifyConstant(method = "drawTooltip", constant = @Constant(intValue = 113), require = 1)
     public int drawTooltipModifyHeight(int constant) {
-        return tab.getScreen().height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return tab.getScreen().height - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
     @Inject(method = "renderLines", at = @At(value = "HEAD"), cancellable = true)
     public void renderLinesInject(DrawContext context, int x, int y, boolean border, CallbackInfo ci) {
-        if (tab.getRoot() != null && AchieveToDoClient.ADVANCEMENTS_SEARCH_ID.equals(tab.getRoot().getAdvancementEntry().id())) {
+        if (tab.getRoot() != null && AchieveToDo.ADVANCEMENTS_SEARCH_ID.equals(tab.getRoot().getAdvancementEntry().id())) {
             ci.cancel();
         }
     }

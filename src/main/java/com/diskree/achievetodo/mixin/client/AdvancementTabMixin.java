@@ -1,8 +1,8 @@
 package com.diskree.achievetodo.mixin.client;
 
+import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.advancements.AdvancementsTab;
 import com.diskree.achievetodo.advancements.AdvancementsTabGroup;
-import com.diskree.achievetodo.client.AchieveToDoClient;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementDisplay;
 import net.minecraft.advancement.AdvancementEntry;
@@ -82,72 +82,72 @@ public class AdvancementTabMixin {
 
     @Inject(method = "drawBackground", at = @At(value = "HEAD"), cancellable = true)
     public void drawBackgroundInject(DrawContext context, int x, int y, boolean selected, CallbackInfo ci) {
-        if (root != null && AchieveToDoClient.ADVANCEMENTS_SEARCH_ID.equals(root.getAdvancementEntry().id())) {
+        if (root != null && AchieveToDo.ADVANCEMENTS_SEARCH_ID.equals(root.getAdvancementEntry().id())) {
             ci.cancel();
         }
     }
 
     @Inject(method = "drawIcon", at = @At(value = "HEAD"), cancellable = true)
     public void drawIconInject(DrawContext context, int x, int y, CallbackInfo ci) {
-        if (root != null && AchieveToDoClient.ADVANCEMENTS_SEARCH_ID.equals(root.getAdvancementEntry().id())) {
+        if (root != null && AchieveToDo.ADVANCEMENTS_SEARCH_ID.equals(root.getAdvancementEntry().id())) {
             ci.cancel();
         }
     }
 
     @Inject(method = "isClickOnTab", at = @At(value = "HEAD"), cancellable = true)
     public void isClickOnTabInject(int screenX, int screenY, double mouseX, double mouseY, CallbackInfoReturnable<Boolean> cir) {
-        if (root != null && AchieveToDoClient.ADVANCEMENTS_SEARCH_ID.equals(root.getAdvancementEntry().id())) {
+        if (root != null && AchieveToDo.ADVANCEMENTS_SEARCH_ID.equals(root.getAdvancementEntry().id())) {
             cir.setReturnValue(false);
         }
     }
 
     @ModifyConstant(method = "move", constant = @Constant(intValue = 234), require = 2)
     private int moveModifyWidth(int orig) {
-        return screen.width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
+        return screen.width - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
     }
 
     @ModifyConstant(method = "move", constant = @Constant(intValue = 113), require = 2)
     private int moveModifyHeight(int orig) {
-        return screen.height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return screen.height - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
     @ModifyConstant(method = "drawWidgetTooltip", constant = @Constant(intValue = 234), require = 2)
     private int drawWidgetTooltipModifyWidth(int orig) {
-        return screen.width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
+        return screen.width - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
     }
 
     @ModifyConstant(method = "drawWidgetTooltip", constant = @Constant(intValue = 113), require = 2)
     private int drawWidgetTooltipModifyHeight(int orig) {
-        return screen.height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return screen.height - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 234), require = 1)
     private int renderModifyWidth(int orig) {
-        return screen.width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
+        return screen.width - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 113), require = 1)
     private int renderModifyHeight(int orig) {
-        return screen.height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return screen.height - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 117), require = 1)
     private int renderModifyOriginX(int orig) {
-        return screen.width / 2 - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - 2 * 9 / 2;
+        return screen.width / 2 - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN - 2 * 9 / 2;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 56), require = 1)
     private int renderModifyOriginY(int orig) {
-        return screen.height / 2 - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - 3 * 9 / 2;
+        return screen.height / 2 - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN - 3 * 9 / 2;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 15), require = 1)
     private int renderModifyTextureX(int orig) {
-        return (screen.width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2) / 16 + 1;
+        return (screen.width - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2) / 16 + 1;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 8), require = 1)
     private int renderModifyTextureY(int orig) {
-        return (screen.height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2) / 16 + 1;
+        return (screen.height - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2) / 16 + 1;
     }
 }

@@ -16,11 +16,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ShovelItem.class)
 public abstract class ShovelItemMixin implements UsableItem {
 
-    @Shadow
-    public abstract ActionResult useOnBlock(ItemUsageContext context);
-
     @Unique
     private boolean isCanUseChecking;
+
+    @Shadow
+    public abstract ActionResult useOnBlock(ItemUsageContext context);
 
     @Override
     public boolean achieveToDo$canUse(PlayerEntity player, BlockHitResult hit) {

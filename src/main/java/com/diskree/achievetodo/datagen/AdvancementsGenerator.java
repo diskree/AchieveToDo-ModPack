@@ -19,7 +19,6 @@ import net.minecraft.util.Identifier;
 import java.util.*;
 import java.util.function.Consumer;
 
-// TODO Refactoring
 public class AdvancementsGenerator extends FabricAdvancementProvider {
 
     public static final String BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX = "demystified_";
@@ -40,7 +39,7 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
             countMap.put(actionToCheck.getUnblockAdvancementsCount(), actionToCheck);
         }
         for (AdvancementsTab root : AdvancementsTab.values()) {
-            if (!root.isModded || root == AdvancementsTab.HINTS) {
+            if (!root.isModded) {
                 continue;
             }
             AdvancementEntry rootAdvancement = Advancement.Builder

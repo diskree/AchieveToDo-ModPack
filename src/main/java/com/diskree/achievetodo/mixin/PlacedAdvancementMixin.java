@@ -19,11 +19,11 @@ import java.util.Set;
 public abstract class PlacedAdvancementMixin {
 
     @Shadow
-    public abstract AdvancementEntry getAdvancementEntry();
-
-    @Shadow
     @Final
     private Set<PlacedAdvancement> children;
+
+    @Shadow
+    public abstract AdvancementEntry getAdvancementEntry();
 
     @Inject(method = "getChildren", at = @At("HEAD"), cancellable = true)
     public void getChildrenInject(CallbackInfoReturnable<Iterable<PlacedAdvancement>> cir) {

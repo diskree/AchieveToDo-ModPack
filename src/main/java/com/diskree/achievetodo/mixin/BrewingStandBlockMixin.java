@@ -21,11 +21,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(BrewingStandBlock.class)
 public abstract class BrewingStandBlockMixin implements UsableBlock {
 
-    @Shadow
-    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
-
     @Unique
     private boolean isCanUseChecking;
+
+    @Shadow
+    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
 
     @Override
     public boolean achieveToDo$canUse(PlayerEntity player, Hand hand, BlockHitResult hit) {

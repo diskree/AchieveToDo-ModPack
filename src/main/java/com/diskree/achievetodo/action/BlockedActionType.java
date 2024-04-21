@@ -400,60 +400,6 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         this.villager = villager;
     }
 
-    public BlockedActionCategory getCategory() {
-        if (food != null) {
-            return BlockedActionCategory.FOOD;
-        }
-        if (item != null && this != USING_WATER_BUCKET && this != FLY) {
-            return BlockedActionCategory.ITEM;
-        }
-        if (block != null || this == OPEN_SHULKER_BOX) {
-            return BlockedActionCategory.BLOCK;
-        }
-        if (toolMaterial != null) {
-            return BlockedActionCategory.TOOL;
-        }
-        if (equipmentMaterial != null || this == EQUIP_ELYTRA) {
-            return BlockedActionCategory.EQUIPMENT;
-        }
-        if (dimension != null) {
-            return BlockedActionCategory.DIMENSION;
-        }
-        if (villager != null) {
-            return BlockedActionCategory.VILLAGER;
-        }
-        return BlockedActionCategory.ACTION;
-    }
-
-    public Text getBlockedMessage() {
-        if (food != null) {
-            return Utils.translateOrNull("blocked.food");
-        }
-        if (villager != null) {
-            return Utils.translateOrNull("blocked.villager");
-        }
-        return Utils.translateOrNull("blocked." + getName());
-    }
-
-    public Text buildBlockedDescription(PlayerEntity player) {
-        int leftAdvancementsCount = unblockAdvancementsCount - AchieveToDo.getScore(player);
-        return Text.of(getBlockedMessage().getString() + Text.translatable("unblock.amount").getString() + leftAdvancementsCount)
-                .copy()
-                .formatted(Formatting.YELLOW);
-    }
-
-    public int getUnblockAdvancementsCount() {
-        return unblockAdvancementsCount;
-    }
-
-    public boolean isUnblocked(PlayerEntity player) {
-        return AchieveToDo.getScore(player) >= unblockAdvancementsCount;
-    }
-
-    public Identifier buildAdvancementId() {
-        return AdvancementsTab.BLOCKED_ACTIONS.getAdvancementId(this);
-    }
-
     public static BlockedActionType map(String name) {
         if (name == null) {
             return null;
@@ -593,6 +539,60 @@ public enum BlockedActionType implements IGeneratedAdvancement {
             }
         }
         return null;
+    }
+
+    public BlockedActionCategory getCategory() {
+        if (food != null) {
+            return BlockedActionCategory.FOOD;
+        }
+        if (item != null && this != USING_WATER_BUCKET && this != FLY) {
+            return BlockedActionCategory.ITEM;
+        }
+        if (block != null || this == OPEN_SHULKER_BOX) {
+            return BlockedActionCategory.BLOCK;
+        }
+        if (toolMaterial != null) {
+            return BlockedActionCategory.TOOL;
+        }
+        if (equipmentMaterial != null || this == EQUIP_ELYTRA) {
+            return BlockedActionCategory.EQUIPMENT;
+        }
+        if (dimension != null) {
+            return BlockedActionCategory.DIMENSION;
+        }
+        if (villager != null) {
+            return BlockedActionCategory.VILLAGER;
+        }
+        return BlockedActionCategory.ACTION;
+    }
+
+    public Text getBlockedMessage() {
+        if (food != null) {
+            return Utils.translateOrNull("blocked.food");
+        }
+        if (villager != null) {
+            return Utils.translateOrNull("blocked.villager");
+        }
+        return Utils.translateOrNull("blocked." + getName());
+    }
+
+    public Text buildBlockedDescription(PlayerEntity player) {
+        int leftAdvancementsCount = unblockAdvancementsCount - AchieveToDo.getScore(player);
+        return Text.of(getBlockedMessage().getString() + Text.translatable("unblock.amount").getString() + leftAdvancementsCount)
+                .copy()
+                .formatted(Formatting.YELLOW);
+    }
+
+    public int getUnblockAdvancementsCount() {
+        return unblockAdvancementsCount;
+    }
+
+    public boolean isUnblocked(PlayerEntity player) {
+        return AchieveToDo.getScore(player) >= unblockAdvancementsCount;
+    }
+
+    public Identifier buildAdvancementId() {
+        return AdvancementsTab.BLOCKED_ACTIONS.getAdvancementId(this);
     }
 
     @Override

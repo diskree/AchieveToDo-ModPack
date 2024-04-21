@@ -1,7 +1,7 @@
 package com.diskree.achievetodo.mixin.client;
 
+import com.diskree.achievetodo.AchieveToDo;
 import com.diskree.achievetodo.advancements.AdvancementsTab;
-import com.diskree.achievetodo.client.AchieveToDoClient;
 import net.minecraft.advancement.*;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.font.TextRenderer;
@@ -42,18 +42,26 @@ public abstract class AdvancementsScreenMixin extends Screen {
 
     @Unique
     private static final Text SEARCH_HINT = Text.translatable("gui.recipebook.search_hint").formatted(Formatting.GRAY);
-
+    @Shadow
+    @Final
+    private static Identifier WINDOW_TEXTURE;
     @Unique
     private TextFieldWidget searchField;
-
     @Unique
     private PlacedAdvancement searchRootAdvancement;
-
     @Unique
     private AdvancementTab searchTab;
-
     @Unique
     private boolean isSearchActive;
+    @Shadow
+    @Final
+    private ClientAdvancementManager advancementHandler;
+    @Shadow
+    private @Nullable AdvancementTab selectedTab;
+
+    public AdvancementsScreenMixin() {
+        super(null);
+    }
 
     @Unique
     private void refreshSearchResults() {
@@ -105,7 +113,7 @@ public abstract class AdvancementsScreenMixin extends Screen {
                     tab = advancementsTab;
                 }
             }
-            if (tab == null || tab == AdvancementsTab.BLOCKED_ACTIONS || tab == AdvancementsTab.HINTS) {
+            if (tab == null || tab == AdvancementsTab.BLOCKED_ACTIONS) {
                 continue;
             }
             String title = display.getTitle().getString().toLowerCase(Locale.ROOT);
@@ -189,21 +197,6 @@ public abstract class AdvancementsScreenMixin extends Screen {
         }
     }
 
-    @Shadow
-    @Final
-    private static Identifier WINDOW_TEXTURE;
-
-    @Shadow
-    @Final
-    private ClientAdvancementManager advancementHandler;
-
-    @Shadow
-    private @Nullable AdvancementTab selectedTab;
-
-    public AdvancementsScreenMixin() {
-        super(null);
-    }
-
     @Redirect(method = "mouseClicked", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientAdvancementManager;selectTab(Lnet/minecraft/advancement/AdvancementEntry;Z)V"))
     private void mouseClickedRedirect(ClientAdvancementManager instance, AdvancementEntry tab, boolean local) {
         isSearchActive = false;
@@ -221,7 +214,7 @@ public abstract class AdvancementsScreenMixin extends Screen {
     @ModifyArgs(method = "drawAdvancementTree", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawCenteredTextWithShadow(Lnet/minecraft/client/font/TextRenderer;Lnet/minecraft/text/Text;III)V", ordinal = 0))
     private void drawAdvancementTreeModifyText(Args args) {
         if (isSearchActive) {
-            args.set(1, Text.translatable("commands.random.no_advancements"));
+            args.set(1, Text.translatable("advancements.not_found"));
         }
     }
 
@@ -291,7 +284,7 @@ public abstract class AdvancementsScreenMixin extends Screen {
                 Advancement.Builder
                         .createUntelemetered()
                         .display(searchRootAdvancementDisplay)
-                        .build(AchieveToDoClient.ADVANCEMENTS_SEARCH_ID),
+                        .build(AchieveToDo.ADVANCEMENTS_SEARCH_ID),
                 null
         );
         AdvancementsScreen advancementsScreen = (AdvancementsScreen) (Object) this;
@@ -332,42 +325,42 @@ public abstract class AdvancementsScreenMixin extends Screen {
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 252), require = 1)
     private int renderModifyWidth(int constant) {
-        return width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2;
+        return width - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2;
     }
 
     @ModifyConstant(method = "render", constant = @Constant(intValue = 140), require = 1)
     private int renderModifyHeight(int constant) {
-        return height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2;
+        return height - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2;
     }
 
     @ModifyConstant(method = "mouseClicked", constant = @Constant(intValue = 252), require = 1)
     private int mouseClickedModifyWidth(int constant) {
-        return width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2;
+        return width - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2;
     }
 
     @ModifyConstant(method = "mouseClicked", constant = @Constant(intValue = 140), require = 1)
     private int mouseClickedModifyHeight(int constant) {
-        return height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2;
+        return height - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2;
     }
 
     @ModifyConstant(method = "drawAdvancementTree", constant = @Constant(intValue = 234), require = 1)
     private int drawAdvancementTreeModifyWidth(int constant) {
-        return width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
+        return width - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2 - 2 * 9;
     }
 
     @ModifyConstant(method = "drawAdvancementTree", constant = @Constant(intValue = 113), require = 1)
     private int drawAdvancementTreeModifyHeight(int constant) {
-        return height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
+        return height - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN * 2 - 3 * 9;
     }
 
     @ModifyConstant(method = "drawAdvancementTree", constant = @Constant(intValue = 117), require = 0)
     private int drawAdvancementTreeModifyEmptyTitleX(int constant) {
-        return width / 2 - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - 2 * 9 / 2;
+        return width / 2 - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN - 2 * 9 / 2;
     }
 
     @ModifyConstant(method = "drawAdvancementTree", constant = @Constant(intValue = 56), require = 0)
     private int drawAdvancementTreeModifyEmptyTitleY(int constant) {
-        return height / 2 - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - 3 * 9 / 2;
+        return height / 2 - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN - 3 * 9 / 2;
     }
 
     @Redirect(method = "drawAdvancementTree", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawCenteredTextWithShadow(Lnet/minecraft/client/font/TextRenderer;Lnet/minecraft/text/Text;III)V", ordinal = 1))
@@ -382,8 +375,8 @@ public abstract class AdvancementsScreenMixin extends Screen {
     public void drawWindowCustom(DrawContext context, int x, int y, CallbackInfo ci) {
         int screenWidth = 252;
         int screenHeight = 140;
-        int actualWidth = width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - x;
-        int actualHeight = width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - y;
+        int actualWidth = width - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN - x;
+        int actualHeight = width - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN - y;
         int halfOfWidth = screenWidth / 2;
         int halfOfHeight = screenHeight / 2;
         int clipTopX = (int) (Math.max(0, screenWidth - actualWidth) / 2. + 0.5);
@@ -391,8 +384,8 @@ public abstract class AdvancementsScreenMixin extends Screen {
         int clipTopY = (int) (Math.max(0, screenHeight - actualHeight) / 2. + 0.5);
         int clipLeftY = (int) (Math.max(0, screenHeight - actualHeight) / 2.);
 
-        int rightX = width - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - halfOfWidth + clipTopX;
-        int bottomY = height - AchieveToDoClient.ADVANCEMENTS_SCREEN_MARGIN - halfOfHeight + clipTopY;
+        int rightX = width - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN - halfOfWidth + clipTopX;
+        int bottomY = height - AchieveToDo.ADVANCEMENTS_SCREEN_MARGIN - halfOfHeight + clipTopY;
 
         context.drawTexture(WINDOW_TEXTURE, x, y, 0, 0, halfOfWidth - clipLeftX, halfOfHeight - clipLeftY);
         context.drawTexture(WINDOW_TEXTURE, rightX, y, halfOfWidth + clipTopX, 0, halfOfWidth - clipTopX, halfOfHeight - clipLeftY);

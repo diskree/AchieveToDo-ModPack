@@ -160,7 +160,6 @@ public enum AdvancementsTab {
                     )
             )
     ),
-    HINTS(true),
     STATISTICS,
     BACAP,
     REDSTONE,
@@ -171,16 +170,12 @@ public enum AdvancementsTab {
     private static final String ROOT = "root";
 
     public final boolean isModded;
+    public final List<List<IGeneratedAdvancement>> children;
     final Item icon;
     final Block background;
-    public final List<List<IGeneratedAdvancement>> children;
 
     AdvancementsTab() {
-        this(false);
-    }
-
-    AdvancementsTab(boolean isModded) {
-        this.isModded = isModded;
+        isModded = false;
         icon = null;
         background = null;
         children = null;

@@ -19,9 +19,6 @@
     ],
     "main": [
       "com.diskree.achievetodo.AchieveToDo"
-    ],
-    "client": [
-      "com.diskree.achievetodo.client.AchieveToDoClient"
     ]
   },
   "mixins": [

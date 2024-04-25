@@ -1,11 +1,11 @@
 package com.diskree.achievetodo.mixin.client;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.advancements.CreateWorldTab;
-import com.diskree.achievetodo.client.CreateWorldScreenImpl;
-import com.diskree.achievetodo.client.DownloadExternalPackScreen;
-import com.diskree.achievetodo.client.ExternalPack;
-import com.diskree.achievetodo.client.WorldCreatorImpl;
+import com.diskree.achievetodo.ExternalPack;
+import com.diskree.achievetodo.gui.CreateWorldTab;
+import com.diskree.achievetodo.gui.DownloadExternalPackScreen;
+import com.diskree.achievetodo.injection.CreateWorldScreenImpl;
+import com.diskree.achievetodo.injection.WorldCreatorImpl;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.client.MinecraftClient;
@@ -43,16 +43,31 @@ import java.util.function.Consumer;
 @Mixin(CreateWorldScreen.class)
 public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
 
+    @Unique
+    private boolean isWaitingDatapacks;
+
+    @Override
+    public boolean achievetodo$datapacksLoaded() {
+        if (isWaitingDatapacks) {
+            createLevel();
+            isWaitingDatapacks = false;
+            return true;
+        }
+        return false;
+    }
+
     @Shadow
     @Final
     public WorldCreator worldCreator;
-    @Unique
-    private boolean isWaitingDatapacks;
+
     @Shadow
     private @Nullable ResourcePackManager packManager;
 
-    @Inject(method = "create(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/world/level/LevelInfo;Lnet/minecraft/client/world/GeneratorOptionsHolder;Ljava/nio/file/Path;)Lnet/minecraft/client/gui/screen/world/CreateWorldScreen;", at = @At(value = "TAIL"))
-    private static void createInject(MinecraftClient client, Screen parent, LevelInfo levelInfo, GeneratorOptionsHolder generatorOptionsHolder, Path dataPackTempDir, CallbackInfoReturnable<CreateWorldScreen> cir, @Local @NotNull CreateWorldScreen createWorldScreen) {
+    @Inject(
+            method = "create(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/world/level/LevelInfo;Lnet/minecraft/client/world/GeneratorOptionsHolder;Ljava/nio/file/Path;)Lnet/minecraft/client/gui/screen/world/CreateWorldScreen;",
+            at = @At(value = "TAIL")
+    )
+    private static void createInject(MinecraftClient client, Screen parent, @NotNull LevelInfo levelInfo, GeneratorOptionsHolder generatorOptionsHolder, Path dataPackTempDir, CallbackInfoReturnable<CreateWorldScreen> cir, @Local @NotNull CreateWorldScreen createWorldScreen) {
         DataConfiguration dataConfiguration = levelInfo.getDataConfiguration();
         if (dataConfiguration != null) {
             DataPackSettings dataPackSettings = dataConfiguration.dataPacks();
@@ -61,27 +76,17 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 if (enabledDataPacks != null) {
                     WorldCreator worldCreator = createWorldScreen.worldCreator;
                     if (worldCreator instanceof WorldCreatorImpl worldCreatorImpl) {
-                        worldCreatorImpl.achieveToDo$setItemRewardsEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_REWARDS_ITEM_DATA_PACK_NAME.toString()));
-                        worldCreatorImpl.achieveToDo$setExperienceRewardsEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.toString()));
-                        worldCreatorImpl.achieveToDo$setTrophyRewardsEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_REWARDS_TROPHY_DATA_PACK_NAME.toString()));
-                        worldCreatorImpl.achieveToDo$setTerralithEnabled(enabledDataPacks.contains(AchieveToDo.TERRALITH_DATA_PACK));
-                        worldCreatorImpl.achieveToDo$setAmplifiedNetherEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_AMPLIFIED_NETHER_DATA_PACK));
-                        worldCreatorImpl.achieveToDo$setNullscapeEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_NULLSCAPE_DATA_PACK));
-                        worldCreatorImpl.achieveToDo$setCooperativeModeEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.toString()));
+                        worldCreatorImpl.achievetodo$setItemRewardsEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_REWARDS_ITEM_DATA_PACK_NAME.toString()));
+                        worldCreatorImpl.achievetodo$setExperienceRewardsEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.toString()));
+                        worldCreatorImpl.achievetodo$setTrophyRewardsEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_REWARDS_TROPHY_DATA_PACK_NAME.toString()));
+                        worldCreatorImpl.achievetodo$setTerralithEnabled(enabledDataPacks.contains(AchieveToDo.TERRALITH_DATA_PACK));
+                        worldCreatorImpl.achievetodo$setAmplifiedNetherEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_AMPLIFIED_NETHER_DATA_PACK));
+                        worldCreatorImpl.achievetodo$setNullscapeEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_NULLSCAPE_DATA_PACK));
+                        worldCreatorImpl.achievetodo$setCooperativeModeEnabled(enabledDataPacks.contains(AchieveToDo.BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.toString()));
                     }
                 }
             }
         }
-    }
-
-    @Override
-    public boolean achieveToDo$datapacksLoaded() {
-        if (isWaitingDatapacks) {
-            createLevel();
-            isWaitingDatapacks = false;
-            return true;
-        }
-        return false;
     }
 
     @Shadow
@@ -98,8 +103,14 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
     @Nullable
     protected abstract Path getDataPackTempDir();
 
-    @ModifyArgs(method = "init", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/widget/TabNavigationWidget$Builder;tabs([Lnet/minecraft/client/gui/tab/Tab;)Lnet/minecraft/client/gui/widget/TabNavigationWidget$Builder;"))
-    private void initInject(Args args) {
+    @ModifyArgs(
+            method = "init",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/gui/widget/TabNavigationWidget$Builder;tabs([Lnet/minecraft/client/gui/tab/Tab;)Lnet/minecraft/client/gui/widget/TabNavigationWidget$Builder;"
+            )
+    )
+    private void initInject(@NotNull Args args) {
         CreateWorldScreen createWorldScreen = (CreateWorldScreen) (Object) this;
         Tab[] originalTabs = args.get(0);
         Tab[] newTabs = new Tab[originalTabs.length + 1];
@@ -109,7 +120,11 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
         args.set(0, newTabs);
     }
 
-    @Inject(method = "createLevel", at = @At("HEAD"), cancellable = true)
+    @Inject(
+            method = "createLevel",
+            at = @At("HEAD"),
+            cancellable = true
+    )
     private void createLevelInject(CallbackInfo ci) {
         CreateWorldScreen createWorldScreen = (CreateWorldScreen) (Object) this;
         WorldCreatorImpl worldCreatorImpl = (WorldCreatorImpl) worldCreator;
@@ -120,9 +135,9 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
         }
 
         boolean isHardcoreEnabled = worldCreator.isHardcore();
-        boolean isTerralithEnabled = worldCreatorImpl.achieveToDo$isTerralithEnabled();
-        boolean isAmplifiedNetherEnabled = worldCreatorImpl.achieveToDo$isAmplifiedNetherEnabled();
-        boolean isNullscapeEnabled = worldCreatorImpl.achieveToDo$isNullscapeEnabled();
+        boolean isTerralithEnabled = worldCreatorImpl.achievetodo$isTerralithEnabled();
+        boolean isAmplifiedNetherEnabled = worldCreatorImpl.achievetodo$isAmplifiedNetherEnabled();
+        boolean isNullscapeEnabled = worldCreatorImpl.achievetodo$isNullscapeEnabled();
 
         Path globalPacksDir = new File(client.runDirectory, "datapacks").toPath();
         List<ExternalPack> requiredPacks = new ArrayList<>();
@@ -224,16 +239,16 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 if (isHardcoreEnabled) {
                     packManager.enable(AchieveToDo.BACAP_OVERRIDE_HARDCORE_DATA_PACK.toString());
                 }
-                if (worldCreatorImpl.achieveToDo$isItemRewardsEnabled()) {
+                if (worldCreatorImpl.achievetodo$isItemRewardsEnabled()) {
                     packManager.enable(AchieveToDo.BACAP_REWARDS_ITEM_DATA_PACK_NAME.toString());
                 }
-                if (worldCreatorImpl.achieveToDo$isExperienceRewardsEnabled()) {
+                if (worldCreatorImpl.achievetodo$isExperienceRewardsEnabled()) {
                     packManager.enable(AchieveToDo.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.toString());
                 }
-                if (worldCreatorImpl.achieveToDo$isTrophyRewardsEnabled()) {
+                if (worldCreatorImpl.achievetodo$isTrophyRewardsEnabled()) {
                     packManager.enable(AchieveToDo.BACAP_REWARDS_TROPHY_DATA_PACK_NAME.toString());
                 }
-                if (worldCreatorImpl.achieveToDo$isCooperativeModeEnabled()) {
+                if (worldCreatorImpl.achievetodo$isCooperativeModeEnabled()) {
                     packManager.enable(AchieveToDo.BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.toString());
                 }
 

@@ -1,13 +1,14 @@
 package com.diskree.achievetodo.mixin.client;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.action.BlockedActionCategory;
-import com.diskree.achievetodo.action.BlockedActionType;
+import com.diskree.achievetodo.blocked_actions.BlockedActionCategory;
+import com.diskree.achievetodo.blocked_actions.BlockedActionType;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.toast.AdvancementToast;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -25,7 +26,7 @@ public class AdvancementToastMixin {
     private AdvancementEntry advancement;
 
     @Unique
-    private BlockedActionCategory getBlockedActionCategory() {
+    private @Nullable BlockedActionCategory getBlockedActionCategory() {
         if (advancement == null) {
             return null;
         }
@@ -33,7 +34,13 @@ public class AdvancementToastMixin {
         return blockedAction != null ? blockedAction.getCategory() : null;
     }
 
-    @Redirect(method = "draw", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawGuiTexture(Lnet/minecraft/util/Identifier;IIII)V"))
+    @Redirect(
+            method = "draw",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/gui/DrawContext;drawGuiTexture(Lnet/minecraft/util/Identifier;IIII)V"
+            )
+    )
     private void redirectBackgroundTexture(DrawContext instance, Identifier texture, int x, int y, int width, int height) {
         BlockedActionCategory category = getBlockedActionCategory();
         if (category != null) {
@@ -43,7 +50,13 @@ public class AdvancementToastMixin {
         }
     }
 
-    @ModifyArgs(method = "draw", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawText(Lnet/minecraft/client/font/TextRenderer;Lnet/minecraft/text/Text;IIIZ)I"))
+    @ModifyArgs(
+            method = "draw",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/gui/DrawContext;drawText(Lnet/minecraft/client/font/TextRenderer;Lnet/minecraft/text/Text;IIIZ)I"
+            )
+    )
     private void modifyTitle(Args args) {
         BlockedActionCategory category = getBlockedActionCategory();
         if (category != null) {

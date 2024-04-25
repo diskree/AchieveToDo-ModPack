@@ -1,8 +1,9 @@
-package com.diskree.achievetodo.client;
+package com.diskree.achievetodo;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.util.Formatting;
+import org.jetbrains.annotations.NotNull;
 
 @Environment(EnvType.CLIENT)
 public enum ExternalPack {
@@ -111,7 +112,7 @@ public enum ExternalPack {
         return sha1;
     }
 
-    public String toFileName() {
+    public @NotNull String toFileName() {
         return name().toLowerCase() + ".zip";
     }
 }

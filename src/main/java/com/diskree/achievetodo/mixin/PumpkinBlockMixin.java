@@ -23,25 +23,36 @@ public abstract class PumpkinBlockMixin implements UsableItemOnBlock {
     @Unique
     private boolean isCanUseChecking;
 
-    @Shadow
-    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
-
     @Override
-    public boolean achieveToDo$canUse(PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public boolean achievetodo$canUse(PlayerEntity player, Hand hand, BlockHitResult hit) {
         isCanUseChecking = true;
         boolean canUse = onUse(player.getWorld().getBlockState(hit.getBlockPos()), player.getWorld(), hit.getBlockPos(), player, hand, hit) == null;
         isCanUseChecking = false;
         return canUse;
     }
 
-    @Inject(method = "onUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;isOf(Lnet/minecraft/item/Item;)Z", shift = At.Shift.AFTER), cancellable = true)
+    @Shadow
+    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
+
+    @Inject(
+            method = "onUse",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/item/ItemStack;isOf(Lnet/minecraft/item/Item;)Z",
+                    shift = At.Shift.AFTER
+            ),
+            cancellable = true
+    )
     public void returnOnUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(null);
         }
     }
 
-    @ModifyReturnValue(method = "onUse", at = @At("RETURN"))
+    @ModifyReturnValue(
+            method = "onUse",
+            at = @At("RETURN")
+    )
     public ActionResult skipClientCheck(ActionResult original) {
         if (isCanUseChecking) {
             return ActionResult.SUCCESS;

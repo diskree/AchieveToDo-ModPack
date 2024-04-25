@@ -65,8 +65,6 @@
   "unblock.dimension": "Доступно измерение",
   "unblock.villager": "Доступен крестьянин",
 
-  "advancements.not_found": "Достижения не найдены",
-
   "createWorld.lan.cooperative_mode": "Кооперативный режим",
   "createWorld.lan.cooperative_mode.info": "Каждое полученное достижение одного игрока автоматически выдаётся всем игрокам.",
   "createWorld.rewards.title": "Награды за выполнение достижений",

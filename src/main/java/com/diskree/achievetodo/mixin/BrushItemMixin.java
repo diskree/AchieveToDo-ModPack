@@ -20,7 +20,7 @@ public abstract class BrushItemMixin implements UsableItem {
     private boolean isCanUseChecking;
 
     @Override
-    public boolean achieveToDo$canUse(PlayerEntity player, BlockHitResult hit) {
+    public boolean achievetodo$canUse(PlayerEntity player, BlockHitResult hit) {
         isCanUseChecking = true;
         boolean canUse = useOnBlock(new ItemUsageContext(player.getWorld(), player, null, null, hit)) == null;
         isCanUseChecking = false;
@@ -30,7 +30,16 @@ public abstract class BrushItemMixin implements UsableItem {
     @Shadow
     public abstract ActionResult useOnBlock(ItemUsageContext context);
 
-    @Inject(method = "useOnBlock", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemUsageContext;getPlayer()Lnet/minecraft/entity/player/PlayerEntity;", ordinal = 0, shift = At.Shift.BEFORE), cancellable = true)
+    @Inject(
+            method = "useOnBlock",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/item/ItemUsageContext;getPlayer()Lnet/minecraft/entity/player/PlayerEntity;",
+                    ordinal = 0,
+                    shift = At.Shift.BEFORE
+            ),
+            cancellable = true
+    )
     public void returnOnUse(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(null);

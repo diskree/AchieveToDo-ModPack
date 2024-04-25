@@ -1,8 +1,8 @@
 package com.diskree.achievetodo.mixin.client;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.action.BlockedActionType;
-import com.diskree.achievetodo.datagen.AdvancementsGenerator;
+import com.diskree.achievetodo.blocked_actions.BlockedActionType;
+import com.diskree.achievetodo.blocked_actions.datagen.AdvancementsGenerator;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.AdvancementRequirements;
 import net.minecraft.client.MinecraftClient;
@@ -39,7 +39,11 @@ public abstract class AdvancementProgressMixin {
         return -1;
     }
 
-    @Inject(method = "getProgressBarPercentage", at = @At("HEAD"), cancellable = true)
+    @Inject(
+            method = "getProgressBarPercentage",
+            at = @At("HEAD"),
+            cancellable = true
+    )
     public void getProgressBarPercentageInject(CallbackInfoReturnable<Float> cir) {
         float actionUnblockAdvancementsCount = getActionUnblockAdvancementsCount();
         if (actionUnblockAdvancementsCount != -1) {
@@ -47,7 +51,11 @@ public abstract class AdvancementProgressMixin {
         }
     }
 
-    @Inject(method = "getProgressBarFraction", at = @At("HEAD"), cancellable = true)
+    @Inject(
+            method = "getProgressBarFraction",
+            at = @At("HEAD"),
+            cancellable = true
+    )
     public void getProgressBarFractionInject(CallbackInfoReturnable<Text> cir) {
         int actionUnblockAdvancementsCount = getActionUnblockAdvancementsCount();
         if (actionUnblockAdvancementsCount != -1) {

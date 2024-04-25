@@ -1,7 +1,7 @@
-package com.diskree.achievetodo.advancements;
+package com.diskree.achievetodo.gui;
 
 import com.diskree.achievetodo.BuildConfig;
-import com.diskree.achievetodo.client.WorldCreatorImpl;
+import com.diskree.achievetodo.injection.WorldCreatorImpl;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 import net.minecraft.client.gui.screen.world.WorldCreator;
 import net.minecraft.client.gui.screen.world.WorldScreenOptionGrid;
@@ -54,9 +54,9 @@ public class CreateWorldTab extends GridScreenTab {
         rootContainer.add(rewardsTitleContainer.getGridWidget(), 2, grid.copyPositioner().marginTop(24));
 
         WorldScreenOptionGrid.Builder rewardsSectionBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-        rewardsSectionBuilder.add(ITEM_REWARDS, worldSettings::achieveToDo$isItemRewardsEnabled, worldSettings::achieveToDo$setItemRewardsEnabled).tooltip(ITEM_REWARDS_INFO);
-        rewardsSectionBuilder.add(EXPERIENCE_REWARDS, worldSettings::achieveToDo$isExperienceRewardsEnabled, worldSettings::achieveToDo$setExperienceRewardsEnabled).tooltip(EXPERIENCE_REWARDS_INFO);
-        rewardsSectionBuilder.add(TROPHY_REWARDS, worldSettings::achieveToDo$isTrophyRewardsEnabled, worldSettings::achieveToDo$setTrophyRewardsEnabled).tooltip(TROPHY_REWARDS_INFO);
+        rewardsSectionBuilder.add(ITEM_REWARDS, worldSettings::achievetodo$isItemRewardsEnabled, worldSettings::achievetodo$setItemRewardsEnabled).tooltip(ITEM_REWARDS_INFO);
+        rewardsSectionBuilder.add(EXPERIENCE_REWARDS, worldSettings::achievetodo$isExperienceRewardsEnabled, worldSettings::achievetodo$setExperienceRewardsEnabled).tooltip(EXPERIENCE_REWARDS_INFO);
+        rewardsSectionBuilder.add(TROPHY_REWARDS, worldSettings::achievetodo$isTrophyRewardsEnabled, worldSettings::achievetodo$setTrophyRewardsEnabled).tooltip(TROPHY_REWARDS_INFO);
         rewardsSection = rewardsSectionBuilder.build(widget -> rootContainer.add(widget, 2));
 
         if (ALLOW_CUSTOM_GENERATION) {
@@ -65,9 +65,9 @@ public class CreateWorldTab extends GridScreenTab {
             rootContainer.add(customGenerationTitleContainer.getGridWidget(), 2);
 
             WorldScreenOptionGrid.Builder customGenerationSectionBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-            customGenerationSectionBuilder.add(OVERWORLD_GENERATION, worldSettings::achieveToDo$isTerralithEnabled, worldSettings::achieveToDo$setTerralithEnabled).tooltip(OVERWORLD_GENERATION_INFO);
-            customGenerationSectionBuilder.add(NETHER_GENERATION, worldSettings::achieveToDo$isAmplifiedNetherEnabled, worldSettings::achieveToDo$setAmplifiedNetherEnabled).tooltip(NETHER_GENERATION_INFO);
-            customGenerationSectionBuilder.add(END_GENERATION, worldSettings::achieveToDo$isNullscapeEnabled, worldSettings::achieveToDo$setNullscapeEnabled).tooltip(END_GENERATION_INFO);
+            customGenerationSectionBuilder.add(OVERWORLD_GENERATION, worldSettings::achievetodo$isTerralithEnabled, worldSettings::achievetodo$setTerralithEnabled).tooltip(OVERWORLD_GENERATION_INFO);
+            customGenerationSectionBuilder.add(NETHER_GENERATION, worldSettings::achievetodo$isAmplifiedNetherEnabled, worldSettings::achievetodo$setAmplifiedNetherEnabled).tooltip(NETHER_GENERATION_INFO);
+            customGenerationSectionBuilder.add(END_GENERATION, worldSettings::achievetodo$isNullscapeEnabled, worldSettings::achievetodo$setNullscapeEnabled).tooltip(END_GENERATION_INFO);
             customGenerationSection = customGenerationSectionBuilder.build(widget -> rootContainer.add(widget, 2));
         }
 
@@ -76,7 +76,7 @@ public class CreateWorldTab extends GridScreenTab {
         rootContainer.add(lanTitleContainer.getGridWidget(), 2);
 
         WorldScreenOptionGrid.Builder lanSectionBuilder = WorldScreenOptionGrid.builder(170).marginLeft(1);
-        lanSectionBuilder.add(COOPERATIVE_MODE, worldSettings::achieveToDo$isCooperativeModeEnabled, worldSettings::achieveToDo$setCooperativeModeEnabled).tooltip(COOPERATIVE_MODE_INFO);
+        lanSectionBuilder.add(COOPERATIVE_MODE, worldSettings::achievetodo$isCooperativeModeEnabled, worldSettings::achievetodo$setCooperativeModeEnabled).tooltip(COOPERATIVE_MODE_INFO);
         lanSection = lanSectionBuilder.build(widget -> rootContainer.add(widget, 2));
 
         worldCreator.addListener(creator -> {

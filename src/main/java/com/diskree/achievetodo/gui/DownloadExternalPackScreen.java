@@ -1,5 +1,6 @@
-package com.diskree.achievetodo.client;
+package com.diskree.achievetodo.gui;
 
+import com.diskree.achievetodo.ExternalPack;
 import it.unimi.dsi.fastutil.booleans.BooleanConsumer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

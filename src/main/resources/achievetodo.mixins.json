@@ -26,7 +26,6 @@
     "GrindstoneBlockMixin",
     "HoeItemMixin",
     "LoomBlockMixin",
-    "PlacedAdvancementMixin",
     "PlayerEntityMixin",
     "PumpkinBlockMixin",
     "ServerPlayerEntityMixin",
@@ -38,9 +37,6 @@
   ],
   "client": [
     "client.AdvancementProgressMixin",
-    "client.AdvancementsScreenMixin",
-    "client.AdvancementTabMixin",
-    "client.AdvancementTabTypeMixin",
     "client.AdvancementToastMixin",
     "client.AdvancementWidgetMixin",
     "client.ClientPlayerEntityMixin",

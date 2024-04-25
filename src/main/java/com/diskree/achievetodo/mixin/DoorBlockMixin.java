@@ -22,18 +22,26 @@ public abstract class DoorBlockMixin implements UsableBlock {
     @Unique
     private boolean isCanUseChecking;
 
-    @Shadow
-    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
-
     @Override
-    public boolean achieveToDo$canUse(PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public boolean achievetodo$canUse(PlayerEntity player, Hand hand, BlockHitResult hit) {
         isCanUseChecking = true;
         boolean canUse = onUse(player.getWorld().getBlockState(hit.getBlockPos()), player.getWorld(), hit.getBlockPos(), player, hand, hit) == null;
         isCanUseChecking = false;
         return canUse;
     }
 
-    @Inject(method = "onUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;cycle(Lnet/minecraft/state/property/Property;)Ljava/lang/Object;", shift = At.Shift.BEFORE), cancellable = true)
+    @Shadow
+    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
+
+    @Inject(
+            method = "onUse",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/block/BlockState;cycle(Lnet/minecraft/state/property/Property;)Ljava/lang/Object;",
+                    shift = At.Shift.BEFORE
+            ),
+            cancellable = true
+    )
     public void returnOnUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(null);

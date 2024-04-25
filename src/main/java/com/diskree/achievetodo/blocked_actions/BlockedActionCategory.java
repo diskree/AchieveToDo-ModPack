@@ -1,6 +1,7 @@
-package com.diskree.achievetodo.action;
+package com.diskree.achievetodo.blocked_actions;
 
 import net.minecraft.text.Text;
+import org.jetbrains.annotations.NotNull;
 
 public enum BlockedActionCategory {
     ACTION,
@@ -12,11 +13,11 @@ public enum BlockedActionCategory {
     DIMENSION,
     VILLAGER;
 
-    public Text getUnblockPopupTitle() {
+    public @NotNull Text getUnblockPopupTitle() {
         return Text.translatable("unblock." + getName());
     }
 
-    public String getName() {
+    public @NotNull String getName() {
         return name().toLowerCase();
     }
 }

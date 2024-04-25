@@ -1,13 +1,14 @@
 package com.diskree.achievetodo.mixin;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.action.BlockedActionType;
+import com.diskree.achievetodo.blocked_actions.BlockedActionType;
 import com.diskree.achievetodo.injection.PlayerEntityImpl;
 import com.mojang.datafixers.util.Either;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Unit;
 import net.minecraft.util.math.BlockPos;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,15 +23,20 @@ public abstract class PlayerEntityMixin implements PlayerEntityImpl {
     private boolean isCanUseChecking;
 
     @Override
-    public void achieveToDo$setCanUseChecking(boolean isCanUseChecking) {
+    public void achievetodo$setCanUseChecking(boolean isCanUseChecking) {
         this.isCanUseChecking = isCanUseChecking;
     }
 
-    public boolean achieveToDo$isCanUseChecking() {
+    @Override
+    public boolean achievetodo$isCanUseChecking() {
         return isCanUseChecking;
     }
 
-    @Inject(method = "jump", at = @At("HEAD"), cancellable = true)
+    @Inject(
+            method = "jump",
+            at = @At("HEAD"),
+            cancellable = true
+    )
     public void jumpInject(CallbackInfo ci) {
         PlayerEntity playerEntity = (PlayerEntity) (Object) this;
         if (!playerEntity.isTouchingWater() && AchieveToDo.isActionBlocked(playerEntity, BlockedActionType.JUMP)) {
@@ -38,15 +44,23 @@ public abstract class PlayerEntityMixin implements PlayerEntityImpl {
         }
     }
 
-    @Inject(method = "canEquip", at = @At("HEAD"), cancellable = true)
-    public void canEquipInject(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+    @Inject(
+            method = "canEquip",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    public void canEquipInject(@NotNull ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         PlayerEntity player = (PlayerEntity) (Object) this;
         if (AchieveToDo.isActionBlocked(player, BlockedActionType.findBlockedEquipment(stack.getItem()))) {
             cir.setReturnValue(false);
         }
     }
 
-    @Inject(method = "trySleep", at = @At("HEAD"), cancellable = true)
+    @Inject(
+            method = "trySleep",
+            at = @At("HEAD"),
+            cancellable = true
+    )
     public void returnOnSleep(BlockPos pos, CallbackInfoReturnable<Either<PlayerEntity.SleepFailureReason, Unit>> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(Either.right(Unit.INSTANCE));

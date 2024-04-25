@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.mixin.client;
 
-import com.diskree.achievetodo.client.WorldCreatorImpl;
+import com.diskree.achievetodo.injection.WorldCreatorImpl;
 import net.minecraft.client.gui.screen.world.WorldCreator;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -30,72 +30,72 @@ public class WorldCreatorMixin implements WorldCreatorImpl {
     private boolean isCooperativeModeEnabled = true;
 
     @Override
-    public boolean achieveToDo$isItemRewardsEnabled() {
+    public boolean achievetodo$isItemRewardsEnabled() {
         return isItemRewardsEnabled;
     }
 
     @Override
-    public boolean achieveToDo$isExperienceRewardsEnabled() {
+    public boolean achievetodo$isExperienceRewardsEnabled() {
         return isExperienceRewardsEnabled;
     }
 
     @Override
-    public boolean achieveToDo$isTrophyRewardsEnabled() {
+    public boolean achievetodo$isTrophyRewardsEnabled() {
         return isTrophyRewardsEnabled;
     }
 
     @Override
-    public boolean achieveToDo$isTerralithEnabled() {
+    public boolean achievetodo$isTerralithEnabled() {
         return isTerralithEnabled;
     }
 
     @Override
-    public boolean achieveToDo$isAmplifiedNetherEnabled() {
+    public boolean achievetodo$isAmplifiedNetherEnabled() {
         return isAmplifiedNetherEnabled;
     }
 
     @Override
-    public boolean achieveToDo$isNullscapeEnabled() {
+    public boolean achievetodo$isNullscapeEnabled() {
         return isNullscapeEnabled;
     }
 
     @Override
-    public boolean achieveToDo$isCooperativeModeEnabled() {
+    public boolean achievetodo$isCooperativeModeEnabled() {
         return isCooperativeModeEnabled;
     }
 
     @Override
-    public void achieveToDo$setItemRewardsEnabled(boolean itemRewardsEnabled) {
+    public void achievetodo$setItemRewardsEnabled(boolean itemRewardsEnabled) {
         isItemRewardsEnabled = itemRewardsEnabled;
     }
 
     @Override
-    public void achieveToDo$setExperienceRewardsEnabled(boolean experienceRewardsEnabled) {
+    public void achievetodo$setExperienceRewardsEnabled(boolean experienceRewardsEnabled) {
         isExperienceRewardsEnabled = experienceRewardsEnabled;
     }
 
     @Override
-    public void achieveToDo$setTrophyRewardsEnabled(boolean trophyRewardsEnabled) {
+    public void achievetodo$setTrophyRewardsEnabled(boolean trophyRewardsEnabled) {
         isTrophyRewardsEnabled = trophyRewardsEnabled;
     }
 
     @Override
-    public void achieveToDo$setTerralithEnabled(boolean terralithEnabled) {
+    public void achievetodo$setTerralithEnabled(boolean terralithEnabled) {
         isTerralithEnabled = terralithEnabled;
     }
 
     @Override
-    public void achieveToDo$setAmplifiedNetherEnabled(boolean amplifiedNetherEnabled) {
+    public void achievetodo$setAmplifiedNetherEnabled(boolean amplifiedNetherEnabled) {
         isAmplifiedNetherEnabled = amplifiedNetherEnabled;
     }
 
     @Override
-    public void achieveToDo$setNullscapeEnabled(boolean nullscapeEnabled) {
+    public void achievetodo$setNullscapeEnabled(boolean nullscapeEnabled) {
         isNullscapeEnabled = nullscapeEnabled;
     }
 
     @Override
-    public void achieveToDo$setCooperativeModeEnabled(boolean cooperativeModeEnabled) {
+    public void achievetodo$setCooperativeModeEnabled(boolean cooperativeModeEnabled) {
         isCooperativeModeEnabled = cooperativeModeEnabled;
     }
 }

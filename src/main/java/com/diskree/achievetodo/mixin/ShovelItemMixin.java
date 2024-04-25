@@ -19,25 +19,41 @@ public abstract class ShovelItemMixin implements UsableItem {
     @Unique
     private boolean isCanUseChecking;
 
-    @Shadow
-    public abstract ActionResult useOnBlock(ItemUsageContext context);
-
     @Override
-    public boolean achieveToDo$canUse(PlayerEntity player, BlockHitResult hit) {
+    public boolean achievetodo$canUse(PlayerEntity player, BlockHitResult hit) {
         isCanUseChecking = true;
         boolean canUse = useOnBlock(new ItemUsageContext(player.getWorld(), player, null, null, hit)) == null;
         isCanUseChecking = false;
         return canUse;
     }
 
-    @Inject(method = "useOnBlock", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;playSound(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V", shift = At.Shift.BEFORE), cancellable = true)
+    @Shadow
+    public abstract ActionResult useOnBlock(ItemUsageContext context);
+
+    @Inject(
+            method = "useOnBlock",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/World;playSound(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V",
+                    shift = At.Shift.BEFORE
+            ),
+            cancellable = true
+    )
     public void returnOnFlatten(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(null);
         }
     }
 
-    @Inject(method = "useOnBlock", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;isClient()Z", shift = At.Shift.BEFORE), cancellable = true)
+    @Inject(
+            method = "useOnBlock",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/World;isClient()Z",
+                    shift = At.Shift.BEFORE
+            ),
+            cancellable = true
+    )
     public void returnOnCampfireExtinguish(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(null);

@@ -3,6 +3,7 @@ package com.diskree.achievetodo.mixin.client;
 import com.diskree.achievetodo.AchieveToDo;
 import net.minecraft.client.gui.screen.pack.PackScreen;
 import net.minecraft.client.gui.screen.pack.ResourcePackOrganizer;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -13,8 +14,14 @@ import java.util.stream.Stream;
 @Mixin(PackScreen.class)
 public class PackScreenMixin {
 
-    @Redirect(method = "updatePackList", at = @At(value = "INVOKE", target = "Ljava/util/stream/Stream;forEach(Ljava/util/function/Consumer;)V"))
-    public void updatePackListRedirect(Stream<ResourcePackOrganizer.Pack> instance, Consumer<ResourcePackOrganizer.Pack> consumer) {
+    @Redirect(
+            method = "updatePackList",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Ljava/util/stream/Stream;forEach(Ljava/util/function/Consumer;)V"
+            )
+    )
+    public void updatePackListRedirect(@NotNull Stream<ResourcePackOrganizer.Pack> instance, Consumer<ResourcePackOrganizer.Pack> consumer) {
         instance.filter(pack -> {
             String name = pack.getName();
             boolean isHiddenDataPack = name.equals(AchieveToDo.BACAP_DATA_PACK) ||

@@ -1,4 +1,4 @@
-package com.diskree.achievetodo.client;
+package com.diskree.achievetodo.gui;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;

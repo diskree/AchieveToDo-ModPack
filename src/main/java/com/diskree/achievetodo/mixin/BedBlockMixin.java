@@ -25,42 +25,74 @@ public abstract class BedBlockMixin implements UsableBlock {
     @Unique
     private boolean isCanUseChecking;
 
-    @Shadow
-    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
-
     @Override
-    public boolean achieveToDo$canUse(PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public boolean achievetodo$canUse(PlayerEntity player, Hand hand, BlockHitResult hit) {
         isCanUseChecking = true;
         boolean canUse = onUse(player.getWorld().getBlockState(hit.getBlockPos()), player.getWorld(), hit.getBlockPos(), player, hand, hit) == null;
         isCanUseChecking = false;
         return canUse;
     }
 
-    @Inject(method = "onUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;removeBlock(Lnet/minecraft/util/math/BlockPos;Z)Z", shift = At.Shift.BEFORE, ordinal = 0), cancellable = true)
+    @Shadow
+    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
+
+    @Inject(
+            method = "onUse",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/World;removeBlock(Lnet/minecraft/util/math/BlockPos;Z)Z",
+                    shift = At.Shift.BEFORE,
+                    ordinal = 0
+            ),
+            cancellable = true
+    )
     public void returnOnExplosion(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(ActionResult.SUCCESS);
         }
     }
 
-    @Inject(method = "onUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BedBlock;wakeVillager(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z", shift = At.Shift.BEFORE), cancellable = true)
+    @Inject(
+            method = "onUse",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/block/BedBlock;wakeVillager(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Z",
+                    shift = At.Shift.BEFORE
+            ),
+            cancellable = true
+    )
     public void returnOnWakeVillager(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(ActionResult.SUCCESS);
         }
     }
 
-    @Inject(method = "onUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;trySleep(Lnet/minecraft/util/math/BlockPos;)Lcom/mojang/datafixers/util/Either;", shift = At.Shift.BEFORE), cancellable = true)
+    @Inject(
+            method = "onUse",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/entity/player/PlayerEntity;trySleep(Lnet/minecraft/util/math/BlockPos;)Lcom/mojang/datafixers/util/Either;",
+                    shift = At.Shift.BEFORE
+            ),
+            cancellable = true
+    )
     public void returnOnTrySleep(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking && player instanceof PlayerEntityImpl playerEntityImpl) {
-            playerEntityImpl.achieveToDo$setCanUseChecking(true);
+            playerEntityImpl.achievetodo$setCanUseChecking(true);
             boolean canUse = player.trySleep(pos) == null;
-            playerEntityImpl.achieveToDo$setCanUseChecking(false);
+            playerEntityImpl.achievetodo$setCanUseChecking(false);
             cir.setReturnValue(canUse ? null : ActionResult.SUCCESS);
         }
     }
 
-    @Redirect(method = "onUse", at = @At(value = "FIELD", target = "Lnet/minecraft/world/World;isClient:Z", opcode = Opcodes.GETFIELD))
+    @Redirect(
+            method = "onUse",
+            at = @At(
+                    value = "FIELD",
+                    target = "Lnet/minecraft/world/World;isClient:Z",
+                    opcode = Opcodes.GETFIELD
+            )
+    )
     public boolean skipClientCheck(World instance) {
         if (isCanUseChecking) {
             return false;

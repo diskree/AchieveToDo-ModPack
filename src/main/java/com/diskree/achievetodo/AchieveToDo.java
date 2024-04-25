@@ -1,7 +1,7 @@
 package com.diskree.achievetodo;
 
-import com.diskree.achievetodo.action.BlockedActionType;
-import com.diskree.achievetodo.datagen.AdvancementsGenerator;
+import com.diskree.achievetodo.blocked_actions.BlockedActionType;
+import com.diskree.achievetodo.blocked_actions.datagen.AdvancementsGenerator;
 import com.diskree.achievetodo.injection.UsableBlock;
 import com.diskree.achievetodo.injection.UsableItem;
 import com.diskree.achievetodo.injection.UsableItemOnBlock;
@@ -40,6 +40,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.NotNull;
 
 public class AchieveToDo implements ModInitializer {
 
@@ -67,9 +68,6 @@ public class AchieveToDo implements ModInitializer {
 
     public static final Identifier MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM_ID = new Identifier(ID, "mystified_label");
     public static final Item MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM = new Item(new FabricItemSettings());
-
-    public static final Identifier ADVANCEMENTS_SEARCH_ID = new Identifier(AchieveToDo.ID, "advancements_search/root");
-    public static final int ADVANCEMENTS_SCREEN_MARGIN = 30;
 
     private static int advancementsCount;
 
@@ -128,8 +126,8 @@ public class AchieveToDo implements ModInitializer {
         }
     }
 
-    private static void grantBlockedAction(ServerPlayerEntity player, BlockedActionType blockedAction, boolean isDemystifyOnly) {
-        AdvancementEntry advancement = player.server.getAdvancementLoader().get(blockedAction.buildAdvancementId());
+    private static void grantBlockedAction(@NotNull ServerPlayerEntity player, BlockedActionType blockedAction, boolean isDemystifyOnly) {
+        AdvancementEntry advancement = player.server.getAdvancementLoader().get(AdvancementsGenerator.buildAdvancementId(blockedAction));
         if (isDemystifyOnly) {
             player.getAdvancementTracker().grantCriterion(
                     advancement,
@@ -181,12 +179,12 @@ public class AchieveToDo implements ModInitializer {
             Block block = blockState.getBlock();
             if ((!player.shouldCancelInteraction() || player.getMainHandStack().isEmpty() &&
                     player.getOffHandStack().isEmpty()) &&
-                    block instanceof UsableBlock usableBlock && usableBlock.achieveToDo$canUse(player, hand, hit) &&
+                    block instanceof UsableBlock usableBlock && usableBlock.achievetodo$canUse(player, hand, hit) &&
                     isActionBlocked(player, BlockedActionType.findBlockedBlock(blockState))
             ) {
                 return ActionResult.FAIL;
             }
-            if (item instanceof UsableItem usableItem && (usableItem.achieveToDo$canUse(player, hit)) || block instanceof UsableItemOnBlock usableItemOnBlock && usableItemOnBlock.achieveToDo$canUse(player, hand, hit)) {
+            if (item instanceof UsableItem usableItem && (usableItem.achievetodo$canUse(player, hit)) || block instanceof UsableItemOnBlock usableItemOnBlock && usableItemOnBlock.achievetodo$canUse(player, hand, hit)) {
                 if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getFoodComponent()))) {
                     return ActionResult.FAIL;
                 }

@@ -1,13 +1,14 @@
 package com.diskree.achievetodo.mixin.client;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.action.BlockedActionType;
-import com.diskree.achievetodo.client.CreateWorldScreenImpl;
+import com.diskree.achievetodo.blocked_actions.BlockedActionType;
+import com.diskree.achievetodo.injection.CreateWorldScreenImpl;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.option.KeyBinding;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -23,15 +24,26 @@ public class MinecraftClientMixin {
     @Nullable
     public ClientPlayerEntity player;
 
-    @Inject(method = "setScreen", at = @At("HEAD"), cancellable = true)
+    @Inject(
+            method = "setScreen",
+            at = @At("HEAD"),
+            cancellable = true
+    )
     public void setScreenInject(Screen screen, CallbackInfo ci) {
-        if (screen instanceof CreateWorldScreen createWorldScreen && ((CreateWorldScreenImpl) createWorldScreen).achieveToDo$datapacksLoaded()) {
+        if (screen instanceof CreateWorldScreen createWorldScreen && ((CreateWorldScreenImpl) createWorldScreen).achievetodo$datapacksLoaded()) {
             ci.cancel();
         }
     }
 
-    @Redirect(method = "handleInputEvents", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/option/KeyBinding;wasPressed()Z", ordinal = 4))
-    public boolean handleInputEventsInject(KeyBinding instance) {
+    @Redirect(
+            method = "handleInputEvents",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/option/KeyBinding;wasPressed()Z",
+                    ordinal = 4
+            )
+    )
+    public boolean handleInputEventsInject(@NotNull KeyBinding instance) {
         return instance.wasPressed() && !AchieveToDo.isActionBlocked(player, BlockedActionType.OPEN_INVENTORY);
     }
 }

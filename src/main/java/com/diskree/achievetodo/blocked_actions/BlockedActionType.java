@@ -1,8 +1,6 @@
-package com.diskree.achievetodo.action;
+package com.diskree.achievetodo.blocked_actions;
 
 import com.diskree.achievetodo.AchieveToDo;
-import com.diskree.achievetodo.Utils;
-import com.diskree.achievetodo.advancements.AdvancementsTab;
 import net.minecraft.advancement.PlacedAdvancement;
 import net.minecraft.block.*;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -16,12 +14,13 @@ import net.minecraft.util.Identifier;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.World;
 import net.minecraft.world.poi.PointOfInterestType;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public enum BlockedActionType implements IGeneratedAdvancement {
+public enum BlockedActionType {
     JUMP(
             8
     ),
@@ -412,11 +411,11 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         return null;
     }
 
-    public static BlockedActionType map(PlacedAdvancement advancement) {
+    public static BlockedActionType map(@NotNull PlacedAdvancement advancement) {
         return map(advancement.getAdvancementEntry().id());
     }
 
-    public static BlockedActionType map(Identifier advancementId) {
+    public static @Nullable BlockedActionType map(@NotNull Identifier advancementId) {
         String[] pathPieces = advancementId.getPath().split("/");
         return pathPieces.length == 2 ? BlockedActionType.map(pathPieces[1]) : null;
     }
@@ -566,14 +565,14 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         return BlockedActionCategory.ACTION;
     }
 
-    public Text getBlockedMessage() {
+    public @NotNull Text getBlockedMessage() {
         if (food != null) {
-            return Utils.translateOrNull("blocked.food");
+            return Text.translatable("blocked.food");
         }
         if (villager != null) {
-            return Utils.translateOrNull("blocked.villager");
+            return Text.translatable("blocked.villager");
         }
-        return Utils.translateOrNull("blocked." + getName());
+        return Text.translatable("blocked." + getName());
     }
 
     public Text buildBlockedDescription(PlayerEntity player) {
@@ -591,16 +590,10 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         return AchieveToDo.getScore(player) >= unblockAdvancementsCount;
     }
 
-    public Identifier buildAdvancementId() {
-        return AdvancementsTab.BLOCKED_ACTIONS.getAdvancementId(this);
-    }
-
-    @Override
-    public String getName() {
+    public @NotNull String getName() {
         return name().toLowerCase();
     }
 
-    @Override
     @Nullable
     public ItemStack getIcon() {
         Item iconItem = null;
@@ -652,15 +645,11 @@ public enum BlockedActionType implements IGeneratedAdvancement {
         return iconItem != null ? new ItemStack(iconItem) : null;
     }
 
-    @Nullable
-    @Override
-    public Text getTitle() {
-        return Utils.translateOrNull("blocked." + getName() + ".title");
+    public @NotNull Text getTitle() {
+        return Text.translatable("blocked." + getName() + ".title");
     }
 
-    @Nullable
-    @Override
-    public Text getDescription() {
-        return Utils.translateOrNull("blocked." + getName() + ".description");
+    public @NotNull Text getDescription() {
+        return Text.translatable("blocked." + getName() + ".description");
     }
 }

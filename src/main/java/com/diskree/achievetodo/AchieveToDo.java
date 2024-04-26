@@ -5,14 +5,14 @@ import com.diskree.achievetodo.blocked_actions.datagen.AdvancementsGenerator;
 import com.diskree.achievetodo.injection.UsableBlock;
 import com.diskree.achievetodo.injection.UsableItem;
 import com.diskree.achievetodo.injection.UsableItemOnBlock;
+import com.diskree.achievetodo.networking.GrantBlockedActionPayload;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerWorldEvents;
 import net.fabricmc.fabric.api.event.player.*;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
@@ -21,6 +21,7 @@ import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.Shearable;
 import net.minecraft.entity.decoration.ItemFrameEntity;
 import net.minecraft.entity.passive.VillagerEntity;
@@ -64,10 +65,8 @@ public class AchieveToDo implements ModInitializer {
     public static final Identifier BACAP_REWARDS_TROPHY_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_trophy");
     public static final Identifier BACAP_COOPERATIVE_MODE_DATA_PACK_NAME = new Identifier(ID, "bacap_cooperative_mode");
 
-    public static final Identifier GRANT_BLOCKED_ACTION_PACKET_ID = new Identifier(ID, "grant_blocked_action");
-
     public static final Identifier MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM_ID = new Identifier(ID, "mystified_label");
-    public static final Item MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM = new Item(new FabricItemSettings());
+    public static final Item MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM = new Item(new Item.Settings());
 
     private static int advancementsCount;
 
@@ -101,7 +100,7 @@ public class AchieveToDo implements ModInitializer {
         if (!isCheckOnly) {
             player.sendMessage(blockedAction.buildBlockedDescription(player), true);
             if (player.getWorld().isClient) {
-                ClientPlayNetworking.send(GRANT_BLOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(blockedAction).writeBoolean(true));
+                ClientPlayNetworking.send(new GrantBlockedActionPayload(blockedAction, true));
             } else if (player instanceof ServerPlayerEntity serverPlayer) {
                 grantBlockedAction(serverPlayer, blockedAction, true);
             }
@@ -120,7 +119,7 @@ public class AchieveToDo implements ModInitializer {
         if (oldCount != 0) {
             for (BlockedActionType blockedAction : BlockedActionType.values()) {
                 if (advancementsCount >= blockedAction.getUnblockAdvancementsCount() && oldCount < blockedAction.getUnblockAdvancementsCount()) {
-                    ClientPlayNetworking.send(GRANT_BLOCKED_ACTION_PACKET_ID, PacketByteBufs.create().writeEnumConstant(blockedAction).writeBoolean(false));
+                    ClientPlayNetworking.send(new GrantBlockedActionPayload(blockedAction, false));
                 }
             }
         }
@@ -145,13 +144,12 @@ public class AchieveToDo implements ModInitializer {
         registerDataPacks();
         registerItems();
 
-        ServerPlayNetworking.registerGlobalReceiver(GRANT_BLOCKED_ACTION_PACKET_ID, (server, player, handler, buf, responseSender) -> {
-            BlockedActionType blockedAction = buf.readEnumConstant(BlockedActionType.class);
-            boolean isDemystifyOnly = buf.readBoolean();
-            if (blockedAction != null) {
-                server.execute(() -> grantBlockedAction(player, blockedAction, isDemystifyOnly));
-            }
-        });
+        PayloadTypeRegistry.playC2S().register(GrantBlockedActionPayload.ID, GrantBlockedActionPayload.CODEC);
+        ServerPlayNetworking.registerGlobalReceiver(GrantBlockedActionPayload.ID, (payload, context) ->
+                context.player().server.execute(() ->
+                        grantBlockedAction(context.player(), payload.blockedAction(), payload.isDemystifyOnly())
+                )
+        );
 
         ServerWorldEvents.LOAD.register((server, world) -> advancementsCount = 0);
 
@@ -161,7 +159,7 @@ public class AchieveToDo implements ModInitializer {
             if (item == Items.SHEARS || item == Items.BRUSH) {
                 return TypedActionResult.pass(ItemStack.EMPTY);
             }
-            if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getFoodComponent()))) {
+            if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getComponents().get(DataComponentTypes.FOOD)))) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
             if (isActionBlocked(player, BlockedActionType.findBlockedEquipment(item))) {
@@ -184,8 +182,8 @@ public class AchieveToDo implements ModInitializer {
             ) {
                 return ActionResult.FAIL;
             }
-            if (item instanceof UsableItem usableItem && (usableItem.achievetodo$canUse(player, hit)) || block instanceof UsableItemOnBlock usableItemOnBlock && usableItemOnBlock.achievetodo$canUse(player, hand, hit)) {
-                if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getFoodComponent()))) {
+            if (item instanceof UsableItem usableItem && (usableItem.achievetodo$canUse(player, hit)) || block instanceof UsableItemOnBlock usableItemOnBlock && usableItemOnBlock.achievetodo$canUse(player, stack, hand, hit)) {
+                if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getComponents().get(DataComponentTypes.FOOD)))) {
                     return ActionResult.FAIL;
                 }
                 if (isActionBlocked(player, BlockedActionType.findBlockedTool(item))) {

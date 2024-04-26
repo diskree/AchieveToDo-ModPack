@@ -15,9 +15,11 @@ import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 import static com.diskree.achievetodo.blocked_actions.BlockedActionType.*;
@@ -157,8 +159,8 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
             },
     };
 
-    protected AdvancementsGenerator(FabricDataOutput output) {
-        super(output);
+    protected AdvancementsGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(output, registryLookup);
     }
 
     public static Identifier buildAdvancementId(BlockedActionType blockedAction) {
@@ -170,7 +172,7 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
     }
 
     @Override
-    public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
+    public void generateAdvancement(RegistryWrapper.WrapperLookup registryLookup, Consumer<AdvancementEntry> consumer) {
         AdvancementEntry rootAdvancement = Advancement.Builder
                 .createUntelemetered()
                 .display(

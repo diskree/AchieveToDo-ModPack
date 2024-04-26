@@ -27,13 +27,13 @@ public abstract class SmithingTableBlockMixin implements UsableBlock {
     @Override
     public boolean achievetodo$canUse(PlayerEntity player, Hand hand, BlockHitResult hit) {
         isCanUseChecking = true;
-        boolean canUse = onUse(player.getWorld().getBlockState(hit.getBlockPos()), player.getWorld(), hit.getBlockPos(), player, hand, hit) == null;
+        boolean canUse = onUse(player.getWorld().getBlockState(hit.getBlockPos()), player.getWorld(), hit.getBlockPos(), player, hit) == null;
         isCanUseChecking = false;
         return canUse;
     }
 
     @Shadow
-    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
+    protected abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit);
 
     @Inject(
             method = "onUse",
@@ -44,7 +44,7 @@ public abstract class SmithingTableBlockMixin implements UsableBlock {
             ),
             cancellable = true
     )
-    public void returnOnUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
+    public void returnOnUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(null);
         }

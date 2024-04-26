@@ -78,6 +78,7 @@ tasks.register('packBuild', Exec) {
 
 java {
     sourceCompatibility = targetCompatibility = minJavaVersion.toInteger()
+    withSourcesJar()
 }
 
 jar {

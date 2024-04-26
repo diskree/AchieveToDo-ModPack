@@ -76,6 +76,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
                         PointerBuffer filters = stack.mallocPointer(1);
                         filters.put(0, stack.UTF8("*.zip"));
 
+                        @SuppressWarnings("DataFlowIssue")
                         String selectedFilePath = TinyFileDialogs.tinyfd_openFileDialog(
                                 Text.translatable("external.pack.picker").getString(),
                                 System.getProperty("user.home"),

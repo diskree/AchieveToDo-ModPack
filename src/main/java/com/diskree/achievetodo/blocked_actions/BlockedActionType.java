@@ -3,11 +3,15 @@ package com.diskree.achievetodo.blocked_actions;
 import com.diskree.achievetodo.AchieveToDo;
 import net.minecraft.advancement.PlacedAdvancement;
 import net.minecraft.block.*;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.component.type.FoodComponents;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
@@ -343,7 +347,7 @@ public enum BlockedActionType {
     private final Item item;
     private final Block block;
     private final ToolMaterials toolMaterial;
-    private final ArmorMaterials equipmentMaterial;
+    private final RegistryEntry<ArmorMaterial> equipmentMaterial;
     private final RegistryKey<World> dimension;
     private final VillagerProfession villager;
 
@@ -367,7 +371,7 @@ public enum BlockedActionType {
         this(unblockAdvancementsCount, null, null, null, materials, null, null, null);
     }
 
-    BlockedActionType(int unblockAdvancementsCount, ArmorMaterials materials) {
+    BlockedActionType(int unblockAdvancementsCount, RegistryEntry<ArmorMaterial> materials) {
         this(unblockAdvancementsCount, null, null, null, null, materials, null, null);
     }
 
@@ -385,7 +389,7 @@ public enum BlockedActionType {
             Item item,
             Block block,
             ToolMaterials toolMaterial,
-            ArmorMaterials equipmentMaterial,
+            RegistryEntry<ArmorMaterial> equipmentMaterial,
             RegistryKey<World> dimension,
             VillagerProfession villager
     ) {
@@ -599,7 +603,7 @@ public enum BlockedActionType {
         Item iconItem = null;
         if (food != null) {
             iconItem = Registries.ITEM.stream()
-                    .filter(item -> item.getFoodComponent() == food)
+                    .filter(item -> item.getComponents().get(DataComponentTypes.FOOD) == food)
                     .findFirst()
                     .orElse(null);
         } else if (item != null) {

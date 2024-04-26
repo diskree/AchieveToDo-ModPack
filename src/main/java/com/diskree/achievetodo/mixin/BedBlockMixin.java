@@ -28,13 +28,13 @@ public abstract class BedBlockMixin implements UsableBlock {
     @Override
     public boolean achievetodo$canUse(PlayerEntity player, Hand hand, BlockHitResult hit) {
         isCanUseChecking = true;
-        boolean canUse = onUse(player.getWorld().getBlockState(hit.getBlockPos()), player.getWorld(), hit.getBlockPos(), player, hand, hit) == null;
+        boolean canUse = onUse(player.getWorld().getBlockState(hit.getBlockPos()), player.getWorld(), hit.getBlockPos(), player, hit) == null;
         isCanUseChecking = false;
         return canUse;
     }
 
     @Shadow
-    public abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
+    protected abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit);
 
     @Inject(
             method = "onUse",
@@ -46,7 +46,7 @@ public abstract class BedBlockMixin implements UsableBlock {
             ),
             cancellable = true
     )
-    public void returnOnExplosion(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
+    public void returnOnExplosion(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(ActionResult.SUCCESS);
         }
@@ -61,7 +61,7 @@ public abstract class BedBlockMixin implements UsableBlock {
             ),
             cancellable = true
     )
-    public void returnOnWakeVillager(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
+    public void returnOnWakeVillager(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking) {
             cir.setReturnValue(ActionResult.SUCCESS);
         }
@@ -76,7 +76,7 @@ public abstract class BedBlockMixin implements UsableBlock {
             ),
             cancellable = true
     )
-    public void returnOnTrySleep(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
+    public void returnOnTrySleep(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
         if (isCanUseChecking && player instanceof PlayerEntityImpl playerEntityImpl) {
             playerEntityImpl.achievetodo$setCanUseChecking(true);
             boolean canUse = player.trySleep(pos) == null;

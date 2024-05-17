@@ -60,7 +60,8 @@ public class AchieveToDo implements ModInitializer {
     public static final Identifier BACAP_OVERRIDE_DATA_PACK = new Identifier(ID, "bacap_override");
     public static final Identifier BACAP_OVERRIDE_HARDCORE_DATA_PACK = new Identifier(ID, "bacap_override_hardcore");
     public static final Identifier BACAP_REWARDS_ITEM_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_item");
-    public static final Identifier BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_experience");
+    public static final Identifier BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME =
+            new Identifier(ID, "bacap_rewards_experience");
     public static final Identifier BACAP_REWARDS_TROPHY_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_trophy");
     public static final Identifier BACAP_COOPERATIVE_MODE_DATA_PACK_NAME = new Identifier(ID, "bacap_cooperative_mode");
 
@@ -81,7 +82,10 @@ public class AchieveToDo implements ModInitializer {
         if (scoreObjective == null) {
             return 0;
         }
-        ReadableScoreboardScore playerScore = scoreboard.getScore(ScoreHolder.fromName(player.getNameForScoreboard()), scoreObjective);
+        ReadableScoreboardScore playerScore = scoreboard.getScore(
+                ScoreHolder.fromName(player.getNameForScoreboard()),
+                scoreObjective
+        );
         if (playerScore == null) {
             return 0;
         }
@@ -93,7 +97,11 @@ public class AchieveToDo implements ModInitializer {
     }
 
     public static boolean isActionBlocked(PlayerEntity player, BlockedActionType blockedAction, boolean isCheckOnly) {
-        if (blockedAction == null || player == null || player.isCreative() || player.isSpectator() || blockedAction.isUnblocked(player)) {
+        if (blockedAction == null ||
+                player == null ||
+                player.isCreative() ||
+                player.isSpectator() ||
+                blockedAction.isUnblocked(player)) {
             return false;
         }
         if (!isCheckOnly) {
@@ -117,15 +125,22 @@ public class AchieveToDo implements ModInitializer {
         advancementsCount = count;
         if (oldCount != 0) {
             for (BlockedActionType blockedAction : BlockedActionType.values()) {
-                if (advancementsCount >= blockedAction.getUnblockAdvancementsCount() && oldCount < blockedAction.getUnblockAdvancementsCount()) {
+                if (advancementsCount >= blockedAction.getUnblockAdvancementsCount() &&
+                        oldCount < blockedAction.getUnblockAdvancementsCount()
+                ) {
                     ClientPlayNetworking.send(new GrantBlockedActionPayload(blockedAction, false));
                 }
             }
         }
     }
 
-    private static void grantBlockedAction(@NotNull ServerPlayerEntity player, BlockedActionType blockedAction, boolean isDemystifyOnly) {
-        AdvancementEntry advancement = player.server.getAdvancementLoader().get(AdvancementsGenerator.buildAdvancementId(blockedAction));
+    private static void grantBlockedAction(
+            @NotNull ServerPlayerEntity player,
+            BlockedActionType blockedAction,
+            boolean isDemystifyOnly
+    ) {
+        AdvancementEntry advancement = player.server.getAdvancementLoader()
+                .get(AdvancementsGenerator.buildAdvancementId(blockedAction));
         if (isDemystifyOnly) {
             player.getAdvancementTracker().grantCriterion(
                     advancement,
@@ -178,7 +193,9 @@ public class AchieveToDo implements ModInitializer {
             ) {
                 return ActionResult.FAIL;
             }
-            if (item instanceof UsableItem usableItem && (usableItem.achievetodo$canUse(player, hit)) || block instanceof UsableItemOnBlock usableItemOnBlock && usableItemOnBlock.achievetodo$canUse(player, stack, hand, hit)) {
+            if (item instanceof UsableItem usableItem && (usableItem.achievetodo$canUse(player, hit)) ||
+                    block instanceof UsableItemOnBlock usableItemOnBlock &&
+                            usableItemOnBlock.achievetodo$canUse(player, stack, hand, hit)) {
                 if (isActionBlocked(player, BlockedActionType.findBlockedItem(player, stack))) {
                     return ActionResult.FAIL;
                 }
@@ -203,7 +220,9 @@ public class AchieveToDo implements ModInitializer {
             if (entity instanceof VillagerEntity villagerEntity &&
                     !villagerEntity.isBaby() &&
                     !villagerEntity.getOffers().isEmpty() &&
-                    isActionBlocked(player, BlockedActionType.findBlockedVillager(villagerEntity.getVillagerData().getProfession()))
+                    isActionBlocked(player, BlockedActionType.findBlockedVillager(
+                            villagerEntity.getVillagerData().getProfession()
+                    ))
             ) {
                 villagerEntity.sayNo();
                 return ActionResult.FAIL;
@@ -221,7 +240,9 @@ public class AchieveToDo implements ModInitializer {
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
             ItemStack stack = player.getStackInHand(hand);
             Item item = stack.getItem();
-            if (player.getWorld().getRegistryKey() == World.OVERWORLD && isActionBlocked(player, pos.getY() >= 0 ? BlockedActionType.BREAK_BLOCKS_IN_POSITIVE_Y : BlockedActionType.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
+            if (player.getWorld().getRegistryKey() == World.OVERWORLD && isActionBlocked(player,
+                    pos.getY() >= 0 ? BlockedActionType.BREAK_BLOCKS_IN_POSITIVE_Y :
+                            BlockedActionType.BREAK_BLOCKS_IN_NEGATIVE_Y)) {
                 return ActionResult.FAIL;
             }
             if (isActionBlocked(player, BlockedActionType.findBlockedTool(item))) {
@@ -247,12 +268,24 @@ public class AchieveToDo implements ModInitializer {
 
     private void registerDataPacks() {
         FabricLoader.getInstance().getModContainer(ID).ifPresent(modContainer -> {
-            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_OVERRIDE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_OVERRIDE_HARDCORE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_COOPERATIVE_MODE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_ITEM_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(BACAP_REWARDS_TROPHY_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    BACAP_OVERRIDE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL
+            );
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    BACAP_OVERRIDE_HARDCORE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL
+            );
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    BACAP_COOPERATIVE_MODE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL
+            );
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    BACAP_REWARDS_ITEM_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL
+            );
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL
+            );
+            ResourceManagerHelper.registerBuiltinResourcePack(
+                    BACAP_REWARDS_TROPHY_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL
+            );
         });
     }
 

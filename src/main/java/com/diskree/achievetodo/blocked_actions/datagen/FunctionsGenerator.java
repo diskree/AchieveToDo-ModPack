@@ -42,6 +42,10 @@ public class FunctionsGenerator implements DataProvider {
                         {
                             "color":"yellow",
                             "translate":"blocked.{NAME}.title",
+                            "clickEvent":{
+                                "action":"run_command",
+                                "value":"/advancementssearch highlight {ADVANCEMENT_ID} obtained_status"
+                            },
                             "hoverEvent":{
                                 "action":"show_text",
                                 "contents":{
@@ -78,7 +82,9 @@ public class FunctionsGenerator implements DataProvider {
                         }
                     ]
                 }
-                """.replace("{NAME}", blockedAction.getName());
+                """
+                .replace("{NAME}", blockedAction.getName())
+                .replace("{ADVANCEMENT_ID}", AdvancementsGenerator.buildAdvancementId(blockedAction).toString());
         return String.join("", Arrays.stream(function.split("\\R")).map(String::trim).toArray(String[]::new));
     }
 

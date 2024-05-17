@@ -21,7 +21,6 @@ import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.Shearable;
 import net.minecraft.entity.decoration.ItemFrameEntity;
 import net.minecraft.entity.passive.VillagerEntity;
@@ -159,13 +158,10 @@ public class AchieveToDo implements ModInitializer {
             if (item == Items.SHEARS || item == Items.BRUSH) {
                 return TypedActionResult.pass(ItemStack.EMPTY);
             }
-            if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getComponents().get(DataComponentTypes.FOOD)))) {
+            if (isActionBlocked(player, BlockedActionType.findBlockedItem(player, stack))) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
             if (isActionBlocked(player, BlockedActionType.findBlockedEquipment(item))) {
-                return TypedActionResult.fail(ItemStack.EMPTY);
-            }
-            if (isActionBlocked(player, BlockedActionType.findBlockedItem(player, stack))) {
                 return TypedActionResult.fail(ItemStack.EMPTY);
             }
             return TypedActionResult.pass(ItemStack.EMPTY);
@@ -183,13 +179,10 @@ public class AchieveToDo implements ModInitializer {
                 return ActionResult.FAIL;
             }
             if (item instanceof UsableItem usableItem && (usableItem.achievetodo$canUse(player, hit)) || block instanceof UsableItemOnBlock usableItemOnBlock && usableItemOnBlock.achievetodo$canUse(player, stack, hand, hit)) {
-                if (isActionBlocked(player, BlockedActionType.findBlockedFood(item.getComponents().get(DataComponentTypes.FOOD)))) {
+                if (isActionBlocked(player, BlockedActionType.findBlockedItem(player, stack))) {
                     return ActionResult.FAIL;
                 }
                 if (isActionBlocked(player, BlockedActionType.findBlockedTool(item))) {
-                    return ActionResult.FAIL;
-                }
-                if (isActionBlocked(player, BlockedActionType.findBlockedItem(player, stack))) {
                     return ActionResult.FAIL;
                 }
             }

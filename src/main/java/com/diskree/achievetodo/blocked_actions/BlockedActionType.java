@@ -4,8 +4,6 @@ import com.diskree.achievetodo.AchieveToDo;
 import net.minecraft.advancement.PlacedAdvancement;
 import net.minecraft.block.*;
 import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.FoodComponent;
-import net.minecraft.component.type.FoodComponents;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -90,124 +88,124 @@ public enum BlockedActionType {
     ),
 
     EAT_SALMON(
-            3, FoodComponents.SALMON
+            3, Items.SALMON
     ),
     EAT_COD(
-            4, FoodComponents.COD
+            4, Items.COD
     ),
     EAT_TROPICAL_FISH(
-            5, FoodComponents.TROPICAL_FISH
+            5, Items.TROPICAL_FISH
     ),
     EAT_ROTTEN_FLESH(
-            10, FoodComponents.ROTTEN_FLESH
+            10, Items.ROTTEN_FLESH
     ),
     EAT_SPIDER_EYE(
-            12, FoodComponents.SPIDER_EYE
+            12, Items.SPIDER_EYE
     ),
     EAT_SWEET_BERRIES(
-            14, FoodComponents.SWEET_BERRIES
+            14, Items.SWEET_BERRIES
     ),
     EAT_GLOW_BERRIES(
-            16, FoodComponents.GLOW_BERRIES
+            16, Items.GLOW_BERRIES
     ),
     EAT_PUFFERFISH(
-            18, FoodComponents.PUFFERFISH
+            18, Items.PUFFERFISH
     ),
     EAT_POISONOUS_POTATO(
-            22, FoodComponents.POISONOUS_POTATO
+            22, Items.POISONOUS_POTATO
     ),
     EAT_CHORUS_FRUIT(
-            27, FoodComponents.CHORUS_FRUIT
+            27, Items.CHORUS_FRUIT
     ),
     EAT_SUSPICIOUS_STEW(
-            32, FoodComponents.SUSPICIOUS_STEW
+            32, Items.SUSPICIOUS_STEW
     ),
     EAT_BEETROOT(
-            38, FoodComponents.BEETROOT
+            38, Items.BEETROOT
     ),
     EAT_CARROT(
-            43, FoodComponents.CARROT
+            43, Items.CARROT
     ),
     EAT_CHICKEN(
-            47, FoodComponents.CHICKEN
+            47, Items.CHICKEN
     ),
     EAT_DRIED_KELP(
-            51, FoodComponents.DRIED_KELP
+            51, Items.DRIED_KELP
     ),
     EAT_BEETROOT_SOUP(
-            68, FoodComponents.BEETROOT_SOUP
+            68, Items.BEETROOT_SOUP
     ),
     EAT_POTATO(
-            71, FoodComponents.POTATO
+            71, Items.POTATO
     ),
     EAT_APPLE(
-            83, FoodComponents.APPLE
+            83, Items.APPLE
     ),
     EAT_MELON_SLICE(
-            95, FoodComponents.MELON_SLICE
+            95, Items.MELON_SLICE
     ),
     EAT_COOKIE(
-            102, FoodComponents.COOKIE
+            102, Items.COOKIE
     ),
     EAT_MUSHROOM_STEW(
-            114, FoodComponents.MUSHROOM_STEW
+            114, Items.MUSHROOM_STEW
     ),
     EAT_RABBIT_STEW(
-            127, FoodComponents.RABBIT_STEW
+            127, Items.RABBIT_STEW
     ),
     EAT_HONEY_BOTTLE(
-            132, FoodComponents.HONEY_BOTTLE
+            132, Items.HONEY_BOTTLE
     ),
     EAT_PUMPKIN_PIE(
-            141, FoodComponents.PUMPKIN_PIE
+            141, Items.PUMPKIN_PIE
     ),
     EAT_GOLDEN_APPLE(
-            155, FoodComponents.GOLDEN_APPLE
+            155, Items.GOLDEN_APPLE
     ),
     EAT_ENCHANTED_GOLDEN_APPLE(
-            166, FoodComponents.ENCHANTED_GOLDEN_APPLE
+            166, Items.ENCHANTED_GOLDEN_APPLE
     ),
     EAT_RABBIT(
-            182, FoodComponents.RABBIT
+            182, Items.RABBIT
     ),
     EAT_MUTTON(
-            212, FoodComponents.MUTTON
+            212, Items.MUTTON
     ),
     EAT_PORKCHOP(
-            226, FoodComponents.PORKCHOP
+            226, Items.PORKCHOP
     ),
     EAT_BEEF(
-            249, FoodComponents.BEEF
+            249, Items.BEEF
     ),
     EAT_BAKED_POTATO(
-            252, FoodComponents.BAKED_POTATO
+            252, Items.BAKED_POTATO
     ),
     EAT_COOKED_SALMON(
-            312, FoodComponents.COOKED_SALMON
+            312, Items.COOKED_SALMON
     ),
     EAT_COOKED_COD(
-            373, FoodComponents.COOKED_COD
+            373, Items.COOKED_COD
     ),
     EAT_COOKED_RABBIT(
-            432, FoodComponents.COOKED_RABBIT
+            432, Items.COOKED_RABBIT
     ),
     EAT_COOKED_CHICKEN(
-            459, FoodComponents.COOKED_CHICKEN
+            459, Items.COOKED_CHICKEN
     ),
     EAT_COOKED_MUTTON(
-            524, FoodComponents.COOKED_MUTTON
+            524, Items.COOKED_MUTTON
     ),
     EAT_COOKED_PORKCHOP(
-            550, FoodComponents.COOKED_PORKCHOP
+            550, Items.COOKED_PORKCHOP
     ),
     EAT_COOKED_BEEF(
-            603, FoodComponents.COOKED_BEEF
+            603, Items.COOKED_BEEF
     ),
     EAT_BREAD(
-            654, FoodComponents.BREAD
+            654, Items.BREAD
     ),
     EAT_GOLDEN_CARROT(
-            702, FoodComponents.GOLDEN_CARROT
+            702, Items.GOLDEN_CARROT
     ),
 
     OPEN_CHEST(
@@ -343,7 +341,6 @@ public enum BlockedActionType {
 
     private final int unblockAdvancementsCount;
 
-    private final FoodComponent food;
     private final Item item;
     private final Block block;
     private final ToolMaterials toolMaterial;
@@ -352,40 +349,35 @@ public enum BlockedActionType {
     private final VillagerProfession villager;
 
     BlockedActionType(int unblockAdvancementsCount) {
-        this(unblockAdvancementsCount, null, null, null, null, null, null, null);
-    }
-
-    BlockedActionType(int unblockAdvancementsCount, FoodComponent food) {
-        this(unblockAdvancementsCount, food, null, null, null, null, null, null);
+        this(unblockAdvancementsCount, null, null, null, null, null, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, Item item) {
-        this(unblockAdvancementsCount, null, item, null, null, null, null, null);
+        this(unblockAdvancementsCount, item, null, null, null, null, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, Block block) {
-        this(unblockAdvancementsCount, null, null, block, null, null, null, null);
+        this(unblockAdvancementsCount, null, block, null, null, null, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, ToolMaterials materials) {
-        this(unblockAdvancementsCount, null, null, null, materials, null, null, null);
+        this(unblockAdvancementsCount, null, null, materials, null, null, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, RegistryEntry<ArmorMaterial> materials) {
-        this(unblockAdvancementsCount, null, null, null, null, materials, null, null);
+        this(unblockAdvancementsCount, null, null, null, materials, null, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, RegistryKey<World> dimension) {
-        this(unblockAdvancementsCount, null, null, null, null, null, dimension, null);
+        this(unblockAdvancementsCount, null, null, null, null, dimension, null);
     }
 
     BlockedActionType(int unblockAdvancementsCount, VillagerProfession villager) {
-        this(unblockAdvancementsCount, null, null, null, null, null, null, villager);
+        this(unblockAdvancementsCount, null, null, null, null, null, villager);
     }
 
     BlockedActionType(
             int unblockAdvancementsCount,
-            FoodComponent food,
             Item item,
             Block block,
             ToolMaterials toolMaterial,
@@ -394,7 +386,6 @@ public enum BlockedActionType {
             VillagerProfession villager
     ) {
         this.unblockAdvancementsCount = unblockAdvancementsCount;
-        this.food = food;
         this.item = item;
         this.block = block;
         this.toolMaterial = toolMaterial;
@@ -422,19 +413,6 @@ public enum BlockedActionType {
     public static @Nullable BlockedActionType map(@NotNull Identifier advancementId) {
         String[] pathPieces = advancementId.getPath().split("/");
         return pathPieces.length == 2 ? BlockedActionType.map(pathPieces[1]) : null;
-    }
-
-    @Nullable
-    public static BlockedActionType findBlockedFood(FoodComponent food) {
-        if (food == null) {
-            return null;
-        }
-        for (BlockedActionType blockedAction : BlockedActionType.values()) {
-            if (food == blockedAction.food) {
-                return blockedAction;
-            }
-        }
-        return null;
     }
 
     @Nullable
@@ -545,7 +523,7 @@ public enum BlockedActionType {
     }
 
     public BlockedActionCategory getCategory() {
-        if (food != null) {
+        if (item != null && item.getComponents().contains(DataComponentTypes.FOOD)) {
             return BlockedActionCategory.FOOD;
         }
         if (item != null && this != USING_WATER_BUCKET && this != FLY) {
@@ -570,7 +548,7 @@ public enum BlockedActionType {
     }
 
     public @NotNull Text getBlockedMessage() {
-        if (food != null) {
+        if (item != null && item.getComponents().contains(DataComponentTypes.FOOD)) {
             return Text.translatable("blocked.food");
         }
         if (villager != null) {
@@ -599,54 +577,51 @@ public enum BlockedActionType {
     }
 
     @Nullable
-    public ItemStack getIcon() {
-        Item iconItem = null;
-        if (food != null) {
-            iconItem = Registries.ITEM.stream()
-                    .filter(item -> item.getComponents().get(DataComponentTypes.FOOD) == food)
-                    .findFirst()
-                    .orElse(null);
-        } else if (item != null) {
-            iconItem = item;
-        } else if (block != null) {
-            iconItem = block.asItem();
-        } else if (toolMaterial != null) {
-            iconItem = Registries.ITEM.stream()
+    public Item getIcon() {
+        if (item != null) {
+            return item;
+        }
+        if (block != null) {
+            return block.asItem();
+        }
+        if (toolMaterial != null) {
+            return Registries.ITEM.stream()
                     .filter(item -> item instanceof PickaxeItem pickaxeItem && pickaxeItem.getMaterial() == toolMaterial)
                     .findFirst()
                     .orElse(null);
-        } else if (equipmentMaterial != null) {
-            iconItem = Registries.ITEM.stream()
+        }
+        if (equipmentMaterial != null) {
+            return Registries.ITEM.stream()
                     .filter(item -> item instanceof ArmorItem chestPlateItem && chestPlateItem.getType() == ArmorItem.Type.CHESTPLATE && chestPlateItem.getMaterial() == equipmentMaterial)
                     .findFirst()
                     .orElse(null);
-        } else if (dimension != null) {
-            iconItem = dimension == World.NETHER ? Items.OBSIDIAN : Items.END_PORTAL_FRAME;
-        } else if (villager != null) {
+        }
+        if (dimension != null) {
+            return dimension == World.NETHER ? Items.OBSIDIAN : Items.END_PORTAL_FRAME;
+        }
+        if (villager != null) {
             PointOfInterestType poi = Registries.POINT_OF_INTEREST_TYPE.get(new Identifier(villager.id()));
             if (poi != null && poi.blockStates() != null) {
                 List<BlockState> blockStates = new ArrayList<>(poi.blockStates());
                 BlockState blockState = blockStates.get(0);
                 if (blockState != null) {
-                    iconItem = blockState.getBlock().asItem();
+                    return blockState.getBlock().asItem();
                 }
             }
-        } else {
-            iconItem = switch (this) {
-                case JUMP -> Items.SLIME_BLOCK;
-                case OPEN_DOOR -> Items.DARK_OAK_DOOR;
-                case SLEEP -> Items.RED_BED;
-                case OPEN_INVENTORY -> Items.BUNDLE;
-                case BREAK_BLOCKS_IN_POSITIVE_Y -> Items.COBBLESTONE;
-                case USING_BOAT -> Items.OAK_BOAT;
-                case BREAK_BLOCKS_IN_NEGATIVE_Y -> Items.COBBLED_DEEPSLATE;
-                case EQUIP_ELYTRA -> Items.ELYTRA;
-                case END_GATEWAY -> Items.END_STONE_BRICKS;
-                case OPEN_SHULKER_BOX -> Items.SHULKER_BOX;
-                default -> null;
-            };
         }
-        return iconItem != null ? new ItemStack(iconItem) : null;
+        return switch (this) {
+            case JUMP -> Items.SLIME_BLOCK;
+            case OPEN_DOOR -> Items.DARK_OAK_DOOR;
+            case SLEEP -> Items.RED_BED;
+            case OPEN_INVENTORY -> Items.BUNDLE;
+            case BREAK_BLOCKS_IN_POSITIVE_Y -> Items.COBBLESTONE;
+            case USING_BOAT -> Items.OAK_BOAT;
+            case BREAK_BLOCKS_IN_NEGATIVE_Y -> Items.COBBLED_DEEPSLATE;
+            case EQUIP_ELYTRA -> Items.ELYTRA;
+            case END_GATEWAY -> Items.END_STONE_BRICKS;
+            case OPEN_SHULKER_BOX -> Items.SHULKER_BOX;
+            default -> null;
+        };
     }
 
     public @NotNull Text getTitle() {

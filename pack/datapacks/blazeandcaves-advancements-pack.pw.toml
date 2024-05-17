@@ -1,13 +1,13 @@
 name = "BlazeandCave's Advancements Pack"
-filename = "bacap.zip"
+filename = "BlazeandCave's Advancements Pack.zip"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/VoVJ47kN/versions/fVpQcesg/BlazeandCave%27s%20Advancements%20Pack%201.16.7.zip"
+url = "https://cdn.modrinth.com/data/VoVJ47kN/versions/XCJ9k0Pu/BlazeandCave%27s%20Advancements%20Pack%201.16.9.zip"
 hash-format = "sha1"
-hash = "ecdde0fa0f5b0cda52ba07cf611a04b3517f53df"
+hash = "13339493fe93f2fc1211bf29590621f07b7a89e1"
 
 [update]
 [update.modrinth]
 mod-id = "VoVJ47kN"
-version = "fVpQcesg"
+version = "XCJ9k0Pu"

@@ -212,32 +212,22 @@ public abstract class CreateWorldScreenMixin implements CreateWorldScreenImpl {
                 packManager.disable(AchieveToDo.BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.toString());
 
                 packManager.enable(AchieveToDo.BACAP_DATA_PACK);
+                packManager.enable(AchieveToDo.BACAP_OVERRIDE_DATA_PACK.toString());
                 if (isHardcoreEnabled) {
                     packManager.enable(AchieveToDo.BACAP_HARDCORE_DATA_PACK);
+                    packManager.enable(AchieveToDo.BACAP_OVERRIDE_HARDCORE_DATA_PACK.toString());
                 }
                 if (isNullscapeEnabled) {
+                    packManager.enable(AchieveToDo.NULLSCAPE_DATA_PACK);
                     packManager.enable(AchieveToDo.BACAP_NULLSCAPE_DATA_PACK);
                 }
                 if (isAmplifiedNetherEnabled) {
+                    packManager.enable(AchieveToDo.AMPLIFIED_NETHER_DATA_PACK);
                     packManager.enable(AchieveToDo.BACAP_AMPLIFIED_NETHER_DATA_PACK);
                 }
                 if (isTerralithEnabled) {
-                    packManager.enable(AchieveToDo.BACAP_TERRALITH_DATA_PACK);
-                }
-
-                if (isNullscapeEnabled) {
-                    packManager.enable(AchieveToDo.NULLSCAPE_DATA_PACK);
-                }
-                if (isAmplifiedNetherEnabled) {
-                    packManager.enable(AchieveToDo.AMPLIFIED_NETHER_DATA_PACK);
-                }
-                if (isTerralithEnabled) {
                     packManager.enable(AchieveToDo.TERRALITH_DATA_PACK);
-                }
-
-                packManager.enable(AchieveToDo.BACAP_OVERRIDE_DATA_PACK.toString());
-                if (isHardcoreEnabled) {
-                    packManager.enable(AchieveToDo.BACAP_OVERRIDE_HARDCORE_DATA_PACK.toString());
+                    packManager.enable(AchieveToDo.BACAP_TERRALITH_DATA_PACK);
                 }
                 if (worldCreatorImpl.achievetodo$isItemRewardsEnabled()) {
                     packManager.enable(AchieveToDo.BACAP_REWARDS_ITEM_DATA_PACK_NAME.toString());

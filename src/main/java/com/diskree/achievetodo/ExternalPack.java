@@ -11,12 +11,12 @@ public enum ExternalPack {
             "BlazeandCave's Advancements Pack",
             Formatting.LIGHT_PURPLE,
             "https://modrinth.com/datapack/blazeandcaves-advancements-pack",
-            "https://cdn.modrinth.com/data/VoVJ47kN/versions/fVpQcesg/BlazeandCave%27s%20Advancements%20Pack%201.16.7.zip",
+            "https://cdn.modrinth.com/data/VoVJ47kN/versions/XCJ9k0Pu/BlazeandCave%27s%20Advancements%20Pack%201.16.9.zip",
             null,
-            "ecdde0fa0f5b0cda52ba07cf611a04b3517f53df"
+            "13339493fe93f2fc1211bf29590621f07b7a89e1"
     ),
     BACAP_HARDCORE(
-            "BlazeandCave's Advancements Pack (Hardcore version)",
+            "BlazeandCave's Advancements Pack Hardcore",
             Formatting.RED,
             "https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-hardcore-version/",
             "https://www.mediafire.com/file/samh3amrlhk15pu/%255BUNZIP_ME%255D_BlazeandCave%2527s_Advancements_Pack_H%2Ardc%2Ar%2A_1.16.0.1.zip/file",
@@ -24,7 +24,7 @@ public enum ExternalPack {
             "b9ab297a6689b1a91007befdc968aca01362ba12"
     ),
     BACAP_TERRALITH(
-            "BlazeandCave's Advancements Pack (Terralith version)",
+            "BlazeandCave's Advancements Pack Terralith",
             Formatting.GREEN,
             "https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-terralith-version/",
             "https://www.mediafire.com/file/qzpcc9qm753acrv/%255BUNZIP_ME%255D_BlazeandCave%2527s_Advancements_Pack_Terralith_1.16.7.zip/file",
@@ -32,7 +32,7 @@ public enum ExternalPack {
             "fe3918b5999c0f2b08506979790762b9c0e957ba"
     ),
     BACAP_AMPLIFIED_NETHER(
-            "BlazeandCave's Advancements Pack (Amplified Nether version)",
+            "BlazeandCave's Advancements Pack Amplified Nether",
             Formatting.DARK_RED,
             "https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-terralith-version/",
             "https://www.mediafire.com/file/ja33aagm4ho2anc/%255BUNZIP_ME%255D_BlazeandCave%2527s_Advancements_Pack_Amplified_Nether_1.16.6.zip/file",
@@ -40,7 +40,7 @@ public enum ExternalPack {
             "458320faa30b30f44e462e307134acef3d853590"
     ),
     BACAP_NULLSCAPE(
-            "BlazeandCave's Advancements Pack (Nullscape version)",
+            "BlazeandCave's Advancements Pack Nullscape",
             Formatting.DARK_PURPLE,
             "https://www.planetminecraft.com/data-pack/blazeandcave-s-advancements-pack-terralith-version/",
             "https://www.mediafire.com/file/0rfb5fqr14k6sk5/%255BUNZIP_ME%255D_BlazeandCave%2527s_Advancements_Pack_Nullscape_1.16.6.zip/file",
@@ -113,6 +113,6 @@ public enum ExternalPack {
     }
 
     public @NotNull String toFileName() {
-        return name().toLowerCase() + ".zip";
+        return name + ".zip";
     }
 }

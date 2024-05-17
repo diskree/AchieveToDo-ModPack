@@ -12,7 +12,7 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.advancement.criterion.ImpossibleCriterion;
 import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
@@ -176,7 +176,7 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
         AdvancementEntry rootAdvancement = Advancement.Builder
                 .createUntelemetered()
                 .display(
-                        new ItemStack(Items.BOOK),
+                        Items.BOOK,
                         Text.translatable("advancement.root." + BLOCKED_ACTIONS + ".title"),
                         Text.translatable("advancement.root." + BLOCKED_ACTIONS + ".description"),
                         new Identifier("textures/block/" + Registries.BLOCK.getId(Blocks.CHERRY_TRAPDOOR).getPath() + ".png"),
@@ -192,7 +192,7 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
         for (BlockedActionType[] row : TREE) {
             for (BlockedActionType blockedAction : row) {
                 String path = generateIdWithSuffix(blockedAction.getName());
-                ItemStack icon = blockedAction.getIcon();
+                Item icon = blockedAction.getIcon();
                 Text title = blockedAction.getTitle();
                 Text description = blockedAction.getDescription();
                 parentAdvancement = Advancement.Builder

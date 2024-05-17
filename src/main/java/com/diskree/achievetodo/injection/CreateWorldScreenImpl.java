@@ -5,5 +5,5 @@ import net.fabricmc.api.Environment;
 
 @Environment(EnvType.CLIENT)
 public interface CreateWorldScreenImpl {
-    boolean achievetodo$datapacksLoaded();
+    boolean achievetodo$isDatapacksLoaded();
 }

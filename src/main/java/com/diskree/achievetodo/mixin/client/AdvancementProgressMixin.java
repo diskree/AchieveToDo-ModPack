@@ -5,7 +5,6 @@ import com.diskree.achievetodo.blocked_actions.BlockedActionType;
 import com.diskree.achievetodo.blocked_actions.datagen.AdvancementsGenerator;
 import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.advancement.AdvancementRequirements;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -28,8 +27,10 @@ public abstract class AdvancementProgressMixin {
             List<String> criteria = requirements.requirements().get(0);
             if (criteria != null && !criteria.isEmpty()) {
                 String maybeDemystifiedCriterion = criteria.get(0);
-                if (maybeDemystifiedCriterion != null && maybeDemystifiedCriterion.startsWith(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX)) {
-                    BlockedActionType blockedAction = BlockedActionType.map(maybeDemystifiedCriterion.split(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX)[1]);
+                String prefix = AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX;
+                if (maybeDemystifiedCriterion != null &&
+                        maybeDemystifiedCriterion.startsWith(prefix)) {
+                    BlockedActionType blockedAction = BlockedActionType.map(maybeDemystifiedCriterion.split(prefix)[1]);
                     if (blockedAction != null) {
                         return blockedAction.getUnblockAdvancementsCount();
                     }
@@ -44,10 +45,12 @@ public abstract class AdvancementProgressMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    public void getProgressBarPercentageInject(CallbackInfoReturnable<Float> cir) {
+    public void overrideBlockedActionProgress(CallbackInfoReturnable<Float> cir) {
         float actionUnblockAdvancementsCount = getActionUnblockAdvancementsCount();
         if (actionUnblockAdvancementsCount != -1) {
-            cir.setReturnValue(Math.min(actionUnblockAdvancementsCount, AchieveToDo.getScore(MinecraftClient.getInstance().player)) / actionUnblockAdvancementsCount);
+            cir.setReturnValue(
+                    Math.min(actionUnblockAdvancementsCount, AchieveToDo.getScore() / actionUnblockAdvancementsCount)
+            );
         }
     }
 
@@ -56,12 +59,12 @@ public abstract class AdvancementProgressMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    public void getProgressBarFractionInject(CallbackInfoReturnable<Text> cir) {
+    public void overrideBlockedActionProgressBarFraction(CallbackInfoReturnable<Text> cir) {
         int actionUnblockAdvancementsCount = getActionUnblockAdvancementsCount();
         if (actionUnblockAdvancementsCount != -1) {
             cir.setReturnValue(Text.translatable(
                     "advancements.progress",
-                    Math.min(actionUnblockAdvancementsCount, AchieveToDo.getScore(MinecraftClient.getInstance().player)),
+                    Math.min(actionUnblockAdvancementsCount, AchieveToDo.getScore()),
                     actionUnblockAdvancementsCount
             ));
         }

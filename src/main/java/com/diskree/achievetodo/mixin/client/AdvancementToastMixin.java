@@ -41,12 +41,27 @@ public class AdvancementToastMixin {
                     target = "Lnet/minecraft/client/gui/DrawContext;drawGuiTexture(Lnet/minecraft/util/Identifier;IIII)V"
             )
     )
-    private void redirectBackgroundTexture(DrawContext instance, Identifier texture, int x, int y, int width, int height) {
+    private void redirectBackgroundTexture(
+            DrawContext context,
+            Identifier texture,
+            int x,
+            int y,
+            int width,
+            int height
+    ) {
         BlockedActionCategory category = getBlockedActionCategory();
         if (category != null) {
-            instance.drawTexture(new Identifier(AchieveToDo.ID, "textures/gui/toast/blocked_action/" + category.getName() + ".png"), 0, 0, 0, 0, width, height);
+            context.drawTexture(
+                    new Identifier(AchieveToDo.ID, "textures/gui/toast/blocked_action/" + category.getName() + ".png"),
+                    0,
+                    0,
+                    0,
+                    0,
+                    width,
+                    height
+            );
         } else {
-            instance.drawGuiTexture(texture, x, y, width, height);
+            context.drawGuiTexture(texture, x, y, width, height);
         }
     }
 

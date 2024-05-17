@@ -28,13 +28,23 @@ public abstract class AxeItemMixin implements UsableItem {
     @Override
     public boolean achievetodo$canUse(PlayerEntity player, @NotNull BlockHitResult hit) {
         isCanUseChecking = true;
-        boolean canUse = tryStrip(player.getWorld(), hit.getBlockPos(), player, player.getWorld().getBlockState(hit.getBlockPos())).isPresent();
+        boolean canUse = tryStrip(
+                player.getWorld(),
+                hit.getBlockPos(),
+                player,
+                player.getWorld().getBlockState(hit.getBlockPos())
+        ).isPresent();
         isCanUseChecking = false;
         return canUse;
     }
 
     @Shadow
-    protected abstract Optional<BlockState> tryStrip(World world, BlockPos pos, @Nullable PlayerEntity player, BlockState state);
+    protected abstract Optional<BlockState> tryStrip(
+            World world,
+            BlockPos pos,
+            @Nullable PlayerEntity player,
+            BlockState state
+    );
 
     @Inject(
             method = "tryStrip",
@@ -46,7 +56,13 @@ public abstract class AxeItemMixin implements UsableItem {
             ),
             cancellable = true
     )
-    public void returnOnStrip(World world, BlockPos pos, @Nullable PlayerEntity player, BlockState state, CallbackInfoReturnable<Optional<BlockState>> cir, @SuppressWarnings("OptionalUsedAsFieldOrParameterType") @Local(ordinal = 0) Optional<BlockState> blockState) {
+    public void returnOnStrip(
+            World world,
+            BlockPos pos,
+            @Nullable PlayerEntity player,
+            BlockState state,
+            CallbackInfoReturnable<Optional<BlockState>> cir,
+            @Local(ordinal = 0) Optional<BlockState> blockState) {
         if (isCanUseChecking) {
             cir.setReturnValue(blockState);
         }
@@ -62,7 +78,14 @@ public abstract class AxeItemMixin implements UsableItem {
             ),
             cancellable = true
     )
-    public void returnOnDecreaseOxidationState(World world, BlockPos pos, @Nullable PlayerEntity player, BlockState state, CallbackInfoReturnable<Optional<BlockState>> cir, @SuppressWarnings("OptionalUsedAsFieldOrParameterType") @Local(ordinal = 1) Optional<BlockState> blockState) {
+    public void returnOnDecreaseOxidationState(
+            World world,
+            BlockPos pos,
+            @Nullable PlayerEntity player,
+            BlockState state,
+            CallbackInfoReturnable<Optional<BlockState>> cir,
+            @Local(ordinal = 1) Optional<BlockState> blockState
+    ) {
         if (isCanUseChecking) {
             cir.setReturnValue(blockState);
         }
@@ -78,7 +101,14 @@ public abstract class AxeItemMixin implements UsableItem {
             ),
             cancellable = true
     )
-    public void returnOnWaxOff(World world, BlockPos pos, @Nullable PlayerEntity player, BlockState state, CallbackInfoReturnable<Optional<BlockState>> cir, @SuppressWarnings("OptionalUsedAsFieldOrParameterType") @Local(ordinal = 2) Optional<BlockState> blockState) {
+    public void returnOnWaxOff(
+            World world,
+            BlockPos pos,
+            @Nullable PlayerEntity player,
+            BlockState state,
+            CallbackInfoReturnable<Optional<BlockState>> cir,
+            @Local(ordinal = 2) Optional<BlockState> blockState
+    ) {
         if (isCanUseChecking) {
             cir.setReturnValue(blockState);
         }

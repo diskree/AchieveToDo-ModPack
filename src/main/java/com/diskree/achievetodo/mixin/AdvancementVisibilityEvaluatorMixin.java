@@ -19,7 +19,13 @@ public abstract class AdvancementVisibilityEvaluatorMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    private static void calculateDisplayInject(PlacedAdvancement advancement, Stack<AdvancementDisplays.Status> statuses, Predicate<PlacedAdvancement> donePredicate, AdvancementDisplays.ResultConsumer consumer, CallbackInfoReturnable<Boolean> cir) {
+    private static void forceShowBlockedActionAdvancements(
+            PlacedAdvancement advancement,
+            Stack<AdvancementDisplays.Status> statuses,
+            Predicate<PlacedAdvancement> donePredicate,
+            AdvancementDisplays.ResultConsumer consumer,
+            CallbackInfoReturnable<Boolean> cir
+    ) {
         if (BlockedActionType.map(advancement) != null) {
             statuses.push(AdvancementDisplays.Status.SHOW);
             for (PlacedAdvancement child : advancement.getChildren()) {

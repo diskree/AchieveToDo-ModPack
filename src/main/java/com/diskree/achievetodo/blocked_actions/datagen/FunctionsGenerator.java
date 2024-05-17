@@ -109,7 +109,9 @@ public class FunctionsGenerator implements DataProvider {
             String function = getFunction(blockedAction);
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             HashingOutputStream hashingOutputStream = new HashingOutputStream(Hashing.sha1(), byteArrayOutputStream);
-            try (BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(hashingOutputStream, StandardCharsets.UTF_8))) {
+            try (BufferedWriter bufferedWriter = new BufferedWriter(
+                    new OutputStreamWriter(hashingOutputStream, StandardCharsets.UTF_8))
+            ) {
                 bufferedWriter.write(function);
             }
             Path functionsPath = dataOutput

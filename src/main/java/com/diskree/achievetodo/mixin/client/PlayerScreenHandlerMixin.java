@@ -25,7 +25,7 @@ public abstract class PlayerScreenHandlerMixin {
                     ordinal = 2
             )
     )
-    private @NotNull Slot initInject(@NotNull Slot slot) {
+    private @NotNull Slot blockEquipment(@NotNull Slot slot) {
         return new Slot(slot.inventory, slot.getIndex(), slot.x, slot.y) {
 
             @Override
@@ -40,7 +40,7 @@ public abstract class PlayerScreenHandlerMixin {
 
             @Override
             public boolean canInsert(ItemStack stack) {
-                if (AchieveToDo.isActionBlocked(MinecraftClient.getInstance().player, BlockedActionType.findBlockedEquipment(stack.getItem()))) {
+                if (AchieveToDo.isActionBlocked(BlockedActionType.findBlockedEquipment(stack.getItem()))) {
                     if (MinecraftClient.getInstance().currentScreen != null) {
                         MinecraftClient.getInstance().currentScreen.close();
                     }

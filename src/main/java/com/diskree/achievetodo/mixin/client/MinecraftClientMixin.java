@@ -5,7 +5,6 @@ import com.diskree.achievetodo.blocked_actions.BlockedActionType;
 import com.diskree.achievetodo.injection.CreateWorldScreenImpl;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.option.KeyBinding;
 import org.jetbrains.annotations.NotNull;
@@ -29,8 +28,9 @@ public class MinecraftClientMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    public void setScreenInject(Screen screen, CallbackInfo ci) {
-        if (screen instanceof CreateWorldScreen createWorldScreen && ((CreateWorldScreenImpl) createWorldScreen).achievetodo$datapacksLoaded()) {
+    public void waitDatapacks(Screen screen, CallbackInfo ci) {
+        if (screen instanceof CreateWorldScreenImpl createWorldScreen &&
+                createWorldScreen.achievetodo$isDatapacksLoaded()) {
             ci.cancel();
         }
     }
@@ -43,7 +43,7 @@ public class MinecraftClientMixin {
                     ordinal = 4
             )
     )
-    public boolean handleInputEventsInject(@NotNull KeyBinding instance) {
-        return instance.wasPressed() && !AchieveToDo.isActionBlocked(player, BlockedActionType.OPEN_INVENTORY);
+    public boolean blockInventory(@NotNull KeyBinding keyBinding) {
+        return keyBinding.wasPressed() && !AchieveToDo.isActionBlocked(player, BlockedActionType.OPEN_INVENTORY);
     }
 }

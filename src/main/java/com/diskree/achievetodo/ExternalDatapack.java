@@ -6,7 +6,8 @@ import net.minecraft.util.Formatting;
 import org.jetbrains.annotations.NotNull;
 
 @Environment(EnvType.CLIENT)
-public enum ExternalPack {
+public enum ExternalDatapack {
+
     BACAP(
             "BlazeandCave's Advancements Pack",
             Formatting.LIGHT_PURPLE,
@@ -48,7 +49,7 @@ public enum ExternalPack {
             "9120f6db7c68032561211a388d88e5c8f217300a"
     ),
     TERRALITH(
-            "Terralith (World Generation Pack)",
+            "Terralith",
             Formatting.GREEN,
             "https://www.planetminecraft.com/data-pack/terralith-overworld-evolved-100-biomes-caves-and-more/",
             "https://github.com/Stardust-Labs-MC/Terralith/releases/download/v2.4.11/Terralith_1.20.4_v2.4.11.zip",
@@ -56,7 +57,7 @@ public enum ExternalPack {
             "c7e7f40e6a4da281bbd26eff16a3c7417b096b85"
     ),
     AMPLIFIED_NETHER(
-            "Amplified Nether (World Generation Pack)",
+            "Amplified Nether",
             Formatting.DARK_RED,
             "https://www.planetminecraft.com/data-pack/amplified-nether-1-18/",
             "https://github.com/Stardust-Labs-MC/Amplified-Nether/releases/download/v1.2.4/Amplified_Nether_1.20.4_v1.2.4.zip",
@@ -64,7 +65,7 @@ public enum ExternalPack {
             "c67ce6110fe14271da660598384cffb44591c49b"
     ),
     NULLSCAPE(
-            "Nullscape (World Generation Pack)",
+            "Nullscape",
             Formatting.DARK_PURPLE,
             "https://www.planetminecraft.com/data-pack/nullscape/",
             "https://github.com/Stardust-Labs-MC/Nullscape/releases/download/v1.2.4/Nullscape_1.20.4_v1.2.4.zip",
@@ -79,7 +80,7 @@ public enum ExternalPack {
     private final String wrapperSha1;
     private final String sha1;
 
-    ExternalPack(String name, Formatting color, String pageUrl, String downloadUrl, String wrapperSha1, String sha1) {
+    ExternalDatapack(String name, Formatting color, String pageUrl, String downloadUrl, String wrapperSha1, String sha1) {
         this.name = name;
         this.color = color;
         this.pageUrl = pageUrl;
@@ -114,5 +115,9 @@ public enum ExternalPack {
 
     public @NotNull String toFileName() {
         return name + ".zip";
+    }
+
+    public @NotNull String toDatapackId() {
+        return "file/" + toFileName();
     }
 }

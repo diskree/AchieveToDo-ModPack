@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum BlockedActionType {
+
     JUMP(
             8
     ),
@@ -592,7 +593,10 @@ public enum BlockedActionType {
         }
         if (equipmentMaterial != null) {
             return Registries.ITEM.stream()
-                    .filter(item -> item instanceof ArmorItem chestPlateItem && chestPlateItem.getType() == ArmorItem.Type.CHESTPLATE && chestPlateItem.getMaterial() == equipmentMaterial)
+                    .filter(item -> item instanceof ArmorItem chestPlateItem &&
+                            chestPlateItem.getType() == ArmorItem.Type.CHESTPLATE &&
+                            chestPlateItem.getMaterial() == equipmentMaterial
+                    )
                     .findFirst()
                     .orElse(null);
         }

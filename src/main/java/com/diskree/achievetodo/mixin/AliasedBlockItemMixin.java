@@ -24,6 +24,8 @@ public class AliasedBlockItemMixin extends BlockItem implements UsableItem {
     public boolean achievetodo$canUse(@NotNull PlayerEntity player, @NotNull BlockHitResult hit) {
         BlockState aliasedBlockState = getBlock().getDefaultState();
         BlockState blockState = player.getWorld().getBlockState(hit.getBlockPos());
-        return !aliasedBlockState.isIn(BlockTags.MAINTAINS_FARMLAND) || !blockState.isOf(Blocks.FARMLAND) || hit.getSide() != Direction.UP;
+        return !aliasedBlockState.isIn(BlockTags.MAINTAINS_FARMLAND) ||
+                !blockState.isOf(Blocks.FARMLAND) ||
+                hit.getSide() != Direction.UP;
     }
 }

@@ -30,7 +30,7 @@ public abstract class ServerPlayerEntityMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    public void moveToWorldInject(@NotNull ServerWorld destination, CallbackInfoReturnable<Entity> cir) {
+    public void blockDimension(@NotNull ServerWorld destination, CallbackInfoReturnable<Entity> cir) {
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
         if (AchieveToDo.isActionBlocked(player, BlockedActionType.findBlockedDimension(destination.getRegistryKey()))) {
             cir.setReturnValue(player);

@@ -13,8 +13,11 @@ public record GrantBlockedActionPayload(
         boolean isDemystifyOnly
 ) implements CustomPayload {
 
-    public static final Id<GrantBlockedActionPayload> ID = new CustomPayload.Id<>(new Identifier(BuildConfig.MOD_ID, "grant_blocked_action"));
-    public static final PacketCodec<PacketByteBuf, GrantBlockedActionPayload> CODEC = CustomPayload.codecOf(GrantBlockedActionPayload::write, GrantBlockedActionPayload::new);
+    public static final Id<GrantBlockedActionPayload> ID =
+            new CustomPayload.Id<>(new Identifier(BuildConfig.MOD_ID, "grant_blocked_action"));
+
+    public static final PacketCodec<PacketByteBuf, GrantBlockedActionPayload> CODEC =
+            CustomPayload.codecOf(GrantBlockedActionPayload::write, GrantBlockedActionPayload::new);
 
     private GrantBlockedActionPayload(PacketByteBuf buf) {
         this(buf.readEnumConstant(BlockedActionType.class), buf.readBoolean());

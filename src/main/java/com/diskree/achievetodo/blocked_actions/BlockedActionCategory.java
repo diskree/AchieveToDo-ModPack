@@ -4,6 +4,7 @@ import net.minecraft.text.Text;
 import org.jetbrains.annotations.NotNull;
 
 public enum BlockedActionCategory {
+
     ACTION,
     FOOD,
     ITEM,

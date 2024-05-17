@@ -27,13 +27,24 @@ public abstract class AbstractFurnaceBlockMixin implements UsableBlock {
     @Override
     public boolean achievetodo$canUse(PlayerEntity player, Hand hand, BlockHitResult hit) {
         isCanUseChecking = true;
-        boolean canUse = onUse(player.getWorld().getBlockState(hit.getBlockPos()), player.getWorld(), hit.getBlockPos(), player, hit) == null;
+        boolean canUse = onUse(
+                player.getWorld().getBlockState(hit.getBlockPos()),
+                player.getWorld(),
+                hit.getBlockPos(),
+                player,
+                hit
+        ) == null;
         isCanUseChecking = false;
         return canUse;
     }
 
     @Shadow
-    protected abstract ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit);
+    protected abstract ActionResult onUse(
+            BlockState state,
+            World world, BlockPos pos,
+            PlayerEntity player,
+            BlockHitResult hit
+    );
 
     @Inject(
             method = "onUse",
@@ -43,7 +54,14 @@ public abstract class AbstractFurnaceBlockMixin implements UsableBlock {
                     shift = At.Shift.BEFORE
             ), cancellable = true
     )
-    public void returnOnUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir) {
+    public void returnOnUse(
+            BlockState state,
+            World world,
+            BlockPos pos,
+            PlayerEntity player,
+            BlockHitResult hit,
+            CallbackInfoReturnable<ActionResult> cir
+    ) {
         if (isCanUseChecking) {
             cir.setReturnValue(null);
         }
@@ -57,10 +75,10 @@ public abstract class AbstractFurnaceBlockMixin implements UsableBlock {
                     opcode = Opcodes.GETFIELD
             )
     )
-    public boolean skipClientCheck(World instance) {
+    public boolean skipClientCheck(World world) {
         if (isCanUseChecking) {
             return false;
         }
-        return instance.isClient;
+        return world.isClient;
     }
 }

@@ -5,7 +5,9 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
+import net.minecraft.util.Colors;
 import net.minecraft.util.Formatting;
+import org.lwjgl.glfw.GLFW;
 
 public class ErrorScreen extends Screen {
 
@@ -21,14 +23,18 @@ public class ErrorScreen extends Screen {
     @Override
     protected void init() {
         super.init();
-        addDrawableChild(ButtonWidget.builder(ScreenTexts.BACK, button -> close()).dimensions(width / 2 - 100, 180, 200, 20).build());
+        addDrawableChild(ButtonWidget
+                .builder(ScreenTexts.BACK, button -> close())
+                .dimensions(width / 2 - 100, 180, 200, 20)
+                .build()
+        );
     }
 
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         super.render(context, mouseX, mouseY, delta);
-        context.drawCenteredTextWithShadow(textRenderer, title, width / 2, 90, 0xFFFFFF);
-        context.drawTextWrapped(textRenderer, message, width / 4, 110, width / 2, 0xFFFFFF);
+        context.drawCenteredTextWithShadow(textRenderer, title, width / 2, 90, Colors.WHITE);
+        context.drawTextWrapped(textRenderer, message, width / 4, 110, width / 2, Colors.WHITE);
     }
 
     @Override
@@ -40,7 +46,7 @@ public class ErrorScreen extends Screen {
 
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        if (keyCode == 256) {
+        if (keyCode == GLFW.GLFW_KEY_ESCAPE) {
             close();
             return true;
         }

@@ -1,6 +1,6 @@
 package com.diskree.achievetodo.gui;
 
-import com.diskree.achievetodo.ExternalPack;
+import com.diskree.achievetodo.ExternalDatapack;
 import it.unimi.dsi.fastutil.booleans.BooleanConsumer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -12,6 +12,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Util;
 import org.lwjgl.PointerBuffer;
+import org.lwjgl.glfw.GLFW;
 import org.lwjgl.system.MemoryStack;
 import org.lwjgl.util.tinyfd.TinyFileDialogs;
 
@@ -30,25 +31,30 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 @Environment(EnvType.CLIENT)
-public class DownloadExternalPackScreen extends ConfirmScreen {
+public class DownloadExternalDatapackScreen extends ConfirmScreen {
 
     private static final int BUTTON_WIDTH = 100;
     private static final int BUTTON_HEIGHT = 20;
     private static final int BUTTON_MARGIN = 5;
 
     private final Screen parent;
-    private final ExternalPack externalPack;
+    private final ExternalDatapack externalDatapack;
     private final BooleanConsumer exitCallback;
     private boolean exitWithCreateLevel;
 
-    public DownloadExternalPackScreen(Screen parent, ExternalPack externalPack, BooleanConsumer exitCallback) {
+    public DownloadExternalDatapackScreen(Screen parent, ExternalDatapack externalDatapack, BooleanConsumer exitCallback) {
         super(
                 null,
-                Text.translatable("external.pack.required_prefix").append(Text.of(externalPack.getName()).copy().formatted(externalPack.getColor(), Formatting.ITALIC)),
+                Text.translatable("external.pack.required_prefix").append(
+                        Text.literal(externalDatapack.getName()).formatted(
+                                externalDatapack.getColor(),
+                                Formatting.ITALIC
+                        )
+                ),
                 Text.translatable("external.pack.help").copy().formatted(Formatting.YELLOW)
         );
         this.parent = parent;
-        this.externalPack = externalPack;
+        this.externalDatapack = externalDatapack;
         this.exitCallback = exitCallback;
     }
 
@@ -66,7 +72,7 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
 
         addDrawableChild(ButtonWidget.builder(
                 Text.translatable("external.pack.download"),
-                button -> Util.getOperatingSystem().open(externalPack.getDownloadUrl())
+                button -> Util.getOperatingSystem().open(externalDatapack.getDownloadUrl())
         ).dimensions(selectFileButtonX - BUTTON_MARGIN - BUTTON_WIDTH, y, BUTTON_WIDTH, BUTTON_HEIGHT).build());
 
         addDrawableChild(ButtonWidget.builder(
@@ -93,18 +99,23 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
 
         addDrawableChild(ButtonWidget.builder(
                 Text.translatable("external.pack.open_page"),
-                button -> Util.getOperatingSystem().open(externalPack.getPageUrl())
+                button -> Util.getOperatingSystem().open(externalDatapack.getPageUrl())
         ).dimensions(selectFileButtonX + BUTTON_WIDTH + BUTTON_MARGIN, y, BUTTON_WIDTH, BUTTON_HEIGHT).build());
 
         addDrawableChild(ButtonWidget.builder(
                 ScreenTexts.CANCEL,
                 button -> close()
-        ).dimensions(selectFileButtonX + BUTTON_WIDTH + BUTTON_MARGIN, y + BUTTON_HEIGHT + BUTTON_MARGIN, BUTTON_WIDTH, BUTTON_HEIGHT).build());
+        ).dimensions(
+                selectFileButtonX + BUTTON_WIDTH + BUTTON_MARGIN,
+                y + BUTTON_HEIGHT + BUTTON_MARGIN,
+                BUTTON_WIDTH,
+                BUTTON_HEIGHT
+        ).build());
     }
 
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        if (keyCode == 256) {
+        if (keyCode == GLFW.GLFW_KEY_ESCAPE) {
             close();
             return true;
         }
@@ -130,10 +141,10 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
             if (sha1 == null) {
                 return;
             }
-            isWrapper = sha1.equals(externalPack.getWrapperSha1());
-            if (!isWrapper && !sha1.equalsIgnoreCase(externalPack.getSha1())) {
+            isWrapper = sha1.equals(externalDatapack.getWrapperSha1());
+            if (!isWrapper && !sha1.equalsIgnoreCase(externalDatapack.getSha1())) {
                 client.setScreen(new ErrorScreen(
-                        DownloadExternalPackScreen.this,
+                        DownloadExternalDatapackScreen.this,
                         Text.translatable("external.pack.error")
                 ));
                 return;
@@ -148,9 +159,9 @@ public class DownloadExternalPackScreen extends ConfirmScreen {
             }
             if (isWrapper) {
                 Path extractedArchive = unzip(path, globalPacksDir);
-                Files.move(extractedArchive, globalPacksDir.resolve(externalPack.toFileName()));
+                Files.move(extractedArchive, globalPacksDir.resolve(externalDatapack.toFileName()));
             } else {
-                Files.copy(path, globalPacksDir.resolve(externalPack.toFileName()));
+                Files.copy(path, globalPacksDir.resolve(externalDatapack.toFileName()));
             }
         } catch (IOException e) {
             return;

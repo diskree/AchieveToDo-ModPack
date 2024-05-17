@@ -16,7 +16,7 @@ public class ClientPlayerEntityMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    private void isAutoJumpEnabledInject(CallbackInfoReturnable<Boolean> cir) {
+    private void blockJump(CallbackInfoReturnable<Boolean> cir) {
         ClientPlayerEntity clientPlayerEntity = (ClientPlayerEntity) (Object) this;
         if (AchieveToDo.isActionBlocked(clientPlayerEntity, BlockedActionType.JUMP, true)) {
             cir.setReturnValue(false);

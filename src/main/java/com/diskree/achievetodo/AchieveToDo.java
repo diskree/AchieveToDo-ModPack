@@ -47,28 +47,39 @@ public class AchieveToDo implements ModInitializer {
     public static final String ID = BuildConfig.MOD_ID;
 
     public static final String BACAP_SCORE_OBJECTIVE = "bac_advancements";
-    public static final String BACAP_DATA_PACK = "file/bacap.zip";
-    public static final String BACAP_HARDCORE_DATA_PACK = "file/bacap_hardcore.zip";
-    public static final String BACAP_TERRALITH_DATA_PACK = "file/bacap_terralith.zip";
-    public static final String BACAP_AMPLIFIED_NETHER_DATA_PACK = "file/bacap_amplified_nether.zip";
-    public static final String BACAP_NULLSCAPE_DATA_PACK = "file/bacap_nullscape.zip";
-
-    public static final String TERRALITH_DATA_PACK = "file/terralith.zip";
-    public static final String AMPLIFIED_NETHER_DATA_PACK = "file/amplified_nether.zip";
-    public static final String NULLSCAPE_DATA_PACK = "file/nullscape.zip";
-
-    public static final Identifier BACAP_OVERRIDE_DATA_PACK = new Identifier(ID, "bacap_override");
-    public static final Identifier BACAP_OVERRIDE_HARDCORE_DATA_PACK = new Identifier(ID, "bacap_override_hardcore");
-    public static final Identifier BACAP_REWARDS_ITEM_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_item");
-    public static final Identifier BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME =
-            new Identifier(ID, "bacap_rewards_experience");
-    public static final Identifier BACAP_REWARDS_TROPHY_DATA_PACK_NAME = new Identifier(ID, "bacap_rewards_trophy");
-    public static final Identifier BACAP_COOPERATIVE_MODE_DATA_PACK_NAME = new Identifier(ID, "bacap_cooperative_mode");
 
     public static final Identifier MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM_ID = new Identifier(ID, "mystified_label");
     public static final Item MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM = new Item(new Item.Settings());
 
     private static int advancementsCount;
+
+    @Environment(EnvType.CLIENT)
+    public static int getScore() {
+        return getScore(MinecraftClient.getInstance().player);
+    }
+
+    @Environment(EnvType.CLIENT)
+    public static boolean isActionBlocked(BlockedActionType blockedAction) {
+        return isActionBlocked(MinecraftClient.getInstance().player, blockedAction);
+    }
+
+    @Environment(EnvType.CLIENT)
+    public static void setAdvancementsCount(int count) {
+        if (MinecraftClient.getInstance().player == null || count >= 0 && count <= advancementsCount) {
+            return;
+        }
+        int oldCount = advancementsCount;
+        advancementsCount = count;
+        if (oldCount != 0) {
+            for (BlockedActionType blockedAction : BlockedActionType.values()) {
+                if (advancementsCount >= blockedAction.getUnblockAdvancementsCount() &&
+                        oldCount < blockedAction.getUnblockAdvancementsCount()
+                ) {
+                    ClientPlayNetworking.send(new GrantBlockedActionPayload(blockedAction, false));
+                }
+            }
+        }
+    }
 
     public static int getScore(PlayerEntity player) {
         if (player == null) {
@@ -113,25 +124,6 @@ public class AchieveToDo implements ModInitializer {
             }
         }
         return true;
-    }
-
-    @Environment(EnvType.CLIENT)
-    public static void setAdvancementsCount(int count) {
-        MinecraftClient client = MinecraftClient.getInstance();
-        if (client.player == null || count >= 0 && count <= advancementsCount) {
-            return;
-        }
-        int oldCount = advancementsCount;
-        advancementsCount = count;
-        if (oldCount != 0) {
-            for (BlockedActionType blockedAction : BlockedActionType.values()) {
-                if (advancementsCount >= blockedAction.getUnblockAdvancementsCount() &&
-                        oldCount < blockedAction.getUnblockAdvancementsCount()
-                ) {
-                    ClientPlayNetworking.send(new GrantBlockedActionPayload(blockedAction, false));
-                }
-            }
-        }
     }
 
     private static void grantBlockedAction(
@@ -268,24 +260,11 @@ public class AchieveToDo implements ModInitializer {
 
     private void registerDataPacks() {
         FabricLoader.getInstance().getModContainer(ID).ifPresent(modContainer -> {
-            ResourceManagerHelper.registerBuiltinResourcePack(
-                    BACAP_OVERRIDE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL
-            );
-            ResourceManagerHelper.registerBuiltinResourcePack(
-                    BACAP_OVERRIDE_HARDCORE_DATA_PACK, modContainer, ResourcePackActivationType.NORMAL
-            );
-            ResourceManagerHelper.registerBuiltinResourcePack(
-                    BACAP_COOPERATIVE_MODE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL
-            );
-            ResourceManagerHelper.registerBuiltinResourcePack(
-                    BACAP_REWARDS_ITEM_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL
-            );
-            ResourceManagerHelper.registerBuiltinResourcePack(
-                    BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL
-            );
-            ResourceManagerHelper.registerBuiltinResourcePack(
-                    BACAP_REWARDS_TROPHY_DATA_PACK_NAME, modContainer, ResourcePackActivationType.NORMAL
-            );
+            for (InternalDatapack internalDatapack : InternalDatapack.values()) {
+                ResourceManagerHelper.registerBuiltinResourcePack(
+                        internalDatapack.toDatapackId(), modContainer, ResourcePackActivationType.NORMAL
+                );
+            }
         });
     }
 

@@ -19,12 +19,13 @@ public class EndGatewayBlockEntityMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    private static void canTeleportInject(Entity entity, CallbackInfoReturnable<Boolean> cir) {
+    private static void blockEndGateway(Entity entity, CallbackInfoReturnable<Boolean> cir) {
         Entity teleportEntity = entity;
         if (teleportEntity instanceof EnderPearlEntity enderPearl) {
             teleportEntity = enderPearl.getOwner();
         }
-        if (teleportEntity instanceof PlayerEntity playerEntity && AchieveToDo.isActionBlocked(playerEntity, BlockedActionType.END_GATEWAY)) {
+        if (teleportEntity instanceof PlayerEntity playerEntity &&
+                AchieveToDo.isActionBlocked(playerEntity, BlockedActionType.END_GATEWAY)) {
             cir.setReturnValue(false);
         }
     }

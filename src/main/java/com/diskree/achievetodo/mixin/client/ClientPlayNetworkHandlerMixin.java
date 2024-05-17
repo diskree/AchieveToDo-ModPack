@@ -16,7 +16,7 @@ public class ClientPlayNetworkHandlerMixin {
             method = "onScoreboardScoreUpdate",
             at = @At("RETURN")
     )
-    private void onScoreboardScoreUpdateInject(@NotNull ScoreboardScoreUpdateS2CPacket packet, CallbackInfo ci) {
+    private void updateAdvancementsCount(@NotNull ScoreboardScoreUpdateS2CPacket packet, CallbackInfo ci) {
         if (AchieveToDo.BACAP_SCORE_OBJECTIVE.equals(packet.objectiveName)) {
             AchieveToDo.setAdvancementsCount(packet.score);
         }

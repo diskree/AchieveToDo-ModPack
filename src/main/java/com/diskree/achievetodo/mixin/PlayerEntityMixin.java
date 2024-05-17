@@ -37,7 +37,7 @@ public abstract class PlayerEntityMixin implements PlayerEntityImpl {
             at = @At("HEAD"),
             cancellable = true
     )
-    public void jumpInject(CallbackInfo ci) {
+    public void blockJump(CallbackInfo ci) {
         PlayerEntity playerEntity = (PlayerEntity) (Object) this;
         if (!playerEntity.isTouchingWater() && AchieveToDo.isActionBlocked(playerEntity, BlockedActionType.JUMP)) {
             ci.cancel();
@@ -49,7 +49,7 @@ public abstract class PlayerEntityMixin implements PlayerEntityImpl {
             at = @At("HEAD"),
             cancellable = true
     )
-    public void canEquipInject(@NotNull ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
+    public void blockEquipment(@NotNull ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         PlayerEntity player = (PlayerEntity) (Object) this;
         if (AchieveToDo.isActionBlocked(player, BlockedActionType.findBlockedEquipment(stack.getItem()))) {
             cir.setReturnValue(false);
@@ -61,7 +61,10 @@ public abstract class PlayerEntityMixin implements PlayerEntityImpl {
             at = @At("HEAD"),
             cancellable = true
     )
-    public void returnOnSleep(BlockPos pos, CallbackInfoReturnable<Either<PlayerEntity.SleepFailureReason, Unit>> cir) {
+    public void returnOnSleep(
+            BlockPos blockPos,
+            CallbackInfoReturnable<Either<PlayerEntity.SleepFailureReason, Unit>> cir
+    ) {
         if (isCanUseChecking) {
             cir.setReturnValue(Either.right(Unit.INSTANCE));
         }

@@ -1,6 +1,7 @@
 package com.diskree.achievetodo.mixin.client;
 
-import com.diskree.achievetodo.AchieveToDo;
+import com.diskree.achievetodo.ExternalDatapack;
+import com.diskree.achievetodo.InternalDatapack;
 import net.minecraft.client.gui.screen.pack.PackScreen;
 import net.minecraft.client.gui.screen.pack.ResourcePackOrganizer;
 import org.jetbrains.annotations.NotNull;
@@ -21,24 +22,23 @@ public class PackScreenMixin {
                     target = "Ljava/util/stream/Stream;forEach(Ljava/util/function/Consumer;)V"
             )
     )
-    public void updatePackListRedirect(@NotNull Stream<ResourcePackOrganizer.Pack> instance, Consumer<ResourcePackOrganizer.Pack> consumer) {
-        instance.filter(pack -> {
-            String name = pack.getName();
-            boolean isHiddenDataPack = name.equals(AchieveToDo.BACAP_DATA_PACK) ||
-                    name.equals(AchieveToDo.BACAP_HARDCORE_DATA_PACK) ||
-                    name.equals(AchieveToDo.TERRALITH_DATA_PACK) ||
-                    name.equals(AchieveToDo.BACAP_TERRALITH_DATA_PACK) ||
-                    name.equals(AchieveToDo.AMPLIFIED_NETHER_DATA_PACK) ||
-                    name.equals(AchieveToDo.BACAP_AMPLIFIED_NETHER_DATA_PACK) ||
-                    name.equals(AchieveToDo.NULLSCAPE_DATA_PACK) ||
-                    name.equals(AchieveToDo.BACAP_NULLSCAPE_DATA_PACK) ||
-                    name.equals(AchieveToDo.BACAP_OVERRIDE_DATA_PACK.toString()) ||
-                    name.equals(AchieveToDo.BACAP_OVERRIDE_HARDCORE_DATA_PACK.toString()) ||
-                    name.equals(AchieveToDo.BACAP_REWARDS_ITEM_DATA_PACK_NAME.toString()) ||
-                    name.equals(AchieveToDo.BACAP_REWARDS_EXPERIENCE_DATA_PACK_NAME.toString()) ||
-                    name.equals(AchieveToDo.BACAP_REWARDS_TROPHY_DATA_PACK_NAME.toString()) ||
-                    name.equals(AchieveToDo.BACAP_COOPERATIVE_MODE_DATA_PACK_NAME.toString());
-            return !isHiddenDataPack;
+    public void updatePackListRedirect(
+            @NotNull Stream<ResourcePackOrganizer.Pack> packs,
+            Consumer<ResourcePackOrganizer.Pack> consumer
+    ) {
+        packs.filter(pack -> {
+            String packName = pack.getName();
+            for (ExternalDatapack externalDatapack : ExternalDatapack.values()) {
+                if (packName.equals(externalDatapack.toDatapackId())) {
+                    return false;
+                }
+            }
+            for (InternalDatapack internalDatapack : InternalDatapack.values()) {
+                if (packName.equals(internalDatapack.toDatapackId().toString())) {
+                    return false;
+                }
+            }
+            return true;
         }).forEach(consumer);
     }
 }

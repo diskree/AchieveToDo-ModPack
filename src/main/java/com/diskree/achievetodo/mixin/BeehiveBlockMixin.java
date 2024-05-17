@@ -27,13 +27,29 @@ public abstract class BeehiveBlockMixin implements UsableItemOnBlock {
     @Override
     public boolean achievetodo$canUse(PlayerEntity player, ItemStack stack, Hand hand, BlockHitResult hit) {
         isCanUseChecking = true;
-        boolean canUse = onUseWithItem(stack, player.getWorld().getBlockState(hit.getBlockPos()), player.getWorld(), hit.getBlockPos(), player, hand, hit) == null;
+        boolean canUse = onUseWithItem(
+                stack,
+                player.getWorld().getBlockState(hit.getBlockPos()),
+                player.getWorld(),
+                hit.getBlockPos(),
+                player,
+                hand,
+                hit
+        ) == null;
         isCanUseChecking = false;
         return canUse;
     }
 
     @Shadow
-    protected abstract ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit);
+    protected abstract ItemActionResult onUseWithItem(
+            ItemStack stack,
+            BlockState state,
+            World world,
+            BlockPos pos,
+            PlayerEntity player,
+            Hand hand,
+            BlockHitResult hit
+    );
 
     @Inject(
             method = "onUseWithItem",
@@ -44,7 +60,16 @@ public abstract class BeehiveBlockMixin implements UsableItemOnBlock {
             ),
             cancellable = true
     )
-    public void returnOnUse(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ItemActionResult> cir) {
+    public void returnOnUse(
+            ItemStack stack,
+            BlockState state,
+            World world,
+            BlockPos pos,
+            PlayerEntity player,
+            Hand hand,
+            BlockHitResult hit,
+            CallbackInfoReturnable<ItemActionResult> cir
+    ) {
         if (isCanUseChecking) {
             cir.setReturnValue(null);
         }

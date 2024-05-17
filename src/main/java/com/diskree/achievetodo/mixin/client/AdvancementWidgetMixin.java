@@ -26,12 +26,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class AdvancementWidgetMixin {
 
     @Unique
-    private boolean isMystified() {
+    private boolean isMystifiedBlockedActionAdvancement() {
         BlockedActionType blockedAction = BlockedActionType.map(advancement);
         if (blockedAction == null || blockedAction.isUnblocked(client.player) || progress == null) {
             return false;
         }
-        CriterionProgress demystifiedProgress = progress.getCriterionProgress(AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + blockedAction.getName());
+        CriterionProgress demystifiedProgress = progress.getCriterionProgress(
+                AdvancementsGenerator.BLOCKED_ACTION_DEMYSTIFIED_CRITERION_PREFIX + blockedAction.getName()
+        );
         return demystifiedProgress != null && !demystifiedProgress.isObtained();
     }
 
@@ -55,7 +57,7 @@ public abstract class AdvancementWidgetMixin {
             index = 0
     )
     private ItemStack renderWidgetsModifyIcon(ItemStack stack) {
-        if (isMystified()) {
+        if (isMystifiedBlockedActionAdvancement()) {
             return new ItemStack(AchieveToDo.MYSTIFIED_BLOCKED_ACTION_LABEL_ITEM);
         }
         return stack;
@@ -66,8 +68,14 @@ public abstract class AdvancementWidgetMixin {
             at = @At("RETURN"),
             cancellable = true
     )
-    private void shouldRenderInject(int originX, int originY, int mouseX, int mouseY, @NotNull CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(cir.getReturnValue() && !isMystified());
+    private void disableTooltipForMystifiedBlockedAction(
+            int originX,
+            int originY,
+            int mouseX,
+            int mouseY,
+            @NotNull CallbackInfoReturnable<Boolean> cir
+    ) {
+        cir.setReturnValue(cir.getReturnValue() && !isMystifiedBlockedActionAdvancement());
     }
 
     @Redirect(
@@ -77,7 +85,7 @@ public abstract class AdvancementWidgetMixin {
                     target = "Lnet/minecraft/advancement/AdvancementRequirements;getLength()I"
             )
     )
-    public int initRedirect(AdvancementRequirements instance) {
+    public int initRedirect(AdvancementRequirements requirements) {
         BlockedActionType blockedAction = BlockedActionType.map(advancement);
         if (blockedAction != null) {
             return blockedAction.getUnblockAdvancementsCount();

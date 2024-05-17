@@ -6,5 +6,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 
 public interface UsableItemOnBlock {
+
     boolean achievetodo$canUse(PlayerEntity player, ItemStack stack, Hand hand, BlockHitResult hit);
 }

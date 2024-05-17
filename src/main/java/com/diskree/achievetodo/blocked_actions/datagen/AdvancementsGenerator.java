@@ -158,7 +158,9 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
             },
     };
 
-    protected AdvancementsGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    protected AdvancementsGenerator(
+            FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup
+    ) {
         super(output, registryLookup);
     }
 
@@ -171,7 +173,10 @@ public class AdvancementsGenerator extends FabricAdvancementProvider {
     }
 
     @Override
-    public void generateAdvancement(RegistryWrapper.WrapperLookup registryLookup, Consumer<AdvancementEntry> consumer) {
+    public void generateAdvancement(
+            RegistryWrapper.WrapperLookup registryLookup,
+            Consumer<AdvancementEntry> consumer
+    ) {
         AdvancementEntry rootAdvancement = Advancement.Builder
                 .createUntelemetered()
                 .display(

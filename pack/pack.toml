@@ -1,16 +1,14 @@
-name = "${packName}"
-author = "${author}"
-version = "${packVersion}"
+name = "AchieveToDo"
+author = "diskree"
+version = "1.5"
 pack-format = "packwiz:1.1.0"
+
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
+hash = "3e56407710232d4545975785add4651a16bd322944ffa5b68fe5d7f3f41f787c"
 
 [versions]
-fabric = "${loaderVersion}"
-minecraft = "${minecraftVersion}"
-
-[options]
-datapack-folder = "datapacks"
-no-internal-hashes = "true"
+fabric = "0.16.9"
+minecraft = "1.21.4"

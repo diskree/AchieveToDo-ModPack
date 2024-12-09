@@ -1,0 +1,13 @@
+name = "Better RU for BACAP"
+filename = "BACAP Better RU.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/yiLJxtqH/versions/dCPokbBj/BACAP%20Better%20RU.zip"
+hash-format = "sha512"
+hash = "2349c88eb86c706049911d2969f1b09879713549a90ac4c0b38e84908a53f2f8f92f37627097e62734bfd13e5a7e7004a61f653601a9840d6ee075d7c23d6e79"
+
+[update]
+[update.modrinth]
+mod-id = "yiLJxtqH"
+version = "dCPokbBj"

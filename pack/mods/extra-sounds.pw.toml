@@ -1,8 +1,0 @@
-name = "Extra Sounds"
-filename = "extrasounds-2.3.1+1.20.4.jar"
-side = "client"
-
-[download]
-url = "https://github.com/diskree/extra-sounds/releases/download/stable%2F1.20.4-build.3/extrasounds-2.3.1+1.20.4.jar"
-hash-format = "sha1"
-hash = "999c03ecd2050126643c01b03b537a82312a456b"

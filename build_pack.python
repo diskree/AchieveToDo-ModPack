@@ -1,0 +1,126 @@
+import os
+import re
+from pathlib import Path
+
+# Constants
+NAME_COLOR_FROM = "#07c5fa"
+NAME_COLOR_TO = "#b2e8f7"
+
+VERSION_COLOR_MAJOR = "#f8c8dc"
+VERSION_COLOR_MINOR = "#fac898"
+VERSION_COLOR_PATCH = "#f8c8dc"
+
+mod_id, pack_version, pack_name, author, repo_url, minecraft_version, loader_version = (
+    os.sys.argv[1:8]
+)
+
+pack_dir = "pack"
+
+# Remove old files
+for file in Path(pack_dir).glob("*.mrpack"):
+    file.unlink()
+
+os.chdir(pack_dir)
+
+# Split the pack name for coloring
+word_center = pack_name
+word_start_array = []
+word_end_array = []
+
+while word_center:
+    word_center_len = len(word_center)
+    if word_center_len in {1, 3, 4}:
+        piece = 1
+    else:
+        piece = 2
+    if word_center_len == piece:
+        break
+    word_start_array.append(word_center[:piece])
+    word_end_array.append(word_center[-piece:])
+    word_center = word_center[piece:-piece]
+
+name_color_steps = len(word_start_array)
+
+# Generate gradient colors
+def hex_to_rgb(hex_color):
+    return tuple(int(hex_color[i:i + 2], 16) for i in (1, 3, 5))
+
+def rgb_to_hex(rgb):
+    return f"#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}"
+
+from_rgb = hex_to_rgb(NAME_COLOR_FROM)
+to_rgb = hex_to_rgb(NAME_COLOR_TO)
+
+name_colors = [
+    rgb_to_hex(
+        (
+            from_rgb[0] + (to_rgb[0] - from_rgb[0]) * i // name_color_steps,
+            from_rgb[1] + (to_rgb[1] - from_rgb[1]) * i // name_color_steps,
+            from_rgb[2] + (to_rgb[2] - from_rgb[2]) * i // name_color_steps,
+        )
+    )
+    for i in range(name_color_steps + 1)
+]
+
+# Build the colored pack name
+colored_pack_name = ""
+for i, part in enumerate(word_start_array):
+    color_index = i % (len(name_colors) - 1)
+    colored_pack_name += f"&{{{name_colors[color_index]}}}{part}"
+
+colored_pack_name += f"&{{{name_colors[-1]}}}{word_center}"
+
+for i, part in reversed(list(enumerate(word_end_array))):
+    color_index = i % (len(name_colors) - 1)
+    colored_pack_name += f"&{{{name_colors[color_index]}}}{part}"
+
+# Parse the version
+major, minor, patch = (pack_version.split('.') + ["", ""])[:3]
+colored_pack_version = (
+    f"&{{{VERSION_COLOR_MAJOR}}}{major}" if major else ""
+) + (f".&{{{VERSION_COLOR_MINOR}}}{minor}" if minor else "") + (
+    f".&{{{VERSION_COLOR_PATCH}}}{patch}" if patch else ""
+)
+
+# Update files
+def replace_in_file(file_path, replacements):
+    content = Path(file_path).read_text()
+    for placeholder, value in replacements.items():
+        content = re.sub(re.escape(f"${{{placeholder}}}"), value, content)
+    Path(file_path).write_text(content)
+
+pack_metadata_path = "pack.toml"
+replace_in_file(
+    pack_metadata_path,
+    {
+        "packName": pack_name,
+        "author": author,
+        "packVersion": pack_version,
+        "loaderVersion": loader_version,
+        "minecraftVersion": minecraft_version,
+    },
+)
+
+custom_hud_profile_path = "config/custom-hud/profile1.txt"
+replace_in_file(
+    custom_hud_profile_path,
+    {
+        "coloredPackName": colored_pack_name,
+        "coloredPackVersion": colored_pack_version,
+    },
+)
+
+main_menu_credits_config_path = "config/isxander-main-menu-credits.json"
+replace_in_file(
+    main_menu_credits_config_path,
+    {
+        "packName": pack_name,
+        "packVersion": pack_version,
+        "repoUrl": repo_url,
+    },
+)
+
+# Run packwiz commands
+os.system("packwiz refresh --build")
+os.system("packwiz modrinth export")
+os.system("packwiz refresh")

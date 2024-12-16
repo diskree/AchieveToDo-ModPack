@@ -3,11 +3,11 @@ filename = "Unique Enchanted Books.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/54UxoRa8/versions/n64kSoVL/UniqueEnchantedBooks_v2.0.3.zip"
-hash-format = "sha1"
-hash = "8a5324d089dcdd2419c0b48de1072acb3a874a07"
+url = "https://cdn.modrinth.com/data/54UxoRa8/versions/WNgqvleM/UniqueEnchantedBooks_v2.1.zip"
+hash-format = "sha512"
+hash = "74c7f40801a9f1e2e4363f87249031c431ff82b929b6046bff16abadd28d55f0d48a3bf982ec4c398269efc78f46af3d38fae16fdd91e07ed96f727834cca72a"
 
 [update]
 [update.modrinth]
 mod-id = "54UxoRa8"
-version = "n64kSoVL"
+version = "WNgqvleM"

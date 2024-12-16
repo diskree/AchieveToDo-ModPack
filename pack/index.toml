@@ -1,25 +1,7 @@
 hash-format = "sha256"
 
 [[files]]
-file = "config/betterf3.json"
-
-[[files]]
-file = "config/citresewn.json"
-
-[[files]]
-file = "config/custom-hud/profile1.txt"
-
-[[files]]
-file = "config/dark-loading-screen.json"
-
-[[files]]
-file = "config/debugify.json"
-
-[[files]]
-file = "config/isxander-main-menu-credits.json"
-
-[[files]]
-file = "config/modmenu.json"
+file = "config/yosbr/config/betterf3.json"
 
 [[files]]
 file = "config/yosbr/config/blur.json"
@@ -28,7 +10,19 @@ file = "config/yosbr/config/blur.json"
 file = "config/yosbr/config/capes.json5"
 
 [[files]]
+file = "config/yosbr/config/citresewn.json"
+
+[[files]]
 file = "config/yosbr/config/custom-hud/config.json"
+
+[[files]]
+file = "config/yosbr/config/custom-hud/profile1.txt"
+
+[[files]]
+file = "config/yosbr/config/dark-loading-screen.json"
+
+[[files]]
+file = "config/yosbr/config/debugify.json"
 
 [[files]]
 file = "config/yosbr/config/dynamicfps.toml"
@@ -43,7 +37,13 @@ file = "config/yosbr/config/firstperson.json"
 file = "config/yosbr/config/iris.properties"
 
 [[files]]
+file = "config/yosbr/config/isxander-main-menu-credits.json"
+
+[[files]]
 file = "config/yosbr/config/lambdynlights.toml"
+
+[[files]]
+file = "config/yosbr/config/modmenu.json"
 
 [[files]]
 file = "config/yosbr/config/moreculling.toml"
@@ -64,21 +64,37 @@ file = "config/yosbr/config/textile_backup.json5"
 file = "config/yosbr/options.txt"
 
 [[files]]
+file = "datapacks/amplified_nether.pw.toml"
+metafile = true
+
+[[files]]
+file = "datapacks/blazeandcaves-advancements-pack-hardcore-version.pw.toml"
+metafile = true
+
+[[files]]
 file = "datapacks/blazeandcaves-advancements-pack.pw.toml"
+metafile = true
+
+[[files]]
+file = "datapacks/nullscape.pw.toml"
+metafile = true
+
+[[files]]
+file = "datapacks/terralith.pw.toml"
 metafile = true
 
 [[files]]
 file = "icon.png"
 
 [[files]]
-file = "mods/achievetodo-mc1.20.4+1.4.1.jar"
+file = "mods/achievetodo-mc1.21.4+1.0.jar"
 
 [[files]]
-file = "mods/antighost.pw.toml"
+file = "mods/advancementsfullscreen.pw.toml"
 metafile = true
 
 [[files]]
-file = "mods/better-mount-hud.pw.toml"
+file = "mods/advancementssearch.pw.toml"
 metafile = true
 
 [[files]]
@@ -86,11 +102,7 @@ file = "mods/betterf3.pw.toml"
 metafile = true
 
 [[files]]
-file = "mods/blur.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/boat-break-fix.pw.toml"
+file = "mods/blur-plus.pw.toml"
 metafile = true
 
 [[files]]
@@ -102,15 +114,7 @@ file = "mods/capes.pw.toml"
 metafile = true
 
 [[files]]
-file = "mods/cit-resewn.pw.toml"
-metafile = true
-
-[[files]]
 file = "mods/cloth-config.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/continuity.pw.toml"
 metafile = true
 
 [[files]]
@@ -138,19 +142,7 @@ file = "mods/dynamic-fps.pw.toml"
 metafile = true
 
 [[files]]
-file = "mods/ebe.pw.toml"
-metafile = true
-
-[[files]]
 file = "mods/entityculling.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/exordium.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/extra-sounds.pw.toml"
 metafile = true
 
 [[files]]
@@ -159,10 +151,6 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-language-kotlin.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/fabricskyboxes.pw.toml"
 metafile = true
 
 [[files]]
@@ -175,10 +163,6 @@ metafile = true
 
 [[files]]
 file = "mods/fixbookgui.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/indium.pw.toml"
 metafile = true
 
 [[files]]
@@ -210,6 +194,10 @@ file = "mods/main-menu-credits.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/mc+264204-fix.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/modelfix.pw.toml"
 metafile = true
 
@@ -222,23 +210,15 @@ file = "mods/moreculling.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/multilineactionbar.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/no-resource-pack-warnings.pw.toml"
 metafile = true
 
 [[files]]
-file = "mods/real-arrow-tip.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/reeses-sodium-options.pw.toml"
-metafile = true
-
-[[files]]
 file = "mods/respackopts.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/rrls.pw.toml"
 metafile = true
 
 [[files]]
@@ -262,10 +242,6 @@ file = "mods/sodium.pw.toml"
 metafile = true
 
 [[files]]
-file = "mods/textile-backup.pw.toml"
-metafile = true
-
-[[files]]
 file = "mods/xyzbook.pw.toml"
 metafile = true
 
@@ -282,9 +258,6 @@ file = "mods/zoomify.pw.toml"
 metafile = true
 
 [[files]]
-file = "resourcepacks/Better Banner Pattern.zip"
-
-[[files]]
 file = "resourcepacks/Better Waxed Copper.zip"
 
 [[files]]
@@ -292,6 +265,10 @@ file = "resourcepacks/Visual Fish Buckets.zip"
 
 [[files]]
 file = "resourcepacks/Visual Goat Horns.zip"
+
+[[files]]
+file = "resourcepacks/bacap-better-ru.pw.toml"
+metafile = true
 
 [[files]]
 file = "resourcepacks/bacap-language-pack.pw.toml"
@@ -307,10 +284,6 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/colorful-sheared-sheep.pw.toml"
-metafile = true
-
-[[files]]
-file = "resourcepacks/ctm-overhaul.pw.toml"
 metafile = true
 
 [[files]]
@@ -350,7 +323,7 @@ file = "resourcepacks/translations-for-sodium.pw.toml"
 metafile = true
 
 [[files]]
-file = "resourcepacks/trapdoor-fix.pw.toml"
+file = "resourcepacks/trap-door-fix.pw.toml"
 metafile = true
 
 [[files]]
@@ -358,25 +331,8 @@ file = "resourcepacks/unique-enchanted-books.pw.toml"
 metafile = true
 
 [[files]]
-file = "resourcepacks/visualpotions.pw.toml"
-metafile = true
-
-[[files]]
-file = "resourcepacks/wpila.pw.toml"
-metafile = true
-
-[[files]]
 file = "resourcepacks/yetanotherglint.pw.toml"
 metafile = true
-
-[[files]]
-file = "shaderpacks/BSL_v8.2.08.zip.txt"
-
-[[files]]
-file = "shaderpacks/ComplementaryReimagined_r5.1.1.zip.txt"
-
-[[files]]
-file = "shaderpacks/ComplementaryUnbound_r5.1.1.zip.txt"
 
 [[files]]
 file = "shaderpacks/bsl-shaders.pw.toml"

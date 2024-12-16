@@ -3,11 +3,11 @@ filename = "Barrel Fix.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/9R4Waktq/versions/5FVfvJaU/Fixed_Barrel_%281.20.3%29.zip"
-hash-format = "sha1"
-hash = "d8549fcd7830a3e5ad9fd9570e43c70af631b108"
+url = "https://cdn.modrinth.com/data/9R4Waktq/versions/MRtEAIjY/Fixed_Barrel_%281.21%29.zip"
+hash-format = "sha512"
+hash = "16add9cf27e4d9ccba2085df861f79f7a73c79a2ffa536f8ce50f7aaf7464f194f0c878e35245c1601134359e60f027b0b24a2b392fa11e888e76618fb2b7630"
 
 [update]
 [update.modrinth]
 mod-id = "9R4Waktq"
-version = "5FVfvJaU"
+version = "MRtEAIjY"

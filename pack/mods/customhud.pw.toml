@@ -1,8 +1,8 @@
 name = "CustomHud"
-filename = "custom_hud-4.0.0-beta.8+1.21.4.jar"
+filename = "customhud-4.0.0+1.21.4.jar"
 side = "client"
 
 [download]
-url = "https://github.com/diskree/CustomHUD/releases/download/v4.0.0%2B1.21.4/custom_hud-4.0.0-beta.8+1.21.4.jar"
+url = "https://github.com/diskree/CustomHUD/releases/download/v4.0.0%2B1.21.4/customhud-4.0.0+1.21.4.jar"
 hash-format = "sha1"
-hash = "bb10e6b28ecb623c2891914567766115d1c4c707"
+hash = "2893b429874a6d3b69c2464d6ab60b15673c7aa0"

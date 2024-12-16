@@ -68,11 +68,11 @@ file = "datapacks/amplified_nether.pw.toml"
 metafile = true
 
 [[files]]
-file = "datapacks/bacap-hardcore.pw.toml"
+file = "datapacks/blazeandcaves-advancements-pack-hardcore-version.pw.toml"
 metafile = true
 
 [[files]]
-file = "datapacks/bacap.pw.toml"
+file = "datapacks/blazeandcaves-advancements-pack.pw.toml"
 metafile = true
 
 [[files]]
@@ -199,6 +199,10 @@ metafile = true
 
 [[files]]
 file = "mods/modelfix.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/modmenu.pw.toml"
 metafile = true
 
 [[files]]

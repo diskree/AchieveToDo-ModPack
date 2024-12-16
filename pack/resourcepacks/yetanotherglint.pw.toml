@@ -3,11 +3,11 @@ filename = "Yet Another Glint.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/h51P631G/versions/njwOfWZd/Yet%20Another%20Glint.zip"
-hash-format = "sha1"
-hash = "391357ea6f0256a6e4de8030f1363e4829d55e61"
+url = "https://cdn.modrinth.com/data/h51P631G/versions/gNBjsYoq/Yet%20Another%20Glint.zip"
+hash-format = "sha512"
+hash = "4ca0c309c53f8b44c353d9de7ee3d68e8c5bdbbd83eb53219c615365cd978e37c90b34d8a5dfc65f758a9e1e475480c0dc8ead4b0e71c693dee50906e097e460"
 
 [update]
 [update.modrinth]
 mod-id = "h51P631G"
-version = "njwOfWZd"
+version = "gNBjsYoq"

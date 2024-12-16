@@ -4,8 +4,8 @@ side = "client"
 
 [download]
 url = "https://cdn.modrinth.com/data/3Bf4du2Z/versions/nLF9jnW8/MapMarkingsFix%5B1.14%2B%5D.zip"
-hash-format = "sha1"
-hash = "0545fdb50f658e0c0f888683456a75104c072702"
+hash-format = "sha512"
+hash = "37ec3b011a899b044304f4dfb9a33c24c54b5546ba1a371ba4f055027906c87904fd3db7891653da4a1529eb1bbd1c5557145de34242aee6a9e34e27a37092b1"
 
 [update]
 [update.modrinth]

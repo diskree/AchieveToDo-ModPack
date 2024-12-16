@@ -1,13 +1,13 @@
 name = "Centered Crosshair Fix"
-filename = "Centered Crosshair Fix.zip"
+filename = "centered_crosshair_fix.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/j1OkffnL/versions/commGneF/centered_crosshair_fix.zip"
-hash-format = "sha1"
-hash = "cecbc4aedfd3b1c40c3c7db83229e2500bf1d69b"
+url = "https://cdn.modrinth.com/data/j1OkffnL/versions/TjSQP65f/centered_crosshair_fix.zip"
+hash-format = "sha512"
+hash = "f6d784fff4ccb1e283e867033e2e0c341994a45dc4e21abda3e04b83002e0a74801670ccd4ef259ee9b489592d45fb0e18a1da28e48aa5d2680ee391901ddd02"
 
 [update]
 [update.modrinth]
 mod-id = "j1OkffnL"
-version = "commGneF"
+version = "TjSQP65f"

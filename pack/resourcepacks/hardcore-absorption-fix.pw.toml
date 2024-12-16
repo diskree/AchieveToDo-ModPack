@@ -3,11 +3,11 @@ filename = "Hardcore Absorption Fix.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/8sAOhPiI/versions/uIOzS3Mb/Hardcore%20Absorption%201.20.3-pre1.zip"
-hash-format = "sha1"
-hash = "679687a375f935a1b393bcc1f9de943c5ba47d78"
+url = "https://cdn.modrinth.com/data/8sAOhPiI/versions/MGjnHNAt/Hardcore%20Absorption%201.20.6.zip"
+hash-format = "sha512"
+hash = "7f541a2d3d487b1ada94ba401026ae433aac2e334cec840dc560c47d86b11c2d51ee35af0f43cecedc364b178a398c10afca8208437eb6140b274fde48282198"
 
 [update]
 [update.modrinth]
 mod-id = "8sAOhPiI"
-version = "uIOzS3Mb"
+version = "MGjnHNAt"

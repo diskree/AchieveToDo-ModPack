@@ -3,11 +3,11 @@ filename = "xyzbook-mc1.21.4+1.1.1.jar"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/NUYcQ6wg/versions/DD6Tw5MB/xyzbook-mc1.21.4%2B1.1.1.jar"
+url = "https://cdn.modrinth.com/data/NUYcQ6wg/versions/5cgJwL6S/xyzbook-mc1.21.4%2B1.1.1.jar"
 hash-format = "sha512"
-hash = "68c8a9bc77b7baf6c51f85357866fd60080b53e47bba4a15fc5a00c2173638333f68eb1dfa3e7b71fa991b8a5b54af594812255e4da6fd25d3b2c58f8ae07a94"
+hash = "8b3068c09dc8cb5d02d01ff1559668f624602bb771fab0e675731ea26afa0ebfe3293385e7cd75906aca8a3e21c6cd74586f6ff2cc7e24a4032a86e7866cd953"
 
 [update]
 [update.modrinth]
 mod-id = "NUYcQ6wg"
-version = "DD6Tw5MB"
+version = "5cgJwL6S"

@@ -1,6 +1,6 @@
 name = "Model Gap Fix"
 filename = "modelfix-1.21.3-1.10-fabric.jar"
-side = "both"
+side = "client"
 
 [download]
 url = "https://cdn.modrinth.com/data/QdG47OkI/versions/h47zwBfZ/modelfix-1.21.3-1.10-fabric.jar"

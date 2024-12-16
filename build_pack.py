@@ -2,7 +2,6 @@ import os
 import re
 from pathlib import Path
 
-# Constants
 NAME_COLOR_FROM = "#07c5fa"
 NAME_COLOR_TO = "#b2e8f7"
 
@@ -10,19 +9,17 @@ VERSION_COLOR_MAJOR = "#f8c8dc"
 VERSION_COLOR_MINOR = "#fac898"
 VERSION_COLOR_PATCH = "#f8c8dc"
 
-mod_id, pack_version, pack_name, author, repo_url, minecraft_version, loader_version = (
-    os.sys.argv[1:8]
+pack_name, pack_version, author, repo_url, minecraft_version, loader_version = (
+    os.sys.argv[1:7]
 )
 
 pack_dir = "pack"
 
-# Remove old files
 for file in Path(pack_dir).glob("*.mrpack"):
     file.unlink()
 
 os.chdir(pack_dir)
 
-# Split the pack name for coloring
 word_center = pack_name
 word_start_array = []
 word_end_array = []
@@ -41,7 +38,6 @@ while word_center:
 
 name_color_steps = len(word_start_array)
 
-# Generate gradient colors
 def hex_to_rgb(hex_color):
     return tuple(int(hex_color[i:i + 2], 16) for i in (1, 3, 5))
 
@@ -62,7 +58,6 @@ name_colors = [
     for i in range(name_color_steps + 1)
 ]
 
-# Build the colored pack name
 colored_pack_name = ""
 for i, part in enumerate(word_start_array):
     color_index = i % (len(name_colors) - 1)
@@ -74,7 +69,6 @@ for i, part in reversed(list(enumerate(word_end_array))):
     color_index = i % (len(name_colors) - 1)
     colored_pack_name += f"&{{{name_colors[color_index]}}}{part}"
 
-# Parse the version
 major, minor, patch = (pack_version.split('.') + ["", ""])[:3]
 colored_pack_version = (
     f"&{{{VERSION_COLOR_MAJOR}}}{major}" if major else ""
@@ -82,45 +76,44 @@ colored_pack_version = (
     f".&{{{VERSION_COLOR_PATCH}}}{patch}" if patch else ""
 )
 
-# Update files
 def replace_in_file(file_path, replacements):
-    content = Path(file_path).read_text()
-    for placeholder, value in replacements.items():
-        content = re.sub(re.escape(f"${{{placeholder}}}"), value, content)
-    Path(file_path).write_text(content)
+    file = Path(file_path)
+    original_content = file.read_text()
 
-pack_metadata_path = "pack.toml"
-replace_in_file(
-    pack_metadata_path,
-    {
+    updated_content = original_content
+    for placeholder, value in replacements.items():
+        updated_content = re.sub(re.escape(f"${{{placeholder}}}"), value, updated_content)
+    file.write_text(updated_content)
+
+    return original_content
+
+
+file_replacements = {
+    "pack.toml": {
         "packName": pack_name,
         "author": author,
         "packVersion": pack_version,
         "loaderVersion": loader_version,
         "minecraftVersion": minecraft_version,
     },
-)
-
-custom_hud_profile_path = "config/custom-hud/profile1.txt"
-replace_in_file(
-    custom_hud_profile_path,
-    {
+    "config/yosbr/config/custom-hud/profile1.txt": {
         "coloredPackName": colored_pack_name,
         "coloredPackVersion": colored_pack_version,
     },
-)
-
-main_menu_credits_config_path = "config/isxander-main-menu-credits.json"
-replace_in_file(
-    main_menu_credits_config_path,
-    {
+    "config/yosbr/config/isxander-main-menu-credits.json": {
         "packName": pack_name,
         "packVersion": pack_version,
         "repoUrl": repo_url,
     },
-)
+}
 
-# Run packwiz commands
+original_contents = {}
+for file_path, replacements in file_replacements.items():
+    original_contents[file_path] = replace_in_file(file_path, replacements)
+
 os.system("packwiz refresh --build")
 os.system("packwiz modrinth export")
 os.system("packwiz refresh")
+
+for file_path, original_content in original_contents.items():
+    Path(file_path).write_text(original_content)

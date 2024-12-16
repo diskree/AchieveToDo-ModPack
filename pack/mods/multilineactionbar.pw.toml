@@ -1,0 +1,13 @@
+name = "MultiLineActionBar"
+filename = "multilineactionbar-mc1.21+1.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/KDABaxIE/versions/zCiq5hQj/multilineactionbar-mc1.21%2B1.0.jar"
+hash-format = "sha512"
+hash = "65d65edb474ba48eb4ea298235f788be9f98d62b3187515e09b65ba8c6af14c1556d896b1f1ce90bddd6318faaf2c9b7d17462bc67e55e28cbaee53f7cec100a"
+
+[update]
+[update.modrinth]
+mod-id = "KDABaxIE"
+version = "zCiq5hQj"

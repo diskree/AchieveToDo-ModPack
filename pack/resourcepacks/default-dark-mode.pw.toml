@@ -3,11 +3,11 @@ filename = "Default Dark Mode.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/6SLU7tS5/versions/aJlqSPu5/Default-Dark-Mode-1.20.2%2B-2023.11.0.zip"
-hash-format = "sha1"
-hash = "a911cb9f3aaaee90801dbf069f7395842ccb451d"
+url = "https://cdn.modrinth.com/data/6SLU7tS5/versions/KW0bu9nm/Default-Dark-Mode-1.20.2%2B-2024.6.0.zip"
+hash-format = "sha512"
+hash = "51a0e39094ef650e29cd17b58b2c215e72f794ec479ec92ce49883c67a6b0d070df5aebb24070fb99c3ab7ea86bb650ecd0f586b32834e7f9b0efe90d5faca39"
 
 [update]
 [update.modrinth]
 mod-id = "6SLU7tS5"
-version = "aJlqSPu5"
+version = "KW0bu9nm"

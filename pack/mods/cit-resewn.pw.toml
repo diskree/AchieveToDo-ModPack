@@ -1,8 +1,0 @@
-name = "CIT Resewn"
-filename = "citresewn-1.1.4-dicedpixels+1.20.4.jar"
-side = "client"
-
-[download]
-url = "https://github.com/diskree/CITResewn/releases/download/mc1.20.4/citresewn-1.1.4-dicedpixels+1.20.4.jar"
-hash-format = "sha1"
-hash = "9c5c3f3f02c207c2b3eddd9165c16e91ed528975"

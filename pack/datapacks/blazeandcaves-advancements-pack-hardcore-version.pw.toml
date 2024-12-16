@@ -1,0 +1,13 @@
+name = "BlazeandCave's Advancements Pack Hardcore Version"
+filename = "bacap_hardcore.zip"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/QEv1xmKi/versions/uRKM9Bou/BlazeandCave%27s%20Advancements%20Pack%20Hardcore.zip"
+hash-format = "sha512"
+hash = "2f198e638f8bc35a23e96fd436b454f79a2015845acde9f05bfb2f5791f1fbac7f9c7f023e4664152b651e6473aaa389b77ef1fab6b30c23222892ca8430406b"
+
+[update]
+[update.modrinth]
+mod-id = "QEv1xmKi"
+version = "uRKM9Bou"

@@ -3,11 +3,11 @@ filename = "Colorful Sheared Sheep.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/MUXWuCE8/versions/xPxj8G2D/Colorful%20Sheared%20Sheep.zip"
-hash-format = "sha1"
-hash = "a5a4a510874fbbb18717156ea97c345b8664ca25"
+url = "https://cdn.modrinth.com/data/MUXWuCE8/versions/YxTbSmBF/Colorful%20Sheared%20Sheep%20%2B%20Fresh.zip"
+hash-format = "sha512"
+hash = "7ea0954c47f0f0448c164aa622b956ff503bebec2aee1c641e0ea2e3e1ff492b9a3e3d482a003b92e5ddf0a27c29886735174a3db3cfea43027013f29344b2a0"
 
 [update]
 [update.modrinth]
 mod-id = "MUXWuCE8"
-version = "xPxj8G2D"
+version = "YxTbSmBF"

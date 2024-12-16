@@ -4,8 +4,8 @@ side = "client"
 
 [download]
 url = "https://cdn.modrinth.com/data/XKwQ1c2r/versions/woadggX5/Nether%20Bricks%20Fix.zip"
-hash-format = "sha1"
-hash = "5dd47a984c8644291e476ba91a10e842122b35a8"
+hash-format = "sha512"
+hash = "da2445e4c5a2ad4b08483c1b5a861313b3299c78e0ded883c6e74cc84d46b487dff3b56f96388e746635ce1f8dc8d6f78f72955115626b73f1c943ddf8b8d394"
 
 [update]
 [update.modrinth]

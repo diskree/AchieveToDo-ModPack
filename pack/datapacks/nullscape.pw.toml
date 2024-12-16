@@ -1,0 +1,13 @@
+name = "Nullscape"
+filename = "nullscape.zip"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/LPjGiSO4/versions/J4B2BaWk/Nullscape_1.21_v1.2.10.zip"
+hash-format = "sha1"
+hash = "0a55bff36ab26b13963213ed1482d1b8b84ab568"
+
+[update]
+[update.modrinth]
+mod-id = "LPjGiSO4"
+version = "J4B2BaWk"

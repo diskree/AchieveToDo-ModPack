@@ -1,9 +1,3 @@
-.gradle/
 .idea/
-build/
-/external/BACAP/
 /pack/*.mrpack
 /pack/mods/*.jar
-/run/
-src/main/generated/
-local.properties

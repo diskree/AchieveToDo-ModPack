@@ -1,0 +1,13 @@
+name = "Screenshot to Clipboard"
+filename = "screenshot-to-clipboard-fabric-1.0.10.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/1KiJRrTg/versions/DHUI24N7/screenshot-to-clipboard-fabric-1.0.10.jar"
+hash-format = "sha512"
+hash = "54f3c0fe55145f396a824c780bdaaf59026f855037ffa67c3c4228781685350d308feec5ed5527a7e4eaa1d4f71f6d106d5ac9d1bf7aa79cb74cad0953c60e8f"
+
+[update]
+[update.modrinth]
+mod-id = "1KiJRrTg"
+version = "DHUI24N7"

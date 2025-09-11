@@ -1,0 +1,13 @@
+name = "Trap door Fix"
+filename = "Trapdoor Fix.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/wiEScAIn/versions/W9K0zpjW/Trapdoor%20Fix.zip"
+hash-format = "sha512"
+hash = "de9bf05fa8eef76d9593c2b18a254fcb8701fbfe3e1cfe7f301b461232cb9f0922de5047b138d2759ed559ac55818ee1c00a7f3aa4be6778487d720a6fd39a17"
+
+[update]
+[update.modrinth]
+mod-id = "wiEScAIn"
+version = "W9K0zpjW"

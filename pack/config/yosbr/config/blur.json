@@ -1,0 +1,11 @@
+{
+  "blurExclusions": [],
+  "fadeTimeMillis": 85,
+  "ease": true,
+  "radius": 4,
+  "gradientStart": "#000000",
+  "gradientStartAlpha": 70,
+  "gradientEnd": "#000000",
+  "gradientEndAlpha": 80,
+  "showScreenTitle": true
+}

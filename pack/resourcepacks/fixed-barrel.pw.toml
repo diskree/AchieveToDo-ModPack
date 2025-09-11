@@ -1,0 +1,13 @@
+name = "Fixed Barrel"
+filename = "Barrel Fix.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/9R4Waktq/versions/MRtEAIjY/Fixed_Barrel_%281.21%29.zip"
+hash-format = "sha512"
+hash = "16add9cf27e4d9ccba2085df861f79f7a73c79a2ffa536f8ce50f7aaf7464f194f0c878e35245c1601134359e60f027b0b24a2b392fa11e888e76618fb2b7630"
+
+[update]
+[update.modrinth]
+mod-id = "9R4Waktq"
+version = "MRtEAIjY"

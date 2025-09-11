@@ -1,0 +1,41 @@
+{
+  "main_menu": {
+    "top_left": [],
+    "top_right": [],
+    "bottom_left": [
+      {
+        "text": "${packName} ${packVersion}",
+        "clickEvent": {
+          "action": "open_url",
+          "value": "${repoUrl}"
+        },
+        "hoverEvent": {
+          "action": "show_text",
+          "contents": "Open modpack page on Github"
+        }
+      }
+    ],
+    "bottom_right": [],
+    "mod_blacklist": []
+  },
+  "pause_menu": {
+    "top_left": [],
+    "top_right": [],
+    "bottom_left": [
+      {
+        "text": "${packName} ${packVersion}",
+        "color": "gray",
+        "clickEvent": {
+          "action": "open_url",
+          "value": "${repoUrl}"
+        },
+        "hoverEvent": {
+          "action": "show_text",
+          "contents": "Open modpack page on Github"
+        }
+      }
+    ],
+    "bottom_right": [],
+    "mod_blacklist": []
+  }
+}

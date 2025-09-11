@@ -1,0 +1,9 @@
+# Exclude exported Modrinth modpacks
+*.mrpack
+
+# Exclude Packwiz metadata
+index.toml
+pack.toml
+
+# Exclude ignored mods
+*.toml\!

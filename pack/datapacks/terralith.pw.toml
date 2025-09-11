@@ -1,0 +1,13 @@
+name = "Terralith"
+filename = "terralith.zip"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/8oi3bsk5/versions/PcYlKx8w/Terralith_1.21_v2.5.7.zip"
+hash-format = "sha1"
+hash = "9645d4c557e8419154cc5775c5fe3ba9e82bfb8f"
+
+[update]
+[update.modrinth]
+mod-id = "8oi3bsk5"
+version = "PcYlKx8w"

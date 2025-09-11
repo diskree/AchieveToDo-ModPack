@@ -1,0 +1,344 @@
+hash-format = "sha256"
+
+[[files]]
+file = "config/yosbr/config/betterf3.json"
+
+[[files]]
+file = "config/yosbr/config/blur.json"
+
+[[files]]
+file = "config/yosbr/config/capes.json5"
+
+[[files]]
+file = "config/yosbr/config/citresewn.json"
+
+[[files]]
+file = "config/yosbr/config/custom-hud/config.json"
+
+[[files]]
+file = "config/yosbr/config/custom-hud/profile1.txt"
+
+[[files]]
+file = "config/yosbr/config/dark-loading-screen.json"
+
+[[files]]
+file = "config/yosbr/config/debugify.json"
+
+[[files]]
+file = "config/yosbr/config/dynamicfps.toml"
+
+[[files]]
+file = "config/yosbr/config/fallingleaves.json"
+
+[[files]]
+file = "config/yosbr/config/firstperson.json"
+
+[[files]]
+file = "config/yosbr/config/iris.properties"
+
+[[files]]
+file = "config/yosbr/config/isxander-main-menu-credits.json"
+
+[[files]]
+file = "config/yosbr/config/lambdynlights.toml"
+
+[[files]]
+file = "config/yosbr/config/modmenu.json"
+
+[[files]]
+file = "config/yosbr/config/moreculling.toml"
+
+[[files]]
+file = "config/yosbr/config/shulkerboxtooltip.json5"
+
+[[files]]
+file = "config/yosbr/config/sodium-extra-options.json"
+
+[[files]]
+file = "config/yosbr/config/sodium-options.json"
+
+[[files]]
+file = "config/yosbr/config/textile_backup.json5"
+
+[[files]]
+file = "config/yosbr/options.txt"
+
+[[files]]
+file = "datapacks/amplified_nether.pw.toml"
+metafile = true
+
+[[files]]
+file = "datapacks/blazeandcaves-advancements-pack-hardcore-version.pw.toml"
+metafile = true
+
+[[files]]
+file = "datapacks/blazeandcaves-advancements-pack.pw.toml"
+metafile = true
+
+[[files]]
+file = "datapacks/nullscape.pw.toml"
+metafile = true
+
+[[files]]
+file = "datapacks/terralith.pw.toml"
+metafile = true
+
+[[files]]
+file = "icon.png"
+
+[[files]]
+file = "mods/achievetodo.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/advancementsfullscreen.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/advancementssearch.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/betterf3.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/blur-plus.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/capes.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/cloth-config.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/cursorcentered-fix.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/customhud.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/dark-loading-screen.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/dcwa.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/debugify.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/dynamic-fps.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/entityculling.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/fabric-language-kotlin.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/fallingleaves.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/fixbookgui.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/iris.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/krypton.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/lambdynamiclights.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/language-reload.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/libjf.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/main-menu-credits.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/mc+264204-fix.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/modelfix.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/modmenu.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/moreculling.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/multilineactionbar.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/no-resource-pack-warnings.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/respackopts.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/screenshot-to-clipboard.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/shulkerboxtooltip.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/shutupdeadentities.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/sodium-extra.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/xyzbook.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/yacl.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/yosbr.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/zoomify.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/Better Waxed Copper.zip"
+
+[[files]]
+file = "resourcepacks/Visual Fish Buckets.zip"
+
+[[files]]
+file = "resourcepacks/Visual Goat Horns.zip"
+
+[[files]]
+file = "resourcepacks/bacap-better-ru.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/bacap-language-pack.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/centered-crosshair-fix.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/centered-stone-bricks.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/colorful-sheared-sheep.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/default-dark-mode.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fast-better-grass.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fixed-barrel.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/hardcore-absorption-fix.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/map-marking-fix.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/minimal-rain.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/nether-bricks-fix.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/no-z-fighting.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/translations-for-sodium.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/trap-door-fix.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/unique-enchanted-books.pw.toml"
+metafile = true
+
+[[files]]
+file = "resourcepacks/yetanotherglint.pw.toml"
+metafile = true
+
+[[files]]
+file = "shaderpacks/bsl-shaders.pw.toml"
+metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-reimagined.pw.toml"
+metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-unbound.pw.toml"
+metafile = true

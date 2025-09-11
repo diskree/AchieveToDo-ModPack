@@ -1,0 +1,16 @@
+name = "${packName}"
+author = "${author}"
+version = "${packVersion}"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+
+[versions]
+fabric = "${loaderVersion}"
+minecraft = "${minecraftVersion}"
+
+[options]
+datapack-folder = "datapacks"
+no-internal-hashes = "true"

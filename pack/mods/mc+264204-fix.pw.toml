@@ -1,0 +1,13 @@
+name = "MC-264204 Fix"
+filename = "mc264204fix-mc1.21.4+1.0.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/VrnSpNLn/versions/Y9y8rtFq/mc264204fix-mc1.21.4%2B1.0.jar"
+hash-format = "sha512"
+hash = "feb2ff076a2186c6380d51636e33b8351cab8af7a656565516f3bec1e75df5341cde7e01cc6f09f3b94a795ba01e4867d3ccef5b4baadd0ac884065a903badc1"
+
+[update]
+[update.modrinth]
+mod-id = "VrnSpNLn"
+version = "Y9y8rtFq"

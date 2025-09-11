@@ -1,0 +1,3 @@
+==BackgroundColor:0x22000000==
+==Section:TopLeft==
+${coloredPackName} ${coloredPackVersion} &7| {fps} fps

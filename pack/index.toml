@@ -87,15 +87,10 @@ metafile = true
 file = "icon.png"
 
 [[files]]
+file = "mods/achievehunter-mc1.21.4+1.0.jar"
+
+[[files]]
 file = "mods/achievetodo.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/advancementsfullscreen.pw.toml"
-metafile = true
-
-[[files]]
-file = "mods/advancementssearch.pw.toml"
 metafile = true
 
 [[files]]

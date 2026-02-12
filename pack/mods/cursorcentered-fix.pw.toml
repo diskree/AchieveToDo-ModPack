@@ -1,13 +1,13 @@
 name = "CursorCentered Fix"
-filename = "cursorcenteredfix-1.2-beta.jar"
+filename = "cursorcenteredfix-1.2.1-fabric.jar"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/3Vf97jLY/versions/zOCUDkrp/cursorcenteredfix-1.2-beta.jar"
+url = "https://cdn.modrinth.com/data/3Vf97jLY/versions/UaCKRkLf/cursorcenteredfix-1.2.1-fabric.jar"
 hash-format = "sha512"
-hash = "ade276b927e7e7d9db711fed753a6be390d69fc745baee0c2d33d28d917089267c68d3fd9dd4dd720d62c450ea6e65ed08108856511fa36295bf7e680fb8d945"
+hash = "2386733befe11c43538df7965251da9640aaab0b6101471401fe355872c03268da52fb2a6e4928d796b22348cf2f78205377b72fca7d0ecb083dcd9cc02499ec"
 
 [update]
 [update.modrinth]
 mod-id = "3Vf97jLY"
-version = "zOCUDkrp"
+version = "UaCKRkLf"

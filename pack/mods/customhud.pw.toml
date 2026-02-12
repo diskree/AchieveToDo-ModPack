@@ -1,8 +1,13 @@
 name = "CustomHud"
-filename = "customhud-4.0.0+1.21.4.jar"
+filename = "custom_hud-4.0.1+1.21.4.jar"
 side = "client"
 
 [download]
-url = "https://github.com/diskree/CustomHUD/releases/download/v4.0.0%2B1.21.4/customhud-4.0.0+1.21.4.jar"
-hash-format = "sha1"
-hash = "2893b429874a6d3b69c2464d6ab60b15673c7aa0"
+url = "https://cdn.modrinth.com/data/6jis0UTI/versions/4q064dxZ/custom_hud-4.0.1%2B1.21.4.jar"
+hash-format = "sha512"
+hash = "ad64dd7cfa1505f16ef9301bd42eb9d715e287c0c495b2c9b0902dcbc247d995f9fdc139426a07bc2c4ca796419ee9af4a51cbc3962ef9adeae99a91594e2aa2"
+
+[update]
+[update.modrinth]
+mod-id = "6jis0UTI"
+version = "4q064dxZ"

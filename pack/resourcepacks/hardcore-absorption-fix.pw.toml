@@ -1,13 +1,13 @@
 name = "Fixed Hardcore Absorption Hearts"
-filename = "Hardcore Absorption Fix.zip"
+filename = "Hardcore Absorption 1.21.5.zip"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/8sAOhPiI/versions/MGjnHNAt/Hardcore%20Absorption%201.20.6.zip"
+url = "https://cdn.modrinth.com/data/8sAOhPiI/versions/HlDAdOt2/Hardcore%20Absorption%201.21.5.zip"
 hash-format = "sha512"
-hash = "7f541a2d3d487b1ada94ba401026ae433aac2e334cec840dc560c47d86b11c2d51ee35af0f43cecedc364b178a398c10afca8208437eb6140b274fde48282198"
+hash = "cbcda75f7d555e0a3cac1089c82f2947de6c94eb630109fee5d1d07c5eaa5b46e9f04c95ce1d86846382f71a08dde6af1a0867d9752476783ccb5cc5f8a80c8d"
 
 [update]
 [update.modrinth]
 mod-id = "8sAOhPiI"
-version = "MGjnHNAt"
+version = "HlDAdOt2"

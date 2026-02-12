@@ -3,11 +3,11 @@ filename = "terralith.zip"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/8oi3bsk5/versions/PcYlKx8w/Terralith_1.21_v2.5.7.zip"
-hash-format = "sha1"
-hash = "9645d4c557e8419154cc5775c5fe3ba9e82bfb8f"
+url = "https://cdn.modrinth.com/data/8oi3bsk5/versions/MuJMtPGQ/Terralith_1.21.x_v2.5.8.jar"
+hash-format = "sha512"
+hash = "f862ed5435ce4c11a97d2ea5c40eee9f817c908f3223b5fd3e3fff0562a55111d7429dc73a2f1ca0b1af7b1ff6fa0470ed6efebb5de13336c40bb70fb357dd60"
 
 [update]
 [update.modrinth]
 mod-id = "8oi3bsk5"
-version = "PcYlKx8w"
+version = "MuJMtPGQ"
